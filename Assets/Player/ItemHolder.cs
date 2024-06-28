@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ObjectHold : MonoBehaviour //change name to ItemHold (object is too confusing)
+public class ItemHolder : MonoBehaviour //change name to ItemHold (object is too confusing)
 {
     [SerializeField] Transform playerCamera;
     [SerializeField] float maxPickupDistance = 3f;
