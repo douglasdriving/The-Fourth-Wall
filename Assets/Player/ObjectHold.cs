@@ -2,15 +2,13 @@ using UnityEngine;
 
 public class ObjectHold : MonoBehaviour //change name to ItemHold (object is too confusing)
 {
-
-    //if we press on a specific key, pick up the object
-    //hold object in front of us
-
     [SerializeField] Transform playerCamera;
     [SerializeField] float maxPickupDistance = 3f;
     [SerializeField] float highlightOutlineWidth;
+    [SerializeField] Transform itemHoldPos;
     GameObject itemHeld = null;
     GameObject holdableItemInFrontOfPlayer = null;
+
 
     private void Update()
     {
@@ -18,6 +16,16 @@ public class ObjectHold : MonoBehaviour //change name to ItemHold (object is too
         if (!isHoldingItem)
         {
             ScanForItem();
+        }
+    }
+
+    void OnInteract()
+    {
+        bool handIsFree = itemHeld == null;
+        bool itemAvailableForPickup = holdableItemInFrontOfPlayer != null;
+        if (handIsFree && itemAvailableForPickup)
+        {
+            PickupItemInFrontOfPlayer();
         }
     }
 
@@ -67,4 +75,14 @@ public class ObjectHold : MonoBehaviour //change name to ItemHold (object is too
             holdableItemInFrontOfPlayer = null;
         }
     }
+
+    private void PickupItemInFrontOfPlayer()
+    {
+        holdableItemInFrontOfPlayer.transform.parent = itemHoldPos;
+        holdableItemInFrontOfPlayer.transform.position = itemHoldPos.position;
+        holdableItemInFrontOfPlayer.transform.rotation = itemHoldPos.rotation;
+        itemHeld = holdableItemInFrontOfPlayer;
+        ClearnItemInFrontOfPlayerIfExists();
+    }
+
 }
