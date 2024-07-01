@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ItemHolder : MonoBehaviour //change name to ItemHold (object is too confusing)
+public class ItemHolder : MonoBehaviour
 {
     [SerializeField] Transform playerCamera;
     [SerializeField] float maxPickupDistance = 3f;
@@ -35,11 +35,10 @@ public class ItemHolder : MonoBehaviour //change name to ItemHold (object is too
         bool somethingIsInFrontOfPlayer = Physics.Raycast(playerCamera.position, playerCamera.TransformDirection(Vector3.forward), out hit, maxPickupDistance);
         if (somethingIsInFrontOfPlayer)
         {
-            Collider hitCollider = hit.collider;
-            bool itemCanBeHeld = hitCollider.CompareTag("Holdable");
+            GameObject detectedItem = hit.collider.gameObject;
+            bool itemCanBeHeld = detectedItem.CompareTag("Holdable");
             if (itemCanBeHeld)
             {
-                GameObject detectedItem = hitCollider.gameObject;
                 bool isLookingAtNewItem = holdableItemInFrontOfPlayer != detectedItem;
                 if (isLookingAtNewItem)
                 {
