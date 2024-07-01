@@ -1,0 +1,56 @@
+using UnityEngine;
+
+public class InteractionScanner : MonoBehaviour
+{
+    [SerializeField] Transform playerCamera;
+    [SerializeField] float maxInteractionDistance = 4f;
+    public Interactable highlightedInteractable = null;
+
+    private void Update()
+    {
+        ScanForItem();
+    }
+
+    private void ScanForItem()
+    {
+        RaycastHit hit;
+        bool somethingIsInFrontOfPlayer = Physics.Raycast(playerCamera.position, playerCamera.TransformDirection(Vector3.forward), out hit, maxInteractionDistance);
+        if (somethingIsInFrontOfPlayer)
+        {
+            GameObject detectedObject = hit.collider.gameObject;
+            Interactable interactable = detectedObject.GetComponent<Interactable>();
+            if (interactable != null)
+            {
+                bool isLookingAtNewInteractable = highlightedInteractable != detectedObject;
+                if (isLookingAtNewInteractable)
+                {
+                    SwitchHighlightedItem(interactable);
+                }
+            }
+            else
+            {
+                ClearHighlight();
+            }
+        }
+        else
+        {
+            ClearHighlight();
+        }
+    }
+
+    private void SwitchHighlightedItem(Interactable newInteractable)
+    {
+        ClearHighlight();
+        highlightedInteractable = newInteractable;
+        highlightedInteractable.Highlight();
+    }
+
+    public void ClearHighlight()
+    {
+        if (highlightedInteractable != null)
+        {
+            highlightedInteractable.RemoveHighlight();
+            highlightedInteractable = null;
+        }
+    }
+}

@@ -2,86 +2,40 @@ using UnityEngine;
 
 public class ItemHolder : MonoBehaviour
 {
-    [SerializeField] Transform playerCamera;
-    [SerializeField] float maxPickupDistance = 3f;
-    [SerializeField] float highlightOutlineWidth;
+    [SerializeField] InteractionScanner scanner;
     [SerializeField] Transform itemHoldPos;
-    GameObject itemHeld = null;
-    GameObject holdableItemInFrontOfPlayer = null;
-
-
-    private void Update()
+    Transform itemHeld = null;
+    public bool IsHoldingItem
     {
-        bool isHoldingItem = itemHeld != null;
-        if (!isHoldingItem)
-        {
-            ScanForItem();
-        }
+        get { return itemHeld != null; }
+    }
+    public Transform ItemHeld
+    {
+        get { return itemHeld; }
     }
 
     void OnInteract()
     {
         bool handIsFree = itemHeld == null;
-        bool itemAvailableForPickup = holdableItemInFrontOfPlayer != null;
+        bool itemAvailableForPickup = scanner.highlightedInteractable != null && scanner.highlightedInteractable.CompareTag("Holdable");
         if (handIsFree && itemAvailableForPickup)
         {
-            PickupItemInFrontOfPlayer();
+            PickupItem(scanner.highlightedInteractable.transform);
         }
     }
 
-    private void ScanForItem()
+    private void PickupItem(Transform item)
     {
-        RaycastHit hit;
-        bool somethingIsInFrontOfPlayer = Physics.Raycast(playerCamera.position, playerCamera.TransformDirection(Vector3.forward), out hit, maxPickupDistance);
-        if (somethingIsInFrontOfPlayer)
-        {
-            GameObject detectedItem = hit.collider.gameObject;
-            bool itemCanBeHeld = detectedItem.CompareTag("Holdable");
-            if (itemCanBeHeld)
-            {
-                bool isLookingAtNewItem = holdableItemInFrontOfPlayer != detectedItem;
-                if (isLookingAtNewItem)
-                {
-                    SwitchItemInFrontOfPlayer(detectedItem);
-                }
-            }
-            else
-            {
-                ClearnItemInFrontOfPlayerIfExists();
-            }
-        }
-        else
-        {
-            ClearnItemInFrontOfPlayerIfExists();
-        }
+        item.parent = itemHoldPos;
+        item.position = itemHoldPos.position;
+        item.rotation = itemHoldPos.rotation;
+        itemHeld = item;
+        scanner.ClearHighlight();
     }
 
-    private void SwitchItemInFrontOfPlayer(GameObject newItemInFrontOfPlayer)
+    public void DestroyHeldItem()
     {
-        ClearnItemInFrontOfPlayerIfExists();
-        holdableItemInFrontOfPlayer = newItemInFrontOfPlayer;
-        Outline outlineOfNewItem = holdableItemInFrontOfPlayer.GetComponent<Outline>();
-        outlineOfNewItem.OutlineMode = Outline.Mode.OutlineAll;
-        outlineOfNewItem.OutlineWidth = highlightOutlineWidth;
+        Destroy(itemHeld.gameObject);
+        itemHeld = null;
     }
-
-    private void ClearnItemInFrontOfPlayerIfExists()
-    {
-        bool wasLookingAtItem = holdableItemInFrontOfPlayer != null;
-        if (wasLookingAtItem)
-        {
-            holdableItemInFrontOfPlayer.GetComponent<Outline>().OutlineMode = Outline.Mode.OutlineHidden;
-            holdableItemInFrontOfPlayer = null;
-        }
-    }
-
-    private void PickupItemInFrontOfPlayer()
-    {
-        holdableItemInFrontOfPlayer.transform.parent = itemHoldPos;
-        holdableItemInFrontOfPlayer.transform.position = itemHoldPos.position;
-        holdableItemInFrontOfPlayer.transform.rotation = itemHoldPos.rotation;
-        itemHeld = holdableItemInFrontOfPlayer;
-        ClearnItemInFrontOfPlayerIfExists();
-    }
-
 }
