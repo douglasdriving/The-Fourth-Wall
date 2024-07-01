@@ -13,6 +13,12 @@ public class TransformRandomizer : MonoBehaviour
         RandomizeRotation();
     }
 
+    public void Reset()
+    {
+        transform.localScale = Vector3.one;
+        transform.rotation = Quaternion.identity;
+    }
+
     private void RandomizeScale()
     {
         float xScale = GetRandomValueBetween(minScale, maxScale);
