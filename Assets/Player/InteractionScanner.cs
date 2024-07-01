@@ -11,6 +11,14 @@ public class InteractionScanner : MonoBehaviour
         ScanForItem();
     }
 
+    void OnInteract()
+    {
+        if (highlightedInteractable != null)
+        {
+            highlightedInteractable.Interact();
+        }
+    }
+
     private void ScanForItem()
     {
         RaycastHit hit;

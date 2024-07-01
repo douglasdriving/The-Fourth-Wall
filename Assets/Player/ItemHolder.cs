@@ -17,7 +17,7 @@ public class ItemHolder : MonoBehaviour
     void OnInteract()
     {
         bool handIsFree = itemHeld == null;
-        bool itemAvailableForPickup = scanner.highlightedInteractable != null && scanner.highlightedInteractable.CompareTag("Holdable");
+        bool itemAvailableForPickup = scanner.highlightedInteractable != null && scanner.highlightedInteractable.GetComponent<Interactable>().Holdable;
         if (handIsFree && itemAvailableForPickup)
         {
             PickupItem(scanner.highlightedInteractable.transform);

@@ -13,6 +13,10 @@ public class Interactable : MonoBehaviour
     {
         get { return holdable; }
     }
+    public string InteractableName
+    {
+        get { return interactableName; }
+    }
     Outline outline;
 
     private void Awake()
