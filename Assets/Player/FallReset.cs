@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class FallReset : MonoBehaviour
 {
-    [SerializeField] float resetHeight = -5;
+    [SerializeField] float resetHeight = -15;
     Vector3 spawnPos;
     Quaternion spawnRot;
     Rigidbody rb;
@@ -17,6 +17,13 @@ public class FallReset : MonoBehaviour
     void Update()
     {
         ResetIfTooLow();
+    }
+
+    public void SetSpawnPoint(Vector3 postition)
+    {
+        Debug.Log("spawn point updated");
+        spawnPos = postition;
+        spawnRot = transform.rotation;
     }
 
     void ResetIfTooLow()
@@ -34,16 +41,5 @@ public class FallReset : MonoBehaviour
         transform.position = spawnPos;
         transform.rotation = spawnRot;
         rb.velocity = Vector3.zero;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        bool isRespawnPoint = other.CompareTag("RespawnPoint");
-        if (isRespawnPoint)
-        {
-            Transform spawnPoint = other.transform.root;
-            spawnPos = spawnPoint.position;
-            spawnRot = spawnPoint.rotation;
-        }
     }
 }

@@ -726,7 +726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97223280ae95ca048af24f190a7aa938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resetHeight: -5
+  resetHeight: -15
 --- !u!114 &1640877093956672486
 MonoBehaviour:
   m_ObjectHideFlags: 0
