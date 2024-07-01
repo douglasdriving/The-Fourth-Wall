@@ -21,7 +21,6 @@ public class FallReset : MonoBehaviour
 
     public void SetSpawnPoint(Vector3 postition)
     {
-        Debug.Log("spawn point updated");
         spawnPos = postition;
         spawnRot = transform.rotation;
     }
