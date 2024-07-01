@@ -137,5 +137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60ffd70c19a22a845aea2e4c2d3456a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Crystal
+  interactableName: Crystal
   holdable: 1
+  interactionEvent:
+    m_PersistentCalls:
+      m_Calls: []

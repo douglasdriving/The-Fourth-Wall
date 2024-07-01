@@ -17,10 +17,10 @@ public class ChrystalInserter : MonoBehaviour
         interactionScanner = player.GetComponent<InteractionScanner>();
     }
 
-    void OnInteract()
+    public void TryInsertChrystal() //should be called by the INTERACTABLE script, not by the player controls
     {
         bool playerIsHoldingACrystal = itemHolder.IsHoldingItem && itemHolder.ItemHeld.GetComponent<Interactable>().name == "Crystal";
-        bool socketIsHighlighted = interactionScanner.highlightedInteractable == gameObject;
+        bool socketIsHighlighted = interactionScanner.highlightedInteractable == gameObject; //should not need this, should check in interactable script
         if (playerIsHoldingACrystal && socketIsHighlighted)
         {
             InsertChrystal();
