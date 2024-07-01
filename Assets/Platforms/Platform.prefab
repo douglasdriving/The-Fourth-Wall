@@ -121,6 +121,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minScale: 1
   maxScale: 10
+  minRot: {x: -20, y: -180, z: -20}
+  maxRot: {x: 20, y: 180, z: 20}
 --- !u!1001 &9129621669748253552
 PrefabInstance:
   m_ObjectHideFlags: 0
