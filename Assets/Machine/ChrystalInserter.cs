@@ -4,6 +4,7 @@ using UnityEngine;
 /// place on sockets to allow the player to insert items.
 /// </summary>
 
+[RequireComponent(typeof(Interactable))]
 public class ChrystalInserter : MonoBehaviour
 {
     [SerializeField] GameObject socketedChrystal;
@@ -30,5 +31,6 @@ public class ChrystalInserter : MonoBehaviour
     {
         itemHolder.DestroyHeldItem();
         socketedChrystal.SetActive(true);
+        GetComponent<Interactable>().RemoveInteractability();
     }
 }

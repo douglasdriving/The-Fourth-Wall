@@ -11577,15 +11577,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1038716605880425170, guid: 6f23243d9b3149d47b55a36379f1309d, type: 3}
       propertyPath: precomputeOutline
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1038716605880425170, guid: 6f23243d9b3149d47b55a36379f1309d, type: 3}
       propertyPath: bakeKeys.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1038716605880425170, guid: 6f23243d9b3149d47b55a36379f1309d, type: 3}
       propertyPath: bakeValues.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1038716605880425170, guid: 6f23243d9b3149d47b55a36379f1309d, type: 3}
       propertyPath: bakeKeys.Array.data[0]
@@ -12557,15 +12557,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1402320680313538998, guid: 6f23243d9b3149d47b55a36379f1309d, type: 3}
       propertyPath: precomputeOutline
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1402320680313538998, guid: 6f23243d9b3149d47b55a36379f1309d, type: 3}
       propertyPath: bakeKeys.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1402320680313538998, guid: 6f23243d9b3149d47b55a36379f1309d, type: 3}
       propertyPath: bakeValues.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1402320680313538998, guid: 6f23243d9b3149d47b55a36379f1309d, type: 3}
       propertyPath: bakeKeys.Array.data[0]
@@ -13580,16 +13580,24 @@ PrefabInstance:
       value: Machine
       objectReference: {fileID: 0}
     - target: {fileID: 4936940475657079172, guid: 6f23243d9b3149d47b55a36379f1309d, type: 3}
-      propertyPath: precomputeOutline
+      propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936940475657079172, guid: 6f23243d9b3149d47b55a36379f1309d, type: 3}
+      propertyPath: outlineWidth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936940475657079172, guid: 6f23243d9b3149d47b55a36379f1309d, type: 3}
+      propertyPath: precomputeOutline
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4936940475657079172, guid: 6f23243d9b3149d47b55a36379f1309d, type: 3}
       propertyPath: bakeKeys.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4936940475657079172, guid: 6f23243d9b3149d47b55a36379f1309d, type: 3}
       propertyPath: bakeValues.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4936940475657079172, guid: 6f23243d9b3149d47b55a36379f1309d, type: 3}
       propertyPath: bakeKeys.Array.data[0]

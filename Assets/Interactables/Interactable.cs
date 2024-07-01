@@ -9,6 +9,11 @@ public class Interactable : MonoBehaviour
     [SerializeField] string interactableName;
     [SerializeField] bool holdable = false;
     [SerializeField] UnityEvent interactionEvent;
+    bool isInteractable = true;
+    public bool IsInteractable
+    {
+        get { return isInteractable; }
+    }
     public bool Holdable
     {
         get { return holdable; }
@@ -27,7 +32,7 @@ public class Interactable : MonoBehaviour
 
     public void Interact()
     {
-        if (interactionEvent != null)
+        if (interactionEvent != null && isInteractable)
         {
             interactionEvent.Invoke();
         }
@@ -41,5 +46,10 @@ public class Interactable : MonoBehaviour
     public void RemoveHighlight()
     {
         outline.enabled = false;
+    }
+
+    public void RemoveInteractability()
+    {
+        isInteractable = false;
     }
 }

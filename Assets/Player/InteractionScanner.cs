@@ -27,9 +27,9 @@ public class InteractionScanner : MonoBehaviour
         {
             GameObject detectedObject = hit.collider.gameObject;
             Interactable interactable = detectedObject.GetComponent<Interactable>();
-            if (interactable != null)
+            if (interactable != null && interactable.IsInteractable)
             {
-                bool isLookingAtNewInteractable = highlightedInteractable != detectedObject;
+                bool isLookingAtNewInteractable = highlightedInteractable != interactable;
                 if (isLookingAtNewInteractable)
                 {
                     SwitchHighlightedItem(interactable);
