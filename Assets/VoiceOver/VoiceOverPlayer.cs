@@ -9,7 +9,7 @@ public class VoiceOverPlayer : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    public static void PlayClip(AudioClip clip)
+    public static void PlayClip(AudioClip clip) //could have a subtitle? or that might be a different player.
     {
         audioSource.clip = clip;
         audioSource.Play();

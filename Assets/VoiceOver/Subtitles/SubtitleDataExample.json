@@ -1,0 +1,37 @@
+{
+  "audioClipName": "example_clip",
+  "sentences": [
+    {
+      "words": [
+        {
+          "word": "Hello",
+          "time": 0.5
+        },
+        {
+          "word": "world",
+          "time": 1
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "word": "This",
+          "time": 1.5
+        },
+        {
+          "word": "is",
+          "time": 2
+        },
+        {
+          "word": "a",
+          "time": 2.5
+        },
+        {
+          "word": "test",
+          "time": 3.0
+        }
+      ]
+    }
+  ]
+}
