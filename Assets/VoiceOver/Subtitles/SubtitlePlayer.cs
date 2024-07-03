@@ -5,13 +5,11 @@ using UnityEngine;
 
 public class SubtitlePlayer : MonoBehaviour
 {
-
     [SerializeField] TMP_Text subtitleText;
-
     const float lingerTime = 1f;
-    static SubtitleData currentSubtitles;
+    static SubtitleJsonData currentSubtitles;
     static int currentWordIndex = 0;
-    static int currentSentanceIndex = 0;
+    static int currentSegmentIndex = 0;
     private float timeCurrentSubtitlesHasBeenPlayed = 0f;
     static float timeForNextSubtitleStep;
     static bool isLingering = false;
@@ -21,12 +19,12 @@ public class SubtitlePlayer : MonoBehaviour
         subtitleText.text = "";
     }
 
-    public static void StartSubtitles(SubtitleData subtitles)
+    public static void StartSubtitles(SubtitleJsonData subtitles)
     {
         currentSubtitles = subtitles;
         currentWordIndex = -1;
-        currentSentanceIndex = 0;
-        timeForNextSubtitleStep = currentSubtitles.sentences[0].words[0].time;
+        currentSegmentIndex = 0;
+        timeForNextSubtitleStep = currentSubtitles.segments[0].words[0].start;
         isLingering = false;
     }
 
@@ -51,7 +49,7 @@ public class SubtitlePlayer : MonoBehaviour
 
     private void TakeNextSubtitleStep()
     {
-        int wordsInCurrentSentence = currentSubtitles.sentences[currentSentanceIndex].words.Count;
+        int wordsInCurrentSentence = currentSubtitles.segments[currentSegmentIndex].words.Length;
         bool isLastWordOfSentence = currentWordIndex >= wordsInCurrentSentence - 1;
 
         if (isLingering)
@@ -60,7 +58,7 @@ public class SubtitlePlayer : MonoBehaviour
         }
         else if (isLastWordOfSentence)
         {
-            MoveToNextSentance();
+            MoveToNextSegment();
         }
         else
         {
@@ -71,49 +69,49 @@ public class SubtitlePlayer : MonoBehaviour
     private void MoveToNextWordInSentance()
     {
         currentWordIndex++;
-        SentenceData currentSentence = currentSubtitles.sentences[currentSentanceIndex];
-        WordTimestamp word = currentSentence.words[currentWordIndex];
+        SubtitleSegment currentSegment = currentSubtitles.segments[currentSegmentIndex];
+        SubtitleWord word = currentSegment.words[currentWordIndex];
         AddWordToUI(word.word);
         UpdateNextWordTime();
     }
 
     private static void UpdateNextWordTime()
     {
-        SentenceData currentSentence = currentSubtitles.sentences[currentSentanceIndex];
-        bool isLastWordOfSentence = currentWordIndex >= currentSentence.words.Count - 1;
-        bool isLastSentence = currentSentanceIndex >= currentSubtitles.sentences.Count - 1;
-        if (isLastSentence && isLastWordOfSentence)
+        SubtitleSegment currentSegment = currentSubtitles.segments[currentSegmentIndex];
+        bool isLastWordOfSegment = currentWordIndex >= currentSegment.words.Length - 1;
+        bool isLastSegment = currentSegmentIndex >= currentSubtitles.segments.Length - 1;
+        if (isLastSegment && isLastWordOfSegment)
         {
             timeForNextSubtitleStep += lingerTime;
             isLingering = true;
         }
-        else if (isLastWordOfSentence)
+        else if (isLastWordOfSegment)
         {
-            SentenceData nextSentence = currentSubtitles.sentences[currentSentanceIndex + 1];
-            WordTimestamp nextWord = nextSentence.words[0];
-            timeForNextSubtitleStep = nextWord.time;
+            SubtitleSegment nextSegment = currentSubtitles.segments[currentSegmentIndex + 1];
+            SubtitleWord nextWord = nextSegment.words[0];
+            timeForNextSubtitleStep = nextWord.start;
         }
         else
         {
-            WordTimestamp nextWord = currentSentence.words[currentWordIndex + 1];
-            timeForNextSubtitleStep = nextWord.time;
+            SubtitleWord nextWord = currentSegment.words[currentWordIndex + 1];
+            timeForNextSubtitleStep = nextWord.start;
         }
     }
 
-    private void MoveToNextSentance()
+    private void MoveToNextSegment()
     {
-        currentSentanceIndex++;
+        currentSegmentIndex++;
         currentWordIndex = 0;
-        SentenceData sentence = currentSubtitles.sentences[currentSentanceIndex];
-        string firstWordInSentence = sentence.words[0].word;
-        StartNewSentenceInUI(firstWordInSentence);
+        SubtitleSegment segment = currentSubtitles.segments[currentSegmentIndex];
+        string firstWordInSegment = segment.words[0].word;
+        StartNewSentenceInUI(firstWordInSegment);
         UpdateNextWordTime();
     }
 
     private void StopSubtitle()
     {
         currentSubtitles = null;
-        currentSentanceIndex = 0;
+        currentSegmentIndex = 0;
         currentWordIndex = 0;
         timeCurrentSubtitlesHasBeenPlayed = 0;
         timeForNextSubtitleStep = 0;

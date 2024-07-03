@@ -8543,7 +8543,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 62aa585167764c045b95ffe51e75974e, type: 3}
-  subtitles: {fileID: 4900000, guid: 500773cbd9cd2a34e822fc30b689eef4, type: 3}
+  subtitleJson: {fileID: 4900000, guid: 3bc5a88184cc9de41ac0e18a5840c89e, type: 3}
+  subtitle:
+    text: 
+    segments: []
+    language: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -8552,10 +8556,10 @@ SceneRoots:
   - {fileID: 1813525297}
   - {fileID: 3064323880741502985}
   - {fileID: 6694119719371785554}
-  - {fileID: 4743383803675268375}
   - {fileID: 3664100671723173604}
   - {fileID: 1152850047}
   - {fileID: 122221426}
   - {fileID: 1413067406}
   - {fileID: 1390934969}
   - {fileID: 417246812}
+  - {fileID: 4743383803675268375}

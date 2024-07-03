@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NarrationManager : MonoBehaviour
 {
-    public static void PlayNarration(AudioClip clip, SubtitleData subtitle)
+    public static void PlayNarration(AudioClip clip, SubtitleJsonData subtitle)
     {
         //here, we could handle clip queuing etc (if it should interrupt current plays etc.)
         VoiceOverPlayer.PlayClip(clip);

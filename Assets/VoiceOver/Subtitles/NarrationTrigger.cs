@@ -1,27 +1,23 @@
 using System.Collections.Generic;
+using System.Text.Json;
 using UnityEngine;
 
 public class NarrationTrigger : MonoBehaviour
 {
   public AudioClip audioClip;
-  public TextAsset subtitles;
-  private SubtitleData subtitleData;
+  public TextAsset subtitleJson;
+  public SubtitleJsonData subtitle;
 
-  void Start()
+  void Awake()
   {
-    LoadSubtitleData();
-  }
-
-  void LoadSubtitleData()
-  {
-    subtitleData = JsonUtility.FromJson<SubtitleData>(subtitles.text);
+    subtitle = SubtitleJsonReader.ReadSubtitleJson(subtitleJson.text);
   }
 
   private void OnTriggerEnter(Collider other)
   {
     if (other.CompareTag("Player"))
     {
-      NarrationManager.PlayNarration(audioClip, subtitleData);
+      NarrationManager.PlayNarration(audioClip, subtitle);
       Destroy(gameObject);
     }
   }
