@@ -1,12 +1,10 @@
-using System.Collections.Generic;
-using System.Text.Json;
 using UnityEngine;
 
 public class NarrationTrigger : MonoBehaviour
 {
   public AudioClip audioClip;
   public TextAsset subtitleJson;
-  public SubtitleJsonData subtitle;
+  SubtitleJsonData subtitle;
 
   void Awake()
   {
