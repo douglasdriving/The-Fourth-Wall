@@ -1,10 +1,14 @@
 using UnityEngine;
 
-public class NarrationManager : MonoBehaviour
+namespace Narration
 {
-    public static void PlayNarration(AudioClip clip, SubtitleJsonData subtitle)
+    public class NarrationManager : MonoBehaviour
     {
-        VoiceOverPlayer.PlayClip(clip);
-        SubtitlePlayer.StartSubtitles(subtitle);
+        public static void PlayNarration(AudioClip clip, SubtitleJsonData subtitle)
+        {
+            VoiceOverPlayer.PlayClip(clip);
+            SubtitlePlayer.StartSubtitles(subtitle);
+        }
     }
+
 }
