@@ -1,896 +1,794 @@
 {
-  "text": " When I was making the initial sketches for this game I was struggling to come up with anything meaningful for the player to do. It felt as though I just have to give them something kind of arbitrary to pursue inside of the game so that they could keep their hands busy and just give me more space to talk. Like I know that when I play games I tend to get so bored when they just expose their story to me without any sort of interactivity and just have me kind of sit there and wait. So I just needed something, anything would do.",
-  "segments": [
-    {
-      "id": 0,
-      "seek": 0,
-      "start": 2.0999999999999956,
-      "end": 7.84,
-      "text": " When I was making the initial sketches for this game I was struggling to come",
-      "tokens": [
-        50363,
-        1649,
-        314,
-        373,
-        1642,
-        262,
-        4238,
-        34035,
-        329,
-        428,
-        983,
-        314,
-        373,
-        9648,
-        284,
-        1282,
-        50755
-      ],
-      "temperature": 0.0,
-      "avg_logprob": -0.11685883480569591,
-      "compression_ratio": 1.6885964912280702,
-      "no_speech_prob": 0.5112867951393127,
-      "words": [
+    "text": " When I was making the initial sketches for this game I was struggling to come up with anything meaningful for the player to do. It felt as though I just had to give them something kind of arbitrary to pursue inside of the game so that they could keep their hands busy and just give me more space to talk. I know that when I play games I tend to get so bored when they just expose their story to me without any sort of interactivity and just have me sit there and wait. So I just needed something, anything would do.",
+    "segments": [
         {
-          "word": " When",
-          "start": 2.0999999999999956,
-          "end": 2.659999999999998,
-          "probability": 0.4289844036102295
+            "id": 0,
+            "seek": 0,
+            "start": 2.0999999999999956,
+            "end": 11.08,
+            "text": " When I was making the initial sketches for this game I was struggling to come up with anything meaningful for the player to do.",
+            "tokens": [
+                50363,
+                1649,
+                314,
+                373,
+                1642,
+                262,
+                4238,
+                34035,
+                329,
+                428,
+                983,
+                314,
+                373,
+                9648,
+                284,
+                1282,
+                510,
+                351,
+                1997,
+                11570,
+                329,
+                262,
+                2137,
+                284,
+                466,
+                13,
+                50913
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.1383054677177878,
+            "compression_ratio": 1.5833333333333333,
+            "no_speech_prob": 0.5106860399246216,
+            "words": [
+                {
+                    "word": " When",
+                    "start": 2.0999999999999956,
+                    "end": 2.659999999999998,
+                    "probability": 0.42837363481521606
+                },
+                {
+                    "word": " I",
+                    "start": 2.659999999999998,
+                    "end": 3.22,
+                    "probability": 0.8928739428520203
+                },
+                {
+                    "word": " was",
+                    "start": 3.22,
+                    "end": 3.44,
+                    "probability": 0.9476808309555054
+                },
+                {
+                    "word": " making",
+                    "start": 3.44,
+                    "end": 3.68,
+                    "probability": 0.9666800498962402
+                },
+                {
+                    "word": " the",
+                    "start": 3.68,
+                    "end": 4.08,
+                    "probability": 0.9857608675956726
+                },
+                {
+                    "word": " initial",
+                    "start": 4.08,
+                    "end": 4.52,
+                    "probability": 0.9738981127738953
+                },
+                {
+                    "word": " sketches",
+                    "start": 4.52,
+                    "end": 5.08,
+                    "probability": 0.9830432534217834
+                },
+                {
+                    "word": " for",
+                    "start": 5.08,
+                    "end": 5.9,
+                    "probability": 0.9203037023544312
+                },
+                {
+                    "word": " this",
+                    "start": 5.9,
+                    "end": 6.16,
+                    "probability": 0.9682919979095459
+                },
+                {
+                    "word": " game",
+                    "start": 6.16,
+                    "end": 6.36,
+                    "probability": 0.9954232573509216
+                },
+                {
+                    "word": " I",
+                    "start": 6.36,
+                    "end": 6.52,
+                    "probability": 0.5036143660545349
+                },
+                {
+                    "word": " was",
+                    "start": 6.52,
+                    "end": 6.68,
+                    "probability": 0.9935659766197205
+                },
+                {
+                    "word": " struggling",
+                    "start": 6.68,
+                    "end": 7.04,
+                    "probability": 0.9931377172470093
+                },
+                {
+                    "word": " to",
+                    "start": 7.04,
+                    "end": 7.54,
+                    "probability": 0.9864799380302429
+                },
+                {
+                    "word": " come",
+                    "start": 7.54,
+                    "end": 7.84,
+                    "probability": 0.9903143048286438
+                },
+                {
+                    "word": " up",
+                    "start": 7.84,
+                    "end": 8.0,
+                    "probability": 0.9953954815864563
+                },
+                {
+                    "word": " with",
+                    "start": 8.0,
+                    "end": 8.12,
+                    "probability": 0.9948257803916931
+                },
+                {
+                    "word": " anything",
+                    "start": 8.12,
+                    "end": 8.44,
+                    "probability": 0.9839541912078857
+                },
+                {
+                    "word": " meaningful",
+                    "start": 8.44,
+                    "end": 9.02,
+                    "probability": 0.9855566620826721
+                },
+                {
+                    "word": " for",
+                    "start": 9.02,
+                    "end": 9.66,
+                    "probability": 0.9842742085456848
+                },
+                {
+                    "word": " the",
+                    "start": 9.66,
+                    "end": 10.34,
+                    "probability": 0.9652194380760193
+                },
+                {
+                    "word": " player",
+                    "start": 10.34,
+                    "end": 10.54,
+                    "probability": 0.9824168682098389
+                },
+                {
+                    "word": " to",
+                    "start": 10.54,
+                    "end": 10.74,
+                    "probability": 0.996320366859436
+                },
+                {
+                    "word": " do.",
+                    "start": 10.74,
+                    "end": 11.08,
+                    "probability": 0.998908519744873
+                }
+            ]
         },
         {
-          "word": " I",
-          "start": 2.659999999999998,
-          "end": 3.22,
-          "probability": 0.8929386138916016
+            "id": 1,
+            "seek": 0,
+            "start": 11.94,
+            "end": 23.38,
+            "text": " It felt as though I just had to give them something kind of arbitrary to pursue inside of the game so that they could keep their hands busy and just give me more space to talk.",
+            "tokens": [
+                50913,
+                632,
+                2936,
+                355,
+                996,
+                314,
+                655,
+                550,
+                284,
+                1577,
+                606,
+                1223,
+                1611,
+                286,
+                14977,
+                284,
+                10660,
+                2641,
+                286,
+                262,
+                983,
+                523,
+                326,
+                484,
+                714,
+                1394,
+                511,
+                2832,
+                8179,
+                290,
+                655,
+                1577,
+                502,
+                517,
+                2272,
+                284,
+                1561,
+                13,
+                51513
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.1383054677177878,
+            "compression_ratio": 1.5833333333333333,
+            "no_speech_prob": 0.5106860399246216,
+            "words": [
+                {
+                    "word": " It",
+                    "start": 11.94,
+                    "end": 12.02,
+                    "probability": 0.9693361520767212
+                },
+                {
+                    "word": " felt",
+                    "start": 12.02,
+                    "end": 12.18,
+                    "probability": 0.7156456708908081
+                },
+                {
+                    "word": " as",
+                    "start": 12.18,
+                    "end": 12.4,
+                    "probability": 0.9801573157310486
+                },
+                {
+                    "word": " though",
+                    "start": 12.4,
+                    "end": 12.66,
+                    "probability": 0.9877532124519348
+                },
+                {
+                    "word": " I",
+                    "start": 12.66,
+                    "end": 12.88,
+                    "probability": 0.9734802842140198
+                },
+                {
+                    "word": " just",
+                    "start": 12.88,
+                    "end": 13.28,
+                    "probability": 0.8760441541671753
+                },
+                {
+                    "word": " had",
+                    "start": 13.28,
+                    "end": 13.64,
+                    "probability": 0.5948340892791748
+                },
+                {
+                    "word": " to",
+                    "start": 13.64,
+                    "end": 13.92,
+                    "probability": 0.9983269572257996
+                },
+                {
+                    "word": " give",
+                    "start": 13.92,
+                    "end": 14.12,
+                    "probability": 0.9914923310279846
+                },
+                {
+                    "word": " them",
+                    "start": 14.12,
+                    "end": 14.42,
+                    "probability": 0.9935716390609741
+                },
+                {
+                    "word": " something",
+                    "start": 14.42,
+                    "end": 15.0,
+                    "probability": 0.9823085069656372
+                },
+                {
+                    "word": " kind",
+                    "start": 15.0,
+                    "end": 15.58,
+                    "probability": 0.8645079135894775
+                },
+                {
+                    "word": " of",
+                    "start": 15.58,
+                    "end": 15.76,
+                    "probability": 0.9943321943283081
+                },
+                {
+                    "word": " arbitrary",
+                    "start": 15.76,
+                    "end": 16.14,
+                    "probability": 0.9385035037994385
+                },
+                {
+                    "word": " to",
+                    "start": 16.14,
+                    "end": 16.42,
+                    "probability": 0.9744495153427124
+                },
+                {
+                    "word": " pursue",
+                    "start": 16.42,
+                    "end": 16.68,
+                    "probability": 0.9793362021446228
+                },
+                {
+                    "word": " inside",
+                    "start": 16.68,
+                    "end": 17.06,
+                    "probability": 0.9883670210838318
+                },
+                {
+                    "word": " of",
+                    "start": 17.06,
+                    "end": 17.26,
+                    "probability": 0.9387757182121277
+                },
+                {
+                    "word": " the",
+                    "start": 17.26,
+                    "end": 17.38,
+                    "probability": 0.9913061261177063
+                },
+                {
+                    "word": " game",
+                    "start": 17.38,
+                    "end": 17.52,
+                    "probability": 0.9770520329475403
+                },
+                {
+                    "word": " so",
+                    "start": 17.52,
+                    "end": 17.74,
+                    "probability": 0.8633192181587219
+                },
+                {
+                    "word": " that",
+                    "start": 17.74,
+                    "end": 17.86,
+                    "probability": 0.9105017185211182
+                },
+                {
+                    "word": " they",
+                    "start": 17.86,
+                    "end": 18.02,
+                    "probability": 0.9957267045974731
+                },
+                {
+                    "word": " could",
+                    "start": 18.02,
+                    "end": 18.22,
+                    "probability": 0.9489680528640747
+                },
+                {
+                    "word": " keep",
+                    "start": 18.22,
+                    "end": 18.44,
+                    "probability": 0.995707631111145
+                },
+                {
+                    "word": " their",
+                    "start": 18.44,
+                    "end": 18.7,
+                    "probability": 0.9915652275085449
+                },
+                {
+                    "word": " hands",
+                    "start": 18.7,
+                    "end": 18.98,
+                    "probability": 0.9905644655227661
+                },
+                {
+                    "word": " busy",
+                    "start": 18.98,
+                    "end": 19.44,
+                    "probability": 0.9777094125747681
+                },
+                {
+                    "word": " and",
+                    "start": 19.44,
+                    "end": 20.1,
+                    "probability": 0.9462544322013855
+                },
+                {
+                    "word": " just",
+                    "start": 20.1,
+                    "end": 20.98,
+                    "probability": 0.9211466312408447
+                },
+                {
+                    "word": " give",
+                    "start": 20.98,
+                    "end": 21.52,
+                    "probability": 0.9778023958206177
+                },
+                {
+                    "word": " me",
+                    "start": 21.52,
+                    "end": 21.8,
+                    "probability": 0.9946925044059753
+                },
+                {
+                    "word": " more",
+                    "start": 21.8,
+                    "end": 22.2,
+                    "probability": 0.9928465485572815
+                },
+                {
+                    "word": " space",
+                    "start": 22.2,
+                    "end": 22.8,
+                    "probability": 0.9966347813606262
+                },
+                {
+                    "word": " to",
+                    "start": 22.8,
+                    "end": 23.02,
+                    "probability": 0.9985480904579163
+                },
+                {
+                    "word": " talk.",
+                    "start": 23.02,
+                    "end": 23.38,
+                    "probability": 0.9989748001098633
+                }
+            ]
         },
         {
-          "word": " was",
-          "start": 3.22,
-          "end": 3.44,
-          "probability": 0.9473390579223633
+            "id": 2,
+            "seek": 2338,
+            "start": 23.38,
+            "end": 34.86,
+            "text": " I know that when I play games I tend to get so bored when they just expose their story to me without any sort of interactivity and just have me sit there and wait.",
+            "tokens": [
+                50363,
+                314,
+                760,
+                326,
+                618,
+                314,
+                711,
+                1830,
+                314,
+                4327,
+                284,
+                651,
+                523,
+                17533,
+                618,
+                484,
+                655,
+                15651,
+                511,
+                1621,
+                284,
+                502,
+                1231,
+                597,
+                3297,
+                286,
+                9427,
+                3458,
+                290,
+                655,
+                423,
+                502,
+                1650,
+                612,
+                290,
+                4043,
+                13,
+                50963
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.12918833190319584,
+            "compression_ratio": 1.4383561643835616,
+            "no_speech_prob": 0.8823561668395996,
+            "words": [
+                {
+                    "word": " I",
+                    "start": 23.38,
+                    "end": 24.3,
+                    "probability": 0.1379750669002533
+                },
+                {
+                    "word": " know",
+                    "start": 24.3,
+                    "end": 24.64,
+                    "probability": 0.9074355959892273
+                },
+                {
+                    "word": " that",
+                    "start": 24.64,
+                    "end": 25.22,
+                    "probability": 0.8333778977394104
+                },
+                {
+                    "word": " when",
+                    "start": 25.22,
+                    "end": 25.52,
+                    "probability": 0.9637319445610046
+                },
+                {
+                    "word": " I",
+                    "start": 25.52,
+                    "end": 25.66,
+                    "probability": 0.9883281588554382
+                },
+                {
+                    "word": " play",
+                    "start": 25.66,
+                    "end": 25.9,
+                    "probability": 0.9932378530502319
+                },
+                {
+                    "word": " games",
+                    "start": 25.9,
+                    "end": 26.28,
+                    "probability": 0.9957473874092102
+                },
+                {
+                    "word": " I",
+                    "start": 26.28,
+                    "end": 26.56,
+                    "probability": 0.6352145671844482
+                },
+                {
+                    "word": " tend",
+                    "start": 26.56,
+                    "end": 26.8,
+                    "probability": 0.9871059656143188
+                },
+                {
+                    "word": " to",
+                    "start": 26.8,
+                    "end": 26.98,
+                    "probability": 0.9980554580688477
+                },
+                {
+                    "word": " get",
+                    "start": 26.98,
+                    "end": 27.18,
+                    "probability": 0.9924665093421936
+                },
+                {
+                    "word": " so",
+                    "start": 27.18,
+                    "end": 27.48,
+                    "probability": 0.9464386105537415
+                },
+                {
+                    "word": " bored",
+                    "start": 27.48,
+                    "end": 27.86,
+                    "probability": 0.999249279499054
+                },
+                {
+                    "word": " when",
+                    "start": 27.86,
+                    "end": 28.14,
+                    "probability": 0.9283401370048523
+                },
+                {
+                    "word": " they",
+                    "start": 28.14,
+                    "end": 28.42,
+                    "probability": 0.9933786392211914
+                },
+                {
+                    "word": " just",
+                    "start": 28.42,
+                    "end": 28.92,
+                    "probability": 0.8909094333648682
+                },
+                {
+                    "word": " expose",
+                    "start": 28.92,
+                    "end": 29.86,
+                    "probability": 0.9785768985748291
+                },
+                {
+                    "word": " their",
+                    "start": 29.86,
+                    "end": 30.08,
+                    "probability": 0.9937312006950378
+                },
+                {
+                    "word": " story",
+                    "start": 30.08,
+                    "end": 30.3,
+                    "probability": 0.96056067943573
+                },
+                {
+                    "word": " to",
+                    "start": 30.3,
+                    "end": 30.48,
+                    "probability": 0.9907566905021667
+                },
+                {
+                    "word": " me",
+                    "start": 30.48,
+                    "end": 30.66,
+                    "probability": 0.998672604560852
+                },
+                {
+                    "word": " without",
+                    "start": 30.66,
+                    "end": 30.96,
+                    "probability": 0.9705901741981506
+                },
+                {
+                    "word": " any",
+                    "start": 30.96,
+                    "end": 31.34,
+                    "probability": 0.9931327700614929
+                },
+                {
+                    "word": " sort",
+                    "start": 31.34,
+                    "end": 31.52,
+                    "probability": 0.9733865261077881
+                },
+                {
+                    "word": " of",
+                    "start": 31.52,
+                    "end": 31.66,
+                    "probability": 0.9968865513801575
+                },
+                {
+                    "word": " interactivity",
+                    "start": 31.66,
+                    "end": 32.34,
+                    "probability": 0.991669625043869
+                },
+                {
+                    "word": " and",
+                    "start": 32.34,
+                    "end": 32.74,
+                    "probability": 0.8069959282875061
+                },
+                {
+                    "word": " just",
+                    "start": 32.74,
+                    "end": 32.9,
+                    "probability": 0.9267346858978271
+                },
+                {
+                    "word": " have",
+                    "start": 32.9,
+                    "end": 33.12,
+                    "probability": 0.9862717390060425
+                },
+                {
+                    "word": " me",
+                    "start": 33.12,
+                    "end": 33.38,
+                    "probability": 0.997271716594696
+                },
+                {
+                    "word": " sit",
+                    "start": 33.38,
+                    "end": 33.92,
+                    "probability": 0.25386977195739746
+                },
+                {
+                    "word": " there",
+                    "start": 33.92,
+                    "end": 34.28,
+                    "probability": 0.992399275302887
+                },
+                {
+                    "word": " and",
+                    "start": 34.28,
+                    "end": 34.52,
+                    "probability": 0.9960681200027466
+                },
+                {
+                    "word": " wait.",
+                    "start": 34.52,
+                    "end": 34.86,
+                    "probability": 0.9780617952346802
+                }
+            ]
         },
         {
-          "word": " making",
-          "start": 3.44,
-          "end": 3.68,
-          "probability": 0.9666587710380554
-        },
-        {
-          "word": " the",
-          "start": 3.68,
-          "end": 4.08,
-          "probability": 0.985684871673584
-        },
-        {
-          "word": " initial",
-          "start": 4.08,
-          "end": 4.52,
-          "probability": 0.973929762840271
-        },
-        {
-          "word": " sketches",
-          "start": 4.52,
-          "end": 5.08,
-          "probability": 0.9830358624458313
-        },
-        {
-          "word": " for",
-          "start": 5.08,
-          "end": 5.9,
-          "probability": 0.920250415802002
-        },
-        {
-          "word": " this",
-          "start": 5.9,
-          "end": 6.16,
-          "probability": 0.968265950679779
-        },
-        {
-          "word": " game",
-          "start": 6.16,
-          "end": 6.36,
-          "probability": 0.9954267144203186
-        },
-        {
-          "word": " I",
-          "start": 6.36,
-          "end": 6.52,
-          "probability": 0.5036194920539856
-        },
-        {
-          "word": " was",
-          "start": 6.52,
-          "end": 6.68,
-          "probability": 0.99355149269104
-        },
-        {
-          "word": " struggling",
-          "start": 6.68,
-          "end": 7.04,
-          "probability": 0.9931594133377075
-        },
-        {
-          "word": " to",
-          "start": 7.04,
-          "end": 7.54,
-          "probability": 0.9864457249641418
-        },
-        {
-          "word": " come",
-          "start": 7.54,
-          "end": 7.84,
-          "probability": 0.9905421137809753
+            "id": 3,
+            "seek": 2338,
+            "start": 35.82,
+            "end": 38.44,
+            "text": " So I just needed something, anything would do.",
+            "tokens": [
+                50963,
+                1406,
+                314,
+                655,
+                2622,
+                1223,
+                11,
+                1997,
+                561,
+                466,
+                13,
+                51163
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.12918833190319584,
+            "compression_ratio": 1.4383561643835616,
+            "no_speech_prob": 0.8823561668395996,
+            "words": [
+                {
+                    "word": " So",
+                    "start": 35.82,
+                    "end": 35.96,
+                    "probability": 0.836190402507782
+                },
+                {
+                    "word": " I",
+                    "start": 35.96,
+                    "end": 36.22,
+                    "probability": 0.7987627983093262
+                },
+                {
+                    "word": " just",
+                    "start": 36.22,
+                    "end": 36.4,
+                    "probability": 0.9886242151260376
+                },
+                {
+                    "word": " needed",
+                    "start": 36.4,
+                    "end": 36.62,
+                    "probability": 0.989797055721283
+                },
+                {
+                    "word": " something,",
+                    "start": 36.62,
+                    "end": 37.18,
+                    "probability": 0.9934984445571899
+                },
+                {
+                    "word": " anything",
+                    "start": 37.62,
+                    "end": 37.92,
+                    "probability": 0.9905892610549927
+                },
+                {
+                    "word": " would",
+                    "start": 37.92,
+                    "end": 38.14,
+                    "probability": 0.9892305731773376
+                },
+                {
+                    "word": " do.",
+                    "start": 38.14,
+                    "end": 38.44,
+                    "probability": 0.9989099502563477
+                }
+            ]
         }
-      ]
-    },
-    {
-      "id": 1,
-      "seek": 0,
-      "start": 7.84,
-      "end": 13.28,
-      "text": " up with anything meaningful for the player to do. It felt as though I just",
-      "tokens": [
-        50755,
-        510,
-        351,
-        1997,
-        11570,
-        329,
-        262,
-        2137,
-        284,
-        466,
-        13,
-        632,
-        2936,
-        355,
-        996,
-        314,
-        655,
-        51005
-      ],
-      "temperature": 0.0,
-      "avg_logprob": -0.11685883480569591,
-      "compression_ratio": 1.6885964912280702,
-      "no_speech_prob": 0.5112867951393127,
-      "words": [
-        {
-          "word": " up",
-          "start": 7.84,
-          "end": 8.0,
-          "probability": 0.99552983045578
-        },
-        {
-          "word": " with",
-          "start": 8.0,
-          "end": 8.12,
-          "probability": 0.9949703812599182
-        },
-        {
-          "word": " anything",
-          "start": 8.12,
-          "end": 8.44,
-          "probability": 0.983918309211731
-        },
-        {
-          "word": " meaningful",
-          "start": 8.44,
-          "end": 9.02,
-          "probability": 0.9857763648033142
-        },
-        {
-          "word": " for",
-          "start": 9.02,
-          "end": 9.66,
-          "probability": 0.984254002571106
-        },
-        {
-          "word": " the",
-          "start": 9.66,
-          "end": 10.34,
-          "probability": 0.9650547504425049
-        },
-        {
-          "word": " player",
-          "start": 10.34,
-          "end": 10.54,
-          "probability": 0.9824379086494446
-        },
-        {
-          "word": " to",
-          "start": 10.54,
-          "end": 10.74,
-          "probability": 0.9964304566383362
-        },
-        {
-          "word": " do",
-          "start": 10.74,
-          "end": 11.08,
-          "probability": 0.9989373087882996
-        },
-        {
-          "word": ".",
-          "start": 11.08,
-          "end": 11.64,
-          "probability": 0.7973955869674683
-        },
-        {
-          "word": " It",
-          "start": 11.94,
-          "end": 12.02,
-          "probability": 0.9695953130722046
-        },
-        {
-          "word": " felt",
-          "start": 12.02,
-          "end": 12.18,
-          "probability": 0.7125937342643738
-        },
-        {
-          "word": " as",
-          "start": 12.18,
-          "end": 12.4,
-          "probability": 0.980125367641449
-        },
-        {
-          "word": " though",
-          "start": 12.4,
-          "end": 12.66,
-          "probability": 0.9876319766044617
-        },
-        {
-          "word": " I",
-          "start": 12.66,
-          "end": 12.88,
-          "probability": 0.9734766483306885
-        },
-        {
-          "word": " just",
-          "start": 12.88,
-          "end": 13.28,
-          "probability": 0.876036524772644
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "seek": 0,
-      "start": 13.28,
-      "end": 17.52,
-      "text": " have to give them something kind of arbitrary to pursue inside of the game",
-      "tokens": [
-        51005,
-        423,
-        284,
-        1577,
-        606,
-        1223,
-        1611,
-        286,
-        14977,
-        284,
-        10660,
-        2641,
-        286,
-        262,
-        983,
-        51239
-      ],
-      "temperature": 0.0,
-      "avg_logprob": -0.11685883480569591,
-      "compression_ratio": 1.6885964912280702,
-      "no_speech_prob": 0.5112867951393127,
-      "words": [
-        {
-          "word": " have",
-          "start": 13.28,
-          "end": 13.64,
-          "probability": 0.38889622688293457
-        },
-        {
-          "word": " to",
-          "start": 13.64,
-          "end": 13.92,
-          "probability": 0.9985760450363159
-        },
-        {
-          "word": " give",
-          "start": 13.92,
-          "end": 14.12,
-          "probability": 0.9950059056282043
-        },
-        {
-          "word": " them",
-          "start": 14.12,
-          "end": 14.42,
-          "probability": 0.9960502982139587
-        },
-        {
-          "word": " something",
-          "start": 14.42,
-          "end": 15.0,
-          "probability": 0.9855863451957703
-        },
-        {
-          "word": " kind",
-          "start": 15.0,
-          "end": 15.58,
-          "probability": 0.9053648114204407
-        },
-        {
-          "word": " of",
-          "start": 15.58,
-          "end": 15.76,
-          "probability": 0.9962491393089294
-        },
-        {
-          "word": " arbitrary",
-          "start": 15.76,
-          "end": 16.14,
-          "probability": 0.9516658186912537
-        },
-        {
-          "word": " to",
-          "start": 16.14,
-          "end": 16.42,
-          "probability": 0.9750427603721619
-        },
-        {
-          "word": " pursue",
-          "start": 16.42,
-          "end": 16.66,
-          "probability": 0.9840514063835144
-        },
-        {
-          "word": " inside",
-          "start": 16.66,
-          "end": 17.06,
-          "probability": 0.9916513562202454
-        },
-        {
-          "word": " of",
-          "start": 17.06,
-          "end": 17.24,
-          "probability": 0.9704031348228455
-        },
-        {
-          "word": " the",
-          "start": 17.24,
-          "end": 17.38,
-          "probability": 0.9942895174026489
-        },
-        {
-          "word": " game",
-          "start": 17.38,
-          "end": 17.52,
-          "probability": 0.9705438017845154
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "seek": 0,
-      "start": 17.52,
-      "end": 24.32,
-      "text": " so that they could keep their hands busy and just give me more space to talk. Like",
-      "tokens": [
-        51239,
-        523,
-        326,
-        484,
-        714,
-        1394,
-        511,
-        2832,
-        8179,
-        290,
-        655,
-        1577,
-        502,
-        517,
-        2272,
-        284,
-        1561,
-        13,
-        4525,
-        51579
-      ],
-      "temperature": 0.0,
-      "avg_logprob": -0.11685883480569591,
-      "compression_ratio": 1.6885964912280702,
-      "no_speech_prob": 0.5112867951393127,
-      "words": [
-        {
-          "word": " so",
-          "start": 17.52,
-          "end": 17.74,
-          "probability": 0.8711217641830444
-        },
-        {
-          "word": " that",
-          "start": 17.74,
-          "end": 17.86,
-          "probability": 0.9509314894676208
-        },
-        {
-          "word": " they",
-          "start": 17.86,
-          "end": 18.02,
-          "probability": 0.9969574213027954
-        },
-        {
-          "word": " could",
-          "start": 18.02,
-          "end": 18.22,
-          "probability": 0.8586605787277222
-        },
-        {
-          "word": " keep",
-          "start": 18.22,
-          "end": 18.44,
-          "probability": 0.9971470236778259
-        },
-        {
-          "word": " their",
-          "start": 18.44,
-          "end": 18.7,
-          "probability": 0.9951392412185669
-        },
-        {
-          "word": " hands",
-          "start": 18.7,
-          "end": 18.98,
-          "probability": 0.993328332901001
-        },
-        {
-          "word": " busy",
-          "start": 18.98,
-          "end": 19.44,
-          "probability": 0.9838681221008301
-        },
-        {
-          "word": " and",
-          "start": 19.44,
-          "end": 20.1,
-          "probability": 0.9510542750358582
-        },
-        {
-          "word": " just",
-          "start": 20.1,
-          "end": 20.98,
-          "probability": 0.9061620235443115
-        },
-        {
-          "word": " give",
-          "start": 20.98,
-          "end": 21.52,
-          "probability": 0.9755898118019104
-        },
-        {
-          "word": " me",
-          "start": 21.52,
-          "end": 21.8,
-          "probability": 0.9958012700080872
-        },
-        {
-          "word": " more",
-          "start": 21.8,
-          "end": 22.2,
-          "probability": 0.9954062700271606
-        },
-        {
-          "word": " space",
-          "start": 22.2,
-          "end": 22.78,
-          "probability": 0.9968822002410889
-        },
-        {
-          "word": " to",
-          "start": 22.78,
-          "end": 23.02,
-          "probability": 0.9989054203033447
-        },
-        {
-          "word": " talk",
-          "start": 23.02,
-          "end": 23.36,
-          "probability": 0.9991360306739807
-        },
-        {
-          "word": ".",
-          "start": 23.36,
-          "end": 23.92,
-          "probability": 0.9330889582633972
-        },
-        {
-          "word": " Like",
-          "start": 24.2,
-          "end": 24.32,
-          "probability": 0.9009533524513245
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "seek": 0,
-      "start": 24.32,
-      "end": 29.88,
-      "text": " I know that when I play games I tend to get so bored when they just expose",
-      "tokens": [
-        51579,
-        314,
-        760,
-        326,
-        618,
-        314,
-        711,
-        1830,
-        314,
-        4327,
-        284,
-        651,
-        523,
-        17533,
-        618,
-        484,
-        655,
-        15651,
-        51857
-      ],
-      "temperature": 0.0,
-      "avg_logprob": -0.11685883480569591,
-      "compression_ratio": 1.6885964912280702,
-      "no_speech_prob": 0.5112867951393127,
-      "words": [
-        {
-          "word": " I",
-          "start": 24.32,
-          "end": 24.5,
-          "probability": 0.6590750217437744
-        },
-        {
-          "word": " know",
-          "start": 24.5,
-          "end": 24.66,
-          "probability": 0.9979797005653381
-        },
-        {
-          "word": " that",
-          "start": 24.66,
-          "end": 25.2,
-          "probability": 0.7133990526199341
-        },
-        {
-          "word": " when",
-          "start": 25.2,
-          "end": 25.52,
-          "probability": 0.9830787181854248
-        },
-        {
-          "word": " I",
-          "start": 25.52,
-          "end": 25.68,
-          "probability": 0.995223343372345
-        },
-        {
-          "word": " play",
-          "start": 25.68,
-          "end": 25.92,
-          "probability": 0.9963268637657166
-        },
-        {
-          "word": " games",
-          "start": 25.92,
-          "end": 26.3,
-          "probability": 0.9975792765617371
-        },
-        {
-          "word": " I",
-          "start": 26.3,
-          "end": 26.56,
-          "probability": 0.8979590535163879
-        },
-        {
-          "word": " tend",
-          "start": 26.56,
-          "end": 26.8,
-          "probability": 0.998325526714325
-        },
-        {
-          "word": " to",
-          "start": 26.8,
-          "end": 26.98,
-          "probability": 0.9986496567726135
-        },
-        {
-          "word": " get",
-          "start": 26.98,
-          "end": 27.18,
-          "probability": 0.9976811408996582
-        },
-        {
-          "word": " so",
-          "start": 27.18,
-          "end": 27.48,
-          "probability": 0.9875089526176453
-        },
-        {
-          "word": " bored",
-          "start": 27.48,
-          "end": 27.86,
-          "probability": 0.9992606043815613
-        },
-        {
-          "word": " when",
-          "start": 27.86,
-          "end": 28.16,
-          "probability": 0.9715335369110107
-        },
-        {
-          "word": " they",
-          "start": 28.16,
-          "end": 28.4,
-          "probability": 0.9961386322975159
-        },
-        {
-          "word": " just",
-          "start": 28.4,
-          "end": 28.92,
-          "probability": 0.9898442029953003
-        },
-        {
-          "word": " expose",
-          "start": 28.92,
-          "end": 29.88,
-          "probability": 0.9509673714637756
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "seek": 2988,
-      "start": 29.88,
-      "end": 33.8,
-      "text": " their story to me without any sort of interactivity and just have me kind of",
-      "tokens": [
-        50363,
-        511,
-        1621,
-        284,
-        502,
-        1231,
-        597,
-        3297,
-        286,
-        9427,
-        3458,
-        290,
-        655,
-        423,
-        502,
-        1611,
-        286,
-        50553
-      ],
-      "temperature": 0.0,
-      "avg_logprob": -0.15465635723537868,
-      "compression_ratio": 1.2882882882882882,
-      "no_speech_prob": 0.003075764048844576,
-      "words": [
-        {
-          "word": " their",
-          "start": 29.88,
-          "end": 30.06,
-          "probability": 0.8777875304222107
-        },
-        {
-          "word": " story",
-          "start": 30.06,
-          "end": 30.32,
-          "probability": 0.9702726602554321
-        },
-        {
-          "word": " to",
-          "start": 30.32,
-          "end": 30.48,
-          "probability": 0.9873431921005249
-        },
-        {
-          "word": " me",
-          "start": 30.48,
-          "end": 30.66,
-          "probability": 0.9982860684394836
-        },
-        {
-          "word": " without",
-          "start": 30.66,
-          "end": 30.96,
-          "probability": 0.9625234007835388
-        },
-        {
-          "word": " any",
-          "start": 30.96,
-          "end": 31.32,
-          "probability": 0.9939800500869751
-        },
-        {
-          "word": " sort",
-          "start": 31.32,
-          "end": 31.52,
-          "probability": 0.9867234826087952
-        },
-        {
-          "word": " of",
-          "start": 31.52,
-          "end": 31.68,
-          "probability": 0.998195469379425
-        },
-        {
-          "word": " interactivity",
-          "start": 31.68,
-          "end": 32.36,
-          "probability": 0.9905568361282349
-        },
-        {
-          "word": " and",
-          "start": 32.36,
-          "end": 32.74,
-          "probability": 0.737805962562561
-        },
-        {
-          "word": " just",
-          "start": 32.74,
-          "end": 32.9,
-          "probability": 0.9620328545570374
-        },
-        {
-          "word": " have",
-          "start": 32.9,
-          "end": 33.12,
-          "probability": 0.9886776804924011
-        },
-        {
-          "word": " me",
-          "start": 33.12,
-          "end": 33.38,
-          "probability": 0.9976563453674316
-        },
-        {
-          "word": " kind",
-          "start": 33.38,
-          "end": 33.62,
-          "probability": 0.709163248538971
-        },
-        {
-          "word": " of",
-          "start": 33.62,
-          "end": 33.8,
-          "probability": 0.9962449669837952
-        }
-      ]
-    },
-    {
-      "id": 6,
-      "seek": 2988,
-      "start": 33.8,
-      "end": 38.94,
-      "text": " sit there and wait. So I just needed something, anything would do.",
-      "tokens": [
-        50553,
-        1650,
-        612,
-        290,
-        4043,
-        13,
-        1406,
-        314,
-        655,
-        2622,
-        1223,
-        11,
-        1997,
-        561,
-        466,
-        13,
-        50885
-      ],
-      "temperature": 0.0,
-      "avg_logprob": -0.15465635723537868,
-      "compression_ratio": 1.2882882882882882,
-      "no_speech_prob": 0.003075764048844576,
-      "words": [
-        {
-          "word": " sit",
-          "start": 33.8,
-          "end": 33.94,
-          "probability": 0.9940844178199768
-        },
-        {
-          "word": " there",
-          "start": 33.94,
-          "end": 34.28,
-          "probability": 0.9972250461578369
-        },
-        {
-          "word": " and",
-          "start": 34.28,
-          "end": 34.54,
-          "probability": 0.9973913431167603
-        },
-        {
-          "word": " wait",
-          "start": 34.54,
-          "end": 34.84,
-          "probability": 0.9988425970077515
-        },
-        {
-          "word": ".",
-          "start": 34.84,
-          "end": 35.36,
-          "probability": 0.8128386735916138
-        },
-        {
-          "word": " So",
-          "start": 35.66,
-          "end": 35.96,
-          "probability": 0.9599137902259827
-        },
-        {
-          "word": " I",
-          "start": 35.96,
-          "end": 36.22,
-          "probability": 0.760765552520752
-        },
-        {
-          "word": " just",
-          "start": 36.22,
-          "end": 36.4,
-          "probability": 0.9980775117874146
-        },
-        {
-          "word": " needed",
-          "start": 36.4,
-          "end": 36.62,
-          "probability": 0.9972888231277466
-        },
-        {
-          "word": " something",
-          "start": 36.62,
-          "end": 37.18,
-          "probability": 0.9902562499046326
-        },
-        {
-          "word": ",",
-          "start": 37.18,
-          "end": 37.66,
-          "probability": 0.42982450127601624
-        },
-        {
-          "word": " anything",
-          "start": 37.66,
-          "end": 37.92,
-          "probability": 0.9970292448997498
-        },
-        {
-          "word": " would",
-          "start": 37.92,
-          "end": 38.12,
-          "probability": 0.9939495325088501
-        },
-        {
-          "word": " do",
-          "start": 38.12,
-          "end": 38.42,
-          "probability": 0.9993828535079956
-        },
-        {
-          "word": ".",
-          "start": 38.42,
-          "end": 38.94,
-          "probability": 0.9876986742019653
-        }
-      ]
-    }
-  ],
-  "language": "en"
+    ],
+    "language": "en"
 }
