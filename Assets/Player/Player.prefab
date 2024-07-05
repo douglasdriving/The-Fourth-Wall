@@ -537,6 +537,7 @@ GameObject:
   - component: {fileID: 7488756484108920916}
   - component: {fileID: 541102574470081799}
   - component: {fileID: 3296216261814278592}
+  - component: {fileID: -5414448687396857170}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -641,7 +642,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8531470548768403456}
   serializedVersion: 4
-  m_Mass: 1.3
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -706,7 +707,7 @@ MonoBehaviour:
   sprintBarHeightPercent: 0.02
   enableJump: 1
   jumpKey: 32
-  jumpPower: 7
+  jumpPower: 9
   enableCrouch: 1
   holdToCrouch: 1
   crouchKey: 306
@@ -812,5 +813,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 4151833438473627351}
   maxInteractionDistance: 15
-  highlightOutlineWidth: 10
-  highlightedItem: {fileID: 0}
+  highlightedInteractable: {fileID: 0}
+--- !u!114 &-5414448687396857170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8531470548768403456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c7c09617a827174cb82508abf94346d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addedGravity: 4
