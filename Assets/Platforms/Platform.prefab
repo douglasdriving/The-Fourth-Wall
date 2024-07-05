@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3184701320895326754}
   m_Layer: 0
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33,7 +33,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5088633866392379321}
+  - {fileID: 5316645806328856441}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3922832473121546200
@@ -123,7 +123,7 @@ MonoBehaviour:
   maxScale: 10
   minRot: {x: -20, y: -180, z: -20}
   maxRot: {x: 20, y: 180, z: 20}
---- !u!1001 &9129621669748253552
+--- !u!1001 &8206717625025659824
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -216,8 +216,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f83fe12983f14d949951ee87cdb8131d, type: 3}
---- !u!4 &5088633866392379321 stripped
+--- !u!4 &5316645806328856441 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4047780605530389705, guid: f83fe12983f14d949951ee87cdb8131d, type: 3}
-  m_PrefabInstance: {fileID: 9129621669748253552}
+  m_PrefabInstance: {fileID: 8206717625025659824}
   m_PrefabAsset: {fileID: 0}

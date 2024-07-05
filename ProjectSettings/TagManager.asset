@@ -7,6 +7,7 @@ TagManager:
   - RespawnPoint
   - Interactable
   - Holdable
+  - Platform
   layers:
   - Default
   - TransparentFX
