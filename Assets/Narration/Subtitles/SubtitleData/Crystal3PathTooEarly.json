@@ -1,0 +1,422 @@
+{
+    "text": " Um, okay, could you please just do the crystals in order like crystal two before crystal three? Because I kind of set the script up that way. I was assuming you would simply follow the signs but Now you're not so, um, yeah, please go back and do crystal two first",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 7.8,
+            "text": " Um, okay, could you please just do the crystals in order like crystal two before crystal three?",
+            "tokens": [
+                50363,
+                21039,
+                11,
+                8788,
+                11,
+                714,
+                345,
+                3387,
+                655,
+                466,
+                262,
+                24770,
+                287,
+                1502,
+                588,
+                15121,
+                734,
+                878,
+                15121,
+                1115,
+                30,
+                50747
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.17292128187237363,
+            "compression_ratio": 1.502857142857143,
+            "no_speech_prob": 0.036698225885629654,
+            "words": [
+                {
+                    "word": " Um,",
+                    "start": 0.0,
+                    "end": 0.52,
+                    "probability": 0.2664051651954651
+                },
+                {
+                    "word": " okay,",
+                    "start": 0.78,
+                    "end": 0.94,
+                    "probability": 0.9426397681236267
+                },
+                {
+                    "word": " could",
+                    "start": 1.0,
+                    "end": 1.16,
+                    "probability": 0.9871045351028442
+                },
+                {
+                    "word": " you",
+                    "start": 1.16,
+                    "end": 1.38,
+                    "probability": 0.9997373223304749
+                },
+                {
+                    "word": " please",
+                    "start": 1.38,
+                    "end": 1.86,
+                    "probability": 0.9776825308799744
+                },
+                {
+                    "word": " just",
+                    "start": 1.86,
+                    "end": 2.58,
+                    "probability": 0.9786238670349121
+                },
+                {
+                    "word": " do",
+                    "start": 2.58,
+                    "end": 3.22,
+                    "probability": 0.9425607919692993
+                },
+                {
+                    "word": " the",
+                    "start": 3.22,
+                    "end": 3.46,
+                    "probability": 0.9988058805465698
+                },
+                {
+                    "word": " crystals",
+                    "start": 3.46,
+                    "end": 3.9,
+                    "probability": 0.9714726209640503
+                },
+                {
+                    "word": " in",
+                    "start": 3.9,
+                    "end": 4.3,
+                    "probability": 0.9875562787055969
+                },
+                {
+                    "word": " order",
+                    "start": 4.3,
+                    "end": 4.8,
+                    "probability": 0.9962044358253479
+                },
+                {
+                    "word": " like",
+                    "start": 4.8,
+                    "end": 5.34,
+                    "probability": 0.5206826329231262
+                },
+                {
+                    "word": " crystal",
+                    "start": 5.34,
+                    "end": 5.86,
+                    "probability": 0.8464843034744263
+                },
+                {
+                    "word": " two",
+                    "start": 5.86,
+                    "end": 6.4,
+                    "probability": 0.5053483843803406
+                },
+                {
+                    "word": " before",
+                    "start": 6.4,
+                    "end": 6.9,
+                    "probability": 0.9801027178764343
+                },
+                {
+                    "word": " crystal",
+                    "start": 6.9,
+                    "end": 7.38,
+                    "probability": 0.9959958791732788
+                },
+                {
+                    "word": " three?",
+                    "start": 7.38,
+                    "end": 7.8,
+                    "probability": 0.9801700711250305
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 8.38,
+            "end": 14.5,
+            "text": " Because I kind of set the script up that way. I was assuming you would simply follow the signs but",
+            "tokens": [
+                50775,
+                4362,
+                314,
+                1611,
+                286,
+                900,
+                262,
+                4226,
+                510,
+                326,
+                835,
+                13,
+                314,
+                373,
+                13148,
+                345,
+                561,
+                2391,
+                1061,
+                262,
+                5895,
+                475,
+                51083
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.17292128187237363,
+            "compression_ratio": 1.502857142857143,
+            "no_speech_prob": 0.036698225885629654,
+            "words": [
+                {
+                    "word": " Because",
+                    "start": 8.38,
+                    "end": 8.56,
+                    "probability": 0.9218697547912598
+                },
+                {
+                    "word": " I",
+                    "start": 8.56,
+                    "end": 8.74,
+                    "probability": 0.9683456420898438
+                },
+                {
+                    "word": " kind",
+                    "start": 8.74,
+                    "end": 8.98,
+                    "probability": 0.9911722540855408
+                },
+                {
+                    "word": " of",
+                    "start": 8.98,
+                    "end": 9.46,
+                    "probability": 0.9988723397254944
+                },
+                {
+                    "word": " set",
+                    "start": 9.46,
+                    "end": 9.8,
+                    "probability": 0.9799324870109558
+                },
+                {
+                    "word": " the",
+                    "start": 9.8,
+                    "end": 10.16,
+                    "probability": 0.9990130662918091
+                },
+                {
+                    "word": " script",
+                    "start": 10.16,
+                    "end": 10.46,
+                    "probability": 0.9982532858848572
+                },
+                {
+                    "word": " up",
+                    "start": 10.46,
+                    "end": 10.76,
+                    "probability": 0.999603807926178
+                },
+                {
+                    "word": " that",
+                    "start": 10.76,
+                    "end": 10.94,
+                    "probability": 0.9960136413574219
+                },
+                {
+                    "word": " way.",
+                    "start": 10.94,
+                    "end": 11.22,
+                    "probability": 0.9996258020401001
+                },
+                {
+                    "word": " I",
+                    "start": 11.24,
+                    "end": 11.42,
+                    "probability": 0.998855710029602
+                },
+                {
+                    "word": " was",
+                    "start": 11.42,
+                    "end": 11.56,
+                    "probability": 0.9994819760322571
+                },
+                {
+                    "word": " assuming",
+                    "start": 11.56,
+                    "end": 11.88,
+                    "probability": 0.9986100196838379
+                },
+                {
+                    "word": " you",
+                    "start": 11.88,
+                    "end": 12.1,
+                    "probability": 0.9969968795776367
+                },
+                {
+                    "word": " would",
+                    "start": 12.1,
+                    "end": 12.32,
+                    "probability": 0.9991238713264465
+                },
+                {
+                    "word": " simply",
+                    "start": 12.32,
+                    "end": 13.04,
+                    "probability": 0.9920326471328735
+                },
+                {
+                    "word": " follow",
+                    "start": 13.04,
+                    "end": 13.44,
+                    "probability": 0.9990528225898743
+                },
+                {
+                    "word": " the",
+                    "start": 13.44,
+                    "end": 13.74,
+                    "probability": 0.9993535876274109
+                },
+                {
+                    "word": " signs",
+                    "start": 13.74,
+                    "end": 14.14,
+                    "probability": 0.9809943437576294
+                },
+                {
+                    "word": " but",
+                    "start": 14.14,
+                    "end": 14.5,
+                    "probability": 0.29701778292655945
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "seek": 0,
+            "start": 15.040000000000001,
+            "end": 19.36,
+            "text": " Now you're not so, um, yeah, please go back and do crystal two first",
+            "tokens": [
+                51115,
+                2735,
+                345,
+                821,
+                407,
+                523,
+                11,
+                23781,
+                11,
+                10194,
+                11,
+                3387,
+                467,
+                736,
+                290,
+                466,
+                15121,
+                734,
+                717,
+                51340
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.17292128187237363,
+            "compression_ratio": 1.502857142857143,
+            "no_speech_prob": 0.036698225885629654,
+            "words": [
+                {
+                    "word": " Now",
+                    "start": 15.04,
+                    "end": 15.34,
+                    "probability": 0.21203120052814484
+                },
+                {
+                    "word": " you're",
+                    "start": 15.34,
+                    "end": 15.54,
+                    "probability": 0.9866844117641449
+                },
+                {
+                    "word": " not",
+                    "start": 15.54,
+                    "end": 15.8,
+                    "probability": 0.9996017813682556
+                },
+                {
+                    "word": " so,",
+                    "start": 15.8,
+                    "end": 16.26,
+                    "probability": 0.812185525894165
+                },
+                {
+                    "word": " um,",
+                    "start": 16.56,
+                    "end": 16.86,
+                    "probability": 0.9791622161865234
+                },
+                {
+                    "word": " yeah,",
+                    "start": 17.32,
+                    "end": 17.46,
+                    "probability": 0.9556637406349182
+                },
+                {
+                    "word": " please",
+                    "start": 17.56,
+                    "end": 17.94,
+                    "probability": 0.9992057681083679
+                },
+                {
+                    "word": " go",
+                    "start": 17.94,
+                    "end": 18.1,
+                    "probability": 0.9983817338943481
+                },
+                {
+                    "word": " back",
+                    "start": 18.1,
+                    "end": 18.34,
+                    "probability": 0.9999345541000366
+                },
+                {
+                    "word": " and",
+                    "start": 18.34,
+                    "end": 18.54,
+                    "probability": 0.9992417097091675
+                },
+                {
+                    "word": " do",
+                    "start": 18.54,
+                    "end": 18.64,
+                    "probability": 0.9998212456703186
+                },
+                {
+                    "word": " crystal",
+                    "start": 18.64,
+                    "end": 18.9,
+                    "probability": 0.9964146614074707
+                },
+                {
+                    "word": " two",
+                    "start": 18.9,
+                    "end": 19.1,
+                    "probability": 0.9336562156677246
+                },
+                {
+                    "word": " first",
+                    "start": 19.1,
+                    "end": 19.36,
+                    "probability": 0.9945815205574036
+                }
+            ]
+        }
+    ],
+    "language": "en"
+}

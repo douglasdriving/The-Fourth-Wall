@@ -7,6 +7,7 @@ namespace Narration
     public AudioClip audioClip;
     public TextAsset subtitleJson;
     SubtitleJsonData subtitle;
+    bool triggered = false;
 
     void Awake()
     {
@@ -15,11 +16,11 @@ namespace Narration
 
     private void OnTriggerEnter(Collider other)
     {
-      if (other.CompareTag("Player"))
-      {
-        NarrationManager.PlayNarration(audioClip, subtitle);
-        Destroy(gameObject);
-      }
+      if (triggered) return;
+      if (!other.CompareTag("Player")) return;
+
+      NarrationManager.PlayNarration(audioClip, subtitle);
+      triggered = true;
     }
   }
 }
