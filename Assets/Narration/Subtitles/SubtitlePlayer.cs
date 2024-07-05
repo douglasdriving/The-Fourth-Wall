@@ -7,6 +7,7 @@ namespace Narration
     {
         [SerializeField] TMP_Text subtitleText;
         [SerializeField] bool singleWordSubtitles = true;
+        [SerializeField] WordMover wordMover;
         const float lingerTime = 1f;
         static SubtitleJsonData currentSubtitles;
         static int currentWordIndex = 0;
@@ -81,6 +82,7 @@ namespace Narration
                 AddWordToUI(word.word);
             }
             UpdateNextWordTime();
+            wordMover.UpdateWordPosition();
         }
 
         private static void UpdateNextWordTime()
@@ -114,6 +116,7 @@ namespace Narration
             string firstWordInSegment = segment.words[0].word;
             StartNewSentenceInUI(firstWordInSegment);
             UpdateNextWordTime();
+            wordMover.UpdateWordPosition();
         }
 
         private void StopSubtitle()

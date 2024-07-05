@@ -8,6 +8,7 @@ public class WordMover : MonoBehaviour
     [SerializeField] float distanceForChange = 5f;
     [SerializeField] float minDistanceForPlatformToJumpTo = 10f;
     [SerializeField] TMP_Text word;
+    [SerializeField] bool moveWordWhenPlayerIsTooClose = false;
 
     Camera cam;
     GameObject[] platformsInScene;
@@ -34,15 +35,18 @@ public class WordMover : MonoBehaviour
 
     void Update()
     {
-        float distanceFromWordToPlayer = Vector3.Distance(playerTransform.position, transform.position);
-        bool playerIsTooCloseToWord = distanceFromWordToPlayer < distanceForChange;
-        if (playerIsTooCloseToWord)
+        if (moveWordWhenPlayerIsTooClose)
         {
-            UpdateWordPosition();
+            float distanceFromWordToPlayer = Vector3.Distance(playerTransform.position, transform.position);
+            bool playerIsTooCloseToWord = distanceFromWordToPlayer < distanceForChange;
+            if (playerIsTooCloseToWord)
+            {
+                UpdateWordPosition();
+            }
         }
     }
 
-    private void UpdateWordPosition()
+    public void UpdateWordPosition()
     {
         List<Transform> positionsOfPlatformsInView = GetPlatformsInView();
         Transform closestPlatform = GetValidPlatformPosClosestToPlayer(positionsOfPlatformsInView); //could return null

@@ -254,6 +254,7 @@ MonoBehaviour:
   distanceForChange: 5
   minDistanceForPlatformToJumpTo: 10
   word: {fileID: 8193776066123834223}
+  moveWordWhenPlayerIsTooClose: 0
 --- !u!114 &7379956578420471475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,3 +268,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subtitleText: {fileID: 8193776066123834223}
+  singleWordSubtitles: 1
+  wordMover: {fileID: 2136116425042813122}
