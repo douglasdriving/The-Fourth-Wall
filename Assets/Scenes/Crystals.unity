@@ -5447,7 +5447,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1390934966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5544,6 +5544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subtitleText: {fileID: 1507334209}
+  singleWordSubtitles: 1
 --- !u!1001 &1446152689
 PrefabInstance:
   m_ObjectHideFlags: 0

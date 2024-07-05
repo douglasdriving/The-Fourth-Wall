@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 1062923352037926281}
   - component: {fileID: 766092887391787655}
   - component: {fileID: 2136116425042813122}
+  - component: {fileID: 7379956578420471475}
   m_Layer: 5
   m_Name: WorldWordCanvas
   m_TagString: Untagged
@@ -253,3 +254,16 @@ MonoBehaviour:
   distanceForChange: 5
   minDistanceForPlatformToJumpTo: 10
   word: {fileID: 8193776066123834223}
+--- !u!114 &7379956578420471475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7496801569402546684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d0a4fd37b8a373439ba24eceac9e337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  subtitleText: {fileID: 8193776066123834223}

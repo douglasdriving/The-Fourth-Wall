@@ -6,6 +6,7 @@ namespace Narration
     public class SubtitlePlayer : MonoBehaviour
     {
         [SerializeField] TMP_Text subtitleText;
+        [SerializeField] bool singleWordSubtitles = true;
         const float lingerTime = 1f;
         static SubtitleJsonData currentSubtitles;
         static int currentWordIndex = 0;
@@ -71,7 +72,14 @@ namespace Narration
             currentWordIndex++;
             SubtitleSegment currentSegment = currentSubtitles.segments[currentSegmentIndex];
             SubtitleWord word = currentSegment.words[currentWordIndex];
-            AddWordToUI(word.word);
+            if (singleWordSubtitles)
+            {
+                subtitleText.text = word.word;
+            }
+            else
+            {
+                AddWordToUI(word.word);
+            }
             UpdateNextWordTime();
         }
 
