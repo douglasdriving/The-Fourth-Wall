@@ -15526,6 +15526,14 @@ PrefabInstance:
       propertyPath: layerToCheckForVisionBlock.m_Bits
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3717939786495814891, guid: 8e45090ae0c85554b86c72dc76bce7d3, type: 3}
+      propertyPath: pointsParent
+      value: 
+      objectReference: {fileID: 326870096}
+    - target: {fileID: 3717939786495814891, guid: 8e45090ae0c85554b86c72dc76bce7d3, type: 3}
+      propertyPath: wordPointsParent
+      value: 
+      objectReference: {fileID: 326870096}
     - target: {fileID: 7496801569402546684, guid: 8e45090ae0c85554b86c72dc76bce7d3, type: 3}
       propertyPath: m_Name
       value: WorldSubtitles

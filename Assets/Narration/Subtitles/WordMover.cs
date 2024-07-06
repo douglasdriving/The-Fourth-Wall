@@ -1,130 +1,45 @@
-using System.Collections.Generic;
-using System.Linq;
 using TMPro;
 using UnityEngine;
 
-//should split the point finder and the word mover into separate classes.
-
-public class WordMover : MonoBehaviour
+namespace Narration
 {
-    [SerializeField] LayerMask layerToCheckForVisionBlock;
-    [SerializeField] float minDistanceFromPlayer = 6f;
-    [SerializeField] TMP_Text word;
-    [SerializeField] bool moveWordWhenPlayerIsTooClose = false;
-
-    Camera cam;
-    Transform playerTransform;
-
-    [SerializeField] Transform wordPointsParent;
-    List<Vector3> wordPositionsInScene = new();
-
-    void Awake()
+    public class WordMover : MonoBehaviour
     {
-        SetupSceneReferences();
-        UpdateWordPosition();
-    }
+        [SerializeField] TMP_Text word;
+        [SerializeField] PointVisibilityScanner scanner;
+        Camera cam;
 
-    private void SetupSceneReferences()
-    {
-        cam = Camera.main;
-        foreach (Transform wordPoint in wordPointsParent)
+        void Awake()
         {
-            wordPositionsInScene.Add(wordPoint.position);
+            cam = Camera.main;
+            UpdateWordPosition();
         }
-        playerTransform = GameObject.FindWithTag("Player").transform;
-    }
 
-    void Update()
-    {
-        if (moveWordWhenPlayerIsTooClose)
+        public void UpdateWordPosition()
         {
-            float distanceFromWordToPlayer = Vector3.Distance(playerTransform.position, transform.position);
-            bool playerIsTooCloseToWord = distanceFromWordToPlayer < minDistanceFromPlayer;
-            if (playerIsTooCloseToWord)
-            {
-                UpdateWordPosition();
-            }
-        }
-    }
-
-    public void UpdateWordPosition()
-    {
-        Vector3[] visiblePoints = GetVisiblePoints();
-        Vector3? bestPoint = GetPointAtBestDistance(visiblePoints);
-        if (bestPoint == null)
-        {
-            word.enabled = false;
-        }
-        else
-        {
-            word.enabled = true;
-            transform.position = (Vector3)bestPoint;
-            RotateTowardsCamera();
-        }
-    }
-
-    private Vector3[] GetVisiblePoints()
-    {
-        Vector3[] visiblePoints = wordPositionsInScene.Where(point => IsPointVisible(point)).ToArray();
-        return visiblePoints;
-    }
-
-    bool IsPointVisible(Vector3 point)
-    {
-        // Convert point from world space to viewport space
-        Vector3 viewportPoint = cam.WorldToViewportPoint(point);
-
-        // Check if the point is within the viewport bounds and in front of the camera
-        bool isInView = viewportPoint.x >= 0 && viewportPoint.x <= 1 &&
-                        viewportPoint.y >= 0 && viewportPoint.y <= 1 &&
-                        viewportPoint.z > 0;
-
-        if (!isInView) return false;
-
-        // Perform a raycast from the camera to the point
-        Ray ray = cam.ScreenPointToRay(cam.WorldToScreenPoint(point));
-        bool rayHitSomething = Physics.Raycast(ray, layerToCheckForVisionBlock);
-        bool pointIsObstructed = rayHitSomething;
-        bool pointIsVisible = !pointIsObstructed;
-
-        return pointIsVisible;
-    }
-
-    private Vector3? GetPointAtBestDistance(Vector3[] points)
-    {
-        Vector3? bestPoint = null;
-        foreach (Vector3 point in points)
-        {
-            //make sure its far enough from the player
-            float distanceToPlayer = Vector3.Distance(playerTransform.position, point);
-            bool isFarEnoughFromPlayer = distanceToPlayer > minDistanceFromPlayer;
-            if (!isFarEnoughFromPlayer)
-            {
-                continue;
-            }
-
-            //if its the first platform we see, save it
+            Vector3? bestPoint = scanner.GetClosestVisiblePoint();
             if (bestPoint == null)
             {
-                bestPoint = point;
-                continue;
+                word.enabled = false;
             }
-
-            //check if its the closest platform to the player
-            float distanceBetweenPlayerAndCurrentBestPoint = Vector3.Distance(playerTransform.position, (Vector3)bestPoint);
-            bool isCloserThanCurrentBestPoint = distanceToPlayer < distanceBetweenPlayerAndCurrentBestPoint;
-            if (isCloserThanCurrentBestPoint)
+            else
             {
-                bestPoint = point;
+                ShowWordAtPoint((Vector3)bestPoint);
             }
         }
 
-        return bestPoint;
+        private void ShowWordAtPoint(Vector3 point)
+        {
+            word.enabled = true;
+            transform.position = point;
+            RotateTowardsCamera();
+        }
+
+        private void RotateTowardsCamera()
+        {
+            Vector3 directionVector = (transform.position - cam.transform.position).normalized;
+            transform.forward = directionVector;
+        }
     }
 
-    private void RotateTowardsCamera()
-    {
-        Vector3 directionVector = (transform.position - cam.transform.position).normalized;
-        transform.forward = directionVector;
-    }
 }
