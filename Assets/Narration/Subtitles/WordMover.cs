@@ -3,11 +3,12 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 
+//should split the point finder and the word mover into separate classes.
+
 public class WordMover : MonoBehaviour
 {
     [SerializeField] LayerMask layerToCheckForVisionBlock;
-    [SerializeField] float distanceForChange = 5f;
-    [SerializeField] float minDistanceForPlatformToJumpTo = 10f;
+    [SerializeField] float minDistanceFromPlayer = 6f;
     [SerializeField] TMP_Text word;
     [SerializeField] bool moveWordWhenPlayerIsTooClose = false;
 
@@ -38,7 +39,7 @@ public class WordMover : MonoBehaviour
         if (moveWordWhenPlayerIsTooClose)
         {
             float distanceFromWordToPlayer = Vector3.Distance(playerTransform.position, transform.position);
-            bool playerIsTooCloseToWord = distanceFromWordToPlayer < distanceForChange;
+            bool playerIsTooCloseToWord = distanceFromWordToPlayer < minDistanceFromPlayer;
             if (playerIsTooCloseToWord)
             {
                 UpdateWordPosition();
@@ -96,7 +97,7 @@ public class WordMover : MonoBehaviour
         {
             //make sure its far enough from the player
             float distanceToPlayer = Vector3.Distance(playerTransform.position, point);
-            bool isFarEnoughFromPlayer = distanceToPlayer > minDistanceForPlatformToJumpTo;
+            bool isFarEnoughFromPlayer = distanceToPlayer > minDistanceFromPlayer;
             if (!isFarEnoughFromPlayer)
             {
                 continue;
