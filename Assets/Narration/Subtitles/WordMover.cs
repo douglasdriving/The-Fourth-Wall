@@ -1,20 +1,21 @@
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
 public class WordMover : MonoBehaviour
 {
-    [SerializeField] float heightAbovePlatform = 0.8f;
+    [SerializeField] LayerMask layerToCheckForVisionBlock;
     [SerializeField] float distanceForChange = 5f;
     [SerializeField] float minDistanceForPlatformToJumpTo = 10f;
     [SerializeField] TMP_Text word;
     [SerializeField] bool moveWordWhenPlayerIsTooClose = false;
 
     Camera cam;
-    GameObject[] platformsInScene;
-    List<Renderer> platformRenderersInScene = new();
     Transform playerTransform;
 
+    [SerializeField] Transform wordPointsParent;
+    List<Vector3> wordPositionsInScene = new();
 
     void Awake()
     {
@@ -25,10 +26,9 @@ public class WordMover : MonoBehaviour
     private void SetupSceneReferences()
     {
         cam = Camera.main;
-        platformsInScene = GameObject.FindGameObjectsWithTag("Platform");
-        foreach (GameObject platform in platformsInScene)
+        foreach (Transform wordPoint in wordPointsParent)
         {
-            platformRenderersInScene.Add(platform.GetComponent<Renderer>());
+            wordPositionsInScene.Add(wordPoint.position);
         }
         playerTransform = GameObject.FindWithTag("Player").transform;
     }
@@ -48,42 +48,54 @@ public class WordMover : MonoBehaviour
 
     public void UpdateWordPosition()
     {
-        List<Transform> positionsOfPlatformsInView = GetPlatformsInView();
-        Transform closestPlatform = GetValidPlatformPosClosestToPlayer(positionsOfPlatformsInView); //could return null
-        if (closestPlatform == null)
+        Vector3[] visiblePoints = GetVisiblePoints();
+        Vector3? bestPoint = GetPointAtBestDistance(visiblePoints);
+        if (bestPoint == null)
         {
             word.enabled = false;
         }
         else
         {
             word.enabled = true;
-            PositionAbovePlatform(closestPlatform);
+            transform.position = (Vector3)bestPoint;
             RotateTowardsCamera();
         }
     }
 
-    private List<Transform> GetPlatformsInView()
+    private Vector3[] GetVisiblePoints()
     {
-        Plane[] frustumPlanes = GeometryUtility.CalculateFrustumPlanes(cam);
-        List<Transform> platformsInView = new();
-        foreach (Renderer platformRenderer in platformRenderersInScene)
-        {
-            if (GeometryUtility.TestPlanesAABB(frustumPlanes, platformRenderer.bounds))
-            {
-                platformsInView.Add(platformRenderer.transform);
-            }
-        }
-        return platformsInView;
+        Vector3[] visiblePoints = wordPositionsInScene.Where(point => IsPointVisible(point)).ToArray();
+        return visiblePoints;
     }
 
-    private Transform GetValidPlatformPosClosestToPlayer(List<Transform> platforms)
+    bool IsPointVisible(Vector3 point)
     {
-        Transform platformFound = null;
+        // Convert point from world space to viewport space
+        Vector3 viewportPoint = cam.WorldToViewportPoint(point);
 
-        foreach (Transform platform in platforms)
+        // Check if the point is within the viewport bounds and in front of the camera
+        bool isInView = viewportPoint.x >= 0 && viewportPoint.x <= 1 &&
+                        viewportPoint.y >= 0 && viewportPoint.y <= 1 &&
+                        viewportPoint.z > 0;
+
+        if (!isInView) return false;
+
+        // Perform a raycast from the camera to the point
+        Ray ray = cam.ScreenPointToRay(cam.WorldToScreenPoint(point));
+        bool rayHitSomething = Physics.Raycast(ray, layerToCheckForVisionBlock);
+        bool pointIsObstructed = rayHitSomething;
+        bool pointIsVisible = !pointIsObstructed;
+
+        return pointIsVisible;
+    }
+
+    private Vector3? GetPointAtBestDistance(Vector3[] points)
+    {
+        Vector3? bestPoint = null;
+        foreach (Vector3 point in points)
         {
             //make sure its far enough from the player
-            float distanceToPlayer = Vector3.Distance(playerTransform.position, platform.position);
+            float distanceToPlayer = Vector3.Distance(playerTransform.position, point);
             bool isFarEnoughFromPlayer = distanceToPlayer > minDistanceForPlatformToJumpTo;
             if (!isFarEnoughFromPlayer)
             {
@@ -91,33 +103,22 @@ public class WordMover : MonoBehaviour
             }
 
             //if its the first platform we see, save it
-            if (platformFound == null)
+            if (bestPoint == null)
             {
-                platformFound = platform;
+                bestPoint = point;
                 continue;
             }
 
             //check if its the closest platform to the player
-            float distanceToPlayerOfSavedPos = Vector3.Distance(playerTransform.position, platformFound.position);
-            bool isCloserThanSavedPlatform = distanceToPlayer < distanceToPlayerOfSavedPos;
-            if (isCloserThanSavedPlatform)
+            float distanceBetweenPlayerAndCurrentBestPoint = Vector3.Distance(playerTransform.position, (Vector3)bestPoint);
+            bool isCloserThanCurrentBestPoint = distanceToPlayer < distanceBetweenPlayerAndCurrentBestPoint;
+            if (isCloserThanCurrentBestPoint)
             {
-                platformFound = platform;
+                bestPoint = point;
             }
         }
 
-        return platformFound;
-    }
-
-    private void PositionAbovePlatform(Transform platform)
-    {
-        float platformHeight = platform.lossyScale.y;
-
-        float wordPosX = platform.position.x;
-        float wordPosY = platform.position.y + platformHeight * heightAbovePlatform;
-        float wordPosZ = platform.position.z;
-
-        transform.position = new Vector3(wordPosX, wordPosY, wordPosZ);
+        return bestPoint;
     }
 
     private void RotateTowardsCamera()

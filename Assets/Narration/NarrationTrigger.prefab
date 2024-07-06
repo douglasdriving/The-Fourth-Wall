@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6813229128702202850}
   - component: {fileID: 6798128027889088857}
   - component: {fileID: 7697366751005587580}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: NarrationTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,7 +82,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 0}
   subtitleJson: {fileID: 0}
-  subtitle:
-    text: 
-    segments: []
-    language: 
