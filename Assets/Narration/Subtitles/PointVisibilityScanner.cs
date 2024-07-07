@@ -13,16 +13,12 @@ public class PointVisibilityScanner : MonoBehaviour
 
     void Awake()
     {
-        SetupSceneReferences();
+        cam = Camera.main;
     }
 
-    private void SetupSceneReferences()
+    public void AddPoint(Vector3 point)
     {
-        cam = Camera.main;
-        foreach (Transform child in pointsParent)
-        {
-            pointsInScene.Add(child.position);
-        }
+        pointsInScene.Add(point);
     }
 
     public Vector3? GetClosestVisiblePoint()

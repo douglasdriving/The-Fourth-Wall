@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1594031347715201776}
   - component: {fileID: -1690601938420639402}
+  - component: {fileID: 7434719353739695424}
   m_Layer: 0
   m_Name: WordPoint
   m_TagString: Untagged
@@ -45,3 +46,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: {r: 1, g: 0, b: 0.9284806, a: 1}
+--- !u!114 &7434719353739695424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7910143540055735657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b415f71289c7e04f99734c3ca323e72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
