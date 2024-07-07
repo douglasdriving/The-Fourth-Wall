@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class TransformRandomizer : MonoBehaviour
 {
-    [SerializeField] float minScale = 1;
-    [SerializeField] float maxScale = 10;
+    [SerializeField] Vector3 minScale = Vector3.one;
+    [SerializeField] Vector3 maxScale = Vector3.one * 10;
     [SerializeField] Vector3 minRot = new Vector3(-30, -180, -30);
     [SerializeField] Vector3 maxRot = new Vector3(30, 180, 30);
 
@@ -21,9 +21,9 @@ public class TransformRandomizer : MonoBehaviour
 
     private void RandomizeScale()
     {
-        float xScale = GetRandomValueBetween(minScale, maxScale);
-        float yScale = GetRandomValueBetween(minScale, maxScale);
-        float zScale = GetRandomValueBetween(minScale, maxScale);
+        float xScale = GetRandomValueBetween(minScale.x, maxScale.x);
+        float yScale = GetRandomValueBetween(minScale.y, maxScale.y);
+        float zScale = GetRandomValueBetween(minScale.z, maxScale.z);
         Vector3 scale = new Vector3(xScale, yScale, zScale);
         transform.localScale = scale;
     }
