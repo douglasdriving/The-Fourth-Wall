@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -1690601938420639402}
   - component: {fileID: 7434719353739695424}
   m_Layer: 0
-  m_Name: WordPoint
+  m_Name: WordAnchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
