@@ -6,25 +6,37 @@ using UnityEngine;
 public class PlatformGenerator : MonoBehaviour
 {
     [SerializeField] Vector3 levelDir = Vector3.forward;
-    [SerializeField] GameObject lastPlatformGenerated;
+    [SerializeField] GameObject lastInstatiatedPlatform;
     [SerializeField] GameObject platformPrefab;
+    [SerializeField] GameObject wordPointPrefab;
     [SerializeField] float maxTurnAngle = 45;
     [SerializeField] float distanceBetweenPlatforms = 8f;
     [SerializeField] float maxPlatformHeightDiff = 2;
+    [SerializeField] Transform wordPointsParent;
+    [SerializeField] Transform platformsParent;
 
-    //this should be called when the player jumps to the last platform?
-    //or the last last platform
     public void GenerateNextPlatform()
     {
         RandomlyRotateLevelDirection();
+        Vector3 platformPos = GetNextPlatformPos();
+        InstantiateRandomizedPlatform(platformPos);
+        InstantiateWordPointAbovePlatform(platformPos);
+    }
 
-        Vector3 nextPlatformPoint = lastPlatformGenerated.transform.position + levelDir * distanceBetweenPlatforms;
+    private void InstantiateRandomizedPlatform(Vector3 nextPlatformPoint)
+    {
+        GameObject platform = Instantiate(platformPrefab, nextPlatformPoint, Quaternion.identity);
+        platform.GetComponent<TransformRandomizer>().Randomize();
+        platform.transform.parent = platformsParent;
+        lastInstatiatedPlatform = platform;
+    }
+
+    private Vector3 GetNextPlatformPos()
+    {
+        Vector3 nextPlatformPoint = lastInstatiatedPlatform.transform.position + levelDir * distanceBetweenPlatforms;
         float zDiff = Random.Range(-maxPlatformHeightDiff, maxPlatformHeightDiff);
         nextPlatformPoint.z += zDiff;
-        GameObject platform = Instantiate(platformPrefab, nextPlatformPoint, Quaternion.identity);
-        lastPlatformGenerated = platform;
-
-        platform.GetComponent<TransformRandomizer>().Randomize();
+        return nextPlatformPoint;
     }
 
     private void RandomlyRotateLevelDirection()
@@ -34,5 +46,13 @@ public class PlatformGenerator : MonoBehaviour
         Quaternion rot = Quaternion.Euler(rotVector);
         levelDir = rot * levelDir;
         levelDir.Normalize();
+    }
+
+    private void InstantiateWordPointAbovePlatform(Vector3 platformPos)
+    {
+        float heightAbovePlatform = 2f;
+        Vector3 wordPos = new Vector3(platformPos.x, platformPos.y + heightAbovePlatform, platformPos.z);
+        GameObject wordPoint = Instantiate(wordPointPrefab, wordPos, Quaternion.identity);
+        wordPoint.transform.parent = wordPointsParent;
     }
 }
