@@ -2,12 +2,13 @@ using UnityEngine;
 
 public class WalkwayGenerator : MonoBehaviour
 {
-    [SerializeField] GameObject lastInstatiatedWalkwayPiece;
+    [SerializeField] GameObject lastAddedPiece;
     [SerializeField] GameObject piecePrefab;
     [SerializeField] GameObject wordAnchorPrefab;
     [SerializeField] float maxTurnAngle = 45;
     [SerializeField] float minLength = 3;
     [SerializeField] float maxLength = 10;
+    [SerializeField] float maxPieceYRot = 90;
     [SerializeField] Transform wordAnchorParent;
     [SerializeField] Transform walkwayParent;
     [SerializeField] float pieceOverlap = 0.5f;
@@ -20,9 +21,9 @@ public class WalkwayGenerator : MonoBehaviour
 
     private Vector3 GetNextPieceStartPoint()
     {
-        Vector3 startOfCurrentPiece = lastInstatiatedWalkwayPiece.transform.position;
-        Vector3 currentPieceDir = lastInstatiatedWalkwayPiece.transform.forward;
-        float currentPieceLength = lastInstatiatedWalkwayPiece.transform.lossyScale.z;
+        Vector3 startOfCurrentPiece = lastAddedPiece.transform.position;
+        Vector3 currentPieceDir = lastAddedPiece.transform.forward;
+        float currentPieceLength = lastAddedPiece.transform.lossyScale.z;
         Vector3 endOfCurrentPiece = startOfCurrentPiece + (currentPieceDir * currentPieceLength);
         Vector3 startOfNextPiece = endOfCurrentPiece - (currentPieceDir * pieceOverlap);
         return startOfNextPiece;
@@ -31,16 +32,20 @@ public class WalkwayGenerator : MonoBehaviour
     private void AddPieceToWalkway()
     {
         Vector3 startPos = GetNextPieceStartPoint();
-        Quaternion rot = GetRandomTurnRot();
+        Quaternion rot = GetRandomNewPieceRot();
         GameObject piece = InstatiatePiece(startPos, rot);
         RandomizePieceLength(piece);
     }
 
-    private Quaternion GetRandomTurnRot()
+    private Quaternion GetRandomNewPieceRot()
     {
-        float turnAngle = Random.Range(-maxTurnAngle, maxTurnAngle);
-        Vector3 rotVector = new Vector3(0, turnAngle, 0);
-        Quaternion rot = Quaternion.Euler(rotVector);
+        float lastPieceRotAngle = lastAddedPiece.transform.rotation.eulerAngles.y;
+        if (lastPieceRotAngle > 180) lastPieceRotAngle -= 360;
+        float randomTurnAngle = Random.Range(-maxTurnAngle, maxTurnAngle);
+        float newPieceRotAngle = lastPieceRotAngle + randomTurnAngle;
+        float newPieceRotAngleClamped = Mathf.Clamp(newPieceRotAngle, -maxPieceYRot, maxPieceYRot);
+        Vector3 rotEuler = new Vector3(0, newPieceRotAngleClamped, 0);
+        Quaternion rot = Quaternion.Euler(rotEuler);
         return rot;
     }
 
@@ -48,7 +53,7 @@ public class WalkwayGenerator : MonoBehaviour
     {
         GameObject piece = Instantiate(piecePrefab, startPos, rot);
         piece.transform.parent = walkwayParent;
-        lastInstatiatedWalkwayPiece = piece;
+        lastAddedPiece = piece;
         return piece;
     }
 
