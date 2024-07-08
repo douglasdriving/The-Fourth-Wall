@@ -20,7 +20,7 @@ public class LevelGenerator : MonoBehaviour
     Vector3 endPointOfLastPiece = GetEndPointOfPiece(lastLevelPieceAdded);
     if (type == LevelPieceType.WALKWAY)
     {
-      lastLevelPieceAdded = walkwayGenerator.GenerateNextPiece(endPointOfLastPiece);
+      lastLevelPieceAdded = walkwayGenerator.GenerateNextPiece(endPointOfLastPiece, lastLevelPieceAdded.transform);
     }
     else if (type == LevelPieceType.PLATFORM)
     {

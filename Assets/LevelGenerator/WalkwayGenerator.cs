@@ -12,18 +12,21 @@ public class WalkwayGenerator : MonoBehaviour
     [SerializeField] Transform walkwayParent;
     [SerializeField] float pieceOverlap = 0.5f;
 
-    public GameObject GenerateNextPiece(Vector3 pointToMoveFrom)
+    public GameObject GenerateNextPiece(Vector3 pointToMoveFrom, Transform pieceToMoveFrom)
     {
-        GameObject piece = AddPieceToWalkway(pointToMoveFrom);
-        InstantiateWordAnchorAboveEndOfPiece(piece); //do something with this too?
+        GameObject piece = AddPieceToWalkway(pointToMoveFrom, pieceToMoveFrom);
+        InstantiateWordAnchorAboveEndOfPiece(piece);
         return piece;
     }
 
-    private GameObject AddPieceToWalkway(Vector3 pointToMoveFrom)
+    private GameObject AddPieceToWalkway(Vector3 pointToMoveFrom, Transform pieceToMoveFrom)
     {
         Quaternion rot = GetRandomNewPieceRot();
         float halfHeightOfWalkwayPiece = piecePrefab.transform.lossyScale.y / 2;
         pointToMoveFrom.y -= halfHeightOfWalkwayPiece;
+        float overlap = 1.5f;
+        Vector3 directionTowardsLastPiece = (pieceToMoveFrom.position - pointToMoveFrom).normalized;
+        pointToMoveFrom += directionTowardsLastPiece * overlap;
         GameObject piece = InstatiatePiece(pointToMoveFrom, rot);
         RandomizePieceLength(piece);
         return piece;
@@ -31,15 +34,6 @@ public class WalkwayGenerator : MonoBehaviour
 
     private Quaternion GetRandomNewPieceRot()
     {
-
-        // float lastPieceRotAngle = lastAddedPiece.transform.rotation.eulerAngles.y;
-        // if (lastPieceRotAngle > 180) lastPieceRotAngle -= 360;
-        // float newPieceRotAngle = lastPieceRotAngle + randomTurnAngle;
-        // float newPieceRotAngleClamped = Mathf.Clamp(newPieceRotAngle, -maxPieceYRot, maxPieceYRot);
-        // Vector3 rotEuler = new Vector3(0, newPieceRotAngleClamped, 0);
-
-        //if we want this more sophisticated, it can take the rotation of the last piece into account
-
         float randomTurnAngle = Random.Range(-maxTurnAngle, maxTurnAngle);
         Vector3 rotEuler = new Vector3(0, randomTurnAngle, 0);
         Quaternion rot = Quaternion.Euler(rotEuler);
