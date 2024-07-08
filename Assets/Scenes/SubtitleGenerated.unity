@@ -640,11 +640,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7290372551383880164, guid: 29989bdf8b20a52479d06c4d36a10928, type: 3}
   m_PrefabInstance: {fileID: 894267867}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &894267869 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2774679741241828108, guid: 29989bdf8b20a52479d06c4d36a10928, type: 3}
-  m_PrefabInstance: {fileID: 894267867}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &946874486
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -825,6 +820,7 @@ GameObject:
   - component: {fileID: 1510071717}
   - component: {fileID: 1510071716}
   - component: {fileID: 1510071718}
+  - component: {fileID: 1510071719}
   m_Layer: 0
   m_Name: LevelGenerator
   m_TagString: Untagged
@@ -844,8 +840,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cfab32cba9363e478aa69843a33258b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelDir: {x: 0, y: 0, z: 1}
-  lastInstatiatedPlatform: {fileID: 894267869}
   platformPrefab: {fileID: 2774679741241828108, guid: 29989bdf8b20a52479d06c4d36a10928, type: 3}
   wordPointPrefab: {fileID: 7910143540055735657, guid: 93bf672ba2b177945a54fd51415e9260, type: 3}
   maxTurnAngle: 45
@@ -880,15 +874,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d01e5ea317914d245badc6657ec16b0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastAddedPiece: {fileID: 946874488}
   piecePrefab: {fileID: 6737570752163496808, guid: fad8276afac0bcf4f9ec4921e4a11d90, type: 3}
   wordAnchorPrefab: {fileID: 7910143540055735657, guid: 93bf672ba2b177945a54fd51415e9260, type: 3}
   maxTurnAngle: 45
   minLength: 3
   maxLength: 10
+  maxPieceYRot: 90
   wordAnchorParent: {fileID: 326870096}
   walkwayParent: {fileID: 1224795081}
   pieceOverlap: 0.5
+--- !u!114 &1510071719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510071715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7aeded9d0f9ee248b390fab7a568d65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lastLevelPieceAdded: {fileID: 946874488}
 --- !u!1001 &1561321485
 PrefabInstance:
   m_ObjectHideFlags: 0

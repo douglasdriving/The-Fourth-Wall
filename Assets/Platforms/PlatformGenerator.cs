@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //generates the next platform in the level
+//i think we could have a base class for the generator that both this and walkway generator inherits from.
 public class PlatformGenerator : MonoBehaviour
 {
-    [SerializeField] Vector3 levelDir = Vector3.forward;
-    [SerializeField] GameObject lastInstatiatedPlatform;
     [SerializeField] GameObject platformPrefab;
     [SerializeField] GameObject wordPointPrefab;
     [SerializeField] float maxTurnAngle = 45;
@@ -15,37 +14,29 @@ public class PlatformGenerator : MonoBehaviour
     [SerializeField] Transform wordPointsParent;
     [SerializeField] Transform platformsParent;
 
-    public void GenerateNextPlatform()
+    public GameObject GenerateNextPlatform(Vector3 pointToMoveFrom)
     {
-        RandomlyRotateLevelDirection();
-        Vector3 platformPos = GetNextPlatformPos();
-        InstantiateRandomizedPlatform(platformPos);
+        Vector3 platformPos = GetNextPlatformPos(pointToMoveFrom);
+        GameObject platform = InstantiateRandomizedPlatform(platformPos);
         InstantiateWordPointAbovePlatform(platformPos);
+        return platform;
     }
 
-    private void InstantiateRandomizedPlatform(Vector3 nextPlatformPoint)
+    private Vector3 GetNextPlatformPos(Vector3 pointToMoveFrom)
     {
-        GameObject platform = Instantiate(platformPrefab, nextPlatformPoint, Quaternion.identity);
-        platform.GetComponent<TransformRandomizer>().Randomize();
-        platform.transform.parent = platformsParent;
-        lastInstatiatedPlatform = platform;
-    }
-
-    private Vector3 GetNextPlatformPos()
-    {
-        Vector3 nextPlatformPoint = lastInstatiatedPlatform.transform.position + levelDir * distanceBetweenPlatforms;
+        Vector3 directionToMoveIn = new Vector3(Random.Range(-1, 1), 0, Random.value).normalized;
+        Vector3 nextPlatformPoint = pointToMoveFrom + directionToMoveIn * distanceBetweenPlatforms;
         float zDiff = Random.Range(-maxPlatformHeightDiff, maxPlatformHeightDiff);
         nextPlatformPoint.z += zDiff;
         return nextPlatformPoint;
     }
 
-    private void RandomlyRotateLevelDirection()
+    private GameObject InstantiateRandomizedPlatform(Vector3 nextPlatformPoint)
     {
-        float turnAngle = Random.Range(-maxTurnAngle, maxTurnAngle);
-        Vector3 rotVector = new Vector3(0, turnAngle, 0);
-        Quaternion rot = Quaternion.Euler(rotVector);
-        levelDir = rot * levelDir;
-        levelDir.Normalize();
+        GameObject platform = Instantiate(platformPrefab, nextPlatformPoint, Quaternion.identity);
+        platform.GetComponent<TransformRandomizer>().Randomize();
+        platform.transform.parent = platformsParent;
+        return platform;
     }
 
     private void InstantiateWordPointAbovePlatform(Vector3 platformPos)

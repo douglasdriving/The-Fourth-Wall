@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class WalkwayGenerator : MonoBehaviour
 {
-    [SerializeField] GameObject lastAddedPiece;
     [SerializeField] GameObject piecePrefab;
     [SerializeField] GameObject wordAnchorPrefab;
     [SerializeField] float maxTurnAngle = 45;
@@ -13,38 +12,36 @@ public class WalkwayGenerator : MonoBehaviour
     [SerializeField] Transform walkwayParent;
     [SerializeField] float pieceOverlap = 0.5f;
 
-    public void GenerateNextSection()
+    public GameObject GenerateNextPiece(Vector3 pointToMoveFrom)
     {
-        AddPieceToWalkway();
-        InstantiateWordAnchorAboveLastPieceEndPoint();
+        GameObject piece = AddPieceToWalkway(pointToMoveFrom);
+        InstantiateWordAnchorAboveEndOfPiece(piece); //do something with this too?
+        return piece;
     }
 
-    private Vector3 GetNextPieceStartPoint()
+    private GameObject AddPieceToWalkway(Vector3 pointToMoveFrom)
     {
-        Vector3 startOfCurrentPiece = lastAddedPiece.transform.position;
-        Vector3 currentPieceDir = lastAddedPiece.transform.forward;
-        float currentPieceLength = lastAddedPiece.transform.lossyScale.z;
-        Vector3 endOfCurrentPiece = startOfCurrentPiece + (currentPieceDir * currentPieceLength);
-        Vector3 startOfNextPiece = endOfCurrentPiece - (currentPieceDir * pieceOverlap);
-        return startOfNextPiece;
-    }
-
-    private void AddPieceToWalkway()
-    {
-        Vector3 startPos = GetNextPieceStartPoint();
         Quaternion rot = GetRandomNewPieceRot();
-        GameObject piece = InstatiatePiece(startPos, rot);
+        float halfHeightOfWalkwayPiece = piecePrefab.transform.lossyScale.y / 2;
+        pointToMoveFrom.y -= halfHeightOfWalkwayPiece;
+        GameObject piece = InstatiatePiece(pointToMoveFrom, rot);
         RandomizePieceLength(piece);
+        return piece;
     }
 
     private Quaternion GetRandomNewPieceRot()
     {
-        float lastPieceRotAngle = lastAddedPiece.transform.rotation.eulerAngles.y;
-        if (lastPieceRotAngle > 180) lastPieceRotAngle -= 360;
+
+        // float lastPieceRotAngle = lastAddedPiece.transform.rotation.eulerAngles.y;
+        // if (lastPieceRotAngle > 180) lastPieceRotAngle -= 360;
+        // float newPieceRotAngle = lastPieceRotAngle + randomTurnAngle;
+        // float newPieceRotAngleClamped = Mathf.Clamp(newPieceRotAngle, -maxPieceYRot, maxPieceYRot);
+        // Vector3 rotEuler = new Vector3(0, newPieceRotAngleClamped, 0);
+
+        //if we want this more sophisticated, it can take the rotation of the last piece into account
+
         float randomTurnAngle = Random.Range(-maxTurnAngle, maxTurnAngle);
-        float newPieceRotAngle = lastPieceRotAngle + randomTurnAngle;
-        float newPieceRotAngleClamped = Mathf.Clamp(newPieceRotAngle, -maxPieceYRot, maxPieceYRot);
-        Vector3 rotEuler = new Vector3(0, newPieceRotAngleClamped, 0);
+        Vector3 rotEuler = new Vector3(0, randomTurnAngle, 0);
         Quaternion rot = Quaternion.Euler(rotEuler);
         return rot;
     }
@@ -53,7 +50,6 @@ public class WalkwayGenerator : MonoBehaviour
     {
         GameObject piece = Instantiate(piecePrefab, startPos, rot);
         piece.transform.parent = walkwayParent;
-        lastAddedPiece = piece;
         return piece;
     }
 
@@ -65,9 +61,9 @@ public class WalkwayGenerator : MonoBehaviour
         piece.transform.localScale = scale;
     }
 
-    private void InstantiateWordAnchorAboveLastPieceEndPoint()
+    private void InstantiateWordAnchorAboveEndOfPiece(GameObject piece)
     {
-        Vector3 pos = GetNextPieceStartPoint();
+        Vector3 pos = FindObjectOfType<LevelGenerator>().GetEndPointOfPiece(piece);
         float heightAbovePlatform = 2f;
         Vector3 wordPos = new Vector3(pos.x, pos.y + heightAbovePlatform, pos.z);
         GameObject wordPoint = Instantiate(wordAnchorPrefab, wordPos, Quaternion.identity);
