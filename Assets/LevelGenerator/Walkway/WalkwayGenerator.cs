@@ -11,6 +11,7 @@ public class WalkwayGenerator : MonoBehaviour
     [SerializeField] Transform wordAnchorParent;
     [SerializeField] Transform walkwayParent;
     [SerializeField] float pieceOverlap = 0.5f;
+    [SerializeField] float wordHeightAbovePlatform = 1f;
 
     public GameObject GenerateNextPiece(Vector3 pointToMoveFrom, Transform pieceToMoveFrom)
     {
@@ -58,8 +59,7 @@ public class WalkwayGenerator : MonoBehaviour
     private void InstantiateWordAnchorAboveEndOfPiece(GameObject piece)
     {
         Vector3 pos = FindObjectOfType<LevelGenerator>().GetEndPointOfPiece(piece);
-        float heightAbovePlatform = 2f;
-        Vector3 wordPos = new Vector3(pos.x, pos.y + heightAbovePlatform, pos.z);
+        Vector3 wordPos = new Vector3(pos.x, pos.y + wordHeightAbovePlatform, pos.z);
         GameObject wordPoint = Instantiate(wordAnchorPrefab, wordPos, Quaternion.identity);
         wordPoint.transform.parent = wordAnchorParent;
     }

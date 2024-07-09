@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-//generates the next platform in the level
-//i think we could have a base class for the generator that both this and walkway generator inherits from.
 public class PlatformGenerator : MonoBehaviour
 {
     [SerializeField] GameObject platformPrefab;
@@ -13,6 +9,15 @@ public class PlatformGenerator : MonoBehaviour
     [SerializeField] float maxPlatformHeightDiff = 2;
     [SerializeField] Transform wordPointsParent;
     [SerializeField] Transform platformsParent;
+    [SerializeField] float wordHeightAbovePlatform = 1f;
+
+    public GameObject GenerateCustomPlatform(Vector3 pointToGenerateFrom, GameObject platformPrefab)
+    {
+        Vector3 platformPos = GetNextPlatformPos(pointToGenerateFrom);
+        GameObject platform = Instantiate(platformPrefab, platformPos, Quaternion.identity);
+        platform.transform.parent = platformsParent;
+        return platform;
+    }
 
     public GameObject GenerateNextPlatform(Vector3 pointToMoveFrom)
     {
@@ -41,8 +46,7 @@ public class PlatformGenerator : MonoBehaviour
 
     private void InstantiateWordPointAbovePlatform(Vector3 platformPos)
     {
-        float heightAbovePlatform = 2f;
-        Vector3 wordPos = new Vector3(platformPos.x, platformPos.y + heightAbovePlatform, platformPos.z);
+        Vector3 wordPos = new Vector3(platformPos.x, platformPos.y + wordHeightAbovePlatform, platformPos.z);
         GameObject wordPoint = Instantiate(wordPointPrefab, wordPos, Quaternion.identity);
         wordPoint.transform.parent = wordPointsParent;
     }
