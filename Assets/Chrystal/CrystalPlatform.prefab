@@ -436,7 +436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textElement: {fileID: 3703110546170438649}
   text: click on it to pick it up :)
-  distanceToSetAt: 2
+  distanceToSetAt: 5
 --- !u!1 &9040313160118620657
 GameObject:
   m_ObjectHideFlags: 0

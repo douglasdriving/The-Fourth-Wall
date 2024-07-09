@@ -508,7 +508,7 @@ MonoBehaviour:
   timeForCrystalSpawn: 51.52
   timeForMachinePlatformSpawn: 85.52
   crystalPlatformPrefab: {fileID: 4570274427566943106, guid: b9200a7baa79bbf4e9b819c35e8bb4d1, type: 3}
-  machinePlaftormPrefab: {fileID: 8784935205168536893, guid: a3a72e00085314c4a95cc20d45012528, type: 3}
+  machinePlaftormPrefab: {fileID: 6069220854088730994, guid: 9c8088e28cf056e478630cd680cfed43, type: 3}
 --- !u!1001 &974733055590494683
 PrefabInstance:
   m_ObjectHideFlags: 0
