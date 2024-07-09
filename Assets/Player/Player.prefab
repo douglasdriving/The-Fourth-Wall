@@ -689,7 +689,7 @@ MonoBehaviour:
   zoomFOV: 30
   zoomStepTime: 5
   playerCanMove: 1
-  walkSpeed: 5
+  walkSpeed: 6
   maxVelocityChange: 10
   enableSprint: 1
   unlimitedSprint: 1
@@ -707,7 +707,7 @@ MonoBehaviour:
   sprintBarHeightPercent: 0.02
   enableJump: 1
   jumpKey: 32
-  jumpPower: 9
+  jumpPower: 11
   enableCrouch: 1
   holdToCrouch: 1
   crouchKey: 306
