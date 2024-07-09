@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2910195616711762024}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.697, z: 0}
+  m_LocalPosition: {x: 0, y: 2.498, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -59,6 +59,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 130713efecba96c489dd82265e8d9f92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseMoveDistance: 0.1
+  timePerCycle: 1
 --- !u!1 &3088283856860686698
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,6 +298,7 @@ GameObject:
   - component: {fileID: 5685224268912130043}
   - component: {fileID: 2834367884145735626}
   - component: {fileID: 3703110546170438649}
+  - component: {fileID: 835905627271444142}
   m_Layer: 5
   m_Name: Word
   m_TagString: Untagged
@@ -385,7 +388,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 1024
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -413,12 +416,27 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: -201.22095, z: 0, w: 29.968971}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &835905627271444142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7805317365656631657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74eafde43d7bf14784b05e34f0f01f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textElement: {fileID: 3703110546170438649}
+  text: click on it to pick it up :)
+  distanceToSetAt: 2
 --- !u!1 &9040313160118620657
 GameObject:
   m_ObjectHideFlags: 0
