@@ -4,6 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(WalkwayGenerator))]
 public class LevelGenerator : MonoBehaviour
 {
+  public static LevelPieceType pieceTypeBeingGenerated = LevelPieceType.WALKWAY;
   public GameObject lastLevelPieceAdded;
   WalkwayGenerator walkwayGenerator;
   PlatformGenerator platformGenerator;
@@ -15,14 +16,14 @@ public class LevelGenerator : MonoBehaviour
     platformGenerator = GetComponent<PlatformGenerator>();
   }
 
-  public void SpawnNextLevelPiece(LevelPieceType type)
+  public void SpawnNextLevelPiece()
   {
     Vector3 endPointOfLastPiece = GetEndPointOfPiece(lastLevelPieceAdded);
-    if (type == LevelPieceType.WALKWAY)
+    if (pieceTypeBeingGenerated == LevelPieceType.WALKWAY)
     {
       lastLevelPieceAdded = walkwayGenerator.GenerateNextPiece(endPointOfLastPiece, lastLevelPieceAdded.transform);
     }
-    else if (type == LevelPieceType.PLATFORM)
+    else if (pieceTypeBeingGenerated == LevelPieceType.PLATFORM)
     {
       lastLevelPieceAdded = platformGenerator.GenerateNextPlatform(endPointOfLastPiece);
     }
