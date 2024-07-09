@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3742489518239183594}
   - component: {fileID: 6731660418671580604}
+  - component: {fileID: 5851224637803971634}
   m_Layer: 0
   m_Name: Hint
   m_TagString: Untagged
@@ -46,6 +47,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseScaleFactor: 0.07
+--- !u!114 &5851224637803971634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2910195616711762024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 130713efecba96c489dd82265e8d9f92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3088283856860686698
 GameObject:
   m_ObjectHideFlags: 0
