@@ -507,8 +507,20 @@ MonoBehaviour:
   timeForPlatformSwitch: 48
   timeForCrystalSpawn: 51.52
   timeForMachinePlatformSpawn: 85.52
+  distanceToPlatformTwoAndThreeFromPlayerAtSpawn: 500
   crystalPlatformPrefab: {fileID: 4570274427566943106, guid: b9200a7baa79bbf4e9b819c35e8bb4d1, type: 3}
   machinePlaftormPrefab: {fileID: 6069220854088730994, guid: 9c8088e28cf056e478630cd680cfed43, type: 3}
+--- !u!114 &1934710453 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7534025309003727685, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+  m_PrefabInstance: {fileID: 4222751589694032154}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7aeded9d0f9ee248b390fab7a568d65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &974733055590494683
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -621,6 +633,10 @@ PrefabInstance:
       propertyPath: minDistanceFromCamera
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7379956578420471475, guid: 8e45090ae0c85554b86c72dc76bce7d3, type: 3}
+      propertyPath: levelGenerator
+      value: 
+      objectReference: {fileID: 1934710453}
     - target: {fileID: 7496801569402546684, guid: 8e45090ae0c85554b86c72dc76bce7d3, type: 3}
       propertyPath: m_Name
       value: WorldSubtitles

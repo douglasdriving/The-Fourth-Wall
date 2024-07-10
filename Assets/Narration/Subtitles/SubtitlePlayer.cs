@@ -8,6 +8,7 @@ namespace Narration
         [SerializeField] TMP_Text subtitleText;
         [SerializeField] bool singleWordSubtitles = true;
         [SerializeField] WordMover wordMover;
+        [SerializeField] LevelGenerator levelGenerator;
         const float lingerTime = 1f;
         static SubtitleJsonData currentSubtitles;
         static int currentWordIndex = 0;
@@ -65,6 +66,11 @@ namespace Narration
             else
             {
                 MoveToNextWordInSentance();
+            }
+
+            if (!isLingering)
+            {
+                levelGenerator.SpawnNextLevelPiece();
             }
         }
 

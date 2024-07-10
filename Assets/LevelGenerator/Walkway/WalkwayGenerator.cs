@@ -20,16 +20,30 @@ public class WalkwayGenerator : MonoBehaviour
         return piece;
     }
 
-    private GameObject AddPieceToWalkway(Vector3 pointToMoveFrom, Transform pieceToMoveFrom)
+    private GameObject AddPieceToWalkway(Vector3 pointToMoveFrom, Transform prevPiece)
     {
-        Quaternion rot = GetRandomNewPieceRot();
-        float halfHeightOfWalkwayPiece = piecePrefab.transform.lossyScale.y / 2;
-        pointToMoveFrom.y -= halfHeightOfWalkwayPiece;
-        float overlap = 1.5f;
-        Vector3 directionTowardsLastPiece = (pieceToMoveFrom.position - pointToMoveFrom).normalized;
-        pointToMoveFrom += directionTowardsLastPiece * overlap;
-        GameObject piece = InstatiatePiece(pointToMoveFrom, rot);
-        RandomizePieceLength(piece);
+
+        //problem är att "point to move from" är KANTEN av biten
+        //inte mitten
+        //jag tänker mig kanske att vi bara vill ha mitten? kolla längs fram på biten
+        Vector3 prevPiecePivot = prevPiece.position;
+        Vector3 prevPieceScale = prevPiece.lossyScale;
+        Vector3 endOfPrevPiece = prevPiecePivot + Vector3.forward * prevPieceScale.z;
+        float halfWidthOfPrevPiece = prevPieceScale.x / 2;
+        Vector3 newPiecePivot = endOfPrevPiece;
+        newPiecePivot.x += Random.Range(-halfWidthOfPrevPiece, halfWidthOfPrevPiece);
+
+        // Quaternion rot = GetRandomNewPieceRot();
+        Quaternion rot = Quaternion.identity;
+        // float halfHeightOfWalkwayPiece = piecePrefab.transform.lossyScale.y / 2;
+        // float widthOfPiece = piecePrefab.transform.lossyScale.x;
+        // pointToMoveFrom.y -= halfHeightOfWalkwayPiece;
+        // pointToMoveFrom.x -= Random.Range(halfWidthOfPrevPiece, halfWidthOfPrevPiece);
+        // float overlap = 1.5f;
+        // Vector3 directionTowardsLastPiece = (pieceToMoveFrom.position - pointToMoveFrom).normalized;
+        // pointToMoveFrom += directionTowardsLastPiece * overlap;
+        GameObject piece = InstatiatePiece(newPiecePivot, rot);
+        // RandomizePieceLength(piece);
         return piece;
     }
 
