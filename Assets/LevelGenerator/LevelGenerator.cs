@@ -22,12 +22,12 @@ public class LevelGenerator : MonoBehaviour
     lastLevelPieceAdded = platformInstance;
   }
 
-  public void SpawnNextLevelPiece()
+  public void SpawnNextLevelPiece(string pieceWord = "")
   {
     Vector3 endPointOfLastPiece = GetEndPointOfPiece(lastLevelPieceAdded);
     if (pieceTypeBeingGenerated == LevelPieceType.WALKWAY)
     {
-      lastLevelPieceAdded = walkwayGenerator.GenerateNextPiece(endPointOfLastPiece, lastLevelPieceAdded.transform);
+      lastLevelPieceAdded = walkwayGenerator.GenerateNextPiece(endPointOfLastPiece, lastLevelPieceAdded.transform, pieceWord);
     }
     else if (pieceTypeBeingGenerated == LevelPieceType.PLATFORM)
     {

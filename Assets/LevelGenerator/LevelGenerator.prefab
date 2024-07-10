@@ -56,6 +56,7 @@ MonoBehaviour:
   maxPlatformHeightDiff: 2
   wordPointsParent: {fileID: 1396375468675746484}
   platformsParent: {fileID: 7913855817269248887}
+  wordHeightAbovePlatform: 1
 --- !u!114 &7021466173556650257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,6 +78,7 @@ MonoBehaviour:
   wordAnchorParent: {fileID: 1396375468675746484}
   walkwayParent: {fileID: 3816724244464975986}
   pieceOverlap: 0.5
+  wordHeightAbovePlatform: 1
 --- !u!114 &7534025309003727685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,7 +246,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 218204818259123215, guid: fad8276afac0bcf4f9ec4921e4a11d90, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fad8276afac0bcf4f9ec4921e4a11d90, type: 3}
@@ -377,7 +380,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 218204818259123215, guid: fad8276afac0bcf4f9ec4921e4a11d90, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fad8276afac0bcf4f9ec4921e4a11d90, type: 3}

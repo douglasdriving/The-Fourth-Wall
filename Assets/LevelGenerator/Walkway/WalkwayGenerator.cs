@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class WalkwayGenerator : MonoBehaviour
@@ -13,10 +14,11 @@ public class WalkwayGenerator : MonoBehaviour
     [SerializeField] float pieceOverlap = 0.5f;
     [SerializeField] float wordHeightAbovePlatform = 1f;
 
-    public GameObject GenerateNextPiece(Vector3 pointToMoveFrom, Transform pieceToMoveFrom)
+    public GameObject GenerateNextPiece(Vector3 pointToMoveFrom, Transform pieceToMoveFrom, string pieceWord)
     {
         GameObject piece = AddPieceToWalkway(pointToMoveFrom, pieceToMoveFrom);
-        InstantiateWordAnchorAboveEndOfPiece(piece);
+        piece.GetComponentInChildren<TMP_Text>().text = pieceWord;
+        // InstantiateWordAnchorAboveEndOfPiece(piece);
         return piece;
     }
 

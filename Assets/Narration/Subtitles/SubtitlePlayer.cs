@@ -70,7 +70,7 @@ namespace Narration
 
             if (!isLingering)
             {
-                levelGenerator.SpawnNextLevelPiece();
+                levelGenerator.SpawnNextLevelPiece(subtitleText.text);
             }
         }
 
