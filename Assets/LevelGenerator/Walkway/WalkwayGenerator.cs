@@ -18,6 +18,7 @@ public class WalkwayGenerator : MonoBehaviour
     {
         GameObject piece = AddPieceToWalkway(pointToMoveFrom, pieceToMoveFrom);
         piece.GetComponentInChildren<TMP_Text>().text = pieceWord;
+        //should also move the words around, maybe in a little circle?
         // InstantiateWordAnchorAboveEndOfPiece(piece);
         return piece;
     }
