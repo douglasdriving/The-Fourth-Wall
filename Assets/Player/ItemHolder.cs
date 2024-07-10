@@ -14,23 +14,12 @@ public class ItemHolder : MonoBehaviour
         get { return itemHeld; }
     }
 
-    void OnInteract()
-    {
-        bool handIsFree = itemHeld == null;
-        bool itemAvailableForPickup = scanner.highlightedInteractable != null && scanner.highlightedInteractable.GetComponent<Interactable>().Holdable;
-        if (handIsFree && itemAvailableForPickup)
-        {
-            PickupItem(scanner.highlightedInteractable.transform);
-        }
-    }
-
-    private void PickupItem(Transform item)
+    public void PickupItem(Transform item)
     {
         item.parent = itemHoldPos;
         item.position = itemHoldPos.position;
         item.rotation = itemHoldPos.rotation;
         itemHeld = item;
-        scanner.ClearHighlight();
     }
 
     public void DestroyHeldItem()

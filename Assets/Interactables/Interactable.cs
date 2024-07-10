@@ -7,16 +7,11 @@ using UnityEngine.Events;
 public class Interactable : MonoBehaviour
 {
     [SerializeField] string interactableName;
-    [SerializeField] bool holdable = false;
     [SerializeField] UnityEvent interactionEvent;
     bool isInteractable = true;
     public bool IsInteractable
     {
         get { return isInteractable; }
-    }
-    public bool Holdable
-    {
-        get { return holdable; }
     }
     public string InteractableName
     {
