@@ -79,7 +79,9 @@ public class Chrystal1Events : MonoBehaviour
 
     private void SpawnThreeCrystalPlatforms()
     {
-        levelGenerator.SpawnCustomPlatform(crystalPlatformPrefab);
+        GameObject firstCrystalPlatform = levelGenerator.SpawnCustomPlatform(crystalPlatformPrefab);
+        GameObject firstCrystalPlatformWalkwayPiece = FindChildByTag(firstCrystalPlatform, "Walkway");
+        levelGenerator.lastLevelPieceAdded = firstCrystalPlatformWalkwayPiece;
 
         Vector3 vectorFromPlayerToCrystalPlatform2 = new Vector3(-0.5f, 0, 1).normalized * distanceToPlatformTwoAndThreeFromPlayerAtSpawn;
         Vector3 vectorFromPlayerToCrystalPlatform3 = new Vector3(0.5f, 0, 1).normalized * distanceToPlatformTwoAndThreeFromPlayerAtSpawn;
@@ -96,5 +98,21 @@ public class Chrystal1Events : MonoBehaviour
         crystal3Platform.GetComponentInChildren<TMP_Text>().text = "Crystal 3";
 
         spawnedCrystalPlatforms = true;
+    }
+
+    public GameObject FindChildByTag(GameObject parent, string tag)
+    {
+        // Loop through all the children of the parent
+        foreach (Transform child in parent.transform)
+        {
+            // Check if the child's tag matches the specified tag
+            if (child.CompareTag(tag))
+            {
+                return child.gameObject;
+            }
+        }
+
+        // Return null if no child with the specified tag is found
+        return null;
     }
 }

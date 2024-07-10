@@ -17,11 +17,12 @@ public class LevelGenerator : MonoBehaviour
     walkwayGenerator = GetComponent<WalkwayGenerator>();
     platformGenerator = GetComponent<PlatformGenerator>();
   }
-  public void SpawnCustomPlatform(GameObject platformPrefab)
+  public GameObject SpawnCustomPlatform(GameObject platformPrefab)
   {
     Vector3 endPointOfLastPiece = GetEndPointOfPiece(lastLevelPieceAdded);
     GameObject platformInstance = platformGenerator.GenerateCustomPlatform(endPointOfLastPiece, platformPrefab);
-    lastLevelPieceAdded = platformInstance;
+    // lastLevelPieceAdded = platformInstance;
+    return platformInstance;
   }
 
   public void SpawnNextLevelPiece(string pieceWord = "")
