@@ -37,9 +37,9 @@ public class WalkwayGenerator : MonoBehaviour
         Vector3 endOfPrevPiece = prevPiecePivot + Vector3.forward * prevPieceScale.z;
 
         Vector3 gap = Vector3.one;
-        gap.x = Random.Range(-10, 10);
-        gap.y = Random.Range(-1, 1);
-        gap.z = Random.Range(2, 10);
+        gap.x = Random.Range(-5, 5);
+        gap.y = Random.Range(-3, 3);
+        gap.z = Random.Range(4, 10);
         gap = gap.normalized * platformGapSize;
 
         Vector3 newPiecePivot = endOfPrevPiece + gap;

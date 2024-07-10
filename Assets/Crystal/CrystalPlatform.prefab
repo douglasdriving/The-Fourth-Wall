@@ -1235,7 +1235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1d7ed5c2613fdf4fa5bbed3677b2a8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeForMachinePlatformSpawn: 37.44
+  timeForMachinePlatformSpawn: 38.5
   machinePlaftormPrefab: {fileID: 6069220854088730994, guid: 9c8088e28cf056e478630cd680cfed43, type: 3}
 --- !u!4 &6178609404821978356 stripped
 Transform:
