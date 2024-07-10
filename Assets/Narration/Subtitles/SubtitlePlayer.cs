@@ -34,20 +34,14 @@ namespace Narration
 
         void Update()
         {
-            if (currentSubtitles != null)
-            {
-                UpdateSubtitle();
-            }
-        }
+            if (currentSubtitles == null) return;
 
-        private void UpdateSubtitle()
-        {
             timeCurrentSubtitlesHasBeenPlayed += Time.deltaTime;
             bool timeForNextSubtitleStep = timeCurrentSubtitlesHasBeenPlayed >= SubtitlePlayer.timeForNextSubtitleStep;
-            if (timeForNextSubtitleStep)
-            {
-                TakeNextSubtitleStep();
-            }
+
+            if (!timeForNextSubtitleStep) return;
+
+            TakeNextSubtitleStep();
         }
 
         private void TakeNextSubtitleStep()
@@ -67,28 +61,24 @@ namespace Narration
             {
                 MoveToNextWordInSentance();
             }
-
-            if (!isLingering)
-            {
-                levelGenerator.SpawnNextLevelPiece(subtitleText.text);
-            }
         }
 
         private void MoveToNextWordInSentance()
         {
             currentWordIndex++;
             SubtitleSegment currentSegment = currentSubtitles.segments[currentSegmentIndex];
-            SubtitleWord word = currentSegment.words[currentWordIndex];
-            if (singleWordSubtitles)
-            {
-                subtitleText.text = word.word;
-            }
-            else
-            {
-                AddWordToUI(word.word);
-            }
+            string word = currentSegment.words[currentWordIndex].word;
+            // if (singleWordSubtitles)
+            // {
+            //     subtitleText.text = word.word;
+            // }
+            // else
+            // {
+            //     AddWordToUI(word.word);
+            // }
             UpdateNextWordTime();
-            wordMover.UpdateWordPosition();
+            // wordMover.UpdateWordPosition();
+            levelGenerator.SpawnNextLevelPiece(word);
         }
 
         private static void UpdateNextWordTime()
@@ -120,9 +110,10 @@ namespace Narration
             currentWordIndex = 0;
             SubtitleSegment segment = currentSubtitles.segments[currentSegmentIndex];
             string firstWordInSegment = segment.words[0].word;
-            StartNewSentenceInUI(firstWordInSegment);
+            // StartNewSentenceInUI(firstWordInSegment);
             UpdateNextWordTime();
-            wordMover.UpdateWordPosition();
+            // wordMover.UpdateWordPosition();
+            levelGenerator.SpawnNextLevelPiece(firstWordInSegment);
         }
 
         private void StopSubtitle()

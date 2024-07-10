@@ -8,7 +8,8 @@ public class LevelPieceSpawnTrigger : MonoBehaviour
     {
         if (hasBeenTriggered) return;
         if (!other.CompareTag("Player")) return;
-        FindAnyObjectByType<LevelGenerator>().SpawnNextLevelPiece();
+        Debug.LogWarning("this is not implemented");
+        // FindAnyObjectByType<LevelGenerator>().SpawnNextLevelPiece();
         hasBeenTriggered = true;
     }
 }

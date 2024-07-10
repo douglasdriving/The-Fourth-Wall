@@ -26,12 +26,12 @@ public class LevelGenerator : MonoBehaviour
     return platformInstance;
   }
 
-  public void SpawnNextLevelPiece(string pieceWord = "")
+  public void SpawnNextLevelPiece(string pieceWord)
   {
     // Vector3 endPointOfLastPiece = GetEndPointOfPiece(lastLevelPieceAdded);
     if (pieceTypeBeingGenerated == LevelPieceType.WALKWAY)
     {
-      lastLevelPieceAdded = walkwayGenerator.GenerateNextPiece(lastLevelPieceAdded.transform, pieceWord);
+      lastLevelPieceAdded = walkwayGenerator.GenerateNextPiece(lastLevelPieceAdded.transform, pieceWord, false);
     }
     else if (pieceTypeBeingGenerated == LevelPieceType.PLATFORM)
     {
@@ -44,7 +44,7 @@ public class LevelGenerator : MonoBehaviour
       }
       else
       {
-        lastLevelPieceAdded = walkwayGenerator.GenerateNextPiece(lastLevelPieceAdded.transform, pieceWord);
+        lastLevelPieceAdded = walkwayGenerator.GenerateNextPiece(lastLevelPieceAdded.transform, pieceWord, true);
         piecesOnCurrentPlatform++;
       }
     }

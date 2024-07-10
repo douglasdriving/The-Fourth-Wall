@@ -17,10 +17,14 @@ public class WalkwayGenerator : MonoBehaviour
     [SerializeField] float platformGapSize = 12f;
     [SerializeField] float zScalePercentageOfPlatformPieces = 0.7f;
 
-    public GameObject GenerateNextPiece(Transform pieceToMoveFrom, string pieceWord)
+    public GameObject GenerateNextPiece(Transform pieceToMoveFrom, string pieceWord, bool isPartOfPlatform)
     {
         GameObject piece = AddPieceToWalkway(pieceToMoveFrom);
         piece.GetComponentInChildren<TMP_Text>().text = pieceWord;
+        if (isPartOfPlatform)
+        {
+            ScaleToPlatformPieceLength(piece);
+        }
         //should also move the words around, maybe in a little circle?
         // InstantiateWordAnchorAboveEndOfPiece(piece);
         return piece;
@@ -44,14 +48,20 @@ public class WalkwayGenerator : MonoBehaviour
         GameObject piece = InstatiatePiece(newPiecePivot, rot);
 
         //scale the piece down in z
-        Vector3 shorterPieceScale = piece.transform.localScale;
-        shorterPieceScale *= zScalePercentageOfPlatformPieces;
-        piece.transform.localScale = shorterPieceScale;
+        ScaleToPlatformPieceLength(piece);
+        //also, this should happen for EVERY platform piece, not just the one after the gap
 
         //add the word
         piece.GetComponentInChildren<TMP_Text>().text = pieceWord;
 
         return piece;
+    }
+
+    private void ScaleToPlatformPieceLength(GameObject piece)
+    {
+        Vector3 shorterPieceScale = piece.transform.localScale;
+        shorterPieceScale.z *= zScalePercentageOfPlatformPieces;
+        piece.transform.localScale = shorterPieceScale;
     }
 
     private GameObject AddPieceToWalkway(Transform prevPiece)
