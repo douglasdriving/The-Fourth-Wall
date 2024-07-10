@@ -6,6 +6,7 @@ public class CrystalToMachineEvents : MonoBehaviour
 {
     [SerializeField] float timeForMachinePlatformSpawn = 82.38f;
     [SerializeField] GameObject machinePlaftormPrefab;
+    [SerializeField] float gapFromWalkwayToMachinePlatform = 10f;
 
     bool eventRunning = false;
     bool eventFinished = false;
@@ -40,7 +41,7 @@ public class CrystalToMachineEvents : MonoBehaviour
 
     private void SpawnMachinePlatform()
     {
-        levelGenerator.SpawnCustomPlatform(machinePlaftormPrefab);
+        levelGenerator.SpawnCustomPlatform(machinePlaftormPrefab, gapFromWalkwayToMachinePlatform);
         spawnedMachinePlatform = true;
     }
 

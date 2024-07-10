@@ -14,6 +14,7 @@ public class Chrystal1Events : MonoBehaviour
 
     [SerializeField] GameObject crystalPlatformPrefab;
     // [SerializeField] GameObject machinePlaftormPrefab;
+    [SerializeField] float gapFromWalkwayToCrystalPlatform = 15f;
 
     bool switchedToPlatformSpawn = false;
     bool spawnedCrystalPlatforms = false;
@@ -79,10 +80,33 @@ public class Chrystal1Events : MonoBehaviour
 
     private void SpawnThreeCrystalPlatforms()
     {
-        GameObject firstCrystalPlatform = levelGenerator.SpawnCustomPlatform(crystalPlatformPrefab);
+        SpawnFirstCrystalPlatform();
+        SpawnSecondAndThirdCrystalPlatforms();
+        spawnedCrystalPlatforms = true;
+    }
+
+
+    private void SpawnFirstCrystalPlatform()
+    {
+        GameObject firstCrystalPlatform = levelGenerator.SpawnCustomPlatform(crystalPlatformPrefab, gapFromWalkwayToCrystalPlatform);
         GameObject firstCrystalPlatformWalkwayPiece = FindChildByTag(firstCrystalPlatform, "Walkway");
         levelGenerator.lastLevelPieceAdded = firstCrystalPlatformWalkwayPiece;
+    }
 
+    private GameObject FindChildByTag(GameObject parent, string tag)
+    {
+        foreach (Transform child in parent.transform)
+        {
+            if (child.CompareTag(tag))
+            {
+                return child.gameObject;
+            }
+        }
+        return null;
+    }
+
+    private void SpawnSecondAndThirdCrystalPlatforms()
+    {
         Vector3 vectorFromPlayerToCrystalPlatform2 = new Vector3(-0.5f, 0, 1).normalized * distanceToPlatformTwoAndThreeFromPlayerAtSpawn;
         Vector3 vectorFromPlayerToCrystalPlatform3 = new Vector3(0.5f, 0, 1).normalized * distanceToPlatformTwoAndThreeFromPlayerAtSpawn;
 
@@ -96,23 +120,5 @@ public class Chrystal1Events : MonoBehaviour
 
         crystal2Platform.GetComponentInChildren<TMP_Text>().text = "Crystal 2";
         crystal3Platform.GetComponentInChildren<TMP_Text>().text = "Crystal 3";
-
-        spawnedCrystalPlatforms = true;
-    }
-
-    public GameObject FindChildByTag(GameObject parent, string tag)
-    {
-        // Loop through all the children of the parent
-        foreach (Transform child in parent.transform)
-        {
-            // Check if the child's tag matches the specified tag
-            if (child.CompareTag(tag))
-            {
-                return child.gameObject;
-            }
-        }
-
-        // Return null if no child with the specified tag is found
-        return null;
     }
 }

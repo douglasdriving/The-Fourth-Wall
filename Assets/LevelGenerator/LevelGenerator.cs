@@ -18,12 +18,18 @@ public class LevelGenerator : MonoBehaviour
     walkwayGenerator = GetComponent<WalkwayGenerator>();
     platformGenerator = GetComponent<PlatformGenerator>();
   }
-  public GameObject SpawnCustomPlatform(GameObject platformPrefab)
+  public GameObject SpawnCustomPlatform(GameObject platformPrefab, float gapFromWalkwayEndToPlatformPivot)
   {
     Vector3 endPointOfLastPiece = GetEndPointOfPiece(lastLevelPieceAdded);
-    GameObject platformInstance = platformGenerator.GenerateCustomPlatform(endPointOfLastPiece, platformPrefab);
+    // GameObject platformInstance = platformGenerator.GenerateCustomPlatform(endPointOfLastPiece, platformPrefab);
     // lastLevelPieceAdded = platformInstance;
-    return platformInstance;
+    //feels like too much work here
+    //just take in gap required
+    //and spawn it out there
+    Vector3 platformPos = endPointOfLastPiece + Vector3.forward * gapFromWalkwayEndToPlatformPivot;
+    GameObject platform = Instantiate(platformPrefab, platformPos, Quaternion.identity);
+
+    return platform;
   }
 
   public void SpawnNextLevelPiece(string pieceWord)
