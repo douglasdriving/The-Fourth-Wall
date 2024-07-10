@@ -1,49 +1,48 @@
 using UnityEngine;
 
-[RequireComponent(typeof(PlatformGenerator))]
+// [RequireComponent(typeof(PlatformGenerator))]
 [RequireComponent(typeof(WalkwayGenerator))]
 public class LevelGenerator : MonoBehaviour
 {
   public static LevelPieceType pieceTypeBeingGenerated = LevelPieceType.WALKWAY;
   public GameObject lastLevelPieceAdded;
   WalkwayGenerator walkwayGenerator;
-  PlatformGenerator platformGenerator;
+  // PlatformGenerator platformGenerator;
   [SerializeField] int piecesPerPlatform = 12;
   int piecesOnCurrentPlatform;
+  [SerializeField] int minPlatformPieces = 4;
 
   void Awake()
   {
     piecesOnCurrentPlatform = piecesPerPlatform;
     if (!lastLevelPieceAdded) Debug.LogError("please assign a last level piece to start generating from");
     walkwayGenerator = GetComponent<WalkwayGenerator>();
-    platformGenerator = GetComponent<PlatformGenerator>();
+    // platformGenerator = GetComponent<PlatformGenerator>();
   }
   public GameObject SpawnCustomPlatform(GameObject platformPrefab, float gapFromWalkwayEndToPlatformPivot)
   {
     Vector3 endPointOfLastPiece = GetEndPointOfPiece(lastLevelPieceAdded);
     // GameObject platformInstance = platformGenerator.GenerateCustomPlatform(endPointOfLastPiece, platformPrefab);
     // lastLevelPieceAdded = platformInstance;
-    //feels like too much work here
-    //just take in gap required
-    //and spawn it out there
     Vector3 platformPos = endPointOfLastPiece + Vector3.forward * gapFromWalkwayEndToPlatformPivot;
     GameObject platform = Instantiate(platformPrefab, platformPos, Quaternion.identity);
-
     return platform;
   }
 
-  public void SpawnNextLevelPiece(string pieceWord)
+  public void SpawnNextLevelPiece(string pieceWord, int piecesLeftToSpawnInSection)
   {
     // Vector3 endPointOfLastPiece = GetEndPointOfPiece(lastLevelPieceAdded);
+
     if (pieceTypeBeingGenerated == LevelPieceType.WALKWAY)
     {
       lastLevelPieceAdded = walkwayGenerator.GenerateNextPiece(lastLevelPieceAdded.transform, pieceWord, false);
     }
     else if (pieceTypeBeingGenerated == LevelPieceType.PLATFORM)
     {
-      //use gaps!
       // lastLevelPieceAdded = platformGenerator.GenerateNextPlatform(endPointOfLastPiece);
-      if (piecesOnCurrentPlatform >= piecesPerPlatform)
+      bool isReachingEnd = piecesLeftToSpawnInSection < minPlatformPieces;
+
+      if (piecesOnCurrentPlatform >= piecesPerPlatform && !isReachingEnd)
       {
         lastLevelPieceAdded = walkwayGenerator.GeneratePieceWithGap(lastLevelPieceAdded.transform, pieceWord);
         piecesOnCurrentPlatform = 1;

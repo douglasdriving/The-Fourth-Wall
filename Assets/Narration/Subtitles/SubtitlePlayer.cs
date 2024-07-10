@@ -1,3 +1,4 @@
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -78,7 +79,21 @@ namespace Narration
             // }
             UpdateNextWordTime();
             // wordMover.UpdateWordPosition();
-            levelGenerator.SpawnNextLevelPiece(word);
+
+            levelGenerator.SpawnNextLevelPiece(word, GetWordsLeftInSubtitle());
+        }
+
+        private static int GetWordsLeftInSubtitle()
+        {
+            SubtitleSegment currentSegment = currentSubtitles.segments[currentSegmentIndex];
+            int wordsLeftInCurrentSegment = currentSegment.words.Length - (currentWordIndex + 1);
+            int wordsLeftInUpcomingSegments = 0;
+            for (int i = currentSegmentIndex + 1; i < currentSubtitles.segments.Length; i++)
+            {
+                wordsLeftInUpcomingSegments += currentSubtitles.segments[i].words.Length;
+            }
+            int wordsLeftInSubtitle = wordsLeftInCurrentSegment + wordsLeftInUpcomingSegments;
+            return wordsLeftInSubtitle;
         }
 
         private static void UpdateNextWordTime()
@@ -113,7 +128,7 @@ namespace Narration
             // StartNewSentenceInUI(firstWordInSegment);
             UpdateNextWordTime();
             // wordMover.UpdateWordPosition();
-            levelGenerator.SpawnNextLevelPiece(firstWordInSegment);
+            levelGenerator.SpawnNextLevelPiece(firstWordInSegment, GetWordsLeftInSubtitle());
         }
 
         private void StopSubtitle()
