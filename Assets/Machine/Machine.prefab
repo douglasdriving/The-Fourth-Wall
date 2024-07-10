@@ -1208,6 +1208,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Socket (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6026266679064478358, guid: 344d265550b51ad44bd7d49e734bc551, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e7cb296eb77e8e64ca2ca8578dcbab69, type: 2}
     - target: {fileID: 6415562250371892847, guid: 344d265550b51ad44bd7d49e734bc551, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2250,6 +2254,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Socket
       objectReference: {fileID: 0}
+    - target: {fileID: 6026266679064478358, guid: 344d265550b51ad44bd7d49e734bc551, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e7cb296eb77e8e64ca2ca8578dcbab69, type: 2}
     - target: {fileID: 6415562250371892847, guid: 344d265550b51ad44bd7d49e734bc551, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.52
@@ -3300,6 +3308,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Socket (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6026266679064478358, guid: 344d265550b51ad44bd7d49e734bc551, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e7cb296eb77e8e64ca2ca8578dcbab69, type: 2}
     - target: {fileID: 6415562250371892847, guid: 344d265550b51ad44bd7d49e734bc551, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.52

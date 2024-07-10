@@ -19,7 +19,6 @@ public class LevelGenerator : MonoBehaviour
   {
     Vector3 endPointOfLastPiece = GetEndPointOfPiece(lastLevelPieceAdded);
     GameObject platformInstance = platformGenerator.GenerateCustomPlatform(endPointOfLastPiece, platformPrefab);
-    Destroy(lastLevelPieceAdded.GetComponentInChildren<LevelPieceSpawnTrigger>());
     lastLevelPieceAdded = platformInstance;
   }
 
