@@ -724,11 +724,11 @@ PrefabInstance:
     - target: {fileID: 7697366751005587580, guid: 20f60649d4f85aa46a322e2407085824, type: 3}
       propertyPath: audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 20957d19a7fe7ed43960f0df0142fb55, type: 3}
+      objectReference: {fileID: 8300000, guid: e7c3cf1362811474c874c2c5a648fe4c, type: 3}
     - target: {fileID: 7697366751005587580, guid: 20f60649d4f85aa46a322e2407085824, type: 3}
       propertyPath: subtitleJson
       value: 
-      objectReference: {fileID: 4900000, guid: 4eb39236e79473f4aafce8eca063729a, type: 3}
+      objectReference: {fileID: 4900000, guid: 09a7ff91319536649a13fa139e7a96e2, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -754,12 +754,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec86ba7f08819d4d985173ec493a3fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeForPlatformSwitch: 48
-  timeForCrystalSpawn: 51.52
-  timeForMachinePlatformSpawn: 85.52
+  timeForPlatformSwitch: 38.4
+  timeForCrystalSpawn: 45
   distanceToPlatformTwoAndThreeFromPlayerAtSpawn: 500
   crystalPlatformPrefab: {fileID: 4570274427566943106, guid: b9200a7baa79bbf4e9b819c35e8bb4d1, type: 3}
-  machinePlaftormPrefab: {fileID: 6069220854088730994, guid: 9c8088e28cf056e478630cd680cfed43, type: 3}
 --- !u!114 &1934710453 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7534025309003727685, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
