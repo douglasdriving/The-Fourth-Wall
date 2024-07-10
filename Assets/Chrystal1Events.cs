@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Chrystal1Events : MonoBehaviour
@@ -9,11 +10,13 @@ public class Chrystal1Events : MonoBehaviour
     [SerializeField] float timeForCrystalSpawn = 51.52f;
     [SerializeField] float timeForMachinePlatformSpawn = 82.38f;
 
+    [SerializeField] float distanceToPlatformTwoAndThreeFromPlayerAtSpawn = 500f;
+
     [SerializeField] GameObject crystalPlatformPrefab;
     [SerializeField] GameObject machinePlaftormPrefab;
 
     bool switchedToPlatformSpawn = false;
-    bool spawnedCrystal = false;
+    bool spawnedCrystalPlatforms = false;
     bool spawnedMachinePlatform = false;
 
     bool eventRunning = false;
@@ -40,22 +43,57 @@ public class Chrystal1Events : MonoBehaviour
 
         if (!switchedToPlatformSpawn && timeEventHasBeenRunning >= timeForPlatformSwitch)
         {
-            switchedToPlatformSpawn = true;
-            LevelGenerator.pieceTypeBeingGenerated = LevelPieceType.PLATFORM;
+            SwitchFromGeneratingWalkwayToPlatforms();
         }
 
-        if (!spawnedCrystal && timeEventHasBeenRunning >= timeForCrystalSpawn)
+        if (!spawnedCrystalPlatforms && timeEventHasBeenRunning >= timeForCrystalSpawn)
         {
-            levelGenerator.SpawnCustomPlatform(crystalPlatformPrefab);
-            spawnedCrystal = true;
+            SpawnThreeCrystalPlatforms();
         }
 
         if (!spawnedMachinePlatform && timeEventHasBeenRunning >= timeForMachinePlatformSpawn)
         {
-            levelGenerator.SpawnCustomPlatform(machinePlaftormPrefab);
-            spawnedMachinePlatform = true;
-            eventRunning = false;
-            eventFinished = true;
+            SpawnMachinePlatform();
+            EndEvent();
         }
+    }
+
+    private void SwitchFromGeneratingWalkwayToPlatforms()
+    {
+        switchedToPlatformSpawn = true;
+        LevelGenerator.pieceTypeBeingGenerated = LevelPieceType.PLATFORM;
+    }
+
+    private void EndEvent()
+    {
+        eventRunning = false;
+        eventFinished = true;
+    }
+
+    private void SpawnMachinePlatform()
+    {
+        levelGenerator.SpawnCustomPlatform(machinePlaftormPrefab);
+        spawnedMachinePlatform = true;
+    }
+
+    private void SpawnThreeCrystalPlatforms()
+    {
+        levelGenerator.SpawnCustomPlatform(crystalPlatformPrefab);
+
+        Vector3 vectorFromPlayerToCrystalPlatform2 = new Vector3(-0.5f, 0, 1).normalized * distanceToPlatformTwoAndThreeFromPlayerAtSpawn;
+        Vector3 vectorFromPlayerToCrystalPlatform3 = new Vector3(0.5f, 0, 1).normalized * distanceToPlatformTwoAndThreeFromPlayerAtSpawn;
+
+        Vector3 playerPos = GameObject.FindWithTag("Player").transform.position;
+
+        Vector3 crystal2PlatformPos = playerPos + vectorFromPlayerToCrystalPlatform2;
+        Vector3 crystal3PlatformPos = playerPos + vectorFromPlayerToCrystalPlatform3;
+
+        GameObject crystal2Platform = Instantiate(crystalPlatformPrefab, crystal2PlatformPos, Quaternion.identity);
+        GameObject crystal3Platform = Instantiate(crystalPlatformPrefab, crystal3PlatformPos, Quaternion.identity);
+
+        crystal2Platform.GetComponentInChildren<TMP_Text>().text = "Crystal 2";
+        crystal3Platform.GetComponentInChildren<TMP_Text>().text = "Crystal 3";
+
+        spawnedCrystalPlatforms = true;
     }
 }
