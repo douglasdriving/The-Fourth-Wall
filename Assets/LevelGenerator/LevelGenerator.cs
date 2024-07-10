@@ -8,6 +8,8 @@ public class LevelGenerator : MonoBehaviour
   public GameObject lastLevelPieceAdded;
   WalkwayGenerator walkwayGenerator;
   PlatformGenerator platformGenerator;
+  int piecesPerPlatform = 8;
+  int piecesOnCurrentPlatform = 8;
 
   void Awake()
   {
@@ -24,14 +26,25 @@ public class LevelGenerator : MonoBehaviour
 
   public void SpawnNextLevelPiece(string pieceWord = "")
   {
-    Vector3 endPointOfLastPiece = GetEndPointOfPiece(lastLevelPieceAdded);
+    // Vector3 endPointOfLastPiece = GetEndPointOfPiece(lastLevelPieceAdded);
     if (pieceTypeBeingGenerated == LevelPieceType.WALKWAY)
     {
-      lastLevelPieceAdded = walkwayGenerator.GenerateNextPiece(endPointOfLastPiece, lastLevelPieceAdded.transform, pieceWord);
+      lastLevelPieceAdded = walkwayGenerator.GenerateNextPiece(lastLevelPieceAdded.transform, pieceWord);
     }
     else if (pieceTypeBeingGenerated == LevelPieceType.PLATFORM)
     {
-      lastLevelPieceAdded = platformGenerator.GenerateNextPlatform(endPointOfLastPiece);
+      //use gaps!
+      // lastLevelPieceAdded = platformGenerator.GenerateNextPlatform(endPointOfLastPiece);
+      if (piecesOnCurrentPlatform >= piecesPerPlatform)
+      {
+        lastLevelPieceAdded = walkwayGenerator.GeneratePieceWithGap(lastLevelPieceAdded.transform, pieceWord);
+        piecesOnCurrentPlatform = 1;
+      }
+      else
+      {
+        lastLevelPieceAdded = walkwayGenerator.GenerateNextPiece(lastLevelPieceAdded.transform, pieceWord);
+        piecesOnCurrentPlatform++;
+      }
     }
   }
 

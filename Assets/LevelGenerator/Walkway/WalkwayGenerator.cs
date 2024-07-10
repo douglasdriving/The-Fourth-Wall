@@ -14,16 +14,39 @@ public class WalkwayGenerator : MonoBehaviour
     [SerializeField] float pieceOverlap = 0.5f;
     [SerializeField] float wordHeightAbovePlatform = 1f;
 
-    public GameObject GenerateNextPiece(Vector3 pointToMoveFrom, Transform pieceToMoveFrom, string pieceWord)
+    public GameObject GenerateNextPiece(Transform pieceToMoveFrom, string pieceWord)
     {
-        GameObject piece = AddPieceToWalkway(pointToMoveFrom, pieceToMoveFrom);
+        GameObject piece = AddPieceToWalkway(pieceToMoveFrom);
         piece.GetComponentInChildren<TMP_Text>().text = pieceWord;
         //should also move the words around, maybe in a little circle?
         // InstantiateWordAnchorAboveEndOfPiece(piece);
         return piece;
     }
 
-    private GameObject AddPieceToWalkway(Vector3 pointToMoveFrom, Transform prevPiece)
+    public GameObject GeneratePieceWithGap(Transform prevPiece, string pieceWord)
+    {
+        Vector3 prevPiecePivot = prevPiece.position;
+        Vector3 prevPieceScale = prevPiece.lossyScale;
+        Vector3 endOfPrevPiece = prevPiecePivot + Vector3.forward * prevPieceScale.z;
+
+        Vector3 gap = Vector3.one;
+        gap.x = Random.Range(-10, 10);
+        gap.y = Random.Range(-1, 1);
+        gap.z = Random.Range(2, 10);
+        float gapSize = Random.Range(7, 10);
+        gap = gap.normalized * gapSize;
+
+        Vector3 newPiecePivot = endOfPrevPiece + gap;
+
+        Quaternion rot = Quaternion.identity;
+        GameObject piece = InstatiatePiece(newPiecePivot, rot);
+
+        piece.GetComponentInChildren<TMP_Text>().text = pieceWord;
+
+        return piece;
+    }
+
+    private GameObject AddPieceToWalkway(Transform prevPiece)
     {
 
         //problem är att "point to move from" är KANTEN av biten

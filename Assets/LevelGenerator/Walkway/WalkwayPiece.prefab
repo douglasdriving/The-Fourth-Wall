@@ -544,6 +544,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1824571381349480098}
+  - component: {fileID: 4979812583362321920}
   m_Layer: 0
   m_Name: Word
   m_TagString: Untagged
@@ -561,13 +562,26 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.398, z: 0.5}
-  m_LocalScale: {x: 0.2731021, y: 0.5462042, z: 0.2731021}
+  m_LocalScale: {x: 0.22240889, y: 0.44481778, z: 0.22240889}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7958488870048555318}
   - {fileID: 5159987770561479969}
   m_Father: {fileID: 8619952791990303800}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4979812583362321920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8602204908494841640}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 759bb90879d03204190468330e3146e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseScaleFactor: 1
 --- !u!1001 &5110471884564700057
 PrefabInstance:
   m_ObjectHideFlags: 0
