@@ -8,10 +8,10 @@ public class WalkwayGenerator : MonoBehaviour
     [SerializeField] float maxTurnAngle = 45;
     [SerializeField] float minLength = 3;
     [SerializeField] float maxLength = 10;
-    [SerializeField] float maxPieceYRot = 90;
+    // [SerializeField] float maxPieceYRot = 90;
     [SerializeField] Transform wordAnchorParent;
     [SerializeField] Transform walkwayParent;
-    [SerializeField] float pieceOverlap = 0.5f;
+    // [SerializeField] float pieceOverlap = 0.5f;
     [SerializeField] float wordHeightAbovePlatform = 1f;
 
     public GameObject GenerateNextPiece(Transform pieceToMoveFrom, string pieceWord)

@@ -8,7 +8,7 @@ public class SpawnPointTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<FallReset>().SetSpawnPoint(transform.position);
+            other.GetComponent<FallReset>().SetSpawnPoint();
         }
     }
 }

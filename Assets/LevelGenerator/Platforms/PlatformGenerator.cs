@@ -4,7 +4,7 @@ public class PlatformGenerator : MonoBehaviour
 {
     [SerializeField] GameObject platformPrefab;
     [SerializeField] GameObject wordPointPrefab;
-    [SerializeField] float maxTurnAngle = 45;
+    // [SerializeField] float maxTurnAngle = 45;
     [SerializeField] float distanceBetweenPlatforms = 8f;
     [SerializeField] float maxPlatformHeightDiff = 2;
     [SerializeField] Transform wordPointsParent;

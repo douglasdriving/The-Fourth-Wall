@@ -2,10 +2,15 @@ using UnityEngine;
 
 public class FallReset : MonoBehaviour
 {
-    [SerializeField] float resetHeight = -15;
+    // [SerializeField] float resetHeight = -15;
+    [SerializeField] float fallTimeForReset = 3;
     Vector3 spawnPos;
     Quaternion spawnRot;
     Rigidbody rb;
+
+    //calc time falling
+    //and die if you have been falling for too long
+    float timeSpentFalling = 0;
 
     private void Awake()
     {
@@ -16,29 +21,47 @@ public class FallReset : MonoBehaviour
 
     void Update()
     {
-        ResetIfTooLow();
+
+        bool isFalling = rb.velocity.y < -0.2;
+        if (!isFalling)
+        {
+            timeSpentFalling = 0;
+        }
+        else
+        {
+            timeSpentFalling += Time.deltaTime;
+        }
+
+        if (timeSpentFalling > fallTimeForReset)
+        {
+            ResetPlayer();
+            timeSpentFalling = 0;
+        }
+
+
+        // ResetIfTooLow();
     }
 
-    public void SetSpawnPoint(Vector3 postition)
+    public void SetSpawnPoint()
     {
-        spawnPos = postition;
+        spawnPos = transform.position + Vector3.up * 0.02f;
         spawnRot = transform.rotation;
     }
 
-    void ResetIfTooLow()
-    {
-        float height = transform.position.y;
-        bool isBelowResetHeight = height < resetHeight;
-        if (isBelowResetHeight)
-        {
-            ResetPlayer();
-        }
-    }
+    // void ResetIfTooLow()
+    // {
+    //     float height = transform.position.y;
+    //     bool isBelowResetHeight = height < resetHeight;
+    //     if (isBelowResetHeight)
+    //     {
+    //         ResetPlayer();
+    //     }
+    // }
 
     void ResetPlayer()
     {
+        rb.velocity = Vector3.zero;
         transform.position = spawnPos;
         transform.rotation = spawnRot;
-        rb.velocity = Vector3.zero;
     }
 }
