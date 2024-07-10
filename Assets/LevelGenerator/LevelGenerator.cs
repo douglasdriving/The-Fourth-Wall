@@ -8,11 +8,12 @@ public class LevelGenerator : MonoBehaviour
   public GameObject lastLevelPieceAdded;
   WalkwayGenerator walkwayGenerator;
   PlatformGenerator platformGenerator;
-  int piecesPerPlatform = 8;
-  int piecesOnCurrentPlatform = 8;
+  [SerializeField] int piecesPerPlatform = 12;
+  int piecesOnCurrentPlatform;
 
   void Awake()
   {
+    piecesOnCurrentPlatform = piecesPerPlatform;
     if (!lastLevelPieceAdded) Debug.LogError("please assign a last level piece to start generating from");
     walkwayGenerator = GetComponent<WalkwayGenerator>();
     platformGenerator = GetComponent<PlatformGenerator>();

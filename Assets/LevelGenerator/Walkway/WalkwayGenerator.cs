@@ -5,14 +5,17 @@ public class WalkwayGenerator : MonoBehaviour
 {
     [SerializeField] GameObject piecePrefab;
     [SerializeField] GameObject wordAnchorPrefab;
-    [SerializeField] float maxTurnAngle = 45;
-    [SerializeField] float minLength = 3;
-    [SerializeField] float maxLength = 10;
+    // [SerializeField] float maxTurnAngle = 45;
+    // [SerializeField] float minLength = 3;
+    // [SerializeField] float maxLength = 10;
     // [SerializeField] float maxPieceYRot = 90;
     [SerializeField] Transform wordAnchorParent;
     [SerializeField] Transform walkwayParent;
     // [SerializeField] float pieceOverlap = 0.5f;
-    [SerializeField] float wordHeightAbovePlatform = 1f;
+    // [SerializeField] float wordHeightAbovePlatform = 1f;
+
+    [SerializeField] float platformGapSize = 12f;
+    [SerializeField] float zScalePercentageOfPlatformPieces = 0.7f;
 
     public GameObject GenerateNextPiece(Transform pieceToMoveFrom, string pieceWord)
     {
@@ -33,14 +36,19 @@ public class WalkwayGenerator : MonoBehaviour
         gap.x = Random.Range(-10, 10);
         gap.y = Random.Range(-1, 1);
         gap.z = Random.Range(2, 10);
-        float gapSize = Random.Range(7, 10);
-        gap = gap.normalized * gapSize;
+        gap = gap.normalized * platformGapSize;
 
         Vector3 newPiecePivot = endOfPrevPiece + gap;
 
         Quaternion rot = Quaternion.identity;
         GameObject piece = InstatiatePiece(newPiecePivot, rot);
 
+        //scale the piece down in z
+        Vector3 shorterPieceScale = piece.transform.localScale;
+        shorterPieceScale *= zScalePercentageOfPlatformPieces;
+        piece.transform.localScale = shorterPieceScale;
+
+        //add the word
         piece.GetComponentInChildren<TMP_Text>().text = pieceWord;
 
         return piece;
@@ -73,13 +81,13 @@ public class WalkwayGenerator : MonoBehaviour
         return piece;
     }
 
-    private Quaternion GetRandomNewPieceRot()
-    {
-        float randomTurnAngle = Random.Range(-maxTurnAngle, maxTurnAngle);
-        Vector3 rotEuler = new Vector3(0, randomTurnAngle, 0);
-        Quaternion rot = Quaternion.Euler(rotEuler);
-        return rot;
-    }
+    // private Quaternion GetRandomNewPieceRot()
+    // {
+    //     float randomTurnAngle = Random.Range(-maxTurnAngle, maxTurnAngle);
+    //     Vector3 rotEuler = new Vector3(0, randomTurnAngle, 0);
+    //     Quaternion rot = Quaternion.Euler(rotEuler);
+    //     return rot;
+    // }
 
     private GameObject InstatiatePiece(Vector3 startPos, Quaternion rot)
     {
@@ -88,19 +96,19 @@ public class WalkwayGenerator : MonoBehaviour
         return piece;
     }
 
-    private void RandomizePieceLength(GameObject piece)
-    {
-        float length = Random.Range(minLength, maxLength);
-        Vector3 scale = piece.transform.localScale;
-        scale.z = length;
-        piece.transform.localScale = scale;
-    }
+    // private void RandomizePieceLength(GameObject piece)
+    // {
+    //     float length = Random.Range(minLength, maxLength);
+    //     Vector3 scale = piece.transform.localScale;
+    //     scale.z = length;
+    //     piece.transform.localScale = scale;
+    // }
 
-    private void InstantiateWordAnchorAboveEndOfPiece(GameObject piece)
-    {
-        Vector3 pos = FindObjectOfType<LevelGenerator>().GetEndPointOfPiece(piece);
-        Vector3 wordPos = new Vector3(pos.x, pos.y + wordHeightAbovePlatform, pos.z);
-        GameObject wordPoint = Instantiate(wordAnchorPrefab, wordPos, Quaternion.identity);
-        wordPoint.transform.parent = wordAnchorParent;
-    }
+    // private void InstantiateWordAnchorAboveEndOfPiece(GameObject piece)
+    // {
+    //     Vector3 pos = FindObjectOfType<LevelGenerator>().GetEndPointOfPiece(piece);
+    //     Vector3 wordPos = new Vector3(pos.x, pos.y + wordHeightAbovePlatform, pos.z);
+    //     GameObject wordPoint = Instantiate(wordAnchorPrefab, wordPos, Quaternion.identity);
+    //     wordPoint.transform.parent = wordAnchorParent;
+    // }
 }
