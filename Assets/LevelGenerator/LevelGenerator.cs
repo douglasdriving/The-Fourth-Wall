@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using Narration;
 using UnityEngine;
 
 // [RequireComponent(typeof(PlatformGenerator))]
@@ -11,6 +13,7 @@ public class LevelGenerator : MonoBehaviour
   [SerializeField] int piecesPerPlatform = 12;
   int piecesOnCurrentPlatform;
   [SerializeField] int minPlatformPieces = 4;
+  List<Piece> piecesBeingGenerated;
 
   void Awake()
   {
@@ -19,6 +22,54 @@ public class LevelGenerator : MonoBehaviour
     walkwayGenerator = GetComponent<WalkwayGenerator>();
     // platformGenerator = GetComponent<PlatformGenerator>();
   }
+
+
+  public void SetPlatformingPath(Vector3 pathStart, Vector3 pathEnd, int numberOfPieces)
+  {
+    Vector3 vectorFromStartToEnd = pathEnd - pathStart;
+    float platformGapSize = FindObjectOfType<WalkwayGenerator>().platformGapSize;
+    Vector3 startGap = vectorFromStartToEnd.normalized * platformGapSize;
+    Vector3 pathVector = vectorFromStartToEnd - startGap;
+    float pathLength = pathVector.magnitude;
+
+    //calc position for each platform piece
+    float platformLength = 15f; //magic, define somewhere else
+    float lengthOfPlatformWithGap = platformLength + platformGapSize;
+    int numberOfPlatforms = Mathf.FloorToInt(pathLength / lengthOfPlatformWithGap);
+    float piecesPerPlatform = numberOfPieces / numberOfPlatforms;
+    int piecesPerPlatformFloored = Mathf.FloorToInt(piecesPerPlatform);
+    int totalPiecesIfAllPlatformsUseFlooredCount = numberOfPlatforms * piecesPerPlatformFloored;
+    int leftOverPieceCount = numberOfPieces - totalPiecesIfAllPlatformsUseFlooredCount;
+    int numberOfPlatformsThatUseOneExtraPiece = leftOverPieceCount;
+    float lengthOfPiecesInTheFirstPlatforms = platformLength / (piecesPerPlatformFloored + 1);
+    float lengthOfPiecesInTheLatterPlatforms = platformLength / piecesPerPlatformFloored;
+    List<Piece> pieceStartPositions = new();
+    for (int i = 0; i < numberOfPlatforms; i++)
+    {
+      bool usesExtraPiece = i < numberOfPlatformsThatUseOneExtraPiece;
+      float distanceFromStartToNextPiece = 0;
+      distanceFromStartToNextPiece += platformGapSize; //start gap
+      distanceFromStartToNextPiece += platformLength * i; //each platform before this
+      distanceFromStartToNextPiece += platformGapSize * i; //each gap before this
+      for (int j = 0; j < piecesPerPlatformFloored + 1; j++)
+      {
+        Piece piece = new();
+        Vector3 vectorFromStartToPiece = vectorFromStartToEnd.normalized * distanceFromStartToNextPiece;
+        piece.start = pathStart + vectorFromStartToPiece;
+        piece.length = usesExtraPiece ? lengthOfPiecesInTheFirstPlatforms : lengthOfPiecesInTheLatterPlatforms;
+        pieceStartPositions.Add(piece);
+        distanceFromStartToNextPiece += piece.length;
+      }
+    }
+    piecesBeingGenerated = pieceStartPositions;
+  }
+
+  struct Piece
+  {
+    public Vector3 start;
+    public float length;
+  }
+
   public GameObject SpawnCustomPlatform(GameObject platformPrefab, float gapFromWalkwayEndToPlatformPivot)
   {
     Vector3 endPointOfLastPiece = GetEndPointOfPiece(lastLevelPieceAdded);
@@ -31,6 +82,10 @@ public class LevelGenerator : MonoBehaviour
 
   public void SpawnNextLevelPiece(string pieceWord, int piecesLeftToSpawnInSection)
   {
+
+    //!!! if there is a list of pieces being generated defined, we should follow that list.
+
+
     // Vector3 endPointOfLastPiece = GetEndPointOfPiece(lastLevelPieceAdded);
 
     if (pieceTypeBeingGenerated == LevelPieceType.WALKWAY)
@@ -74,4 +129,6 @@ public class LevelGenerator : MonoBehaviour
     }
     return mostUpForwardPoint;
   }
+
+
 }

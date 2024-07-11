@@ -762,6 +762,8 @@ MonoBehaviour:
   timeForCrystalSpawn: 45
   distanceToPlatformTwoAndThreeFromPlayerAtSpawn: 500
   crystalPlatformPrefab: {fileID: 4570274427566943106, guid: b9200a7baa79bbf4e9b819c35e8bb4d1, type: 3}
+  crystal2PlatformPrefab: {fileID: 4570274427566943106, guid: ea3e228639cfa6f49bcf67bf342aaa73, type: 3}
+  gapFromWalkwayToCrystalPlatform: 15
 --- !u!114 &1934710453 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7534025309003727685, guid: 5e618ef96ba06324baa61da891779c39, type: 3}

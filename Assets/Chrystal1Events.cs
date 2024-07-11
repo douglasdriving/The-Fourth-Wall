@@ -13,6 +13,7 @@ public class Chrystal1Events : MonoBehaviour
     [SerializeField] float distanceToPlatformTwoAndThreeFromPlayerAtSpawn = 500f;
 
     [SerializeField] GameObject crystalPlatformPrefab;
+    [SerializeField] GameObject crystal2PlatformPrefab;
     // [SerializeField] GameObject machinePlaftormPrefab;
     [SerializeField] float gapFromWalkwayToCrystalPlatform = 15f;
 
@@ -115,7 +116,7 @@ public class Chrystal1Events : MonoBehaviour
         Vector3 crystal2PlatformPos = playerPos + vectorFromPlayerToCrystalPlatform2;
         Vector3 crystal3PlatformPos = playerPos + vectorFromPlayerToCrystalPlatform3;
 
-        GameObject crystal2Platform = Instantiate(crystalPlatformPrefab, crystal2PlatformPos, Quaternion.identity);
+        GameObject crystal2Platform = Instantiate(crystal2PlatformPrefab, crystal2PlatformPos, Quaternion.identity);
         GameObject crystal3Platform = Instantiate(crystalPlatformPrefab, crystal3PlatformPos, Quaternion.identity);
 
         crystal2Platform.GetComponentInChildren<TMP_Text>().text = "Crystal 2";

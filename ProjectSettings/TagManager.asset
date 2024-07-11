@@ -9,6 +9,7 @@ TagManager:
   - Holdable
   - Platform
   - Walkway
+  - SecondCrystalPlatformEntryPoint
   layers:
   - Default
   - TransparentFX

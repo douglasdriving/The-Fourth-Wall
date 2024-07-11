@@ -506,7 +506,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6720304745355196853}
   m_Layer: 0
-  m_Name: CrystalPlatform
+  m_Name: CrystalPlatform1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

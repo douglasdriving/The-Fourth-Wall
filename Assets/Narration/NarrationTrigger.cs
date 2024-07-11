@@ -6,7 +6,7 @@ namespace Narration
   {
     public AudioClip audioClip;
     public TextAsset subtitleJson;
-    SubtitleJsonData subtitle;
+    public SubtitleJsonData subtitle;
     bool triggered = false;
 
     void Awake()

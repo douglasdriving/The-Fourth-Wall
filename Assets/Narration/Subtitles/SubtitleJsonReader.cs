@@ -9,6 +9,18 @@ namespace Narration
             SubtitleJsonData data = JsonUtility.FromJson<SubtitleJsonData>(subtitleJsonString);
             return data;
         }
+
+        public static int CountWordsInSubtitle(SubtitleJsonData subtitle)
+        {
+            int wordCount = 0;
+
+            foreach (SubtitleSegment segment in subtitle.segments)
+            {
+                wordCount += segment.words.Length;
+            }
+
+            return wordCount;
+        }
     }
 
     [System.Serializable]

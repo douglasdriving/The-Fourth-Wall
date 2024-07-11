@@ -14,7 +14,7 @@ public class WalkwayGenerator : MonoBehaviour
     // [SerializeField] float pieceOverlap = 0.5f;
     // [SerializeField] float wordHeightAbovePlatform = 1f;
 
-    [SerializeField] float platformGapSize = 12f;
+    public float platformGapSize = 12f;
     [SerializeField] float zScalePercentageOfPlatformPieces = 0.7f;
 
     public GameObject GenerateNextPiece(Transform pieceToMoveFrom, string pieceWord, bool isPartOfPlatform)
