@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Narration;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 // [RequireComponent(typeof(PlatformGenerator))]
 [RequireComponent(typeof(WalkwayGenerator))]
@@ -24,7 +25,7 @@ public class LevelGenerator : MonoBehaviour
   }
 
 
-  public void SetPlatformingPath(Vector3 pathStart, Vector3 pathEnd, int numberOfPieces)
+  public void SetPlatformingPath(Vector3 pathStart, Vector3 pathEnd, int numberOfPiecesToAdd)
   {
 
 
@@ -35,20 +36,27 @@ public class LevelGenerator : MonoBehaviour
     float pathLength = pathVector.magnitude;
 
     Vector3 pieceForwardVector = vectorFromStartToEnd.normalized;
+    Vector3 pieceUpVector = Vector3.up; //unsure if this is correct. probably not.
+    Vector3 pieceRightVector = Vector3.Cross(pieceUpVector, pieceForwardVector);
+    pieceRightVector.Normalize();
 
     //calc position for each platform piece
     float platformLength = 15f; //magic, define somewhere else
     float lengthOfPlatformWithGap = platformLength + platformGapSize;
     int numberOfPlatforms = Mathf.FloorToInt(pathLength / lengthOfPlatformWithGap);
-    float averagePlatformPieceCount = numberOfPieces / numberOfPlatforms;
+    float averagePlatformPieceCount = numberOfPiecesToAdd / numberOfPlatforms;
     int minimumPlatformPieceCount = Mathf.FloorToInt(averagePlatformPieceCount);
     int totalPiecesIfAllPlatformsUseMinimumCount = numberOfPlatforms * minimumPlatformPieceCount;
-    int leftOverPieceCount = numberOfPieces - totalPiecesIfAllPlatformsUseMinimumCount;
+    int leftOverPieceCount = numberOfPiecesToAdd - totalPiecesIfAllPlatformsUseMinimumCount;
     int numberOfPlatformsThatUseOneExtraPiece = leftOverPieceCount;
 
     float lengthOfPiecesInThePlatformsWithExtraPiece = platformLength / (minimumPlatformPieceCount + 1);
     float lengthOfPiecesInPlatformsWithMinumumPieceCount = platformLength / minimumPlatformPieceCount;
-    List<LevelPiece> pieces = new();
+    List<LevelPiece> addedPieces = new();
+
+    float lastPieceSideDeviation = 0;
+    float maxSideDeviation = 15f; //magic!
+
     for (int i = 0; i < numberOfPlatforms; i++)
     {
       bool usesExtraPiece = i < numberOfPlatformsThatUseOneExtraPiece;
@@ -58,16 +66,35 @@ public class LevelGenerator : MonoBehaviour
       int numberOfPiecesInThisPlatform = usesExtraPiece ? minimumPlatformPieceCount + 1 : minimumPlatformPieceCount;
       for (int j = 0; j < numberOfPiecesInThisPlatform; j++)
       {
+
         LevelPiece piece = new();
         Vector3 vectorFromStartToPiece = vectorFromStartToEnd.normalized * distanceFromStartToNextPiece;
-        piece.start = pathStart + vectorFromStartToPiece;
+
+        //calc deviation
+        int numberOfPiecesLeft = numberOfPiecesToAdd - addedPieces.Count;
+        float maxSideDevationForThisPiece = numberOfPiecesLeft / 2;
+        maxSideDeviation = Mathf.Clamp(maxSideDeviation, -maxSideDevationForThisPiece, maxSideDevationForThisPiece);
+        float pieceSideDeviation = lastPieceSideDeviation + Random.Range(-0.5f, 0.5f);
+        bool deviatedTooFar = Mathf.Abs(pieceSideDeviation) > maxSideDeviation;
+        if (deviatedTooFar)
+        {
+          float deviationOverFlow = Mathf.Abs(pieceSideDeviation) - maxSideDeviation;
+          bool isNegative = pieceSideDeviation < 0;
+          pieceSideDeviation += isNegative ? deviationOverFlow : -deviationOverFlow;
+        }
+        lastPieceSideDeviation = pieceSideDeviation;
+        Vector3 pieceDeviation = pieceRightVector * pieceSideDeviation;
+
+        //add the piece
+        piece.start = pathStart + vectorFromStartToPiece + pieceDeviation;
         piece.length = usesExtraPiece ? lengthOfPiecesInThePlatformsWithExtraPiece : lengthOfPiecesInPlatformsWithMinumumPieceCount;
         piece.forwardVector = pieceForwardVector;
-        pieces.Add(piece);
+        addedPieces.Add(piece);
         distanceFromStartToNextPiece += piece.length;
+
       }
     }
-    piecesBeingGenerated = pieces;
+    piecesBeingGenerated = addedPieces;
 
   }
 

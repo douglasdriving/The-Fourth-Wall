@@ -26,7 +26,6 @@ public class MachineToCrystal2Events : MonoBehaviour
         Vector3 pathStart = endOfExitPlatform.position;
         Vector3 pathEnd = GameObject.FindWithTag("SecondCrystalPlatformEntryPoint").transform.position;
         int subtitleWordCount = SubtitleJsonReader.CountWordsInSubtitle(subtitle);
-        Debug.Log("the subtitle word count: " + subtitleWordCount);
         int totalPlatformPieceCount = subtitleWordCount;
 
         FindObjectOfType<LevelGenerator>().SetPlatformingPath(pathStart, pathEnd, totalPlatformPieceCount);
