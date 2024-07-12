@@ -56,7 +56,7 @@ public class LevelGenerator : MonoBehaviour
     List<LevelPiece> addedPieces = new();
 
     float lastPieceSideDeviation = 0;
-    float lastPieceUpDeviation = 0;
+    float lastPlatformUpDeviation = 0;
     float maxSideDeviationFromPath = 15f; //magic!
     float maxUpDeviationFromPath = 15f; //magic
 
@@ -68,53 +68,44 @@ public class LevelGenerator : MonoBehaviour
       distanceFromStartToNextPiece += lengthOfPlatformWithGap * i; //each platform before this
       int numberOfPiecesInThisPlatform = usesExtraPiece ? minimumPlatformPieceCount + 1 : minimumPlatformPieceCount;
 
+      float maxUpShift = 2; // magic
+      float upShift = Random.Range(-maxUpShift, maxUpShift);
+      float platformUpDeviation = lastPlatformUpDeviation + upShift;
+      int numberOfPlatformsLeftAfterThisOne = numberOfPlatforms - i;
+      float maxUpDeviationForThisPlatform = numberOfPlatformsLeftAfterThisOne * 1; //magic
+      if (maxUpDeviationForThisPlatform > maxUpDeviationFromPath) maxUpDeviationForThisPlatform = maxUpDeviationFromPath;
+      bool deviatedTooFarUpways = Mathf.Abs(platformUpDeviation) > maxUpDeviationForThisPlatform;
+      if (deviatedTooFarUpways)
+      {
+        float deviationOverFlow = Mathf.Abs(platformUpDeviation) - maxUpDeviationForThisPlatform;
+        bool isBelowPath = platformUpDeviation < 0;
+        platformUpDeviation += isBelowPath ? deviationOverFlow : -deviationOverFlow;
+      }
+      lastPlatformUpDeviation = platformUpDeviation;
+
       for (int j = 0; j < numberOfPiecesInThisPlatform; j++)
       {
 
         LevelPiece piece = new();
         Vector3 vectorFromStartToPiece = vectorFromStartToEnd.normalized * distanceFromStartToNextPiece;
 
-        //calc deviation
+        //calc side shift
         bool isFirstPieceInPlatform = j == 0;
-
         float maxSideShift = isFirstPieceInPlatform ? 6 : 0.8f; //magic
-        float maxUpShift = isFirstPieceInPlatform ? 2 : 0; // magic
-
         float sideShift = Random.Range(-maxSideShift, maxSideShift);
-        float upShift = Random.Range(-maxUpShift, maxUpShift);
-
         float pieceSideDeviation = lastPieceSideDeviation + sideShift;
-        float pieceUpDeviation = lastPieceUpDeviation + upShift;
-
-        int numberOfPiecesLeft = numberOfPiecesToAdd - addedPieces.Count;
-
-        float maxSideDevationForThisPiece = numberOfPiecesLeft / 2;
-        float maxUpDeviationForThisPiece = numberOfPiecesLeft;
-
+        int numberOfPiecesLeftAfterThisOne = numberOfPiecesToAdd - addedPieces.Count - 1;
+        float maxSideDevationForThisPiece = numberOfPiecesLeftAfterThisOne / 2;
         if (maxSideDevationForThisPiece > maxSideDeviationFromPath) maxSideDevationForThisPiece = maxSideDeviationFromPath;
-        if (maxUpDeviationForThisPiece > maxUpDeviationFromPath) maxSideDevationForThisPiece = maxUpDeviationFromPath;
-
         bool deviatedTooFarSideways = Mathf.Abs(pieceSideDeviation) > maxSideDevationForThisPiece;
-        bool deviatedTooFarUpways = Mathf.Abs(pieceUpDeviation) > maxUpDeviationForThisPiece;
-
         if (deviatedTooFarSideways)
         {
           float deviationOverFlow = Mathf.Abs(pieceSideDeviation) - maxSideDevationForThisPiece;
           bool isNegative = pieceSideDeviation < 0;
           pieceSideDeviation += isNegative ? deviationOverFlow : -deviationOverFlow;
         }
-
-        if (deviatedTooFarUpways)
-        {
-          float deviationOverFlow = Mathf.Abs(pieceUpDeviation) - maxUpDeviationForThisPiece;
-          bool isNegative = pieceUpDeviation < 0;
-          pieceUpDeviation += isNegative ? deviationOverFlow : -deviationOverFlow;
-        }
-
         lastPieceSideDeviation = pieceSideDeviation;
-        lastPieceUpDeviation = pieceUpDeviation;
-
-        Vector3 pieceDeviation = pieceRightVector * pieceSideDeviation + pieceUpVector * pieceUpDeviation;
+        Vector3 pieceDeviation = pieceRightVector * pieceSideDeviation + pieceUpVector * platformUpDeviation;
 
         //add the piece
         piece.start = pathStart + vectorFromStartToPiece + pieceDeviation;
