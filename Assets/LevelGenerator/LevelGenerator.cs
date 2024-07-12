@@ -26,8 +26,10 @@ public class LevelGenerator : MonoBehaviour
 
   public void SetPlatformingPath(Vector3 pathStart, Vector3 pathEnd, int numberOfPieces)
   {
+
+
     Vector3 vectorFromStartToEnd = pathEnd - pathStart;
-    float platformGapSize = FindObjectOfType<WalkwayGenerator>().platformGapSize;
+    float platformGapSize = FindObjectOfType<WalkwayGenerator>().platformGapSize; // this could just be in the level generator...
     Vector3 startGap = vectorFromStartToEnd.normalized * platformGapSize;
     Vector3 pathVector = vectorFromStartToEnd - startGap;
     float pathLength = pathVector.magnitude;
@@ -36,32 +38,33 @@ public class LevelGenerator : MonoBehaviour
     float platformLength = 15f; //magic, define somewhere else
     float lengthOfPlatformWithGap = platformLength + platformGapSize;
     int numberOfPlatforms = Mathf.FloorToInt(pathLength / lengthOfPlatformWithGap);
-    float piecesPerPlatform = numberOfPieces / numberOfPlatforms;
-    int piecesPerPlatformFloored = Mathf.FloorToInt(piecesPerPlatform);
-    int totalPiecesIfAllPlatformsUseFlooredCount = numberOfPlatforms * piecesPerPlatformFloored;
-    int leftOverPieceCount = numberOfPieces - totalPiecesIfAllPlatformsUseFlooredCount;
+    float averagePlatformPieceCount = numberOfPieces / numberOfPlatforms;
+    int minimumPlatformPieceCount = Mathf.FloorToInt(averagePlatformPieceCount);
+    int totalPiecesIfAllPlatformsUseMinimumCount = numberOfPlatforms * minimumPlatformPieceCount;
+    int leftOverPieceCount = numberOfPieces - totalPiecesIfAllPlatformsUseMinimumCount;
     int numberOfPlatformsThatUseOneExtraPiece = leftOverPieceCount;
-    float lengthOfPiecesInTheFirstPlatforms = platformLength / (piecesPerPlatformFloored + 1);
-    float lengthOfPiecesInTheLatterPlatforms = platformLength / piecesPerPlatformFloored;
-    List<Piece> pieceStartPositions = new();
+
+    float lengthOfPiecesInThePlatformsWithExtraPiece = platformLength / (minimumPlatformPieceCount + 1);
+    float lengthOfPiecesInPlatformsWithMinumumPieceCount = platformLength / minimumPlatformPieceCount;
+    List<Piece> pieces = new();
     for (int i = 0; i < numberOfPlatforms; i++)
     {
       bool usesExtraPiece = i < numberOfPlatformsThatUseOneExtraPiece;
       float distanceFromStartToNextPiece = 0;
       distanceFromStartToNextPiece += platformGapSize; //start gap
-      distanceFromStartToNextPiece += platformLength * i; //each platform before this
-      distanceFromStartToNextPiece += platformGapSize * i; //each gap before this
-      for (int j = 0; j < piecesPerPlatformFloored + 1; j++)
+      distanceFromStartToNextPiece += lengthOfPlatformWithGap * i; //each platform before this
+      int numberOfPiecesInThisPlatform = usesExtraPiece ? minimumPlatformPieceCount + 1 : minimumPlatformPieceCount;
+      for (int j = 0; j < numberOfPiecesInThisPlatform; j++)
       {
         Piece piece = new();
         Vector3 vectorFromStartToPiece = vectorFromStartToEnd.normalized * distanceFromStartToNextPiece;
         piece.start = pathStart + vectorFromStartToPiece;
-        piece.length = usesExtraPiece ? lengthOfPiecesInTheFirstPlatforms : lengthOfPiecesInTheLatterPlatforms;
-        pieceStartPositions.Add(piece);
+        piece.length = usesExtraPiece ? lengthOfPiecesInThePlatformsWithExtraPiece : lengthOfPiecesInPlatformsWithMinumumPieceCount;
+        pieces.Add(piece);
         distanceFromStartToNextPiece += piece.length;
       }
     }
-    piecesBeingGenerated = pieceStartPositions;
+    piecesBeingGenerated = pieces;
   }
 
   struct Piece
