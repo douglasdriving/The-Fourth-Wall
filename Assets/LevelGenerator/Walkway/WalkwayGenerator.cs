@@ -17,11 +17,20 @@ public class WalkwayGenerator : MonoBehaviour
     public float platformGapSize = 12f;
     [SerializeField] float zScalePercentageOfPlatformPieces = 0.7f;
 
-    public GameObject GenerateAtExactSpot(Vector3 point, string pieceWord)
+    public GameObject GenerateAtExactSpot(LevelPiece piece, string pieceWord)
     {
-        GameObject piece = InstatiatePiece(point, Quaternion.identity);
-        piece.GetComponentInChildren<TMP_Text>().text = pieceWord;
-        return piece;
+        GameObject pieceGO = InstatiatePiece(piece.start, Quaternion.identity);
+
+        Transform pieceT = pieceGO.transform;
+
+        pieceT.forward = piece.forwardVector;
+
+        Vector3 pieceLocalScale = pieceT.localScale;
+        pieceLocalScale.z = piece.length;
+        pieceT.localScale = pieceLocalScale;
+
+        pieceGO.GetComponentInChildren<TMP_Text>().text = pieceWord;
+        return pieceGO;
     }
 
     public GameObject GenerateNextPiece(Transform pieceToMoveFrom, string pieceWord, bool isPartOfPlatform)

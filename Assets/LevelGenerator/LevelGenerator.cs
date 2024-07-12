@@ -13,7 +13,7 @@ public class LevelGenerator : MonoBehaviour
   [SerializeField] int piecesPerPlatform = 12;
   int piecesOnCurrentPlatform;
   [SerializeField] int minPlatformPieces = 4;
-  List<Piece> piecesBeingGenerated = null;
+  List<LevelPiece> piecesBeingGenerated = null;
 
   void Awake()
   {
@@ -34,6 +34,8 @@ public class LevelGenerator : MonoBehaviour
     Vector3 pathVector = vectorFromStartToEnd - startGap;
     float pathLength = pathVector.magnitude;
 
+    Vector3 pieceForwardVector = vectorFromStartToEnd.normalized;
+
     //calc position for each platform piece
     float platformLength = 15f; //magic, define somewhere else
     float lengthOfPlatformWithGap = platformLength + platformGapSize;
@@ -46,7 +48,7 @@ public class LevelGenerator : MonoBehaviour
 
     float lengthOfPiecesInThePlatformsWithExtraPiece = platformLength / (minimumPlatformPieceCount + 1);
     float lengthOfPiecesInPlatformsWithMinumumPieceCount = platformLength / minimumPlatformPieceCount;
-    List<Piece> pieces = new();
+    List<LevelPiece> pieces = new();
     for (int i = 0; i < numberOfPlatforms; i++)
     {
       bool usesExtraPiece = i < numberOfPlatformsThatUseOneExtraPiece;
@@ -56,21 +58,17 @@ public class LevelGenerator : MonoBehaviour
       int numberOfPiecesInThisPlatform = usesExtraPiece ? minimumPlatformPieceCount + 1 : minimumPlatformPieceCount;
       for (int j = 0; j < numberOfPiecesInThisPlatform; j++)
       {
-        Piece piece = new();
+        LevelPiece piece = new();
         Vector3 vectorFromStartToPiece = vectorFromStartToEnd.normalized * distanceFromStartToNextPiece;
         piece.start = pathStart + vectorFromStartToPiece;
         piece.length = usesExtraPiece ? lengthOfPiecesInThePlatformsWithExtraPiece : lengthOfPiecesInPlatformsWithMinumumPieceCount;
+        piece.forwardVector = pieceForwardVector;
         pieces.Add(piece);
         distanceFromStartToNextPiece += piece.length;
       }
     }
     piecesBeingGenerated = pieces;
-  }
 
-  struct Piece
-  {
-    public Vector3 start;
-    public float length;
   }
 
   public GameObject SpawnCustomPlatform(GameObject platformPrefab, float gapFromWalkwayEndToPlatformPivot)
@@ -83,41 +81,52 @@ public class LevelGenerator : MonoBehaviour
     return platform;
   }
 
-  public void SpawnNextLevelPiece(string pieceWord, int piecesLeftToSpawnInSection)
+  public void SpawnNextPiece(string pieceWord, int piecesLeftToSpawnInSection)
   {
+    bool piecesInList = piecesBeingGenerated != null && piecesBeingGenerated.Count > 0;
 
-    //!!! if there is a list of pieces being generated defined, we should follow that list.
-    if (piecesBeingGenerated != null && piecesBeingGenerated.Count > 0)
+    if (piecesInList)
     {
-      Vector3 nextPiecePoint = piecesBeingGenerated[0].start;
-      piecesBeingGenerated.RemoveAt(0);
-      walkwayGenerator.GenerateAtExactSpot(nextPiecePoint, pieceWord);
+      SpawnNextPieceFromList(pieceWord);
+    }
+    else if (pieceTypeBeingGenerated == LevelPieceType.WALKWAY)
+    {
+      SpawnWalkwayPiece(pieceWord);
+    }
+    else if (pieceTypeBeingGenerated == LevelPieceType.PLATFORM)
+    {
+      SpawnPlatformPiece(pieceWord, piecesLeftToSpawnInSection);
+    }
+
+  }
+
+  private void SpawnPlatformPiece(string pieceWord, int piecesLeftToSpawnInSection)
+  {
+    // lastLevelPieceAdded = platformGenerator.GenerateNextPlatform(endPointOfLastPiece);
+    bool isReachingEnd = piecesLeftToSpawnInSection < minPlatformPieces;
+
+    if (piecesOnCurrentPlatform >= piecesPerPlatform && !isReachingEnd)
+    {
+      lastLevelPieceAdded = walkwayGenerator.GeneratePieceWithGap(lastLevelPieceAdded.transform, pieceWord);
+      piecesOnCurrentPlatform = 1;
     }
     else
     {
-      // Vector3 endPointOfLastPiece = GetEndPointOfPiece(lastLevelPieceAdded);
-
-      if (pieceTypeBeingGenerated == LevelPieceType.WALKWAY)
-      {
-        lastLevelPieceAdded = walkwayGenerator.GenerateNextPiece(lastLevelPieceAdded.transform, pieceWord, false);
-      }
-      else if (pieceTypeBeingGenerated == LevelPieceType.PLATFORM)
-      {
-        // lastLevelPieceAdded = platformGenerator.GenerateNextPlatform(endPointOfLastPiece);
-        bool isReachingEnd = piecesLeftToSpawnInSection < minPlatformPieces;
-
-        if (piecesOnCurrentPlatform >= piecesPerPlatform && !isReachingEnd)
-        {
-          lastLevelPieceAdded = walkwayGenerator.GeneratePieceWithGap(lastLevelPieceAdded.transform, pieceWord);
-          piecesOnCurrentPlatform = 1;
-        }
-        else
-        {
-          lastLevelPieceAdded = walkwayGenerator.GenerateNextPiece(lastLevelPieceAdded.transform, pieceWord, true);
-          piecesOnCurrentPlatform++;
-        }
-      }
+      lastLevelPieceAdded = walkwayGenerator.GenerateNextPiece(lastLevelPieceAdded.transform, pieceWord, true);
+      piecesOnCurrentPlatform++;
     }
+  }
+
+  private void SpawnWalkwayPiece(string pieceWord)
+  {
+    lastLevelPieceAdded = walkwayGenerator.GenerateNextPiece(lastLevelPieceAdded.transform, pieceWord, false);
+  }
+
+  private void SpawnNextPieceFromList(string pieceWord)
+  {
+    LevelPiece nextPiece = piecesBeingGenerated[0];
+    walkwayGenerator.GenerateAtExactSpot(nextPiece, pieceWord);
+    piecesBeingGenerated.RemoveAt(0);
   }
 
   public Vector3 GetEndPointOfPiece(GameObject piece)

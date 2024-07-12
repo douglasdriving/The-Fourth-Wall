@@ -80,7 +80,7 @@ namespace Narration
             UpdateNextWordTime();
             // wordMover.UpdateWordPosition();
 
-            levelGenerator.SpawnNextLevelPiece(word, GetWordsLeftInSubtitle());
+            levelGenerator.SpawnNextPiece(word, GetWordsLeftInSubtitle());
         }
 
         private static int GetWordsLeftInSubtitle()
@@ -128,7 +128,7 @@ namespace Narration
             // StartNewSentenceInUI(firstWordInSegment);
             UpdateNextWordTime();
             // wordMover.UpdateWordPosition();
-            levelGenerator.SpawnNextLevelPiece(firstWordInSegment, GetWordsLeftInSubtitle());
+            levelGenerator.SpawnNextPiece(firstWordInSegment, GetWordsLeftInSubtitle());
         }
 
         private void StopSubtitle()
