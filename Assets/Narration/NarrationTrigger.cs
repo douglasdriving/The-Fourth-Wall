@@ -2,14 +2,6 @@ using UnityEngine;
 
 namespace Narration
 {
-
-  public enum SubtitleMode
-  {
-    SpawnWithNewLevelPiece,
-    SpawnForwardOnLevel,
-    SpawnBackwardOnLevel
-  }
-
   public class NarrationTrigger : MonoBehaviour
   {
     [SerializeField] SubtitleMode subtitleMode = SubtitleMode.SpawnWithNewLevelPiece;
