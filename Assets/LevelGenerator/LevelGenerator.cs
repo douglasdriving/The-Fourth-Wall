@@ -28,7 +28,6 @@ public class LevelGenerator : MonoBehaviour
   public void SetPlatformingPath(Vector3 pathStart, Vector3 pathEnd, int numberOfPiecesToAdd)
   {
     piecesBeingGenerated = PathGenerator.GetPathBetweenPoints(pathStart, pathEnd, numberOfPiecesToAdd);
-    Debug.Log("set pieces being generated. count: " + piecesBeingGenerated.Count);
   }
 
   public GameObject SpawnCustomPlatform(GameObject platformPrefab, float gapFromWalkwayEndToPlatformPivot)

@@ -3,8 +3,10 @@ using UnityEngine;
 
 public class PathGenerator
 {
-  const float platformGapSize = 6f;
-  const float platformLength = 15;
+  const float gapSize = 6f;
+  const float minPlatformLength = 13;
+  const float minPlatformLengthWithGap = minPlatformLength + gapSize;
+
 
   const float maxSideDeviationFromPath = 15f;
   const float maxUpDeviationFromPath = 15f;
@@ -12,13 +14,20 @@ public class PathGenerator
   const float maxPlatformSideShift = 4;
   const float maxPieceSideShift = 0.8f;
 
+
   public static List<LevelPiece> GetPathBetweenPoints(Vector3 pathStart, Vector3 pathEnd, int numberOfPiecesToAdd)
   {
     Vector3 vectorFromStartToEnd = pathEnd - pathStart;
-    Vector3 startGap = vectorFromStartToEnd.normalized * platformGapSize;
-    Vector3 pathVector = vectorFromStartToEnd - startGap;
-    float pathLength = pathVector.magnitude;
+    Vector3 startGap = vectorFromStartToEnd.normalized * gapSize;
+    Vector3 pathVectorWithoutInitialGap = vectorFromStartToEnd - startGap;
+    float pathLength = pathVectorWithoutInitialGap.magnitude;
+    int numberOfPlatforms = Mathf.FloorToInt(pathLength / minPlatformLengthWithGap);
+    float distanceCoveredByGaps = numberOfPlatforms * gapSize;
+    float distanceCoveredByPlatforms = pathLength - distanceCoveredByGaps;
+    float platformLength = distanceCoveredByPlatforms / numberOfPlatforms;
+    float platformPlusGapLength = platformLength + gapSize;
 
+    //direction vectors
     Vector3 pieceForwardVector = vectorFromStartToEnd.normalized;
     Vector3 pieceUpVector = Vector3.up;
     Vector3 pieceRightVector = Vector3.Cross(pieceUpVector, pieceForwardVector);
@@ -26,8 +35,6 @@ public class PathGenerator
     pieceUpVector = Vector3.Cross(pieceForwardVector, pieceRightVector).normalized;
 
     //calc position for each platform piece
-    float lengthOfPlatformWithGap = platformLength + platformGapSize;
-    int numberOfPlatforms = Mathf.FloorToInt(pathLength / lengthOfPlatformWithGap);
     float averagePlatformPieceCount = numberOfPiecesToAdd / numberOfPlatforms;
     int minimumPlatformPieceCount = Mathf.FloorToInt(averagePlatformPieceCount);
     int totalPiecesIfAllPlatformsUseMinimumCount = numberOfPlatforms * minimumPlatformPieceCount;
@@ -45,8 +52,8 @@ public class PathGenerator
     {
       bool usesExtraPiece = i < numberOfPlatformsThatUseOneExtraPiece;
       float distanceFromStartToNextPiece = 0;
-      distanceFromStartToNextPiece += platformGapSize; //start gap
-      distanceFromStartToNextPiece += lengthOfPlatformWithGap * i; //each platform before this
+      distanceFromStartToNextPiece += gapSize;
+      distanceFromStartToNextPiece += platformPlusGapLength * i;
       int numberOfPiecesInThisPlatform = usesExtraPiece ? minimumPlatformPieceCount + 1 : minimumPlatformPieceCount;
 
 
