@@ -7,7 +7,7 @@ namespace Narration
     public class SubtitlePlayer : MonoBehaviour
     {
         [SerializeField] TMP_Text subtitleText;
-        [SerializeField] bool singleWordSubtitles = true;
+        // [SerializeField] bool singleWordSubtitles = true;
         [SerializeField] WordMover wordMover;
         [SerializeField] LevelGenerator levelGenerator;
         const float lingerTime = 1f;

@@ -1,0 +1,126 @@
+{
+    "text": " Okay, backtracking sucks. So just use this free portal instead. It's gonna be faster",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 6.2,
+            "text": " Okay, backtracking sucks. So just use this free portal instead. It's gonna be faster",
+            "tokens": [
+                50363,
+                16805,
+                11,
+                736,
+                36280,
+                22523,
+                13,
+                1406,
+                655,
+                779,
+                428,
+                1479,
+                17898,
+                2427,
+                13,
+                632,
+                338,
+                8066,
+                307,
+                5443,
+                50676
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.1198843934319236,
+            "compression_ratio": 1.024390243902439,
+            "no_speech_prob": 0.0007837031153030694,
+            "words": [
+                {
+                    "word": " Okay,",
+                    "start": 0.0,
+                    "end": 0.54,
+                    "probability": 0.8695427179336548
+                },
+                {
+                    "word": " backtracking",
+                    "start": 1.04,
+                    "end": 1.6,
+                    "probability": 0.9904139339923859
+                },
+                {
+                    "word": " sucks.",
+                    "start": 1.6,
+                    "end": 2.3,
+                    "probability": 0.9739859700202942
+                },
+                {
+                    "word": " So",
+                    "start": 2.72,
+                    "end": 2.88,
+                    "probability": 0.9934697151184082
+                },
+                {
+                    "word": " just",
+                    "start": 2.88,
+                    "end": 3.5,
+                    "probability": 0.9058955311775208
+                },
+                {
+                    "word": " use",
+                    "start": 3.5,
+                    "end": 3.98,
+                    "probability": 0.9925678968429565
+                },
+                {
+                    "word": " this",
+                    "start": 3.98,
+                    "end": 4.18,
+                    "probability": 0.9979603290557861
+                },
+                {
+                    "word": " free",
+                    "start": 4.18,
+                    "end": 4.4,
+                    "probability": 0.9641699194908142
+                },
+                {
+                    "word": " portal",
+                    "start": 4.4,
+                    "end": 4.7,
+                    "probability": 0.9936257600784302
+                },
+                {
+                    "word": " instead.",
+                    "start": 4.7,
+                    "end": 5.1,
+                    "probability": 0.9970837235450745
+                },
+                {
+                    "word": " It's",
+                    "start": 5.46,
+                    "end": 5.74,
+                    "probability": 0.9937613904476166
+                },
+                {
+                    "word": " gonna",
+                    "start": 5.74,
+                    "end": 5.82,
+                    "probability": 0.8981163501739502
+                },
+                {
+                    "word": " be",
+                    "start": 5.82,
+                    "end": 5.94,
+                    "probability": 0.9969471096992493
+                },
+                {
+                    "word": " faster",
+                    "start": 5.94,
+                    "end": 6.2,
+                    "probability": 0.9970486760139465
+                }
+            ]
+        }
+    ],
+    "language": "en"
+}

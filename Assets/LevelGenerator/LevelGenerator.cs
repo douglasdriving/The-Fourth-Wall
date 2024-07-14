@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 // [RequireComponent(typeof(PlatformGenerator))]
@@ -10,16 +11,15 @@ public class LevelGenerator : MonoBehaviour
   [SerializeField] int minPlatformPieces = 4;
 
   public static LevelPieceType pieceTypeBeingGenerated = LevelPieceType.WALKWAY;
-  public GameObject lastLevelPieceAdded;
   WalkwayGenerator walkwayGenerator;
   // PlatformGenerator platformGenerator;
   int piecesOnCurrentPlatform;
   List<LevelPiece> piecesBeingGenerated = null;
-
+  public List<GameObject> levelPiecesSpawned = new();
   void Awake()
   {
     piecesOnCurrentPlatform = piecesPerPlatform;
-    if (!lastLevelPieceAdded) Debug.LogError("please assign a last level piece to start generating from");
+    if (levelPiecesSpawned.Count <= 0) Debug.LogError("please assign a last level piece to start generating from");
     walkwayGenerator = GetComponent<WalkwayGenerator>();
     // platformGenerator = GetComponent<PlatformGenerator>();
   }
@@ -32,7 +32,7 @@ public class LevelGenerator : MonoBehaviour
 
   public GameObject SpawnCustomPlatform(GameObject platformPrefab, float gapFromWalkwayEndToPlatformPivot)
   {
-    Vector3 endPointOfLastPiece = GetEndPointOfPiece(lastLevelPieceAdded);
+    Vector3 endPointOfLastPiece = GetEndPointOfPiece(levelPiecesSpawned.Last());
     // GameObject platformInstance = platformGenerator.GenerateCustomPlatform(endPointOfLastPiece, platformPrefab);
     // lastLevelPieceAdded = platformInstance;
     Vector3 platformPos = endPointOfLastPiece + Vector3.forward * gapFromWalkwayEndToPlatformPivot;
@@ -43,49 +43,56 @@ public class LevelGenerator : MonoBehaviour
   public void SpawnNextPiece(string pieceWord, int piecesLeftToSpawnInSection)
   {
     bool piecesInList = piecesBeingGenerated != null && piecesBeingGenerated.Count > 0;
+    GameObject piece = null;
 
     if (piecesInList)
     {
-      SpawnNextPieceFromList(pieceWord);
+      piece = SpawnNextPieceFromList(pieceWord);
     }
     else if (pieceTypeBeingGenerated == LevelPieceType.WALKWAY)
     {
-      SpawnWalkwayPiece(pieceWord);
+      piece = SpawnWalkwayPiece(pieceWord);
     }
     else if (pieceTypeBeingGenerated == LevelPieceType.PLATFORM)
     {
-      SpawnPlatformPiece(pieceWord, piecesLeftToSpawnInSection);
+      piece = SpawnPlatformPiece(pieceWord, piecesLeftToSpawnInSection);
     }
+
+    levelPiecesSpawned.Add(piece);
 
   }
 
-  private void SpawnPlatformPiece(string pieceWord, int piecesLeftToSpawnInSection)
+  private GameObject SpawnPlatformPiece(string pieceWord, int piecesLeftToSpawnInSection)
   {
-    // lastLevelPieceAdded = platformGenerator.GenerateNextPlatform(endPointOfLastPiece);
+    Transform lastLevelPieceAdded = levelPiecesSpawned.Last().transform;
     bool isReachingEnd = piecesLeftToSpawnInSection < minPlatformPieces;
 
     if (piecesOnCurrentPlatform >= piecesPerPlatform && !isReachingEnd)
     {
-      lastLevelPieceAdded = walkwayGenerator.GeneratePieceWithGap(lastLevelPieceAdded.transform, pieceWord);
+      GameObject piece = walkwayGenerator.GeneratePieceWithGap(lastLevelPieceAdded.transform, pieceWord);
       piecesOnCurrentPlatform = 1;
+      return piece;
     }
     else
     {
-      lastLevelPieceAdded = walkwayGenerator.GenerateNextPiece(lastLevelPieceAdded.transform, pieceWord, true);
+      GameObject piece = walkwayGenerator.GenerateNextPiece(lastLevelPieceAdded.transform, pieceWord, true);
       piecesOnCurrentPlatform++;
+      return piece;
     }
   }
 
-  private void SpawnWalkwayPiece(string pieceWord)
+  private GameObject SpawnWalkwayPiece(string pieceWord)
   {
-    lastLevelPieceAdded = walkwayGenerator.GenerateNextPiece(lastLevelPieceAdded.transform, pieceWord, false);
+    GameObject piece = walkwayGenerator.GenerateNextPiece(levelPiecesSpawned.Last().transform, pieceWord, false);
+    return piece;
   }
 
-  private void SpawnNextPieceFromList(string pieceWord)
+  private GameObject SpawnNextPieceFromList(string pieceWord)
   {
     LevelPiece nextPiece = piecesBeingGenerated[0];
-    walkwayGenerator.GenerateAtExactSpot(nextPiece, pieceWord);
+    GameObject piece = walkwayGenerator.GenerateAtExactSpot(nextPiece, pieceWord);
     piecesBeingGenerated.RemoveAt(0);
+    return piece;
   }
 
   public Vector3 GetEndPointOfPiece(GameObject piece)
