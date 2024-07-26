@@ -1195,6 +1195,10 @@ PrefabInstance:
       propertyPath: subtitleJson
       value: 
       objectReference: {fileID: 4900000, guid: 4bf1ca47dfd9ed34cb2344f389374f82, type: 3}
+    - target: {fileID: 7697366751005587580, guid: 20f60649d4f85aa46a322e2407085824, type: 3}
+      propertyPath: subtitleMode
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

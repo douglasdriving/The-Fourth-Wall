@@ -4,7 +4,6 @@ namespace Narration
 {
   public class NarrationTrigger : MonoBehaviour
   {
-    [SerializeField] SubtitleMode subtitleMode = SubtitleMode.SpawnWithNewLevelPiece;
     public AudioClip audioClip;
     public TextAsset subtitleJson;
     public SubtitleJsonData subtitle;

@@ -1,4 +1,4 @@
-using System.Linq;
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -7,28 +7,33 @@ namespace Narration
     public class SubtitlePlayer : MonoBehaviour
     {
         [SerializeField] TMP_Text subtitleText;
-        // [SerializeField] bool singleWordSubtitles = true;
         [SerializeField] WordMover wordMover;
         [SerializeField] LevelGenerator levelGenerator;
         [SerializeField] GameObject wordPrefab;
         const float lingerTime = 1f;
-        static SubtitleJsonData currentSubtitles;
-        static int currentWordIndex = 0;
-        static int currentSegmentIndex = 0;
+        SubtitleJsonData currentSubtitles;
+        int currentWordIndex = 0;
+        int currentSegmentIndex = 0;
         private float timeCurrentSubtitlesHasBeenPlayed = 0f;
-        static float timeForNextSubtitleStep;
-        static bool isLingering = false;
+        float timeForNextSubtitleStep = 0;
+        bool isLingering = false;
 
-        private bool showNewWordsOnExistingLevelPieces = false;
-        private bool isMovingBackwards = false;
-        private int nextLevelPieceIndexToShowWordOn = 0;
+        int nextLevelPieceIndexToShowWordOn = 0;
+        SubtitleMode mode = SubtitleMode.SpawnWithNewLevelPiece;
 
         private void Awake()
         {
             subtitleText.text = "";
         }
 
-        public static void StartSubtitles(SubtitleJsonData subtitles)
+
+        public void StartSpawningBackwards(int levelPieceIndexToStartSpawningFrom)
+        {
+            mode = SubtitleMode.SpawnBackwardOnLevel;
+            nextLevelPieceIndexToShowWordOn = levelPieceIndexToStartSpawningFrom;
+        }
+
+        public void StartSubtitles(SubtitleJsonData subtitles)
         {
             currentSubtitles = subtitles;
             currentWordIndex = -1;
@@ -37,15 +42,14 @@ namespace Narration
             isLingering = false;
         }
 
-
         void Update()
         {
             if (currentSubtitles == null) return;
 
             timeCurrentSubtitlesHasBeenPlayed += Time.deltaTime;
-            bool timeForNextSubtitleStep = timeCurrentSubtitlesHasBeenPlayed >= SubtitlePlayer.timeForNextSubtitleStep;
+            bool isTimeForNextSubtitleStep = timeCurrentSubtitlesHasBeenPlayed >= timeForNextSubtitleStep;
 
-            if (!timeForNextSubtitleStep) return;
+            if (!isTimeForNextSubtitleStep) return;
 
             TakeNextSubtitleStep();
         }
@@ -74,36 +78,23 @@ namespace Narration
             currentWordIndex++;
             SubtitleSegment currentSegment = currentSubtitles.segments[currentSegmentIndex];
             string word = currentSegment.words[currentWordIndex].word;
-            // if (singleWordSubtitles)
-            // {
-            //     subtitleText.text = word.word;
-            // }
-            // else
-            // {
-            //     AddWordToUI(word.word);
-            // }
             UpdateNextWordTime();
-            // wordMover.UpdateWordPosition();
-
             ShowWordInWorld(word);
-        }
-
-        public void StartShowingWordsOnExistingLevelPieces(int levelPieceIndexToStartFrom, bool moveBackwards)
-        {
-            showNewWordsOnExistingLevelPieces = true;
-            isMovingBackwards = moveBackwards;
-            nextLevelPieceIndexToShowWordOn = levelPieceIndexToStartFrom;
         }
 
         private void ShowWordInWorld(string word)
         {
-            if (showNewWordsOnExistingLevelPieces)
+            if (mode == SubtitleMode.SpawnBackwardOnLevel || mode == SubtitleMode.SpawnForwardOnLevel)
             {
                 ShowWordOnExistingLevelPiece(word);
             }
-            else
+            else if (mode == SubtitleMode.SpawnWithNewLevelPiece)
             {
                 levelGenerator.SpawnNextPiece(word, GetWordsLeftInSubtitle());
+            }
+            else
+            {
+                throw new NotImplementedException();
             }
         }
 
@@ -125,14 +116,14 @@ namespace Narration
             //clear all children of the anchor
             foreach (Transform child in wordAnchor)
             {
-                Destroy(child);
+                Destroy(child.gameObject);
             }
             //spawn a word canvas on the anchor
             GameObject wordGO = Instantiate(wordPrefab, wordAnchor);
             //set the word on the canvas to the word.
             wordGO.transform.GetComponentInChildren<TMP_Text>().text = word;
             //if we are moving backwards, rotate the word 180 deg on y
-            if (isMovingBackwards)
+            if (mode == SubtitleMode.SpawnBackwardOnLevel)
             {
                 wordGO.transform.Rotate(wordGO.transform.up * 180);
                 nextLevelPieceIndexToShowWordOn--;
@@ -143,7 +134,7 @@ namespace Narration
             }
         }
 
-        private static int GetWordsLeftInSubtitle()
+        private int GetWordsLeftInSubtitle()
         {
             SubtitleSegment currentSegment = currentSubtitles.segments[currentSegmentIndex];
             int wordsLeftInCurrentSegment = currentSegment.words.Length - (currentWordIndex + 1);
@@ -156,7 +147,7 @@ namespace Narration
             return wordsLeftInSubtitle;
         }
 
-        private static void UpdateNextWordTime()
+        private void UpdateNextWordTime()
         {
             SubtitleSegment currentSegment = currentSubtitles.segments[currentSegmentIndex];
             bool isLastWordOfSegment = currentWordIndex >= currentSegment.words.Length - 1;
@@ -185,9 +176,7 @@ namespace Narration
             currentWordIndex = 0;
             SubtitleSegment segment = currentSubtitles.segments[currentSegmentIndex];
             string firstWordInSegment = segment.words[0].word;
-            // StartNewSentenceInUI(firstWordInSegment);
             UpdateNextWordTime();
-            // wordMover.UpdateWordPosition();
             ShowWordInWorld(firstWordInSegment);
         }
 
@@ -201,16 +190,6 @@ namespace Narration
             isLingering = false;
             subtitleText.text = "";
         }
-
-        // void AddWordToUI(string word)
-        // {
-        //     subtitleText.text += " " + word;
-        // }
-
-        // void StartNewSentenceInUI(string firstWord)
-        // {
-        //     subtitleText.text = firstWord;
-        // }
     }
 
 }

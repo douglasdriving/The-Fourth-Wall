@@ -1053,6 +1053,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 41596357677812238, guid: ea3e228639cfa6f49bcf67bf342aaa73, type: 3}
+      propertyPath: levelPiecesBackToSpawnFirstWordOn
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1895700716121589175, guid: ea3e228639cfa6f49bcf67bf342aaa73, type: 3}
+      propertyPath: nextLevelPieceIndexToShowWordOn
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4570274427566943106, guid: ea3e228639cfa6f49bcf67bf342aaa73, type: 3}
       propertyPath: m_Name
       value: CrystalPlatform2
@@ -3114,6 +3122,10 @@ PrefabInstance:
       propertyPath: minDistanceFromCamera
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7379956578420471475, guid: 8e45090ae0c85554b86c72dc76bce7d3, type: 3}
+      propertyPath: wordPrefab
+      value: 
+      objectReference: {fileID: 8140631638678303200, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
     - target: {fileID: 7379956578420471475, guid: 8e45090ae0c85554b86c72dc76bce7d3, type: 3}
       propertyPath: levelGenerator
       value: 

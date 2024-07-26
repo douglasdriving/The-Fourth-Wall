@@ -7,7 +7,7 @@ namespace Narration
         public static void PlayNarration(AudioClip clip, SubtitleJsonData subtitle)
         {
             VoiceOverPlayer.PlayClip(clip);
-            SubtitlePlayer.StartSubtitles(subtitle);
+            FindObjectOfType<SubtitlePlayer>().StartSubtitles(subtitle);
         }
     }
 
