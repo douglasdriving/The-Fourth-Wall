@@ -90,21 +90,21 @@ public class Chrystal1Events : MonoBehaviour
     private void SpawnFirstCrystalPlatform()
     {
         GameObject firstCrystalPlatform = levelGenerator.SpawnCustomPlatform(crystalPlatformPrefab, gapFromWalkwayToCrystalPlatform);
-        // GameObject firstCrystalPlatformWalkwayPiece = FindChildByTag(firstCrystalPlatform, "Walkway");
-        // levelGenerator.lastLevelPieceAdded = firstCrystalPlatformWalkwayPiece;
+        GameObject firstCrystalPlatformWalkwayPiece = FindChildByTag(firstCrystalPlatform, "Walkway");
+        levelGenerator.levelPiecesSpawned.Add(firstCrystalPlatformWalkwayPiece);
     }
 
-    // private GameObject FindChildByTag(GameObject parent, string tag)
-    // {
-    //     foreach (Transform child in parent.transform)
-    //     {
-    //         if (child.CompareTag(tag))
-    //         {
-    //             return child.gameObject;
-    //         }
-    //     }
-    //     return null;
-    // }
+    private GameObject FindChildByTag(GameObject parent, string tag)
+    {
+        foreach (Transform child in parent.transform)
+        {
+            if (child.CompareTag(tag))
+            {
+                return child.gameObject;
+            }
+        }
+        return null;
+    }
 
     private void SpawnSecondAndThirdCrystalPlatforms()
     {

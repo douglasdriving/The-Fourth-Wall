@@ -1126,6 +1126,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   portalNarrationTriggerBox: {fileID: 9181055497608065997}
+  numberOfPiecesBackToStartNarrationAt: 5
+  levelPiecesBackToSpawnFirstWordOn: 9
 --- !u!4 &6748128568860135735 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 951006992759294293, guid: 43e4cd5dc2f84ef4da0735a8a6af9019, type: 3}
@@ -1202,7 +1204,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1150039487420943878, guid: 20f60649d4f85aa46a322e2407085824, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2919098424429064669}
   m_SourcePrefab: {fileID: 100100000, guid: 20f60649d4f85aa46a322e2407085824, type: 3}
 --- !u!4 &8861481670280831097 stripped
 Transform:
@@ -1214,3 +1219,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1150039487420943878, guid: 20f60649d4f85aa46a322e2407085824, type: 3}
   m_PrefabInstance: {fileID: 8114478856103443915}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2919098424429064669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9181055497608065997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948e3f9499b5aca479fb06b1aac96e94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portalPrefab: {fileID: 63115670445778951, guid: 88a91bae44ae6974597f8fe39488effb, type: 3}
+  portalHeightAbovePlatform: 3

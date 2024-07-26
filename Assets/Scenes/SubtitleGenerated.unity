@@ -741,6 +741,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1715342551}
   m_SourcePrefab: {fileID: 100100000, guid: 20f60649d4f85aa46a322e2407085824, type: 3}
+--- !u!1 &1405568143 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5291893488134512238, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+  m_PrefabInstance: {fileID: 4222751589694032154}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1715342546 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1150039487420943878, guid: 20f60649d4f85aa46a322e2407085824, type: 3}
@@ -764,6 +769,11 @@ MonoBehaviour:
   crystalPlatformPrefab: {fileID: 4570274427566943106, guid: b9200a7baa79bbf4e9b819c35e8bb4d1, type: 3}
   crystal2PlatformPrefab: {fileID: 4570274427566943106, guid: ea3e228639cfa6f49bcf67bf342aaa73, type: 3}
   gapFromWalkwayToCrystalPlatform: 15
+--- !u!1 &1878722776 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6541105566899363475, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+  m_PrefabInstance: {fileID: 4222751589694032154}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1934710453 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7534025309003727685, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
@@ -892,6 +902,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7379956578420471475, guid: 8e45090ae0c85554b86c72dc76bce7d3, type: 3}
+      propertyPath: wordPrefab
+      value: 
+      objectReference: {fileID: 8140631638678303200, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
+    - target: {fileID: 7379956578420471475, guid: 8e45090ae0c85554b86c72dc76bce7d3, type: 3}
       propertyPath: levelGenerator
       value: 
       objectReference: {fileID: 1934710453}
@@ -1017,6 +1031,18 @@ PrefabInstance:
       propertyPath: platformGapSize
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7534025309003727685, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+      propertyPath: levelPiecesSpawned.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7534025309003727685, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+      propertyPath: levelPiecesSpawned.Array.data[0]
+      value: 
+      objectReference: {fileID: 1405568143}
+    - target: {fileID: 7534025309003727685, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+      propertyPath: levelPiecesSpawned.Array.data[1]
+      value: 
+      objectReference: {fileID: 1878722776}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

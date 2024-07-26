@@ -19,7 +19,7 @@ public class LevelGenerator : MonoBehaviour
   void Awake()
   {
     piecesOnCurrentPlatform = piecesPerPlatform;
-    if (levelPiecesSpawned.Count <= 0) Debug.LogError("please assign a last level piece to start generating from");
+    if (levelPiecesSpawned.Count <= 0) Debug.LogError("no spawned pieces in list. please assign at least one level piece to start generating from");
     walkwayGenerator = GetComponent<WalkwayGenerator>();
     // platformGenerator = GetComponent<PlatformGenerator>();
   }
