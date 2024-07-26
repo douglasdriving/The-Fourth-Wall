@@ -270,7 +270,10 @@ MonoBehaviour:
   wordMover: {fileID: 2136116425042813122}
   levelGenerator: {fileID: 0}
   wordPrefab: {fileID: 8140631638678303200, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
+  blockWordSpawner: {fileID: 8116273164999726564}
+  wordBlockHeightAboveLevelPiece: 1
   nextLevelPieceIndexToShowWordOn: 0
+  spawnWordBlocks: 1
 --- !u!114 &3717939786495814891
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,6 +10,8 @@ namespace Narration
         [SerializeField] WordMover wordMover;
         [SerializeField] LevelGenerator levelGenerator;
         [SerializeField] GameObject wordPrefab;
+        [SerializeField] BlockWordSpawner blockWordSpawner;
+        [SerializeField] float wordBlockHeightAboveLevelPiece = 3f;
         const float lingerTime = 1f;
         SubtitleJsonData currentSubtitles;
         int currentWordIndex = 0;
@@ -20,6 +22,8 @@ namespace Narration
 
         public int nextLevelPieceIndexToShowWordOn = 0;
         SubtitleMode mode = SubtitleMode.SpawnWithNewLevelPiece;
+
+        public bool spawnWordBlocks = false;
 
         private void Awake()
         {
@@ -78,28 +82,48 @@ namespace Narration
             currentWordIndex++;
             SubtitleSegment currentSegment = currentSubtitles.segments[currentSegmentIndex];
             string word = currentSegment.words[currentWordIndex].word;
+            word = word.Trim();
             UpdateNextWordTime();
-            ShowWordInWorld(word);
+            SpawnIntoWorld(word);
         }
 
-        private void ShowWordInWorld(string word)
+        private void SpawnIntoWorld(string word)
         {
             if (mode == SubtitleMode.SpawnBackwardOnLevel || mode == SubtitleMode.SpawnForwardOnLevel)
             {
-                ShowWordOnExistingLevelPiece(word); //edit this func to use the word block spawner if that is turned on
+                ShowWordOnExistingLevelPiece(word);
             }
             else if (mode == SubtitleMode.SpawnWithNewLevelPiece)
             {
-                levelGenerator.SpawnNextPiece(word, GetWordsLeftInSubtitle());
-                //hmm, change the level generator to use the block spawner?
-                //or just always spawn the word from here
-                //but then we would have to get the word anchor ref back from the spawned piece
-                //which might be ok, idk
+                SpawnLevelPieceWithWord(word);
             }
             else
             {
                 throw new NotImplementedException();
             }
+        }
+
+        private void SpawnLevelPieceWithWord(string word)
+        {
+            GameObject levelPiece = levelGenerator.SpawnNextPiece(GetWordsLeftInSubtitle());
+            TMP_Text levelPieceText = levelPiece.GetComponentInChildren<TMP_Text>();
+            if (spawnWordBlocks)
+            {
+                Destroy(levelPieceText.gameObject);
+                SpawnWordBlockAboveLevelPiece(word, levelPiece);
+            }
+            else
+            {
+                levelPieceText.text = word;
+            }
+        }
+
+        private GameObject SpawnWordBlockAboveLevelPiece(string word, GameObject levelPiece)
+        {
+            Vector3 wordBlockPos = levelPiece.transform.position + Vector3.up * wordBlockHeightAboveLevelPiece;
+            Vector3 wordBlockForward = levelPiece.transform.forward;
+            GameObject wordBlock = blockWordSpawner.SpawnWordBlock(word, wordBlockPos, wordBlockForward);
+            return wordBlock;
         }
 
         private void ShowWordOnExistingLevelPiece(string word)
@@ -122,10 +146,19 @@ namespace Narration
             {
                 Destroy(child.gameObject);
             }
-            //spawn a word canvas on the anchor
-            GameObject wordGO = Instantiate(wordPrefab, wordAnchor);
-            //set the word on the canvas to the word.
-            wordGO.transform.GetComponentInChildren<TMP_Text>().text = word;
+
+            GameObject wordGO;
+
+            if (spawnWordBlocks)
+            {
+                wordGO = SpawnWordBlockAboveLevelPiece(word, levelPiece);
+            }
+            else
+            {
+                wordGO = Instantiate(wordPrefab, wordAnchor);
+                wordGO.transform.GetComponentInChildren<TMP_Text>().text = word;
+            }
+
             //if we are moving backwards, rotate the word 180 deg on y
             if (mode == SubtitleMode.SpawnBackwardOnLevel)
             {
@@ -181,7 +214,7 @@ namespace Narration
             SubtitleSegment segment = currentSubtitles.segments[currentSegmentIndex];
             string firstWordInSegment = segment.words[0].word;
             UpdateNextWordTime();
-            ShowWordInWorld(firstWordInSegment);
+            SpawnIntoWorld(firstWordInSegment);
         }
 
         private void StopSubtitle()

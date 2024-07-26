@@ -14,8 +14,10 @@ public class BlockWordSpawner : MonoBehaviour
         letterBlockWidth = letterBlockPrefab.transform.localScale.x;
     }
 
-    public void SpawnWordBlock(string word, Vector3 wordPos, Vector3 wordForward)
+    public GameObject SpawnWordBlock(string word, Vector3 wordPos, Vector3 wordForward)
     {
+        //the word comes in here with a space at the start! no bueno
+
         GameObject wordBlock = new GameObject("word block");
         wordBlock.transform.position = Vector3.zero;
 
@@ -34,9 +36,12 @@ public class BlockWordSpawner : MonoBehaviour
             letterBlockText.text = c.ToString();
             letterBlock.transform.position = firstLetterPos + (Vector3.right * letterBlockWidth * blocksSpawned);
             letterBlock.transform.parent = wordBlock.transform;
+            blocksSpawned++;
         }
 
         wordBlock.transform.position = wordPos;
         wordBlock.transform.forward = wordForward;
+
+        return wordBlock;
     }
 }

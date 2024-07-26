@@ -17,7 +17,7 @@ public class WalkwayGenerator : MonoBehaviour
     public float platformGapSize = 12f;
     [SerializeField] float zScalePercentageOfPlatformPieces = 0.7f;
 
-    public GameObject GenerateAtExactSpot(LevelPiece piece, string pieceWord)
+    public GameObject GenerateAtExactSpot(LevelPiece piece)
     {
         GameObject pieceGO = InstatiatePiece(piece.start, Quaternion.identity);
 
@@ -29,14 +29,14 @@ public class WalkwayGenerator : MonoBehaviour
         pieceLocalScale.z = piece.length;
         pieceT.localScale = pieceLocalScale;
 
-        pieceGO.GetComponentInChildren<TMP_Text>().text = pieceWord;
+        // pieceGO.GetComponentInChildren<TMP_Text>().text = pieceWord;
         return pieceGO;
     }
 
-    public GameObject GenerateNextPiece(Transform pieceToMoveFrom, string pieceWord, bool isPartOfPlatform)
+    public GameObject GenerateNextPiece(Transform pieceToMoveFrom, bool isPartOfPlatform)
     {
         GameObject piece = AddPieceToWalkway(pieceToMoveFrom);
-        piece.GetComponentInChildren<TMP_Text>().text = pieceWord;
+        // piece.GetComponentInChildren<TMP_Text>().text = pieceWord;
         if (isPartOfPlatform)
         {
             ScaleToPlatformPieceLength(piece);
@@ -46,7 +46,7 @@ public class WalkwayGenerator : MonoBehaviour
         return piece;
     }
 
-    public GameObject GeneratePieceWithGap(Transform prevPiece, string pieceWord)
+    public GameObject GeneratePieceWithGap(Transform prevPiece)
     {
         Vector3 prevPiecePivot = prevPiece.position;
         Vector3 prevPieceScale = prevPiece.lossyScale;
@@ -68,7 +68,7 @@ public class WalkwayGenerator : MonoBehaviour
         //also, this should happen for EVERY platform piece, not just the one after the gap
 
         //add the word
-        piece.GetComponentInChildren<TMP_Text>().text = pieceWord;
+        // piece.GetComponentInChildren<TMP_Text>().text = pieceWord;
 
         return piece;
     }
