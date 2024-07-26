@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-// [RequireComponent(typeof(PlatformGenerator))]
 [RequireComponent(typeof(WalkwayGenerator))]
 public class LevelGenerator : MonoBehaviour
 {
@@ -12,7 +11,6 @@ public class LevelGenerator : MonoBehaviour
 
   public static LevelPieceType pieceTypeBeingGenerated = LevelPieceType.WALKWAY;
   WalkwayGenerator walkwayGenerator;
-  // PlatformGenerator platformGenerator;
   int piecesOnCurrentPlatform;
   List<LevelPiece> piecesBeingGenerated = null;
   public List<GameObject> levelPiecesSpawned = new();
@@ -21,7 +19,6 @@ public class LevelGenerator : MonoBehaviour
     piecesOnCurrentPlatform = piecesPerPlatform;
     if (levelPiecesSpawned.Count <= 0) Debug.LogError("no spawned pieces in list. please assign at least one level piece to start generating from");
     walkwayGenerator = GetComponent<WalkwayGenerator>();
-    // platformGenerator = GetComponent<PlatformGenerator>();
   }
 
 
@@ -33,8 +30,6 @@ public class LevelGenerator : MonoBehaviour
   public GameObject SpawnCustomPlatform(GameObject platformPrefab, float gapFromWalkwayEndToPlatformPivot)
   {
     Vector3 endPointOfLastPiece = GetEndPointOfPiece(levelPiecesSpawned.Last());
-    // GameObject platformInstance = platformGenerator.GenerateCustomPlatform(endPointOfLastPiece, platformPrefab);
-    // lastLevelPieceAdded = platformInstance;
     Vector3 platformPos = endPointOfLastPiece + Vector3.forward * gapFromWalkwayEndToPlatformPivot;
     GameObject platform = Instantiate(platformPrefab, platformPos, Quaternion.identity);
     return platform;

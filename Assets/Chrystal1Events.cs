@@ -8,18 +8,14 @@ public class Chrystal1Events : MonoBehaviour
 
     [SerializeField] float timeForPlatformSwitch = 48;
     [SerializeField] float timeForCrystalSpawn = 51.52f;
-    // [SerializeField] float timeForMachinePlatformSpawn = 82.38f;
-
     [SerializeField] float distanceToPlatformTwoAndThreeFromPlayerAtSpawn = 500f;
 
     [SerializeField] GameObject crystalPlatformPrefab;
     [SerializeField] GameObject crystal2PlatformPrefab;
-    // [SerializeField] GameObject machinePlaftormPrefab;
     [SerializeField] float gapFromWalkwayToCrystalPlatform = 15f;
 
     bool switchedToPlatformSpawn = false;
     bool spawnedCrystalPlatforms = false;
-    // bool spawnedMachinePlatform = false;
 
     bool eventRunning = false;
     bool eventFinished = false;
@@ -72,12 +68,6 @@ public class Chrystal1Events : MonoBehaviour
         eventRunning = false;
         eventFinished = true;
     }
-
-    // private void SpawnMachinePlatform()
-    // {
-    //     levelGenerator.SpawnCustomPlatform(machinePlaftormPrefab);
-    //     spawnedMachinePlatform = true;
-    // }
 
     private void SpawnThreeCrystalPlatforms()
     {
