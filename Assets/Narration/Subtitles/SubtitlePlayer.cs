@@ -18,7 +18,7 @@ namespace Narration
         float timeForNextSubtitleStep = 0;
         bool isLingering = false;
 
-        int nextLevelPieceIndexToShowWordOn = 0;
+        public int nextLevelPieceIndexToShowWordOn = 0;
         SubtitleMode mode = SubtitleMode.SpawnWithNewLevelPiece;
 
         private void Awake()

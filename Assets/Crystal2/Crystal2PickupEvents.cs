@@ -21,9 +21,6 @@ public class Crystal2PickupEvents : MonoBehaviour
         portalNarrationTriggerBox.SetActive(true);
         enabled = false;
 
-        //instead, we might want to just simply change the subtitle mode from here. Not make it happen from the narration trigger. gets messy and annoying
-        //simply create a function in the subtitle player that changes mode
-        //and sets the index from where the pieces should be spawning
         LevelGenerator levelGenerator = FindObjectOfType<LevelGenerator>();
         int indexOfLastLevelPiece = levelGenerator.levelPiecesSpawned.Count - 1;
         int indexOfPieceToStartSpawningWordsFrom = indexOfLastLevelPiece - levelPiecesBackToSpawnFirstWordOn;
