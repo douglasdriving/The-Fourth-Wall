@@ -86,11 +86,15 @@ namespace Narration
         {
             if (mode == SubtitleMode.SpawnBackwardOnLevel || mode == SubtitleMode.SpawnForwardOnLevel)
             {
-                ShowWordOnExistingLevelPiece(word);
+                ShowWordOnExistingLevelPiece(word); //edit this func to use the word block spawner if that is turned on
             }
             else if (mode == SubtitleMode.SpawnWithNewLevelPiece)
             {
                 levelGenerator.SpawnNextPiece(word, GetWordsLeftInSubtitle());
+                //hmm, change the level generator to use the block spawner?
+                //or just always spawn the word from here
+                //but then we would have to get the word anchor ref back from the spawned piece
+                //which might be ok, idk
             }
             else
             {
