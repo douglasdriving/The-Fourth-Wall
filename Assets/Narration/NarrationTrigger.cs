@@ -24,7 +24,7 @@ namespace Narration
 
       NarrationManager.PlayNarration(audioClip, subtitle);
       triggered = true;
-      OnNarrationTriggerEntered.Invoke(this);
+      OnNarrationTriggerEntered?.Invoke(this);
     }
   }
 }

@@ -4,24 +4,25 @@ using UnityEngine;
 
 public class RespawnSystem : MonoBehaviour
 {
-    Vector3 savedPlayerPos;
-    Quaternion savedPlayerRot;
-    GameObject player;
+    static Vector3 savedPlayerPos;
+    static Quaternion savedPlayerRot;
+    static GameObject player;
 
-    int indexOfLastSavedPlatform = 0;
-    LevelGenerator levelGenerator;
+    static int indexOfLastSavedPlatform = 0;
+    static LevelGenerator levelGenerator;
 
-    GameRules savedRules;
+    static GameRules savedRules;
 
-    List<NarrationTrigger> triggersEnteredAfterSave = new();
+    static List<NarrationTrigger> triggersEnteredAfterSave = new();
 
     void Awake()
     {
         player = FindObjectOfType<FirstPersonController>().gameObject;
         levelGenerator = FindAnyObjectByType<LevelGenerator>();
+        SaveCurrentState();
     }
 
-    void OnEnabled()
+    void OnEnable()
     {
         NarrationTrigger.OnNarrationTriggerEntered += AddNarrationTriggersEnteredAfterSave;
     }
@@ -36,7 +37,7 @@ public class RespawnSystem : MonoBehaviour
         triggersEnteredAfterSave.Add(trigger);
     }
 
-    public void SaveCurrentState()
+    public static void SaveCurrentState()
     {
         savedPlayerPos = player.transform.position;
         savedPlayerRot = player.transform.rotation;
@@ -46,7 +47,7 @@ public class RespawnSystem : MonoBehaviour
         savedRules = new GameRules(CurrentGameRules.currentGameRules);
     }
 
-    public void KillPlayerAndReset()
+    public static void KillPlayerAndReset()
     {
         player.transform.position = savedPlayerPos;
         player.transform.rotation = savedPlayerRot;

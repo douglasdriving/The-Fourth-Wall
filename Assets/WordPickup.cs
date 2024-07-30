@@ -11,30 +11,19 @@ public class WordPickup : MonoBehaviour
     {
         if (!other.CompareTag("Player")) return;
 
-        if (GameRules.dangerousCharsOn)
+        if (CurrentGameRules.currentGameRules.dangerousCharsOn)
         {
             string word = wordGO.GetComponentInChildren<TMP_Text>().text;
             word = word.ToUpper();
             char firstChar = word[0];
-            if (firstChar == GameRules.dangerousChar)
+            if (firstChar == CurrentGameRules.currentGameRules.dangerousChar)
             {
-                throw new NotImplementedException();
-                //we stepped on a dangerous character!
-                //player dies
-                //what happens when a player dies?
-                //just reset to last platform?
-                //or before the audio?
-                //make sense that it would be before audio
-                //but then we have to create a whole extra system.
-                //maybe we need that.
-                //should call the save point system and restore
+                RespawnSystem.KillPlayerAndReset();
+                return;
             }
         }
-        else
-        {
-            FindObjectOfType<WordPickupCounter>().AddWord();
-        }
 
+        FindObjectOfType<WordPickupCounter>().AddWord();
         Destroy(wordGO);
     }
 }
