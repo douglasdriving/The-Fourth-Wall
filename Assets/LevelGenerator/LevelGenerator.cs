@@ -21,6 +21,16 @@ public class LevelGenerator : MonoBehaviour
     walkwayGenerator = GetComponent<WalkwayGenerator>();
   }
 
+  public void DestroyAllPiecesAboveIndex(int indexToDestroyAbove)
+  {
+    for (int i = levelPiecesSpawned.Count - 1; i > indexToDestroyAbove; i--)
+    {
+      GameObject piece = levelPiecesSpawned[i];
+      levelPiecesSpawned.RemoveAt(i); // Remove from list
+      Destroy(piece); // Destroy the GameObject
+    }
+  }
+
 
   public void SetPlatformingPath(Vector3 pathStart, Vector3 pathEnd, int numberOfPiecesToAdd)
   {

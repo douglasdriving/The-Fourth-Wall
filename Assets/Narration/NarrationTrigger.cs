@@ -7,7 +7,10 @@ namespace Narration
     public AudioClip audioClip;
     public TextAsset subtitleJson;
     public SubtitleJsonData subtitle;
-    bool triggered = false;
+    public bool triggered = false;
+
+    public delegate void NarrationTriggerEntered(NarrationTrigger trigger);
+    public static event NarrationTriggerEntered OnNarrationTriggerEntered;
 
     void Awake()
     {
@@ -21,6 +24,7 @@ namespace Narration
 
       NarrationManager.PlayNarration(audioClip, subtitle);
       triggered = true;
+      OnNarrationTriggerEntered.Invoke(this);
     }
   }
 }

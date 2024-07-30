@@ -180,7 +180,7 @@ namespace Narration
             ShowWordInWorld(firstWordInSegment);
         }
 
-        private void StopSubtitle()
+        public void StopSubtitle()
         {
             currentSubtitles = null;
             currentSegmentIndex = 0;
@@ -189,6 +189,7 @@ namespace Narration
             timeForNextSubtitleStep = 0;
             isLingering = false;
             subtitleText.text = "";
+            nextLevelPieceIndexToShowWordOn = 0;
         }
     }
 

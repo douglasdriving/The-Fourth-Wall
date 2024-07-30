@@ -16,6 +16,12 @@ namespace Narration
             audioSource.clip = clip;
             audioSource.Play();
         }
+
+        public static void Stop()
+        {
+            audioSource.clip = null;
+            audioSource.Stop();
+        }
     }
 }
 
