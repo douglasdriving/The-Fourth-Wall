@@ -16,8 +16,6 @@ public class BlockWordSpawner : MonoBehaviour
 
     public GameObject SpawnWordBlock(string word, Vector3 wordPos, Vector3 wordForward)
     {
-        //the word comes in here with a space at the start! no bueno
-
         GameObject wordBlock = new GameObject("word block");
         wordBlock.transform.position = Vector3.zero;
 
@@ -32,8 +30,7 @@ public class BlockWordSpawner : MonoBehaviour
         foreach (char c in word)
         {
             GameObject letterBlock = Instantiate(letterBlockPrefab);
-            TMP_Text letterBlockText = letterBlock.GetComponentInChildren<TMP_Text>();
-            letterBlockText.text = c.ToString();
+            letterBlock.GetComponent<LetterBlock>().SetLetter(c);
             letterBlock.transform.position = firstLetterPos + (Vector3.right * letterBlockWidth * blocksSpawned);
             letterBlock.transform.parent = wordBlock.transform;
             blocksSpawned++;
