@@ -448,6 +448,11 @@ LightingSettings:
   m_PVRTiledBaking: 0
   m_NumRaysToShootPerTexel: -1
   m_RespectSceneVisibilityWhenBakingGI: 0
+--- !u!4 &310155599 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3816724244464975986, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+  m_PrefabInstance: {fileID: 4222751589694032154}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &326870096 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1396375468675746484, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
@@ -521,6 +526,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &575399234 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7913855817269248887, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+  m_PrefabInstance: {fileID: 4222751589694032154}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &599025760
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,6 +1159,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6146862377241442123, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 7534025309003727685, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+      propertyPath: ground
+      value: 
+      objectReference: {fileID: 310155599}
+    - target: {fileID: 7534025309003727685, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+      propertyPath: platformsParent
+      value: 
+      objectReference: {fileID: 575399234}
     - target: {fileID: 7949397666537075379, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: maxPiecesBetweenWalls
       value: 15

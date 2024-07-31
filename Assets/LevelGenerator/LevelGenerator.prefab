@@ -89,6 +89,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piecesPerPlatform: 12
   minPlatformPieces: 4
+  ground: {fileID: 3816724244464975986}
+  platformsParent: {fileID: 7913855817269248887}
   levelPiecesSpawned:
   - {fileID: 5291893488134512238}
   - {fileID: 6541105566899363475}
@@ -105,8 +107,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallPrefab: {fileID: 7027017204318944414, guid: 313a7d17551d6c048899a7f79cdfb072, type: 3}
-  minPiecesBetweenWalls: 5
-  maxPiecesBetweenWalls: 10
+  minPiecesBetweenWalls: 8
+  maxPiecesBetweenWalls: 15
 --- !u!1 &5438316057717903897
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,7 +152,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3816724244464975986}
   m_Layer: 0
-  m_Name: Walkway
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -9,13 +9,18 @@ public class LevelGenerator : MonoBehaviour
   [SerializeField] int piecesPerPlatform = 12;
   [SerializeField] int minPlatformPieces = 4;
 
+  [SerializeField] Transform ground;
+  [SerializeField] Transform platformsParent;
+
   public static LevelPieceType pieceTypeBeingGenerated = LevelPieceType.WALKWAY;
   WalkwayGenerator walkwayGenerator;
   int piecesOnCurrentPlatform;
   List<LevelPiece> piecesBeingGenerated = null;
   public List<GameObject> levelPiecesSpawned = new();
+  Transform lastPlatformStarted;
   public delegate void LevelPieceSpawned(GameObject piece);
   public static event LevelPieceSpawned OnLevelPieceSpawned;
+
   void Awake()
   {
     piecesOnCurrentPlatform = piecesPerPlatform;
@@ -32,7 +37,6 @@ public class LevelGenerator : MonoBehaviour
       Destroy(piece); // Destroy the GameObject
     }
   }
-
 
   public void SetPlatformingPath(Vector3 pathStart, Vector3 pathEnd, int numberOfPiecesToAdd)
   {
@@ -78,19 +82,36 @@ public class LevelGenerator : MonoBehaviour
     {
       GameObject piece = walkwayGenerator.GeneratePieceWithGap(lastLevelPieceAdded.transform, pieceWord);
       piecesOnCurrentPlatform = 1;
+      StartNewPlatform(piece.transform.position);
+      piece.transform.parent = lastPlatformStarted;
       return piece;
     }
     else
     {
       GameObject piece = walkwayGenerator.GenerateNextPiece(lastLevelPieceAdded.transform, pieceWord, true);
       piecesOnCurrentPlatform++;
+      if (!lastPlatformStarted)
+      {
+        StartNewPlatform(piece.transform.position);
+      }
+      piece.transform.parent = lastPlatformStarted;
       return piece;
     }
+  }
+
+  private GameObject StartNewPlatform(Vector3 pos)
+  {
+    GameObject newPlatform = new("Platform");
+    newPlatform.transform.position = pos;
+    newPlatform.transform.parent = platformsParent;
+    lastPlatformStarted = newPlatform.transform;
+    return newPlatform;
   }
 
   private GameObject SpawnWalkwayPiece(string pieceWord)
   {
     GameObject piece = walkwayGenerator.GenerateNextPiece(levelPiecesSpawned.Last().transform, pieceWord, false);
+    piece.transform.parent = ground;
     return piece;
   }
 
@@ -99,6 +120,11 @@ public class LevelGenerator : MonoBehaviour
     LevelPiece nextPiece = piecesBeingGenerated[0];
     GameObject piece = walkwayGenerator.GenerateAtExactSpot(nextPiece, pieceWord);
     piecesBeingGenerated.RemoveAt(0);
+    if (nextPiece.isPlatformStart || !lastPlatformStarted)
+    {
+      StartNewPlatform(piece.transform.position);
+    }
+    piece.transform.parent = lastPlatformStarted;
     return piece;
   }
 

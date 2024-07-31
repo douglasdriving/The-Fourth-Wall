@@ -74,7 +74,6 @@ public class PathGenerator
       for (int j = 0; j < numberOfPiecesInThisPlatform; j++)
       {
 
-        LevelPiece piece = new();
         Vector3 vectorFromStartToPiece = vectorFromStartToEnd.normalized * distanceFromStartToNextPiece;
 
         //calc side shift
@@ -96,12 +95,16 @@ public class PathGenerator
         Vector3 pieceDeviation = pieceRightVector * pieceSideDeviation + pieceUpVector * platformUpDeviation;
 
         //add the piece
-        piece.start = pathStart + vectorFromStartToPiece + pieceDeviation;
-        piece.length = usesExtraPiece ? lengthOfPiecesInThePlatformsWithExtraPiece : lengthOfPiecesInPlatformsWithMinumumPieceCount;
-        piece.forwardVector = pieceForwardVector;
+        LevelPiece piece = new()
+        {
+          isPlatformStart = j == 0,
+          start = pathStart + vectorFromStartToPiece + pieceDeviation,
+          length = usesExtraPiece ? lengthOfPiecesInThePlatformsWithExtraPiece : lengthOfPiecesInPlatformsWithMinumumPieceCount,
+          forwardVector = pieceForwardVector
+        };
+
         addedPieces.Add(piece);
         distanceFromStartToNextPiece += piece.length;
-
       }
     }
 
