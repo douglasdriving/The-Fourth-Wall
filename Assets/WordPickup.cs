@@ -14,6 +14,7 @@ public class WordPickup : MonoBehaviour
         if (CurrentGameRules.currentGameRules.dangerousCharsOn)
         {
             string word = wordGO.GetComponentInChildren<TMP_Text>().text;
+            word = word.Trim();
             word = word.ToUpper();
             char firstChar = word[0];
             if (firstChar == CurrentGameRules.currentGameRules.dangerousChar)
