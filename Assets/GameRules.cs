@@ -1,3 +1,4 @@
+using System;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
 
@@ -19,6 +20,8 @@ public class GameRules
 
   public bool platformPopOn = false;
   KeyControl platformRespawnKey = Keyboard.current.mKey;
+  public delegate void PlatformSpawnKeySet(KeyControl newKey);
+  public event PlatformSpawnKeySet OnPlatformSpawnKeySet;
 
   public GameRules(GameRules rulesToCopy)
   {
@@ -29,7 +32,7 @@ public class GameRules
     wallDirection = rulesToCopy.wallDirection;
 
     platformPopOn = rulesToCopy.platformPopOn;
-    platformRespawnKey = rulesToCopy.platformRespawnKey;
+    SetPlatformSpawnKey(rulesToCopy.platformRespawnKey);
   }
 
   public GameRules()
@@ -40,8 +43,19 @@ public class GameRules
     directionWallsOn = false;
     wallDirection = Direction.BACKWARD;
 
-    platformPopOn = false;
-    platformRespawnKey = Keyboard.current.mKey;
+    platformPopOn = true;
+    SetPlatformSpawnKey(Keyboard.current.mKey);
+  }
+
+  public void SetPlatformSpawnKey(KeyControl newKey)
+  {
+    platformRespawnKey = newKey;
+    OnPlatformSpawnKeySet?.Invoke(platformRespawnKey);
+  }
+
+  public KeyControl GetPlatformSpawnKey()
+  {
+    return platformRespawnKey;
   }
 }
 
@@ -50,22 +64,18 @@ public class CurrentGameRules
   public static GameRules rules = new();
 }
 
-/// okay so, platform pop.
-/// it will be triggered by the player jumping
-/// and it will have to know what is a platform and what is just a level piece
-/// to do this, it would be very helpful if the pieces was actually added to a platform "parent"
-/// so that the entire parent could be toggled off
-/// then, it would be easy to check what platform we jumped from
-/// and deactivate all the other platforms when the player jumps
-/// ok so now we have sorted all the platforms into game objects
-/// 
-/// a platform pop class listens to it
-/// if it is fired, it checks the platform pop rule
-/// if its true, it gets all the platforms (direct children of the platform root)
-/// if it cant get the direct children, we will have to save the platforms in a separate list in the level generator
-/// it then determines which platform is the closest one to the player
-/// and sets all other platforms inactive
-/// 
 /// THEN, we have to bring out the magic callback key
 /// the player can bring back the platforms
 /// but that is next challenge ;)
+/// 
+///okay so the platform pop works now
+///next up: making them come back!
+///so... how do we do this?
+///it seems reasonable that there is a function for re-assigning the respawn key
+///and that when this key is re-assigned, it also binds the key
+///HOWEVER, it does not make sense that the game rules class listens to key commands
+///so, perhaps the game rules can call an event when the respawn key is reassigned
+///and then have the player listen to this event
+///and rebind the key
+///and then the player can have a class that makes the platforms re-appear
+///which should be quite simply to program :)
