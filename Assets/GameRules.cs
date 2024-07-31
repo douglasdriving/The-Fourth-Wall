@@ -59,8 +59,6 @@ public class CurrentGameRules
 /// and deactivate all the other platforms when the player jumps
 /// ok so now we have sorted all the platforms into game objects
 /// 
-/// so, what happens when the player jumps?
-/// the player fires a jump event
 /// a platform pop class listens to it
 /// if it is fired, it checks the platform pop rule
 /// if its true, it gets all the platforms (direct children of the platform root)

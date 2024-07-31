@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7021466173556650257}
   - component: {fileID: 7534025309003727685}
   - component: {fileID: 7949397666537075379}
+  - component: {fileID: 8240087622889153155}
   m_Layer: 0
   m_Name: LevelGenerator
   m_TagString: Untagged
@@ -109,6 +110,19 @@ MonoBehaviour:
   wallPrefab: {fileID: 7027017204318944414, guid: 313a7d17551d6c048899a7f79cdfb072, type: 3}
   minPiecesBetweenWalls: 8
   maxPiecesBetweenWalls: 15
+--- !u!114 &8240087622889153155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114052340901206385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8b8aae338f929a4e92c22975070a9b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformParent: {fileID: 7913855817269248887}
 --- !u!1 &5438316057717903897
 GameObject:
   m_ObjectHideFlags: 0
