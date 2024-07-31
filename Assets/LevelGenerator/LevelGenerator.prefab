@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 940715553431712590}
   - component: {fileID: 7021466173556650257}
   - component: {fileID: 7534025309003727685}
+  - component: {fileID: 7949397666537075379}
   m_Layer: 0
   m_Name: LevelGenerator
   m_TagString: Untagged
@@ -51,7 +52,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platformPrefab: {fileID: 2774679741241828108, guid: 29989bdf8b20a52479d06c4d36a10928, type: 3}
   wordPointPrefab: {fileID: 7910143540055735657, guid: 93bf672ba2b177945a54fd51415e9260, type: 3}
-  maxTurnAngle: 45
   distanceBetweenPlatforms: 8
   maxPlatformHeightDiff: 2
   wordPointsParent: {fileID: 1396375468675746484}
@@ -71,14 +71,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piecePrefab: {fileID: 6737570752163496808, guid: fad8276afac0bcf4f9ec4921e4a11d90, type: 3}
   wordAnchorPrefab: {fileID: 7910143540055735657, guid: 93bf672ba2b177945a54fd51415e9260, type: 3}
-  maxTurnAngle: 45
-  minLength: 3
-  maxLength: 10
-  maxPieceYRot: 90
   wordAnchorParent: {fileID: 1396375468675746484}
   walkwayParent: {fileID: 3816724244464975986}
-  pieceOverlap: 0.5
-  wordHeightAbovePlatform: 1
+  platformGapSize: 7
+  zScalePercentageOfPlatformPieces: 0.7
 --- !u!114 &7534025309003727685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,7 +87,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7aeded9d0f9ee248b390fab7a568d65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastLevelPieceAdded: {fileID: 6541105566899363475}
+  piecesPerPlatform: 12
+  minPlatformPieces: 4
+  levelPiecesSpawned:
+  - {fileID: 5291893488134512238}
+  - {fileID: 6541105566899363475}
+--- !u!114 &7949397666537075379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114052340901206385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e27409b6ff22bbd499004c732476ed20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallPrefab: {fileID: 7027017204318944414, guid: 313a7d17551d6c048899a7f79cdfb072, type: 3}
+  minPiecesBetweenWalls: 5
+  maxPiecesBetweenWalls: 10
 --- !u!1 &5438316057717903897
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,6 +263,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 218204818259123215, guid: fad8276afac0bcf4f9ec4921e4a11d90, type: 3}
+    - {fileID: 8602204908494841640, guid: fad8276afac0bcf4f9ec4921e4a11d90, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fad8276afac0bcf4f9ec4921e4a11d90, type: 3}
@@ -382,9 +398,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 218204818259123215, guid: fad8276afac0bcf4f9ec4921e4a11d90, type: 3}
+    - {fileID: 8602204908494841640, guid: fad8276afac0bcf4f9ec4921e4a11d90, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fad8276afac0bcf4f9ec4921e4a11d90, type: 3}
+--- !u!1 &5291893488134512238 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6737570752163496808, guid: fad8276afac0bcf4f9ec4921e4a11d90, type: 3}
+  m_PrefabInstance: {fileID: 1508773976685518086}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7156224845041525054 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8619952791990303800, guid: fad8276afac0bcf4f9ec4921e4a11d90, type: 3}

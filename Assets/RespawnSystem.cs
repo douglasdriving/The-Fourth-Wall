@@ -44,7 +44,7 @@ public class RespawnSystem : MonoBehaviour
 
         indexOfLastSavedPlatform = levelGenerator.levelPiecesSpawned.Count - 1;
 
-        savedRules = new GameRules(CurrentGameRules.currentGameRules);
+        savedRules = new GameRules(CurrentGameRules.rules);
     }
 
     public static void KillPlayerAndReset()
@@ -54,7 +54,7 @@ public class RespawnSystem : MonoBehaviour
 
         levelGenerator.DestroyAllPiecesAboveIndex(indexOfLastSavedPlatform);
 
-        CurrentGameRules.currentGameRules = new GameRules(savedRules);
+        CurrentGameRules.rules = new GameRules(savedRules);
 
         NarrationManager.StopNarration();
 

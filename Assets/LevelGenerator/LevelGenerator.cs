@@ -14,6 +14,8 @@ public class LevelGenerator : MonoBehaviour
   int piecesOnCurrentPlatform;
   List<LevelPiece> piecesBeingGenerated = null;
   public List<GameObject> levelPiecesSpawned = new();
+  public delegate void LevelPieceSpawned(GameObject piece);
+  public static event LevelPieceSpawned OnLevelPieceSpawned;
   void Awake()
   {
     piecesOnCurrentPlatform = piecesPerPlatform;
@@ -64,7 +66,7 @@ public class LevelGenerator : MonoBehaviour
     }
 
     levelPiecesSpawned.Add(piece);
-
+    OnLevelPieceSpawned?.Invoke(piece);
   }
 
   private GameObject SpawnPlatformPiece(string pieceWord, int piecesLeftToSpawnInSection)

@@ -11,13 +11,13 @@ public class WordPickup : MonoBehaviour
     {
         if (!other.CompareTag("Player")) return;
 
-        if (CurrentGameRules.currentGameRules.dangerousCharsOn)
+        if (CurrentGameRules.rules.dangerousCharsOn)
         {
             string word = wordGO.GetComponentInChildren<TMP_Text>().text;
             word = word.Trim();
             word = word.ToUpper();
             char firstChar = word[0];
-            if (firstChar == CurrentGameRules.currentGameRules.dangerousChar)
+            if (firstChar == CurrentGameRules.rules.dangerousChar)
             {
                 RespawnSystem.KillPlayerAndReset();
                 return;
