@@ -63,19 +63,3 @@ public class CurrentGameRules
 {
   public static GameRules rules = new();
 }
-
-/// THEN, we have to bring out the magic callback key
-/// the player can bring back the platforms
-/// but that is next challenge ;)
-/// 
-///okay so the platform pop works now
-///next up: making them come back!
-///so... how do we do this?
-///it seems reasonable that there is a function for re-assigning the respawn key
-///and that when this key is re-assigned, it also binds the key
-///HOWEVER, it does not make sense that the game rules class listens to key commands
-///so, perhaps the game rules can call an event when the respawn key is reassigned
-///and then have the player listen to this event
-///and rebind the key
-///and then the player can have a class that makes the platforms re-appear
-///which should be quite simply to program :)
