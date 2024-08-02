@@ -7,15 +7,14 @@ using UnityEngine;
 [RequireComponent(typeof(Interactable))]
 public class ChrystalInserter : MonoBehaviour
 {
+    [SerializeField] Machine machine;
     [SerializeField] GameObject socketedChrystal;
     ItemHolder itemHolder;
-    InteractionScanner interactionScanner;
 
     private void Awake()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         itemHolder = player.GetComponent<ItemHolder>();
-        interactionScanner = player.GetComponent<InteractionScanner>();
     }
 
     public void TryInsertChrystal()
@@ -32,5 +31,6 @@ public class ChrystalInserter : MonoBehaviour
         itemHolder.DestroyHeldItem();
         socketedChrystal.SetActive(true);
         GetComponent<Interactable>().RemoveInteractability();
+        machine.AddChrystal();
     }
 }
