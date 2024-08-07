@@ -19,20 +19,19 @@ public class Chrystal2InsertEvents : MonoBehaviour
   {
     PositionVideoInFrontOfPlayer();
     videoPlayer.Play();
-    ActivateRoadAfterVideoTime();
+    ActivateRoadAndHideVideoAfterVideoTime();
   }
 
-  void ActivateRoadAfterVideoTime()
+  void ActivateRoadAndHideVideoAfterVideoTime()
   {
     float videoLength = (float)videoPlayer.length;
-    StartCoroutine(ActivateRoadToChrystal3AfterDelay(videoLength));
+    StartCoroutine(ActivateRoadToChrystal3AndHideVideoAfterDelay(videoLength));
 
-    IEnumerator ActivateRoadToChrystal3AfterDelay(float delay)
+    IEnumerator ActivateRoadToChrystal3AndHideVideoAfterDelay(float delay)
     {
       yield return new WaitForSeconds(delay);
       roadToChrystal3.SetActive(true);
-      //does this need to also be saved in the level generator, so that we can continue from there?
-      //maybe when we hit the narration trigger we can do that
+      floatingVideo.gameObject.SetActive(false);
     }
   }
 
