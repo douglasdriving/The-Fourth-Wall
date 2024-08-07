@@ -21,6 +21,13 @@ namespace Narration
 
             return wordCount;
         }
+
+        public static int CountWordsInSubtitleFile(TextAsset subtitleFile)
+        {
+            SubtitleJsonData subtitleJsonData = ReadSubtitleJson(subtitleFile.text);
+            int subtitleWordCount = CountWordsInSubtitle(subtitleJsonData);
+            return subtitleWordCount;
+        }
     }
 
     [System.Serializable]

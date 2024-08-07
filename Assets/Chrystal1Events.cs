@@ -10,8 +10,9 @@ public class Chrystal1Events : MonoBehaviour
     [SerializeField] float timeForCrystalSpawn = 51.52f;
     [SerializeField] float distanceToPlatformTwoAndThreeFromPlayerAtSpawn = 500f;
 
-    [SerializeField] GameObject crystalPlatformPrefab;
+    [SerializeField] GameObject crystal1PlatformPrefab;
     [SerializeField] GameObject crystal2PlatformPrefab;
+    [SerializeField] GameObject crystal3PlatformPrefab;
     [SerializeField] float gapFromWalkwayToCrystalPlatform = 15f;
 
     bool switchedToPlatformSpawn = false;
@@ -79,7 +80,7 @@ public class Chrystal1Events : MonoBehaviour
 
     private void SpawnFirstCrystalPlatform()
     {
-        GameObject firstCrystalPlatform = levelGenerator.SpawnCustomPlatform(crystalPlatformPrefab, gapFromWalkwayToCrystalPlatform);
+        GameObject firstCrystalPlatform = levelGenerator.SpawnCustomPlatform(crystal1PlatformPrefab, gapFromWalkwayToCrystalPlatform);
         GameObject firstCrystalPlatformWalkwayPiece = FindChildByTag(firstCrystalPlatform, "Walkway");
         levelGenerator.levelPiecesSpawned.Add(firstCrystalPlatformWalkwayPiece);
     }
@@ -107,7 +108,7 @@ public class Chrystal1Events : MonoBehaviour
         Vector3 crystal3PlatformPos = playerPos + vectorFromPlayerToCrystalPlatform3;
 
         GameObject crystal2Platform = Instantiate(crystal2PlatformPrefab, crystal2PlatformPos, Quaternion.identity);
-        GameObject crystal3Platform = Instantiate(crystalPlatformPrefab, crystal3PlatformPos, Quaternion.identity);
+        GameObject crystal3Platform = Instantiate(crystal3PlatformPrefab, crystal3PlatformPos, Quaternion.identity);
 
         crystal2Platform.GetComponentInChildren<TMP_Text>().text = "Crystal 2";
         crystal3Platform.GetComponentInChildren<TMP_Text>().text = "Crystal 3";

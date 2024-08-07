@@ -11,6 +11,7 @@ TagManager:
   - Walkway
   - SecondCrystalPlatformEntryPoint
   - WordAnchor
+  - ThirdCrystalPlatformEntryPoint
   layers:
   - Default
   - TransparentFX

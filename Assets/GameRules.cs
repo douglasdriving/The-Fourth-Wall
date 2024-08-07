@@ -43,7 +43,7 @@ public class GameRules
     directionWallsOn = false;
     wallDirection = Direction.BACKWARD;
 
-    platformPopOn = true;
+    platformPopOn = false;
     SetPlatformSpawnKey(Keyboard.current.mKey);
   }
 
