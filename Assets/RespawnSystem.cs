@@ -15,6 +15,9 @@ public class RespawnSystem : MonoBehaviour
 
     static List<NarrationTrigger> triggersEnteredAfterSave = new();
 
+    public delegate void PlayerDied();
+    public static event PlayerDied OnPlayerDied;
+
     void Awake()
     {
         player = FindObjectOfType<FirstPersonController>().gameObject;
@@ -63,6 +66,8 @@ public class RespawnSystem : MonoBehaviour
             trigger.triggered = false;
         }
         triggersEnteredAfterSave.Clear();
+
+        OnPlayerDied?.Invoke();
     }
 
 }

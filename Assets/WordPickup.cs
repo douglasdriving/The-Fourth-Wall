@@ -19,6 +19,7 @@ public class WordPickup : MonoBehaviour
             char firstChar = word[0];
             if (firstChar == CurrentGameRules.rules.dangerousChar)
             {
+                Debug.Log("you died because you walked over a word with the first letter: " + firstChar + ". the word was: " + word);
                 RespawnSystem.KillPlayerAndReset();
                 return;
             }

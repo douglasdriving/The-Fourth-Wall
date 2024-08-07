@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Narration
 {
@@ -12,6 +14,8 @@ namespace Narration
     public delegate void NarrationTriggerEntered(NarrationTrigger trigger);
     public static event NarrationTriggerEntered OnNarrationTriggerEntered;
 
+    [SerializeField] UnityEvent eventsToTrigger = new();
+
     void Awake()
     {
       subtitle = SubtitleJsonReader.ReadSubtitleJson(subtitleJson.text);
@@ -23,6 +27,7 @@ namespace Narration
       if (!other.CompareTag("Player")) return;
 
       NarrationManager.PlayNarration(audioClip, subtitle);
+      eventsToTrigger?.Invoke();
       triggered = true;
       OnNarrationTriggerEntered?.Invoke(this);
     }

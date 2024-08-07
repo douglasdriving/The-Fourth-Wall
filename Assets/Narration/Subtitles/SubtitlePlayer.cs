@@ -17,6 +17,7 @@ namespace Narration
         private float timeCurrentSubtitlesHasBeenPlayed = 0f;
         float timeForNextSubtitleStep = 0;
         bool isLingering = false;
+        public bool isPaused = false;
 
         public int nextLevelPieceIndexToShowWordOn = 0;
         SubtitleMode mode = SubtitleMode.SpawnWithNewLevelPiece;
@@ -25,7 +26,6 @@ namespace Narration
         {
             subtitleText.text = "";
         }
-
 
         public void StartSpawningBackwards(int levelPieceIndexToStartSpawningFrom)
         {
@@ -45,6 +45,7 @@ namespace Narration
         void Update()
         {
             if (currentSubtitles == null) return;
+            if (isPaused) return;
 
             timeCurrentSubtitlesHasBeenPlayed += Time.deltaTime;
             bool isTimeForNextSubtitleStep = timeCurrentSubtitlesHasBeenPlayed >= timeForNextSubtitleStep;

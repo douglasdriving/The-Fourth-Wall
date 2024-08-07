@@ -1,4 +1,3 @@
-using System;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
 
@@ -62,4 +61,22 @@ public class GameRules
 public class CurrentGameRules
 {
   public static GameRules rules = new();
+
+  public static void SetDangerousLetter(char letter)
+  {
+    rules.dangerousCharsOn = true;
+    rules.dangerousChar = letter;
+  }
+
+  public static void SetWallSpawningDirection(Direction dir)
+  {
+    rules.directionWallsOn = true;
+    rules.wallDirection = dir;
+  }
+
+  public static void SetDissapearingPlatformsWithKey(KeyControl key)
+  {
+    rules.platformPopOn = true;
+    rules.SetPlatformSpawnKey(key);
+  }
 }
