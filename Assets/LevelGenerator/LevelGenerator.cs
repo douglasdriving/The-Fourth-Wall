@@ -147,6 +147,4 @@ public class LevelGenerator : MonoBehaviour
     }
     return mostUpForwardPoint;
   }
-
-
 }

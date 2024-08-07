@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &880398585323763565
 RectTransform:
   m_ObjectHideFlags: 0
@@ -149,6 +149,7 @@ GameObject:
   - component: {fileID: 2136116425042813122}
   - component: {fileID: 7379956578420471475}
   - component: {fileID: 3717939786495814891}
+  - component: {fileID: 3112133731792258636}
   m_Layer: 5
   m_Name: WorldWordCanvas
   m_TagString: Untagged
@@ -266,8 +267,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subtitleText: {fileID: 8193776066123834223}
-  singleWordSubtitles: 1
   wordMover: {fileID: 2136116425042813122}
+  levelGenerator: {fileID: 0}
+  wordPrefab: {fileID: 8140631638678303200, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
+  isPaused: 0
+  nextLevelPieceIndexToShowWordOn: 0
 --- !u!114 &3717939786495814891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,6 +287,17 @@ MonoBehaviour:
   layerToCheckForVisionBlock:
     serializedVersion: 2
     m_Bits: 1
-  minDistanceFromPlayer: 6
-  wordPointsParent: {fileID: 0}
-  moveWordWhenPlayerIsTooClose: 0
+  minDistanceFromCamera: 6
+  pointsParent: {fileID: 0}
+--- !u!114 &3112133731792258636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7496801569402546684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aa101203dac608488bb1027b121447d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

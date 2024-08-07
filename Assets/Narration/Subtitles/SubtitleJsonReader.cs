@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Narration
@@ -36,6 +37,19 @@ namespace Narration
         public string text;
         public SubtitleSegment[] segments;
         public string language;
+
+        public List<SubtitleWord> GetWords()
+        {
+            List<SubtitleWord> words = new();
+            foreach (SubtitleSegment segment in segments)
+            {
+                foreach (SubtitleWord word in segment.words)
+                {
+                    words.Add(word);
+                }
+            }
+            return words;
+        }
     }
 
     [System.Serializable]
@@ -61,5 +75,6 @@ namespace Narration
         public float start;
         public float end;
         public float probability;
+        public bool pause = false;
     }
 }

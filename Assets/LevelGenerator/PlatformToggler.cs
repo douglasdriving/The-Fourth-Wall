@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
 
 public class PlatformToggler : MonoBehaviour
@@ -36,6 +35,7 @@ public class PlatformToggler : MonoBehaviour
 
   private void ActivateAllPlatforms()
   {
+    Debug.Log("activating all platforms!");
     List<Transform> platforms = GetAllPlatforms();
     foreach (Transform platform in platforms)
     {
@@ -65,6 +65,7 @@ public class PlatformToggler : MonoBehaviour
   void SetActivationKey(KeyControl newKey)
   {
     activationKey = newKey;
+    Debug.Log("platform spawn key set to " + activationKey);
   }
 
   List<Transform> GetAllPlatforms()

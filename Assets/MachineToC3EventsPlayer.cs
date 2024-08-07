@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Narration;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -66,6 +67,7 @@ public class MachineToC3EventsPlayer : MonoBehaviour
     void Update()
     {
         if (!isRunning) return;
+        if (NarrationManager.playState != PlayState.PLAY) return;
 
         bool allEventsFired = true;
 

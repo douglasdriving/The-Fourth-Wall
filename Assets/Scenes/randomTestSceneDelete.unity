@@ -1138,38 +1138,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2136116425042813122, guid: 8e45090ae0c85554b86c72dc76bce7d3, type: 3}
-      propertyPath: wordPointsParent
-      value: 
-      objectReference: {fileID: 326870096}
-    - target: {fileID: 2136116425042813122, guid: 8e45090ae0c85554b86c72dc76bce7d3, type: 3}
-      propertyPath: minDistanceForPlatformToJumpTo
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2136116425042813122, guid: 8e45090ae0c85554b86c72dc76bce7d3, type: 3}
-      propertyPath: layerToCheckForVisionBlock.m_Bits
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3350742215372831231, guid: 8e45090ae0c85554b86c72dc76bce7d3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3717939786495814891, guid: 8e45090ae0c85554b86c72dc76bce7d3, type: 3}
       propertyPath: pointsParent
       value: 
       objectReference: {fileID: 326870096}
-    - target: {fileID: 3717939786495814891, guid: 8e45090ae0c85554b86c72dc76bce7d3, type: 3}
-      propertyPath: wordPointsParent
-      value: 
-      objectReference: {fileID: 326870096}
-    - target: {fileID: 3717939786495814891, guid: 8e45090ae0c85554b86c72dc76bce7d3, type: 3}
-      propertyPath: minDistanceFromCamera
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7379956578420471475, guid: 8e45090ae0c85554b86c72dc76bce7d3, type: 3}
-      propertyPath: wordPrefab
-      value: 
-      objectReference: {fileID: 8140631638678303200, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
     - target: {fileID: 7379956578420471475, guid: 8e45090ae0c85554b86c72dc76bce7d3, type: 3}
       propertyPath: levelGenerator
       value: 

@@ -17,10 +17,20 @@ namespace Narration
             audioSource.Play();
         }
 
+        public static void Play()
+        {
+            audioSource.Play();
+        }
+
         public static void Stop()
         {
             audioSource.clip = null;
             audioSource.Stop();
+        }
+
+        public static void Pause()
+        {
+            audioSource.Pause();
         }
     }
 }

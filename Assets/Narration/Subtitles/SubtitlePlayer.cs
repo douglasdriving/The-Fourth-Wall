@@ -14,10 +14,8 @@ namespace Narration
         SubtitleJsonData currentSubtitles;
         int currentWordIndex = 0;
         int currentSegmentIndex = 0;
-        private float timeCurrentSubtitlesHasBeenPlayed = 0f;
         float timeForNextSubtitleStep = 0;
         bool isLingering = false;
-        public bool isPaused = false;
 
         public int nextLevelPieceIndexToShowWordOn = 0;
         SubtitleMode mode = SubtitleMode.SpawnWithNewLevelPiece;
@@ -45,10 +43,9 @@ namespace Narration
         void Update()
         {
             if (currentSubtitles == null) return;
-            if (isPaused) return;
+            if (NarrationManager.playState != PlayState.PLAY) return;
 
-            timeCurrentSubtitlesHasBeenPlayed += Time.deltaTime;
-            bool isTimeForNextSubtitleStep = timeCurrentSubtitlesHasBeenPlayed >= timeForNextSubtitleStep;
+            bool isTimeForNextSubtitleStep = NarrationManager.timeCurrentNarrationHasPlayed >= timeForNextSubtitleStep;
 
             if (!isTimeForNextSubtitleStep) return;
 
@@ -74,20 +71,31 @@ namespace Narration
             }
         }
 
+        private void MoveToNextSegment()
+        {
+            currentSegmentIndex++;
+            currentWordIndex = 0;
+            SubtitleSegment segment = currentSubtitles.segments[currentSegmentIndex];
+            SubtitleWord word = segment.words[0];
+            UpdateNextWordTime();
+            ShowWordInWorld(word.word);
+        }
+
+
         private void MoveToNextWordInSentance()
         {
             currentWordIndex++;
             SubtitleSegment currentSegment = currentSubtitles.segments[currentSegmentIndex];
-            string word = currentSegment.words[currentWordIndex].word;
+            SubtitleWord word = currentSegment.words[currentWordIndex];
             UpdateNextWordTime();
-            ShowWordInWorld(word);
+            ShowWordInWorld(word.word);
         }
 
         private void ShowWordInWorld(string word)
         {
             if (mode == SubtitleMode.SpawnBackwardOnLevel || mode == SubtitleMode.SpawnForwardOnLevel)
             {
-                ShowWordOnExistingLevelPiece(word);
+                ShowWordOnExistingLevelPiece(word); ///!!!! IF ItS PAUSE; WE NEED TO SPAWN A UNPAUSE TRIGGER VOLUME
             }
             else if (mode == SubtitleMode.SpawnWithNewLevelPiece)
             {
@@ -171,22 +179,11 @@ namespace Narration
             }
         }
 
-        private void MoveToNextSegment()
-        {
-            currentSegmentIndex++;
-            currentWordIndex = 0;
-            SubtitleSegment segment = currentSubtitles.segments[currentSegmentIndex];
-            string firstWordInSegment = segment.words[0].word;
-            UpdateNextWordTime();
-            ShowWordInWorld(firstWordInSegment);
-        }
-
         public void StopSubtitle()
         {
             currentSubtitles = null;
             currentSegmentIndex = 0;
             currentWordIndex = 0;
-            timeCurrentSubtitlesHasBeenPlayed = 0;
             timeForNextSubtitleStep = 0;
             isLingering = false;
             subtitleText.text = "";

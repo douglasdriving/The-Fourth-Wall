@@ -58,8 +58,7 @@ public class RespawnSystem : MonoBehaviour
         levelGenerator.DestroyAllPiecesAboveIndex(indexOfLastSavedPlatform);
 
         CurrentGameRules.rules = new GameRules(savedRules);
-
-        NarrationManager.StopNarration();
+        NarrationManager.StopAndReset();
 
         foreach (NarrationTrigger trigger in triggersEnteredAfterSave)
         {

@@ -312,7 +312,8 @@
                     "word": " permanently.",
                     "start": 11.74,
                     "end": 12.66,
-                    "probability": 0.9900503158569336
+                    "probability": 0.9900503158569336,
+                    "pause": true
                 }
             ]
         },
@@ -589,7 +590,8 @@
                     "word": " G.",
                     "start": 22.88,
                     "end": 23.32,
-                    "probability": 0.9699872732162476
+                    "probability": 0.9699872732162476,
+                    "pause": true
                 }
             ]
         },
@@ -760,7 +762,8 @@
                     "word": " now.",
                     "start": 30.1,
                     "end": 30.58,
-                    "probability": 0.9984458088874817
+                    "probability": 0.9984458088874817,
+                    "pause": true
                 }
             ]
         },
@@ -1001,7 +1004,8 @@
                     "word": " me.",
                     "start": 39.98,
                     "end": 40.28,
-                    "probability": 0.9990136623382568
+                    "probability": 0.9990136623382568,
+                    "pause": true
                 }
             ]
         },
@@ -1318,7 +1322,8 @@
                     "word": " them.",
                     "start": 51.8,
                     "end": 52.1,
-                    "probability": 0.9988715052604675
+                    "probability": 0.9988715052604675,
+                    "pause": true
                 }
             ]
         },
@@ -1403,7 +1408,8 @@
                     "word": " me.",
                     "start": 54.9,
                     "end": 55.14,
-                    "probability": 0.9966429471969604
+                    "probability": 0.9966429471969604,
+                    "pause": true
                 }
             ]
         },
@@ -1530,7 +1536,8 @@
                     "word": " back.",
                     "start": 59.8,
                     "end": 60.14,
-                    "probability": 0.9988297820091248
+                    "probability": 0.9988297820091248,
+                    "pause": true
                 }
             ]
         },
@@ -1604,7 +1611,8 @@
                     "word": " now.",
                     "start": 62.82,
                     "end": 63.18,
-                    "probability": 0.9452086687088013
+                    "probability": 0.9452086687088013,
+                    "pause": true
                 }
             ]
         },
@@ -1678,7 +1686,8 @@
                     "word": " game?",
                     "start": 65.04,
                     "end": 65.34,
-                    "probability": 0.9981704950332642
+                    "probability": 0.9981704950332642,
+                    "pause": true
                 }
             ]
         },
@@ -1731,7 +1740,8 @@
                     "word": " voice.",
                     "start": 67.28,
                     "end": 67.7,
-                    "probability": 0.998789370059967
+                    "probability": 0.998789370059967,
+                    "pause": true
                 }
             ]
         },
@@ -1886,7 +1896,8 @@
                     "word": " now.",
                     "start": 72.88,
                     "end": 73.22,
-                    "probability": 0.9728389978408813
+                    "probability": 0.9728389978408813,
+                    "pause": true
                 }
             ]
         },
@@ -2000,7 +2011,8 @@
                     "word": " world.",
                     "start": 77.4,
                     "end": 77.78,
-                    "probability": 0.9986760020256042
+                    "probability": 0.9986760020256042,
+                    "pause": true
                 }
             ]
         },
