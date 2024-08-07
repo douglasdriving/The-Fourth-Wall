@@ -6,6 +6,8 @@ public class Chrystal2InsertEvents : MonoBehaviour
 {
   [SerializeField] GameObject floatingVideo;
   [SerializeField] GameObject roadToChrystal3;
+  [SerializeField] float planeDistanceFromVideoToPlayer = 15f;
+  [SerializeField] float videoHeightAbovePlayer = 5f;
   VideoPlayer videoPlayer;
 
   void Awake()
@@ -40,8 +42,7 @@ public class Chrystal2InsertEvents : MonoBehaviour
     Vector3 playerForwardDir = player.forward;
     playerForwardDir.y = 0;
     playerForwardDir.Normalize();
-    float distanceFromPlayerToVideo = 10f;
-    Vector3 videoPos = player.position + playerForwardDir * distanceFromPlayerToVideo;
+    Vector3 videoPos = player.position + (playerForwardDir * planeDistanceFromVideoToPlayer) + (Vector3.up * videoHeightAbovePlayer);
     Vector3 videoForward = (player.position - videoPos).normalized;
 
     floatingVideo.transform.position = videoPos;

@@ -363,6 +363,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floatingVideo: {fileID: 6851403637635152993}
   roadToChrystal3: {fileID: 12052489665170773}
+  planeDistanceFromVideoToPlayer: 15
+  videoHeightAbovePlayer: 5
 --- !u!1 &7469363803367549664
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,6 +841,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 547233584727248358, guid: e52b1b02f966c414387338f77b483319, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6030811906272865992, guid: e52b1b02f966c414387338f77b483319, type: 3}
+      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8538235199227472722, guid: e52b1b02f966c414387338f77b483319, type: 3}

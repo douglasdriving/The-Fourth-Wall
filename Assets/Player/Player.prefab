@@ -707,7 +707,7 @@ MonoBehaviour:
   sprintBarHeightPercent: 0.02
   enableJump: 1
   jumpKey: 32
-  jumpPower: 10
+  jumpPower: 9
   enableCrouch: 1
   holdToCrouch: 1
   crouchKey: 306
@@ -729,7 +729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97223280ae95ca048af24f190a7aa938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resetHeight: -15
+  fallTimeForReset: 2
 --- !u!114 &1640877093956672486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -826,4 +826,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c7c09617a827174cb82508abf94346d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  addedGravity: 4
+  addedGravity: 5
