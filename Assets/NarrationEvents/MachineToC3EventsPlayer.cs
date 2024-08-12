@@ -27,39 +27,24 @@ public class MachineToC3EventsPlayer : MonoBehaviour
 
     private List<TimedEvent> timedEvents = new List<TimedEvent>();
 
-    void OnEnable()
-    {
-        RespawnSystem.OnPlayerDied += StopAndResetEvents;
-    }
-
-    void OnDisable()
-    {
-        RespawnSystem.OnPlayerDied -= StopAndResetEvents;
-    }
-
-    void StopAndResetEvents()
-    {
-        isRunning = false;
-        timeRan = 0;
-        foreach (TimedEvent timedEvent in timedEvents)
-        {
-            timedEvent.hasFired = false;
-        }
-    }
-
     private void Start()
     {
         //test
 
         ///real
-        timedEvents.Add(new TimedEvent(7.4f, () => CurrentGameRules.SetDangerousLetter('P')));
-        timedEvents.Add(new TimedEvent(22.88f, () => CurrentGameRules.SetDangerousLetter('G')));
-        timedEvents.Add(new TimedEvent(35.56f, () => CurrentGameRules.SetWallSpawningDirection(Direction.BACKWARD)));
-        timedEvents.Add(new TimedEvent(43.8f, () => CurrentGameRules.SetWallSpawningDirection(Direction.LEFT)));
-        timedEvents.Add(new TimedEvent(45.74f, () => CurrentGameRules.SetDangerousLetter('L')));
-        timedEvents.Add(new TimedEvent(60.14f, () => CurrentGameRules.SetDissapearingPlatformsWithKey(Keyboard.current.kKey)));
-        timedEvents.Add(new TimedEvent(63.18f, () => CurrentGameRules.SetDangerousLetter('K')));
-        timedEvents.Add(new TimedEvent(73.22f, () => CurrentGameRules.SetDissapearingPlatformsWithKey(Keyboard.current.lKey)));
+        // timedEvents.Add(new TimedEvent(7.4f, () => CurrentGameRules.SetDangerousLetter('P')));
+        // timedEvents.Add(new TimedEvent(22.88f, () => CurrentGameRules.SetDangerousLetter('G')));
+        // timedEvents.Add(new TimedEvent(35.56f, () => CurrentGameRules.SetWallSpawningDirection(Direction.BACKWARD)));
+        // timedEvents.Add(new TimedEvent(43.8f, () => CurrentGameRules.SetWallSpawningDirection(Direction.LEFT)));
+        // timedEvents.Add(new TimedEvent(45.74f, () => CurrentGameRules.SetDangerousLetter('L')));
+        // timedEvents.Add(new TimedEvent(60.14f, () => CurrentGameRules.SetDissapearingPlatformsWithKey(Keyboard.current.kKey)));
+        // timedEvents.Add(new TimedEvent(63.18f, () => CurrentGameRules.SetDangerousLetter('K')));
+        // timedEvents.Add(new TimedEvent(73.22f, () => CurrentGameRules.SetDissapearingPlatformsWithKey(Keyboard.current.lKey)));
+
+        /// 1. turn off the lights
+        /// 2. remove platforms behind and ahead of player
+        /// 3. make the player stuck
+        /// 4. spawn a destructable wall
     }
 
     public void StartEventChain()
