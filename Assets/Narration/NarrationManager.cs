@@ -56,7 +56,7 @@ namespace Narration
 
             timeCurrentNarrationHasPlayed += Time.deltaTime;
 
-            if (timeCurrentNarrationHasPlayed > pausesScheduled[0])
+            if (pausesScheduled.Count > 0 && timeCurrentNarrationHasPlayed > pausesScheduled[0])
             {
                 Pause();
                 pausesScheduled.RemoveAt(0);
