@@ -42,6 +42,10 @@ public class MachineToC3EventsPlayer : MonoBehaviour
         // timedEvents.Add(new TimedEvent(73.22f, () => CurrentGameRules.SetDissapearingPlatformsWithKey(Keyboard.current.lKey)));
 
         /// 1. turn off the lights
+        BlackCoverCanvas blackCoverCanvas = FindObjectOfType<BlackCoverCanvas>();
+        timedEvents.Add(new TimedEvent(7.4f, () => blackCoverCanvas.SetCoverActive(true)));
+        timedEvents.Add(new TimedEvent(10.4f, () => blackCoverCanvas.SetPlayerToggleActive(true)));
+
         /// 2. remove platforms behind and ahead of player
         /// 3. make the player stuck
         /// 4. spawn a destructable wall
