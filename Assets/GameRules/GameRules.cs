@@ -54,7 +54,7 @@ public class CurrentGameRules
   public static void UpdateRules(GameRules newRules)
   {
     rules = new GameRules(newRules);
-    GameObject.FindObjectOfType<PlatformToggler>().SetActivationKey(rules.platformRespawnKey);
+    // GameObject.FindObjectOfType<PlatformToggler>().SetActivationKey(rules.platformRespawnKey);
   }
 
   public static void SetDangerousLetter(char letter)
@@ -73,6 +73,6 @@ public class CurrentGameRules
   {
     rules.platformPopOn = true;
     rules.platformRespawnKey = key;
-    GameObject.FindObjectOfType<PlatformToggler>().SetActivationKey(key);
+    // GameObject.FindObjectOfType<PlatformToggler>().SetActivationKey(key);
   }
 }

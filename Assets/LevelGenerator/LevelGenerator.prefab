@@ -92,6 +92,7 @@ MonoBehaviour:
   minPlatformPieces: 4
   ground: {fileID: 3816724244464975986}
   platformsParent: {fileID: 7913855817269248887}
+  platformsPrefab: {fileID: 4791948967482664214, guid: a88ed88fbcc0c704e95c12a066b5da35, type: 3}
   levelPiecesSpawned:
   - {fileID: 5291893488134512238}
   - {fileID: 6541105566899363475}

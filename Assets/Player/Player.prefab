@@ -538,6 +538,7 @@ GameObject:
   - component: {fileID: 541102574470081799}
   - component: {fileID: 3296216261814278592}
   - component: {fileID: -5414448687396857170}
+  - component: {fileID: 6594190710184189839}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -707,7 +708,8 @@ MonoBehaviour:
   sprintBarHeightPercent: 0.02
   enableJump: 1
   jumpKey: 32
-  jumpPower: 9
+  jumpPower: 15
+  lastGround: {fileID: 0}
   enableCrouch: 1
   holdToCrouch: 1
   crouchKey: 306
@@ -787,6 +789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: {r: 0.30566037, g: 1, b: 0.5206318, a: 1}
+  size: 0.5
 --- !u!114 &541102574470081799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -826,4 +829,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c7c09617a827174cb82508abf94346d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  addedGravity: 5
+  addedGravity: 10
+--- !u!114 &6594190710184189839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8531470548768403456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1532f9fbd0458b3468eb62008419f1e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 4633715614206913382}

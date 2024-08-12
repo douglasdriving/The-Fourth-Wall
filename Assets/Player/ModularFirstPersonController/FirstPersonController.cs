@@ -100,6 +100,7 @@ public class FirstPersonController : MonoBehaviour
 
     // Internal Variables
     private GameObject groundUnderPlayer = null;
+    public GameObject lastGround = null;
     public delegate void Jumped(GameObject groundJumpedFrom);
     public static event Jumped OnJumped;
 
@@ -455,6 +456,7 @@ public class FirstPersonController : MonoBehaviour
             Debug.DrawRay(origin, direction * distance, Color.red);
             GameObject objectUnderPlayer = hit.transform.gameObject;
             groundUnderPlayer = objectUnderPlayer;
+            lastGround = groundUnderPlayer;
         }
         else
         {

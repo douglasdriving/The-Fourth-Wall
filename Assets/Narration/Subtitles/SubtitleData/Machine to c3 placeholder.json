@@ -1043,7 +1043,8 @@
                     "word": " appear.",
                     "start": 43.86,
                     "end": 44.36,
-                    "probability": 0.9959564805030823
+                    "probability": 0.9959564805030823,
+                    "pause": true
                 }
             ]
         },

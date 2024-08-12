@@ -11,13 +11,14 @@ public class LevelGenerator : MonoBehaviour
 
   [SerializeField] Transform ground;
   [SerializeField] Transform platformsParent;
+  [SerializeField] GameObject platformsPrefab;
 
   public static LevelPieceType pieceTypeBeingGenerated = LevelPieceType.WALKWAY;
   WalkwayGenerator walkwayGenerator;
   int piecesOnCurrentPlatform;
   List<LevelPiece> piecesBeingGenerated = null;
   public List<GameObject> levelPiecesSpawned = new();
-  Transform lastPlatformStarted;
+  Platform lastPlatformStarted;
   public delegate void LevelPieceSpawned(GameObject piece);
   public static event LevelPieceSpawned OnLevelPieceSpawned;
 
@@ -83,7 +84,7 @@ public class LevelGenerator : MonoBehaviour
       GameObject piece = walkwayGenerator.GeneratePieceWithGap(lastLevelPieceAdded.transform, pieceWord);
       piecesOnCurrentPlatform = 1;
       StartNewPlatform(piece.transform.position);
-      piece.transform.parent = lastPlatformStarted;
+      piece.transform.parent = lastPlatformStarted.pieces;
       return piece;
     }
     else
@@ -94,17 +95,17 @@ public class LevelGenerator : MonoBehaviour
       {
         StartNewPlatform(piece.transform.position);
       }
-      piece.transform.parent = lastPlatformStarted;
+      piece.transform.parent = lastPlatformStarted.pieces;
       return piece;
     }
   }
 
-  private GameObject StartNewPlatform(Vector3 pos)
+  private Platform StartNewPlatform(Vector3 pos)
   {
-    GameObject newPlatform = new("Platform");
+    Platform newPlatform = Instantiate(platformsPrefab).GetComponent<Platform>();
     newPlatform.transform.position = pos;
     newPlatform.transform.parent = platformsParent;
-    lastPlatformStarted = newPlatform.transform;
+    lastPlatformStarted = newPlatform;
     return newPlatform;
   }
 
@@ -124,7 +125,7 @@ public class LevelGenerator : MonoBehaviour
     {
       StartNewPlatform(piece.transform.position);
     }
-    piece.transform.parent = lastPlatformStarted;
+    piece.transform.parent = lastPlatformStarted.pieces;
     return piece;
   }
 
