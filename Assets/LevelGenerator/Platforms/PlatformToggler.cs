@@ -33,7 +33,6 @@ public class PlatformToggler : MonoBehaviour
 
   private void ActivateAllPlatforms()
   {
-    Debug.Log("activating all platforms!");
     List<Transform> platforms = GetAllPlatforms();
     foreach (Transform platform in platforms)
     {
@@ -63,7 +62,6 @@ public class PlatformToggler : MonoBehaviour
   public void SetActivationKey(KeyControl newKey)
   {
     activationKey = newKey;
-    Debug.Log("activation key set to " + activationKey);
   }
 
   List<Transform> GetAllPlatforms()

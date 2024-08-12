@@ -74,6 +74,5 @@ public class CurrentGameRules
     rules.platformPopOn = true;
     rules.platformRespawnKey = key;
     GameObject.FindObjectOfType<PlatformToggler>().SetActivationKey(key);
-    Debug.Log("dissapearning platforms key set in current game rules to: " + key);
   }
 }
