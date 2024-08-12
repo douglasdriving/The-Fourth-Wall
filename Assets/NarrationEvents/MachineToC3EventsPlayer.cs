@@ -49,6 +49,9 @@ public class MachineToC3EventsPlayer : MonoBehaviour
 
     private void Start()
     {
+        //test
+
+        ///real
         timedEvents.Add(new TimedEvent(7.4f, () => CurrentGameRules.SetDangerousLetter('P')));
         timedEvents.Add(new TimedEvent(22.88f, () => CurrentGameRules.SetDangerousLetter('G')));
         timedEvents.Add(new TimedEvent(35.56f, () => CurrentGameRules.SetWallSpawningDirection(Direction.BACKWARD)));

@@ -1,3 +1,5 @@
+using System;
+using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
 
@@ -18,9 +20,7 @@ public class GameRules
   public Direction wallDirection = Direction.BACKWARD;
 
   public bool platformPopOn = false;
-  KeyControl platformRespawnKey = Keyboard.current.mKey;
-  public delegate void PlatformSpawnKeySet(KeyControl newKey);
-  public event PlatformSpawnKeySet OnPlatformSpawnKeySet;
+  public KeyControl platformRespawnKey = Keyboard.current.mKey;
 
   public GameRules(GameRules rulesToCopy)
   {
@@ -31,7 +31,7 @@ public class GameRules
     wallDirection = rulesToCopy.wallDirection;
 
     platformPopOn = rulesToCopy.platformPopOn;
-    SetPlatformSpawnKey(rulesToCopy.platformRespawnKey);
+    platformRespawnKey = rulesToCopy.platformRespawnKey;
   }
 
   public GameRules()
@@ -43,24 +43,19 @@ public class GameRules
     wallDirection = Direction.BACKWARD;
 
     platformPopOn = false;
-    SetPlatformSpawnKey(Keyboard.current.mKey);
-  }
-
-  public void SetPlatformSpawnKey(KeyControl newKey)
-  {
-    platformRespawnKey = newKey;
-    OnPlatformSpawnKeySet?.Invoke(platformRespawnKey);
-  }
-
-  public KeyControl GetPlatformSpawnKey()
-  {
-    return platformRespawnKey;
+    platformRespawnKey = null;
   }
 }
 
 public class CurrentGameRules
 {
   public static GameRules rules = new();
+
+  public static void UpdateRules(GameRules newRules)
+  {
+    rules = new GameRules(newRules);
+    GameObject.FindObjectOfType<PlatformToggler>().SetActivationKey(rules.platformRespawnKey);
+  }
 
   public static void SetDangerousLetter(char letter)
   {
@@ -77,6 +72,8 @@ public class CurrentGameRules
   public static void SetDissapearingPlatformsWithKey(KeyControl key)
   {
     rules.platformPopOn = true;
-    rules.SetPlatformSpawnKey(key);
+    rules.platformRespawnKey = key;
+    GameObject.FindObjectOfType<PlatformToggler>().SetActivationKey(key);
+    Debug.Log("dissapearning platforms key set in current game rules to: " + key);
   }
 }

@@ -6,28 +6,26 @@ public class PlatformToggler : MonoBehaviour
 {
 
   [SerializeField] Transform platformParent;
-  KeyControl activationKey;
+  KeyControl activationKey = null;
 
   void Awake()
   {
-    SetActivationKey(CurrentGameRules.rules.GetPlatformSpawnKey());
+    SetActivationKey(CurrentGameRules.rules.platformRespawnKey);
   }
 
   void OnEnable()
   {
     FirstPersonController.OnJumped += PopPlatformsIfRuleEnabled;
-    CurrentGameRules.rules.OnPlatformSpawnKeySet += SetActivationKey;
   }
 
   void OnDisable()
   {
     FirstPersonController.OnJumped -= PopPlatformsIfRuleEnabled;
-    CurrentGameRules.rules.OnPlatformSpawnKeySet -= SetActivationKey;
   }
 
   void Update()
   {
-    if (activationKey.wasPressedThisFrame)
+    if (activationKey != null && activationKey.wasPressedThisFrame)
     {
       ActivateAllPlatforms();
     }
@@ -62,10 +60,10 @@ public class PlatformToggler : MonoBehaviour
     }
   }
 
-  void SetActivationKey(KeyControl newKey)
+  public void SetActivationKey(KeyControl newKey)
   {
     activationKey = newKey;
-    Debug.Log("platform spawn key set to " + activationKey);
+    Debug.Log("activation key set to " + activationKey);
   }
 
   List<Transform> GetAllPlatforms()
