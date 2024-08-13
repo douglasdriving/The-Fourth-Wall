@@ -42,6 +42,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "InteractSecondary",
+                    "type": "Button",
+                    "id": "fd7644ef-365d-42d7-a169-f0fa4cd522af",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Reload",
                     "type": "Button",
                     "id": "92bae7d2-8f73-4e61-b7b1-8fa3b2e02ea0",
@@ -291,6 +300,17 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Reload",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "603a15ae-dbb0-4143-9e9a-b63908f10355",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "InteractSecondary",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

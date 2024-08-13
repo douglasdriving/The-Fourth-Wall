@@ -1517,7 +1517,8 @@
                     "word": " fast.",
                     "start": 62.92,
                     "end": 63.48,
-                    "probability": 0.9774561524391174
+                    "probability": 0.9774561524391174,
+                    "pause": true
                 }
             ]
         },
@@ -1645,7 +1646,8 @@
                     "word": " told.",
                     "start": 68.72,
                     "end": 69.1,
-                    "probability": 0.9986751675605774
+                    "probability": 0.9986751675605774,
+                    "pause": true
                 }
             ]
         },
@@ -1705,7 +1707,8 @@
                     "word": " player.",
                     "start": 70.16,
                     "end": 70.6,
-                    "probability": 0.9985163807868958
+                    "probability": 0.9985163807868958,
+                    "pause": true
                 }
             ]
         },
@@ -1996,7 +1999,8 @@
                     "word": " away.",
                     "start": 80.72,
                     "end": 81.12,
-                    "probability": 0.9984362721443176
+                    "probability": 0.9984362721443176,
+                    "pause": true
                 }
             ]
         },
@@ -2035,7 +2039,8 @@
                     "word": " work.",
                     "start": 82.28,
                     "end": 82.66,
-                    "probability": 0.9995077848434448
+                    "probability": 0.9995077848434448,
+                    "pause": true
                 }
             ]
         },
@@ -2125,7 +2130,8 @@
                     "word": " work.",
                     "start": 85.8,
                     "end": 86.1,
-                    "probability": 0.9987660646438599
+                    "probability": 0.9987660646438599,
+                    "pause": true
                 }
             ]
         },
@@ -2185,7 +2191,8 @@
                     "word": " 3.",
                     "start": 87.68,
                     "end": 88.12,
-                    "probability": 0.675826370716095
+                    "probability": 0.675826370716095,
+                    "pause": true
                 }
             ]
         },

@@ -19,6 +19,14 @@ public class InteractionScanner : MonoBehaviour
         }
     }
 
+    void OnInteractSecondary()
+    {
+        if (highlightedInteractable != null)
+        {
+            highlightedInteractable.InteractSecondary();
+        }
+    }
+
     private void ScanForItem()
     {
         RaycastHit hit;

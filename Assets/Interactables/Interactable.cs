@@ -8,6 +8,7 @@ public class Interactable : MonoBehaviour
 {
     [SerializeField] string interactableName;
     [SerializeField] UnityEvent interactionEvent;
+    [SerializeField] UnityEvent secondaryInteractionEvent;
     bool isInteractable = true;
     public bool IsInteractable
     {
@@ -30,6 +31,14 @@ public class Interactable : MonoBehaviour
         if (interactionEvent != null && isInteractable)
         {
             interactionEvent.Invoke();
+        }
+    }
+
+    public void InteractSecondary()
+    {
+        if (secondaryInteractionEvent != null && isInteractable)
+        {
+            secondaryInteractionEvent.Invoke();
         }
     }
 

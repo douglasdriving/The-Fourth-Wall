@@ -32,6 +32,7 @@ public class MachineToC3EventsPlayer : MonoBehaviour
         BlackCoverCanvas blackCoverCanvas = FindObjectOfType<BlackCoverCanvas>();
         PlatformToggler platformToggler = FindObjectOfType<PlatformToggler>();
         PlayerMoveHolder playerMoveHolder = FindObjectOfType<PlayerMoveHolder>();
+        ObjectOnLevelPieceSpawner objectOnLevelPieceSpawner = FindObjectOfType<ObjectOnLevelPieceSpawner>();
 
         //test
 
@@ -47,6 +48,7 @@ public class MachineToC3EventsPlayer : MonoBehaviour
         timedEvents.Add(new TimedEvent(50.98f, () => playerMoveHolder.HoldPlayer()));
 
         /// 4. spawn a destructable wall
+        timedEvents.Add(new TimedEvent(71.32f, () => objectOnLevelPieceSpawner.isSpawningOnNextPiece = true));
     }
 
     public void StartEventChain()
