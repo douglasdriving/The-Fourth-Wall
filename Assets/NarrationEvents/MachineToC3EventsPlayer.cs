@@ -31,6 +31,7 @@ public class MachineToC3EventsPlayer : MonoBehaviour
     {
         BlackCoverCanvas blackCoverCanvas = FindObjectOfType<BlackCoverCanvas>();
         PlatformToggler platformToggler = FindObjectOfType<PlatformToggler>();
+        PlayerMoveHolder playerMoveHolder = FindObjectOfType<PlayerMoveHolder>();
 
         //test
 
@@ -40,8 +41,11 @@ public class MachineToC3EventsPlayer : MonoBehaviour
 
         /// 2. remove platforms behind and ahead of player
         timedEvents.Add(new TimedEvent(33.62f, () => platformToggler.PopAllPlatformsExceptTheOnePlayerIsOn()));
+        timedEvents.Add(new TimedEvent(44.33f, () => platformToggler.PopAllPlatformsExceptTheOnePlayerIsOn()));
 
         /// 3. make the player stuck
+        timedEvents.Add(new TimedEvent(50.98f, () => playerMoveHolder.HoldPlayer()));
+
         /// 4. spawn a destructable wall
     }
 
