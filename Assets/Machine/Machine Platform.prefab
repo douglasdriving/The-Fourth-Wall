@@ -49,7 +49,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &253845762137251949
 Transform:
   m_ObjectHideFlags: 0
@@ -469,7 +469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floatingVideo: {fileID: 6851403637635152993}
-  roadToChrystal3: {fileID: 0}
+  roadToChrystal3: {fileID: 1753252469942107746}
   planeDistanceFromVideoToPlayer: 15
   videoHeightAbovePlayer: 5
 --- !u!1 &7469363803367549664
@@ -1051,7 +1051,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8538235199227472722, guid: e52b1b02f966c414387338f77b483319, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
