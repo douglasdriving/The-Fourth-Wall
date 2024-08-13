@@ -29,6 +29,7 @@ namespace Narration
         {
             mode = SubtitleMode.SpawnBackwardOnLevel;
             nextLevelPieceIndexToShowWordOn = levelPieceIndexToStartSpawningFrom;
+            Debug.Log("Starting to spawn backwards from level piece index: " + levelPieceIndexToStartSpawningFrom);
         }
 
         public void StartSubtitles(SubtitleJsonData subtitles)
@@ -136,10 +137,12 @@ namespace Narration
             {
                 wordGO.transform.Rotate(wordGO.transform.up * 180);
                 nextLevelPieceIndexToShowWordOn--;
+                Debug.Log("incrementing next piece index down to: " + nextLevelPieceIndexToShowWordOn);
             }
             else
             {
                 nextLevelPieceIndexToShowWordOn++;
+                Debug.Log("incrementing next piece index up to: " + nextLevelPieceIndexToShowWordOn);
             }
         }
 
@@ -187,7 +190,7 @@ namespace Narration
             timeForNextSubtitleStep = 0;
             isLingering = false;
             subtitleText.text = "";
-            nextLevelPieceIndexToShowWordOn = 0;
+            Debug.Log("Stopping subtitles, next piece index set to 0");
         }
     }
 

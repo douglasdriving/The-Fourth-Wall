@@ -1139,11 +1139,11 @@ PrefabInstance:
     - target: {fileID: 7697366751005587580, guid: 20f60649d4f85aa46a322e2407085824, type: 3}
       propertyPath: audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 13dd833d0a05e244bb5ca7d268a9270a, type: 3}
+      objectReference: {fileID: 8300000, guid: c4ec2ba7ce96306458d2ea31a15dab7c, type: 3}
     - target: {fileID: 7697366751005587580, guid: 20f60649d4f85aa46a322e2407085824, type: 3}
       propertyPath: subtitleJson
       value: 
-      objectReference: {fileID: 4900000, guid: cc9c44d0b1e4dee4e8f17842955ba24a, type: 3}
+      objectReference: {fileID: 4900000, guid: 8436a1c72867f4c43a963b52df5e1722, type: 3}
     - target: {fileID: 7697366751005587580, guid: 20f60649d4f85aa46a322e2407085824, type: 3}
       propertyPath: eventsToTrigger.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -1317,6 +1317,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8003749448021468236}
     - target: {fileID: 3807613138282964852, guid: 6f23243d9b3149d47b55a36379f1309d, type: 3}
+      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 7714772321598833874}
+    - target: {fileID: 3807613138282964852, guid: 6f23243d9b3149d47b55a36379f1309d, type: 3}
       propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -1377,6 +1381,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8003749448021468236}
     - target: {fileID: 7143511618121066310, guid: 6f23243d9b3149d47b55a36379f1309d, type: 3}
+      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 7714772321598833874}
+    - target: {fileID: 7143511618121066310, guid: 6f23243d9b3149d47b55a36379f1309d, type: 3}
       propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -1428,6 +1436,10 @@ PrefabInstance:
       propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 8003749448021468236}
+    - target: {fileID: 9096868768293057570, guid: 6f23243d9b3149d47b55a36379f1309d, type: 3}
+      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 7714772321598833874}
     - target: {fileID: 9096868768293057570, guid: 6f23243d9b3149d47b55a36379f1309d, type: 3}
       propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2

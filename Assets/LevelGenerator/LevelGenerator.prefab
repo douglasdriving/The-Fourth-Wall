@@ -108,9 +108,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27409b6ff22bbd499004c732476ed20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallPrefab: {fileID: 7027017204318944414, guid: 313a7d17551d6c048899a7f79cdfb072, type: 3}
-  minPiecesBetweenWalls: 8
-  maxPiecesBetweenWalls: 15
+  objectToSpawn: {fileID: 3024152859824107159, guid: 6991b514d22b8da48931a55178b159ac, type: 3}
+  minPiecesBetweenObjects: 5
+  maxPiecesBetweenObjects: 10
+  isSpawningRegularly: 0
+  isSpawningOnNextPiece: 0
 --- !u!114 &8240087622889153155
 MonoBehaviour:
   m_ObjectHideFlags: 0

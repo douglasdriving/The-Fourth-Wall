@@ -840,14 +840,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3169553645565412237, guid: 9c8088e28cf056e478630cd680cfed43, type: 3}
-      propertyPath: audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c4ec2ba7ce96306458d2ea31a15dab7c, type: 3}
-    - target: {fileID: 3169553645565412237, guid: 9c8088e28cf056e478630cd680cfed43, type: 3}
-      propertyPath: subtitleJson
-      value: 
-      objectReference: {fileID: 4900000, guid: 8436a1c72867f4c43a963b52df5e1722, type: 3}
     - target: {fileID: 3295666642303051137, guid: 9c8088e28cf056e478630cd680cfed43, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.0629101
@@ -1263,10 +1255,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7949397666537075379, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
-      propertyPath: objectToSpawn
-      value: 
-      objectReference: {fileID: 3024152859824107159, guid: 6991b514d22b8da48931a55178b159ac, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
