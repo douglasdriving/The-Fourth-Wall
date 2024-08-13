@@ -24,6 +24,6 @@ public class Crystal2PickupEvents : MonoBehaviour
         LevelGenerator levelGenerator = FindObjectOfType<LevelGenerator>();
         int indexOfLastLevelPiece = levelGenerator.levelPiecesSpawned.Count - 1;
         int indexOfPieceToStartSpawningWordsFrom = indexOfLastLevelPiece - levelPiecesBackToSpawnFirstWordOn;
-        FindObjectOfType<SubtitlePlayer>().StartSpawningBackwards(indexOfPieceToStartSpawningWordsFrom);
+        FindObjectOfType<SubtitlePlayer>().SetMode(SubtitleMode.SpawnBackwardOnLevel, indexOfPieceToStartSpawningWordsFrom);
     }
 }

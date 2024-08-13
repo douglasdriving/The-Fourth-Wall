@@ -54,6 +54,7 @@ public class MachineToC3EventsPlayer : MonoBehaviour
     public void StartEventChain()
     {
         isRunning = true;
+        FindObjectOfType<SubtitlePlayer>().SetMode(SubtitleMode.SpawnWithNewLevelPiece, 0);
     }
 
     void Update()

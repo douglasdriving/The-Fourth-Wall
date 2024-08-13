@@ -25,11 +25,11 @@ namespace Narration
             subtitleText.text = "";
         }
 
-        public void StartSpawningBackwards(int levelPieceIndexToStartSpawningFrom)
+        public void SetMode(SubtitleMode mode, int levelPieceIndexToStartSpawningFrom)
         {
-            mode = SubtitleMode.SpawnBackwardOnLevel;
+            this.mode = mode;
             nextLevelPieceIndexToShowWordOn = levelPieceIndexToStartSpawningFrom;
-            Debug.Log("Starting to spawn backwards from level piece index: " + levelPieceIndexToStartSpawningFrom);
+            Debug.Log("mode set to: " + mode + " next piece index set to: " + nextLevelPieceIndexToShowWordOn);
         }
 
         public void StartSubtitles(SubtitleJsonData subtitles)
@@ -137,12 +137,10 @@ namespace Narration
             {
                 wordGO.transform.Rotate(wordGO.transform.up * 180);
                 nextLevelPieceIndexToShowWordOn--;
-                Debug.Log("incrementing next piece index down to: " + nextLevelPieceIndexToShowWordOn);
             }
             else
             {
                 nextLevelPieceIndexToShowWordOn++;
-                Debug.Log("incrementing next piece index up to: " + nextLevelPieceIndexToShowWordOn);
             }
         }
 
@@ -190,7 +188,6 @@ namespace Narration
             timeForNextSubtitleStep = 0;
             isLingering = false;
             subtitleText.text = "";
-            Debug.Log("Stopping subtitles, next piece index set to 0");
         }
     }
 
