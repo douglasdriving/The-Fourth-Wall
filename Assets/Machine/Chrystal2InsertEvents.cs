@@ -17,6 +17,7 @@ public class Chrystal2InsertEvents : MonoBehaviour
 
   public void StartEvents()
   {
+    floatingVideo.SetActive(true);
     PositionVideoInFrontOfPlayer();
     videoPlayer.Play();
     ActivateRoadAndHideVideoAfterVideoTime();
