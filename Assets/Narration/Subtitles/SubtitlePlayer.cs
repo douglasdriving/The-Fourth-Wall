@@ -29,7 +29,6 @@ namespace Narration
         {
             this.mode = mode;
             nextLevelPieceIndexToShowWordOn = levelPieceIndexToStartSpawningFrom;
-            Debug.Log("mode set to: " + mode + " next piece index set to: " + nextLevelPieceIndexToShowWordOn);
         }
 
         public void StartSubtitles(SubtitleJsonData subtitles)

@@ -22,7 +22,6 @@ public class PortalNarrationTrigger : MonoBehaviour
         yield return new WaitForSeconds(delay);
         GameObject portalGO = Instantiate(portalPrefab);
         int nextLevelPieceIndexToShowWordOn = FindAnyObjectByType<SubtitlePlayer>().nextLevelPieceIndexToShowWordOn;
-        Debug.Log("will spawn portal above piece with index: " + nextLevelPieceIndexToShowWordOn);
         //find that level piece
         GameObject levelPiece = FindObjectOfType<LevelGenerator>().levelPiecesSpawned[nextLevelPieceIndexToShowWordOn];
         //move the portal to be right right above it
