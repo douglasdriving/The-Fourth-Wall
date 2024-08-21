@@ -244,11 +244,6 @@ LightingSettings:
   m_PVRTiledBaking: 0
   m_NumRaysToShootPerTexel: -1
   m_RespectSceneVisibilityWhenBakingGI: 0
---- !u!4 &326870096 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1396375468675746484, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
-  m_PrefabInstance: {fileID: 4222751589694032154}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &417246809
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,6 +553,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d124fb07a4f53f4281d4edb4ef76cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clipToPlayOnStart: {fileID: 8300000, guid: 72ec8f4f83d327547a4c81700422b447, type: 3}
+  subtitleToPlayOnStart: {fileID: 4900000, guid: 79ec13273475f7048a7d9db52c0b493e, type: 3}
 --- !u!4 &1957703236
 Transform:
   m_ObjectHideFlags: 0
@@ -661,45 +658,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2136116425042813122, guid: 8e45090ae0c85554b86c72dc76bce7d3, type: 3}
-      propertyPath: wordPointsParent
-      value: 
-      objectReference: {fileID: 326870096}
-    - target: {fileID: 2136116425042813122, guid: 8e45090ae0c85554b86c72dc76bce7d3, type: 3}
-      propertyPath: minDistanceForPlatformToJumpTo
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2136116425042813122, guid: 8e45090ae0c85554b86c72dc76bce7d3, type: 3}
-      propertyPath: layerToCheckForVisionBlock.m_Bits
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3350742215372831231, guid: 8e45090ae0c85554b86c72dc76bce7d3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3717939786495814891, guid: 8e45090ae0c85554b86c72dc76bce7d3, type: 3}
-      propertyPath: pointsParent
-      value: 
-      objectReference: {fileID: 326870096}
-    - target: {fileID: 3717939786495814891, guid: 8e45090ae0c85554b86c72dc76bce7d3, type: 3}
-      propertyPath: wordPointsParent
-      value: 
-      objectReference: {fileID: 326870096}
-    - target: {fileID: 3717939786495814891, guid: 8e45090ae0c85554b86c72dc76bce7d3, type: 3}
-      propertyPath: minDistanceFromCamera
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7379956578420471475, guid: 8e45090ae0c85554b86c72dc76bce7d3, type: 3}
-      propertyPath: wordPrefab
-      value: 
-      objectReference: {fileID: 8140631638678303200, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
     - target: {fileID: 7379956578420471475, guid: 8e45090ae0c85554b86c72dc76bce7d3, type: 3}
       propertyPath: levelGenerator
       value: 
       objectReference: {fileID: 1934710453}
     - target: {fileID: 7496801569402546684, guid: 8e45090ae0c85554b86c72dc76bce7d3, type: 3}
       propertyPath: m_Name
-      value: WorldSubtitles
+      value: SubtitlePlayer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -832,7 +797,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1878722776}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5438316057717903897, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
@@ -841,10 +807,10 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 705507995}
-  - {fileID: 3064323880741502985}
   - {fileID: 122221426}
+  - {fileID: 1957703236}
+  - {fileID: 3064323880741502985}
   - {fileID: 974733055590494683}
   - {fileID: 417246812}
   - {fileID: 4222751589694032154}
-  - {fileID: 1957703236}
   - {fileID: 1667087942}

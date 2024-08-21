@@ -23,9 +23,17 @@ namespace Narration
         static float clipLength = 0;
         static List<float> pausesScheduled = new();
 
+        [SerializeField] AudioClip clipToPlayOnStart;
+        [SerializeField] TextAsset subtitleToPlayOnStart;
+
         void Awake()
         {
             subtitlePlayer = FindObjectOfType<SubtitlePlayer>();
+        }
+
+        void Start()
+        {
+            PlayNarration(clipToPlayOnStart, subtitleToPlayOnStart);
         }
 
         public static void PlayNarration(AudioClip clip, TextAsset subtitle)

@@ -6,8 +6,6 @@ namespace Narration
 {
     public class SubtitlePlayer : MonoBehaviour
     {
-        [SerializeField] TMP_Text subtitleText;
-        [SerializeField] WordMover wordMover;
         [SerializeField] LevelGenerator levelGenerator;
         [SerializeField] GameObject wordPrefab;
         const float lingerTime = 1f;
@@ -19,11 +17,6 @@ namespace Narration
 
         public int nextLevelPieceIndexToShowWordOn = 0;
         SubtitleMode mode = SubtitleMode.SpawnWithNewLevelPiece;
-
-        private void Awake()
-        {
-            subtitleText.text = "";
-        }
 
         public void SetMode(SubtitleMode mode, int levelPieceIndexToStartSpawningFrom)
         {
@@ -186,7 +179,6 @@ namespace Narration
             currentWordIndex = 0;
             timeForNextSubtitleStep = 0;
             isLingering = false;
-            subtitleText.text = "";
         }
     }
 
