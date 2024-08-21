@@ -70,15 +70,24 @@ public class WalkwayGenerator : MonoBehaviour
 
     private GameObject AddPieceToWalkway(Transform prevPiece)
     {
-        Vector3 prevPiecePivot = prevPiece.position;
-        Vector3 prevPieceScale = prevPiece.lossyScale;
-        Vector3 endOfPrevPiece = prevPiecePivot + Vector3.forward * prevPieceScale.z;
-        float halfWidthOfPrevPiece = prevPieceScale.x / 2;
-        Vector3 newPiecePivot = endOfPrevPiece;
-        newPiecePivot.x += Random.Range(-halfWidthOfPrevPiece, halfWidthOfPrevPiece);
 
-        Quaternion rot = Quaternion.identity;
-        GameObject piece = InstatiatePiece(newPiecePivot, rot);
+        Vector3 prevPieceFinalPos = prevPiece.GetComponent<AnimatedPieceMover>().targetPos;
+        Vector3 prevPieceScale = prevPiece.lossyScale;
+        Vector3 endOfPrevPiece = prevPieceFinalPos + Vector3.forward * prevPieceScale.z;
+        float halfWidthOfPrevPiece = prevPieceScale.x / 2;
+        Vector3 finalPosition = endOfPrevPiece;
+        finalPosition.x += Random.Range(-halfWidthOfPrevPiece, halfWidthOfPrevPiece);
+        Quaternion finalRotation = Quaternion.identity;
+
+        Camera playerCam = Camera.main;
+        Vector3 posInFrontOfPlayer = playerCam.transform.position + playerCam.transform.forward * 5; //magic!
+        Vector3 vectorTowardsPlayer = -playerCam.transform.forward;
+
+        GameObject piece = InstatiatePiece(posInFrontOfPlayer, Quaternion.identity);
+        piece.transform.up = vectorTowardsPlayer;
+
+        piece.GetComponent<AnimatedPieceMover>().StartMovingToPosAndRot(finalPosition, finalRotation, 1f);
+
         return piece;
     }
 

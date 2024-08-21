@@ -89,7 +89,7 @@ public class LevelGenerator : MonoBehaviour
     }
     else
     {
-      GameObject piece = walkwayGenerator.GenerateNextPiece(lastLevelPieceAdded.transform, pieceWord, true);
+      GameObject piece = walkwayGenerator.GenerateNextPiece(lastLevelPieceAdded.transform, pieceWord, true); //does not work when previous piece is in air
       piecesOnCurrentPlatform++;
       if (!lastPlatformStarted)
       {
