@@ -6,8 +6,6 @@ public class Chrystal2InsertEvents : MonoBehaviour
 {
   [SerializeField] GameObject floatingVideo;
   [SerializeField] GameObject roadToChrystal3;
-  [SerializeField] float planeDistanceFromVideoToPlayer = 15f;
-  [SerializeField] float videoHeightAbovePlayer = 5f;
   VideoPlayer videoPlayer;
 
   void Awake()
@@ -18,7 +16,7 @@ public class Chrystal2InsertEvents : MonoBehaviour
   public void StartEvents()
   {
     floatingVideo.SetActive(true);
-    PositionVideoInFrontOfPlayer();
+    floatingVideo.GetComponent<VideoPositioner>().PositionVideoInFrontOfPlayer();
     videoPlayer.Play();
     ActivateRoadAndHideVideoAfterVideoTime();
   }
@@ -34,18 +32,5 @@ public class Chrystal2InsertEvents : MonoBehaviour
       roadToChrystal3.SetActive(true);
       floatingVideo.gameObject.SetActive(false);
     }
-  }
-
-  void PositionVideoInFrontOfPlayer()
-  {
-    Transform player = GameObject.FindWithTag("Player").transform;
-    Vector3 playerForwardDir = player.forward;
-    playerForwardDir.y = 0;
-    playerForwardDir.Normalize();
-    Vector3 videoPos = player.position + (playerForwardDir * planeDistanceFromVideoToPlayer) + (Vector3.up * videoHeightAbovePlayer);
-    Vector3 videoForward = (player.position - videoPos).normalized;
-
-    floatingVideo.transform.position = videoPos;
-    floatingVideo.transform.forward = videoForward;
   }
 }

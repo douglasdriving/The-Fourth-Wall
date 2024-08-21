@@ -456,6 +456,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chrystal2InsertEvents: {fileID: 2192369459013590052}
+  demoEndVideo: {fileID: 32900000, guid: ee0808ef193622749a14b65a022b0a24, type: 3}
+  floatingVideoPlayer: {fileID: 6851403637635152993}
 --- !u!114 &2192369459013590052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470,8 +472,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floatingVideo: {fileID: 6851403637635152993}
   roadToChrystal3: {fileID: 1753252469942107746}
-  planeDistanceFromVideoToPlayer: 15
-  videoHeightAbovePlayer: 5
 --- !u!1 &7469363803367549664
 GameObject:
   m_ObjectHideFlags: 0
