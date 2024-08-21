@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 766092887391787655}
   - component: {fileID: 7379956578420471475}
   m_Layer: 5
-  m_Name: WorldWordCanvas
+  m_Name: SubtitlePlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
