@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SubtitleGenerated.unity
-    guid: 57f309aa720d208478d6963fd02a2194
+    path: Assets/Scenes/devlog_1.unity
+    guid: 1e6dc9cf51166594e8a0dca9b3a2989c
+  - enabled: 1
+    path: Assets/Scenes/devlog_2.unity
+    guid: 1a35a034654791045954e8ffc2a5945f
   m_configObjects: {}

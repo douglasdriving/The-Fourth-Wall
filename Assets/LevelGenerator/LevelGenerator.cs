@@ -52,7 +52,7 @@ public class LevelGenerator : MonoBehaviour
     return platform;
   }
 
-  public void SpawnNextPiece(string pieceWord, int piecesLeftToSpawnInSection)
+  public GameObject SpawnNextPiece(string pieceWord, int piecesLeftToSpawnInSection)
   {
     bool piecesInList = piecesBeingGenerated != null && piecesBeingGenerated.Count > 0;
     GameObject piece = null;
@@ -72,6 +72,8 @@ public class LevelGenerator : MonoBehaviour
 
     levelPiecesSpawned.Add(piece);
     OnLevelPieceSpawned?.Invoke(piece);
+
+    return piece;
   }
 
   private GameObject SpawnPlatformPiece(string pieceWord, int piecesLeftToSpawnInSection)

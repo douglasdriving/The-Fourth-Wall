@@ -25,6 +25,7 @@ namespace Narration
 
         [SerializeField] AudioClip clipToPlayOnStart;
         [SerializeField] TextAsset subtitleToPlayOnStart;
+        [SerializeField] float startDelay = 1.5f;
 
         void Awake()
         {
@@ -33,7 +34,13 @@ namespace Narration
 
         void Start()
         {
+            Invoke("PlayStartNarration", startDelay);
+        }
+
+        void PlayStartNarration()
+        {
             PlayNarration(clipToPlayOnStart, subtitleToPlayOnStart);
+            StartCoroutine(FindAnyObjectByType<ExitPortalGenerator>().GenerateExitPortalAfterDelay(clipToPlayOnStart.length));
         }
 
         public static void PlayNarration(AudioClip clip, TextAsset subtitle)
