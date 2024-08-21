@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+/// <summary>
+/// Triggers an event after a certain amount of time has passed since the trigger event
+/// </summary>
 public class TriggerEventTimer : MonoBehaviour
 {
 

@@ -1,7 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// scales an object based on the distance to the camera
+/// </summary>
 public class CameraDistanceScaler : MonoBehaviour
 {
     [SerializeField] float baseScaleFactor = 1;
