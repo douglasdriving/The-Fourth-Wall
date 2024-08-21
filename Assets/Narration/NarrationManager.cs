@@ -28,6 +28,12 @@ namespace Narration
             subtitlePlayer = FindObjectOfType<SubtitlePlayer>();
         }
 
+        public static void PlayNarration(AudioClip clip, TextAsset subtitle)
+        {
+            SubtitleJsonData subtitleJsonData = SubtitleJsonReader.ReadSubtitleJson(subtitle.text);
+            PlayNarration(clip, subtitleJsonData);
+        }
+
         public static void PlayNarration(AudioClip clip, SubtitleJsonData subtitle)
         {
             VoiceOverPlayer.PlayClip(clip);
