@@ -1,0 +1,735 @@
+{
+    "text": " Alright, congratulations on finding crystal number three. Now it's time to turn around and finally fire up that machine that we have been talking about way too long now. But the road is long to get back and it would be boring if I just gave you another portal like using the same trick again. So I'm thinking instead I'll give you super speed this time. So now you can just hold the shift key and you'll travel back to the machine in no time. See you there!",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 3.7,
+            "text": " Alright, congratulations on finding crystal number three.",
+            "tokens": [
+                50363,
+                40967,
+                11,
+                45108,
+                319,
+                4917,
+                15121,
+                1271,
+                1115,
+                13,
+                50563
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.24022311256045387,
+            "compression_ratio": 1.5281385281385282,
+            "no_speech_prob": 0.029736755415797234,
+            "words": [
+                {
+                    "word": " Alright,",
+                    "start": 0.0,
+                    "end": 0.42,
+                    "probability": 0.20084819197654724
+                },
+                {
+                    "word": " congratulations",
+                    "start": 0.64,
+                    "end": 1.18,
+                    "probability": 0.9301756620407104
+                },
+                {
+                    "word": " on",
+                    "start": 1.18,
+                    "end": 1.96,
+                    "probability": 0.9719982147216797
+                },
+                {
+                    "word": " finding",
+                    "start": 1.96,
+                    "end": 2.6,
+                    "probability": 0.9930943250656128
+                },
+                {
+                    "word": " crystal",
+                    "start": 2.6,
+                    "end": 2.94,
+                    "probability": 0.7982168197631836
+                },
+                {
+                    "word": " number",
+                    "start": 2.94,
+                    "end": 3.24,
+                    "probability": 0.9442164897918701
+                },
+                {
+                    "word": " three.",
+                    "start": 3.24,
+                    "end": 3.7,
+                    "probability": 0.5131091475486755
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 4.78,
+            "end": 13.94,
+            "text": " Now it's time to turn around and finally fire up that machine that we have been talking about way too long now.",
+            "tokens": [
+                50599,
+                2735,
+                340,
+                338,
+                640,
+                284,
+                1210,
+                1088,
+                290,
+                3443,
+                2046,
+                510,
+                326,
+                4572,
+                326,
+                356,
+                423,
+                587,
+                3375,
+                546,
+                835,
+                1165,
+                890,
+                783,
+                13,
+                51053
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.24022311256045387,
+            "compression_ratio": 1.5281385281385282,
+            "no_speech_prob": 0.029736755415797234,
+            "words": [
+                {
+                    "word": " Now",
+                    "start": 4.78,
+                    "end": 5.14,
+                    "probability": 0.9692996740341187
+                },
+                {
+                    "word": " it's",
+                    "start": 5.14,
+                    "end": 5.8,
+                    "probability": 0.8975892961025238
+                },
+                {
+                    "word": " time",
+                    "start": 5.8,
+                    "end": 6.12,
+                    "probability": 0.9981405735015869
+                },
+                {
+                    "word": " to",
+                    "start": 6.12,
+                    "end": 6.42,
+                    "probability": 0.9970851540565491
+                },
+                {
+                    "word": " turn",
+                    "start": 6.42,
+                    "end": 6.62,
+                    "probability": 0.9860172867774963
+                },
+                {
+                    "word": " around",
+                    "start": 6.62,
+                    "end": 7.02,
+                    "probability": 0.9957191348075867
+                },
+                {
+                    "word": " and",
+                    "start": 7.02,
+                    "end": 7.44,
+                    "probability": 0.9457831978797913
+                },
+                {
+                    "word": " finally",
+                    "start": 7.44,
+                    "end": 8.1,
+                    "probability": 0.961463212966919
+                },
+                {
+                    "word": " fire",
+                    "start": 8.1,
+                    "end": 9.2,
+                    "probability": 0.8080129623413086
+                },
+                {
+                    "word": " up",
+                    "start": 9.2,
+                    "end": 9.5,
+                    "probability": 0.9927573204040527
+                },
+                {
+                    "word": " that",
+                    "start": 9.5,
+                    "end": 9.78,
+                    "probability": 0.9797240495681763
+                },
+                {
+                    "word": " machine",
+                    "start": 9.78,
+                    "end": 10.32,
+                    "probability": 0.9903044104576111
+                },
+                {
+                    "word": " that",
+                    "start": 10.32,
+                    "end": 10.56,
+                    "probability": 0.8924233317375183
+                },
+                {
+                    "word": " we",
+                    "start": 10.56,
+                    "end": 10.74,
+                    "probability": 0.9973145127296448
+                },
+                {
+                    "word": " have",
+                    "start": 10.74,
+                    "end": 10.9,
+                    "probability": 0.8919504284858704
+                },
+                {
+                    "word": " been",
+                    "start": 10.9,
+                    "end": 11.26,
+                    "probability": 0.9941791296005249
+                },
+                {
+                    "word": " talking",
+                    "start": 11.26,
+                    "end": 11.88,
+                    "probability": 0.9900623559951782
+                },
+                {
+                    "word": " about",
+                    "start": 11.88,
+                    "end": 12.16,
+                    "probability": 0.9908809661865234
+                },
+                {
+                    "word": " way",
+                    "start": 12.16,
+                    "end": 12.46,
+                    "probability": 0.9770696759223938
+                },
+                {
+                    "word": " too",
+                    "start": 12.46,
+                    "end": 13.2,
+                    "probability": 0.976351261138916
+                },
+                {
+                    "word": " long",
+                    "start": 13.2,
+                    "end": 13.4,
+                    "probability": 0.9991527795791626
+                },
+                {
+                    "word": " now.",
+                    "start": 13.4,
+                    "end": 13.94,
+                    "probability": 0.9862869381904602
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "seek": 0,
+            "start": 14.4,
+            "end": 24.54,
+            "text": " But the road is long to get back and it would be boring if I just gave you another portal like using the same trick again.",
+            "tokens": [
+                51078,
+                887,
+                262,
+                2975,
+                318,
+                890,
+                284,
+                651,
+                736,
+                290,
+                340,
+                561,
+                307,
+                14262,
+                611,
+                314,
+                655,
+                2921,
+                345,
+                1194,
+                17898,
+                588,
+                1262,
+                262,
+                976,
+                6908,
+                757,
+                13,
+                51593
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.24022311256045387,
+            "compression_ratio": 1.5281385281385282,
+            "no_speech_prob": 0.029736755415797234,
+            "words": [
+                {
+                    "word": " But",
+                    "start": 14.4,
+                    "end": 14.56,
+                    "probability": 0.944764256477356
+                },
+                {
+                    "word": " the",
+                    "start": 14.56,
+                    "end": 15.04,
+                    "probability": 0.9361851215362549
+                },
+                {
+                    "word": " road",
+                    "start": 15.04,
+                    "end": 15.26,
+                    "probability": 0.9798073768615723
+                },
+                {
+                    "word": " is",
+                    "start": 15.26,
+                    "end": 15.84,
+                    "probability": 0.9954594969749451
+                },
+                {
+                    "word": " long",
+                    "start": 15.84,
+                    "end": 16.36,
+                    "probability": 0.7864329814910889
+                },
+                {
+                    "word": " to",
+                    "start": 16.36,
+                    "end": 16.88,
+                    "probability": 0.9238921403884888
+                },
+                {
+                    "word": " get",
+                    "start": 16.88,
+                    "end": 17.04,
+                    "probability": 0.9985079169273376
+                },
+                {
+                    "word": " back",
+                    "start": 17.04,
+                    "end": 17.44,
+                    "probability": 0.9987874627113342
+                },
+                {
+                    "word": " and",
+                    "start": 17.44,
+                    "end": 18.22,
+                    "probability": 0.686074435710907
+                },
+                {
+                    "word": " it",
+                    "start": 18.22,
+                    "end": 19.32,
+                    "probability": 0.8304029703140259
+                },
+                {
+                    "word": " would",
+                    "start": 19.32,
+                    "end": 19.44,
+                    "probability": 0.9706599116325378
+                },
+                {
+                    "word": " be",
+                    "start": 19.44,
+                    "end": 19.62,
+                    "probability": 0.9975320100784302
+                },
+                {
+                    "word": " boring",
+                    "start": 19.62,
+                    "end": 19.9,
+                    "probability": 0.9906216859817505
+                },
+                {
+                    "word": " if",
+                    "start": 19.9,
+                    "end": 20.16,
+                    "probability": 0.9925036430358887
+                },
+                {
+                    "word": " I",
+                    "start": 20.16,
+                    "end": 20.32,
+                    "probability": 0.965998113155365
+                },
+                {
+                    "word": " just",
+                    "start": 20.32,
+                    "end": 20.5,
+                    "probability": 0.9467103481292725
+                },
+                {
+                    "word": " gave",
+                    "start": 20.5,
+                    "end": 20.74,
+                    "probability": 0.9516274333000183
+                },
+                {
+                    "word": " you",
+                    "start": 20.74,
+                    "end": 20.94,
+                    "probability": 0.9966796636581421
+                },
+                {
+                    "word": " another",
+                    "start": 20.94,
+                    "end": 21.2,
+                    "probability": 0.9957186579704285
+                },
+                {
+                    "word": " portal",
+                    "start": 21.2,
+                    "end": 21.58,
+                    "probability": 0.9912762641906738
+                },
+                {
+                    "word": " like",
+                    "start": 21.58,
+                    "end": 21.86,
+                    "probability": 0.6447768211364746
+                },
+                {
+                    "word": " using",
+                    "start": 21.86,
+                    "end": 22.2,
+                    "probability": 0.9500176310539246
+                },
+                {
+                    "word": " the",
+                    "start": 22.2,
+                    "end": 22.42,
+                    "probability": 0.9965684413909912
+                },
+                {
+                    "word": " same",
+                    "start": 22.42,
+                    "end": 22.76,
+                    "probability": 0.9993163347244263
+                },
+                {
+                    "word": " trick",
+                    "start": 22.76,
+                    "end": 23.86,
+                    "probability": 0.9806171655654907
+                },
+                {
+                    "word": " again.",
+                    "start": 23.86,
+                    "end": 24.54,
+                    "probability": 0.9901314973831177
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "seek": 0,
+            "start": 24.7,
+            "end": 28.74,
+            "text": " So I'm thinking instead I'll give you super speed this time.",
+            "tokens": [
+                51593,
+                1406,
+                314,
+                1101,
+                3612,
+                2427,
+                314,
+                1183,
+                1577,
+                345,
+                2208,
+                2866,
+                428,
+                640,
+                13,
+                51803
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.24022311256045387,
+            "compression_ratio": 1.5281385281385282,
+            "no_speech_prob": 0.029736755415797234,
+            "words": [
+                {
+                    "word": " So",
+                    "start": 24.7,
+                    "end": 24.82,
+                    "probability": 0.9708231091499329
+                },
+                {
+                    "word": " I'm",
+                    "start": 24.82,
+                    "end": 24.98,
+                    "probability": 0.9528882205486298
+                },
+                {
+                    "word": " thinking",
+                    "start": 24.98,
+                    "end": 25.24,
+                    "probability": 0.9978668093681335
+                },
+                {
+                    "word": " instead",
+                    "start": 25.24,
+                    "end": 25.72,
+                    "probability": 0.9589225053787231
+                },
+                {
+                    "word": " I'll",
+                    "start": 25.72,
+                    "end": 26.02,
+                    "probability": 0.9279109537601471
+                },
+                {
+                    "word": " give",
+                    "start": 26.02,
+                    "end": 26.2,
+                    "probability": 0.9985527396202087
+                },
+                {
+                    "word": " you",
+                    "start": 26.2,
+                    "end": 26.78,
+                    "probability": 0.9979738593101501
+                },
+                {
+                    "word": " super",
+                    "start": 26.78,
+                    "end": 27.64,
+                    "probability": 0.8391348719596863
+                },
+                {
+                    "word": " speed",
+                    "start": 27.64,
+                    "end": 28.0,
+                    "probability": 0.9668139815330505
+                },
+                {
+                    "word": " this",
+                    "start": 28.0,
+                    "end": 28.34,
+                    "probability": 0.9654996991157532
+                },
+                {
+                    "word": " time.",
+                    "start": 28.34,
+                    "end": 28.74,
+                    "probability": 0.9995546936988831
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "seek": 2874,
+            "start": 28.74,
+            "end": 34.74,
+            "text": " So now you can just hold the shift key and you'll travel back to the machine in no time.",
+            "tokens": [
+                50363,
+                1406,
+                783,
+                345,
+                460,
+                655,
+                1745,
+                262,
+                6482,
+                1994,
+                290,
+                345,
+                1183,
+                3067,
+                736,
+                284,
+                262,
+                4572,
+                287,
+                645,
+                640,
+                13,
+                50663
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.25058884620666505,
+            "compression_ratio": 1.1573033707865168,
+            "no_speech_prob": 0.018463369458913803,
+            "words": [
+                {
+                    "word": " So",
+                    "start": 28.74,
+                    "end": 29.02,
+                    "probability": 0.7243551015853882
+                },
+                {
+                    "word": " now",
+                    "start": 29.02,
+                    "end": 29.42,
+                    "probability": 0.9684469699859619
+                },
+                {
+                    "word": " you",
+                    "start": 29.42,
+                    "end": 29.74,
+                    "probability": 0.9667823314666748
+                },
+                {
+                    "word": " can",
+                    "start": 29.74,
+                    "end": 29.96,
+                    "probability": 0.9930576086044312
+                },
+                {
+                    "word": " just",
+                    "start": 29.96,
+                    "end": 30.14,
+                    "probability": 0.9824983477592468
+                },
+                {
+                    "word": " hold",
+                    "start": 30.14,
+                    "end": 30.46,
+                    "probability": 0.9984776377677917
+                },
+                {
+                    "word": " the",
+                    "start": 30.46,
+                    "end": 30.68,
+                    "probability": 0.9840811491012573
+                },
+                {
+                    "word": " shift",
+                    "start": 30.68,
+                    "end": 30.82,
+                    "probability": 0.7219541072845459
+                },
+                {
+                    "word": " key",
+                    "start": 30.82,
+                    "end": 31.26,
+                    "probability": 0.9961689114570618
+                },
+                {
+                    "word": " and",
+                    "start": 31.26,
+                    "end": 31.92,
+                    "probability": 0.686890184879303
+                },
+                {
+                    "word": " you'll",
+                    "start": 31.92,
+                    "end": 32.18,
+                    "probability": 0.7510913610458374
+                },
+                {
+                    "word": " travel",
+                    "start": 32.18,
+                    "end": 32.36,
+                    "probability": 0.9935157299041748
+                },
+                {
+                    "word": " back",
+                    "start": 32.36,
+                    "end": 32.62,
+                    "probability": 0.9991245865821838
+                },
+                {
+                    "word": " to",
+                    "start": 32.62,
+                    "end": 32.82,
+                    "probability": 0.9971895813941956
+                },
+                {
+                    "word": " the",
+                    "start": 32.82,
+                    "end": 32.96,
+                    "probability": 0.9985309839248657
+                },
+                {
+                    "word": " machine",
+                    "start": 32.96,
+                    "end": 33.28,
+                    "probability": 0.9754552841186523
+                },
+                {
+                    "word": " in",
+                    "start": 33.28,
+                    "end": 33.94,
+                    "probability": 0.9814086556434631
+                },
+                {
+                    "word": " no",
+                    "start": 33.94,
+                    "end": 34.2,
+                    "probability": 0.9956154823303223
+                },
+                {
+                    "word": " time.",
+                    "start": 34.2,
+                    "end": 34.74,
+                    "probability": 0.9992768168449402
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "seek": 2874,
+            "start": 35.2,
+            "end": 36.04,
+            "text": " See you there!",
+            "tokens": [
+                50663,
+                4091,
+                345,
+                612,
+                0,
+                50763
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.25058884620666505,
+            "compression_ratio": 1.1573033707865168,
+            "no_speech_prob": 0.018463369458913803,
+            "words": [
+                {
+                    "word": " See",
+                    "start": 35.2,
+                    "end": 35.72,
+                    "probability": 0.9919942617416382
+                },
+                {
+                    "word": " you",
+                    "start": 35.72,
+                    "end": 35.86,
+                    "probability": 0.9990226030349731
+                },
+                {
+                    "word": " there!",
+                    "start": 35.86,
+                    "end": 36.04,
+                    "probability": 0.9979984164237976
+                }
+            ]
+        }
+    ],
+    "language": "en"
+}

@@ -1158,10 +1158,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f01b43b53e6d37c43a1d808e255e5dba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  c3ToMachineAudio: {fileID: 0}
-  c3ToMachineSubtitle: {fileID: 0}
-  timeToEnableSuperSpeed: 3.5
-  superspeed: 23
+  c3ToMachineAudio: {fileID: 8300000, guid: 72ec8f4f83d327547a4c81700422b447, type: 3}
+  c3ToMachineSubtitle: {fileID: 4900000, guid: 79ec13273475f7048a7d9db52c0b493e, type: 3}
+  timeToEnableSuperSpeed: 30.82
+  superspeedVelocity: 23
 --- !u!4 &6748128568860135735 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 951006992759294293, guid: 43e4cd5dc2f84ef4da0735a8a6af9019, type: 3}

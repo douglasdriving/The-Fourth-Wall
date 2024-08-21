@@ -12,8 +12,8 @@ public class Crystal3ToMachineEvents : MonoBehaviour
 {
     [SerializeField] AudioClip c3ToMachineAudio;
     [SerializeField] TextAsset c3ToMachineSubtitle;
-    [SerializeField] float timeToEnableSuperSpeed = 3.5f;
-    [SerializeField] float superspeedVelocity = 23;
+    [SerializeField] float timeToEnableSuperSpeed = 30.82f;
+    [SerializeField] float superspeedVelocity = 23f;
 
     public void TriggerEvents()
     {
@@ -34,5 +34,6 @@ public class Crystal3ToMachineEvents : MonoBehaviour
         FirstPersonController playerController = FindObjectOfType<FirstPersonController>();
         playerController.enableSprint = true;
         playerController.sprintSpeed = superspeedVelocity;
+        Debug.Log("SuperSpeed enabled");
     }
 }
