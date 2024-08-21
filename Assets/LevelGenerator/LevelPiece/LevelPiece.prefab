@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2179372920765194466}
   - component: {fileID: 281273466990960384}
   - component: {fileID: 3992690385357702015}
-  - component: {fileID: 7838009336767407217}
   m_Layer: 0
   m_Name: Geometry
   m_TagString: Platform
@@ -106,22 +105,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7838009336767407217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 804096083968287790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6d29f427b7bc6b4286ad71d770bd504, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minScale: {x: 3, y: 1, z: 3}
-  maxScale: {x: 8, y: 1, z: 8}
-  minRot: {x: -20, y: -180, z: -20}
-  maxRot: {x: 20, y: 180, z: 20}
 --- !u!1 &1876559722440093188
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,7 +227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8619952791990303800}
   m_Layer: 0
-  m_Name: WalkwayPiece
+  m_Name: LevelPiece
   m_TagString: Walkway
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
