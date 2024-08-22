@@ -1,6 +1,10 @@
 using System.Collections;
 using UnityEngine;
 
+/// problems
+/// the portal is added in the wrong position now.
+/// wonky animation: words should hover a little while in front of the player before starting to move
+
 /// <summary>
 /// moves a position to a set position, rotation, and scale over a given time.
 /// </summary>
@@ -9,7 +13,10 @@ public class LevelPiecePositioner : MonoBehaviour
 
     public Vector3 targetPieceScale = Vector3.one;
     public Vector3 targetPosition { get; private set; }
+    public Quaternion targetRotation { get; private set; }
+
     [SerializeField] float timeToPosition = 1f;
+
     Collider[] collidersToDisable;
 
     private void Awake()
@@ -17,16 +24,23 @@ public class LevelPiecePositioner : MonoBehaviour
         collidersToDisable = GetComponentsInChildren<Collider>();
     }
 
-    public void MoveToPosition(Vector3 targetPosition, Quaternion targetRotation)
+    public void MoveToPosition(Vector3 targetPosition, Quaternion targetRotation, bool animate)
     {
-        StartCoroutine(MoveToPositionCoroutine(targetPosition, targetRotation));
+        this.targetPosition = targetPosition;
+        this.targetRotation = targetRotation;
+
+        if (animate)
+        {
+            StartCoroutine(MoveAnimation());
+        }
+        else
+        {
+            SetFinalTransform(targetPosition, targetRotation);
+        }
     }
 
-    IEnumerator MoveToPositionCoroutine(Vector3 targetPosition, Quaternion targetRotation)
+    IEnumerator MoveAnimation()
     {
-
-        this.targetPosition = targetPosition;
-
         SetCollidersEnabled(false);
 
         Vector3 startPosition = transform.position;
@@ -49,11 +63,15 @@ public class LevelPiecePositioner : MonoBehaviour
             yield return null;
         }
 
+        SetFinalTransform(targetPosition, targetRotation);
+        SetCollidersEnabled(true);
+    }
+
+    private void SetFinalTransform(Vector3 targetPosition, Quaternion targetRotation)
+    {
         transform.position = targetPosition;
         transform.rotation = targetRotation;
         transform.localScale = targetPieceScale;
-
-        SetCollidersEnabled(true);
     }
 
     void SetCollidersEnabled(bool enabled)

@@ -50,25 +50,9 @@ public class WalkwayGenerator : MonoBehaviour
 
     public GameObject InstatiatePiece(Vector3 pivot, Quaternion rot, string pieceWord)
     {
-
-
-        /// problems
-        /// the word TARGET location is always the same, which might be because it is calculated from a level piece that is currently flying
-
-        GameObject piece;
-
-        if (isWordAnimationActive)
-        {
-            piece = levelPieceMolds.CopyNextMold();
-            piece.GetComponent<LevelPiecePositioner>().MoveToPosition(pivot, rot);
-        }
-        else
-        {
-            piece = Instantiate(piecePrefab, pivot, rot);
-        }
-
+        GameObject piece = levelPieceMolds.CopyNextMold();
+        piece.GetComponent<LevelPiecePositioner>().MoveToPosition(pivot, rot, isWordAnimationActive);
         piece.GetComponentInChildren<TMP_Text>().text = pieceWord;
-
         return piece;
     }
 

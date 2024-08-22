@@ -18,7 +18,8 @@ public class ExitPortalGenerator : MonoBehaviour
     private void GeneratePieceWithPortal()
     {
         GameObject portalLevelPiece = FindObjectOfType<LevelGenerator>().SpawnNextPiece("", 0);
-        Vector3 portalPos = portalLevelPiece.transform.position + Vector3.up * portalHeightAbovePlatform;
-        Instantiate(exitPortalPrefab, portalPos, portalLevelPiece.transform.rotation);
+        LevelPiecePositioner piecePositioner = portalLevelPiece.GetComponent<LevelPiecePositioner>();
+        Vector3 portalPos = piecePositioner.targetPosition + Vector3.up * portalHeightAbovePlatform;
+        Instantiate(exitPortalPrefab, portalPos, piecePositioner.targetRotation);
     }
 }
