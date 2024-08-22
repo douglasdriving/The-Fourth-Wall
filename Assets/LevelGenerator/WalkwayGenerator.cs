@@ -41,9 +41,7 @@ public class WalkwayGenerator : MonoBehaviour
         if (isWordAnimationActive)
         {
             piece = FindAnyObjectByType<LevelPieceMolds>().CopyMold(); //does not have to find it every time
-            //now, this piece will be at the wrong scale, rotation, and position
-            //so we need to add an animation that moves it to the correct spot
-            //basically, all that we set below we need to set as TARGETS for the animation.
+            piece.GetComponent<LevelPiecePositioner>().MoveToPosition(pivot, rot);
         }
         else
         {

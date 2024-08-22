@@ -1003,6 +1003,10 @@ PrefabInstance:
       propertyPath: exitPortalPrefab
       value: 
       objectReference: {fileID: 4335569441670879784, guid: a94d6cfa1021f69488d97c5bb3922e7f, type: 3}
+    - target: {fileID: 7021466173556650257, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+      propertyPath: isWordAnimationActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
