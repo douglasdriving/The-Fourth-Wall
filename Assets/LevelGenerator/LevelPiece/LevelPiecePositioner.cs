@@ -15,11 +15,15 @@ public class LevelPiecePositioner : MonoBehaviour
 
     [SerializeField] float timeToPosition = 1f;
     [SerializeField] float hoverTime = 0.5f;
+    [SerializeField] Material transparentMaterial;
+    [SerializeField] Material defaultMaterial;
 
     Collider[] collidersToDisable;
+    Renderer renderer;
 
     private void Awake()
     {
+        renderer = GetComponentInChildren<Renderer>();
         collidersToDisable = GetComponentsInChildren<Collider>();
     }
 
@@ -42,22 +46,14 @@ public class LevelPiecePositioner : MonoBehaviour
     {
         SetCollidersEnabled(false);
         yield return HoverInFrontOfCamera(hoverTime);
-
-        //someone way left of the target pos first
-        // float multiplier = Random.value > 0.5f ? 1 : -1;
-        // Vector3 posLeftOfTarget = targetPosition + Vector3.left * 2 * multiplier;
-
         Vector3 posWithSameZAsTarget = new Vector3(transform.position.x, transform.position.y, targetPosition.z);
-
-        yield return MoveToPosition(posWithSameZAsTarget, 0.8f);
+        yield return MoveToPosition(posWithSameZAsTarget);
         yield return new WaitForSeconds(0.1f);
-
         yield return ScaleToScale(targetPieceScale, 0.2f);
         yield return new WaitForSeconds(0.1f);
         yield return RotateToRotation(targetRotation, 0.2f);
         yield return new WaitForSeconds(0.1f);
-        yield return MoveToPosition(targetPosition, 0.3f);
-
+        yield return MoveToPosition(targetPosition);
         SetCollidersEnabled(true);
     }
 
@@ -68,22 +64,11 @@ public class LevelPiecePositioner : MonoBehaviour
         transform.parent = null; //SOULD BE WALKWAY
     }
 
-    IEnumerator MoveToPosition(Vector3 targetPos, float moveTime)
+    IEnumerator MoveToPosition(Vector3 targetPos)
     {
-
-        // Vector3 startPosition = transform.position;
-        // float elapsedTime = 0;
-        // while (elapsedTime < moveTime)
-        // {
-        //     float percentageOfTimePassed = elapsedTime / moveTime;
-        //     transform.position = Vector3.Lerp(startPosition, targetPos, percentageOfTimePassed);
-        //     elapsedTime += Time.deltaTime;
-        //     yield return null;
-        // }
-
         float distanceToTarget = Vector3.Distance(targetPos, transform.position);
         Vector3 directionToTarget = (targetPos - transform.position).normalized;
-        float moveSpeed = 15f;
+        float moveSpeed = 15f; //magic!
 
         while (distanceToTarget > 0.1f)
         {
@@ -135,6 +120,15 @@ public class LevelPiecePositioner : MonoBehaviour
         foreach (Collider collider in collidersToDisable)
         {
             collider.enabled = enabled;
+        }
+
+        if (enabled)
+        {
+            renderer.material = defaultMaterial;
+        }
+        else
+        {
+            renderer.material = transparentMaterial;
         }
     }
 }

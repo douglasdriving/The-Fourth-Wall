@@ -267,6 +267,8 @@ MonoBehaviour:
   targetPieceScale: {x: 2, y: 1, z: 1.2}
   timeToPosition: 0.5
   hoverTime: 0.6
+  transparentMaterial: {fileID: 2100000, guid: 36db519eb039df047a21e2bb484959a1, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: 9785987b5a406634da0c31d388254185, type: 2}
 --- !u!1001 &547326518130185928
 PrefabInstance:
   m_ObjectHideFlags: 0
