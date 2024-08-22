@@ -10,82 +10,85 @@ public class WalkwayGenerator : MonoBehaviour
     public float platformGapSize = 12f;
     [SerializeField] float zScalePercentageOfPlatformPieces = 0.7f;
 
-    public GameObject GenerateAtExactSpot(LevelPiece piece, string pieceWord)
+    //ok so, should we have a bool that determines if the word animation is active or not?
+    public bool isWordAnimationActive = false;
+
+    public GameObject AddPieceToWalkway(Transform pieceToMoveFrom, string pieceWord)
     {
-        GameObject pieceGO = InstatiatePiece(piece.start, Quaternion.identity);
-
-        Transform pieceT = pieceGO.transform;
-
-        pieceT.forward = piece.forwardVector;
-
-        Vector3 pieceLocalScale = pieceT.localScale;
-        pieceLocalScale.z = piece.length;
-        pieceT.localScale = pieceLocalScale;
-
-        pieceGO.GetComponentInChildren<TMP_Text>().text = pieceWord;
-        return pieceGO;
-    }
-
-    public GameObject GenerateNextPiece(Transform pieceToMoveFrom, string pieceWord, bool isPartOfPlatform)
-    {
-        GameObject piece = AddPieceToWalkway(pieceToMoveFrom);
-        piece.GetComponentInChildren<TMP_Text>().text = pieceWord;
-        if (isPartOfPlatform)
-        {
-            ScaleToPlatformPieceLength(piece);
-        }
-        return piece;
-    }
-
-    public GameObject GeneratePieceWithGap(Transform prevPiece, string pieceWord)
-    {
-        Vector3 prevPiecePivot = prevPiece.position;
-        Vector3 prevPieceScale = prevPiece.lossyScale;
-        Vector3 endOfPrevPiece = prevPiecePivot + Vector3.forward * prevPieceScale.z;
-
-        Vector3 gap = Vector3.one;
-        gap.x = Random.Range(-5, 5);
-        gap.y = Random.Range(-3, 3);
-        gap.z = Random.Range(4, 10);
-        gap = gap.normalized * platformGapSize;
-
-        Vector3 newPiecePivot = endOfPrevPiece + gap;
-
-        Quaternion rot = Quaternion.identity;
-        GameObject piece = InstatiatePiece(newPiecePivot, rot);
-
-        ScaleToPlatformPieceLength(piece);
-
-        piece.GetComponentInChildren<TMP_Text>().text = pieceWord;
-
-        return piece;
-    }
-
-    private void ScaleToPlatformPieceLength(GameObject piece)
-    {
-        Vector3 shorterPieceScale = piece.transform.localScale;
-        shorterPieceScale.z *= zScalePercentageOfPlatformPieces;
-        piece.transform.localScale = shorterPieceScale;
-    }
-
-    private GameObject AddPieceToWalkway(Transform prevPiece)
-    {
-        Vector3 prevPiecePivot = prevPiece.position;
-        Vector3 prevPieceScale = prevPiece.lossyScale;
+        Vector3 prevPiecePivot = pieceToMoveFrom.position;
+        Vector3 prevPieceScale = pieceToMoveFrom.lossyScale;
         Vector3 endOfPrevPiece = prevPiecePivot + Vector3.forward * prevPieceScale.z;
         float halfWidthOfPrevPiece = prevPieceScale.x / 2;
         Vector3 newPiecePivot = endOfPrevPiece;
         newPiecePivot.x += Random.Range(-halfWidthOfPrevPiece, halfWidthOfPrevPiece);
 
         Quaternion rot = Quaternion.identity;
-        GameObject piece = InstatiatePiece(newPiecePivot, rot);
+        GameObject piece = InstatiatePiece(newPiecePivot, rot, pieceWord);
+
+        // if (isPartOfPlatform)
+        // {
+        //     ScaleToPlatformPieceLength(piece);
+        // }
+
         return piece;
     }
 
-
-    private GameObject InstatiatePiece(Vector3 startPos, Quaternion rot)
+    public GameObject InstatiatePiece(Vector3 pivot, Quaternion rot, string pieceWord)
     {
-        GameObject piece = Instantiate(piecePrefab, startPos, rot);
+
+        GameObject piece;
+
+        if (isWordAnimationActive)
+        {
+            piece = FindAnyObjectByType<LevelPieceMolds>().CopyMold(); //does not have to find it every time
+            //now, this piece will be at the wrong scale, rotation, and position
+            //so we need to add an animation that moves it to the correct spot
+            //basically, all that we set below we need to set as TARGETS for the animation.
+        }
+        else
+        {
+            piece = Instantiate(piecePrefab, pivot, rot);
+        }
+
+        piece.GetComponentInChildren<TMP_Text>().text = pieceWord;
+
         return piece;
     }
+
+    // private void ScaleToPlatformPieceLength(GameObject piece)
+    // {
+    //     Vector3 shorterPieceScale = piece.transform.localScale;
+    //     shorterPieceScale.z *= zScalePercentageOfPlatformPieces;
+    //     piece.transform.localScale = shorterPieceScale;
+    // }
+
+    // public GameObject GeneratePieceWithGap(Transform prevPiece, string pieceWord)
+    // {
+    //     Vector3 prevPiecePivot = prevPiece.position;
+    //     Vector3 prevPieceScale = prevPiece.lossyScale;
+    //     Vector3 endOfPrevPiece = prevPiecePivot + Vector3.forward * prevPieceScale.z;
+
+    //     Vector3 gap = Vector3.one;
+    //     gap.x = Random.Range(-5, 5);
+    //     gap.y = Random.Range(-3, 3);
+    //     gap.z = Random.Range(4, 10);
+    //     gap = gap.normalized * platformGapSize;
+
+    //     Vector3 newPiecePivot = endOfPrevPiece + gap;
+
+    //     Quaternion rot = Quaternion.identity;
+
+    //     LevelPiece pieceInfo = new LevelPiece();
+    //     pieceInfo.start = newPiecePivot;
+    //     pieceInfo.forwardVector = prevPiece.forward;
+    //     pieceInfo.length = prevPieceScale.z;
+
+    //     GameObject piece = InstatiatePiece(newPiecePivot, rot);
+
+    //     ScaleToPlatformPieceLength(piece);
+
+    //     piece.GetComponentInChildren<TMP_Text>().text = pieceWord;
+
+    //     return piece;
+    // }
 }
