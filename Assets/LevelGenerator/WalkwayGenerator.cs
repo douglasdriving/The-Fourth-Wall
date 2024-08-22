@@ -9,9 +9,15 @@ public class WalkwayGenerator : MonoBehaviour
     [SerializeField] Transform walkwayParent;
     public float platformGapSize = 12f;
     [SerializeField] float zScalePercentageOfPlatformPieces = 0.7f;
+    LevelPieceMolds levelPieceMolds;
 
     //ok so, should we have a bool that determines if the word animation is active or not?
     public bool isWordAnimationActive = false;
+
+    private void Start()
+    {
+        levelPieceMolds = FindAnyObjectByType<LevelPieceMolds>();
+    }
 
     public GameObject AddPieceToWalkway(Transform pieceToMoveFrom, string pieceWord)
     {
@@ -36,11 +42,16 @@ public class WalkwayGenerator : MonoBehaviour
     public GameObject InstatiatePiece(Vector3 pivot, Quaternion rot, string pieceWord)
     {
 
+
+        /// problems
+        /// the word TARGET location is always the same, which might be because it is calculated from a level piece that is currently flying
+        /// the level piece will push the player mid anim, like when you look away from the platform
+
         GameObject piece;
 
         if (isWordAnimationActive)
         {
-            piece = FindAnyObjectByType<LevelPieceMolds>().CopyMold(); //does not have to find it every time
+            piece = levelPieceMolds.CopyNextMold();
             piece.GetComponent<LevelPiecePositioner>().MoveToPosition(pivot, rot);
         }
         else

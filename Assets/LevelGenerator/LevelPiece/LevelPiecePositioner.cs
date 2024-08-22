@@ -9,6 +9,12 @@ public class LevelPiecePositioner : MonoBehaviour
 
     [SerializeField] Vector3 defaultPieceScale = Vector3.one;
     [SerializeField] float timeToPosition = 1f;
+    Collider[] collidersToDisable;
+
+    private void Awake()
+    {
+        collidersToDisable = GetComponentsInChildren<Collider>();
+    }
 
     public void MoveToPosition(Vector3 targetPosition, Quaternion targetRotation)
     {
@@ -17,6 +23,9 @@ public class LevelPiecePositioner : MonoBehaviour
 
     IEnumerator MoveToPositionCoroutine(Vector3 targetPosition, Quaternion targetRotation)
     {
+
+        SetCollidersEnabled(false);
+
         Vector3 startPosition = transform.position;
         Quaternion startRotation = transform.rotation;
         Vector3 startScale = transform.localScale;
@@ -40,5 +49,15 @@ public class LevelPiecePositioner : MonoBehaviour
         transform.position = targetPosition;
         transform.rotation = targetRotation;
         transform.localScale = defaultPieceScale;
+
+        SetCollidersEnabled(true);
+    }
+
+    void SetCollidersEnabled(bool enabled)
+    {
+        foreach (Collider collider in collidersToDisable)
+        {
+            collider.enabled = enabled;
+        }
     }
 }

@@ -9,7 +9,7 @@ public class LevelPieceMolds : MonoBehaviour
     [SerializeField] List<GameObject> molds = new List<GameObject>();
     int indexOfLastMoldCopied = -1;
 
-    public GameObject CopyMold()
+    public GameObject CopyNextMold()
     {
         int indexOfMoldToCopy = indexOfLastMoldCopied + 1;
 
@@ -20,6 +20,11 @@ public class LevelPieceMolds : MonoBehaviour
 
         GameObject moldToCopy = molds[indexOfMoldToCopy];
         GameObject levelPieceCopy = Instantiate(moldToCopy);
+
+        levelPieceCopy.transform.position = moldToCopy.transform.position;
+        levelPieceCopy.transform.rotation = moldToCopy.transform.rotation;
+        levelPieceCopy.transform.localScale = moldToCopy.transform.localScale;
+
         levelPieceCopy.SetActive(true);
 
         indexOfLastMoldCopied = indexOfMoldToCopy;
