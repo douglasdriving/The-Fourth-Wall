@@ -2,8 +2,6 @@ using System.Collections;
 using UnityEngine;
 
 /// problems
-/// the portal is added in the wrong position now.
-/// wonky animation: words should hover a little while in front of the player before starting to move
 
 /// <summary>
 /// moves a position to a set position, rotation, and scale over a given time.
@@ -16,6 +14,7 @@ public class LevelPiecePositioner : MonoBehaviour
     public Quaternion targetRotation { get; private set; }
 
     [SerializeField] float timeToPosition = 1f;
+    [SerializeField] float hoverTime = 0.5f;
 
     Collider[] collidersToDisable;
 
@@ -42,29 +41,60 @@ public class LevelPiecePositioner : MonoBehaviour
     IEnumerator MoveAnimation()
     {
         SetCollidersEnabled(false);
+        yield return HoverInFrontOfCamera(hoverTime);
+        yield return MoveToPosition(targetPosition, timeToPosition);
+        yield return ScaleToScale(targetPieceScale, timeToPosition);
+        yield return RotateToRotation(targetRotation, timeToPosition);
+        SetCollidersEnabled(true);
+    }
 
-        Vector3 startPosition = transform.position;
-        Quaternion startRotation = transform.rotation;
-        Vector3 startScale = transform.localScale;
+    IEnumerator HoverInFrontOfCamera(float hoverTime)
+    {
+        transform.parent = Camera.main.transform; //might get fucked by functions above
+        yield return new WaitForSeconds(hoverTime);
+        transform.parent = null; //SOULD BE WALKWAY
+    }
 
+    IEnumerator MoveToPosition(Vector3 targetPos, float moveTime)
+    {
         float elapsedTime = 0;
-
-        while (elapsedTime < timeToPosition)
+        Vector3 startPosition = transform.position;
+        while (elapsedTime < moveTime)
         {
-
-            float percentageOfTimePassed = elapsedTime / timeToPosition;
-
-            transform.position = Vector3.Lerp(startPosition, targetPosition, percentageOfTimePassed);
-            transform.rotation = Quaternion.Lerp(startRotation, targetRotation, percentageOfTimePassed);
-            transform.localScale = Vector3.Lerp(startScale, targetPieceScale, percentageOfTimePassed);
-
+            float percentageOfTimePassed = elapsedTime / moveTime;
+            transform.position = Vector3.Lerp(startPosition, targetPos, percentageOfTimePassed);
             elapsedTime += Time.deltaTime;
-
             yield return null;
         }
+        transform.position = targetPos;
+    }
 
-        SetFinalTransform(targetPosition, targetRotation);
-        SetCollidersEnabled(true);
+    IEnumerator RotateToRotation(Quaternion targetRot, float rotationTime)
+    {
+        float elapsedTime = 0;
+        Quaternion startRotation = transform.rotation;
+        while (elapsedTime < rotationTime)
+        {
+            float percentageOfTimePassed = elapsedTime / rotationTime;
+            transform.rotation = Quaternion.Lerp(startRotation, targetRot, percentageOfTimePassed);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        transform.rotation = targetRot;
+    }
+
+    IEnumerator ScaleToScale(Vector3 targetScale, float scaleTime)
+    {
+        float elapsedTime = 0;
+        Vector3 startScale = transform.localScale;
+        while (elapsedTime < scaleTime)
+        {
+            float percentageOfTimePassed = elapsedTime / scaleTime;
+            transform.localScale = Vector3.Lerp(startScale, targetScale, percentageOfTimePassed);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        transform.localScale = targetScale;
     }
 
     private void SetFinalTransform(Vector3 targetPosition, Quaternion targetRotation)

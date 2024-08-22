@@ -63,7 +63,7 @@ public class LevelGenerator : MonoBehaviour
   private GameObject SpawnWalkwayPiece(string pieceWord)
   {
     GameObject piece = walkwayGenerator.AddPieceToWalkway(levelPiecesSpawned.Last().transform, pieceWord);
-    piece.transform.parent = ground;
+    // piece.transform.parent = ground; 
     return piece;
   }
 
