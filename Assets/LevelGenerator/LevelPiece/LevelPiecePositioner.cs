@@ -42,9 +42,22 @@ public class LevelPiecePositioner : MonoBehaviour
     {
         SetCollidersEnabled(false);
         yield return HoverInFrontOfCamera(hoverTime);
-        yield return MoveToPosition(targetPosition, timeToPosition);
-        yield return ScaleToScale(targetPieceScale, timeToPosition);
-        yield return RotateToRotation(targetRotation, timeToPosition);
+
+        //someone way left of the target pos first
+        // float multiplier = Random.value > 0.5f ? 1 : -1;
+        // Vector3 posLeftOfTarget = targetPosition + Vector3.left * 2 * multiplier;
+
+        Vector3 posWithSameZAsTarget = new Vector3(transform.position.x, transform.position.y, targetPosition.z);
+
+        yield return MoveToPosition(posWithSameZAsTarget, 0.8f);
+        yield return new WaitForSeconds(0.1f);
+
+        yield return ScaleToScale(targetPieceScale, 0.2f);
+        yield return new WaitForSeconds(0.1f);
+        yield return RotateToRotation(targetRotation, 0.2f);
+        yield return new WaitForSeconds(0.1f);
+        yield return MoveToPosition(targetPosition, 0.3f);
+
         SetCollidersEnabled(true);
     }
 
@@ -57,15 +70,28 @@ public class LevelPiecePositioner : MonoBehaviour
 
     IEnumerator MoveToPosition(Vector3 targetPos, float moveTime)
     {
-        float elapsedTime = 0;
-        Vector3 startPosition = transform.position;
-        while (elapsedTime < moveTime)
+
+        // Vector3 startPosition = transform.position;
+        // float elapsedTime = 0;
+        // while (elapsedTime < moveTime)
+        // {
+        //     float percentageOfTimePassed = elapsedTime / moveTime;
+        //     transform.position = Vector3.Lerp(startPosition, targetPos, percentageOfTimePassed);
+        //     elapsedTime += Time.deltaTime;
+        //     yield return null;
+        // }
+
+        float distanceToTarget = Vector3.Distance(targetPos, transform.position);
+        Vector3 directionToTarget = (targetPos - transform.position).normalized;
+        float moveSpeed = 15f;
+
+        while (distanceToTarget > 0.1f)
         {
-            float percentageOfTimePassed = elapsedTime / moveTime;
-            transform.position = Vector3.Lerp(startPosition, targetPos, percentageOfTimePassed);
-            elapsedTime += Time.deltaTime;
+            transform.position += directionToTarget * moveSpeed * Time.deltaTime;
+            distanceToTarget = Vector3.Distance(targetPos, transform.position);
             yield return null;
         }
+
         transform.position = targetPos;
     }
 
