@@ -7,7 +7,8 @@ using UnityEngine;
 public class LevelPiecePositioner : MonoBehaviour
 {
 
-    [SerializeField] Vector3 defaultPieceScale = Vector3.one;
+    public Vector3 targetPieceScale = Vector3.one;
+    public Vector3 targetPosition { get; private set; }
     [SerializeField] float timeToPosition = 1f;
     Collider[] collidersToDisable;
 
@@ -24,6 +25,8 @@ public class LevelPiecePositioner : MonoBehaviour
     IEnumerator MoveToPositionCoroutine(Vector3 targetPosition, Quaternion targetRotation)
     {
 
+        this.targetPosition = targetPosition;
+
         SetCollidersEnabled(false);
 
         Vector3 startPosition = transform.position;
@@ -39,7 +42,7 @@ public class LevelPiecePositioner : MonoBehaviour
 
             transform.position = Vector3.Lerp(startPosition, targetPosition, percentageOfTimePassed);
             transform.rotation = Quaternion.Lerp(startRotation, targetRotation, percentageOfTimePassed);
-            transform.localScale = Vector3.Lerp(startScale, defaultPieceScale, percentageOfTimePassed);
+            transform.localScale = Vector3.Lerp(startScale, targetPieceScale, percentageOfTimePassed);
 
             elapsedTime += Time.deltaTime;
 
@@ -48,7 +51,7 @@ public class LevelPiecePositioner : MonoBehaviour
 
         transform.position = targetPosition;
         transform.rotation = targetRotation;
-        transform.localScale = defaultPieceScale;
+        transform.localScale = targetPieceScale;
 
         SetCollidersEnabled(true);
     }

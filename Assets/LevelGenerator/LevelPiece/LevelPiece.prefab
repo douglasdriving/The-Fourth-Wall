@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89cc11c93b9b0484ea03c19cf2f417ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultPieceScale: {x: 2, y: 1, z: 1.2}
+  targetPieceScale: {x: 2, y: 1, z: 1.2}
   timeToPosition: 2
 --- !u!1001 &547326518130185928
 PrefabInstance:

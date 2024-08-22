@@ -21,11 +21,20 @@ public class WalkwayGenerator : MonoBehaviour
 
     public GameObject AddPieceToWalkway(Transform pieceToMoveFrom, string pieceWord)
     {
-        Vector3 prevPiecePivot = pieceToMoveFrom.position;
-        Vector3 prevPieceScale = pieceToMoveFrom.lossyScale;
-        Vector3 endOfPrevPiece = prevPiecePivot + Vector3.forward * prevPieceScale.z;
-        float halfWidthOfPrevPiece = prevPieceScale.x / 2;
-        Vector3 newPiecePivot = endOfPrevPiece;
+        Vector3 prevPieceFinalPivot = pieceToMoveFrom.position;
+        Vector3 prevPieceFinalScale = pieceToMoveFrom.lossyScale; //probably also wrong if animated
+
+        if (isWordAnimationActive)
+        {
+            LevelPiecePositioner prevPiecePositioner = pieceToMoveFrom.GetComponent<LevelPiecePositioner>();
+            prevPieceFinalPivot = prevPiecePositioner.targetPosition;
+            prevPieceFinalScale = prevPiecePositioner.targetPieceScale;
+        }
+
+        Vector3 finalEndOfPrevPiece = prevPieceFinalPivot + Vector3.forward * prevPieceFinalScale.z;
+        float halfWidthOfPrevPiece = prevPieceFinalScale.x / 2;
+
+        Vector3 newPiecePivot = finalEndOfPrevPiece;
         newPiecePivot.x += Random.Range(-halfWidthOfPrevPiece, halfWidthOfPrevPiece);
 
         Quaternion rot = Quaternion.identity;
@@ -45,7 +54,6 @@ public class WalkwayGenerator : MonoBehaviour
 
         /// problems
         /// the word TARGET location is always the same, which might be because it is calculated from a level piece that is currently flying
-        /// the level piece will push the player mid anim, like when you look away from the platform
 
         GameObject piece;
 
