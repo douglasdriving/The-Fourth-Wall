@@ -11,7 +11,6 @@ public class WalkwayGenerator : MonoBehaviour
     [SerializeField] float zScalePercentageOfPlatformPieces = 0.7f;
     LevelPieceMolds levelPieceMolds;
 
-    //ok so, should we have a bool that determines if the word animation is active or not?
     public bool isWordAnimationActive = false;
 
     private void Start()

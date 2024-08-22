@@ -1,8 +1,6 @@
 using System.Collections;
 using UnityEngine;
 
-/// problems
-
 /// <summary>
 /// moves a position to a set position, rotation, and scale over a given time.
 /// </summary>
