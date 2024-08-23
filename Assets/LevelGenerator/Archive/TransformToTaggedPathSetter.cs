@@ -15,6 +15,6 @@ public class TransformToTaggedPathSetter : MonoBehaviour
     Vector3 startPoint = pathStart.position;
     Vector3 pathEnd = GameObject.FindWithTag(pathEndObjectTag).transform.position;
     int totalPlatformPieceCount = SubtitleJsonReader.CountWordsInSubtitleFile(subtitleToGeneratePathFor);
-    FindObjectOfType<LevelGenerator>().SetPlatformingPath(startPoint, pathEnd, totalPlatformPieceCount);
+    // FindObjectOfType<LevelGenerator>().SetPlatformingPath(startPoint, pathEnd, totalPlatformPieceCount);
   }
 }

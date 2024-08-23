@@ -3,15 +3,16 @@ using UnityEngine;
 
 public class WalkwayGenerator : MonoBehaviour
 {
-    [SerializeField] GameObject piecePrefab;
-    [SerializeField] GameObject wordAnchorPrefab;
-    [SerializeField] Transform wordAnchorParent;
-    [SerializeField] Transform walkwayParent;
-    public float platformGapSize = 12f;
-    [SerializeField] float zScalePercentageOfPlatformPieces = 0.7f;
+    // [SerializeField] GameObject piecePrefab;
+    // [SerializeField] GameObject wordAnchorPrefab;
+    // [SerializeField] Transform wordAnchorParent;
+    // [SerializeField] Transform walkwayParent;
+    // public float platformGapSize = 12f;
+    // [SerializeField] float zScalePercentageOfPlatformPieces = 0.7f;
     LevelPieceMolds levelPieceMolds;
-
+    [SerializeField] float sentanceGapSize = 3f;
     public bool isWordAnimationActive = false;
+    public bool isSeparatingSentences = false;
 
     private void Start()
     {
@@ -20,8 +21,21 @@ public class WalkwayGenerator : MonoBehaviour
 
     public GameObject AddPieceToWalkway(Transform pieceToMoveFrom, string pieceWord)
     {
+        Vector3 newPiecePivot = GetNextPiecePivot(pieceToMoveFrom);
+        GameObject piece = InstatiatePiece(newPiecePivot, Quaternion.identity, pieceWord);
+
+        // if (isPartOfPlatform)
+        // {
+        //     ScaleToPlatformPieceLength(piece);
+        // }
+
+        return piece;
+    }
+
+    private Vector3 GetNextPiecePivot(Transform pieceToMoveFrom)
+    {
         Vector3 prevPieceFinalPivot = pieceToMoveFrom.position;
-        Vector3 prevPieceFinalScale = pieceToMoveFrom.lossyScale; //probably also wrong if animated
+        Vector3 prevPieceFinalScale = pieceToMoveFrom.lossyScale;
 
         if (isWordAnimationActive)
         {
@@ -36,15 +50,23 @@ public class WalkwayGenerator : MonoBehaviour
         Vector3 newPiecePivot = finalEndOfPrevPiece;
         newPiecePivot.x += Random.Range(-halfWidthOfPrevPiece, halfWidthOfPrevPiece);
 
-        Quaternion rot = Quaternion.identity;
-        GameObject piece = InstatiatePiece(newPiecePivot, rot, pieceWord);
+        if (isSeparatingSentences && pieceToMoveFrom != null)
+        {
+            TMP_Text prevPieceTextElement = pieceToMoveFrom.GetComponentInChildren<TMP_Text>();
+            if (prevPieceTextElement != null)
+            {
+                bool startsNewSentece = prevPieceTextElement.text.EndsWith(".");
+                if (startsNewSentece)
+                {
+                    newPiecePivot.z += sentanceGapSize; //gapsize, but we should have a variable for this
+                }
+            }
 
-        // if (isPartOfPlatform)
-        // {
-        //     ScaleToPlatformPieceLength(piece);
-        // }
 
-        return piece;
+            //also, make sure that player dashing is activated if we have this enabled
+        }
+
+        return newPiecePivot;
     }
 
     public GameObject InstatiatePiece(Vector3 pivot, Quaternion rot, string pieceWord)

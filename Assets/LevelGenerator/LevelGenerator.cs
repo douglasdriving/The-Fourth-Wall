@@ -15,30 +15,25 @@ public class LevelGenerator : MonoBehaviour
 
   public static LevelPieceType pieceTypeBeingGenerated = LevelPieceType.WALKWAY;
   WalkwayGenerator walkwayGenerator;
-  int piecesOnCurrentPlatform;
+
   List<LevelPiece> piecesBeingGenerated = null;
   public List<GameObject> levelPiecesSpawned = new();
-  Platform lastPlatformStarted;
+  // Platform lastPlatformStarted;
+  // int piecesOnCurrentPlatform;
   public delegate void LevelPieceSpawned(GameObject piece);
   public static event LevelPieceSpawned OnLevelPieceSpawned;
 
   void Awake()
   {
-    piecesOnCurrentPlatform = piecesPerPlatform;
+    // piecesOnCurrentPlatform = piecesPerPlatform;
     if (levelPiecesSpawned.Count <= 0) Debug.LogError("no spawned pieces in list. please assign at least one level piece to start generating from");
     walkwayGenerator = GetComponent<WalkwayGenerator>();
-  }
-
-  public void SetPlatformingPath(Vector3 pathStart, Vector3 pathEnd, int numberOfPiecesToAdd)
-  {
-    piecesBeingGenerated = PathGenerator.GetPathBetweenPoints(pathStart, pathEnd, numberOfPiecesToAdd);
   }
 
   public GameObject SpawnNextPiece(string pieceWord, int piecesLeftToSpawnInSection)
   {
     bool piecesInList = piecesBeingGenerated != null && piecesBeingGenerated.Count > 0;
     GameObject piece = null;
-
     piece = SpawnWalkwayPiece(pieceWord);
 
     // if (piecesInList)
@@ -66,6 +61,11 @@ public class LevelGenerator : MonoBehaviour
     // piece.transform.parent = ground; 
     return piece;
   }
+
+  // public void SetPlatformingPath(Vector3 pathStart, Vector3 pathEnd, int numberOfPiecesToAdd)
+  // {
+  //   piecesBeingGenerated = PathGenerator.GetPathBetweenPoints(pathStart, pathEnd, numberOfPiecesToAdd);
+  // }
 
   // public Vector3 GetEndPointOfPiece(GameObject piece)
   // {
