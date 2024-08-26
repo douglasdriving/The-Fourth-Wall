@@ -13,6 +13,7 @@ namespace LevelGeneration
         [SerializeField] float sentanceGapSize = 3f;
         public bool isWordAnimationActive = false;
         public bool isSeparatingSentences = false;
+        public bool isDissapearing = false;
 
         private void Start()
         {
@@ -83,6 +84,10 @@ namespace LevelGeneration
         {
             GameObject piece = levelPieceMolds.CopyNextMold();
             piece.GetComponent<LevelPiecePositioner>().MoveToPosition(pivot, rot, isWordAnimationActive);
+            if (isDissapearing)
+            {
+                piece.GetComponent<LevelPieceDestroyTimer>().startDestroyTimerWhenPositioned = true;
+            }
             piece.GetComponentInChildren<TMP_Text>().text = pieceWord;
             return piece;
         }

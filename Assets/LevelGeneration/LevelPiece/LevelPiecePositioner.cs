@@ -12,6 +12,7 @@ namespace LevelGeneration
         public Vector3 targetPieceScale = Vector3.one;
         public Vector3 targetPosition { get; private set; }
         public Quaternion targetRotation { get; private set; }
+        public bool reachedFinalPosition { get; private set; }
 
         [SerializeField] float hoverTime = 0.5f;
         [SerializeField] Material transparentMaterial;
@@ -19,6 +20,7 @@ namespace LevelGeneration
 
         Collider[] collidersToDisable;
         Renderer pieceRenderer;
+
 
         private void Awake()
         {
@@ -53,6 +55,7 @@ namespace LevelGeneration
             yield return RotateToRotation(targetRotation, 0.2f);
             yield return new WaitForSeconds(0.1f);
             yield return MoveToPosition(targetPosition);
+            SetFinalTransform(targetPosition, targetRotation);
             SetCollidersEnabled(true);
         }
 
@@ -112,6 +115,7 @@ namespace LevelGeneration
             transform.position = targetPosition;
             transform.rotation = targetRotation;
             transform.localScale = targetPieceScale;
+            reachedFinalPosition = true;
         }
 
         void SetCollidersEnabled(bool enabled)

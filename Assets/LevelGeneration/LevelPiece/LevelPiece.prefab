@@ -227,6 +227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8619952791990303800}
   - component: {fileID: -5928518325339512087}
+  - component: {fileID: 2057495947467307755}
   m_Layer: 0
   m_Name: LevelPiece
   m_TagString: Walkway
@@ -265,10 +266,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPieceScale: {x: 2, y: 1, z: 1.2}
-  timeToPosition: 0.5
   hoverTime: 0.6
   transparentMaterial: {fileID: 2100000, guid: 36db519eb039df047a21e2bb484959a1, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 9785987b5a406634da0c31d388254185, type: 2}
+--- !u!114 &2057495947467307755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6737570752163496808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9ae8c4e8ebcd4a4b82aff3685b3a48c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimer: 3
+  startDestroyTimerWhenPositioned: 0
 --- !u!1001 &547326518130185928
 PrefabInstance:
   m_ObjectHideFlags: 0
