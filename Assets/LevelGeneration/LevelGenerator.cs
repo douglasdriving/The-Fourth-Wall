@@ -5,7 +5,7 @@ using UnityEngine;
 namespace LevelGeneration
 {
   /// <summary>
-  /// contains functions for adding pieces to the level
+  /// adds pieces to the level
   /// </summary>
   [RequireComponent(typeof(WalkwayGenerator))]
   public class LevelGenerator : MonoBehaviour
