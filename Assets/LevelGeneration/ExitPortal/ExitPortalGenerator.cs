@@ -1,25 +1,29 @@
 using System.Collections;
 using UnityEngine;
 
-/// <summary>
-/// generates an exit portal at the end of the level after a delay
-/// </summary>
-public class ExitPortalGenerator : MonoBehaviour
+namespace LevelGeneration
 {
-    [SerializeField] GameObject exitPortalPrefab;
-    [SerializeField] float portalHeightAbovePlatform = 1.5f;
-
-    public IEnumerator GenerateExitPortalAfterDelay(float delay)
+    /// <summary>
+    /// generates an exit portal at the end of the level after a delay
+    /// </summary>
+    public class ExitPortalGenerator : MonoBehaviour
     {
-        yield return new WaitForSeconds(delay);
-        GeneratePieceWithPortal();
-    }
+        [SerializeField] GameObject exitPortalPrefab;
+        [SerializeField] float portalHeightAbovePlatform = 1.5f;
 
-    private void GeneratePieceWithPortal()
-    {
-        GameObject portalLevelPiece = FindObjectOfType<LevelGenerator>().SpawnNextPiece("", 0);
-        LevelPiecePositioner piecePositioner = portalLevelPiece.GetComponent<LevelPiecePositioner>();
-        Vector3 portalPos = piecePositioner.targetPosition + Vector3.up * portalHeightAbovePlatform;
-        Instantiate(exitPortalPrefab, portalPos, piecePositioner.targetRotation);
+        public IEnumerator GenerateExitPortalAfterDelay(float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            GeneratePieceWithPortal();
+        }
+
+        private void GeneratePieceWithPortal()
+        {
+            GameObject portalLevelPiece = FindObjectOfType<LevelGenerator>().SpawnNextPiece("");
+            LevelPiecePositioner piecePositioner = portalLevelPiece.GetComponent<LevelPiecePositioner>();
+            Vector3 portalPos = piecePositioner.targetPosition + Vector3.up * portalHeightAbovePlatform;
+            Instantiate(exitPortalPrefab, portalPos, piecePositioner.targetRotation);
+        }
     }
 }
+

@@ -1,14 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnPointTrigger : MonoBehaviour
+namespace LevelGeneration
 {
-    private void OnTriggerEnter(Collider other)
+    /// <summary>
+    /// sets the spawn point for the player when they enter the trigger
+    /// </summary>
+    public class SpawnPointTrigger : MonoBehaviour
     {
-        if (other.CompareTag("Player"))
+        private void OnTriggerEnter(Collider other)
         {
-            other.GetComponent<FallReset>().SetSpawnPoint();
+            if (other.CompareTag("Player"))
+            {
+                other.GetComponent<FallReset>().SetSpawnPoint();
+            }
         }
     }
 }
+

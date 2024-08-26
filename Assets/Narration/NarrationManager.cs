@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using LevelGeneration;
 using UnityEngine;
 
 namespace Narration
