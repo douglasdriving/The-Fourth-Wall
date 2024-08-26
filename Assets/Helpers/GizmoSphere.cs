@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace EditorUtilities
+namespace Helpers
 {
     /// <summary>
     /// shows a gizmo sphere at the object position in the editor

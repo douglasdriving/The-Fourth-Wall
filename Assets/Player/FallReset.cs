@@ -1,22 +1,19 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Player
 {
     /// <summary>
-    /// respawns they player if they fall for too long
+    /// reloads the scene if the player falls for too long
     /// </summary>
     public class FallReset : MonoBehaviour
     {
         [SerializeField] float fallTimeForReset = 3;
-        Vector3 spawnPos;
-        Quaternion spawnRot;
         Rigidbody rb;
         float timeSpentFalling = 0;
 
         private void Awake()
         {
-            spawnPos = transform.position;
-            spawnRot = transform.rotation;
             rb = GetComponent<Rigidbody>();
         }
 
@@ -35,22 +32,14 @@ namespace Player
 
             if (timeSpentFalling > fallTimeForReset)
             {
-                ResetPlayer();
+                ReloadScene();
                 timeSpentFalling = 0;
             }
         }
 
-        public void SetSpawnPoint()
+        void ReloadScene()
         {
-            spawnPos = transform.position + Vector3.up * 0.02f;
-            spawnRot = transform.rotation;
-        }
-
-        void ResetPlayer()
-        {
-            rb.velocity = Vector3.zero;
-            transform.position = spawnPos;
-            transform.rotation = spawnRot;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 

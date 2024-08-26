@@ -115,7 +115,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6882909526695664172}
   - component: {fileID: 2373896282468493911}
-  - component: {fileID: 7091020400399368222}
   - component: {fileID: 5233320397544077580}
   m_Layer: 0
   m_Name: WalkDetector
@@ -160,18 +159,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7091020400399368222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1876559722440093188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e38a2e05ac65e54097c9f6c7edb7a22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5233320397544077580
 MonoBehaviour:
   m_ObjectHideFlags: 0
