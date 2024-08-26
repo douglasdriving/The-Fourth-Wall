@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -28,19 +29,18 @@ namespace LevelGeneration
             collidersToDisable = GetComponentsInChildren<Collider>();
         }
 
-        public void MoveToPosition(Vector3 targetPosition, Quaternion targetRotation, bool animate)
+        public void SetPosition(Vector3 targetPosition, Quaternion targetRotation)
         {
             this.targetPosition = targetPosition;
             this.targetRotation = targetRotation;
+            SetFinalTransform(targetPosition, targetRotation);
+        }
 
-            if (animate)
-            {
-                StartCoroutine(MoveAnimation());
-            }
-            else
-            {
-                SetFinalTransform(targetPosition, targetRotation);
-            }
+        public void MoveWithAnimation(Vector3 targetPosition, Quaternion targetRotation)
+        {
+            this.targetPosition = targetPosition;
+            this.targetRotation = targetRotation;
+            StartCoroutine(MoveAnimation());
         }
 
         IEnumerator MoveAnimation()
@@ -52,6 +52,24 @@ namespace LevelGeneration
             yield return new WaitForSeconds(0.1f);
             yield return ScaleToScale(targetPieceScale, 0.2f);
             yield return new WaitForSeconds(0.1f);
+            yield return RotateToRotation(targetRotation, 0.2f);
+            yield return new WaitForSeconds(0.1f);
+            yield return MoveToPosition(targetPosition);
+            SetFinalTransform(targetPosition, targetRotation);
+            SetCollidersEnabled(true);
+        }
+
+        public void MoveWithSimpleAnimation(Vector3 targetPos, Quaternion targetRot)
+        {
+            targetPosition = targetPos;
+            targetRotation = targetRot;
+            StartCoroutine(SimpleMoveAnimation());
+        }
+
+        IEnumerator SimpleMoveAnimation()
+        {
+            SetCollidersEnabled(false);
+            yield return new WaitForSeconds(0.3f);
             yield return RotateToRotation(targetRotation, 0.2f);
             yield return new WaitForSeconds(0.1f);
             yield return MoveToPosition(targetPosition);
