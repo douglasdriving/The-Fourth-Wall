@@ -1,4 +1,5 @@
 using System;
+using LevelGeneration;
 using TMPro;
 using UnityEngine;
 
@@ -92,7 +93,7 @@ namespace Narration
             }
             else if (mode == SubtitleMode.SpawnWithNewLevelPiece)
             {
-                levelGenerator.SpawnNextPiece(word, GetWordsLeftInSubtitle());
+                levelGenerator.SpawnNextPiece(word);
             }
             else
             {
