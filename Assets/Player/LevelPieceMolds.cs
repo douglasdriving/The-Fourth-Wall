@@ -1,34 +1,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// keeps track of all the level piece molds in front of the player and lets them be copied
-/// </summary>
-public class LevelPieceMolds : MonoBehaviour
+namespace Player
 {
-    [SerializeField] List<GameObject> molds = new List<GameObject>();
-    int indexOfLastMoldCopied = -1;
-
-    public GameObject CopyNextMold()
+    /// <summary>
+    /// keeps track of all the level piece molds in front of the player and lets them be copied
+    /// </summary>
+    public class LevelPieceMolds : MonoBehaviour
     {
-        int indexOfMoldToCopy = indexOfLastMoldCopied + 1;
+        [SerializeField] List<GameObject> molds = new List<GameObject>();
+        int indexOfLastMoldCopied = -1;
 
-        if (indexOfMoldToCopy >= molds.Count)
+        public GameObject CopyNextMold()
         {
-            indexOfMoldToCopy = 0;
+            int indexOfMoldToCopy = indexOfLastMoldCopied + 1;
+
+            if (indexOfMoldToCopy >= molds.Count)
+            {
+                indexOfMoldToCopy = 0;
+            }
+
+            GameObject moldToCopy = molds[indexOfMoldToCopy];
+            GameObject levelPieceCopy = Instantiate(moldToCopy);
+
+            levelPieceCopy.transform.position = moldToCopy.transform.position;
+            levelPieceCopy.transform.rotation = moldToCopy.transform.rotation;
+            levelPieceCopy.transform.localScale = moldToCopy.transform.localScale;
+
+            levelPieceCopy.SetActive(true);
+
+            indexOfLastMoldCopied = indexOfMoldToCopy;
+
+            return levelPieceCopy;
         }
-
-        GameObject moldToCopy = molds[indexOfMoldToCopy];
-        GameObject levelPieceCopy = Instantiate(moldToCopy);
-
-        levelPieceCopy.transform.position = moldToCopy.transform.position;
-        levelPieceCopy.transform.rotation = moldToCopy.transform.rotation;
-        levelPieceCopy.transform.localScale = moldToCopy.transform.localScale;
-
-        levelPieceCopy.SetActive(true);
-
-        indexOfLastMoldCopied = indexOfMoldToCopy;
-
-        return levelPieceCopy;
     }
 }
+
