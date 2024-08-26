@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9ae8c4e8ebcd4a4b82aff3685b3a48c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyTimer: 3
+  destroyTimer: 5
   startDestroyTimerWhenPositioned: 0
 --- !u!1001 &547326518130185928
 PrefabInstance:
