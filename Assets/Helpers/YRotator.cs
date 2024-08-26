@@ -1,21 +1,28 @@
 using UnityEngine;
 
-public class YRotator : MonoBehaviour
+namespace Helpers
 {
-    [SerializeField] float rotationSpeed = 20;
-    bool isRotating = true;
-
-    void Update()
+    /// <summary>
+    /// rotates a game object around the y axis continuously
+    /// </summary>
+    public class YRotator : MonoBehaviour
     {
-        if (!isRotating) return;
-        Vector3 oldRotation = transform.rotation.eulerAngles;
-        Vector3 newRotation = oldRotation;
-        newRotation.y += rotationSpeed * Time.deltaTime;
-        transform.rotation = Quaternion.Euler(newRotation);
-    }
+        [SerializeField] float rotationSpeed = 20;
+        bool isRotating = true;
 
-    public void StopRotation()
-    {
-        isRotating = false;
+        void Update()
+        {
+            if (!isRotating) return;
+            Vector3 oldRotation = transform.rotation.eulerAngles;
+            Vector3 newRotation = oldRotation;
+            newRotation.y += rotationSpeed * Time.deltaTime;
+            transform.rotation = Quaternion.Euler(newRotation);
+        }
+
+        public void StopRotation()
+        {
+            isRotating = false;
+        }
     }
 }
+
