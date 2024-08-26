@@ -1,22 +1,29 @@
 using UnityEngine;
 
-public class TriggerGameObjectActivator : MonoBehaviour
+namespace Helpers
 {
-    [SerializeField] GameObject objectToActivate;
-    [SerializeField] string objectTagToTriggerFor = "Player";
-
-    void OnTriggerEnter(Collider other)
+    /// <summary>
+    /// Actives a game object on collision with a tagged game object
+    /// </summary>
+    public class TriggerGameObjectActivator : MonoBehaviour
     {
-        if (objectToActivate.activeInHierarchy)
-        {
-            return;
-        }
+        [SerializeField] GameObject objectToActivate;
+        [SerializeField] string objectTagToTriggerFor = "Player";
 
-        if (!other.CompareTag(objectTagToTriggerFor))
+        void OnTriggerEnter(Collider other)
         {
-            return;
-        }
+            if (objectToActivate.activeInHierarchy)
+            {
+                return;
+            }
 
-        objectToActivate.SetActive(true);
+            if (!other.CompareTag(objectTagToTriggerFor))
+            {
+                return;
+            }
+
+            objectToActivate.SetActive(true);
+        }
     }
+
 }
