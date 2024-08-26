@@ -50,23 +50,39 @@ public class WalkwayGenerator : MonoBehaviour
         Vector3 newPiecePivot = finalEndOfPrevPiece;
         newPiecePivot.x += Random.Range(-halfWidthOfPrevPiece, halfWidthOfPrevPiece);
 
-        if (isSeparatingSentences && pieceToMoveFrom != null)
+        if (isSeparatingSentences)
         {
-            TMP_Text prevPieceTextElement = pieceToMoveFrom.GetComponentInChildren<TMP_Text>();
-            if (prevPieceTextElement != null)
-            {
-                bool startsNewSentece = prevPieceTextElement.text.EndsWith(".");
-                if (startsNewSentece)
-                {
-                    newPiecePivot.z += sentanceGapSize; //gapsize, but we should have a variable for this
-                }
-            }
-
-
-            //also, make sure that player dashing is activated if we have this enabled
+            newPiecePivot = ExtendWithSentenceGapIfLastPieceEndedSentence(pieceToMoveFrom, newPiecePivot);
         }
 
         return newPiecePivot;
+    }
+
+    private Vector3 ExtendWithSentenceGapIfLastPieceEndedSentence(Transform lastPiece, Vector3 piecePivotToExtend)
+    {
+        bool lastPieceEndedSentence = false;
+        if (lastPiece != null)
+        {
+            lastPieceEndedSentence = IsPieceWordEndingSentence(lastPiece);
+        }
+        if (lastPieceEndedSentence)
+        {
+            piecePivotToExtend.z += sentanceGapSize;
+        }
+
+        return piecePivotToExtend;
+    }
+
+    private static bool IsPieceWordEndingSentence(Transform pieceToMoveFrom)
+    {
+        bool startsNewSentece = false;
+        TMP_Text prevPieceTextElement = pieceToMoveFrom.GetComponentInChildren<TMP_Text>();
+        if (prevPieceTextElement != null)
+        {
+            startsNewSentece = prevPieceTextElement.text.EndsWith(".");
+        }
+
+        return startsNewSentece;
     }
 
     public GameObject InstatiatePiece(Vector3 pivot, Quaternion rot, string pieceWord)
