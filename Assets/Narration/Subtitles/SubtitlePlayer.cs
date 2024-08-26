@@ -5,6 +5,9 @@ using UnityEngine;
 
 namespace Narration
 {
+    /// <summary>
+    /// Plays subtitles in the world
+    /// </summary>
     public class SubtitlePlayer : MonoBehaviour
     {
         [SerializeField] LevelGenerator levelGenerator;
@@ -37,7 +40,7 @@ namespace Narration
         void Update()
         {
             if (currentSubtitles == null) return;
-            if (NarrationManager.playState != PlayState.PLAY) return;
+            if (NarrationManager.playState != NarrationManager.PlayState.PLAY) return;
 
             bool isTimeForNextSubtitleStep = NarrationManager.timeCurrentNarrationHasPlayed >= timeForNextSubtitleStep;
 
@@ -135,19 +138,6 @@ namespace Narration
             {
                 nextLevelPieceIndexToShowWordOn++;
             }
-        }
-
-        private int GetWordsLeftInSubtitle()
-        {
-            SubtitleSegment currentSegment = currentSubtitles.segments[currentSegmentIndex];
-            int wordsLeftInCurrentSegment = currentSegment.words.Length - (currentWordIndex + 1);
-            int wordsLeftInUpcomingSegments = 0;
-            for (int i = currentSegmentIndex + 1; i < currentSubtitles.segments.Length; i++)
-            {
-                wordsLeftInUpcomingSegments += currentSubtitles.segments[i].words.Length;
-            }
-            int wordsLeftInSubtitle = wordsLeftInCurrentSegment + wordsLeftInUpcomingSegments;
-            return wordsLeftInSubtitle;
         }
 
         private void UpdateNextWordTime()

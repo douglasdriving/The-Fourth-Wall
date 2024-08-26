@@ -2,6 +2,9 @@ using UnityEngine;
 
 namespace Narration
 {
+    /// <summary>
+    /// Plays voice over clips
+    /// </summary>
     public class VoiceOverPlayer : MonoBehaviour
     {
         private static AudioSource audioSource;

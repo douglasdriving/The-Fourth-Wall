@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace Narration
 {
+    /// <summary>
+    /// Unpauses the narration when the player enters the trigger
+    /// </summary>
     public class UnpauseTrigger : MonoBehaviour
     {
         public bool isActive = false;

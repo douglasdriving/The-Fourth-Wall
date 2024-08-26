@@ -4,16 +4,18 @@ using UnityEngine;
 
 namespace Narration
 {
-
-    public enum PlayState
-    {
-        STOP,
-        PLAY,
-        PAUSE
-    }
-
+    /// <summary>
+    /// manages the playing of narration clips and subtitles
+    /// </summary>
     public class NarrationManager : MonoBehaviour
     {
+
+        public enum PlayState
+        {
+            STOP,
+            PLAY,
+            PAUSE
+        }
 
         const int numberOfUnpausePiecesOnPause = 8;
         const float pauseDelay = 0.12f;
