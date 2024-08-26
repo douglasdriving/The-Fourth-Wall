@@ -1,45 +1,50 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class VerticalMover : MonoBehaviour
+namespace Helpers
 {
-    [SerializeField] float baseMoveDistance = 0.1f;
-    [SerializeField] float timePerCycle = 1;
-    bool isMovingUp = true;
-    float initialYPos;
-    Camera cam;
-
-    void Awake()
+    /// <summary>
+    /// moves an object up and down based on its distance to the camera
+    /// </summary>
+    public class VerticalMover : MonoBehaviour
     {
-        initialYPos = transform.position.y;
-        cam = Camera.main;
-    }
+        [SerializeField] float baseMoveDistance = 0.1f;
+        [SerializeField] float timePerCycle = 1;
+        bool isMovingUp = true;
+        float initialYPos;
+        Camera cam;
 
-    void Update()
-    {
-        float distanceToCamera = Vector3.Distance(transform.position, cam.transform.position);
-        float scaledDistance = baseMoveDistance * distanceToCamera;
-        float moveSpeed = scaledDistance / timePerCycle;
-        float distanceToMoveThisFrame = moveSpeed * Time.deltaTime;
-
-        if (isMovingUp)
+        void Awake()
         {
-            float newYPos = transform.position.y + distanceToMoveThisFrame;
-            transform.position = new Vector3(transform.position.x, newYPos, transform.position.z);
-            if (newYPos >= initialYPos + scaledDistance)
-            {
-                isMovingUp = false;
-            }
+            initialYPos = transform.position.y;
+            cam = Camera.main;
         }
-        else
+
+        void Update()
         {
-            float newYPos = transform.position.y - distanceToMoveThisFrame;
-            transform.position = new Vector3(transform.position.x, newYPos, transform.position.z);
-            if (newYPos <= initialYPos)
+            float distanceToCamera = Vector3.Distance(transform.position, cam.transform.position);
+            float scaledDistance = baseMoveDistance * distanceToCamera;
+            float moveSpeed = scaledDistance / timePerCycle;
+            float distanceToMoveThisFrame = moveSpeed * Time.deltaTime;
+
+            if (isMovingUp)
             {
-                isMovingUp = true;
+                float newYPos = transform.position.y + distanceToMoveThisFrame;
+                transform.position = new Vector3(transform.position.x, newYPos, transform.position.z);
+                if (newYPos >= initialYPos + scaledDistance)
+                {
+                    isMovingUp = false;
+                }
+            }
+            else
+            {
+                float newYPos = transform.position.y - distanceToMoveThisFrame;
+                transform.position = new Vector3(transform.position.x, newYPos, transform.position.z);
+                if (newYPos <= initialYPos)
+                {
+                    isMovingUp = true;
+                }
             }
         }
     }
 }
+
