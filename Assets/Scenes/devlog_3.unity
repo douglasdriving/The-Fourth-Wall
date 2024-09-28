@@ -450,6 +450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   railPrefab: {fileID: 6634007023895207853, guid: 6c2aa10e2972cb443b4b2d408cab9e90, type: 3}
+  railLength: 5
 --- !u!4 &1377568847
 Transform:
   m_ObjectHideFlags: 0
@@ -804,6 +805,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7021466173556650257, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: isSeparatingSentences
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7534025309003727685, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+      propertyPath: isSpawningAndRails
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

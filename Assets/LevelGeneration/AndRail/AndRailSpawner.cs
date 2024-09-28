@@ -10,17 +10,20 @@ namespace LevelGeneration
     public class AndRailSpawner : MonoBehaviour
     {
         [SerializeField] GameObject railPrefab;
+        [SerializeField] float railLength = 5;
 
-        void Awake()
-        {
-            SpawnRail(new Vector3(0, 0, 5), new Vector3(0, 0, 10));
-        }
+        // void Awake()
+        // {
+        //     SpawnRail(new Vector3(0, 0, 5), new Vector3(0, 0, 10));
+        // }
 
-        public void SpawnRail(Vector3 start, Vector3 end)
+        public GameObject SpawnRail(Vector3 start)
         {
+            Vector3 end = start + Vector3.forward * railLength;
             GameObject rail = Instantiate(railPrefab);
             AndRailPositioner positioner = rail.GetComponent<AndRailPositioner>();
             positioner.SetupRailPositioning(start, end);
+            return rail;
         }
     }
 }

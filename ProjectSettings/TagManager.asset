@@ -12,6 +12,7 @@ TagManager:
   - SecondCrystalPlatformEntryPoint
   - WordAnchor
   - ThirdCrystalPlatformEntryPoint
+  - LevelPieceEnd
   layers:
   - Default
   - TransparentFX

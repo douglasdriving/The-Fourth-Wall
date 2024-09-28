@@ -12,8 +12,6 @@ namespace LevelGeneration
     {
         WalkwayPieceFactory walkwayPieceFactory;
         [SerializeField] float sentanceGapSize = 3f;
-
-
         public enum AnimationType
         {
             NONE,
@@ -21,7 +19,6 @@ namespace LevelGeneration
             MOVE_FROM_ABOVE_TARGET,
         }
         [SerializeField] AnimationType animationType = AnimationType.NONE;
-
         public bool isSeparatingSentences = false;
         public bool isDissapearing = false;
 
@@ -30,53 +27,40 @@ namespace LevelGeneration
             walkwayPieceFactory = GetComponent<WalkwayPieceFactory>();
         }
 
-        public GameObject AddPieceToWalkway(Transform prevPiece, string pieceWord)
+        public GameObject AddPieceToWalkway(Vector3 endOfLastPiece, string pieceWord, string lastPieceWord)
         {
-            Vector3 finalPos = GetNextPieceFinalPos(prevPiece);
-            GameObject piece = InstatiatePiece(finalPos, Quaternion.identity, pieceWord, prevPiece);
+            Vector3 newPiecePivot = GetNextPieceFinalPos(endOfLastPiece, lastPieceWord);
+            GameObject piece = InstatiatePiece(newPiecePivot, Quaternion.identity, pieceWord);
             return piece;
         }
 
-        private Vector3 GetNextPieceFinalPos(Transform pieceToMoveFrom)
+        private Vector3 GetNextPieceFinalPos(Vector3 endOfLastPiece, string lastPieceWord)
         {
-            Vector3 prevPieceFinalPivot = pieceToMoveFrom.position;
-            Vector3 prevPieceFinalScale = pieceToMoveFrom.lossyScale;
+            Vector3 newPiecePivot = endOfLastPiece;
+            newPiecePivot.x += Random.Range(-0.3f, 0.3f); //magic numba
 
-            if (animationType != AnimationType.NONE)
+            if (isSeparatingSentences && lastPieceWord.EndsWith("."))
             {
-                LevelPiecePositioner prevPiecePositioner = pieceToMoveFrom.GetComponent<LevelPiecePositioner>();
-                prevPieceFinalPivot = prevPiecePositioner.targetPos;
-                prevPieceFinalScale = prevPiecePositioner.targetPieceScale;
-            }
-
-            Vector3 finalEndOfPrevPiece = prevPieceFinalPivot + Vector3.forward * prevPieceFinalScale.z;
-            float halfWidthOfPrevPiece = prevPieceFinalScale.x / 2;
-
-            Vector3 newPiecePivot = finalEndOfPrevPiece;
-            newPiecePivot.x += Random.Range(-halfWidthOfPrevPiece, halfWidthOfPrevPiece);
-
-            if (isSeparatingSentences)
-            {
-                newPiecePivot = ExtendWithSentenceGapIfLastPieceEndedSentence(pieceToMoveFrom, newPiecePivot);
+                newPiecePivot.z += sentanceGapSize;
             }
 
             return newPiecePivot;
         }
 
-        private Vector3 ExtendWithSentenceGapIfLastPieceEndedSentence(Transform lastPiece, Vector3 piecePivotToExtend)
-        {
-            bool lastPieceEndedSentence = false;
-            if (lastPiece != null)
-            {
-                lastPieceEndedSentence = IsPieceWordEndingSentence(lastPiece);
-            }
-            if (lastPieceEndedSentence)
-            {
-                piecePivotToExtend.z += sentanceGapSize;
-            }
+        // private Vector3 ExtendWithSentenceGapIfLastPieceEndedSentence(Transform lastPiece, Vector3 piecePivotToExtend)
+        // {
+        //     bool lastPieceEndedSentence = false;
+        //     if (lastPiece != null)
+        //     {
+        //         lastPieceEndedSentence = IsPieceWordEndingSentence(lastPiece);
+        //     }
+        //     if (lastPieceEndedSentence)
+        //     {
+        //         piecePivotToExtend.z += sentanceGapSize;
+        //     }
 
-            return piecePivotToExtend;
-        }
+        //     return piecePivotToExtend;
+        // }
 
         private static bool IsPieceWordEndingSentence(Transform pieceToMoveFrom)
         {
@@ -90,7 +74,7 @@ namespace LevelGeneration
             return startsNewSentece;
         }
 
-        public GameObject InstatiatePiece(Vector3 targetPos, Quaternion targetRot, string pieceWord, Transform prevPiece)
+        public GameObject InstatiatePiece(Vector3 targetPos, Quaternion targetRot, string pieceWord)
         {
 
             GameObject piece = null;
