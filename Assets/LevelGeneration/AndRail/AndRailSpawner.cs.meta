@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: e276b0dcd646ef64588e2ea135e84667
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - railPrefab: {fileID: 6634007023895207853, guid: 6c2aa10e2972cb443b4b2d408cab9e90, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -40,14 +40,14 @@ public class PlayerMoveHolder : MonoBehaviour
 
   private void ReleasePlayer()
   {
-    firstPersonController.playerCanMove = true;
+    firstPersonController.canMove = true;
     firstPersonController.enableJump = true;
     isHoldingPlayer = false;
   }
 
   public void HoldPlayer()
   {
-    firstPersonController.playerCanMove = false;
+    firstPersonController.canMove = false;
     firstPersonController.enableJump = false;
     isHoldingPlayer = true;
   }
