@@ -97,7 +97,7 @@ namespace LevelGeneration
 
             if (animationType == AnimationType.MOVE_FROM_ABOVE_TARGET)
             {
-                piece = walkwayPieceFactory.SpawnAboveTargetAndMoveIntoPlace(targetPos, targetRot, pieceWord, 1.5f);
+                piece = walkwayPieceFactory.SpawnAboveTargetAndMoveIntoPlace(targetPos, targetRot, pieceWord, 1.5f); //magic numba!
             }
             else if (animationType == AnimationType.MOVE_FROM_SUBTITLE)
             {

@@ -5,7 +5,7 @@ using UnityEngine;
 namespace LevelGeneration
 {
     /// <summary>
-    /// spawns a rail between 2
+    /// spawns a rail between 2 points
     /// </summary>
     public class AndRailSpawner : MonoBehaviour
     {
@@ -13,13 +13,14 @@ namespace LevelGeneration
 
         void Awake()
         {
-            SpawnRail(new Vector3(2, 0, 0), new Vector3(10, 0, 10));
+            SpawnRail(new Vector3(0, 0, 5), new Vector3(0, 0, 10));
         }
 
         public void SpawnRail(Vector3 start, Vector3 end)
         {
-            Rail rail = Instantiate(railPrefab).GetComponent<Rail>();
-            rail.SetStartAndEnd(start, end);
+            GameObject rail = Instantiate(railPrefab);
+            AndRailPositioner positioner = rail.GetComponent<AndRailPositioner>();
+            positioner.SetupRailPositioning(start, end);
         }
     }
 }
