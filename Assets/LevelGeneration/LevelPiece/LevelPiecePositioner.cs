@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -10,8 +11,8 @@ namespace LevelGeneration
     {
 
         public Vector3 targetPieceScale = Vector3.one;
-        public Vector3 targetPosition { get; private set; }
-        public Quaternion targetRotation { get; private set; }
+        public Vector3 targetPos { get; private set; }
+        public Quaternion targetRot { get; private set; }
         public bool reachedFinalPosition { get; private set; }
 
         [SerializeField] float hoverTime = 0.5f;
@@ -28,34 +29,51 @@ namespace LevelGeneration
             collidersToDisable = GetComponentsInChildren<Collider>();
         }
 
-        public void MoveToPosition(Vector3 targetPosition, Quaternion targetRotation, bool animate)
+        public void SetPosition(Vector3 targetPosition, Quaternion targetRotation)
         {
-            this.targetPosition = targetPosition;
-            this.targetRotation = targetRotation;
+            this.targetPos = targetPosition;
+            this.targetRot = targetRotation;
+            SetFinalTransform(targetPosition, targetRotation);
+        }
 
-            if (animate)
-            {
-                StartCoroutine(MoveAnimation());
-            }
-            else
-            {
-                SetFinalTransform(targetPosition, targetRotation);
-            }
+        public void MoveWithAnimation(Vector3 targetPosition, Quaternion targetRotation)
+        {
+            this.targetPos = targetPosition;
+            this.targetRot = targetRotation;
+            StartCoroutine(MoveAnimation());
         }
 
         IEnumerator MoveAnimation()
         {
             SetCollidersEnabled(false);
             yield return HoverInFrontOfCamera(hoverTime);
-            Vector3 posWithSameZAsTarget = new Vector3(transform.position.x, transform.position.y, targetPosition.z);
+            Vector3 posWithSameZAsTarget = new Vector3(transform.position.x, transform.position.y, targetPos.z);
             yield return MoveToPosition(posWithSameZAsTarget);
             yield return new WaitForSeconds(0.1f);
             yield return ScaleToScale(targetPieceScale, 0.2f);
             yield return new WaitForSeconds(0.1f);
-            yield return RotateToRotation(targetRotation, 0.2f);
+            yield return RotateToRotation(targetRot, 0.2f);
             yield return new WaitForSeconds(0.1f);
-            yield return MoveToPosition(targetPosition);
-            SetFinalTransform(targetPosition, targetRotation);
+            yield return MoveToPosition(targetPos);
+            SetFinalTransform(targetPos, targetRot);
+            SetCollidersEnabled(true);
+        }
+
+        public void MoveWithSimpleAnimation(Vector3 _targetPos, Quaternion _targetRot)
+        {
+            targetPos = _targetPos;
+            targetRot = _targetRot;
+            StartCoroutine(SimpleMoveAnimation());
+        }
+
+        IEnumerator SimpleMoveAnimation()
+        {
+            SetCollidersEnabled(false);
+            yield return new WaitForSeconds(0.2f);
+            yield return RotateToRotation(targetRot, 0.2f);
+            yield return new WaitForSeconds(0.1f);
+            yield return MoveToPosition(targetPos);
+            SetFinalTransform(targetPos, targetRot);
             SetCollidersEnabled(true);
         }
 

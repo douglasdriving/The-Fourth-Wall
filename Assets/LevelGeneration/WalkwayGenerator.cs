@@ -7,39 +7,45 @@ namespace LevelGeneration
     /// <summary>
     /// Generates a walkway of pieces to walk on
     /// </summary>
+    [RequireComponent(typeof(WalkwayPieceFactory))]
     public class WalkwayGenerator : MonoBehaviour
     {
-        LevelPieceMolds levelPieceMolds;
+        WalkwayPieceFactory walkwayPieceFactory;
         [SerializeField] float sentanceGapSize = 3f;
-        public bool isWordAnimationActive = false;
+
+
+        public enum AnimationType
+        {
+            NONE,
+            MOVE_FROM_SUBTITLE,
+            MOVE_FROM_ABOVE_TARGET,
+        }
+        [SerializeField] AnimationType animationType = AnimationType.NONE;
+
         public bool isSeparatingSentences = false;
         public bool isDissapearing = false;
 
         private void Start()
         {
-            levelPieceMolds = FindAnyObjectByType<LevelPieceMolds>();
-            if (levelPieceMolds == null)
-            {
-                Debug.LogError("No LevelPieceMolds found in scene");
-            }
+            walkwayPieceFactory = GetComponent<WalkwayPieceFactory>();
         }
 
-        public GameObject AddPieceToWalkway(Transform pieceToMoveFrom, string pieceWord)
+        public GameObject AddPieceToWalkway(Transform prevPiece, string pieceWord)
         {
-            Vector3 newPiecePivot = GetNextPiecePivot(pieceToMoveFrom);
-            GameObject piece = InstatiatePiece(newPiecePivot, Quaternion.identity, pieceWord);
+            Vector3 finalPos = GetNextPieceFinalPos(prevPiece);
+            GameObject piece = InstatiatePiece(finalPos, Quaternion.identity, pieceWord, prevPiece);
             return piece;
         }
 
-        private Vector3 GetNextPiecePivot(Transform pieceToMoveFrom)
+        private Vector3 GetNextPieceFinalPos(Transform pieceToMoveFrom)
         {
             Vector3 prevPieceFinalPivot = pieceToMoveFrom.position;
             Vector3 prevPieceFinalScale = pieceToMoveFrom.lossyScale;
 
-            if (isWordAnimationActive)
+            if (animationType != AnimationType.NONE)
             {
                 LevelPiecePositioner prevPiecePositioner = pieceToMoveFrom.GetComponent<LevelPiecePositioner>();
-                prevPieceFinalPivot = prevPiecePositioner.targetPosition;
+                prevPieceFinalPivot = prevPiecePositioner.targetPos;
                 prevPieceFinalScale = prevPiecePositioner.targetPieceScale;
             }
 
@@ -84,15 +90,30 @@ namespace LevelGeneration
             return startsNewSentece;
         }
 
-        public GameObject InstatiatePiece(Vector3 pivot, Quaternion rot, string pieceWord)
+        public GameObject InstatiatePiece(Vector3 targetPos, Quaternion targetRot, string pieceWord, Transform prevPiece)
         {
-            GameObject piece = levelPieceMolds.CopyNextMold();
-            piece.GetComponent<LevelPiecePositioner>().MoveToPosition(pivot, rot, isWordAnimationActive);
+
+            GameObject piece = null;
+
+            if (animationType == AnimationType.MOVE_FROM_ABOVE_TARGET)
+            {
+                piece = walkwayPieceFactory.SpawnAboveTargetAndMoveIntoPlace(targetPos, targetRot, pieceWord, 1.5f);
+            }
+            else if (animationType == AnimationType.MOVE_FROM_SUBTITLE)
+            {
+                piece = walkwayPieceFactory.InstantiateInFrontOfCameraAnMoveIntoPlace(pieceWord, targetPos, targetRot);
+            }
+            else
+            {
+                piece = walkwayPieceFactory.InstantiateAtFinalPosition(targetPos, targetRot, pieceWord);
+            }
+
+
             if (isDissapearing)
             {
                 piece.GetComponent<LevelPieceDestroyTimer>().startDestroyTimerWhenPositioned = true;
             }
-            piece.GetComponentInChildren<TMP_Text>().text = pieceWord;
+
             return piece;
         }
     }

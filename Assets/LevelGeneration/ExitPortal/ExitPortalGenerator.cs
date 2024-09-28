@@ -21,8 +21,8 @@ namespace LevelGeneration
         {
             GameObject portalLevelPiece = FindObjectOfType<LevelGenerator>().SpawnNextPiece("");
             LevelPiecePositioner piecePositioner = portalLevelPiece.GetComponent<LevelPiecePositioner>();
-            Vector3 portalPos = piecePositioner.targetPosition + Vector3.up * portalHeightAbovePlatform;
-            Instantiate(exitPortalPrefab, portalPos, piecePositioner.targetRotation);
+            Vector3 portalPos = piecePositioner.targetPos + Vector3.up * portalHeightAbovePlatform;
+            Instantiate(exitPortalPrefab, portalPos, piecePositioner.targetRot);
         }
     }
 }
