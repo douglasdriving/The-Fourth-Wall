@@ -34,10 +34,10 @@ namespace LevelGeneration
             Vector3 prevPieceFinalPivot = pieceToMoveFrom.position;
             Vector3 prevPieceFinalScale = pieceToMoveFrom.lossyScale;
 
-            if (isUsingOldAnimation || isUsingNewAnimation)
+            if (isUsingOldAnimation || isUsingNewAnimation) //this could be an ENUM
             {
                 LevelPiecePositioner prevPiecePositioner = pieceToMoveFrom.GetComponent<LevelPiecePositioner>();
-                prevPieceFinalPivot = prevPiecePositioner.targetPosition;
+                prevPieceFinalPivot = prevPiecePositioner.targetPos;
                 prevPieceFinalScale = prevPiecePositioner.targetPieceScale;
             }
 
@@ -82,24 +82,22 @@ namespace LevelGeneration
             return startsNewSentece;
         }
 
-        public GameObject InstatiatePiece(Vector3 pos, Quaternion rot, string pieceWord, Transform prevPiece)
+        public GameObject InstatiatePiece(Vector3 targetPos, Quaternion targetRot, string pieceWord, Transform prevPiece)
         {
 
             GameObject piece = null;
 
             if (isUsingNewAnimation)
             {
-                piece = walkwayPieceFactory.InstantiatePieceAbovePos(pos, rot, prevPiece, pieceWord);
-                piece.GetComponent<LevelPiecePositioner>().MoveWithSimpleAnimation(pos, rot);
+                piece = walkwayPieceFactory.SpawnAboveTargetAndMoveIntoPlace(targetPos, targetRot, pieceWord, 1.5f);
             }
             else if (isUsingOldAnimation)
             {
-                piece = walkwayPieceFactory.InstantiateInFrontOfCamera(pieceWord);
-                piece.GetComponent<LevelPiecePositioner>().MoveWithAnimation(pos, rot);
+                piece = walkwayPieceFactory.InstantiateInFrontOfCameraAnMoveIntoPlace(pieceWord, targetPos, targetRot);
             }
             else
             {
-                piece = walkwayPieceFactory.InstantiateAtFinalPosition(pos, rot, pieceWord);
+                piece = walkwayPieceFactory.InstantiateAtFinalPosition(targetPos, targetRot, pieceWord);
             }
 
 

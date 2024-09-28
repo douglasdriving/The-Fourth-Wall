@@ -416,6 +416,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1832332031 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5863614016618780589, guid: 73df769778ae42a43ae53fd9bf5131bb, type: 3}
+  m_PrefabInstance: {fileID: 122221426}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b91aea168cd118b408db0ad3f977bf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1934710453 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7534025309003727685, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
@@ -684,10 +695,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6369491074704825201, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
-      propertyPath: exitPortalPrefab
+    - target: {fileID: 6746897796243269720, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+      propertyPath: levelPieceMolds
       value: 
-      objectReference: {fileID: 4335569441670879784, guid: a94d6cfa1021f69488d97c5bb3922e7f, type: 3}
+      objectReference: {fileID: 1832332031}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

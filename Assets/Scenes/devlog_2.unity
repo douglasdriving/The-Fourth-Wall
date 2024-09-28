@@ -184,6 +184,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73df769778ae42a43ae53fd9bf5131bb, type: 3}
+--- !u!114 &122221427 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5863614016618780589, guid: 73df769778ae42a43ae53fd9bf5131bb, type: 3}
+  m_PrefabInstance: {fileID: 122221426}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b91aea168cd118b408db0ad3f977bf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!850595691 &292114859
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -692,6 +703,10 @@ PrefabInstance:
       propertyPath: exitPortalPrefab
       value: 
       objectReference: {fileID: 4335569441670879784, guid: a94d6cfa1021f69488d97c5bb3922e7f, type: 3}
+    - target: {fileID: 6746897796243269720, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+      propertyPath: levelPieceMolds
+      value: 
+      objectReference: {fileID: 122221427}
     - target: {fileID: 7021466173556650257, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: isDissapearing
       value: 1
@@ -699,6 +714,14 @@ PrefabInstance:
     - target: {fileID: 7021466173556650257, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: sentanceGapSize
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7021466173556650257, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+      propertyPath: isUsingNewAnimation
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7021466173556650257, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+      propertyPath: isUsingOldAnimation
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7021466173556650257, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: isSeparatingSentences
