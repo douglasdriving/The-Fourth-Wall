@@ -18,6 +18,10 @@ namespace LevelGeneration
         private void Start()
         {
             levelPieceMolds = FindAnyObjectByType<LevelPieceMolds>();
+            if (levelPieceMolds == null)
+            {
+                Debug.LogError("No LevelPieceMolds found in scene");
+            }
         }
 
         public GameObject AddPieceToWalkway(Transform pieceToMoveFrom, string pieceWord)
