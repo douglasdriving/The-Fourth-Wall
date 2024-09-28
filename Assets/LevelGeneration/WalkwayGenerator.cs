@@ -12,8 +12,16 @@ namespace LevelGeneration
     {
         WalkwayPieceFactory walkwayPieceFactory;
         [SerializeField] float sentanceGapSize = 3f;
-        public bool isUsingOldAnimation = false;
-        public bool isUsingNewAnimation = false;
+
+
+        public enum AnimationType
+        {
+            NONE,
+            MOVE_FROM_SUBTITLE,
+            MOVE_FROM_ABOVE_TARGET,
+        }
+        [SerializeField] AnimationType animationType = AnimationType.NONE;
+
         public bool isSeparatingSentences = false;
         public bool isDissapearing = false;
 
@@ -34,7 +42,7 @@ namespace LevelGeneration
             Vector3 prevPieceFinalPivot = pieceToMoveFrom.position;
             Vector3 prevPieceFinalScale = pieceToMoveFrom.lossyScale;
 
-            if (isUsingOldAnimation || isUsingNewAnimation) //this could be an ENUM
+            if (animationType != AnimationType.NONE)
             {
                 LevelPiecePositioner prevPiecePositioner = pieceToMoveFrom.GetComponent<LevelPiecePositioner>();
                 prevPieceFinalPivot = prevPiecePositioner.targetPos;
@@ -87,11 +95,11 @@ namespace LevelGeneration
 
             GameObject piece = null;
 
-            if (isUsingNewAnimation)
+            if (animationType == AnimationType.MOVE_FROM_ABOVE_TARGET)
             {
                 piece = walkwayPieceFactory.SpawnAboveTargetAndMoveIntoPlace(targetPos, targetRot, pieceWord, 1.5f);
             }
-            else if (isUsingOldAnimation)
+            else if (animationType == AnimationType.MOVE_FROM_SUBTITLE)
             {
                 piece = walkwayPieceFactory.InstantiateInFrontOfCameraAnMoveIntoPlace(pieceWord, targetPos, targetRot);
             }

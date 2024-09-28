@@ -184,17 +184,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73df769778ae42a43ae53fd9bf5131bb, type: 3}
---- !u!114 &122221427 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5863614016618780589, guid: 73df769778ae42a43ae53fd9bf5131bb, type: 3}
-  m_PrefabInstance: {fileID: 122221426}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b91aea168cd118b408db0ad3f977bf14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!850595691 &292114859
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -436,7 +425,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7534025309003727685, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
   m_PrefabInstance: {fileID: 4222751589694032154}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4222751589694032155}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7aeded9d0f9ee248b390fab7a568d65, type: 3}
@@ -699,17 +688,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6369491074704825201, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
-      propertyPath: exitPortalPrefab
-      value: 
-      objectReference: {fileID: 4335569441670879784, guid: a94d6cfa1021f69488d97c5bb3922e7f, type: 3}
+    - target: {fileID: 7021466173556650257, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+      propertyPath: animationType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7021466173556650257, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: isDissapearing
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7021466173556650257, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
-      propertyPath: sentanceGapSize
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7021466173556650257, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: isUsingNewAnimation
@@ -719,37 +704,11 @@ PrefabInstance:
       propertyPath: isSeparatingSentences
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7021466173556650257, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
-      propertyPath: isWordAnimationActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2114052340901206385, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4222751589694032156}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
---- !u!1 &4222751589694032155 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2114052340901206385, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
-  m_PrefabInstance: {fileID: 4222751589694032154}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4222751589694032156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4222751589694032155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21c4ef9046667ac459a2dd12ca714e83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkwayPiecePrefab: {fileID: 6737570752163496808, guid: fad8276afac0bcf4f9ec4921e4a11d90, type: 3}
-  levelPieceMolds: {fileID: 122221427}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
