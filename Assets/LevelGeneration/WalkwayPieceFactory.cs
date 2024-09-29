@@ -40,5 +40,10 @@ namespace LevelGeneration
       piece.GetComponentInChildren<TMP_Text>().text = pieceWord;
       return piece;
     }
+
+    public float GetPieceHeight()
+    {
+      return walkwayPiecePrefab.transform.localScale.y;
+    }
   }
 }

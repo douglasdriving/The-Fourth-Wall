@@ -26,25 +26,42 @@ namespace LevelGeneration
 
     public GameObject SpawnNextPiece(string word)
     {
-      Vector3 lastPieceEndPointTargetPos = GetEndPointOfLastPieceSpawned();
       GameObject levelPiece;
-
       word = word.Trim();
 
       if (isSpawningAndRails && word.ToLower() == "and")
       {
-        levelPiece = andRailSpawner.SpawnRail(lastPieceEndPointTargetPos);
+        levelPiece = andRailSpawner.SpawnRail(GetEndOfLastPieceTop());
       }
       else
       {
-        levelPiece = walkwayGenerator.AddPieceToWalkway(lastPieceEndPointTargetPos, word, GetLastPieceWord());
+        levelPiece = walkwayGenerator.AddPieceToWalkway(GetEndOfLastPieceTop(), word, GetLastPieceWord());
       }
 
       levelPiecesSpawned.Add(levelPiece);
       return levelPiece;
     }
 
-    private Vector3 GetEndPointOfLastPieceSpawned()
+    private Vector3 GetEndOfLastPieceTop()
+    {
+      Vector3 lastPieceEndPoint = GetLastPieceEndPoint();
+      Vector3 topEndOfLastPiece;
+
+      bool lastPieceWasRail = levelPiecesSpawned.Last().GetComponentInChildren<AndRailPositioner>() != null;
+      if (lastPieceWasRail)
+      {
+        topEndOfLastPiece = lastPieceEndPoint;
+      }
+      else
+      {
+        float lastPieceHeight = levelPiecesSpawned.Last().transform.localScale.y;
+        topEndOfLastPiece = lastPieceEndPoint + Vector3.up * lastPieceHeight / 2;
+      }
+
+      return topEndOfLastPiece;
+    }
+
+    private Vector3 GetLastPieceEndPoint()
     {
 
       Transform lastPiece = levelPiecesSpawned.Last().transform;

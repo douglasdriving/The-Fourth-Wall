@@ -12,6 +12,7 @@ namespace LevelGeneration
     {
         WalkwayPieceFactory walkwayPieceFactory;
         [SerializeField] float sentanceGapSize = 3f;
+        [SerializeField] float maxSideShift = 0.6f;
         public enum AnimationType
         {
             NONE,
@@ -27,18 +28,25 @@ namespace LevelGeneration
             walkwayPieceFactory = GetComponent<WalkwayPieceFactory>();
         }
 
-        public GameObject AddPieceToWalkway(Vector3 endOfLastPiece, string pieceWord, string lastPieceWord)
+        public GameObject AddPieceToWalkway(Vector3 endTopOfLastPiece, string pieceWord, string lastPieceWord)
         {
-            Vector3 newPiecePivot = GetNextPieceFinalPos(endOfLastPiece, lastPieceWord);
+            Vector3 newPiecePivot = GetNextPieceFinalPos(endTopOfLastPiece, lastPieceWord);
             GameObject piece = InstatiatePiece(newPiecePivot, Quaternion.identity, pieceWord);
             return piece;
         }
 
-        private Vector3 GetNextPieceFinalPos(Vector3 endOfLastPiece, string lastPieceWord)
+        private Vector3 GetNextPieceFinalPos(Vector3 endTopOfLastPiece, string lastPieceWord)
         {
-            Vector3 newPiecePivot = endOfLastPiece;
-            newPiecePivot.x += Random.Range(-0.3f, 0.3f); //magic numba
+            Vector3 newPiecePivot = endTopOfLastPiece;
 
+            //adjust down to align top
+            float pieceHeight = walkwayPieceFactory.GetPieceHeight();
+            newPiecePivot.y -= pieceHeight / 2;
+
+            //adjust in sides at random
+            newPiecePivot.x += Random.Range(-maxSideShift, maxSideShift);
+
+            //add sentence gap if needed
             if (isSeparatingSentences && lastPieceWord.EndsWith("."))
             {
                 newPiecePivot.z += sentanceGapSize;
@@ -46,21 +54,6 @@ namespace LevelGeneration
 
             return newPiecePivot;
         }
-
-        // private Vector3 ExtendWithSentenceGapIfLastPieceEndedSentence(Transform lastPiece, Vector3 piecePivotToExtend)
-        // {
-        //     bool lastPieceEndedSentence = false;
-        //     if (lastPiece != null)
-        //     {
-        //         lastPieceEndedSentence = IsPieceWordEndingSentence(lastPiece);
-        //     }
-        //     if (lastPieceEndedSentence)
-        //     {
-        //         piecePivotToExtend.z += sentanceGapSize;
-        //     }
-
-        //     return piecePivotToExtend;
-        // }
 
         private static bool IsPieceWordEndingSentence(Transform pieceToMoveFrom)
         {
