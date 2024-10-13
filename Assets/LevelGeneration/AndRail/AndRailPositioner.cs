@@ -19,6 +19,7 @@ public class AndRailPositioner : MonoBehaviour
     //rail positions
     Vector3 finalRailStartPoint;
     float railLength;
+    Quaternion finalRotation;
 
     void Awake()
     {
@@ -41,7 +42,8 @@ public class AndRailPositioner : MonoBehaviour
         transform.position = finalRailStart;
 
         mesh.localScale = new Vector3(0.1f, 0.1f, railLength);
-        mesh.LookAt(finalRailEnd);
+        transform.LookAt(finalRailEnd);
+        finalRotation = transform.rotation;
         mesh.position = transform.position + mesh.forward * railLength / 2;
 
         GetComponent<AndRailRider>().UpdatePlayerStartAndEnd(finalRailStart, finalRailEnd);
@@ -59,7 +61,7 @@ public class AndRailPositioner : MonoBehaviour
 
     private void MoveRailWithAnimation()
     {
-        positioner.MoveWithSimpleAnimation(finalRailStartPoint, Quaternion.identity);
+        positioner.MoveWithSimpleAnimation(finalRailStartPoint, finalRotation);
     }
 
 }

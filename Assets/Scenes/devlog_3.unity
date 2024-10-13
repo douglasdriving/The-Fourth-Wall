@@ -811,6 +811,10 @@ PrefabInstance:
       propertyPath: isSpawningAndRails
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8118289208220695993, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+      propertyPath: railLength
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
