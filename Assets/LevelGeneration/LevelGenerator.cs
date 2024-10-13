@@ -28,52 +28,27 @@ namespace LevelGeneration
     {
       GameObject levelPiece;
       word = word.Trim();
+      Vector3 lastPieceFinalWalkoffPoint = GetLastPieceFinalWalkoffPoint();
 
       if (isSpawningAndRails && word.ToLower() == "and")
       {
-        levelPiece = andRailSpawner.SpawnRail(GetEndOfLastPieceTop());
+        levelPiece = andRailSpawner.SpawnRail(lastPieceFinalWalkoffPoint);
       }
       else
       {
-        levelPiece = walkwayGenerator.AddPieceToWalkway(GetEndOfLastPieceTop(), word, GetLastPieceWord());
+        string lastPieceWord = GetLastPieceWord();
+        levelPiece = walkwayGenerator.AddPieceToWalkway(lastPieceFinalWalkoffPoint, word, lastPieceWord);
       }
 
       levelPiecesSpawned.Add(levelPiece);
       return levelPiece;
     }
 
-    private Vector3 GetEndOfLastPieceTop()
+    private Vector3 GetLastPieceFinalWalkoffPoint()
     {
-      Vector3 lastPieceEndPoint = GetLastPieceEndPoint();
-      Vector3 topEndOfLastPiece;
-
-      bool lastPieceWasRail = levelPiecesSpawned.Last().GetComponentInChildren<AndRailPositioner>() != null;
-      if (lastPieceWasRail)
-      {
-        topEndOfLastPiece = lastPieceEndPoint;
-      }
-      else
-      {
-        float lastPieceHeight = levelPiecesSpawned.Last().transform.localScale.y;
-        topEndOfLastPiece = lastPieceEndPoint + Vector3.up * lastPieceHeight / 2;
-      }
-
-      return topEndOfLastPiece;
-    }
-
-    private Vector3 GetLastPieceEndPoint()
-    {
-
-      Transform lastPiece = levelPiecesSpawned.Last().transform;
-      Transform lastPieceEndPoint = lastPiece.GetComponentInChildren<LevelPieceEndPoint>().transform;
-
-      if (lastPieceEndPoint == null) throw new System.Exception("no end point found on last piece. make sure there is a child with the tag LevelPieceEnd");
-
-      Vector3 lastPieceTargetPos = lastPiece.GetComponent<LevelPiecePositioner>().targetPos;
-      float distanceBetweenLastPieceAndLastPieceEndPoint = Vector3.Distance(lastPiece.position, lastPieceEndPoint.position);
-      Vector3 lastPieceEndPointTargetPos = lastPieceTargetPos + Vector3.forward * distanceBetweenLastPieceAndLastPieceEndPoint;
-
-      return lastPieceEndPointTargetPos;
+      GameObject lastPiece = levelPiecesSpawned.Last();
+      Vector3 lastPieceEndPoint = lastPiece.GetComponent<LevelPiecePositioner>().GetFinalWalkOffPoint();
+      return lastPieceEndPoint;
     }
 
     private string GetLastPieceWord()

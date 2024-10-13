@@ -10,15 +10,23 @@ namespace LevelGeneration
     public class LevelPiecePositioner : MonoBehaviour
     {
 
+        //animation times
+        [SerializeField] float hoverTime = 0.5f;
+
+        //gemoetry reference
+        [SerializeField] Transform walkOffPoint;
+
+        //target position, rotation, and scale
         public Vector3 targetPieceScale = Vector3.one;
         public Vector3 targetPos { get; private set; }
         public Quaternion targetRot { get; private set; }
         public bool reachedFinalPosition { get; private set; }
 
-        [SerializeField] float hoverTime = 0.5f;
+        //materials
         [SerializeField] Material transparentMaterial;
         [SerializeField] Material defaultMaterial;
 
+        //components
         Collider[] collidersToDisable;
         Renderer pieceRenderer;
 
@@ -27,6 +35,7 @@ namespace LevelGeneration
         {
             pieceRenderer = GetComponentInChildren<Renderer>();
             collidersToDisable = GetComponentsInChildren<Collider>();
+            if (!walkOffPoint) Debug.LogWarning("No walk off point set for " + name);
         }
 
         public void SetPosition(Vector3 targetPosition, Quaternion targetRotation)
@@ -151,6 +160,14 @@ namespace LevelGeneration
             {
                 pieceRenderer.material = transparentMaterial;
             }
+        }
+
+        public Vector3 GetFinalWalkOffPoint()
+        {
+            Vector3 localWalkOffPoint = transform.InverseTransformPoint(walkOffPoint.position);
+            Vector3 scaledLocalWalkOffPoint = Vector3.Scale(localWalkOffPoint, targetPieceScale);
+            Vector3 finalWalkOffPoint = targetPos + targetRot * scaledLocalWalkOffPoint;
+            return finalWalkOffPoint;
         }
     }
 }

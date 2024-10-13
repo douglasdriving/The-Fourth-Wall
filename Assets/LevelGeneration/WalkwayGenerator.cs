@@ -28,9 +28,9 @@ namespace LevelGeneration
             walkwayPieceFactory = GetComponent<WalkwayPieceFactory>();
         }
 
-        public GameObject AddPieceToWalkway(Vector3 endTopOfLastPiece, string pieceWord, string lastPieceWord)
+        public GameObject AddPieceToWalkway(Vector3 entryPoint, string pieceWord, string lastPieceWord)
         {
-            Vector3 newPiecePivot = GetNextPieceFinalPos(endTopOfLastPiece, lastPieceWord);
+            Vector3 newPiecePivot = GetNextPieceFinalPos(entryPoint, lastPieceWord);
             GameObject piece = InstatiatePiece(newPiecePivot, Quaternion.identity, pieceWord);
             return piece;
         }
@@ -53,18 +53,6 @@ namespace LevelGeneration
             }
 
             return newPiecePivot;
-        }
-
-        private static bool IsPieceWordEndingSentence(Transform pieceToMoveFrom)
-        {
-            bool startsNewSentece = false;
-            TMP_Text prevPieceTextElement = pieceToMoveFrom.GetComponentInChildren<TMP_Text>();
-            if (prevPieceTextElement != null)
-            {
-                startsNewSentece = prevPieceTextElement.text.EndsWith(".");
-            }
-
-            return startsNewSentece;
         }
 
         public GameObject InstatiatePiece(Vector3 targetPos, Quaternion targetRot, string pieceWord)
