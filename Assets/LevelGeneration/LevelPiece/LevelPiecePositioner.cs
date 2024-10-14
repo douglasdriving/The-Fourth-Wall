@@ -149,7 +149,10 @@ namespace LevelGeneration
         {
             foreach (Collider collider in collidersToDisable)
             {
-                collider.enabled = enabled;
+                if (collider)
+                {
+                    collider.enabled = enabled;
+                }
             }
 
             if (enabled)

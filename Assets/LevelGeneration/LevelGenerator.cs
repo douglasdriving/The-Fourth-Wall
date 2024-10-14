@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using LevelGeneration.ThePiece;
 using TMPro;
 using UnityEngine;
 
@@ -15,13 +16,16 @@ namespace LevelGeneration
     WalkwayGenerator walkwayGenerator;
     public List<GameObject> levelPiecesSpawned = new();
     AndRailSpawner andRailSpawner;
+    ThePieceSpawner thePieceSpawner;
     [SerializeField] bool isSpawningAndRails = false;
+    [SerializeField] bool isSpawningThePieces = false;
 
     void Awake()
     {
       if (levelPiecesSpawned.Count <= 0) Debug.LogError("no spawned pieces in list. please assign at least one level piece to start generating from");
       walkwayGenerator = GetComponent<WalkwayGenerator>();
       andRailSpawner = GetComponent<AndRailSpawner>();
+      thePieceSpawner = GetComponent<ThePieceSpawner>();
     }
 
     public GameObject SpawnNextPiece(string word)
@@ -33,6 +37,10 @@ namespace LevelGeneration
       if (isSpawningAndRails && word.ToLower() == "and")
       {
         levelPiece = andRailSpawner.SpawnRail(lastPieceFinalWalkoffPoint);
+      }
+      else if (isSpawningThePieces && word.ToLower() == "the")
+      {
+        levelPiece = thePieceSpawner.Spawn(lastPieceFinalWalkoffPoint);
       }
       else
       {

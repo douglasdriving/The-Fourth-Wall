@@ -326,6 +326,11 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+--- !u!1 &429136960 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2114052340901206385, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+  m_PrefabInstance: {fileID: 4222751589694032154}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,63 +425,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &1377568845
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1377568847}
-  - component: {fileID: 1377568846}
-  m_Layer: 0
-  m_Name: AndRailSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1377568846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1377568845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e276b0dcd646ef64588e2ea135e84667, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  railPrefab: {fileID: 6634007023895207853, guid: 6c2aa10e2972cb443b4b2d408cab9e90, type: 3}
-  railLength: 5
---- !u!4 &1377568847
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1377568845}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0860382, y: 9.127607, z: 3.5004923}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1934710453 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7534025309003727685, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
   m_PrefabInstance: {fileID: 4222751589694032154}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 429136960}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7aeded9d0f9ee248b390fab7a568d65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1934710459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429136960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac700eb09680d9d46ae7ff9b6216d309, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thePiecePrefab: {fileID: 4795037251955250072, guid: 2f5bf6a0547761b4fa1b9737e2e51006, type: 3}
 --- !u!1 &1957703234
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,6 +783,10 @@ PrefabInstance:
       propertyPath: isSpawningAndRails
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7534025309003727685, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+      propertyPath: isSpawningThePieces
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8118289208220695993, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: railLength
       value: 10
@@ -818,7 +794,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2114052340901206385, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1934710459}
   m_SourcePrefab: {fileID: 100100000, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -832,4 +811,3 @@ SceneRoots:
   - {fileID: 974733055590494683}
   - {fileID: 4222751589694032154}
   - {fileID: 3374174511238835308}
-  - {fileID: 1377568847}
