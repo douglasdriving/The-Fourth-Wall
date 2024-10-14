@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using LevelGeneration;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -17,10 +18,12 @@ public class AndRailRider : MonoBehaviour
     Transform player;
     FirstPersonController playerController;
     Rigidbody playerRb;
+    Collider playerCollider;
 
-    // //rail positions
+    //rail positions
     Vector3 playerStartPos;
     Vector3 playerEndPos;
+    [SerializeField] Transform walkoffPoint;
 
     //can start ride
     [SerializeField] GameObject ridePromptCanvas;
@@ -32,6 +35,7 @@ public class AndRailRider : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         playerController = player.GetComponent<FirstPersonController>();
         playerRb = player.GetComponent<Rigidbody>();
+        playerCollider = player.GetComponent<Collider>();
         ridePromptCanvas.SetActive(false);
     }
 
@@ -83,13 +87,13 @@ public class AndRailRider : MonoBehaviour
     private void StopRiding()
     {
         isRiding = false;
-        SetPlayerMovementAndGravityEnabled(true);
+        SetPlayerControllEnabled(true);
     }
 
     private void UpdateRide()
     {
         MovePlayerForwardAlongRail();
-        bool hasReachedEnd = Vector3.Distance(player.position, playerEndPos) < 0.4f;
+        bool hasReachedEnd = player.position.z >= walkoffPoint.position.z;
         if (hasReachedEnd)
         {
             EndRide();
@@ -99,8 +103,9 @@ public class AndRailRider : MonoBehaviour
     private void EndRide()
     {
         player.position = playerEndPos + Vector3.forward * distanceFromEndPlayerWillBeDroppedAt;
-        SetPlayerMovementAndGravityEnabled(true);
+        SetPlayerControllEnabled(true);
         isRiding = false;
+        Destroy(this);
     }
 
     private void MovePlayerForwardAlongRail()
@@ -112,15 +117,16 @@ public class AndRailRider : MonoBehaviour
     private void StartRide()
     {
         ridePromptCanvas.SetActive(false);
-        SetPlayerMovementAndGravityEnabled(false);
+        SetPlayerControllEnabled(false);
         isRiding = true;
         player.position = playerStartPos;
     }
 
-    void SetPlayerMovementAndGravityEnabled(bool enabled)
+    void SetPlayerControllEnabled(bool enabled)
     {
         if (playerController.canMove == enabled && playerRb.useGravity == enabled) return;
         playerController.canMove = enabled;
         playerRb.useGravity = enabled;
+        playerCollider.enabled = enabled;
     }
 }
