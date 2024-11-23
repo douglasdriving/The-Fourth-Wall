@@ -135,6 +135,22 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4633715614206913382, guid: 73df769778ae42a43ae53fd9bf5131bb, type: 3}
+      propertyPath: m_ClearFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4633715614206913382, guid: 73df769778ae42a43ae53fd9bf5131bb, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.09433961
+      objectReference: {fileID: 0}
+    - target: {fileID: 4633715614206913382, guid: 73df769778ae42a43ae53fd9bf5131bb, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.09433961
+      objectReference: {fileID: 0}
+    - target: {fileID: 4633715614206913382, guid: 73df769778ae42a43ae53fd9bf5131bb, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.09433961
+      objectReference: {fileID: 0}
     - target: {fileID: 5759381498931850992, guid: 73df769778ae42a43ae53fd9bf5131bb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -326,11 +342,6 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
---- !u!1 &429136960 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2114052340901206385, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
-  m_PrefabInstance: {fileID: 4222751589694032154}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,25 +441,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7534025309003727685, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
   m_PrefabInstance: {fileID: 4222751589694032154}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 429136960}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7aeded9d0f9ee248b390fab7a568d65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1934710459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 429136960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac700eb09680d9d46ae7ff9b6216d309, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePiecePrefab: {fileID: 4795037251955250072, guid: 2f5bf6a0547761b4fa1b9737e2e51006, type: 3}
 --- !u!1 &1957703234
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,7 +478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clipToPlayOnStart: {fileID: 8300000, guid: 5ed7251294b3ee94aa0e55fbc16f93ec, type: 3}
   subtitleToPlayOnStart: {fileID: 4900000, guid: 3ed357ea9c535ba4cab9a9a657011686, type: 3}
-  startDelay: 1.5
+  startDelay: 4
 --- !u!4 &1957703236
 Transform:
   m_ObjectHideFlags: 0
@@ -706,6 +704,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Devlog Banner
       objectReference: {fileID: 0}
+    - target: {fileID: 7460642021859342952, guid: a71e9091c38d52f4ca5389969fdfd457, type: 3}
+      propertyPath: m_text
+      value: 'devlog #3
+
+        2024-10-14
+
+
+        simplified animations, and-rails,
+        and the-blocks'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460642021859342952, guid: a71e9091c38d52f4ca5389969fdfd457, type: 3}
+      propertyPath: m_fontSize
+      value: 72.55
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -794,10 +806,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2114052340901206385, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1934710459}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
