@@ -1,0 +1,195 @@
+{
+    "text": " Perhaps the levels could be short and introduce very small changes, such as me replacing the ugly default Unity skiesphere with a solid color.",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 9.68,
+            "text": " Perhaps the levels could be short and introduce very small changes, such as me replacing the ugly default Unity skiesphere with a solid color.",
+            "tokens": [
+                50363,
+                8673,
+                262,
+                2974,
+                714,
+                307,
+                1790,
+                290,
+                10400,
+                845,
+                1402,
+                2458,
+                11,
+                884,
+                355,
+                502,
+                13586,
+                262,
+                13400,
+                4277,
+                18714,
+                24091,
+                79,
+                1456,
+                351,
+                257,
+                4735,
+                3124,
+                13,
+                50863
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2161706801383726,
+            "compression_ratio": 1.2456140350877194,
+            "no_speech_prob": 0.006218079011887312,
+            "words": [
+                {
+                    "word": " Perhaps",
+                    "start": 0.0,
+                    "end": 0.84,
+                    "probability": 0.9226472973823547
+                },
+                {
+                    "word": " the",
+                    "start": 0.84,
+                    "end": 1.08,
+                    "probability": 0.9727805852890015
+                },
+                {
+                    "word": " levels",
+                    "start": 1.08,
+                    "end": 1.28,
+                    "probability": 0.9420777559280396
+                },
+                {
+                    "word": " could",
+                    "start": 1.28,
+                    "end": 1.46,
+                    "probability": 0.9803956151008606
+                },
+                {
+                    "word": " be",
+                    "start": 1.46,
+                    "end": 1.62,
+                    "probability": 0.9939576387405396
+                },
+                {
+                    "word": " short",
+                    "start": 1.62,
+                    "end": 2.04,
+                    "probability": 0.987972617149353
+                },
+                {
+                    "word": " and",
+                    "start": 2.04,
+                    "end": 2.36,
+                    "probability": 0.9359434247016907
+                },
+                {
+                    "word": " introduce",
+                    "start": 2.36,
+                    "end": 2.82,
+                    "probability": 0.9895676970481873
+                },
+                {
+                    "word": " very",
+                    "start": 2.82,
+                    "end": 3.08,
+                    "probability": 0.9500072598457336
+                },
+                {
+                    "word": " small",
+                    "start": 3.08,
+                    "end": 3.5,
+                    "probability": 0.9981637597084045
+                },
+                {
+                    "word": " changes,",
+                    "start": 3.5,
+                    "end": 4.1,
+                    "probability": 0.9919265508651733
+                },
+                {
+                    "word": " such",
+                    "start": 4.42,
+                    "end": 4.56,
+                    "probability": 0.9736267328262329
+                },
+                {
+                    "word": " as",
+                    "start": 4.56,
+                    "end": 4.98,
+                    "probability": 0.996088981628418
+                },
+                {
+                    "word": " me",
+                    "start": 4.98,
+                    "end": 5.54,
+                    "probability": 0.9581411480903625
+                },
+                {
+                    "word": " replacing",
+                    "start": 5.54,
+                    "end": 6.16,
+                    "probability": 0.9945726990699768
+                },
+                {
+                    "word": " the",
+                    "start": 6.16,
+                    "end": 6.62,
+                    "probability": 0.9913918972015381
+                },
+                {
+                    "word": " ugly",
+                    "start": 6.62,
+                    "end": 7.18,
+                    "probability": 0.9746353030204773
+                },
+                {
+                    "word": " default",
+                    "start": 7.18,
+                    "end": 7.82,
+                    "probability": 0.8848304152488708
+                },
+                {
+                    "word": " Unity",
+                    "start": 7.82,
+                    "end": 8.16,
+                    "probability": 0.9180304408073425
+                },
+                {
+                    "word": " skiesphere",
+                    "start": 8.16,
+                    "end": 8.74,
+                    "probability": 0.7410593032836914
+                },
+                {
+                    "word": " with",
+                    "start": 8.74,
+                    "end": 8.98,
+                    "probability": 0.9928105473518372
+                },
+                {
+                    "word": " a",
+                    "start": 8.98,
+                    "end": 9.12,
+                    "probability": 0.9256106019020081
+                },
+                {
+                    "word": " solid",
+                    "start": 9.12,
+                    "end": 9.36,
+                    "probability": 0.97404545545578
+                },
+                {
+                    "word": " color.",
+                    "start": 9.36,
+                    "end": 9.68,
+                    "probability": 0.9077132940292358
+                }
+            ]
+        }
+    ],
+    "language": "en"
+}
