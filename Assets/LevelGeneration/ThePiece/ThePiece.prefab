@@ -872,11 +872,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2218674348487663722, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.25215593
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2218674348487663722, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5948701
       objectReference: {fileID: 0}
     - target: {fileID: 2218674348487663722, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0.5948701
       objectReference: {fileID: 0}
     - target: {fileID: 2218674348487663722, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -918,6 +922,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2218674348487663722, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8140631638678303200, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
       propertyPath: m_Name
       value: Word
@@ -946,11 +954,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2218674348487663722, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.25215593
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2218674348487663722, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5948701
       objectReference: {fileID: 0}
     - target: {fileID: 2218674348487663722, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0.5948701
       objectReference: {fileID: 0}
     - target: {fileID: 2218674348487663722, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -992,6 +1004,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2218674348487663722, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8140631638678303200, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
       propertyPath: m_Name
       value: Word (4)
@@ -1020,11 +1036,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2218674348487663722, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.25215593
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2218674348487663722, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5948701
       objectReference: {fileID: 0}
     - target: {fileID: 2218674348487663722, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0.5948701
       objectReference: {fileID: 0}
     - target: {fileID: 2218674348487663722, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1066,6 +1086,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2218674348487663722, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8140631638678303200, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
       propertyPath: m_Name
       value: Word (3)
@@ -1094,11 +1118,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2218674348487663722, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.25215593
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2218674348487663722, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5948701
       objectReference: {fileID: 0}
     - target: {fileID: 2218674348487663722, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0.5948701
       objectReference: {fileID: 0}
     - target: {fileID: 2218674348487663722, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1140,6 +1168,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2218674348487663722, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8140631638678303200, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
       propertyPath: m_Name
       value: Word (1)
@@ -1168,11 +1200,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2218674348487663722, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.25215593
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2218674348487663722, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5948701
       objectReference: {fileID: 0}
     - target: {fileID: 2218674348487663722, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0.5948701
       objectReference: {fileID: 0}
     - target: {fileID: 2218674348487663722, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1213,6 +1249,10 @@ PrefabInstance:
     - target: {fileID: 2218674348487663722, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2218674348487663722, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8140631638678303200, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
       propertyPath: m_Name
