@@ -556,6 +556,7 @@ GameObject:
   - component: {fileID: -5826184488815503153}
   - component: {fileID: 5236212528172282426}
   - component: {fileID: -6533219467522658587}
+  - component: {fileID: 203711859345706265}
   m_Layer: 0
   m_Name: Rail
   m_TagString: Untagged
@@ -646,8 +647,7 @@ MonoBehaviour:
   hoverTime: 0.5
   walkOffPoint: {fileID: 6838226477262789892}
   targetPieceScale: {x: 1, y: 1, z: 1}
-  transparentMaterial: {fileID: 2100000, guid: 36db519eb039df047a21e2bb484959a1, type: 2}
-  defaultMaterial: {fileID: 2100000, guid: 9785987b5a406634da0c31d388254185, type: 2}
+  pieceColorSetter: {fileID: 203711859345706265}
 --- !u!114 &-6533219467522658587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -662,6 +662,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyTimer: 5
   startDestroyTimerWhenPositioned: 1
+--- !u!114 &203711859345706265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6634007023895207853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fae21c5c13e5a044c816ef05c0dbbd79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shortWordColor: {r: 0.35283017, g: 0.91437644, b: 1, a: 0}
+  longWordColor: {r: 0.9622642, g: 0.31378183, b: 0, a: 0}
+  textToCheck: {fileID: 5553833370486791174}
+  baseMaterial: {fileID: 2100000, guid: 9785987b5a406634da0c31d388254185, type: 2}
 --- !u!1 &6670675927897403163
 GameObject:
   m_ObjectHideFlags: 0

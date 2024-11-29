@@ -575,6 +575,7 @@ GameObject:
   - component: {fileID: 1367734984911156769}
   - component: {fileID: -2184872688145861670}
   - component: {fileID: 1690062704210467225}
+  - component: {fileID: 5190290674770209596}
   m_Layer: 0
   m_Name: ThePiece
   m_TagString: Untagged
@@ -700,8 +701,7 @@ MonoBehaviour:
   hoverTime: 0.5
   walkOffPoint: {fileID: 6336413241837900478}
   targetPieceScale: {x: 1, y: 1, z: 1}
-  transparentMaterial: {fileID: 2100000, guid: 36db519eb039df047a21e2bb484959a1, type: 2}
-  defaultMaterial: {fileID: 2100000, guid: 9785987b5a406634da0c31d388254185, type: 2}
+  pieceColorSetter: {fileID: 5190290674770209596}
 --- !u!114 &1690062704210467225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -716,6 +716,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyTimer: 5
   startDestroyTimerWhenPositioned: 1
+--- !u!114 &5190290674770209596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4795037251955250072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fae21c5c13e5a044c816ef05c0dbbd79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shortWordColor: {r: 0.2396226, g: 0.93861187, b: 1, a: 0}
+  longWordColor: {r: 1, g: 0.30739304, b: 0.22075468, a: 0}
+  textToCheck: {fileID: 7581956394668307381}
+  baseMaterial: {fileID: 2100000, guid: 9785987b5a406634da0c31d388254185, type: 2}
 --- !u!1 &5136269057192344317
 GameObject:
   m_ObjectHideFlags: 0
@@ -1263,6 +1279,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
+--- !u!114 &7581956394668307381 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2098844638431199316, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
+  m_PrefabInstance: {fileID: 8365468466925827041}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7697300127198253963 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2218674348487663722, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}

@@ -23,8 +23,7 @@ namespace LevelGeneration
         public bool reachedFinalPosition { get; private set; }
 
         //materials
-        [SerializeField] Material transparentMaterial;
-        [SerializeField] Material defaultMaterial;
+        [SerializeField] PieceColorSetter pieceColorSetter;
 
         //components
         Collider[] collidersToDisable;
@@ -157,11 +156,11 @@ namespace LevelGeneration
 
             if (enabled)
             {
-                pieceRenderer.material = defaultMaterial;
+                pieceColorSetter.SetTransparent(false);
             }
             else
             {
-                pieceRenderer.material = transparentMaterial;
+                pieceColorSetter.SetTransparent(true);
             }
         }
 
