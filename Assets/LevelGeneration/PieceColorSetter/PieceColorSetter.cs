@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class PieceColorSetter : MonoBehaviour
 {
-    [SerializeField] Color shortWordColor;
-    [SerializeField] Color longWordColor;
+    [SerializeField] Color commonWordColor;
+    [SerializeField] Color rareWordColor;
     MeshRenderer[] meshesToColor;
     [SerializeField] TMPro.TextMeshProUGUI textToCheck;
     [SerializeField] Material baseMaterial;
@@ -28,31 +28,40 @@ public class PieceColorSetter : MonoBehaviour
 
     private void CreateMaterialsBasedOnWordLength()
     {
+
         if (textToCheck == null)
         {
             Debug.LogWarning("PieceColorSetter: TextMeshPro component not found on GameObject");
             return;
         }
-        int wordLength = textToCheck.text.Length;
-        print("Word length: " + wordLength);
-        Color materialColor;
-        if (wordLength <= 1)
+
+        int wordPopularity = WordPopularityCounter.GetPopularityForWord(textToCheck.text);
+        int mostPopularWordCount = WordPopularityCounter.mostPopularWord.Item2;
+
+        Debug.Log("wordPopularity: " + wordPopularity);
+        Debug.Log("mostPopularWordCount: " + mostPopularWordCount);
+
+        if (wordPopularity == 0)
         {
-            materialColor = shortWordColor;
+            Debug.LogWarning("PieceColorSetter: Word not found in WordPopularityCounter: " + textToCheck.text);
         }
-        else if (wordLength >= 10)
+        if (mostPopularWordCount == 0)
         {
-            materialColor = longWordColor;
+            Debug.LogError("mostPopularWordCount is zero, cannot divide by zero.");
+            return;
         }
-        else
-        {
-            float t = (wordLength - 1) / 9f;
-            materialColor = Color.Lerp(shortWordColor, longWordColor, t);
-        }
+
+        float popularityFactor = (float)wordPopularity / (float)mostPopularWordCount;
+        Debug.Log("popularityFactor: " + popularityFactor);
+
+        Color materialColor = Color.Lerp(rareWordColor, commonWordColor, popularityFactor);
+        Debug.Log("materialColor: " + materialColor);
+
         originalMaterial = new Material(baseMaterial);
         originalMaterial.color = materialColor;
         transparentMaterial = new Material(baseMaterial);
         transparentMaterial.color = new Color(materialColor.r, materialColor.g, materialColor.b, 0.2f);
+
     }
 
     public void SetTransparent(bool transparent)

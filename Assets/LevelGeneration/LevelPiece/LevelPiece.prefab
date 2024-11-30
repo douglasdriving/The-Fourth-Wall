@@ -315,8 +315,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fae21c5c13e5a044c816ef05c0dbbd79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shortWordColor: {r: 0.27735847, g: 0.8544314, b: 1, a: 0}
-  longWordColor: {r: 0.9811321, g: 0.28376648, b: 0.04998212, a: 0}
+  commonWordColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 0}
+  rareWordColor: {r: 0.6871855, g: 0.1830188, b: 1, a: 0}
   textToCheck: {fileID: 1925542302175057564}
   baseMaterial: {fileID: 2100000, guid: 9785987b5a406634da0c31d388254185, type: 2}
 --- !u!1001 &547326518130185928
