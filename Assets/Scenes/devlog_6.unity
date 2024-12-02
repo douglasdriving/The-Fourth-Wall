@@ -1070,12 +1070,11 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'devlog #6
 
-    2024-11-29
+    2024-12-02
 
     -------------------------
 
-    emergent
-    block colors'
+    block coloring'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ee1981dece31be94b9a202aaa9ce7fdb, type: 2}
   m_sharedMaterial: {fileID: 4428800186374089408, guid: ee1981dece31be94b9a202aaa9ce7fdb, type: 2}
