@@ -22,11 +22,11 @@ public class PieceColorSetter : MonoBehaviour
 
     void Start()
     {
-        CreateMaterialsBasedOnWordLength();
+        CreateMaterialsBasedOnWordPopularity();
         SetTransparent(false);
     }
 
-    private void CreateMaterialsBasedOnWordLength()
+    private void CreateMaterialsBasedOnWordPopularity()
     {
 
         if (textToCheck == null)
@@ -35,27 +35,8 @@ public class PieceColorSetter : MonoBehaviour
             return;
         }
 
-        int wordPopularity = WordPopularityCounter.GetPopularityForWord(textToCheck.text);
-        int mostPopularWordCount = WordPopularityCounter.mostPopularWord.Item2;
-
-        Debug.Log("wordPopularity: " + wordPopularity);
-        Debug.Log("mostPopularWordCount: " + mostPopularWordCount);
-
-        if (wordPopularity == 0)
-        {
-            Debug.LogWarning("PieceColorSetter: Word not found in WordPopularityCounter: " + textToCheck.text);
-        }
-        if (mostPopularWordCount == 0)
-        {
-            Debug.LogError("mostPopularWordCount is zero, cannot divide by zero.");
-            return;
-        }
-
-        float popularityFactor = (float)wordPopularity / (float)mostPopularWordCount;
-        Debug.Log("popularityFactor: " + popularityFactor);
-
+        float popularityFactor = WordPopularityCounter.GetPopularityForWordNormalized(textToCheck.text);
         Color materialColor = Color.Lerp(rareWordColor, commonWordColor, popularityFactor);
-        Debug.Log("materialColor: " + materialColor);
 
         originalMaterial = new Material(baseMaterial);
         originalMaterial.color = materialColor;
