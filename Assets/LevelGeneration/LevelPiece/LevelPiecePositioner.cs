@@ -154,14 +154,14 @@ namespace LevelGeneration
                 }
             }
 
-            if (enabled)
-            {
-                pieceColorSetter.SetTransparent(false);
-            }
-            else
-            {
-                pieceColorSetter.SetTransparent(true);
-            }
+            // if (enabled)
+            // {
+            //     pieceColorSetter.SetTransparent(false);
+            // }
+            // else
+            // {
+            //     pieceColorSetter.SetTransparent(true);
+            // }
         }
 
         public Vector3 GetFinalWalkOffPoint()

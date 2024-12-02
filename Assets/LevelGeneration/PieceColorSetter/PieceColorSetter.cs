@@ -3,53 +3,52 @@ using UnityEngine;
 
 public class PieceColorSetter : MonoBehaviour
 {
-    [SerializeField] Color commonWordColor;
-    [SerializeField] Color rareWordColor;
     MeshRenderer[] meshesToColor;
     [SerializeField] TMPro.TextMeshProUGUI textToCheck;
     [SerializeField] Material baseMaterial;
-    Material transparentMaterial;
-    Material originalMaterial;
-
-    void Awake()
-    {
-        meshesToColor = GetComponentsInChildren<MeshRenderer>();
-        if (meshesToColor.Length == 0)
-        {
-            Debug.LogWarning("PieceColorSetter: No MeshRenderer components found on GameObject or children");
-        }
-    }
+    Material coloredMaterial;
 
     void Start()
     {
-        CreateMaterialsBasedOnWordPopularity();
-        SetTransparent(false);
+        if (FindAnyObjectByType<PieceColorCreator>())
+        {
+            SetMaterialBasedOnWordPopularity();
+        }
     }
 
-    private void CreateMaterialsBasedOnWordPopularity()
+    private void SetMaterialBasedOnWordPopularity()
     {
+
+        PieceColorCreator pieceColorCreator = FindObjectOfType<PieceColorCreator>();
 
         if (textToCheck == null)
         {
-            Debug.LogWarning("PieceColorSetter: TextMeshPro component not found on GameObject");
+            SetColor(pieceColorCreator.GetCommonWordColor());
             return;
         }
 
-        float popularityFactor = WordPopularityCounter.GetPopularityForWordNormalized(textToCheck.text);
-        Color materialColor = Color.Lerp(rareWordColor, commonWordColor, popularityFactor);
-
-        originalMaterial = new Material(baseMaterial);
-        originalMaterial.color = materialColor;
-        transparentMaterial = new Material(baseMaterial);
-        transparentMaterial.color = new Color(materialColor.r, materialColor.g, materialColor.b, 0.2f);
-
+        Color materialColor = pieceColorCreator.GetColorForWord(textToCheck.text);
+        SetColor(materialColor);
     }
 
-    public void SetTransparent(bool transparent)
+    private void SetColor(Color colorToSet)
     {
+
+        meshesToColor = GetComponentsInChildren<MeshRenderer>();
+
+        if (meshesToColor.Length == 0)
+        {
+            Debug.LogWarning("PieceColorSetter: No MeshRenderer components found on GameObject or children");
+            return;
+        }
+
+        coloredMaterial = new Material(baseMaterial);
+        coloredMaterial.color = colorToSet;
+
         foreach (MeshRenderer meshToColor in meshesToColor)
         {
-            meshToColor.material = transparent ? transparentMaterial : originalMaterial;
+            meshToColor.material = coloredMaterial;
         }
     }
+
 }
