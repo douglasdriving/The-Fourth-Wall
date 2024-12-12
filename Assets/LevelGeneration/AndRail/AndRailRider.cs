@@ -13,6 +13,7 @@ public class AndRailRider : MonoBehaviour
     //balance variables
     [SerializeField] float distanceFromEndPlayerWillBeDroppedAt = 0.5f;
     [SerializeField] float rideSpeed = 10;
+    [SerializeField] float rideHeight = 1;
 
     //player
     Transform player;
@@ -41,9 +42,8 @@ public class AndRailRider : MonoBehaviour
 
     public void UpdatePlayerStartAndEnd(Vector3 _railStart, Vector3 _railEnd)
     {
-        float halfPlayerHeight = player.localScale.y / 2;
-        playerStartPos = _railStart + Vector3.up * halfPlayerHeight;
-        playerEndPos = _railEnd + Vector3.up * halfPlayerHeight;
+        playerStartPos = _railStart + Vector3.up * rideHeight;
+        playerEndPos = _railEnd + Vector3.up * rideHeight;
     }
 
     void OnTriggerEnter(Collider other)
