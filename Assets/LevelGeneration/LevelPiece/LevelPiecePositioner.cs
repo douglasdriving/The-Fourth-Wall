@@ -9,6 +9,7 @@ namespace LevelGeneration
     /// </summary>
     public class LevelPiecePositioner : MonoBehaviour
     {
+        [SerializeField] float moveSpeed = 18f; //speed of the movement
 
         //animation times
         [SerializeField] float hoverTime = 0.5f;
@@ -22,17 +23,11 @@ namespace LevelGeneration
         public Quaternion targetRot { get; private set; }
         public bool reachedFinalPosition { get; private set; }
 
-        //materials
-        [SerializeField] PieceColorSetter pieceColorSetter;
-
         //components
         Collider[] collidersToDisable;
-        Renderer pieceRenderer;
-
 
         private void Awake()
         {
-            pieceRenderer = GetComponentInChildren<Renderer>();
             collidersToDisable = GetComponentsInChildren<Collider>();
             if (!walkOffPoint) Debug.LogWarning("No walk off point set for " + name);
         }
@@ -95,16 +90,13 @@ namespace LevelGeneration
         IEnumerator MoveToPosition(Vector3 targetPos)
         {
             float distanceToTarget = Vector3.Distance(targetPos, transform.position);
-            Vector3 directionToTarget = (targetPos - transform.position).normalized;
-            float moveSpeed = 15f; //magic!
-
             while (distanceToTarget > 0.1f)
             {
+                Vector3 directionToTarget = (targetPos - transform.position).normalized;
                 transform.position += directionToTarget * moveSpeed * Time.deltaTime;
                 distanceToTarget = Vector3.Distance(targetPos, transform.position);
                 yield return null;
             }
-
             transform.position = targetPos;
         }
 
@@ -153,15 +145,6 @@ namespace LevelGeneration
                     collider.enabled = enabled;
                 }
             }
-
-            // if (enabled)
-            // {
-            //     pieceColorSetter.SetTransparent(false);
-            // }
-            // else
-            // {
-            //     pieceColorSetter.SetTransparent(true);
-            // }
         }
 
         public Vector3 GetFinalWalkOffPoint()
