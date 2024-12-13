@@ -191,6 +191,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6248783448888930089, guid: 73df769778ae42a43ae53fd9bf5131bb, type: 3}
+      propertyPath: m_Color.b
+      value: 0.3018868
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248783448888930089, guid: 73df769778ae42a43ae53fd9bf5131bb, type: 3}
+      propertyPath: m_Color.g
+      value: 0.3018868
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248783448888930089, guid: 73df769778ae42a43ae53fd9bf5131bb, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3018868
+      objectReference: {fileID: 0}
+    - target: {fileID: 6895896563891165379, guid: 73df769778ae42a43ae53fd9bf5131bb, type: 3}
+      propertyPath: crosshair
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6895896563891165379, guid: 73df769778ae42a43ae53fd9bf5131bb, type: 3}
+      propertyPath: crosshairColor.b
+      value: 0.18867922
+      objectReference: {fileID: 0}
+    - target: {fileID: 6895896563891165379, guid: 73df769778ae42a43ae53fd9bf5131bb, type: 3}
+      propertyPath: crosshairColor.g
+      value: 0.18867922
+      objectReference: {fileID: 0}
+    - target: {fileID: 6895896563891165379, guid: 73df769778ae42a43ae53fd9bf5131bb, type: 3}
+      propertyPath: crosshairColor.r
+      value: 0.18867922
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777145723979751582, guid: 73df769778ae42a43ae53fd9bf5131bb, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777145723979751582, guid: 73df769778ae42a43ae53fd9bf5131bb, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 8531470548768403456, guid: 73df769778ae42a43ae53fd9bf5131bb, type: 3}
       propertyPath: m_Name
       value: Player
@@ -861,6 +897,7 @@ GameObject:
   - component: {fileID: 6623520142547367947}
   - component: {fileID: 7438805283001852226}
   - component: {fileID: 7133350310531076715}
+  - component: {fileID: 8214068833396023783}
   - component: {fileID: 5346845018446132387}
   - component: {fileID: 8214068833396023782}
   m_Layer: 0
@@ -1294,8 +1331,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a44d0074d66d7e74ab5cec6b56175013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exitPortalPrefab: {fileID: 4335569441670879784, guid: a94d6cfa1021f69488d97c5bb3922e7f, type: 3}
-  portalHeightAbovePlatform: 2.88
+  exitPortalPrefab: {fileID: 4335569441670879784, guid: ede3a4815b17a414fbeac24ece619543, type: 3}
+  portalHeightAbovePlatform: 2.2
   timeBetweenPieceAndPortalSpawn: 1
 --- !u!1 &7157344676915389050
 GameObject:
@@ -1404,6 +1441,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePiecePrefab: {fileID: 4795037251955250072, guid: 2f5bf6a0547761b4fa1b9737e2e51006, type: 3}
+--- !u!114 &8214068833396023783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2867848849929670763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ddccff96ff2f954d92a0b00b5780378, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  question: what does the developer want?
+  answers:
+  - that I have fun
+  - to be heard
+  - to get me into "the zone"
+  correctAnswerIndex: 1
 --- !u!222 &8666242446745631626
 CanvasRenderer:
   m_ObjectHideFlags: 0
