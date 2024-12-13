@@ -4,15 +4,23 @@ using UnityEngine;
 
 namespace QuizPortal
 {
-    public class QuizPortalOpener : MonoBehaviour
+    public class PortalLock : MonoBehaviour
     {
         [SerializeField] GameObject quizCanvas;
         [SerializeField] GameObject portal;
+        [SerializeField] GameObject wrongAnswerCanvas;
 
-        public void OpenPortal()
+        public void Open()
         {
             Destroy(quizCanvas);
             portal.SetActive(true);
+        }
+
+        public void Close()
+        {
+            Destroy(portal);
+            Destroy(quizCanvas);
+            wrongAnswerCanvas.SetActive(true);
         }
     }
 
