@@ -596,6 +596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceFromEndPlayerWillBeDroppedAt: 0.5
   rideSpeed: 10
+  rideHeight: 1
   walkoffPoint: {fileID: 6838226477262789892}
   ridePromptCanvas: {fileID: 6167245281730745071}
 --- !u!65 &334025651283383395
@@ -644,10 +645,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89cc11c93b9b0484ea03c19cf2f417ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 18
   hoverTime: 0.5
   walkOffPoint: {fileID: 6838226477262789892}
   targetPieceScale: {x: 1, y: 1, z: 1}
-  pieceColorSetter: {fileID: 203711859345706265}
 --- !u!114 &-6533219467522658587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -660,7 +661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9ae8c4e8ebcd4a4b82aff3685b3a48c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyTimer: 5
+  destroyTimer: 8
   startDestroyTimerWhenPositioned: 1
 --- !u!114 &203711859345706265
 MonoBehaviour:
@@ -674,8 +675,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fae21c5c13e5a044c816ef05c0dbbd79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shortWordColor: {r: 0.35283017, g: 0.91437644, b: 1, a: 0}
-  longWordColor: {r: 0.9622642, g: 0.31378183, b: 0, a: 0}
   textToCheck: {fileID: 5553833370486791174}
   baseMaterial: {fileID: 2100000, guid: 9785987b5a406634da0c31d388254185, type: 2}
 --- !u!1 &6670675927897403163

@@ -285,10 +285,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89cc11c93b9b0484ea03c19cf2f417ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 15
   hoverTime: 0.6
   walkOffPoint: {fileID: 312883837681284213}
   targetPieceScale: {x: 2, y: 1, z: 1.2}
-  pieceColorSetter: {fileID: 2130303512392342270}
 --- !u!114 &2057495947467307755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,7 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9ae8c4e8ebcd4a4b82aff3685b3a48c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyTimer: 5
+  destroyTimer: 8
   startDestroyTimerWhenPositioned: 0
 --- !u!114 &2130303512392342270
 MonoBehaviour:
@@ -315,8 +315,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fae21c5c13e5a044c816ef05c0dbbd79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commonWordColor: {r: 1, g: 0.2776371, b: 0.19245279, a: 0}
-  rareWordColor: {r: 1, g: 0.8579463, b: 0.3433962, a: 0}
   textToCheck: {fileID: 1925542302175057564}
   baseMaterial: {fileID: 2100000, guid: 9785987b5a406634da0c31d388254185, type: 2}
 --- !u!1001 &547326518130185928

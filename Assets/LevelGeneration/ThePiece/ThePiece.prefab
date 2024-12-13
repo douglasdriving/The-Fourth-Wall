@@ -624,10 +624,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89cc11c93b9b0484ea03c19cf2f417ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 15
   hoverTime: 0.5
   walkOffPoint: {fileID: 6336413241837900478}
   targetPieceScale: {x: 1, y: 1, z: 1}
-  pieceColorSetter: {fileID: 5190290674770209596}
 --- !u!114 &1690062704210467225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -640,7 +640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9ae8c4e8ebcd4a4b82aff3685b3a48c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyTimer: 5
+  destroyTimer: 8
   startDestroyTimerWhenPositioned: 1
 --- !u!114 &5190290674770209596
 MonoBehaviour:
