@@ -1,0 +1,528 @@
+{
+    "text": " I'll add whatever I want, whatever I feel is fun. Whatever gives you some sense that the world that you're playing in is evolving so, well, so that you keep playing and pay attention to what I say. Because after all, all I really want is just for you to pay attention to my words. The gameplay is only a hook.",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 4.44,
+            "text": " I'll add whatever I want, whatever I feel is fun.",
+            "tokens": [
+                50363,
+                314,
+                1183,
+                751,
+                4232,
+                314,
+                765,
+                11,
+                4232,
+                314,
+                1254,
+                318,
+                1257,
+                13,
+                50603
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2124651932134861,
+            "compression_ratio": 1.6263157894736842,
+            "no_speech_prob": 0.003190199611708522,
+            "words": [
+                {
+                    "word": " I'll",
+                    "start": 0.0,
+                    "end": 0.36,
+                    "probability": 0.9745500981807709
+                },
+                {
+                    "word": " add",
+                    "start": 0.36,
+                    "end": 0.68,
+                    "probability": 0.9974203109741211
+                },
+                {
+                    "word": " whatever",
+                    "start": 0.68,
+                    "end": 1.42,
+                    "probability": 0.7307466268539429
+                },
+                {
+                    "word": " I",
+                    "start": 1.42,
+                    "end": 1.66,
+                    "probability": 0.976667046546936
+                },
+                {
+                    "word": " want,",
+                    "start": 1.66,
+                    "end": 1.96,
+                    "probability": 0.9972091317176819
+                },
+                {
+                    "word": " whatever",
+                    "start": 2.16,
+                    "end": 2.38,
+                    "probability": 0.9895775318145752
+                },
+                {
+                    "word": " I",
+                    "start": 2.38,
+                    "end": 2.72,
+                    "probability": 0.9890444278717041
+                },
+                {
+                    "word": " feel",
+                    "start": 2.72,
+                    "end": 3.24,
+                    "probability": 0.9956676959991455
+                },
+                {
+                    "word": " is",
+                    "start": 3.24,
+                    "end": 3.8,
+                    "probability": 0.9557198286056519
+                },
+                {
+                    "word": " fun.",
+                    "start": 3.8,
+                    "end": 4.44,
+                    "probability": 0.9575417637825012
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 5.28,
+            "end": 10.52,
+            "text": " Whatever gives you some sense that the world that you're playing in is evolving so,",
+            "tokens": [
+                50603,
+                15935,
+                3607,
+                345,
+                617,
+                2565,
+                326,
+                262,
+                995,
+                326,
+                345,
+                821,
+                2712,
+                287,
+                318,
+                21568,
+                523,
+                11,
+                50915
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2124651932134861,
+            "compression_ratio": 1.6263157894736842,
+            "no_speech_prob": 0.003190199611708522,
+            "words": [
+                {
+                    "word": " Whatever",
+                    "start": 5.28,
+                    "end": 5.52,
+                    "probability": 0.977538526058197
+                },
+                {
+                    "word": " gives",
+                    "start": 5.52,
+                    "end": 5.9,
+                    "probability": 0.9924560785293579
+                },
+                {
+                    "word": " you",
+                    "start": 5.9,
+                    "end": 6.2,
+                    "probability": 0.9973351359367371
+                },
+                {
+                    "word": " some",
+                    "start": 6.2,
+                    "end": 6.56,
+                    "probability": 0.9957700371742249
+                },
+                {
+                    "word": " sense",
+                    "start": 6.56,
+                    "end": 7.1,
+                    "probability": 0.9986769556999207
+                },
+                {
+                    "word": " that",
+                    "start": 7.1,
+                    "end": 7.56,
+                    "probability": 0.9773516058921814
+                },
+                {
+                    "word": " the",
+                    "start": 7.56,
+                    "end": 7.94,
+                    "probability": 0.9917998909950256
+                },
+                {
+                    "word": " world",
+                    "start": 7.94,
+                    "end": 8.46,
+                    "probability": 0.9971588850021362
+                },
+                {
+                    "word": " that",
+                    "start": 8.46,
+                    "end": 8.78,
+                    "probability": 0.8848680257797241
+                },
+                {
+                    "word": " you're",
+                    "start": 8.78,
+                    "end": 9.02,
+                    "probability": 0.9740486741065979
+                },
+                {
+                    "word": " playing",
+                    "start": 9.02,
+                    "end": 9.26,
+                    "probability": 0.9978673458099365
+                },
+                {
+                    "word": " in",
+                    "start": 9.26,
+                    "end": 9.44,
+                    "probability": 0.9516841769218445
+                },
+                {
+                    "word": " is",
+                    "start": 9.44,
+                    "end": 9.6,
+                    "probability": 0.9912139773368835
+                },
+                {
+                    "word": " evolving",
+                    "start": 9.6,
+                    "end": 10.08,
+                    "probability": 0.9969828724861145
+                },
+                {
+                    "word": " so,",
+                    "start": 10.08,
+                    "end": 10.52,
+                    "probability": 0.5561215281486511
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "seek": 0,
+            "start": 11.12,
+            "end": 15.0,
+            "text": " well, so that you keep playing and pay attention to what I say.",
+            "tokens": [
+                50915,
+                880,
+                11,
+                523,
+                326,
+                345,
+                1394,
+                2712,
+                290,
+                1414,
+                3241,
+                284,
+                644,
+                314,
+                910,
+                13,
+                51147
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2124651932134861,
+            "compression_ratio": 1.6263157894736842,
+            "no_speech_prob": 0.003190199611708522,
+            "words": [
+                {
+                    "word": " well,",
+                    "start": 11.12,
+                    "end": 11.38,
+                    "probability": 0.9788738489151001
+                },
+                {
+                    "word": " so",
+                    "start": 11.58,
+                    "end": 11.7,
+                    "probability": 0.9692710638046265
+                },
+                {
+                    "word": " that",
+                    "start": 11.7,
+                    "end": 11.82,
+                    "probability": 0.9918603301048279
+                },
+                {
+                    "word": " you",
+                    "start": 11.82,
+                    "end": 11.98,
+                    "probability": 0.9985978007316589
+                },
+                {
+                    "word": " keep",
+                    "start": 11.98,
+                    "end": 12.24,
+                    "probability": 0.9960078001022339
+                },
+                {
+                    "word": " playing",
+                    "start": 12.24,
+                    "end": 12.66,
+                    "probability": 0.9991372227668762
+                },
+                {
+                    "word": " and",
+                    "start": 12.66,
+                    "end": 13.02,
+                    "probability": 0.9178521633148193
+                },
+                {
+                    "word": " pay",
+                    "start": 13.02,
+                    "end": 13.44,
+                    "probability": 0.9080413579940796
+                },
+                {
+                    "word": " attention",
+                    "start": 13.44,
+                    "end": 13.9,
+                    "probability": 0.9990118741989136
+                },
+                {
+                    "word": " to",
+                    "start": 13.9,
+                    "end": 14.14,
+                    "probability": 0.9981643557548523
+                },
+                {
+                    "word": " what",
+                    "start": 14.14,
+                    "end": 14.28,
+                    "probability": 0.9990173578262329
+                },
+                {
+                    "word": " I",
+                    "start": 14.28,
+                    "end": 14.52,
+                    "probability": 0.9957852959632874
+                },
+                {
+                    "word": " say.",
+                    "start": 14.52,
+                    "end": 15.0,
+                    "probability": 0.9992103576660156
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "seek": 0,
+            "start": 15.86,
+            "end": 21.02,
+            "text": " Because after all, all I really want is just for you to pay attention to my words.",
+            "tokens": [
+                51147,
+                4362,
+                706,
+                477,
+                11,
+                477,
+                314,
+                1107,
+                765,
+                318,
+                655,
+                329,
+                345,
+                284,
+                1414,
+                3241,
+                284,
+                616,
+                2456,
+                13,
+                51435
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2124651932134861,
+            "compression_ratio": 1.6263157894736842,
+            "no_speech_prob": 0.003190199611708522,
+            "words": [
+                {
+                    "word": " Because",
+                    "start": 15.86,
+                    "end": 16.08,
+                    "probability": 0.9917178153991699
+                },
+                {
+                    "word": " after",
+                    "start": 16.08,
+                    "end": 16.38,
+                    "probability": 0.8326185941696167
+                },
+                {
+                    "word": " all,",
+                    "start": 16.38,
+                    "end": 16.6,
+                    "probability": 0.9852762818336487
+                },
+                {
+                    "word": " all",
+                    "start": 16.72,
+                    "end": 16.96,
+                    "probability": 0.9753826856613159
+                },
+                {
+                    "word": " I",
+                    "start": 16.96,
+                    "end": 17.18,
+                    "probability": 0.9922729730606079
+                },
+                {
+                    "word": " really",
+                    "start": 17.18,
+                    "end": 17.48,
+                    "probability": 0.9953842759132385
+                },
+                {
+                    "word": " want",
+                    "start": 17.48,
+                    "end": 17.82,
+                    "probability": 0.9987314343452454
+                },
+                {
+                    "word": " is",
+                    "start": 17.82,
+                    "end": 18.22,
+                    "probability": 0.9821109175682068
+                },
+                {
+                    "word": " just",
+                    "start": 18.22,
+                    "end": 18.46,
+                    "probability": 0.9394301772117615
+                },
+                {
+                    "word": " for",
+                    "start": 18.46,
+                    "end": 18.7,
+                    "probability": 0.9881902933120728
+                },
+                {
+                    "word": " you",
+                    "start": 18.7,
+                    "end": 18.94,
+                    "probability": 0.9989340901374817
+                },
+                {
+                    "word": " to",
+                    "start": 18.94,
+                    "end": 19.28,
+                    "probability": 0.9347618222236633
+                },
+                {
+                    "word": " pay",
+                    "start": 19.28,
+                    "end": 19.46,
+                    "probability": 0.9992902278900146
+                },
+                {
+                    "word": " attention",
+                    "start": 19.46,
+                    "end": 19.92,
+                    "probability": 0.9985950589179993
+                },
+                {
+                    "word": " to",
+                    "start": 19.92,
+                    "end": 20.3,
+                    "probability": 0.9989508390426636
+                },
+                {
+                    "word": " my",
+                    "start": 20.3,
+                    "end": 20.52,
+                    "probability": 0.9976752400398254
+                },
+                {
+                    "word": " words.",
+                    "start": 20.52,
+                    "end": 21.02,
+                    "probability": 0.9986968636512756
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "seek": 0,
+            "start": 21.58,
+            "end": 23.08,
+            "text": " The gameplay is only a hook.",
+            "tokens": [
+                51435,
+                383,
+                11327,
+                318,
+                691,
+                257,
+                8011,
+                13,
+                51535
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2124651932134861,
+            "compression_ratio": 1.6263157894736842,
+            "no_speech_prob": 0.003190199611708522,
+            "words": [
+                {
+                    "word": " The",
+                    "start": 21.58,
+                    "end": 21.72,
+                    "probability": 0.9895991086959839
+                },
+                {
+                    "word": " gameplay",
+                    "start": 21.72,
+                    "end": 22.04,
+                    "probability": 0.973290741443634
+                },
+                {
+                    "word": " is",
+                    "start": 22.04,
+                    "end": 22.26,
+                    "probability": 0.988943338394165
+                },
+                {
+                    "word": " only",
+                    "start": 22.26,
+                    "end": 22.58,
+                    "probability": 0.9984098672866821
+                },
+                {
+                    "word": " a",
+                    "start": 22.58,
+                    "end": 22.84,
+                    "probability": 0.9983713030815125
+                },
+                {
+                    "word": " hook.",
+                    "start": 22.84,
+                    "end": 23.08,
+                    "probability": 0.9967645406723022
+                }
+            ]
+        }
+    ],
+    "language": "en"
+}
