@@ -13,12 +13,13 @@ public class WordPopularityCounter : MonoBehaviour
 
     void Awake()
     {
-        CountWordsInScripts();
+        RecountWordsInScripts();
         CalculateNormalizedPopularity();
     }
 
-    void CountWordsInScripts()
+    void RecountWordsInScripts()
     {
+        ClearWordCount();
         foreach (TextAsset scriptFile in scriptFiles)
         {
             SubtitleJsonData subtitleJsonData = SubtitleJsonReader.ReadSubtitleJson(scriptFile.text);
@@ -36,6 +37,14 @@ public class WordPopularityCounter : MonoBehaviour
                 }
             }
         }
+        Debug.Log("updated word count");
+    }
+
+    private static void ClearWordCount()
+    {
+        wordCount.Clear();
+        mostPopularWord = null;
+        normalizedWordPopularity.Clear();
     }
 
     private static string CleanWord(string word)
