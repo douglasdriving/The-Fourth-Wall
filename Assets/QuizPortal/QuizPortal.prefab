@@ -771,7 +771,7 @@ GameObject:
   - component: {fileID: 279345491486345118}
   - component: {fileID: 8524276909980218517}
   - component: {fileID: 8802322562038558216}
-  - component: {fileID: 465772886917533016}
+  - component: {fileID: 4535889787698367537}
   m_Layer: 0
   m_Name: QuizPortal
   m_TagString: Untagged
@@ -827,7 +827,7 @@ MonoBehaviour:
   quizCanvas: {fileID: 2984861313326576767}
   portal: {fileID: 4601768234537147660}
   wrongAnswerCanvas: {fileID: 3479043786778439693}
---- !u!114 &465772886917533016
+--- !u!114 &4535889787698367537
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -836,7 +836,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4335569441670879784}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 224064238ed2f9341986c46666a15f54, type: 3}
+  m_Script: {fileID: 11500000, guid: a89540e757b77814c96d12f9181badb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4526630844180283023
@@ -1355,10 +1355,10 @@ RectTransform:
   - {fileID: 4875067718205357903}
   m_Father: {fileID: 8489799780718333605}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 67.97255, y: -75.47464}
+  m_SizeDelta: {x: 135.9451, y: 150.94928}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6379523245054023879
 CanvasRenderer:
