@@ -37,7 +37,6 @@ public class WordPopularityCounter : MonoBehaviour
                 }
             }
         }
-        Debug.Log("updated word count");
     }
 
     private static void ClearWordCount()
