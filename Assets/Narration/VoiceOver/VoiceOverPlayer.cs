@@ -9,6 +9,7 @@ namespace Narration
     public class VoiceOverPlayer : MonoBehaviour
     {
         private static AudioSource audioSource;
+        [SerializeField] static bool normalizeVolume = false;
 
         private void Awake()
         {
@@ -18,7 +19,10 @@ namespace Narration
         public static void PlayClip(AudioClip clip)
         {
             audioSource.clip = clip;
-            audioSource.volume = GetNormalizedVolume(clip);
+            if (normalizeVolume)
+            {
+                audioSource.volume = GetNormalizedVolume(clip);
+            }
             audioSource.Play();
         }
 
