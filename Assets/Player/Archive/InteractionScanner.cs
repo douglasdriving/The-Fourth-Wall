@@ -42,6 +42,7 @@ public class InteractionScanner : MonoBehaviour
                 {
                     SwitchHighlightedItem(interactable);
                 }
+                OnLookAt(interactable); // P6c40
             }
             else
             {
@@ -67,6 +68,15 @@ public class InteractionScanner : MonoBehaviour
         {
             highlightedInteractable.RemoveHighlight();
             highlightedInteractable = null;
+        }
+    }
+
+    private void OnLookAt(Interactable interactable) // P00f1
+    {
+        LevelPiecePositioner levelPiecePositioner = interactable.GetComponent<LevelPiecePositioner>();
+        if (levelPiecePositioner != null && levelPiecePositioner.isFrozen)
+        {
+            levelPiecePositioner.UnfreezeAndMoveToPosition();
         }
     }
 }
