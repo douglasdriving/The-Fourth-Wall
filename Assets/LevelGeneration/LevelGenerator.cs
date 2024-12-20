@@ -48,6 +48,8 @@ namespace LevelGeneration
         levelPiece = walkwayGenerator.AddPieceToWalkway(lastPieceFinalWalkoffPoint, word, lastPieceWord);
       }
 
+      levelPiece.GetComponent<LevelPiecePositioner>().FreezeInPlace(); // Peac5
+
       levelPiecesSpawned.Add(levelPiece);
       return levelPiece;
     }
