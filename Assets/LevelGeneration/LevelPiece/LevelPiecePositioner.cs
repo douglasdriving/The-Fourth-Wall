@@ -22,7 +22,6 @@ namespace LevelGeneration
         public Vector3 targetPos { get; private set; }
         public Quaternion targetRot { get; private set; }
         public bool reachedFinalPosition { get; private set; }
-        public bool isFrozen { get; private set; } // P6b4a
 
         //components
         Collider[] collidersToDisable;
@@ -44,10 +43,7 @@ namespace LevelGeneration
         {
             this.targetPos = targetPosition;
             this.targetRot = targetRotation;
-            if (!isFrozen) // P86af
-            {
-                StartCoroutine(MoveAnimation());
-            }
+            StartCoroutine(MoveAnimation());
         }
 
         IEnumerator MoveAnimation()
@@ -158,16 +154,6 @@ namespace LevelGeneration
             Vector3 finalWalkOffPoint = targetPos + targetRot * scaledLocalWalkOffPoint;
             return finalWalkOffPoint;
         }
-
-        public void FreezeInPlace() // P6b4a
-        {
-            isFrozen = true;
-        }
-
-        public void UnfreezeAndMoveToPosition() // P502e
-        {
-            isFrozen = false;
-            MoveWithAnimation(targetPos, targetRot);
-        }
     }
 }
+

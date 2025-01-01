@@ -21,7 +21,7 @@ namespace LevelGeneration
       GameObject piece = Instantiate(walkwayPiecePrefab, spawnPos, Quaternion.identity);
       piece.transform.up = Vector3.back;
       piece.GetComponentInChildren<TMP_Text>().text = pieceWord;
-      piece.GetComponent<LevelPiecePositioner>().FreezeInPlace(); // Pe0f4
+      piece.GetComponent<LevelPiecePositioner>().MoveWithSimpleAnimation(finalPos, finalRot);
       return piece;
     }
 
@@ -29,7 +29,7 @@ namespace LevelGeneration
     {
       GameObject piece = levelPieceMolds.CopyNextMold();
       piece.GetComponentInChildren<TMP_Text>().text = pieceWord;
-      piece.GetComponent<LevelPiecePositioner>().FreezeInPlace(); // Pafb9
+      piece.GetComponent<LevelPiecePositioner>().MoveWithAnimation(targetPos, targetRot);
       return piece;
     }
 
@@ -38,7 +38,6 @@ namespace LevelGeneration
       GameObject piece = GameObject.Instantiate(walkwayPiecePrefab);
       piece.GetComponentInChildren<LevelPiecePositioner>().SetPosition(pos, rot);
       piece.GetComponentInChildren<TMP_Text>().text = pieceWord;
-      piece.GetComponent<LevelPiecePositioner>().FreezeInPlace(); // P6081
       return piece;
     }
 
