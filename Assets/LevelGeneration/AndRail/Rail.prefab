@@ -179,6 +179,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6838226477262789892}
+  - {fileID: 9157826812201155478}
   m_Father: {fileID: 3056080465385678063}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1766763691447782581
@@ -649,6 +650,7 @@ MonoBehaviour:
   hoverTime: 0.5
   walkOffPoint: {fileID: 6838226477262789892}
   targetPieceScale: {x: 1, y: 1, z: 1}
+  isFrozen: 0
 --- !u!114 &-6533219467522658587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -824,3 +826,71 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1008f34d9ec16b4db9cd6d65719067e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &8123242940028506884
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9157826812201155478}
+  - component: {fileID: 5477756256257269931}
+  - component: {fileID: 3680352126239147349}
+  m_Layer: 0
+  m_Name: TempUnfreezeCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9157826812201155478
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8123242940028506884}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8701787574925019014}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5477756256257269931
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8123242940028506884}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3680352126239147349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8123242940028506884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a427d24f1c08744b38e8fac2ab728c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelPiecePositioner: {fileID: 5236212528172282426}
+  deleteGameObjectWhenUnfrozen: 1

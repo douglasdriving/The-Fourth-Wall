@@ -73,7 +73,6 @@ namespace LevelGeneration
                 piece = walkwayPieceFactory.InstantiateAtFinalPosition(targetPos, targetRot, pieceWord);
             }
 
-
             if (isDissapearing)
             {
                 piece.GetComponent<LevelPieceDestroyTimer>().startDestroyTimerWhenPositioned = true;

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2179372920765194466}
   - component: {fileID: 281273466990960384}
   - component: {fileID: 3992690385357702015}
+  - component: {fileID: 1933504106775104081}
   m_Layer: 0
   m_Name: Geometry
   m_TagString: Platform
@@ -106,6 +107,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1933504106775104081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804096083968287790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a427d24f1c08744b38e8fac2ab728c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelPiecePositioner: {fileID: -5928518325339512087}
 --- !u!1 &1876559722440093188
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,6 +303,7 @@ MonoBehaviour:
   hoverTime: 0.6
   walkOffPoint: {fileID: 312883837681284213}
   targetPieceScale: {x: 2, y: 1, z: 1.2}
+  isFrozen: 0
 --- !u!114 &2057495947467307755
 MonoBehaviour:
   m_ObjectHideFlags: 0

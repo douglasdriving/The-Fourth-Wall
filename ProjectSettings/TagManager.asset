@@ -13,6 +13,7 @@ TagManager:
   - WordAnchor
   - ThirdCrystalPlatformEntryPoint
   - LevelPieceEnd
+  - Unfreezable
   layers:
   - Default
   - TransparentFX

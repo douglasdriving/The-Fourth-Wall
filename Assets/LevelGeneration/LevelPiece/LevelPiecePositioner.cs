@@ -1,5 +1,7 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace LevelGeneration
@@ -23,13 +25,16 @@ namespace LevelGeneration
         public Quaternion targetRot { get; private set; }
         public bool reachedFinalPosition { get; private set; }
 
-        //components
-        Collider[] collidersToDisable;
+        //freezing
+        public bool isFrozen = false;
+
+        //colliders
+        Collider[] colliders;
 
         private void Awake()
         {
-            collidersToDisable = GetComponentsInChildren<Collider>();
             if (!walkOffPoint) Debug.LogWarning("No walk off point set for " + name);
+            colliders = GetComponentsInChildren<Collider>();
         }
 
         public void SetPosition(Vector3 targetPosition, Quaternion targetRotation)
@@ -41,50 +46,76 @@ namespace LevelGeneration
 
         public void MoveWithAnimation(Vector3 targetPosition, Quaternion targetRotation)
         {
+
+            IEnumerator MoveAnimation()
+            {
+
+                IEnumerator HoverInFrontOfCamera(float hoverTime)
+                {
+                    transform.parent = Camera.main.transform;
+                    yield return new WaitForSeconds(hoverTime);
+                    transform.parent = null;
+                }
+
+                IEnumerator ScaleToScale(Vector3 targetScale, float scaleTime)
+                {
+                    float elapsedTime = 0;
+                    Vector3 startScale = transform.localScale;
+                    while (elapsedTime < scaleTime)
+                    {
+                        float percentageOfTimePassed = elapsedTime / scaleTime;
+                        transform.localScale = Vector3.Lerp(startScale, targetScale, percentageOfTimePassed);
+                        elapsedTime += Time.deltaTime;
+                        yield return null;
+                    }
+                    transform.localScale = targetScale;
+                }
+
+                SetCollidersEnabled(false);
+                yield return HoverInFrontOfCamera(hoverTime);
+                Vector3 posWithSameZAsTarget = new Vector3(transform.position.x, transform.position.y, targetPos.z);
+                yield return MoveToPosition(posWithSameZAsTarget);
+                yield return new WaitForSeconds(0.1f);
+                yield return ScaleToScale(targetPieceScale, 0.2f);
+                yield return new WaitForSeconds(0.1f);
+                yield return RotateToRotation(targetRot, 0.2f);
+                yield return new WaitForSeconds(0.1f);
+                yield return MoveToPosition(targetPos);
+                SetFinalTransform(targetPos, targetRot);
+                SetCollidersEnabled(true);
+            }
+
             this.targetPos = targetPosition;
             this.targetRot = targetRotation;
             StartCoroutine(MoveAnimation());
         }
 
-        IEnumerator MoveAnimation()
-        {
-            SetCollidersEnabled(false);
-            yield return HoverInFrontOfCamera(hoverTime);
-            Vector3 posWithSameZAsTarget = new Vector3(transform.position.x, transform.position.y, targetPos.z);
-            yield return MoveToPosition(posWithSameZAsTarget);
-            yield return new WaitForSeconds(0.1f);
-            yield return ScaleToScale(targetPieceScale, 0.2f);
-            yield return new WaitForSeconds(0.1f);
-            yield return RotateToRotation(targetRot, 0.2f);
-            yield return new WaitForSeconds(0.1f);
-            yield return MoveToPosition(targetPos);
-            SetFinalTransform(targetPos, targetRot);
-            SetCollidersEnabled(true);
-        }
-
         public void MoveWithSimpleAnimation(Vector3 _targetPos, Quaternion _targetRot)
         {
+            IEnumerator SimpleMoveAnimation()
+            {
+                if (!isFrozen)
+                {
+                    yield return new WaitForSeconds(0.2f);
+                }
+                else
+                {
+                    while (isFrozen)
+                    {
+                        yield return null;
+                    }
+                }
+                SetCollidersEnabled(false);
+                yield return RotateToRotation(targetRot, 0.2f);
+                yield return new WaitForSeconds(0.1f);
+                yield return MoveToPosition(targetPos);
+                SetFinalTransform(targetPos, targetRot);
+                SetCollidersEnabled(true);
+            }
+
             targetPos = _targetPos;
             targetRot = _targetRot;
             StartCoroutine(SimpleMoveAnimation());
-        }
-
-        IEnumerator SimpleMoveAnimation()
-        {
-            SetCollidersEnabled(false);
-            yield return new WaitForSeconds(0.2f);
-            yield return RotateToRotation(targetRot, 0.2f);
-            yield return new WaitForSeconds(0.1f);
-            yield return MoveToPosition(targetPos);
-            SetFinalTransform(targetPos, targetRot);
-            SetCollidersEnabled(true);
-        }
-
-        IEnumerator HoverInFrontOfCamera(float hoverTime)
-        {
-            transform.parent = Camera.main.transform; //might get fucked by functions above
-            yield return new WaitForSeconds(hoverTime);
-            transform.parent = null; //SOULD BE WALKWAY
         }
 
         IEnumerator MoveToPosition(Vector3 targetPos)
@@ -114,20 +145,6 @@ namespace LevelGeneration
             transform.rotation = targetRot;
         }
 
-        IEnumerator ScaleToScale(Vector3 targetScale, float scaleTime)
-        {
-            float elapsedTime = 0;
-            Vector3 startScale = transform.localScale;
-            while (elapsedTime < scaleTime)
-            {
-                float percentageOfTimePassed = elapsedTime / scaleTime;
-                transform.localScale = Vector3.Lerp(startScale, targetScale, percentageOfTimePassed);
-                elapsedTime += Time.deltaTime;
-                yield return null;
-            }
-            transform.localScale = targetScale;
-        }
-
         private void SetFinalTransform(Vector3 targetPosition, Quaternion targetRotation)
         {
             transform.position = targetPosition;
@@ -138,7 +155,7 @@ namespace LevelGeneration
 
         void SetCollidersEnabled(bool enabled)
         {
-            foreach (Collider collider in collidersToDisable)
+            foreach (Collider collider in colliders)
             {
                 if (collider)
                 {
