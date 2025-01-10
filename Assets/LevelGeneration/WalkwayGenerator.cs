@@ -13,6 +13,7 @@ namespace LevelGeneration
         WalkwayPieceFactory walkwayPieceFactory;
         [SerializeField] float sentanceGapSize = 3f;
         [SerializeField] float maxSideShift = 0.6f;
+        [SerializeField] float spawnHeight = 1.5f;
         public enum AnimationType
         {
             NONE,
@@ -62,7 +63,11 @@ namespace LevelGeneration
 
             if (animationType == AnimationType.MOVE_FROM_ABOVE_TARGET)
             {
-                piece = walkwayPieceFactory.SpawnAboveTargetAndMoveIntoPlace(targetPos, targetRot, pieceWord, 1.5f); //magic numba!
+                Vector3 spawnPos = targetPos + Vector3.up * spawnHeight;
+                //okay so, when the pieces are frozen, we need to spawn them with some randomization
+                //question: should this be done in the next level, maybe?
+                //seems like we can split it into 2 sections, just to show my though process
+                piece = walkwayPieceFactory.SpawnAboveTargetAndMoveIntoPlace(targetPos, targetRot, pieceWord, spawnPos);
             }
             else if (animationType == AnimationType.MOVE_FROM_SUBTITLE)
             {

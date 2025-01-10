@@ -15,9 +15,8 @@ namespace LevelGeneration
     [SerializeField] GameObject walkwayPiecePrefab;
     [SerializeField] LevelPieceMolds levelPieceMolds;
 
-    public GameObject SpawnAboveTargetAndMoveIntoPlace(Vector3 finalPos, Quaternion finalRot, string pieceWord, float spawnHeightAboveTarget = 1.5f)
+    public GameObject SpawnAboveTargetAndMoveIntoPlace(Vector3 finalPos, Quaternion finalRot, string pieceWord, Vector3 spawnPos)
     {
-      Vector3 spawnPos = finalPos + Vector3.up * spawnHeightAboveTarget;
       GameObject piece = Instantiate(walkwayPiecePrefab, spawnPos, Quaternion.identity);
       piece.transform.up = Vector3.back;
       piece.GetComponentInChildren<TMP_Text>().text = pieceWord;
