@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/devlog_7.unity
     guid: 67e5b4c2efe61a54993b1894ca3f28f1
+  - enabled: 1
+    path: Assets/Scenes/devlog_8.unity
+    guid: 1459a69133a0dcf4da65c4d03b192a80
   m_configObjects: {}
