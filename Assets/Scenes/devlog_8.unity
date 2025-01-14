@@ -1364,6 +1364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sentanceGapSize: 3
   maxSideShift: 0.6
+  spawnHeight: 1.5
   animationType: 2
   isSeparatingSentences: 1
   isDissapearing: 1

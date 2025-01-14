@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelPiecePositioner: {fileID: -5928518325339512087}
+  deleteGameObjectWhenUnfrozen: 0
 --- !u!1 &1876559722440093188
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,6 +263,7 @@ GameObject:
   - component: {fileID: -5928518325339512087}
   - component: {fileID: 2057495947467307755}
   - component: {fileID: 2130303512392342270}
+  - component: {fileID: -2316359044262191197}
   m_Layer: 0
   m_Name: LevelPiece
   m_TagString: Walkway
@@ -332,6 +334,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textToCheck: {fileID: 1925542302175057564}
   baseMaterial: {fileID: 2100000, guid: 9785987b5a406634da0c31d388254185, type: 2}
+  frozenMaterial: {fileID: 2100000, guid: 355f6f7850fe5f445a09f9183786217c, type: 2}
+--- !u!114 &-2316359044262191197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6737570752163496808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8910a0943b2e354089711a4a7817c4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &547326518130185928
 PrefabInstance:
   m_ObjectHideFlags: 0

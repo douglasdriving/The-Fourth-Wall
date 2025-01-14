@@ -679,6 +679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textToCheck: {fileID: 5553833370486791174}
   baseMaterial: {fileID: 2100000, guid: 9785987b5a406634da0c31d388254185, type: 2}
+  frozenMaterial: {fileID: 2100000, guid: 355f6f7850fe5f445a09f9183786217c, type: 2}
 --- !u!1 &6670675927897403163
 GameObject:
   m_ObjectHideFlags: 0

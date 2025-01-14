@@ -10,7 +10,8 @@ public class PieceColorCreator : MonoBehaviour
     public Color GetColorForWord(string word)
     {
         float popularityFactor = WordPopularityCounter.GetPopularityForWordNormalized(word);
-        return Color.Lerp(rareWordColor, commonWordColor, popularityFactor);
+        Color color = Color.Lerp(rareWordColor, commonWordColor, popularityFactor);
+        return color;
     }
 
     public Color GetCommonWordColor()

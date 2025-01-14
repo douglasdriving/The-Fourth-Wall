@@ -6,49 +6,69 @@ public class PieceColorSetter : MonoBehaviour
     MeshRenderer[] meshesToColor;
     [SerializeField] TMPro.TextMeshProUGUI textToCheck;
     [SerializeField] Material baseMaterial;
-    Material coloredMaterial;
+    [SerializeField] Material frozenMaterial;
+    Material pieceMaterial;
 
-    void Start()
+    void Awake()
     {
-        if (FindAnyObjectByType<PieceColorCreator>())
-        {
-            SetMaterialBasedOnWordPopularity();
-        }
-    }
-
-    private void SetMaterialBasedOnWordPopularity()
-    {
-
-        PieceColorCreator pieceColorCreator = FindObjectOfType<PieceColorCreator>();
-
-        if (textToCheck == null)
-        {
-            SetColor(pieceColorCreator.GetCommonWordColor());
-            return;
-        }
-
-        Color materialColor = pieceColorCreator.GetColorForWord(textToCheck.text);
-        SetColor(materialColor);
-    }
-
-    private void SetColor(Color colorToSet)
-    {
-
         meshesToColor = GetComponentsInChildren<MeshRenderer>();
+        // CreatePieceMaterial();
+        //ok, quite simply, this should not be called on awake. rather, it should be called by whaterever sets the word
+        SceneRules rules = FindObjectOfType<SceneRules>();
+        if (rules && rules.freezePiecesOnSpawn)
+        {
+            SetFrozenMaterial();
+        }
+        // else
+        // {
+        //     SetPieceMaterial();
+        // }
+    }
 
+    private void ApplyMaterial(Material material)
+    {
         if (meshesToColor.Length == 0)
         {
             Debug.LogWarning("PieceColorSetter: No MeshRenderer components found on GameObject or children");
             return;
         }
-
-        coloredMaterial = new Material(baseMaterial);
-        coloredMaterial.color = colorToSet;
-
         foreach (MeshRenderer meshToColor in meshesToColor)
         {
-            meshToColor.material = coloredMaterial;
+            meshToColor.material = material;
         }
+    }
+
+    public void UpdatePieceMaterialByWord(string word)
+    {
+        PieceColorCreator pieceColorCreator = FindObjectOfType<PieceColorCreator>();
+        if (!pieceColorCreator)
+        {
+            Debug.LogWarning("PieceColorSetter: No PieceColorCreator found in scene");
+            return;
+        }
+
+        Color materialColor;
+        if (word == null || word == "")
+        {
+            materialColor = pieceColorCreator.GetCommonWordColor();
+        }
+        else
+        {
+            materialColor = pieceColorCreator.GetColorForWord(word); //word hasnt been added yet...
+            //in reality, all of this should be controlled by the factory, which should determine the order of things.
+        }
+        pieceMaterial = new Material(baseMaterial);
+        pieceMaterial.color = materialColor;
+    }
+
+    public void SetFrozenMaterial()
+    {
+        ApplyMaterial(frozenMaterial);
+    }
+
+    public void SetPieceMaterial()
+    {
+        ApplyMaterial(pieceMaterial);
     }
 
 }

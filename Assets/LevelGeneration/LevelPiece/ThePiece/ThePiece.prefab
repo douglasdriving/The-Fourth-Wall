@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelPiecePositioner: {fileID: -2184872688145861670}
+  deleteGameObjectWhenUnfrozen: 0
 --- !u!1 &1194151164249480362
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,6 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelPiecePositioner: {fileID: -2184872688145861670}
+  deleteGameObjectWhenUnfrozen: 0
 --- !u!1 &1377754886026365549
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,6 +392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelPiecePositioner: {fileID: -2184872688145861670}
+  deleteGameObjectWhenUnfrozen: 0
 --- !u!1 &2419846007593187103
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,6 +513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelPiecePositioner: {fileID: -2184872688145861670}
+  deleteGameObjectWhenUnfrozen: 0
 --- !u!1 &2846896913177692672
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,6 +634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelPiecePositioner: {fileID: -2184872688145861670}
+  deleteGameObjectWhenUnfrozen: 0
 --- !u!1 &4795037251955250072
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,6 +732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textToCheck: {fileID: 7581956394668307381}
   baseMaterial: {fileID: 2100000, guid: 9785987b5a406634da0c31d388254185, type: 2}
+  frozenMaterial: {fileID: 2100000, guid: 355f6f7850fe5f445a09f9183786217c, type: 2}
 --- !u!1 &5136269057192344317
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,6 +889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelPiecePositioner: {fileID: -2184872688145861670}
+  deleteGameObjectWhenUnfrozen: 0
 --- !u!1001 &536118964549723673
 PrefabInstance:
   m_ObjectHideFlags: 0

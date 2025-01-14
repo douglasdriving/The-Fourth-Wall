@@ -20,6 +20,8 @@ namespace LevelGeneration
       GameObject piece = Instantiate(walkwayPiecePrefab, spawnPos, Quaternion.identity);
       piece.transform.up = Vector3.back;
       piece.GetComponentInChildren<TMP_Text>().text = pieceWord;
+      //should this be done here, or should there be a text setter IN the piece?
+      //then, that text setter could also update the color of the piece, whenever a new word has been set.
       piece.GetComponent<LevelPiecePositioner>().MoveWithSimpleAnimation(finalPos, finalRot);
       return piece;
     }
