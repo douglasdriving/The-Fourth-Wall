@@ -5,4 +5,5 @@ using UnityEngine;
 public class SceneRules : MonoBehaviour
 {
     public bool freezePiecesOnSpawn = false;
+    public bool pieceSpawnSpread = false;
 }

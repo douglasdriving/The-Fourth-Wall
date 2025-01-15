@@ -64,18 +64,30 @@ namespace LevelGeneration
             if (animationType == AnimationType.MOVE_FROM_ABOVE_TARGET)
             {
                 Vector3 spawnPos = targetPos + Vector3.up * spawnHeight;
-                //okay so, when the pieces are frozen, we need to spawn them with some randomization
-                //question: should this be done in the next level, maybe?
-                //seems like we can split it into 2 sections, just to show my though process
-                piece = walkwayPieceFactory.SpawnAboveTargetAndMoveIntoPlace(targetPos, targetRot, pieceWord, spawnPos);
+                bool rotateTowardsPlayer = false;
+                SceneRules rules = FindObjectOfType<SceneRules>();
+                if (rules && rules.pieceSpawnSpread)
+                {
+                    //alter the spaw pos!
+                    float distanceToPlayer = Vector3.Distance(Camera.main.transform.position, spawnPos);
+                    //randomily increase its height
+                    float maxUpShift = distanceToPlayer / 5;
+                    spawnPos.y += Random.Range(0, maxUpShift);
+                    //randomly move it a bit left or right
+                    float maxSideShift = distanceToPlayer / 3;
+                    spawnPos.x += Random.Range(-maxSideShift, maxSideShift);
+                    //rotate it towards the player  
+                    rotateTowardsPlayer = true;
+                }
+                piece = walkwayPieceFactory.SpawnAboveTargetAndMoveIntoPlace(targetPos, targetRot, pieceWord, spawnPos, rotateTowardsPlayer);
             }
             else if (animationType == AnimationType.MOVE_FROM_SUBTITLE)
             {
-                piece = walkwayPieceFactory.InstantiateInFrontOfCameraAnMoveIntoPlace(pieceWord, targetPos, targetRot);
+                piece = walkwayPieceFactory.SpawnInFrontOfCameraAnMoveIntoPlace(pieceWord, targetPos, targetRot);
             }
             else
             {
-                piece = walkwayPieceFactory.InstantiateAtFinalPosition(targetPos, targetRot, pieceWord);
+                piece = walkwayPieceFactory.SpawnAtFinalPosition(targetPos, targetRot, pieceWord);
             }
 
             if (isDissapearing)

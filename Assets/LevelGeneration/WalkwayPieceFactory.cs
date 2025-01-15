@@ -14,16 +14,24 @@ namespace LevelGeneration
     [SerializeField] GameObject walkwayPiecePrefab;
     [SerializeField] LevelPieceMolds levelPieceMolds;
 
-    public GameObject SpawnAboveTargetAndMoveIntoPlace(Vector3 finalPos, Quaternion finalRot, string pieceWord, Vector3 spawnPos)
+    public GameObject SpawnAboveTargetAndMoveIntoPlace(Vector3 finalPos, Quaternion finalRot, string pieceWord, Vector3 spawnPos, bool rotateTowardsPlayer)
     {
       GameObject piece = Instantiate(walkwayPiecePrefab, spawnPos, Quaternion.identity);
-      piece.transform.up = Vector3.back;
+      if (rotateTowardsPlayer)
+      {
+        piece.transform.LookAt(Camera.main.transform.position);
+        piece.transform.Rotate(-90, 0, 180);
+      }
+      else
+      {
+        piece.transform.up = Vector3.back;
+      }
       piece.GetComponent<LevelPiece.WordSetter>().SetWord(pieceWord);
       piece.GetComponent<LevelPiece.Positioner>().MoveWithSimpleAnimation(finalPos, finalRot);
       return piece;
     }
 
-    public GameObject InstantiateInFrontOfCameraAnMoveIntoPlace(string pieceWord, Vector3 targetPos, Quaternion targetRot)
+    public GameObject SpawnInFrontOfCameraAnMoveIntoPlace(string pieceWord, Vector3 targetPos, Quaternion targetRot)
     {
       GameObject piece = levelPieceMolds.CopyNextMold();
       piece.GetComponent<LevelPiece.WordSetter>().SetWord(pieceWord);
@@ -31,7 +39,7 @@ namespace LevelGeneration
       return piece;
     }
 
-    public GameObject InstantiateAtFinalPosition(Vector3 pos, Quaternion rot, string pieceWord)
+    public GameObject SpawnAtFinalPosition(Vector3 pos, Quaternion rot, string pieceWord)
     {
       GameObject piece = Instantiate(walkwayPiecePrefab);
       piece.GetComponent<LevelPiece.WordSetter>().SetWord(pieceWord);
