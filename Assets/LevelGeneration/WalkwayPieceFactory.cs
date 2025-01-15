@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using Player;
@@ -13,22 +12,51 @@ namespace LevelGeneration
   {
     [SerializeField] GameObject walkwayPiecePrefab;
     [SerializeField] LevelPieceMolds levelPieceMolds;
+    [SerializeField] float spawnHeight = 1.5f;
+    SceneRules rules;
+    Transform playerCam;
 
-    public GameObject SpawnAboveTargetAndMoveIntoPlace(Vector3 finalPos, Quaternion finalRot, string pieceWord, Vector3 spawnPos, bool rotateTowardsPlayer)
+    private void Awake()
     {
+      rules = FindObjectOfType<SceneRules>();
+      playerCam = Camera.main.transform;
+    }
+
+    public GameObject SpawnAboveTargetAndMoveIntoPlace(Vector3 finalPos, Quaternion finalRot, string word)
+    {
+      Vector3 spawnPos = GetSpawnPosAboveTarget(finalPos);
       GameObject piece = Instantiate(walkwayPiecePrefab, spawnPos, Quaternion.identity);
-      if (rotateTowardsPlayer)
+      AdjustPieceRotation(piece);
+      piece.GetComponent<LevelPiece.WordSetter>().SetWord(word);
+      piece.GetComponent<LevelPiece.Positioner>().MoveWithSimpleAnimation(finalPos, finalRot);
+      return piece;
+    }
+
+    private void AdjustPieceRotation(GameObject piece)
+    {
+      if (rules && rules.pieceSpawnSpread)
       {
-        piece.transform.LookAt(Camera.main.transform.position);
+        piece.transform.LookAt(playerCam.position);
         piece.transform.Rotate(-90, 0, 180);
       }
       else
       {
         piece.transform.up = Vector3.back;
       }
-      piece.GetComponent<LevelPiece.WordSetter>().SetWord(pieceWord);
-      piece.GetComponent<LevelPiece.Positioner>().MoveWithSimpleAnimation(finalPos, finalRot);
-      return piece;
+    }
+
+    private Vector3 GetSpawnPosAboveTarget(Vector3 finalPos)
+    {
+      Vector3 spawnPos = finalPos + Vector3.up * spawnHeight;
+      if (rules && rules.pieceSpawnSpread)
+      {
+        float distanceToPlayer = Vector3.Distance(playerCam.position, spawnPos);
+        float maxUpShift = distanceToPlayer / 5;
+        spawnPos.y += Random.Range(0, maxUpShift);
+        float maxSideShift = distanceToPlayer / 3;
+        spawnPos.x += Random.Range(-maxSideShift, maxSideShift);
+      }
+      return spawnPos;
     }
 
     public GameObject SpawnInFrontOfCameraAnMoveIntoPlace(string pieceWord, Vector3 targetPos, Quaternion targetRot)
