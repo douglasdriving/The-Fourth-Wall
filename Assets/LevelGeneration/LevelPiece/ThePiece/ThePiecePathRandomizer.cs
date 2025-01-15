@@ -4,7 +4,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
-namespace LevelGeneration.ThePiece
+namespace LevelPiece
 {
     /// <summary>
     /// Randomizes the correct fork in the path of the piece.

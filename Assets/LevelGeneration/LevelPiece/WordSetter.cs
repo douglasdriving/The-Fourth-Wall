@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LevelPiece //this namespace should be utilized better
+namespace LevelPiece
 {
     public class WordSetter : MonoBehaviour
     {
         [SerializeField] TMPro.TextMeshProUGUI textToSet;
-        [SerializeField] PieceColorSetter pieceColorSetter;
+        [SerializeField] ColorSetter pieceColorSetter;
 
         public void SetWord(string word)
         {

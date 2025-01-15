@@ -15,7 +15,7 @@ public class ObjectScannerRay : MonoBehaviour
 
     private static void TryUnfreezeHitObject(RaycastHit hit)
     {
-        LevelPieceFreezer unfreezer = hit.collider.GetComponent<LevelPieceFreezer>();
+        LevelPiece.Freezer unfreezer = hit.collider.GetComponent<LevelPiece.Freezer>();
         if (unfreezer != null)
         {
             unfreezer.Unfreeze();

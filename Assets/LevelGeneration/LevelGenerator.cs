@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Linq;
-using LevelGeneration.ThePiece;
 using TMPro;
 using UnityEngine;
 
@@ -55,7 +54,7 @@ namespace LevelGeneration
     private Vector3 GetLastPieceFinalWalkoffPoint()
     {
       GameObject lastPiece = levelPiecesSpawned.Last();
-      Vector3 lastPieceEndPoint = lastPiece.GetComponent<LevelPiecePositioner>().GetFinalWalkOffPoint();
+      Vector3 lastPieceEndPoint = lastPiece.GetComponent<LevelPiece.Positioner>().GetFinalWalkOffPoint();
       return lastPieceEndPoint;
     }
 

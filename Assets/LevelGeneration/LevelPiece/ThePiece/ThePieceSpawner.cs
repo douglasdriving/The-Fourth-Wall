@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LevelGeneration.ThePiece
+namespace LevelGeneration
 {
     /// <summary>
     /// spawns "the" pieces onto the path.
@@ -15,13 +15,13 @@ namespace LevelGeneration.ThePiece
         {
             GameObject piece = SpawnAboveFinalPos(entryPoint);
             StartAnimation(entryPoint, piece);
-            piece.GetComponent<PieceColorSetter>().UpdatePieceMaterialByWord("the");
+            piece.GetComponent<LevelPiece.ColorSetter>().UpdatePieceMaterialByWord("the");
             return piece;
         }
 
         private static void StartAnimation(Vector3 entryPoint, GameObject piece)
         {
-            LevelPiecePositioner positioner = piece.GetComponent<LevelPiecePositioner>();
+            LevelPiece.Positioner positioner = piece.GetComponent<LevelPiece.Positioner>();
             Vector3 finalPos = entryPoint + Vector3.down * 0.5f;
             positioner.MoveWithSimpleAnimation(finalPos, Quaternion.identity);
         }

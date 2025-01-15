@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace LevelGeneration
+namespace LevelPiece
 {
     /// <summary>
     /// moves a position to a set position, rotation, and scale over a given time.
     /// </summary>
-    public class LevelPiecePositioner : MonoBehaviour
+    public class Positioner : MonoBehaviour
     {
         [SerializeField] float moveSpeed = 18f; //speed of the movement
 

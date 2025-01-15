@@ -17,7 +17,7 @@ namespace LevelGeneration
         {
             yield return new WaitForSeconds(delay);
             GameObject portalLevelPiece = FindObjectOfType<LevelGenerator>().SpawnNextPiece("");
-            LevelPiecePositioner piecePositioner = portalLevelPiece.GetComponent<LevelPiecePositioner>();
+            LevelPiece.Positioner piecePositioner = portalLevelPiece.GetComponent<LevelPiece.Positioner>();
             Vector3 portalPos = piecePositioner.targetPos + Vector3.up * portalHeightAbovePlatform;
             yield return new WaitForSeconds(timeBetweenPieceAndPortalSpawn);
             GameObject portal = Instantiate(exitPortalPrefab, portalPos, piecePositioner.targetRot);

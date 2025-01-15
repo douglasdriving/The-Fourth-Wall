@@ -2,20 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PieceColorCreator : MonoBehaviour
+namespace LevelPiece
 {
-    [SerializeField] Color commonWordColor;
-    [SerializeField] Color rareWordColor;
-
-    public Color GetColorForWord(string word)
+    public class PieceColorCreator : MonoBehaviour
     {
-        float popularityFactor = WordPopularityCounter.GetPopularityForWordNormalized(word);
-        Color color = Color.Lerp(rareWordColor, commonWordColor, popularityFactor);
-        return color;
+        [SerializeField] Color commonWordColor;
+        [SerializeField] Color rareWordColor;
+
+        public Color GetColorForWord(string word)
+        {
+            float popularityFactor = WordPopularityCounter.GetPopularityForWordNormalized(word);
+            Color color = Color.Lerp(rareWordColor, commonWordColor, popularityFactor);
+            return color;
+        }
+
+        public Color GetCommonWordColor()
+        {
+            return commonWordColor;
+        }
     }
 
-    public Color GetCommonWordColor()
-    {
-        return commonWordColor;
-    }
 }

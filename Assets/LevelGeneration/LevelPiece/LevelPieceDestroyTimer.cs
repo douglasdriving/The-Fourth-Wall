@@ -1,21 +1,21 @@
 using UnityEngine;
 
-namespace LevelGeneration
+namespace LevelPiece
 {
   /// <summary>
   /// Destroys the level piece after a set amount of time after it has been positioned
   /// </summary>
-  [RequireComponent(typeof(LevelPiecePositioner))]
-  public class LevelPieceDestroyTimer : MonoBehaviour
+  [RequireComponent(typeof(Positioner))]
+  public class DestroyTimer : MonoBehaviour
   {
     [SerializeField] float destroyTimer = 3f;
     public bool startDestroyTimerWhenPositioned = false;
     bool timerIsRunning = false;
-    LevelPiecePositioner positioner;
+    Positioner positioner;
 
     private void Awake()
     {
-      positioner = GetComponent<LevelPiecePositioner>();
+      positioner = GetComponent<Positioner>();
     }
 
     private void Update()

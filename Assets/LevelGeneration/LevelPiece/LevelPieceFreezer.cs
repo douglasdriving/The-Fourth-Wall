@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LevelGeneration
+namespace LevelPiece
 {
-    public class LevelPieceFreezer : MonoBehaviour
+    public class Freezer : MonoBehaviour
     {
-        [SerializeField] LevelPiecePositioner levelPiecePositioner;
+        [SerializeField] Positioner levelPiecePositioner;
         [SerializeField] bool deleteGameObjectWhenUnfrozen = false;
 
 
@@ -27,14 +27,14 @@ namespace LevelGeneration
         private void Freeze()
         {
             levelPiecePositioner.isFrozen = true;
-            GetComponentInParent<PieceColorSetter>().SetFrozenMaterial();
+            GetComponentInParent<ColorSetter>().SetFrozenMaterial();
         }
 
         public void Unfreeze()
         {
             if (!levelPiecePositioner.isFrozen) return;
             levelPiecePositioner.isFrozen = false;
-            GetComponentInParent<PieceColorSetter>().SetPieceMaterial();
+            GetComponentInParent<ColorSetter>().SetPieceMaterial();
             if (deleteGameObjectWhenUnfrozen)
             {
                 Destroy(gameObject);

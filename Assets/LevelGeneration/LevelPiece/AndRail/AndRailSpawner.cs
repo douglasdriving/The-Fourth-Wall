@@ -18,10 +18,10 @@ namespace LevelGeneration
             //spawn rail
             GameObject rail = Instantiate(railPrefab);
             //position rail
-            AndRailPositioner positioner = rail.GetComponent<AndRailPositioner>();
+            LevelPiece.AndRailPositioner positioner = rail.GetComponent<LevelPiece.AndRailPositioner>();
             positioner.SetupRailPositioning(start, end);
             //set color
-            rail.GetComponentInChildren<PieceColorSetter>().UpdatePieceMaterialByWord("and");
+            rail.GetComponentInChildren<LevelPiece.ColorSetter>().UpdatePieceMaterialByWord("and");
             return rail;
         }
 

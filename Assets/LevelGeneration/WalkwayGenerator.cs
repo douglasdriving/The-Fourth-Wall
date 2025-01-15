@@ -80,7 +80,7 @@ namespace LevelGeneration
 
             if (isDissapearing)
             {
-                piece.GetComponent<LevelPieceDestroyTimer>().startDestroyTimerWhenPositioned = true;
+                piece.GetComponent<LevelPiece.DestroyTimer>().startDestroyTimerWhenPositioned = true;
             }
 
             return piece;
