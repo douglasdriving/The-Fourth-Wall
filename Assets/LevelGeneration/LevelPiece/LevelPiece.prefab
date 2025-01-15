@@ -347,6 +347,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8910a0943b2e354089711a4a7817c4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textToSet: {fileID: 1925542302175057564}
+  pieceColorSetter: {fileID: 2130303512392342270}
 --- !u!1001 &547326518130185928
 PrefabInstance:
   m_ObjectHideFlags: 0

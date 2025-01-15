@@ -15,13 +15,13 @@ namespace LevelGeneration
         public GameObject SpawnRail(Vector3 start)
         {
             Vector3 end = GetRandomRailEnd(start);
-
             //spawn rail
             GameObject rail = Instantiate(railPrefab);
-
             //position rail
             AndRailPositioner positioner = rail.GetComponent<AndRailPositioner>();
             positioner.SetupRailPositioning(start, end);
+            //set color
+            rail.GetComponentInChildren<PieceColorSetter>().UpdatePieceMaterialByWord("and");
             return rail;
         }
 

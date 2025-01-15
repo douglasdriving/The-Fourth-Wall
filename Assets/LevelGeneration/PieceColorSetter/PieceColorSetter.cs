@@ -1,4 +1,5 @@
 //sets the color of the piece based on the number of letter is it.
+using LevelGeneration;
 using UnityEngine;
 
 public class PieceColorSetter : MonoBehaviour
@@ -46,7 +47,6 @@ public class PieceColorSetter : MonoBehaviour
             Debug.LogWarning("PieceColorSetter: No PieceColorCreator found in scene");
             return;
         }
-
         Color materialColor;
         if (word == null || word == "")
         {
@@ -54,11 +54,15 @@ public class PieceColorSetter : MonoBehaviour
         }
         else
         {
-            materialColor = pieceColorCreator.GetColorForWord(word); //word hasnt been added yet...
-            //in reality, all of this should be controlled by the factory, which should determine the order of things.
+            materialColor = pieceColorCreator.GetColorForWord(word);
         }
         pieceMaterial = new Material(baseMaterial);
         pieceMaterial.color = materialColor;
+        bool isFrozen = GetComponent<LevelPiecePositioner>().isFrozen;
+        if (!isFrozen)
+        {
+            SetPieceMaterial();
+        }
     }
 
     public void SetFrozenMaterial()
