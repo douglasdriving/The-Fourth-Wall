@@ -1200,8 +1200,8 @@ MonoBehaviour:
 
     -------------------------
 
-    look at
-    every word'
+    blocks freeze
+    until you look at them'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ee1981dece31be94b9a202aaa9ce7fdb, type: 2}
   m_sharedMaterial: {fileID: 4428800186374089408, guid: ee1981dece31be94b9a202aaa9ce7fdb, type: 2}
@@ -1228,7 +1228,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 84.9
+  m_fontSize: 67.25
   m_fontSizeBase: 81.23
   m_fontWeight: 400
   m_enableAutoSizing: 1

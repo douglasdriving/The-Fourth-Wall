@@ -512,6 +512,8 @@ MonoBehaviour:
   - {fileID: 4900000, guid: c567bc44396b5614999585be0a8248f7, type: 3}
   - {fileID: 4900000, guid: fe569503478cc7c4ca315660c6d2d572, type: 3}
   - {fileID: 4900000, guid: ca293bf57d3ff1c44995d4c28453e2bf, type: 3}
+  - {fileID: 4900000, guid: 274e1aa584e4f054186a59d6b43981de, type: 3}
+  - {fileID: 4900000, guid: 8ca78ef9f8200a341ab6b6b58858c2d5, type: 3}
 --- !u!4 &911515050
 Transform:
   m_ObjectHideFlags: 0
@@ -710,9 +712,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d124fb07a4f53f4281d4edb4ef76cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clipToPlayOnStart: {fileID: 8300000, guid: 40fc53052403e424a8aa646280a66c64, type: 3}
-  subtitleToPlayOnStart: {fileID: 4900000, guid: ca293bf57d3ff1c44995d4c28453e2bf, type: 3}
-  startDelay: 1
+  clipToPlayOnStart: {fileID: 8300000, guid: 9001fd4c6a5c03841a8e1d3ebcc84b92, type: 3}
+  subtitleToPlayOnStart: {fileID: 4900000, guid: 8ca78ef9f8200a341ab6b6b58858c2d5, type: 3}
+  startDelay: 3
 --- !u!4 &1957703236
 Transform:
   m_ObjectHideFlags: 0
@@ -1193,14 +1195,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'devlog #7
+  m_text: 'devlog #9
 
-    2024-12-14
+    2024-01-15
 
     -------------------------
 
-    please pay
-    attention'
+    level piece
+    spawn spread'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ee1981dece31be94b9a202aaa9ce7fdb, type: 2}
   m_sharedMaterial: {fileID: 4428800186374089408, guid: ee1981dece31be94b9a202aaa9ce7fdb, type: 2}
@@ -1227,7 +1229,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 84.9
+  m_fontSize: 80.7
   m_fontSizeBase: 81.23
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1365,7 +1367,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sentanceGapSize: 3
   maxSideShift: 0.6
-  spawnHeight: 1.5
   animationType: 2
   isSeparatingSentences: 1
   isDissapearing: 1
@@ -1435,6 +1436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkwayPiecePrefab: {fileID: 6737570752163496808, guid: fad8276afac0bcf4f9ec4921e4a11d90, type: 3}
   levelPieceMolds: {fileID: 0}
+  spawnHeight: 1.5
 --- !u!4 &7981791569896788100
 Transform:
   m_ObjectHideFlags: 0
@@ -1524,12 +1526,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ddccff96ff2f954d92a0b00b5780378, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  question: what does the developer want?
+  question: listening is...
   answers:
-  - that I have fun
-  - to be heard
-  - to get me into "the zone"
-  correctAnswerIndex: 1
+  - fun!
+  - easy!
+  - hard!
+  correctAnswerIndex: 2
 --- !u!222 &8666242446745631626
 CanvasRenderer:
   m_ObjectHideFlags: 0
