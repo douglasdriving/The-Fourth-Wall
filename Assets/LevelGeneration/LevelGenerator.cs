@@ -18,7 +18,7 @@ namespace LevelGeneration
     ThePieceSpawner thePieceSpawner;
     [SerializeField] bool isSpawningAndRails = false;
     [SerializeField] bool isSpawningThePieces = false;
-    [SerializeField] TalkingHead talkingHead;
+    TalkingHead talkingHead;
 
     void Awake()
     {
@@ -26,6 +26,7 @@ namespace LevelGeneration
       walkwayGenerator = GetComponent<WalkwayGenerator>();
       andRailSpawner = GetComponent<AndRailSpawner>();
       thePieceSpawner = GetComponent<ThePieceSpawner>();
+      talkingHead = FindObjectOfType<TalkingHead>();
     }
 
     public GameObject SpawnNextPiece(string word)

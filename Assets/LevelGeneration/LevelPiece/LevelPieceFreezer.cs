@@ -24,7 +24,7 @@ namespace LevelPiece
             }
         }
 
-        private void Freeze()
+        public void Freeze()
         {
             levelPiecePositioner.isFrozen = true;
             GetComponentInParent<ColorSetter>().SetFrozenMaterial();

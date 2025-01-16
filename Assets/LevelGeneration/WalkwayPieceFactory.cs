@@ -15,16 +15,28 @@ namespace LevelGeneration
     [SerializeField] float spawnHeight = 1.5f;
     SceneRules rules;
     Transform playerCam;
+    Transform talkingHeadMouth;
 
     private void Awake()
     {
       rules = FindObjectOfType<SceneRules>();
       playerCam = Camera.main.transform;
+      TalkingHead talkingHead = FindObjectOfType<TalkingHead>();
+      if (talkingHead) talkingHeadMouth = talkingHead.mouth;
+    }
+
+    public GameObject SpawnFromTalkingHead(Vector3 finalPos, Quaternion finalRot, string word)
+    {
+      GameObject piece = Instantiate(walkwayPiecePrefab, talkingHeadMouth.position, Quaternion.identity);
+      AdjustPieceRotation(piece);
+      piece.GetComponent<LevelPiece.WordSetter>().SetWord(word);
+      piece.GetComponent<LevelPiece.Positioner>().MoveFromTalkingHead(GetPosAboveTarget(finalPos), finalPos, finalRot);
+      return piece;
     }
 
     public GameObject SpawnAboveTargetAndMoveIntoPlace(Vector3 finalPos, Quaternion finalRot, string word)
     {
-      Vector3 spawnPos = GetSpawnPosAboveTarget(finalPos);
+      Vector3 spawnPos = GetPosAboveTarget(finalPos);
       GameObject piece = Instantiate(walkwayPiecePrefab, spawnPos, Quaternion.identity);
       AdjustPieceRotation(piece);
       piece.GetComponent<LevelPiece.WordSetter>().SetWord(word);
@@ -45,7 +57,7 @@ namespace LevelGeneration
       }
     }
 
-    private Vector3 GetSpawnPosAboveTarget(Vector3 finalPos)
+    private Vector3 GetPosAboveTarget(Vector3 finalPos)
     {
       Vector3 spawnPos = finalPos + Vector3.up * spawnHeight;
       if (rules && rules.pieceSpawnSpread)

@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3689652348746161666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 717708744529978517}
+  m_Layer: 0
+  m_Name: mouth
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &717708744529978517
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3689652348746161666}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.031, y: -1.48, z: 0}
+  m_LocalScale: {x: 1.4772822, y: 1.721691, z: 1.3928248}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5543211918767690254}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3914174796635988382
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,7 +273,8 @@ Transform:
   m_LocalPosition: {x: -0.0025041818, y: -0.0017453204, z: -0.50373405}
   m_LocalScale: {x: 0.3852584, y: 0.23585296, z: 0.37527677}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 717708744529978517}
   m_Father: {fileID: 5369785926246954998}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3669038628935912870
@@ -344,3 +376,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceToWalkway: 3
+  defaultRotation: {x: 0, y: -22.5, z: 0}
+  randomRotationRange: 10
+  mouth: {fileID: 717708744529978517}

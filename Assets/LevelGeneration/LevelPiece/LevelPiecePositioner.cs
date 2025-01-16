@@ -9,6 +9,7 @@ namespace LevelPiece
     /// <summary>
     /// moves a position to a set position, rotation, and scale over a given time.
     /// </summary>
+    [RequireComponent(typeof(ColorSetter))]
     public class Positioner : MonoBehaviour
     {
         [SerializeField] float moveSpeed = 18f; //speed of the movement
@@ -28,13 +29,17 @@ namespace LevelPiece
         //freezing
         public bool isFrozen = false;
 
-        //colliders
+        //components
         Collider[] colliders;
+        ColorSetter colorSetter;
+        Freezer freezer;
 
         private void Awake()
         {
             if (!walkOffPoint) Debug.LogWarning("No walk off point set for " + name);
             colliders = GetComponentsInChildren<Collider>();
+            colorSetter = GetComponent<ColorSetter>();
+            freezer = GetComponentInChildren<Freezer>();
         }
 
         public void SetPosition(Vector3 targetPosition, Quaternion targetRotation)
@@ -116,6 +121,29 @@ namespace LevelPiece
             targetPos = _targetPos;
             targetRot = _targetRot;
             StartCoroutine(SimpleMoveAnimation());
+        }
+
+        public void MoveFromTalkingHead(Vector3 postAboveTarget, Vector3 _targetPos, Quaternion _targetRot)
+        {
+            IEnumerator MovePattern()
+            {
+                SetCollidersEnabled(false);
+                colorSetter.SetBaseMaterial();
+                yield return MoveToPosition(postAboveTarget);
+                //todo: rotate to face the player
+                freezer.Freeze();
+                SetCollidersEnabled(true);
+                while (isFrozen) yield return null;
+                SetCollidersEnabled(false);
+                yield return RotateToRotation(targetRot, 0.2f);
+                yield return new WaitForSeconds(0.1f);
+                yield return MoveToPosition(targetPos);
+                SetFinalTransform(targetPos, targetRot);
+                SetCollidersEnabled(true);
+            }
+            targetPos = _targetPos;
+            targetRot = _targetRot;
+            StartCoroutine(MovePattern());
         }
 
         IEnumerator MoveToPosition(Vector3 targetPos)

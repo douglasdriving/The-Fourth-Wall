@@ -73,5 +73,10 @@ namespace LevelPiece
             ApplyMaterial(pieceMaterial);
         }
 
+        public void SetBaseMaterial()
+        {
+            ApplyMaterial(baseMaterial);
+        }
+
     }
 }

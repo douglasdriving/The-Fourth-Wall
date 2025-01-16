@@ -22,10 +22,12 @@ namespace LevelGeneration
         [SerializeField] AnimationType animationType = AnimationType.NONE;
         public bool isSeparatingSentences = false;
         public bool isDissapearing = false;
+        TalkingHead talkingHead;
 
-        private void Start()
+        private void Awake()
         {
             walkwayPieceFactory = GetComponent<WalkwayPieceFactory>();
+            talkingHead = FindObjectOfType<TalkingHead>();
         }
 
         public GameObject AddPieceToWalkway(Vector3 entryPoint, string pieceWord, string lastPieceWord)
@@ -58,7 +60,12 @@ namespace LevelGeneration
         public GameObject InstatiatePiece(Vector3 targetPos, Quaternion targetRot, string pieceWord)
         {
             GameObject piece = null;
-            if (animationType == AnimationType.MOVE_FROM_ABOVE_TARGET)
+
+            if (talkingHead != null)
+            {
+                piece = walkwayPieceFactory.SpawnFromTalkingHead(targetPos, targetRot, pieceWord);
+            }
+            else if (animationType == AnimationType.MOVE_FROM_ABOVE_TARGET)
             {
                 piece = walkwayPieceFactory.SpawnAboveTargetAndMoveIntoPlace(targetPos, targetRot, pieceWord);
             }
