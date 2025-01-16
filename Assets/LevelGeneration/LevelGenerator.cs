@@ -18,6 +18,7 @@ namespace LevelGeneration
     ThePieceSpawner thePieceSpawner;
     [SerializeField] bool isSpawningAndRails = false;
     [SerializeField] bool isSpawningThePieces = false;
+    [SerializeField] TalkingHead talkingHead;
 
     void Awake()
     {
@@ -48,6 +49,12 @@ namespace LevelGeneration
       }
 
       levelPiecesSpawned.Add(levelPiece);
+
+      if (talkingHead != null)
+      {
+        talkingHead.MoveToEndOfWalkway(levelPiece);
+      }
+
       return levelPiece;
     }
 
