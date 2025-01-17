@@ -1258,8 +1258,7 @@ MonoBehaviour:
 
     -------------------------
 
-    talking head
-    =?=AS?D'
+    talking head'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ee1981dece31be94b9a202aaa9ce7fdb, type: 2}
   m_sharedMaterial: {fileID: 4428800186374089408, guid: ee1981dece31be94b9a202aaa9ce7fdb, type: 2}
@@ -1435,7 +1434,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1431248547709229973}
   m_LocalRotation: {x: 0, y: 0.29248846, z: 0, w: 0.956269}
-  m_LocalPosition: {x: 0, y: 0, z: 4.2028956}
+  m_LocalPosition: {x: 0, y: 0, z: 6.01}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1445,7 +1444,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 34.014, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 9.37, y: -4.08}
+  m_AnchoredPosition: {x: 9.62, y: -3.35}
   m_SizeDelta: {x: 824, y: 463.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7133350310531076715
