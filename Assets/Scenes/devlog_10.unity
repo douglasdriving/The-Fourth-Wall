@@ -475,17 +475,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!114 &743982631 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: -5861524622178689696, guid: be70666865af3d745afcc89cba35b580, type: 3}
-  m_PrefabInstance: {fileID: 1929565883660955104}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1371025994ea6d342a0c9b869d7a900e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &911515048
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,7 +949,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3027783881995848747, guid: be70666865af3d745afcc89cba35b580, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.96
+      value: -2.91
       objectReference: {fileID: 0}
     - target: {fileID: 3027783881995848747, guid: be70666865af3d745afcc89cba35b580, type: 3}
       propertyPath: m_LocalPosition.y
@@ -968,7 +957,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3027783881995848747, guid: be70666865af3d745afcc89cba35b580, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.88
+      value: 6.18
       objectReference: {fileID: 0}
     - target: {fileID: 3027783881995848747, guid: be70666865af3d745afcc89cba35b580, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1369,7 +1358,6 @@ MonoBehaviour:
   - {fileID: 3344494205242987549}
   isSpawningAndRails: 1
   isSpawningThePieces: 1
-  talkingHead: {fileID: 743982631}
 --- !u!1 &6138728621986977152
 GameObject:
   m_ObjectHideFlags: 0
@@ -1505,7 +1493,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkwayPiecePrefab: {fileID: 6737570752163496808, guid: fad8276afac0bcf4f9ec4921e4a11d90, type: 3}
   levelPieceMolds: {fileID: 0}
-  spawnHeight: 1.5
+  spawnHeight: 0.5
+  spawnSpreadMultiplier: 0.4
 --- !u!4 &7981791569896788100
 Transform:
   m_ObjectHideFlags: 0

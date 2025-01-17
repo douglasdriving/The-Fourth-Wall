@@ -13,6 +13,7 @@ namespace LevelGeneration
     [SerializeField] GameObject walkwayPiecePrefab;
     [SerializeField] LevelPieceMolds levelPieceMolds;
     [SerializeField] float spawnHeight = 1.5f;
+    [SerializeField] float spawnSpreadMultiplier = 0.3f;
     SceneRules rules;
     Transform playerCam;
     Transform talkingHeadMouth;
@@ -63,9 +64,9 @@ namespace LevelGeneration
       if (rules && rules.pieceSpawnSpread)
       {
         float distanceToPlayer = Vector3.Distance(playerCam.position, spawnPos);
-        float maxUpShift = distanceToPlayer / 5;
+        float maxUpShift = distanceToPlayer * spawnSpreadMultiplier;
         spawnPos.y += Random.Range(0, maxUpShift);
-        float maxSideShift = distanceToPlayer / 3;
+        float maxSideShift = distanceToPlayer * spawnSpreadMultiplier;
         spawnPos.x += Random.Range(-maxSideShift, maxSideShift);
       }
       return spawnPos;

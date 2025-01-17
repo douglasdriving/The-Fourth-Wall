@@ -34,12 +34,16 @@ namespace LevelPiece
         ColorSetter colorSetter;
         Freezer freezer;
 
+        //object refs
+        Transform playerCamera;
+
         private void Awake()
         {
             if (!walkOffPoint) Debug.LogWarning("No walk off point set for " + name);
             colliders = GetComponentsInChildren<Collider>();
             colorSetter = GetComponent<ColorSetter>();
             freezer = GetComponentInChildren<Freezer>();
+            playerCamera = Camera.main.transform;
         }
 
         public void SetPosition(Vector3 targetPosition, Quaternion targetRotation)
@@ -79,13 +83,13 @@ namespace LevelPiece
                 SetCollidersEnabled(false);
                 yield return HoverInFrontOfCamera(hoverTime);
                 Vector3 posWithSameZAsTarget = new Vector3(transform.position.x, transform.position.y, targetPos.z);
-                yield return MoveToPosition(posWithSameZAsTarget);
+                yield return MoveOverTime(posWithSameZAsTarget, 0.3f);
                 yield return new WaitForSeconds(0.1f);
                 yield return ScaleToScale(targetPieceScale, 0.2f);
                 yield return new WaitForSeconds(0.1f);
-                yield return RotateToRotation(targetRot, 0.2f);
+                yield return RotateOverTime(targetRot, 0.2f);
                 yield return new WaitForSeconds(0.1f);
-                yield return MoveToPosition(targetPos);
+                yield return MoveOverTime(targetPos, 0.3f);
                 SetFinalTransform(targetPos, targetRot);
                 SetCollidersEnabled(true);
             }
@@ -111,9 +115,9 @@ namespace LevelPiece
                     }
                 }
                 SetCollidersEnabled(false);
-                yield return RotateToRotation(targetRot, 0.2f);
+                yield return RotateOverTime(targetRot, 0.2f);
                 yield return new WaitForSeconds(0.1f);
-                yield return MoveToPosition(targetPos);
+                yield return MoveOverTime(targetPos, 0.3f);
                 SetFinalTransform(targetPos, targetRot);
                 SetCollidersEnabled(true);
             }
@@ -123,21 +127,32 @@ namespace LevelPiece
             StartCoroutine(SimpleMoveAnimation());
         }
 
-        public void MoveFromTalkingHead(Vector3 postAboveTarget, Vector3 _targetPos, Quaternion _targetRot)
+        public void MoveFromTalkingHead(Vector3 posAboveTarget, Vector3 _targetPos, Quaternion _targetRot)
         {
             IEnumerator MovePattern()
             {
+
+                IEnumerator MoveFromMouthToAir(float time, float scaleInMouth)
+                {
+                    Vector3 finalScale = transform.localScale;
+                    transform.localScale *= scaleInMouth;
+                    float distanceToPlayerCam = Vector3.Distance(playerCamera.position, posAboveTarget);
+                    Vector3 scaleInAir = finalScale * distanceToPlayerCam / 10;
+
+                    Vector3 directionFromPosOverTargetToPlayer = (playerCamera.position - posAboveTarget).normalized;
+                    Quaternion rotInAir = Quaternion.LookRotation(Vector3.up, directionFromPosOverTargetToPlayer);
+
+                    yield return TransformOverTime(posAboveTarget, rotInAir, scaleInAir, time);
+                }
+
                 SetCollidersEnabled(false);
                 colorSetter.SetBaseMaterial();
-                yield return MoveToPosition(postAboveTarget);
-                //todo: rotate to face the player
+                yield return MoveFromMouthToAir(time: 0.5f, scaleInMouth: 0.2f);
                 freezer.Freeze();
                 SetCollidersEnabled(true);
                 while (isFrozen) yield return null;
                 SetCollidersEnabled(false);
-                yield return RotateToRotation(targetRot, 0.2f);
-                yield return new WaitForSeconds(0.1f);
-                yield return MoveToPosition(targetPos);
+                yield return TransformOverTime(targetPos, targetRot, targetPieceScale, time: 0.5f);
                 SetFinalTransform(targetPos, targetRot);
                 SetCollidersEnabled(true);
             }
@@ -146,31 +161,39 @@ namespace LevelPiece
             StartCoroutine(MovePattern());
         }
 
-        IEnumerator MoveToPosition(Vector3 targetPos)
+        IEnumerator MoveOverTime(Vector3 targetPos, float time)
         {
-            float distanceToTarget = Vector3.Distance(targetPos, transform.position);
-            while (distanceToTarget > 0.1f)
-            {
-                Vector3 directionToTarget = (targetPos - transform.position).normalized;
-                transform.position += directionToTarget * moveSpeed * Time.deltaTime;
-                distanceToTarget = Vector3.Distance(targetPos, transform.position);
-                yield return null;
-            }
-            transform.position = targetPos;
+            yield return TransformOverTime(targetPos, transform.rotation, transform.localScale, time);
         }
 
-        IEnumerator RotateToRotation(Quaternion targetRot, float rotationTime)
+        IEnumerator RotateOverTime(Quaternion targetRot, float time)
+        {
+            yield return TransformOverTime(transform.position, targetRot, transform.localScale, time);
+        }
+
+        IEnumerator ScaleOverTime(Vector3 targetScale, float time)
+        {
+            yield return TransformOverTime(transform.position, transform.rotation, targetScale, time);
+        }
+
+        IEnumerator TransformOverTime(Vector3 targetPosition, Quaternion targetRotation, Vector3 targetScale, float time)
         {
             float elapsedTime = 0;
+            Vector3 startPosition = transform.position;
             Quaternion startRotation = transform.rotation;
-            while (elapsedTime < rotationTime)
+            Vector3 startScale = transform.localScale;
+            bool isMoving = targetPosition != startPosition;
+            bool isRotating = targetRotation != startRotation;
+            bool isScaling = targetScale != startScale;
+            while (elapsedTime < time)
             {
-                float percentageOfTimePassed = elapsedTime / rotationTime;
-                transform.rotation = Quaternion.Lerp(startRotation, targetRot, percentageOfTimePassed);
+                float percentageOfTimePassed = elapsedTime / time;
+                if (isMoving) transform.position = Vector3.Lerp(startPosition, targetPosition, percentageOfTimePassed);
+                if (isRotating) transform.rotation = Quaternion.Lerp(startRotation, targetRotation, percentageOfTimePassed);
+                if (isScaling) transform.localScale = Vector3.Lerp(startScale, targetScale, percentageOfTimePassed);
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }
-            transform.rotation = targetRot;
         }
 
         private void SetFinalTransform(Vector3 targetPosition, Quaternion targetRotation)
