@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/devlog_9.unity
     guid: 725091ce57d7e9d4fb41fff1af0dcd0f
+  - enabled: 1
+    path: Assets/Scenes/devlog_10.unity
+    guid: 5aa2f32c6107c1a4c9bba199c0c2b6ca
   m_configObjects: {}
