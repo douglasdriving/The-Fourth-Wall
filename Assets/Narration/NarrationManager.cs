@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using LevelGeneration;
 using UnityEngine;
@@ -26,9 +27,10 @@ namespace Narration
         static float clipLength = 0;
         static List<float> pausesScheduled = new();
 
-        [SerializeField] AudioClip clipToPlayOnStart;
+        [SerializeField] AudioClip clipToPlay;
         [SerializeField] TextAsset subtitleToPlayOnStart;
         [SerializeField] float startDelay = 1.5f;
+        [SerializeField] bool endSceneOnEnd = false;
 
         void Awake()
         {
@@ -37,13 +39,29 @@ namespace Narration
 
         void Start()
         {
-            Invoke("PlayStartNarration", startDelay);
+            Invoke("PlayNarration", startDelay);
         }
 
-        void PlayStartNarration()
+        void PlayNarration()
         {
-            PlayNarration(clipToPlayOnStart, subtitleToPlayOnStart);
-            StartCoroutine(FindAnyObjectByType<ExitPortalGenerator>().GenerateExitPortalAfterDelay(clipToPlayOnStart.length));
+            PlayNarration(clipToPlay, subtitleToPlayOnStart);
+            SchedulePortalSpawn(clipToPlay.length);
+            if (endSceneOnEnd) StartCoroutine(EndSceneAfterDelay(clipToPlay.length));
+        }
+
+        IEnumerator EndSceneAfterDelay(float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            SceneTransitioner sceneTransitioner = FindObjectOfType<SceneTransitioner>();
+            if (sceneTransitioner != null) sceneTransitioner.EndScene();
+            else Debug.LogWarning("SceneTransitioner not found in scene. Will not attempt to end scene.");
+        }
+
+        private void SchedulePortalSpawn(float timeBeforeSpawn) //should this really happen in this class?
+        {
+            ExitPortalGenerator exitPortalGenerator = FindObjectOfType<ExitPortalGenerator>();
+            if (exitPortalGenerator != null) StartCoroutine(exitPortalGenerator.GenerateExitPortalAfterDelay(timeBeforeSpawn));
+            else Debug.LogWarning("ExitPortalGenerator not found in scene. Will not attempt to spawn exit portal.");
         }
 
         public static void PlayNarration(AudioClip clip, TextAsset subtitle)
@@ -55,7 +73,8 @@ namespace Narration
         public static void PlayNarration(AudioClip clip, SubtitleJsonData subtitle)
         {
             VoiceOverPlayer.PlayClip(clip);
-            subtitlePlayer.StartSubtitles(subtitle);
+            if (subtitlePlayer == null) Debug.LogWarning("SubtitlePlayer not found in scene, will not start subtitles");
+            else subtitlePlayer.StartSubtitles(subtitle);
             playState = PlayState.PLAY;
             timeCurrentNarrationHasPlayed = 0;
             clipLength = clip.length;
@@ -108,7 +127,7 @@ namespace Narration
         public static void StopAndReset()
         {
             VoiceOverPlayer.Stop();
-            subtitlePlayer.StopSubtitle();
+            if (subtitlePlayer != null) subtitlePlayer.StopSubtitle();
             playState = PlayState.STOP;
             timeCurrentNarrationHasPlayed = 0;
             pausesScheduled.Clear();

@@ -11,7 +11,7 @@ namespace Narration
     public class SubtitlePlayer : MonoBehaviour
     {
         [SerializeField] LevelGenerator levelGenerator;
-        [SerializeField] GameObject wordPrefab;
+        [SerializeField] TextMeshProUGUI wordText;
         const float lingerTime = 1f;
         SubtitleJsonData currentSubtitles;
         int currentWordIndex = 0;
@@ -19,13 +19,10 @@ namespace Narration
         float timeForNextSubtitleStep = 0;
         bool isLingering = false;
 
-        public int nextLevelPieceIndexToShowWordOn = 0;
-        SubtitleMode mode = SubtitleMode.SpawnWithNewLevelPiece;
-
-        public void SetMode(SubtitleMode mode, int levelPieceIndexToStartSpawningFrom)
+        void Awake()
         {
-            this.mode = mode;
-            nextLevelPieceIndexToShowWordOn = levelPieceIndexToStartSpawningFrom;
+            if (levelGenerator) wordText.gameObject.SetActive(false);
+            else wordText.gameObject.SetActive(true);
         }
 
         public void StartSubtitles(SubtitleJsonData subtitles)
@@ -41,11 +38,8 @@ namespace Narration
         {
             if (currentSubtitles == null) return;
             if (NarrationManager.playState != NarrationManager.PlayState.PLAY) return;
-
             bool isTimeForNextSubtitleStep = NarrationManager.timeCurrentNarrationHasPlayed >= timeForNextSubtitleStep;
-
             if (!isTimeForNextSubtitleStep) return;
-
             TakeNextSubtitleStep();
         }
 
@@ -90,54 +84,8 @@ namespace Narration
 
         private void ShowWordInWorld(string word)
         {
-            if (mode == SubtitleMode.SpawnBackwardOnLevel || mode == SubtitleMode.SpawnForwardOnLevel)
-            {
-                ShowWordOnExistingLevelPiece(word); ///!!!! IF ItS PAUSE; WE NEED TO SPAWN A UNPAUSE TRIGGER VOLUME
-            }
-            else if (mode == SubtitleMode.SpawnWithNewLevelPiece)
-            {
-                levelGenerator.SpawnNextPiece(word);
-            }
-            else
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        private void ShowWordOnExistingLevelPiece(string word)
-        {
-            //user the level piece index to find the piece to show the word on
-            GameObject levelPiece = levelGenerator.levelPiecesSpawned[nextLevelPieceIndexToShowWordOn];
-            //get the word canvas anchor in it
-            Transform wordAnchor = null;
-            foreach (Transform child in levelPiece.transform)
-            {
-                if (child.CompareTag("WordAnchor"))
-                {
-                    wordAnchor = child;
-                    break;
-                }
-            }
-            if (!wordAnchor) Debug.LogError("Cant show word on existing level piece. No word anchor found as a child of the piece");
-            //clear all children of the anchor
-            foreach (Transform child in wordAnchor)
-            {
-                Destroy(child.gameObject);
-            }
-            //spawn a word canvas on the anchor
-            GameObject wordGO = Instantiate(wordPrefab, wordAnchor);
-            //set the word on the canvas to the word.
-            wordGO.transform.GetComponentInChildren<TMP_Text>().text = word;
-            //if we are moving backwards, rotate the word 180 deg on y
-            if (mode == SubtitleMode.SpawnBackwardOnLevel)
-            {
-                wordGO.transform.Rotate(wordGO.transform.up * 180);
-                nextLevelPieceIndexToShowWordOn--;
-            }
-            else
-            {
-                nextLevelPieceIndexToShowWordOn++;
-            }
+            if (levelGenerator) levelGenerator.SpawnNextPiece(word);
+            else wordText.text = word;
         }
 
         private void UpdateNextWordTime()

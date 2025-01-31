@@ -12,22 +12,8 @@ namespace LevelGeneration
         {
             if (other.CompareTag("Player"))
             {
-                LoadNextScene();
-            }
-        }
-        public void LoadNextScene()
-        {
-            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-            int nextSceneIndex = currentSceneIndex + 1;
-            if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
-            {
-                SceneManager.LoadScene(nextSceneIndex);
-            }
-            else
-            {
-                Debug.LogWarning("No next scene in build settings.");
+                FindObjectOfType<SceneTransitioner>().EndScene(true);
             }
         }
     }
-
 }
