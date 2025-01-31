@@ -14,13 +14,9 @@ namespace LevelPiece
         {
             meshesToColor = GetComponentsInChildren<MeshRenderer>();
             SceneRules rules = FindObjectOfType<SceneRules>();
-            if (rules && rules.freezePiecesOnSpawn)
+            if (rules && rules.setPieceColors && rules.freezePiecesOnSpawn)
             {
                 SetFrozenMaterial();
-            }
-            else
-            {
-                ApplyMaterial(baseMaterial);
             }
         }
 
@@ -40,10 +36,9 @@ namespace LevelPiece
         public void UpdatePieceMaterialByWord(string word)
         {
             PieceColorCreator pieceColorCreator = FindObjectOfType<PieceColorCreator>();
-            if (!pieceColorCreator)
+            if (!pieceColorCreator) return;
             {
                 Debug.LogWarning("PieceColorSetter: No PieceColorCreator found in scene");
-                return;
             }
             Color materialColor;
             if (word == null || word == "")
