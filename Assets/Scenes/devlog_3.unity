@@ -476,9 +476,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d124fb07a4f53f4281d4edb4ef76cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clipToPlayOnStart: {fileID: 8300000, guid: 9b9a12ebf025e3243819a97d12614ba6, type: 3}
-  subtitleToPlayOnStart: {fileID: 4900000, guid: cf8998ca99a1dc34da2e8098255a901b, type: 3}
-  startDelay: 4
+  clipToPlayOnStart: {fileID: 8300000, guid: f3fc96fe72f65314c8b043ba33dc9418, type: 3}
+  subtitleToPlayOnStart: {fileID: 4900000, guid: 4ffae817c39a25d4a9ee7b8fba1c2b1f, type: 3}
+  startDelay: 2
 --- !u!4 &1957703236
 Transform:
   m_ObjectHideFlags: 0

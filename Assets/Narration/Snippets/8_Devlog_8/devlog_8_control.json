@@ -1,0 +1,910 @@
+{
+    "text": " Considering our relationship here, it seems as though I would be in the position to control exactly what you do. If I want you to pay attention to my words, I can force you to look at them. I mean, of course I cannot physically force your actions, but I do assume that you have a desire to progress through this level as well, since that's kinda the point of still being here. And I have the power to block you from that progression and require you to look at each word that pops up. I am your gatekeeper here, and if you want to move forward, you have to do as I tell you.",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 6.28,
+            "text": " Considering our relationship here, it seems as though I would be in the position to control exactly what you do.",
+            "tokens": [
+                50363,
+                27662,
+                674,
+                2776,
+                994,
+                11,
+                340,
+                2331,
+                355,
+                996,
+                314,
+                561,
+                307,
+                287,
+                262,
+                2292,
+                284,
+                1630,
+                3446,
+                644,
+                345,
+                466,
+                13,
+                50713
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.13145116170247395,
+            "compression_ratio": 1.6491228070175439,
+            "no_speech_prob": 0.00037632614839822054,
+            "words": [
+                {
+                    "word": " Considering",
+                    "start": 0.0,
+                    "end": 0.5,
+                    "probability": 0.9842590689659119
+                },
+                {
+                    "word": " our",
+                    "start": 0.5,
+                    "end": 1.04,
+                    "probability": 0.9979385733604431
+                },
+                {
+                    "word": " relationship",
+                    "start": 1.04,
+                    "end": 1.64,
+                    "probability": 0.9878272414207458
+                },
+                {
+                    "word": " here,",
+                    "start": 1.64,
+                    "end": 2.02,
+                    "probability": 0.995262861251831
+                },
+                {
+                    "word": " it",
+                    "start": 2.06,
+                    "end": 2.26,
+                    "probability": 0.9537385106086731
+                },
+                {
+                    "word": " seems",
+                    "start": 2.26,
+                    "end": 2.42,
+                    "probability": 0.9966712594032288
+                },
+                {
+                    "word": " as",
+                    "start": 2.42,
+                    "end": 2.62,
+                    "probability": 0.9947878122329712
+                },
+                {
+                    "word": " though",
+                    "start": 2.62,
+                    "end": 2.86,
+                    "probability": 0.9934588074684143
+                },
+                {
+                    "word": " I",
+                    "start": 2.86,
+                    "end": 3.16,
+                    "probability": 0.9792647361755371
+                },
+                {
+                    "word": " would",
+                    "start": 3.16,
+                    "end": 3.34,
+                    "probability": 0.9916529059410095
+                },
+                {
+                    "word": " be",
+                    "start": 3.34,
+                    "end": 3.54,
+                    "probability": 0.9986345171928406
+                },
+                {
+                    "word": " in",
+                    "start": 3.54,
+                    "end": 3.68,
+                    "probability": 0.9982123374938965
+                },
+                {
+                    "word": " the",
+                    "start": 3.68,
+                    "end": 3.8,
+                    "probability": 0.9699159264564514
+                },
+                {
+                    "word": " position",
+                    "start": 3.8,
+                    "end": 4.08,
+                    "probability": 0.998700737953186
+                },
+                {
+                    "word": " to",
+                    "start": 4.08,
+                    "end": 4.32,
+                    "probability": 0.9989767074584961
+                },
+                {
+                    "word": " control",
+                    "start": 4.32,
+                    "end": 4.62,
+                    "probability": 0.9978437423706055
+                },
+                {
+                    "word": " exactly",
+                    "start": 4.62,
+                    "end": 5.26,
+                    "probability": 0.957719624042511
+                },
+                {
+                    "word": " what",
+                    "start": 5.26,
+                    "end": 5.7,
+                    "probability": 0.9929674863815308
+                },
+                {
+                    "word": " you",
+                    "start": 5.7,
+                    "end": 5.92,
+                    "probability": 0.9943084120750427
+                },
+                {
+                    "word": " do.",
+                    "start": 5.92,
+                    "end": 6.28,
+                    "probability": 0.9983223080635071
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 6.7,
+            "end": 11.1,
+            "text": " If I want you to pay attention to my words, I can force you to look at them.",
+            "tokens": [
+                50713,
+                1002,
+                314,
+                765,
+                345,
+                284,
+                1414,
+                3241,
+                284,
+                616,
+                2456,
+                11,
+                314,
+                460,
+                2700,
+                345,
+                284,
+                804,
+                379,
+                606,
+                13,
+                50975
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.13145116170247395,
+            "compression_ratio": 1.6491228070175439,
+            "no_speech_prob": 0.00037632614839822054,
+            "words": [
+                {
+                    "word": " If",
+                    "start": 6.7,
+                    "end": 7.18,
+                    "probability": 0.9903286099433899
+                },
+                {
+                    "word": " I",
+                    "start": 7.18,
+                    "end": 7.36,
+                    "probability": 0.9929394721984863
+                },
+                {
+                    "word": " want",
+                    "start": 7.36,
+                    "end": 7.54,
+                    "probability": 0.9970097541809082
+                },
+                {
+                    "word": " you",
+                    "start": 7.54,
+                    "end": 7.66,
+                    "probability": 0.9956369996070862
+                },
+                {
+                    "word": " to",
+                    "start": 7.66,
+                    "end": 7.8,
+                    "probability": 0.9985276460647583
+                },
+                {
+                    "word": " pay",
+                    "start": 7.8,
+                    "end": 7.92,
+                    "probability": 0.9990718364715576
+                },
+                {
+                    "word": " attention",
+                    "start": 7.92,
+                    "end": 8.2,
+                    "probability": 0.998945415019989
+                },
+                {
+                    "word": " to",
+                    "start": 8.2,
+                    "end": 8.42,
+                    "probability": 0.9991075396537781
+                },
+                {
+                    "word": " my",
+                    "start": 8.42,
+                    "end": 8.58,
+                    "probability": 0.9992672801017761
+                },
+                {
+                    "word": " words,",
+                    "start": 8.58,
+                    "end": 8.9,
+                    "probability": 0.9952641725540161
+                },
+                {
+                    "word": " I",
+                    "start": 8.96,
+                    "end": 9.16,
+                    "probability": 0.9977978467941284
+                },
+                {
+                    "word": " can",
+                    "start": 9.16,
+                    "end": 9.38,
+                    "probability": 0.9977771639823914
+                },
+                {
+                    "word": " force",
+                    "start": 9.38,
+                    "end": 9.7,
+                    "probability": 0.9929344654083252
+                },
+                {
+                    "word": " you",
+                    "start": 9.7,
+                    "end": 10.06,
+                    "probability": 0.9993845224380493
+                },
+                {
+                    "word": " to",
+                    "start": 10.06,
+                    "end": 10.44,
+                    "probability": 0.9976928234100342
+                },
+                {
+                    "word": " look",
+                    "start": 10.44,
+                    "end": 10.72,
+                    "probability": 0.9983170032501221
+                },
+                {
+                    "word": " at",
+                    "start": 10.72,
+                    "end": 10.88,
+                    "probability": 0.998319685459137
+                },
+                {
+                    "word": " them.",
+                    "start": 10.88,
+                    "end": 11.1,
+                    "probability": 0.9992561936378479
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "seek": 0,
+            "start": 12.18,
+            "end": 23.78,
+            "text": " I mean, of course I cannot physically force your actions, but I do assume that you have a desire to progress through this level as well, since that's kinda the point of still being here.",
+            "tokens": [
+                50975,
+                314,
+                1612,
+                11,
+                286,
+                1781,
+                314,
+                2314,
+                10170,
+                2700,
+                534,
+                4028,
+                11,
+                475,
+                314,
+                466,
+                7048,
+                326,
+                345,
+                423,
+                257,
+                6227,
+                284,
+                4371,
+                832,
+                428,
+                1241,
+                355,
+                880,
+                11,
+                1201,
+                326,
+                338,
+                17855,
+                262,
+                966,
+                286,
+                991,
+                852,
+                994,
+                13,
+                51579
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.13145116170247395,
+            "compression_ratio": 1.6491228070175439,
+            "no_speech_prob": 0.00037632614839822054,
+            "words": [
+                {
+                    "word": " I",
+                    "start": 12.18,
+                    "end": 12.38,
+                    "probability": 0.9782484769821167
+                },
+                {
+                    "word": " mean,",
+                    "start": 12.38,
+                    "end": 12.54,
+                    "probability": 0.9962368011474609
+                },
+                {
+                    "word": " of",
+                    "start": 12.6,
+                    "end": 12.78,
+                    "probability": 0.9958439469337463
+                },
+                {
+                    "word": " course",
+                    "start": 12.78,
+                    "end": 12.96,
+                    "probability": 0.9986666440963745
+                },
+                {
+                    "word": " I",
+                    "start": 12.96,
+                    "end": 13.14,
+                    "probability": 0.5137555599212646
+                },
+                {
+                    "word": " cannot",
+                    "start": 13.14,
+                    "end": 13.42,
+                    "probability": 0.9825581908226013
+                },
+                {
+                    "word": " physically",
+                    "start": 13.42,
+                    "end": 14.16,
+                    "probability": 0.9615153670310974
+                },
+                {
+                    "word": " force",
+                    "start": 14.16,
+                    "end": 14.76,
+                    "probability": 0.998668909072876
+                },
+                {
+                    "word": " your",
+                    "start": 14.76,
+                    "end": 15.28,
+                    "probability": 0.9974671602249146
+                },
+                {
+                    "word": " actions,",
+                    "start": 15.28,
+                    "end": 15.9,
+                    "probability": 0.9991982579231262
+                },
+                {
+                    "word": " but",
+                    "start": 15.9,
+                    "end": 16.3,
+                    "probability": 0.9689502120018005
+                },
+                {
+                    "word": " I",
+                    "start": 16.3,
+                    "end": 16.92,
+                    "probability": 0.9723295569419861
+                },
+                {
+                    "word": " do",
+                    "start": 16.92,
+                    "end": 17.22,
+                    "probability": 0.9894486665725708
+                },
+                {
+                    "word": " assume",
+                    "start": 17.22,
+                    "end": 17.6,
+                    "probability": 0.9983032941818237
+                },
+                {
+                    "word": " that",
+                    "start": 17.6,
+                    "end": 17.8,
+                    "probability": 0.9689726233482361
+                },
+                {
+                    "word": " you",
+                    "start": 17.8,
+                    "end": 17.96,
+                    "probability": 0.9991160035133362
+                },
+                {
+                    "word": " have",
+                    "start": 17.96,
+                    "end": 18.12,
+                    "probability": 0.9975256323814392
+                },
+                {
+                    "word": " a",
+                    "start": 18.12,
+                    "end": 18.2,
+                    "probability": 0.9822360277175903
+                },
+                {
+                    "word": " desire",
+                    "start": 18.2,
+                    "end": 18.48,
+                    "probability": 0.9988083839416504
+                },
+                {
+                    "word": " to",
+                    "start": 18.48,
+                    "end": 18.66,
+                    "probability": 0.9992438554763794
+                },
+                {
+                    "word": " progress",
+                    "start": 18.66,
+                    "end": 19.06,
+                    "probability": 0.9978100657463074
+                },
+                {
+                    "word": " through",
+                    "start": 19.06,
+                    "end": 19.68,
+                    "probability": 0.9929326772689819
+                },
+                {
+                    "word": " this",
+                    "start": 19.68,
+                    "end": 19.92,
+                    "probability": 0.9974572062492371
+                },
+                {
+                    "word": " level",
+                    "start": 19.92,
+                    "end": 20.12,
+                    "probability": 0.9954249262809753
+                },
+                {
+                    "word": " as",
+                    "start": 20.12,
+                    "end": 20.34,
+                    "probability": 0.9771455526351929
+                },
+                {
+                    "word": " well,",
+                    "start": 20.34,
+                    "end": 20.6,
+                    "probability": 0.997017502784729
+                },
+                {
+                    "word": " since",
+                    "start": 20.6,
+                    "end": 20.92,
+                    "probability": 0.991662859916687
+                },
+                {
+                    "word": " that's",
+                    "start": 20.92,
+                    "end": 21.28,
+                    "probability": 0.9946849942207336
+                },
+                {
+                    "word": " kinda",
+                    "start": 21.28,
+                    "end": 21.52,
+                    "probability": 0.1933474838733673
+                },
+                {
+                    "word": " the",
+                    "start": 21.52,
+                    "end": 21.74,
+                    "probability": 0.9918111562728882
+                },
+                {
+                    "word": " point",
+                    "start": 21.74,
+                    "end": 21.94,
+                    "probability": 0.999480664730072
+                },
+                {
+                    "word": " of",
+                    "start": 21.94,
+                    "end": 22.14,
+                    "probability": 0.9865477681159973
+                },
+                {
+                    "word": " still",
+                    "start": 22.14,
+                    "end": 22.42,
+                    "probability": 0.9843334555625916
+                },
+                {
+                    "word": " being",
+                    "start": 22.42,
+                    "end": 23.28,
+                    "probability": 0.9561643004417419
+                },
+                {
+                    "word": " here.",
+                    "start": 23.28,
+                    "end": 23.78,
+                    "probability": 0.9976804256439209
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "seek": 2378,
+            "start": 23.78,
+            "end": 30.22,
+            "text": " And I have the power to block you from that progression and require you to look at each word that pops up.",
+            "tokens": [
+                50383,
+                843,
+                314,
+                423,
+                262,
+                1176,
+                284,
+                2512,
+                345,
+                422,
+                326,
+                17085,
+                290,
+                2421,
+                345,
+                284,
+                804,
+                379,
+                1123,
+                1573,
+                326,
+                26384,
+                510,
+                13,
+                50683
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.19997703112088716,
+            "compression_ratio": 1.4306569343065694,
+            "no_speech_prob": 0.08992613106966019,
+            "words": [
+                {
+                    "word": " And",
+                    "start": 23.78,
+                    "end": 24.48,
+                    "probability": 0.5862423181533813
+                },
+                {
+                    "word": " I",
+                    "start": 24.48,
+                    "end": 24.66,
+                    "probability": 0.9780697822570801
+                },
+                {
+                    "word": " have",
+                    "start": 24.66,
+                    "end": 24.82,
+                    "probability": 0.9977675676345825
+                },
+                {
+                    "word": " the",
+                    "start": 24.82,
+                    "end": 24.94,
+                    "probability": 0.9965732097625732
+                },
+                {
+                    "word": " power",
+                    "start": 24.94,
+                    "end": 25.14,
+                    "probability": 0.9975765347480774
+                },
+                {
+                    "word": " to",
+                    "start": 25.14,
+                    "end": 25.34,
+                    "probability": 0.9983659386634827
+                },
+                {
+                    "word": " block",
+                    "start": 25.34,
+                    "end": 25.52,
+                    "probability": 0.9984982013702393
+                },
+                {
+                    "word": " you",
+                    "start": 25.52,
+                    "end": 25.72,
+                    "probability": 0.9947909116744995
+                },
+                {
+                    "word": " from",
+                    "start": 25.72,
+                    "end": 25.9,
+                    "probability": 0.9951104521751404
+                },
+                {
+                    "word": " that",
+                    "start": 25.9,
+                    "end": 26.1,
+                    "probability": 0.9859222173690796
+                },
+                {
+                    "word": " progression",
+                    "start": 26.1,
+                    "end": 26.52,
+                    "probability": 0.9967370629310608
+                },
+                {
+                    "word": " and",
+                    "start": 26.52,
+                    "end": 26.86,
+                    "probability": 0.6508913040161133
+                },
+                {
+                    "word": " require",
+                    "start": 26.86,
+                    "end": 27.3,
+                    "probability": 0.980857253074646
+                },
+                {
+                    "word": " you",
+                    "start": 27.3,
+                    "end": 27.62,
+                    "probability": 0.995465099811554
+                },
+                {
+                    "word": " to",
+                    "start": 27.62,
+                    "end": 27.82,
+                    "probability": 0.9889779686927795
+                },
+                {
+                    "word": " look",
+                    "start": 27.82,
+                    "end": 28.04,
+                    "probability": 0.9980802536010742
+                },
+                {
+                    "word": " at",
+                    "start": 28.04,
+                    "end": 28.32,
+                    "probability": 0.9929327964782715
+                },
+                {
+                    "word": " each",
+                    "start": 28.32,
+                    "end": 28.62,
+                    "probability": 0.9915736317634583
+                },
+                {
+                    "word": " word",
+                    "start": 28.62,
+                    "end": 29.14,
+                    "probability": 0.9975033402442932
+                },
+                {
+                    "word": " that",
+                    "start": 29.14,
+                    "end": 29.44,
+                    "probability": 0.9943875670433044
+                },
+                {
+                    "word": " pops",
+                    "start": 29.44,
+                    "end": 29.66,
+                    "probability": 0.996901273727417
+                },
+                {
+                    "word": " up.",
+                    "start": 29.66,
+                    "end": 30.22,
+                    "probability": 0.9909912347793579
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "seek": 2378,
+            "start": 31.08,
+            "end": 37.02,
+            "text": " I am your gatekeeper here, and if you want to move forward, you have to do as I tell you.",
+            "tokens": [
+                50683,
+                314,
+                716,
+                534,
+                8946,
+                13884,
+                994,
+                11,
+                290,
+                611,
+                345,
+                765,
+                284,
+                1445,
+                2651,
+                11,
+                345,
+                423,
+                284,
+                466,
+                355,
+                314,
+                1560,
+                345,
+                13,
+                51027
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.19997703112088716,
+            "compression_ratio": 1.4306569343065694,
+            "no_speech_prob": 0.08992613106966019,
+            "words": [
+                {
+                    "word": " I",
+                    "start": 31.08,
+                    "end": 31.3,
+                    "probability": 0.9945671558380127
+                },
+                {
+                    "word": " am",
+                    "start": 31.3,
+                    "end": 31.54,
+                    "probability": 0.9726006984710693
+                },
+                {
+                    "word": " your",
+                    "start": 31.54,
+                    "end": 31.76,
+                    "probability": 0.9673507213592529
+                },
+                {
+                    "word": " gatekeeper",
+                    "start": 31.76,
+                    "end": 32.3,
+                    "probability": 0.8838051557540894
+                },
+                {
+                    "word": " here,",
+                    "start": 32.3,
+                    "end": 32.62,
+                    "probability": 0.9913902282714844
+                },
+                {
+                    "word": " and",
+                    "start": 32.74,
+                    "end": 32.86,
+                    "probability": 0.9915675520896912
+                },
+                {
+                    "word": " if",
+                    "start": 32.86,
+                    "end": 33.14,
+                    "probability": 0.9876305460929871
+                },
+                {
+                    "word": " you",
+                    "start": 33.14,
+                    "end": 33.42,
+                    "probability": 0.9981631636619568
+                },
+                {
+                    "word": " want",
+                    "start": 33.42,
+                    "end": 33.72,
+                    "probability": 0.9963248372077942
+                },
+                {
+                    "word": " to",
+                    "start": 33.72,
+                    "end": 34.0,
+                    "probability": 0.9981685876846313
+                },
+                {
+                    "word": " move",
+                    "start": 34.0,
+                    "end": 34.24,
+                    "probability": 0.998008668422699
+                },
+                {
+                    "word": " forward,",
+                    "start": 34.24,
+                    "end": 34.7,
+                    "probability": 0.996619701385498
+                },
+                {
+                    "word": " you",
+                    "start": 35.22,
+                    "end": 35.32,
+                    "probability": 0.9942448735237122
+                },
+                {
+                    "word": " have",
+                    "start": 35.32,
+                    "end": 35.48,
+                    "probability": 0.9969720840454102
+                },
+                {
+                    "word": " to",
+                    "start": 35.48,
+                    "end": 35.68,
+                    "probability": 0.99809330701828
+                },
+                {
+                    "word": " do",
+                    "start": 35.68,
+                    "end": 35.92,
+                    "probability": 0.9929995536804199
+                },
+                {
+                    "word": " as",
+                    "start": 35.92,
+                    "end": 36.34,
+                    "probability": 0.9771122336387634
+                },
+                {
+                    "word": " I",
+                    "start": 36.34,
+                    "end": 36.56,
+                    "probability": 0.9877570867538452
+                },
+                {
+                    "word": " tell",
+                    "start": 36.56,
+                    "end": 36.74,
+                    "probability": 0.9978646636009216
+                },
+                {
+                    "word": " you.",
+                    "start": 36.74,
+                    "end": 37.02,
+                    "probability": 0.9992285966873169
+                }
+            ]
+        }
+    ],
+    "language": "en"
+}

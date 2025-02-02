@@ -7,88 +7,82 @@ namespace LevelGeneration
     /// <summary>
     /// Generates a walkway of pieces to walk on
     /// </summary>
+    [RequireComponent(typeof(WalkwayPieceFactory))]
     public class WalkwayGenerator : MonoBehaviour
     {
-        LevelPieceMolds levelPieceMolds;
+        WalkwayPieceFactory walkwayPieceFactory;
         [SerializeField] float sentanceGapSize = 3f;
-        public bool isWordAnimationActive = false;
+        [SerializeField] float maxSideShift = 0.6f;
+        public enum AnimationType
+        {
+            NONE,
+            MOVE_FROM_SUBTITLE,
+            MOVE_FROM_ABOVE_TARGET,
+        }
+        [SerializeField] AnimationType animationType = AnimationType.NONE;
         public bool isSeparatingSentences = false;
         public bool isDissapearing = false;
+        TalkingHead talkingHead;
 
-        private void Start()
+        private void Awake()
         {
-            levelPieceMolds = FindAnyObjectByType<LevelPieceMolds>();
+            walkwayPieceFactory = GetComponent<WalkwayPieceFactory>();
+            talkingHead = FindObjectOfType<TalkingHead>();
         }
 
-        public GameObject AddPieceToWalkway(Transform pieceToMoveFrom, string pieceWord)
+        public GameObject AddPieceToWalkway(Vector3 entryPoint, string pieceWord, string lastPieceWord)
         {
-            Vector3 newPiecePivot = GetNextPiecePivot(pieceToMoveFrom);
+            Vector3 newPiecePivot = GetNextPieceFinalPos(entryPoint, lastPieceWord, pieceWord);
             GameObject piece = InstatiatePiece(newPiecePivot, Quaternion.identity, pieceWord);
             return piece;
         }
 
-        private Vector3 GetNextPiecePivot(Transform pieceToMoveFrom)
+        private Vector3 GetNextPieceFinalPos(Vector3 endTopOfLastPiece, string lastPieceWord, string pieceWord)
         {
-            Vector3 prevPieceFinalPivot = pieceToMoveFrom.position;
-            Vector3 prevPieceFinalScale = pieceToMoveFrom.lossyScale;
+            Vector3 newPiecePivot = endTopOfLastPiece;
 
-            if (isWordAnimationActive)
+            //adjust down to align top
+            float pieceHeight = walkwayPieceFactory.GetPieceHeight();
+            newPiecePivot.y -= pieceHeight / 2;
+
+            //adjust in sides at random
+            newPiecePivot.x += Random.Range(-maxSideShift, maxSideShift);
+
+            //add sentence gap if needed
+            if (isSeparatingSentences && lastPieceWord.EndsWith(".") && !string.IsNullOrEmpty(pieceWord))
             {
-                LevelPiecePositioner prevPiecePositioner = pieceToMoveFrom.GetComponent<LevelPiecePositioner>();
-                prevPieceFinalPivot = prevPiecePositioner.targetPosition;
-                prevPieceFinalScale = prevPiecePositioner.targetPieceScale;
-            }
-
-            Vector3 finalEndOfPrevPiece = prevPieceFinalPivot + Vector3.forward * prevPieceFinalScale.z;
-            float halfWidthOfPrevPiece = prevPieceFinalScale.x / 2;
-
-            Vector3 newPiecePivot = finalEndOfPrevPiece;
-            newPiecePivot.x += Random.Range(-halfWidthOfPrevPiece, halfWidthOfPrevPiece);
-
-            if (isSeparatingSentences)
-            {
-                newPiecePivot = ExtendWithSentenceGapIfLastPieceEndedSentence(pieceToMoveFrom, newPiecePivot);
+                newPiecePivot.z += sentanceGapSize;
             }
 
             return newPiecePivot;
         }
 
-        private Vector3 ExtendWithSentenceGapIfLastPieceEndedSentence(Transform lastPiece, Vector3 piecePivotToExtend)
+        public GameObject InstatiatePiece(Vector3 targetPos, Quaternion targetRot, string pieceWord)
         {
-            bool lastPieceEndedSentence = false;
-            if (lastPiece != null)
-            {
-                lastPieceEndedSentence = IsPieceWordEndingSentence(lastPiece);
-            }
-            if (lastPieceEndedSentence)
-            {
-                piecePivotToExtend.z += sentanceGapSize;
-            }
+            GameObject piece = null;
 
-            return piecePivotToExtend;
-        }
-
-        private static bool IsPieceWordEndingSentence(Transform pieceToMoveFrom)
-        {
-            bool startsNewSentece = false;
-            TMP_Text prevPieceTextElement = pieceToMoveFrom.GetComponentInChildren<TMP_Text>();
-            if (prevPieceTextElement != null)
+            if (talkingHead != null)
             {
-                startsNewSentece = prevPieceTextElement.text.EndsWith(".");
+                piece = walkwayPieceFactory.SpawnFromTalkingHead(targetPos, targetRot, pieceWord);
+            }
+            else if (animationType == AnimationType.MOVE_FROM_ABOVE_TARGET)
+            {
+                piece = walkwayPieceFactory.SpawnAboveTargetAndMoveIntoPlace(targetPos, targetRot, pieceWord);
+            }
+            else if (animationType == AnimationType.MOVE_FROM_SUBTITLE)
+            {
+                piece = walkwayPieceFactory.SpawnInFrontOfCameraAnMoveIntoPlace(pieceWord, targetPos, targetRot);
+            }
+            else
+            {
+                piece = walkwayPieceFactory.SpawnAtFinalPosition(targetPos, targetRot, pieceWord);
             }
 
-            return startsNewSentece;
-        }
-
-        public GameObject InstatiatePiece(Vector3 pivot, Quaternion rot, string pieceWord)
-        {
-            GameObject piece = levelPieceMolds.CopyNextMold();
-            piece.GetComponent<LevelPiecePositioner>().MoveToPosition(pivot, rot, isWordAnimationActive);
             if (isDissapearing)
             {
-                piece.GetComponent<LevelPieceDestroyTimer>().startDestroyTimerWhenPositioned = true;
+                piece.GetComponent<LevelPiece.DestroyTimer>().startDestroyTimerWhenPositioned = true;
             }
-            piece.GetComponentInChildren<TMP_Text>().text = pieceWord;
+
             return piece;
         }
     }

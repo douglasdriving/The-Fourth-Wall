@@ -1,0 +1,579 @@
+{
+    "text": " Maybe I could put some color to the blocks that you walk on, perhaps based on how common their respective words are inside of the script. And I could even do that like in a color scheme connecting to my life, for example in an autumn tone that resembles the leaves in the city that I bike through as I'm thinking of what to add to this game next.",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 4.38,
+            "text": " Maybe I could put some color to the blocks that you walk on,",
+            "tokens": [
+                50363,
+                6674,
+                314,
+                714,
+                1234,
+                617,
+                3124,
+                284,
+                262,
+                7021,
+                326,
+                345,
+                2513,
+                319,
+                11,
+                50583
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.17191983391256893,
+            "compression_ratio": 1.5727272727272728,
+            "no_speech_prob": 0.04842367023229599,
+            "words": [
+                {
+                    "word": " Maybe",
+                    "start": 0.0,
+                    "end": 1.02,
+                    "probability": 0.8738162517547607
+                },
+                {
+                    "word": " I",
+                    "start": 1.02,
+                    "end": 1.18,
+                    "probability": 0.9866484999656677
+                },
+                {
+                    "word": " could",
+                    "start": 1.18,
+                    "end": 1.4,
+                    "probability": 0.9910195469856262
+                },
+                {
+                    "word": " put",
+                    "start": 1.4,
+                    "end": 1.64,
+                    "probability": 0.9919324517250061
+                },
+                {
+                    "word": " some",
+                    "start": 1.64,
+                    "end": 2.02,
+                    "probability": 0.9922468662261963
+                },
+                {
+                    "word": " color",
+                    "start": 2.02,
+                    "end": 2.36,
+                    "probability": 0.7202266454696655
+                },
+                {
+                    "word": " to",
+                    "start": 2.36,
+                    "end": 2.84,
+                    "probability": 0.9805081486701965
+                },
+                {
+                    "word": " the",
+                    "start": 2.84,
+                    "end": 3.08,
+                    "probability": 0.9971609115600586
+                },
+                {
+                    "word": " blocks",
+                    "start": 3.08,
+                    "end": 3.48,
+                    "probability": 0.9896990656852722
+                },
+                {
+                    "word": " that",
+                    "start": 3.48,
+                    "end": 3.74,
+                    "probability": 0.9781543016433716
+                },
+                {
+                    "word": " you",
+                    "start": 3.74,
+                    "end": 3.86,
+                    "probability": 0.9977344274520874
+                },
+                {
+                    "word": " walk",
+                    "start": 3.86,
+                    "end": 4.12,
+                    "probability": 0.9954999089241028
+                },
+                {
+                    "word": " on,",
+                    "start": 4.12,
+                    "end": 4.38,
+                    "probability": 0.9944812059402466
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 4.46,
+            "end": 9.94,
+            "text": " perhaps based on how common their respective words are inside of the script.",
+            "tokens": [
+                50583,
+                3737,
+                1912,
+                319,
+                703,
+                2219,
+                511,
+                11756,
+                2456,
+                389,
+                2641,
+                286,
+                262,
+                4226,
+                13,
+                50863
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.17191983391256893,
+            "compression_ratio": 1.5727272727272728,
+            "no_speech_prob": 0.04842367023229599,
+            "words": [
+                {
+                    "word": " perhaps",
+                    "start": 4.46,
+                    "end": 4.74,
+                    "probability": 0.9898264408111572
+                },
+                {
+                    "word": " based",
+                    "start": 4.74,
+                    "end": 5.06,
+                    "probability": 0.9928652048110962
+                },
+                {
+                    "word": " on",
+                    "start": 5.06,
+                    "end": 5.34,
+                    "probability": 0.9980133771896362
+                },
+                {
+                    "word": " how",
+                    "start": 5.34,
+                    "end": 5.7,
+                    "probability": 0.9983013868331909
+                },
+                {
+                    "word": " common",
+                    "start": 5.7,
+                    "end": 6.2,
+                    "probability": 0.997499406337738
+                },
+                {
+                    "word": " their",
+                    "start": 6.2,
+                    "end": 6.56,
+                    "probability": 0.9921085238456726
+                },
+                {
+                    "word": " respective",
+                    "start": 6.56,
+                    "end": 7.04,
+                    "probability": 0.9988344311714172
+                },
+                {
+                    "word": " words",
+                    "start": 7.04,
+                    "end": 7.5,
+                    "probability": 0.9979579448699951
+                },
+                {
+                    "word": " are",
+                    "start": 7.5,
+                    "end": 8.4,
+                    "probability": 0.9975799322128296
+                },
+                {
+                    "word": " inside",
+                    "start": 8.4,
+                    "end": 9.28,
+                    "probability": 0.9598976373672485
+                },
+                {
+                    "word": " of",
+                    "start": 9.28,
+                    "end": 9.44,
+                    "probability": 0.9705206751823425
+                },
+                {
+                    "word": " the",
+                    "start": 9.44,
+                    "end": 9.56,
+                    "probability": 0.9963269829750061
+                },
+                {
+                    "word": " script.",
+                    "start": 9.56,
+                    "end": 9.94,
+                    "probability": 0.9921668767929077
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "seek": 0,
+            "start": 10.72,
+            "end": 15.94,
+            "text": " And I could even do that like in a color scheme connecting to my life,",
+            "tokens": [
+                50863,
+                843,
+                314,
+                714,
+                772,
+                466,
+                326,
+                588,
+                287,
+                257,
+                3124,
+                7791,
+                14320,
+                284,
+                616,
+                1204,
+                11,
+                51163
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.17191983391256893,
+            "compression_ratio": 1.5727272727272728,
+            "no_speech_prob": 0.04842367023229599,
+            "words": [
+                {
+                    "word": " And",
+                    "start": 10.72,
+                    "end": 10.96,
+                    "probability": 0.7978920936584473
+                },
+                {
+                    "word": " I",
+                    "start": 10.96,
+                    "end": 11.08,
+                    "probability": 0.9895724654197693
+                },
+                {
+                    "word": " could",
+                    "start": 11.08,
+                    "end": 11.22,
+                    "probability": 0.9785789847373962
+                },
+                {
+                    "word": " even",
+                    "start": 11.22,
+                    "end": 11.36,
+                    "probability": 0.988201916217804
+                },
+                {
+                    "word": " do",
+                    "start": 11.36,
+                    "end": 11.54,
+                    "probability": 0.9987697005271912
+                },
+                {
+                    "word": " that",
+                    "start": 11.54,
+                    "end": 11.74,
+                    "probability": 0.9977951049804688
+                },
+                {
+                    "word": " like",
+                    "start": 11.74,
+                    "end": 11.92,
+                    "probability": 0.4517733156681061
+                },
+                {
+                    "word": " in",
+                    "start": 11.92,
+                    "end": 12.28,
+                    "probability": 0.9428671598434448
+                },
+                {
+                    "word": " a",
+                    "start": 12.28,
+                    "end": 12.7,
+                    "probability": 0.9973478317260742
+                },
+                {
+                    "word": " color",
+                    "start": 12.7,
+                    "end": 13.08,
+                    "probability": 0.9899206161499023
+                },
+                {
+                    "word": " scheme",
+                    "start": 13.08,
+                    "end": 13.5,
+                    "probability": 0.9981787204742432
+                },
+                {
+                    "word": " connecting",
+                    "start": 13.5,
+                    "end": 14.06,
+                    "probability": 0.8248633742332458
+                },
+                {
+                    "word": " to",
+                    "start": 14.06,
+                    "end": 14.72,
+                    "probability": 0.9956587553024292
+                },
+                {
+                    "word": " my",
+                    "start": 14.72,
+                    "end": 15.48,
+                    "probability": 0.9896546602249146
+                },
+                {
+                    "word": " life,",
+                    "start": 15.48,
+                    "end": 15.94,
+                    "probability": 0.9981791973114014
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "seek": 0,
+            "start": 16.06,
+            "end": 20.42,
+            "text": " for example in an autumn tone that resembles the leaves in the city",
+            "tokens": [
+                51163,
+                329,
+                1672,
+                287,
+                281,
+                23608,
+                8216,
+                326,
+                22960,
+                262,
+                5667,
+                287,
+                262,
+                1748,
+                51388
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.17191983391256893,
+            "compression_ratio": 1.5727272727272728,
+            "no_speech_prob": 0.04842367023229599,
+            "words": [
+                {
+                    "word": " for",
+                    "start": 16.06,
+                    "end": 16.24,
+                    "probability": 0.9941906929016113
+                },
+                {
+                    "word": " example",
+                    "start": 16.24,
+                    "end": 16.7,
+                    "probability": 0.9991183876991272
+                },
+                {
+                    "word": " in",
+                    "start": 16.7,
+                    "end": 17.12,
+                    "probability": 0.4022042453289032
+                },
+                {
+                    "word": " an",
+                    "start": 17.12,
+                    "end": 17.4,
+                    "probability": 0.9974191188812256
+                },
+                {
+                    "word": " autumn",
+                    "start": 17.4,
+                    "end": 17.94,
+                    "probability": 0.9844459891319275
+                },
+                {
+                    "word": " tone",
+                    "start": 17.94,
+                    "end": 18.54,
+                    "probability": 0.9643586874008179
+                },
+                {
+                    "word": " that",
+                    "start": 18.54,
+                    "end": 18.9,
+                    "probability": 0.9796738028526306
+                },
+                {
+                    "word": " resembles",
+                    "start": 18.9,
+                    "end": 19.28,
+                    "probability": 0.9989699125289917
+                },
+                {
+                    "word": " the",
+                    "start": 19.28,
+                    "end": 19.56,
+                    "probability": 0.9965301156044006
+                },
+                {
+                    "word": " leaves",
+                    "start": 19.56,
+                    "end": 19.8,
+                    "probability": 0.9947459697723389
+                },
+                {
+                    "word": " in",
+                    "start": 19.8,
+                    "end": 20.0,
+                    "probability": 0.938662052154541
+                },
+                {
+                    "word": " the",
+                    "start": 20.0,
+                    "end": 20.14,
+                    "probability": 0.9900768399238586
+                },
+                {
+                    "word": " city",
+                    "start": 20.14,
+                    "end": 20.42,
+                    "probability": 0.9973809123039246
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "seek": 0,
+            "start": 20.42,
+            "end": 24.78,
+            "text": " that I bike through as I'm thinking of what to add to this game next.",
+            "tokens": [
+                51388,
+                326,
+                314,
+                7161,
+                832,
+                355,
+                314,
+                1101,
+                3612,
+                286,
+                644,
+                284,
+                751,
+                284,
+                428,
+                983,
+                1306,
+                13,
+                51613
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.17191983391256893,
+            "compression_ratio": 1.5727272727272728,
+            "no_speech_prob": 0.04842367023229599,
+            "words": [
+                {
+                    "word": " that",
+                    "start": 20.42,
+                    "end": 20.76,
+                    "probability": 0.9124932289123535
+                },
+                {
+                    "word": " I",
+                    "start": 20.76,
+                    "end": 20.9,
+                    "probability": 0.9964643716812134
+                },
+                {
+                    "word": " bike",
+                    "start": 20.9,
+                    "end": 21.08,
+                    "probability": 0.7522003650665283
+                },
+                {
+                    "word": " through",
+                    "start": 21.08,
+                    "end": 21.3,
+                    "probability": 0.9966133236885071
+                },
+                {
+                    "word": " as",
+                    "start": 21.3,
+                    "end": 21.52,
+                    "probability": 0.9526051878929138
+                },
+                {
+                    "word": " I'm",
+                    "start": 21.52,
+                    "end": 22.22,
+                    "probability": 0.9876511991024017
+                },
+                {
+                    "word": " thinking",
+                    "start": 22.22,
+                    "end": 22.52,
+                    "probability": 0.9986900687217712
+                },
+                {
+                    "word": " of",
+                    "start": 22.52,
+                    "end": 22.86,
+                    "probability": 0.9744894504547119
+                },
+                {
+                    "word": " what",
+                    "start": 22.86,
+                    "end": 23.12,
+                    "probability": 0.9635483026504517
+                },
+                {
+                    "word": " to",
+                    "start": 23.12,
+                    "end": 23.36,
+                    "probability": 0.997857391834259
+                },
+                {
+                    "word": " add",
+                    "start": 23.36,
+                    "end": 23.64,
+                    "probability": 0.9992470741271973
+                },
+                {
+                    "word": " to",
+                    "start": 23.64,
+                    "end": 23.86,
+                    "probability": 0.998415470123291
+                },
+                {
+                    "word": " this",
+                    "start": 23.86,
+                    "end": 24.0,
+                    "probability": 0.9948086142539978
+                },
+                {
+                    "word": " game",
+                    "start": 24.0,
+                    "end": 24.32,
+                    "probability": 0.9984472393989563
+                },
+                {
+                    "word": " next.",
+                    "start": 24.32,
+                    "end": 24.78,
+                    "probability": 0.9860294461250305
+                }
+            ]
+        }
+    ],
+    "language": "en"
+}

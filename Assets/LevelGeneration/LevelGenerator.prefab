@@ -9,9 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6079647386308319646}
-  - component: {fileID: 7021466173556650257}
   - component: {fileID: 7534025309003727685}
+  - component: {fileID: 7021466173556650257}
+  - component: {fileID: 6746897796243269720}
   - component: {fileID: 6369491074704825201}
+  - component: {fileID: 8118289208220695993}
+  - component: {fileID: 5432473818868263164}
   m_Layer: 0
   m_Name: LevelGenerator
   m_TagString: Untagged
@@ -36,24 +39,6 @@ Transform:
   - {fileID: 7913855817269248887}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7021466173556650257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114052340901206385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d01e5ea317914d245badc6657ec16b0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  piecePrefab: {fileID: 6737570752163496808, guid: fad8276afac0bcf4f9ec4921e4a11d90, type: 3}
-  wordAnchorPrefab: {fileID: 7910143540055735657, guid: 93bf672ba2b177945a54fd51415e9260, type: 3}
-  wordAnchorParent: {fileID: 0}
-  walkwayParent: {fileID: 3816724244464975986}
-  platformGapSize: 7
-  zScalePercentageOfPlatformPieces: 0.7
 --- !u!114 &7534025309003727685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,13 +51,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7aeded9d0f9ee248b390fab7a568d65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  piecesPerPlatform: 12
-  minPlatformPieces: 4
-  ground: {fileID: 3816724244464975986}
-  platformsParent: {fileID: 7913855817269248887}
-  platformsPrefab: {fileID: 4791948967482664214, guid: a88ed88fbcc0c704e95c12a066b5da35, type: 3}
   levelPiecesSpawned:
   - {fileID: 5291893488134512238}
+  isSpawningAndRails: 0
+  isSpawningThePieces: 0
+--- !u!114 &7021466173556650257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114052340901206385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d01e5ea317914d245badc6657ec16b0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sentanceGapSize: 3
+  maxSideShift: 0.6
+  animationType: 0
+  isSeparatingSentences: 0
+  isDissapearing: 0
+--- !u!114 &6746897796243269720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114052340901206385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21c4ef9046667ac459a2dd12ca714e83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkwayPiecePrefab: {fileID: 6737570752163496808, guid: fad8276afac0bcf4f9ec4921e4a11d90, type: 3}
+  levelPieceMolds: {fileID: 0}
 --- !u!114 &6369491074704825201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85,8 +98,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a44d0074d66d7e74ab5cec6b56175013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exitPortalPrefab: {fileID: 0}
+  exitPortalPrefab: {fileID: 4335569441670879784, guid: a94d6cfa1021f69488d97c5bb3922e7f, type: 3}
   portalHeightAbovePlatform: 2.88
+--- !u!114 &8118289208220695993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114052340901206385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e276b0dcd646ef64588e2ea135e84667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  railPrefab: {fileID: 6634007023895207853, guid: 6c2aa10e2972cb443b4b2d408cab9e90, type: 3}
+  railLength: 10
+--- !u!114 &5432473818868263164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114052340901206385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac700eb09680d9d46ae7ff9b6216d309, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thePiecePrefab: {fileID: 4795037251955250072, guid: 2f5bf6a0547761b4fa1b9737e2e51006, type: 3}
 --- !u!1 &6146862377241442123
 GameObject:
   m_ObjectHideFlags: 0

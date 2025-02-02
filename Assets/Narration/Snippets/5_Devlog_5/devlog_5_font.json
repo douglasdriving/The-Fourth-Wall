@@ -1,0 +1,217 @@
+{
+    "text": " or replacing the default font with something that's maybe a bit more quirky and interesting so that it gives the game some kind of personality.",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 5.54,
+            "text": " or replacing the default font with something that's maybe a bit more quirky and interesting",
+            "tokens": [
+                50363,
+                393,
+                13586,
+                262,
+                4277,
+                10369,
+                351,
+                1223,
+                326,
+                338,
+                3863,
+                257,
+                1643,
+                517,
+                37276,
+                290,
+                3499,
+                50653
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.15070965886116028,
+            "compression_ratio": 1.3240740740740742,
+            "no_speech_prob": 0.00951201468706131,
+            "words": [
+                {
+                    "word": " or",
+                    "start": 0.0,
+                    "end": 0.18,
+                    "probability": 0.5702929496765137
+                },
+                {
+                    "word": " replacing",
+                    "start": 0.18,
+                    "end": 0.54,
+                    "probability": 0.944557785987854
+                },
+                {
+                    "word": " the",
+                    "start": 0.54,
+                    "end": 0.8,
+                    "probability": 0.9970587491989136
+                },
+                {
+                    "word": " default",
+                    "start": 0.8,
+                    "end": 1.2,
+                    "probability": 0.9984048008918762
+                },
+                {
+                    "word": " font",
+                    "start": 1.2,
+                    "end": 1.7,
+                    "probability": 0.9737718105316162
+                },
+                {
+                    "word": " with",
+                    "start": 1.7,
+                    "end": 2.04,
+                    "probability": 0.9904831647872925
+                },
+                {
+                    "word": " something",
+                    "start": 2.04,
+                    "end": 2.52,
+                    "probability": 0.9961667656898499
+                },
+                {
+                    "word": " that's",
+                    "start": 2.52,
+                    "end": 3.44,
+                    "probability": 0.9407985806465149
+                },
+                {
+                    "word": " maybe",
+                    "start": 3.44,
+                    "end": 3.6,
+                    "probability": 0.9711300730705261
+                },
+                {
+                    "word": " a",
+                    "start": 3.6,
+                    "end": 3.7,
+                    "probability": 0.9939759373664856
+                },
+                {
+                    "word": " bit",
+                    "start": 3.7,
+                    "end": 3.86,
+                    "probability": 0.9911421537399292
+                },
+                {
+                    "word": " more",
+                    "start": 3.86,
+                    "end": 4.1,
+                    "probability": 0.994083821773529
+                },
+                {
+                    "word": " quirky",
+                    "start": 4.1,
+                    "end": 4.56,
+                    "probability": 0.9931747317314148
+                },
+                {
+                    "word": " and",
+                    "start": 4.56,
+                    "end": 4.96,
+                    "probability": 0.9931756854057312
+                },
+                {
+                    "word": " interesting",
+                    "start": 4.96,
+                    "end": 5.54,
+                    "probability": 0.9963428378105164
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 5.54,
+            "end": 9.14,
+            "text": " so that it gives the game some kind of personality.",
+            "tokens": [
+                50653,
+                523,
+                326,
+                340,
+                3607,
+                262,
+                983,
+                617,
+                1611,
+                286,
+                8806,
+                13,
+                50829
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.15070965886116028,
+            "compression_ratio": 1.3240740740740742,
+            "no_speech_prob": 0.00951201468706131,
+            "words": [
+                {
+                    "word": " so",
+                    "start": 5.54,
+                    "end": 6.04,
+                    "probability": 0.7514996528625488
+                },
+                {
+                    "word": " that",
+                    "start": 6.04,
+                    "end": 6.36,
+                    "probability": 0.9868298172950745
+                },
+                {
+                    "word": " it",
+                    "start": 6.36,
+                    "end": 6.56,
+                    "probability": 0.9910877346992493
+                },
+                {
+                    "word": " gives",
+                    "start": 6.56,
+                    "end": 6.88,
+                    "probability": 0.9960427284240723
+                },
+                {
+                    "word": " the",
+                    "start": 6.88,
+                    "end": 7.12,
+                    "probability": 0.988621175289154
+                },
+                {
+                    "word": " game",
+                    "start": 7.12,
+                    "end": 7.44,
+                    "probability": 0.9981176853179932
+                },
+                {
+                    "word": " some",
+                    "start": 7.44,
+                    "end": 8.24,
+                    "probability": 0.9930251836776733
+                },
+                {
+                    "word": " kind",
+                    "start": 8.24,
+                    "end": 8.46,
+                    "probability": 0.9930874705314636
+                },
+                {
+                    "word": " of",
+                    "start": 8.46,
+                    "end": 8.64,
+                    "probability": 0.9995396137237549
+                },
+                {
+                    "word": " personality.",
+                    "start": 8.64,
+                    "end": 9.14,
+                    "probability": 0.9955050349235535
+                }
+            ]
+        }
+    ],
+    "language": "en"
+}

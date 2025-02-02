@@ -12,6 +12,8 @@ TagManager:
   - SecondCrystalPlatformEntryPoint
   - WordAnchor
   - ThirdCrystalPlatformEntryPoint
+  - LevelPieceEnd
+  - Unfreezable
   layers:
   - Default
   - TransparentFX

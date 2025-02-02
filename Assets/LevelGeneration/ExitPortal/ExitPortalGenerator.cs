@@ -1,4 +1,5 @@
 using System.Collections;
+using QuizPortal;
 using UnityEngine;
 
 namespace LevelGeneration
@@ -10,19 +11,35 @@ namespace LevelGeneration
     {
         [SerializeField] GameObject exitPortalPrefab;
         [SerializeField] float portalHeightAbovePlatform = 1.5f;
+        [SerializeField] float timeBetweenPieceAndPortalSpawn = 0.8f;
 
         public IEnumerator GenerateExitPortalAfterDelay(float delay)
         {
             yield return new WaitForSeconds(delay);
-            GeneratePieceWithPortal();
+            GameObject portalLevelPiece = FindObjectOfType<LevelGenerator>().SpawnNextPiece("");
+            LevelPiece.Positioner piecePositioner = portalLevelPiece.GetComponent<LevelPiece.Positioner>();
+            Vector3 portalPos = piecePositioner.targetPos + Vector3.up * portalHeightAbovePlatform;
+            yield return new WaitForSeconds(timeBetweenPieceAndPortalSpawn);
+            GameObject portal = Instantiate(exitPortalPrefab, portalPos, piecePositioner.targetRot);
+            SetQuizIfExists(portal);
         }
 
-        private void GeneratePieceWithPortal()
+        private void SetQuizIfExists(GameObject portal)
         {
-            GameObject portalLevelPiece = FindObjectOfType<LevelGenerator>().SpawnNextPiece("");
-            LevelPiecePositioner piecePositioner = portalLevelPiece.GetComponent<LevelPiecePositioner>();
-            Vector3 portalPos = piecePositioner.targetPosition + Vector3.up * portalHeightAbovePlatform;
-            Instantiate(exitPortalPrefab, portalPos, piecePositioner.targetRotation);
+            EndQuizSetter endQuizSetter = GetComponent<EndQuizSetter>();
+            PortalQuizSetter portalQuizSetter = portal.GetComponent<PortalQuizSetter>();
+            if (endQuizSetter != null && portalQuizSetter != null)
+            {
+                endQuizSetter.SetQuestion(portal);
+            }
+            else if (endQuizSetter != null)
+            {
+                Debug.LogWarning("EndQuizSetter found but no PortalQuizSetter found on the portal");
+            }
+            else if (portalQuizSetter != null)
+            {
+                Debug.LogWarning("PortalQuizSetter found but no EndQuizSetter found on the ExitPortalGenerator");
+            }
         }
     }
 }
