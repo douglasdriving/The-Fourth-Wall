@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Narration
@@ -8,10 +9,51 @@ namespace Narration
     /// </summary>
     public class SubtitleJsonReader : MonoBehaviour
     {
+
+        const float timePerLetterInFakeSubtitles = 0.1f;
+
         public static SubtitleJsonData ReadSubtitleJson(string subtitleJsonString)
         {
             SubtitleJsonData data = JsonUtility.FromJson<SubtitleJsonData>(subtitleJsonString);
             return data;
+        }
+
+        public static SubtitleJsonData MakeSubtitleFromText(string text)
+        {
+            SubtitleJsonData subtitle = new SubtitleJsonData();
+            subtitle.text = text;
+            subtitle.segments = BreakTextIntoSegments(text);
+            subtitle.language = "en";
+            return subtitle;
+        }
+
+        private static SubtitleSegment[] BreakTextIntoSegments(string text)
+        {
+            string[] sentences = text.Split(new[] { '.', '!', '?' }, System.StringSplitOptions.RemoveEmptyEntries);
+            List<SubtitleSegment> segments = new List<SubtitleSegment>();
+            float totalTime = 0;
+            for (int i = 0; i < sentences.Length; i++)
+            {
+                string segmentText = sentences[i].Trim();
+                SubtitleSegment segment = new SubtitleSegment();
+                segment.id = i;
+                segment.text = segmentText;
+                segment.start = totalTime;
+
+                SubtitleWord[] words = segmentText.Split(' ').Select(word => new SubtitleWord { word = word }).ToArray();
+                foreach (SubtitleWord word in words)
+                {
+                    float timeForThisWord = word.word.Length * timePerLetterInFakeSubtitles;
+                    word.start = totalTime;
+                    word.end = totalTime + timeForThisWord;
+                    totalTime = word.end;
+                }
+
+                segment.end = totalTime;
+                segment.words = words;
+                segments.Add(segment);
+            }
+            return segments.ToArray();
         }
 
         public static int CountWordsInSubtitle(SubtitleJsonData subtitle)
@@ -35,7 +77,7 @@ namespace Narration
     }
 
     [System.Serializable]
-    public class SubtitleJsonData
+    public class SubtitleJsonData //should move into separate file
     {
         public string text;
         public SubtitleSegment[] segments;
@@ -53,10 +95,33 @@ namespace Narration
             }
             return words;
         }
+
+        public float GetTotalDuration()
+        {
+            float totalDuration = 0;
+            if (segments.Length > 0)
+            {
+                totalDuration = segments[segments.Length - 1].end;
+            }
+            return totalDuration;
+        }
+
+        public void Log()
+        {
+            Debug.Log(text);
+            foreach (SubtitleSegment segment in segments)
+            {
+                foreach (SubtitleWord word in segment.words)
+                {
+                    Debug.Log(word.start + " - " + word.end + ": " + word.word);
+                }
+            }
+        }
+
     }
 
     [System.Serializable]
-    public class SubtitleSegment
+    public class SubtitleSegment  //should move into separate file
     {
         public int id;
         public int seek;
@@ -72,7 +137,7 @@ namespace Narration
     }
 
     [System.Serializable]
-    public class SubtitleWord
+    public class SubtitleWord  //should move into separate file
     {
         public string word;
         public float start;

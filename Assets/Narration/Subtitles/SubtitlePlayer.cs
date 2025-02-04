@@ -13,7 +13,7 @@ namespace Narration
         [SerializeField] LevelGenerator levelGenerator;
         [SerializeField] TextMeshProUGUI wordText;
         const float lingerTime = 1f;
-        SubtitleJsonData currentSubtitles;
+        SubtitleJsonData currentSubtitle;
         int currentWordIndex = 0;
         int currentSegmentIndex = 0;
         float timeForNextSubtitleStep = 0;
@@ -25,34 +25,34 @@ namespace Narration
             else wordText.gameObject.SetActive(true);
         }
 
-        public void StartSubtitles(SubtitleJsonData subtitles)
+        public void StartSubtitles(SubtitleJsonData subtitle)
         {
-            currentSubtitles = subtitles;
+            currentSubtitle = subtitle;
             currentWordIndex = -1;
             currentSegmentIndex = 0;
-            timeForNextSubtitleStep = currentSubtitles.segments[0].words[0].start;
+            timeForNextSubtitleStep = currentSubtitle.segments[0].words[0].start;
             isLingering = false;
         }
 
         void Update()
         {
-            if (currentSubtitles == null) return;
+            if (currentSubtitle == null) return;
             if (NarrationManager.playState != NarrationManager.PlayState.PLAY) return;
-            bool isTimeForNextSubtitleStep = NarrationManager.timeCurrentNarrationHasPlayed >= timeForNextSubtitleStep;
+            bool isTimeForNextSubtitleStep = NarrationManager.timePlayed >= timeForNextSubtitleStep;
             if (!isTimeForNextSubtitleStep) return;
             TakeNextSubtitleStep();
         }
 
         private void TakeNextSubtitleStep()
         {
-            int wordsInCurrentSentence = currentSubtitles.segments[currentSegmentIndex].words.Length;
-            bool isLastWordOfSentence = currentWordIndex >= wordsInCurrentSentence - 1;
+            int wordsInCurrentSegment = currentSubtitle.segments[currentSegmentIndex].words.Length;
+            bool isLastWordOfSegment = currentWordIndex >= wordsInCurrentSegment - 1;
 
             if (isLingering)
             {
                 StopSubtitle();
             }
-            else if (isLastWordOfSentence)
+            else if (isLastWordOfSegment)
             {
                 MoveToNextSegment();
             }
@@ -66,7 +66,7 @@ namespace Narration
         {
             currentSegmentIndex++;
             currentWordIndex = 0;
-            SubtitleSegment segment = currentSubtitles.segments[currentSegmentIndex];
+            SubtitleSegment segment = currentSubtitle.segments[currentSegmentIndex];
             SubtitleWord word = segment.words[0];
             UpdateNextWordTime();
             ShowWordInWorld(word.word);
@@ -76,7 +76,7 @@ namespace Narration
         private void MoveToNextWordInSentance()
         {
             currentWordIndex++;
-            SubtitleSegment currentSegment = currentSubtitles.segments[currentSegmentIndex];
+            SubtitleSegment currentSegment = currentSubtitle.segments[currentSegmentIndex];
             SubtitleWord word = currentSegment.words[currentWordIndex];
             UpdateNextWordTime();
             ShowWordInWorld(word.word);
@@ -90,9 +90,9 @@ namespace Narration
 
         private void UpdateNextWordTime()
         {
-            SubtitleSegment currentSegment = currentSubtitles.segments[currentSegmentIndex];
+            SubtitleSegment currentSegment = currentSubtitle.segments[currentSegmentIndex];
             bool isLastWordOfSegment = currentWordIndex >= currentSegment.words.Length - 1;
-            bool isLastSegment = currentSegmentIndex >= currentSubtitles.segments.Length - 1;
+            bool isLastSegment = currentSegmentIndex >= currentSubtitle.segments.Length - 1;
             if (isLastSegment && isLastWordOfSegment)
             {
                 timeForNextSubtitleStep += lingerTime;
@@ -100,7 +100,7 @@ namespace Narration
             }
             else if (isLastWordOfSegment)
             {
-                SubtitleSegment nextSegment = currentSubtitles.segments[currentSegmentIndex + 1];
+                SubtitleSegment nextSegment = currentSubtitle.segments[currentSegmentIndex + 1];
                 SubtitleWord nextWord = nextSegment.words[0];
                 timeForNextSubtitleStep = nextWord.start;
             }
@@ -113,7 +113,7 @@ namespace Narration
 
         public void StopSubtitle()
         {
-            currentSubtitles = null;
+            currentSubtitle = null;
             currentSegmentIndex = 0;
             currentWordIndex = 0;
             timeForNextSubtitleStep = 0;

@@ -889,10 +889,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d124fb07a4f53f4281d4edb4ef76cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clipToPlay: {fileID: 8300000, guid: 9001fd4c6a5c03841a8e1d3ebcc84b92, type: 3}
-  subtitleToPlayOnStart: {fileID: 4900000, guid: 8ca78ef9f8200a341ab6b6b58858c2d5, type: 3}
+  clipToPlay: {fileID: 0}
+  subtitleToPlayOnStart: {fileID: 0}
   startDelay: 3
   endSceneOnEnd: 0
+  placeHolderText: (PLACEHOLDER) I am a talking head. I am the creator of this place.
+    Are you aware of the fact that it has an actual creator? It does.
 --- !u!4 &1957703236
 Transform:
   m_ObjectHideFlags: 0

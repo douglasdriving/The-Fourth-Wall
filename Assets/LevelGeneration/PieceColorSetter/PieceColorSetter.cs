@@ -36,10 +36,12 @@ namespace LevelPiece
         public void UpdatePieceMaterialByWord(string word)
         {
             PieceColorCreator pieceColorCreator = FindObjectOfType<PieceColorCreator>();
-            if (!pieceColorCreator) return;
+            if (!pieceColorCreator)
             {
                 Debug.LogWarning("PieceColorSetter: No PieceColorCreator found in scene");
+                return;
             }
+
             Color materialColor;
             if (word == null || word == "")
             {
@@ -49,8 +51,10 @@ namespace LevelPiece
             {
                 materialColor = pieceColorCreator.GetColorForWord(word);
             }
+
             pieceMaterial = new Material(baseMaterial);
             pieceMaterial.color = materialColor;
+
             bool isFrozen = GetComponent<Positioner>().isFrozen;
             if (!isFrozen)
             {

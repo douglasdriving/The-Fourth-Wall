@@ -23,14 +23,15 @@ namespace Narration
 
         static SubtitlePlayer subtitlePlayer;
         public static PlayState playState = PlayState.STOP;
-        public static float timeCurrentNarrationHasPlayed = 0;
-        static float clipLength = 0;
+        public static float timePlayed = 0;
+        static float totalDuration = 0;
         static List<float> pausesScheduled = new();
 
         [SerializeField] AudioClip clipToPlay;
         [SerializeField] TextAsset subtitleToPlayOnStart;
         [SerializeField] float startDelay = 1.5f;
         [SerializeField] bool endSceneOnEnd = false;
+        [SerializeField] string placeHolderText = "This is the placeholder devlog text. It should be replaced with a proper description of the class.";
 
         void Awake()
         {
@@ -44,9 +45,31 @@ namespace Narration
 
         void PlayNarration()
         {
-            PlayNarration(clipToPlay, subtitleToPlayOnStart);
-            SchedulePortalSpawn(clipToPlay.length);
-            if (endSceneOnEnd) StartCoroutine(EndSceneAfterDelay(clipToPlay.length));
+
+            SubtitleJsonData subtitle;
+
+            if (subtitleToPlayOnStart == null)
+            {
+                Debug.LogWarning("No subtitle file found for narration clip. Will run placeholder script.");
+                subtitle = SubtitleJsonReader.MakeSubtitleFromText(placeHolderText);
+                totalDuration = subtitle.GetTotalDuration();
+            }
+            else
+            {
+                VoiceOverPlayer.PlayClip(clipToPlay);
+                subtitle = SubtitleJsonReader.ReadSubtitleJson(subtitleToPlayOnStart.text);
+                totalDuration = clipToPlay.length;
+            }
+
+            if (subtitlePlayer == null) Debug.LogWarning("SubtitlePlayer not found in scene, will not start subtitles");
+            else subtitlePlayer.StartSubtitles(subtitle);
+
+            playState = PlayState.PLAY;
+            timePlayed = 0;
+            SetPausesFromSubtitle(subtitle);
+            SchedulePortalSpawn(totalDuration);
+            if (endSceneOnEnd) StartCoroutine(EndSceneAfterDelay(totalDuration));
+
         }
 
         IEnumerator EndSceneAfterDelay(float delay)
@@ -62,23 +85,6 @@ namespace Narration
             ExitPortalGenerator exitPortalGenerator = FindObjectOfType<ExitPortalGenerator>();
             if (exitPortalGenerator != null) StartCoroutine(exitPortalGenerator.GenerateExitPortalAfterDelay(timeBeforeSpawn));
             else Debug.LogWarning("ExitPortalGenerator not found in scene. Will not attempt to spawn exit portal.");
-        }
-
-        public static void PlayNarration(AudioClip clip, TextAsset subtitle)
-        {
-            SubtitleJsonData subtitleJsonData = SubtitleJsonReader.ReadSubtitleJson(subtitle.text);
-            PlayNarration(clip, subtitleJsonData);
-        }
-
-        public static void PlayNarration(AudioClip clip, SubtitleJsonData subtitle)
-        {
-            VoiceOverPlayer.PlayClip(clip);
-            if (subtitlePlayer == null) Debug.LogWarning("SubtitlePlayer not found in scene, will not start subtitles");
-            else subtitlePlayer.StartSubtitles(subtitle);
-            playState = PlayState.PLAY;
-            timeCurrentNarrationHasPlayed = 0;
-            clipLength = clip.length;
-            SetPausesFromSubtitle(subtitle);
         }
 
         private static void SetPausesFromSubtitle(SubtitleJsonData subtitle)
@@ -97,15 +103,15 @@ namespace Narration
         {
             if (playState != PlayState.PLAY) return;
 
-            timeCurrentNarrationHasPlayed += Time.deltaTime;
+            timePlayed += Time.deltaTime;
 
-            if (pausesScheduled.Count > 0 && timeCurrentNarrationHasPlayed > pausesScheduled[0])
+            if (pausesScheduled.Count > 0 && timePlayed > pausesScheduled[0])
             {
                 Pause();
                 pausesScheduled.RemoveAt(0);
             }
 
-            if (timeCurrentNarrationHasPlayed > clipLength)
+            if (timePlayed > totalDuration)
             {
                 StopAndReset();
             }
@@ -129,9 +135,9 @@ namespace Narration
             VoiceOverPlayer.Stop();
             if (subtitlePlayer != null) subtitlePlayer.StopSubtitle();
             playState = PlayState.STOP;
-            timeCurrentNarrationHasPlayed = 0;
+            timePlayed = 0;
             pausesScheduled.Clear();
-            clipLength = 0;
+            totalDuration = 0;
         }
     }
 
