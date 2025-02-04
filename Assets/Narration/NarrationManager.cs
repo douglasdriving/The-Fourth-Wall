@@ -31,6 +31,7 @@ namespace Narration
         [SerializeField] TextAsset subtitleToPlayOnStart;
         [SerializeField] float startDelay = 1.5f;
         [SerializeField] bool endSceneOnEnd = false;
+        [SerializeField] string placeHolderText = "This is the placeholder devlog text. It should be replaced with a proper description of the class.";
 
         void Awake()
         {
@@ -44,9 +45,20 @@ namespace Narration
 
         void PlayNarration()
         {
-            PlayNarration(clipToPlay, subtitleToPlayOnStart);
-            SchedulePortalSpawn(clipToPlay.length);
-            if (endSceneOnEnd) StartCoroutine(EndSceneAfterDelay(clipToPlay.length));
+            if (subtitleToPlayOnStart == null)
+            {
+                Debug.LogWarning("No subtitle file found for narration clip. Will run placeholder script.");
+                //start the placeholder script
+                //schedule portal spawn
+                //schedule end scene if necessary
+                return;
+            }
+            else
+            {
+                PlayNarration(clipToPlay, subtitleToPlayOnStart.text);
+                SchedulePortalSpawn(clipToPlay.length);
+                if (endSceneOnEnd) StartCoroutine(EndSceneAfterDelay(clipToPlay.length));
+            }
         }
 
         IEnumerator EndSceneAfterDelay(float delay)
@@ -64,9 +76,9 @@ namespace Narration
             else Debug.LogWarning("ExitPortalGenerator not found in scene. Will not attempt to spawn exit portal.");
         }
 
-        public static void PlayNarration(AudioClip clip, TextAsset subtitle)
+        static void PlayNarration(AudioClip clip, string subtitleJsonString)
         {
-            SubtitleJsonData subtitleJsonData = SubtitleJsonReader.ReadSubtitleJson(subtitle.text);
+            SubtitleJsonData subtitleJsonData = SubtitleJsonReader.ReadSubtitleJson(subtitleJsonString);
             PlayNarration(clip, subtitleJsonData);
         }
 
