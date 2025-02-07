@@ -559,7 +559,7 @@ GameObject:
   - component: {fileID: -6533219467522658587}
   - component: {fileID: 203711859345706265}
   m_Layer: 0
-  m_Name: Rail
+  m_Name: AndRail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -677,9 +677,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fae21c5c13e5a044c816ef05c0dbbd79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textToCheck: {fileID: 5553833370486791174}
   baseMaterial: {fileID: 2100000, guid: 9785987b5a406634da0c31d388254185, type: 2}
   frozenMaterial: {fileID: 2100000, guid: 355f6f7850fe5f445a09f9183786217c, type: 2}
+  positioner: {fileID: 5236212528172282426}
 --- !u!1 &6670675927897403163
 GameObject:
   m_ObjectHideFlags: 0

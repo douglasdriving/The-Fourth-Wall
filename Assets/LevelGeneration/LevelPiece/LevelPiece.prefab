@@ -332,9 +332,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fae21c5c13e5a044c816ef05c0dbbd79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textToCheck: {fileID: 1925542302175057564}
   baseMaterial: {fileID: 2100000, guid: 9785987b5a406634da0c31d388254185, type: 2}
   frozenMaterial: {fileID: 2100000, guid: 355f6f7850fe5f445a09f9183786217c, type: 2}
+  positioner: {fileID: -5928518325339512087}
 --- !u!114 &-2316359044262191197
 MonoBehaviour:
   m_ObjectHideFlags: 0

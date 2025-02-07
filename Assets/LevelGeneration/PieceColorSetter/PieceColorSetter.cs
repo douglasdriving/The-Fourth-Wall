@@ -8,16 +8,34 @@ namespace LevelPiece
         MeshRenderer[] meshesToColor;
         [SerializeField] Material baseMaterial;
         [SerializeField] Material frozenMaterial;
-        Material pieceMaterial;
+        [SerializeField] Positioner positioner;
+        Material coloredMaterial;
+        PieceColorCreator pieceColorCreator;
+        SceneRules rules;
 
         void Awake()
         {
+            pieceColorCreator = FindObjectOfType<PieceColorCreator>();
             meshesToColor = GetComponentsInChildren<MeshRenderer>();
-            SceneRules rules = FindObjectOfType<SceneRules>();
-            if (rules && rules.setPieceColors && rules.freezePiecesOnSpawn)
+            rules = FindObjectOfType<SceneRules>();
+            if (rules && rules.colorPieces)
             {
-                SetFrozenMaterial();
+                UpdateToAverageColor();
+                if (rules.freezePiecesOnSpawn)
+                {
+                    SetFrozenMaterial();
+                }
+                else
+                {
+                    SetColored();
+                }
             }
+        }
+
+        private void UpdateToAverageColor()
+        {
+            coloredMaterial = new Material(baseMaterial);
+            coloredMaterial.color = pieceColorCreator.GetAverageColor();
         }
 
         private void ApplyMaterial(Material material)
@@ -33,32 +51,35 @@ namespace LevelPiece
             }
         }
 
-        public void UpdatePieceMaterialByWord(string word)
+        public void OnWordSet(string word)
         {
-            PieceColorCreator pieceColorCreator = FindObjectOfType<PieceColorCreator>();
-            if (!pieceColorCreator)
-            {
-                Debug.LogWarning("PieceColorSetter: No PieceColorCreator found in scene");
-                return;
-            }
+            UpdateColor(word);
+            if (positioner.isFrozen) SetFrozenMaterial();
+            else SetColored();
+        }
 
-            Color materialColor;
-            if (word == null || word == "")
+        void UpdateColor(string word)
+        {
+            if (rules && rules.colorPieces)
             {
-                materialColor = pieceColorCreator.GetCommonWordColor();
-            }
-            else
-            {
-                materialColor = pieceColorCreator.GetColorForWord(word);
-            }
+                if (!pieceColorCreator)
+                {
+                    Debug.LogWarning("PieceColorSetter: No PieceColorCreator found in scene");
+                    return;
+                }
 
-            pieceMaterial = new Material(baseMaterial);
-            pieceMaterial.color = materialColor;
+                Color materialColor;
+                if (word == null || word == "")
+                {
+                    materialColor = pieceColorCreator.GetAverageColor();
+                }
+                else
+                {
+                    materialColor = pieceColorCreator.GetColorForWord(word);
+                }
 
-            bool isFrozen = GetComponent<Positioner>().isFrozen;
-            if (!isFrozen)
-            {
-                SetPieceMaterial();
+                coloredMaterial = new Material(baseMaterial);
+                coloredMaterial.color = materialColor;
             }
         }
 
@@ -67,9 +88,12 @@ namespace LevelPiece
             ApplyMaterial(frozenMaterial);
         }
 
-        public void SetPieceMaterial()
+        public void SetColored()
         {
-            ApplyMaterial(pieceMaterial);
+            if (rules && rules.colorPieces)
+            {
+                ApplyMaterial(coloredMaterial);
+            }
         }
 
         public void SetBaseMaterial()

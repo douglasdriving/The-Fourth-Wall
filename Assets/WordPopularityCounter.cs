@@ -6,7 +6,7 @@ using System.Linq;
 
 public class WordPopularityCounter : MonoBehaviour
 {
-    [SerializeField] TextAsset[] scriptFiles;
+    string TRANSCRIPTS_FOLDER = Application.dataPath + "/Narration/Snippets";
     public static Dictionary<string, int> wordCount = new Dictionary<string, int>();
     private static Dictionary<string, float> normalizedWordPopularity = new Dictionary<string, float>();
     public static Tuple<string, int> mostPopularWord;
@@ -20,6 +20,13 @@ public class WordPopularityCounter : MonoBehaviour
     void RecountWordsInScripts()
     {
         ClearWordCount();
+        string[] scripts = System.IO.Directory.GetFiles(TRANSCRIPTS_FOLDER, "*.json");
+        List<TextAsset> scriptFiles = new List<TextAsset>();
+        foreach (string script in scripts)
+        {
+            TextAsset scriptFile = new TextAsset(System.IO.File.ReadAllText(script));
+            scriptFiles.Add(scriptFile);
+        }
         foreach (TextAsset scriptFile in scriptFiles)
         {
             SubtitleJsonData subtitleJsonData = SubtitleJsonReader.ReadSubtitleJson(scriptFile.text);
@@ -59,14 +66,16 @@ public class WordPopularityCounter : MonoBehaviour
     {
         // Sort the words by popularity
         var sortedWords = wordCount.OrderBy(kvp => kvp.Value).ToList();
+        int highestPopularity = sortedWords[sortedWords.Count - 1].Value;
         int totalWords = sortedWords.Count;
 
         // Create the normalized popularity dictionary
         for (int i = 0; i < totalWords; i++)
         {
             string word = sortedWords[i].Key;
-            float normalizedPosition = (float)i / (totalWords - 1);
-            normalizedWordPopularity[word] = normalizedPosition;
+            int popularity = sortedWords[i].Value;
+            float normalizedPopularity = (float)popularity / highestPopularity;
+            normalizedWordPopularity[word] = normalizedPopularity;
         }
     }
 

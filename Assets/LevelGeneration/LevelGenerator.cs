@@ -29,7 +29,7 @@ namespace LevelGeneration
       talkingHead = FindObjectOfType<TalkingHead>();
     }
 
-    public GameObject SpawnNextPiece(string word)
+    public GameObject SpawnNextPiece(string word, bool startNewSentence)
     {
       GameObject levelPiece;
       word = word.Trim();
@@ -45,8 +45,7 @@ namespace LevelGeneration
       }
       else
       {
-        string lastPieceWord = GetLastPieceWord();
-        levelPiece = walkwayGenerator.AddPieceToWalkway(lastPieceFinalWalkoffPoint, word, lastPieceWord);
+        levelPiece = walkwayGenerator.AddPieceToWalkway(lastPieceFinalWalkoffPoint, word, startNewSentence);
       }
 
       levelPiecesSpawned.Add(levelPiece);

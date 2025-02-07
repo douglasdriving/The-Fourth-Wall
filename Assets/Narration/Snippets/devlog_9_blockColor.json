@@ -1,0 +1,313 @@
+{
+    "text": " And now the color of the books. They're fading between yellow and red like the autumn leaves in the city that I live in. I just wanted to share that thing about my life with you.",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 2.4,
+            "text": " And now the color of the books.",
+            "tokens": [
+                50363,
+                843,
+                783,
+                262,
+                3124,
+                286,
+                262,
+                3835,
+                13,
+                50503
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2342108665628636,
+            "compression_ratio": 1.3484848484848484,
+            "no_speech_prob": 0.0024350902531296015,
+            "words": [
+                {
+                    "word": " And",
+                    "start": 0.0,
+                    "end": 0.32,
+                    "probability": 0.7616633772850037
+                },
+                {
+                    "word": " now",
+                    "start": 0.32,
+                    "end": 0.64,
+                    "probability": 0.9940325617790222
+                },
+                {
+                    "word": " the",
+                    "start": 0.64,
+                    "end": 1.04,
+                    "probability": 0.6386575102806091
+                },
+                {
+                    "word": " color",
+                    "start": 1.04,
+                    "end": 1.44,
+                    "probability": 0.8754737973213196
+                },
+                {
+                    "word": " of",
+                    "start": 1.44,
+                    "end": 1.84,
+                    "probability": 0.9960000514984131
+                },
+                {
+                    "word": " the",
+                    "start": 1.84,
+                    "end": 2.06,
+                    "probability": 0.9959967136383057
+                },
+                {
+                    "word": " books.",
+                    "start": 2.06,
+                    "end": 2.4,
+                    "probability": 0.6071183085441589
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 3.04,
+            "end": 7.84,
+            "text": " They're fading between yellow and red like the autumn leaves in the city that I live in.",
+            "tokens": [
+                50503,
+                1119,
+                821,
+                31465,
+                1022,
+                7872,
+                290,
+                2266,
+                588,
+                262,
+                23608,
+                5667,
+                287,
+                262,
+                1748,
+                326,
+                314,
+                2107,
+                287,
+                13,
+                50755
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2342108665628636,
+            "compression_ratio": 1.3484848484848484,
+            "no_speech_prob": 0.0024350902531296015,
+            "words": [
+                {
+                    "word": " They're",
+                    "start": 3.04,
+                    "end": 3.1,
+                    "probability": 0.9332867860794067
+                },
+                {
+                    "word": " fading",
+                    "start": 3.1,
+                    "end": 3.4,
+                    "probability": 0.9924196600914001
+                },
+                {
+                    "word": " between",
+                    "start": 3.4,
+                    "end": 3.76,
+                    "probability": 0.9931153655052185
+                },
+                {
+                    "word": " yellow",
+                    "start": 3.76,
+                    "end": 4.2,
+                    "probability": 0.9883732199668884
+                },
+                {
+                    "word": " and",
+                    "start": 4.2,
+                    "end": 4.58,
+                    "probability": 0.9944220185279846
+                },
+                {
+                    "word": " red",
+                    "start": 4.58,
+                    "end": 4.96,
+                    "probability": 0.9988075494766235
+                },
+                {
+                    "word": " like",
+                    "start": 4.96,
+                    "end": 5.24,
+                    "probability": 0.8211719393730164
+                },
+                {
+                    "word": " the",
+                    "start": 5.24,
+                    "end": 5.54,
+                    "probability": 0.9877147674560547
+                },
+                {
+                    "word": " autumn",
+                    "start": 5.54,
+                    "end": 5.8,
+                    "probability": 0.9910439252853394
+                },
+                {
+                    "word": " leaves",
+                    "start": 5.8,
+                    "end": 6.22,
+                    "probability": 0.998437225818634
+                },
+                {
+                    "word": " in",
+                    "start": 6.22,
+                    "end": 6.54,
+                    "probability": 0.9836229681968689
+                },
+                {
+                    "word": " the",
+                    "start": 6.54,
+                    "end": 6.72,
+                    "probability": 0.9899042248725891
+                },
+                {
+                    "word": " city",
+                    "start": 6.72,
+                    "end": 7.0,
+                    "probability": 0.995429515838623
+                },
+                {
+                    "word": " that",
+                    "start": 7.0,
+                    "end": 7.42,
+                    "probability": 0.9533173441886902
+                },
+                {
+                    "word": " I",
+                    "start": 7.42,
+                    "end": 7.56,
+                    "probability": 0.9467451572418213
+                },
+                {
+                    "word": " live",
+                    "start": 7.56,
+                    "end": 7.74,
+                    "probability": 0.9983768463134766
+                },
+                {
+                    "word": " in.",
+                    "start": 7.74,
+                    "end": 8.04,
+                    "probability": 0.9974967837333679
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "seek": 0,
+            "start": 9.04,
+            "end": 11.96,
+            "text": " I just wanted to share that thing about my life with you.",
+            "tokens": [
+                50803,
+                314,
+                655,
+                2227,
+                284,
+                2648,
+                326,
+                1517,
+                546,
+                616,
+                1204,
+                351,
+                345,
+                13,
+                50963
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2342108665628636,
+            "compression_ratio": 1.3484848484848484,
+            "no_speech_prob": 0.0024350902531296015,
+            "words": [
+                {
+                    "word": " I",
+                    "start": 9.04,
+                    "end": 9.1,
+                    "probability": 0.47815585136413574
+                },
+                {
+                    "word": " just",
+                    "start": 9.1,
+                    "end": 9.24,
+                    "probability": 0.985365629196167
+                },
+                {
+                    "word": " wanted",
+                    "start": 9.24,
+                    "end": 9.44,
+                    "probability": 0.9950774312019348
+                },
+                {
+                    "word": " to",
+                    "start": 9.44,
+                    "end": 9.62,
+                    "probability": 0.9994543194770813
+                },
+                {
+                    "word": " share",
+                    "start": 9.62,
+                    "end": 9.8,
+                    "probability": 0.9986879229545593
+                },
+                {
+                    "word": " that",
+                    "start": 9.8,
+                    "end": 10.12,
+                    "probability": 0.9951850771903992
+                },
+                {
+                    "word": " thing",
+                    "start": 10.12,
+                    "end": 10.8,
+                    "probability": 0.8036350011825562
+                },
+                {
+                    "word": " about",
+                    "start": 10.8,
+                    "end": 11.22,
+                    "probability": 0.9790303111076355
+                },
+                {
+                    "word": " my",
+                    "start": 11.22,
+                    "end": 11.38,
+                    "probability": 0.9993515610694885
+                },
+                {
+                    "word": " life",
+                    "start": 11.38,
+                    "end": 11.6,
+                    "probability": 0.9992761015892029
+                },
+                {
+                    "word": " with",
+                    "start": 11.6,
+                    "end": 11.78,
+                    "probability": 0.9983590245246887
+                },
+                {
+                    "word": " you.",
+                    "start": 11.78,
+                    "end": 11.96,
+                    "probability": 0.9995136260986328
+                }
+            ]
+        }
+    ],
+    "language": "en"
+}

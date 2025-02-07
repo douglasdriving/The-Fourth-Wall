@@ -1,0 +1,745 @@
+{
+    "text": " Hello? Are you here? Or are you zoning out again? Are you letting the endless feed of information flow through your brain without sticking? Can information stick? Are you a zombie? A machine? A robot? An AI? Is this game even being played by someone? Is this program even running? Is a game a game if no one plays it? I don't fucking know. I'm just making stuff, asking questions, throwing things into the world without a plan. This portal here, is it ever going to be traversed?",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 4.38,
+            "text": " Hello? Are you here? Or are you zoning out again?",
+            "tokens": [
+                50363,
+                18435,
+                30,
+                4231,
+                345,
+                994,
+                30,
+                1471,
+                389,
+                345,
+                31784,
+                503,
+                757,
+                30,
+                50579
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.14111581990416622,
+            "compression_ratio": 1.5730337078651686,
+            "no_speech_prob": 0.015221357345581055,
+            "words": [
+                {
+                    "word": " Hello?",
+                    "start": 0.0,
+                    "end": 0.5,
+                    "probability": 0.8781375885009766
+                },
+                {
+                    "word": " Are",
+                    "start": 1.3,
+                    "end": 1.58,
+                    "probability": 0.9740444421768188
+                },
+                {
+                    "word": " you",
+                    "start": 1.58,
+                    "end": 1.74,
+                    "probability": 0.9964297413825989
+                },
+                {
+                    "word": " here?",
+                    "start": 1.74,
+                    "end": 2.12,
+                    "probability": 0.9909137487411499
+                },
+                {
+                    "word": " Or",
+                    "start": 2.74,
+                    "end": 2.92,
+                    "probability": 0.9524872899055481
+                },
+                {
+                    "word": " are",
+                    "start": 2.92,
+                    "end": 3.18,
+                    "probability": 0.9839388728141785
+                },
+                {
+                    "word": " you",
+                    "start": 3.18,
+                    "end": 3.44,
+                    "probability": 0.9982407093048096
+                },
+                {
+                    "word": " zoning",
+                    "start": 3.44,
+                    "end": 3.8,
+                    "probability": 0.9779415130615234
+                },
+                {
+                    "word": " out",
+                    "start": 3.8,
+                    "end": 4.08,
+                    "probability": 0.9964403510093689
+                },
+                {
+                    "word": " again?",
+                    "start": 4.08,
+                    "end": 4.38,
+                    "probability": 0.9900702834129333
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 5.46,
+            "end": 10.76,
+            "text": " Are you letting the endless feed of information flow through your brain without sticking?",
+            "tokens": [
+                50627,
+                4231,
+                345,
+                9616,
+                262,
+                13079,
+                3745,
+                286,
+                1321,
+                5202,
+                832,
+                534,
+                3632,
+                1231,
+                17274,
+                30,
+                50899
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.14111581990416622,
+            "compression_ratio": 1.5730337078651686,
+            "no_speech_prob": 0.015221357345581055,
+            "words": [
+                {
+                    "word": " Are",
+                    "start": 5.46,
+                    "end": 5.56,
+                    "probability": 0.9847977757453918
+                },
+                {
+                    "word": " you",
+                    "start": 5.56,
+                    "end": 5.74,
+                    "probability": 0.9987074136734009
+                },
+                {
+                    "word": " letting",
+                    "start": 5.74,
+                    "end": 5.96,
+                    "probability": 0.9968376159667969
+                },
+                {
+                    "word": " the",
+                    "start": 5.96,
+                    "end": 6.2,
+                    "probability": 0.9903069734573364
+                },
+                {
+                    "word": " endless",
+                    "start": 6.2,
+                    "end": 6.62,
+                    "probability": 0.9957386255264282
+                },
+                {
+                    "word": " feed",
+                    "start": 6.62,
+                    "end": 7.06,
+                    "probability": 0.6352433562278748
+                },
+                {
+                    "word": " of",
+                    "start": 7.06,
+                    "end": 7.32,
+                    "probability": 0.9983905553817749
+                },
+                {
+                    "word": " information",
+                    "start": 7.32,
+                    "end": 7.92,
+                    "probability": 0.9968059062957764
+                },
+                {
+                    "word": " flow",
+                    "start": 7.92,
+                    "end": 8.58,
+                    "probability": 0.9853898286819458
+                },
+                {
+                    "word": " through",
+                    "start": 8.58,
+                    "end": 8.98,
+                    "probability": 0.9893105030059814
+                },
+                {
+                    "word": " your",
+                    "start": 8.98,
+                    "end": 9.34,
+                    "probability": 0.9942303895950317
+                },
+                {
+                    "word": " brain",
+                    "start": 9.34,
+                    "end": 9.68,
+                    "probability": 0.997099757194519
+                },
+                {
+                    "word": " without",
+                    "start": 9.68,
+                    "end": 10.32,
+                    "probability": 0.9507958889007568
+                },
+                {
+                    "word": " sticking?",
+                    "start": 10.32,
+                    "end": 10.76,
+                    "probability": 0.9808026552200317
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "seek": 0,
+            "start": 11.9,
+            "end": 18.4,
+            "text": " Can information stick? Are you a zombie? A machine? A robot? An AI?",
+            "tokens": [
+                50955,
+                1680,
+                1321,
+                4859,
+                30,
+                4231,
+                345,
+                257,
+                15956,
+                30,
+                317,
+                4572,
+                30,
+                317,
+                9379,
+                30,
+                1052,
+                9552,
+                30,
+                51283
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.14111581990416622,
+            "compression_ratio": 1.5730337078651686,
+            "no_speech_prob": 0.015221357345581055,
+            "words": [
+                {
+                    "word": " Can",
+                    "start": 11.9,
+                    "end": 12.22,
+                    "probability": 0.9322248697280884
+                },
+                {
+                    "word": " information",
+                    "start": 12.22,
+                    "end": 13.0,
+                    "probability": 0.9953627586364746
+                },
+                {
+                    "word": " stick?",
+                    "start": 13.0,
+                    "end": 13.9,
+                    "probability": 0.9766420125961304
+                },
+                {
+                    "word": " Are",
+                    "start": 14.74,
+                    "end": 14.94,
+                    "probability": 0.9848839044570923
+                },
+                {
+                    "word": " you",
+                    "start": 14.94,
+                    "end": 15.1,
+                    "probability": 0.9987516403198242
+                },
+                {
+                    "word": " a",
+                    "start": 15.1,
+                    "end": 15.3,
+                    "probability": 0.9979696869850159
+                },
+                {
+                    "word": " zombie?",
+                    "start": 15.3,
+                    "end": 15.56,
+                    "probability": 0.9044950008392334
+                },
+                {
+                    "word": " A",
+                    "start": 15.68,
+                    "end": 15.8,
+                    "probability": 0.9890312552452087
+                },
+                {
+                    "word": " machine?",
+                    "start": 15.8,
+                    "end": 16.32,
+                    "probability": 0.9897408485412598
+                },
+                {
+                    "word": " A",
+                    "start": 17.02,
+                    "end": 17.26,
+                    "probability": 0.9936065673828125
+                },
+                {
+                    "word": " robot?",
+                    "start": 17.26,
+                    "end": 17.58,
+                    "probability": 0.9632948040962219
+                },
+                {
+                    "word": " An",
+                    "start": 17.96,
+                    "end": 18.12,
+                    "probability": 0.9755842685699463
+                },
+                {
+                    "word": " AI?",
+                    "start": 18.12,
+                    "end": 18.4,
+                    "probability": 0.8988118171691895
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "seek": 0,
+            "start": 19.38,
+            "end": 24.04,
+            "text": " Is this game even being played by someone? Is this program even running?",
+            "tokens": [
+                51327,
+                1148,
+                428,
+                983,
+                772,
+                852,
+                2826,
+                416,
+                2130,
+                30,
+                1148,
+                428,
+                1430,
+                772,
+                2491,
+                30,
+                51567
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.14111581990416622,
+            "compression_ratio": 1.5730337078651686,
+            "no_speech_prob": 0.015221357345581055,
+            "words": [
+                {
+                    "word": " Is",
+                    "start": 19.38,
+                    "end": 19.62,
+                    "probability": 0.9935817718505859
+                },
+                {
+                    "word": " this",
+                    "start": 19.62,
+                    "end": 19.86,
+                    "probability": 0.9903559684753418
+                },
+                {
+                    "word": " game",
+                    "start": 19.86,
+                    "end": 20.06,
+                    "probability": 0.9944830536842346
+                },
+                {
+                    "word": " even",
+                    "start": 20.06,
+                    "end": 20.32,
+                    "probability": 0.9809141159057617
+                },
+                {
+                    "word": " being",
+                    "start": 20.32,
+                    "end": 20.58,
+                    "probability": 0.9952715039253235
+                },
+                {
+                    "word": " played",
+                    "start": 20.58,
+                    "end": 20.9,
+                    "probability": 0.996269702911377
+                },
+                {
+                    "word": " by",
+                    "start": 20.9,
+                    "end": 21.14,
+                    "probability": 0.9969221949577332
+                },
+                {
+                    "word": " someone?",
+                    "start": 21.14,
+                    "end": 21.44,
+                    "probability": 0.9967741370201111
+                },
+                {
+                    "word": " Is",
+                    "start": 21.56,
+                    "end": 21.74,
+                    "probability": 0.9942120909690857
+                },
+                {
+                    "word": " this",
+                    "start": 21.74,
+                    "end": 21.98,
+                    "probability": 0.9848344326019287
+                },
+                {
+                    "word": " program",
+                    "start": 21.98,
+                    "end": 22.44,
+                    "probability": 0.9846493601799011
+                },
+                {
+                    "word": " even",
+                    "start": 22.44,
+                    "end": 23.12,
+                    "probability": 0.9743945002555847
+                },
+                {
+                    "word": " running?",
+                    "start": 23.12,
+                    "end": 24.04,
+                    "probability": 0.9422868490219116
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "seek": 2404,
+            "start": 25.019999999999996,
+            "end": 36.54,
+            "text": " Is a game a game if no one plays it? I don't fucking know. I'm just making stuff, asking questions, throwing things into the world without a plan.",
+            "tokens": [
+                50363,
+                1148,
+                257,
+                983,
+                257,
+                983,
+                611,
+                645,
+                530,
+                5341,
+                340,
+                30,
+                314,
+                836,
+                470,
+                9372,
+                760,
+                13,
+                314,
+                1101,
+                655,
+                1642,
+                3404,
+                11,
+                4737,
+                2683,
+                11,
+                9644,
+                1243,
+                656,
+                262,
+                995,
+                1231,
+                257,
+                1410,
+                13,
+                50991
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.28750689524524614,
+            "compression_ratio": 1.356164383561644,
+            "no_speech_prob": 0.5586349964141846,
+            "words": [
+                {
+                    "word": " Is",
+                    "start": 25.019999999999996,
+                    "end": 25.58,
+                    "probability": 0.5503852963447571
+                },
+                {
+                    "word": " a",
+                    "start": 25.58,
+                    "end": 25.86,
+                    "probability": 0.9776222705841064
+                },
+                {
+                    "word": " game",
+                    "start": 25.86,
+                    "end": 26.08,
+                    "probability": 0.9857637286186218
+                },
+                {
+                    "word": " a",
+                    "start": 26.08,
+                    "end": 26.32,
+                    "probability": 0.8990582227706909
+                },
+                {
+                    "word": " game",
+                    "start": 26.32,
+                    "end": 26.6,
+                    "probability": 0.9948786497116089
+                },
+                {
+                    "word": " if",
+                    "start": 26.6,
+                    "end": 26.86,
+                    "probability": 0.9350130558013916
+                },
+                {
+                    "word": " no",
+                    "start": 26.86,
+                    "end": 27.04,
+                    "probability": 0.994107723236084
+                },
+                {
+                    "word": " one",
+                    "start": 27.04,
+                    "end": 27.2,
+                    "probability": 0.924802839756012
+                },
+                {
+                    "word": " plays",
+                    "start": 27.2,
+                    "end": 27.4,
+                    "probability": 0.9893121123313904
+                },
+                {
+                    "word": " it?",
+                    "start": 27.4,
+                    "end": 27.76,
+                    "probability": 0.9914681911468506
+                },
+                {
+                    "word": " I",
+                    "start": 28.4,
+                    "end": 28.54,
+                    "probability": 0.9754618406295776
+                },
+                {
+                    "word": " don't",
+                    "start": 28.54,
+                    "end": 29.42,
+                    "probability": 0.9836153090000153
+                },
+                {
+                    "word": " fucking",
+                    "start": 29.42,
+                    "end": 29.76,
+                    "probability": 0.7588365077972412
+                },
+                {
+                    "word": " know.",
+                    "start": 29.76,
+                    "end": 30.06,
+                    "probability": 0.9979975819587708
+                },
+                {
+                    "word": " I'm",
+                    "start": 30.24,
+                    "end": 30.36,
+                    "probability": 0.9810695946216583
+                },
+                {
+                    "word": " just",
+                    "start": 30.36,
+                    "end": 30.52,
+                    "probability": 0.9968361854553223
+                },
+                {
+                    "word": " making",
+                    "start": 30.52,
+                    "end": 30.88,
+                    "probability": 0.9966018199920654
+                },
+                {
+                    "word": " stuff,",
+                    "start": 30.88,
+                    "end": 31.22,
+                    "probability": 0.9974472522735596
+                },
+                {
+                    "word": " asking",
+                    "start": 31.4,
+                    "end": 31.74,
+                    "probability": 0.9955593347549438
+                },
+                {
+                    "word": " questions,",
+                    "start": 31.74,
+                    "end": 32.7,
+                    "probability": 0.9928995370864868
+                },
+                {
+                    "word": " throwing",
+                    "start": 33.0,
+                    "end": 33.26,
+                    "probability": 0.9866083860397339
+                },
+                {
+                    "word": " things",
+                    "start": 33.26,
+                    "end": 33.62,
+                    "probability": 0.6617375016212463
+                },
+                {
+                    "word": " into",
+                    "start": 33.62,
+                    "end": 34.88,
+                    "probability": 0.9534571766853333
+                },
+                {
+                    "word": " the",
+                    "start": 34.88,
+                    "end": 35.08,
+                    "probability": 0.9975343942642212
+                },
+                {
+                    "word": " world",
+                    "start": 35.08,
+                    "end": 35.28,
+                    "probability": 0.9985446929931641
+                },
+                {
+                    "word": " without",
+                    "start": 35.28,
+                    "end": 35.6,
+                    "probability": 0.9830915331840515
+                },
+                {
+                    "word": " a",
+                    "start": 35.6,
+                    "end": 36.22,
+                    "probability": 0.996912956237793
+                },
+                {
+                    "word": " plan.",
+                    "start": 36.22,
+                    "end": 36.54,
+                    "probability": 0.9985112547874451
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "seek": 2404,
+            "start": 37.48,
+            "end": 40.88,
+            "text": " This portal here, is it ever going to be traversed?",
+            "tokens": [
+                50991,
+                770,
+                17898,
+                994,
+                11,
+                318,
+                340,
+                1683,
+                1016,
+                284,
+                307,
+                33038,
+                276,
+                30,
+                51203
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.28750689524524614,
+            "compression_ratio": 1.356164383561644,
+            "no_speech_prob": 0.5586349964141846,
+            "words": [
+                {
+                    "word": " This",
+                    "start": 37.48,
+                    "end": 37.7,
+                    "probability": 0.5270489454269409
+                },
+                {
+                    "word": " portal",
+                    "start": 37.7,
+                    "end": 38.46,
+                    "probability": 0.9869785308837891
+                },
+                {
+                    "word": " here,",
+                    "start": 38.46,
+                    "end": 38.72,
+                    "probability": 0.9764865040779114
+                },
+                {
+                    "word": " is",
+                    "start": 38.84,
+                    "end": 38.84,
+                    "probability": 0.9828055500984192
+                },
+                {
+                    "word": " it",
+                    "start": 38.84,
+                    "end": 39.02,
+                    "probability": 0.9865647554397583
+                },
+                {
+                    "word": " ever",
+                    "start": 39.02,
+                    "end": 39.3,
+                    "probability": 0.9851555228233337
+                },
+                {
+                    "word": " going",
+                    "start": 39.3,
+                    "end": 39.76,
+                    "probability": 0.9959153532981873
+                },
+                {
+                    "word": " to",
+                    "start": 39.76,
+                    "end": 40.16,
+                    "probability": 0.9983475208282471
+                },
+                {
+                    "word": " be",
+                    "start": 40.16,
+                    "end": 40.32,
+                    "probability": 0.9990010857582092
+                },
+                {
+                    "word": " traversed?",
+                    "start": 40.32,
+                    "end": 40.88,
+                    "probability": 0.9957595467567444
+                }
+            ]
+        }
+    ],
+    "language": "en"
+}

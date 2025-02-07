@@ -84,8 +84,30 @@ namespace Narration
 
         private void ShowWordInWorld(string word)
         {
-            if (levelGenerator) levelGenerator.SpawnNextPiece(word);
+            SubtitleWord previousWord = GetPreviousWord();
+            bool startsNewSentence = previousWord != null && EndsSentence(previousWord);
+            if (levelGenerator) levelGenerator.SpawnNextPiece(word, startsNewSentence);
             else wordText.text = word;
+        }
+
+        private SubtitleWord GetPreviousWord()
+        {
+            int segmentIndex = currentSegmentIndex;
+            int wordIndex = currentWordIndex - 1;
+            if (wordIndex < 0)
+            {
+                segmentIndex--;
+                if (segmentIndex < 0) return null;
+                wordIndex = currentSubtitle.segments[segmentIndex].words.Length - 1;
+            }
+            SubtitleSegment segment = currentSubtitle.segments[segmentIndex];
+            SubtitleWord word = segment.words[wordIndex];
+            return word;
+        }
+
+        private bool EndsSentence(SubtitleWord word)
+        {
+            return word.word.EndsWith(".") || word.word.EndsWith("!") || word.word.EndsWith("?");
         }
 
         private void UpdateNextWordTime()

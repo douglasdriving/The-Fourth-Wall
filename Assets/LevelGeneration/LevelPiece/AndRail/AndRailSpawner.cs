@@ -21,7 +21,8 @@ namespace LevelGeneration
             LevelPiece.AndRailPositioner positioner = rail.GetComponent<LevelPiece.AndRailPositioner>();
             positioner.SetupRailPositioning(start, end);
             //set color
-            rail.GetComponentInChildren<LevelPiece.ColorSetter>().UpdatePieceMaterialByWord("and");
+            LevelPiece.ColorSetter colorSetter = rail.GetComponentInChildren<LevelPiece.ColorSetter>();
+            colorSetter.OnWordSet("and");
             return rail;
         }
 

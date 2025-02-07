@@ -12,7 +12,7 @@ namespace LevelPiece
         public void SetWord(string word)
         {
             textToSet.text = word;
-            pieceColorSetter.UpdatePieceMaterialByWord(word);
+            pieceColorSetter.OnWordSet(word);
         }
     }
 }

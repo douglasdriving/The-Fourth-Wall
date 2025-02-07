@@ -1,0 +1,839 @@
+{
+    "text": " Believe it or not, but there is a real person behind this voice behind this game behind all of this Do you feel like you are with that person right now? Like if this place was AI generated would it matter to you because it Certainly matters to me the creator as I am Spending my finite life building out this world and making it come alive trying to make it come alive I exist I exist I exist I am a person and I am deciding to spawn this next portal",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 4.68,
+            "text": " Believe it or not, but there is a real person behind this voice",
+            "tokens": [
+                50363,
+                32018,
+                340,
+                393,
+                407,
+                11,
+                475,
+                612,
+                318,
+                257,
+                1103,
+                1048,
+                2157,
+                428,
+                3809,
+                50585
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.21648168563842773,
+            "compression_ratio": 1.665158371040724,
+            "no_speech_prob": 0.007758215069770813,
+            "words": [
+                {
+                    "word": " Believe",
+                    "start": 0.0,
+                    "end": 0.46,
+                    "probability": 0.8911145329475403
+                },
+                {
+                    "word": " it",
+                    "start": 0.46,
+                    "end": 0.76,
+                    "probability": 0.9922228455543518
+                },
+                {
+                    "word": " or",
+                    "start": 0.76,
+                    "end": 0.96,
+                    "probability": 0.9885140061378479
+                },
+                {
+                    "word": " not,",
+                    "start": 0.96,
+                    "end": 1.24,
+                    "probability": 0.9989556074142456
+                },
+                {
+                    "word": " but",
+                    "start": 1.34,
+                    "end": 1.5,
+                    "probability": 0.9858938455581665
+                },
+                {
+                    "word": " there",
+                    "start": 1.5,
+                    "end": 1.72,
+                    "probability": 0.9955689311027527
+                },
+                {
+                    "word": " is",
+                    "start": 1.72,
+                    "end": 2.16,
+                    "probability": 0.9572446942329407
+                },
+                {
+                    "word": " a",
+                    "start": 2.16,
+                    "end": 2.7,
+                    "probability": 0.9977368116378784
+                },
+                {
+                    "word": " real",
+                    "start": 2.7,
+                    "end": 2.98,
+                    "probability": 0.9978246688842773
+                },
+                {
+                    "word": " person",
+                    "start": 2.98,
+                    "end": 3.48,
+                    "probability": 0.9993379712104797
+                },
+                {
+                    "word": " behind",
+                    "start": 3.48,
+                    "end": 3.98,
+                    "probability": 0.994766116142273
+                },
+                {
+                    "word": " this",
+                    "start": 3.98,
+                    "end": 4.26,
+                    "probability": 0.9850324392318726
+                },
+                {
+                    "word": " voice",
+                    "start": 4.26,
+                    "end": 4.68,
+                    "probability": 0.9932651519775391
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 4.68,
+            "end": 8.86,
+            "text": " behind this game behind all of this",
+            "tokens": [
+                50621,
+                2157,
+                428,
+                983,
+                2157,
+                477,
+                286,
+                428,
+                50788
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.21648168563842773,
+            "compression_ratio": 1.665158371040724,
+            "no_speech_prob": 0.007758215069770813,
+            "words": [
+                {
+                    "word": " behind",
+                    "start": 4.68,
+                    "end": 5.66,
+                    "probability": 0.24288403987884521
+                },
+                {
+                    "word": " this",
+                    "start": 5.66,
+                    "end": 6.28,
+                    "probability": 0.8557496070861816
+                },
+                {
+                    "word": " game",
+                    "start": 6.28,
+                    "end": 6.84,
+                    "probability": 0.9932923316955566
+                },
+                {
+                    "word": " behind",
+                    "start": 6.84,
+                    "end": 7.34,
+                    "probability": 0.7692013382911682
+                },
+                {
+                    "word": " all",
+                    "start": 7.34,
+                    "end": 8.26,
+                    "probability": 0.9698400497436523
+                },
+                {
+                    "word": " of",
+                    "start": 8.26,
+                    "end": 8.4,
+                    "probability": 0.9992604851722717
+                },
+                {
+                    "word": " this",
+                    "start": 8.4,
+                    "end": 8.86,
+                    "probability": 0.9936104416847229
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "seek": 0,
+            "start": 8.86,
+            "end": 12.280000000000001,
+            "text": " Do you feel like you are with that person right now?",
+            "tokens": [
+                50828,
+                2141,
+                345,
+                1254,
+                588,
+                345,
+                389,
+                351,
+                326,
+                1048,
+                826,
+                783,
+                30,
+                50977
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.21648168563842773,
+            "compression_ratio": 1.665158371040724,
+            "no_speech_prob": 0.007758215069770813,
+            "words": [
+                {
+                    "word": " Do",
+                    "start": 8.86,
+                    "end": 9.78,
+                    "probability": 0.938109278678894
+                },
+                {
+                    "word": " you",
+                    "start": 9.78,
+                    "end": 9.96,
+                    "probability": 0.9997578263282776
+                },
+                {
+                    "word": " feel",
+                    "start": 9.96,
+                    "end": 10.2,
+                    "probability": 0.9994615912437439
+                },
+                {
+                    "word": " like",
+                    "start": 10.2,
+                    "end": 10.38,
+                    "probability": 0.9993023872375488
+                },
+                {
+                    "word": " you",
+                    "start": 10.38,
+                    "end": 10.56,
+                    "probability": 0.9987519979476929
+                },
+                {
+                    "word": " are",
+                    "start": 10.56,
+                    "end": 10.98,
+                    "probability": 0.9983874559402466
+                },
+                {
+                    "word": " with",
+                    "start": 10.98,
+                    "end": 11.48,
+                    "probability": 0.9956256151199341
+                },
+                {
+                    "word": " that",
+                    "start": 11.48,
+                    "end": 11.72,
+                    "probability": 0.9930791258811951
+                },
+                {
+                    "word": " person",
+                    "start": 11.72,
+                    "end": 12.02,
+                    "probability": 0.9992864727973938
+                },
+                {
+                    "word": " right",
+                    "start": 12.02,
+                    "end": 12.26,
+                    "probability": 0.9982056617736816
+                },
+                {
+                    "word": " now?",
+                    "start": 12.26,
+                    "end": 12.600000000000001,
+                    "probability": 0.9980663657188416
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "seek": 0,
+            "start": 13.86,
+            "end": 18.56,
+            "text": " Like if this place was AI generated would it matter to you because it",
+            "tokens": [
+                51047,
+                4525,
+                611,
+                428,
+                1295,
+                373,
+                9552,
+                7560,
+                561,
+                340,
+                2300,
+                284,
+                345,
+                780,
+                340,
+                51291
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.21648168563842773,
+            "compression_ratio": 1.665158371040724,
+            "no_speech_prob": 0.007758215069770813,
+            "words": [
+                {
+                    "word": " Like",
+                    "start": 13.86,
+                    "end": 14.22,
+                    "probability": 0.5380131006240845
+                },
+                {
+                    "word": " if",
+                    "start": 14.22,
+                    "end": 14.44,
+                    "probability": 0.9881343245506287
+                },
+                {
+                    "word": " this",
+                    "start": 14.44,
+                    "end": 14.64,
+                    "probability": 0.9994934797286987
+                },
+                {
+                    "word": " place",
+                    "start": 14.64,
+                    "end": 14.88,
+                    "probability": 0.999090313911438
+                },
+                {
+                    "word": " was",
+                    "start": 14.88,
+                    "end": 15.12,
+                    "probability": 0.9908480644226074
+                },
+                {
+                    "word": " AI",
+                    "start": 15.12,
+                    "end": 15.46,
+                    "probability": 0.9027917981147766
+                },
+                {
+                    "word": " generated",
+                    "start": 15.46,
+                    "end": 16.16,
+                    "probability": 0.8127602934837341
+                },
+                {
+                    "word": " would",
+                    "start": 16.16,
+                    "end": 16.48,
+                    "probability": 0.8837724328041077
+                },
+                {
+                    "word": " it",
+                    "start": 16.48,
+                    "end": 16.7,
+                    "probability": 0.9987949132919312
+                },
+                {
+                    "word": " matter",
+                    "start": 16.7,
+                    "end": 17.08,
+                    "probability": 0.9991241097450256
+                },
+                {
+                    "word": " to",
+                    "start": 17.08,
+                    "end": 17.36,
+                    "probability": 0.9989078044891357
+                },
+                {
+                    "word": " you",
+                    "start": 17.36,
+                    "end": 17.84,
+                    "probability": 0.9995504021644592
+                },
+                {
+                    "word": " because",
+                    "start": 17.84,
+                    "end": 18.28,
+                    "probability": 0.69642573595047
+                },
+                {
+                    "word": " it",
+                    "start": 18.28,
+                    "end": 18.620000000000005,
+                    "probability": 0.8888872861862183
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "seek": 0,
+            "start": 19.24,
+            "end": 22.92,
+            "text": " Certainly matters to me the creator as I am",
+            "tokens": [
+                51333,
+                23631,
+                6067,
+                284,
+                502,
+                262,
+                13172,
+                355,
+                314,
+                716,
+                51484
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.21648168563842773,
+            "compression_ratio": 1.665158371040724,
+            "no_speech_prob": 0.007758215069770813,
+            "words": [
+                {
+                    "word": " Certainly",
+                    "start": 19.24,
+                    "end": 19.9,
+                    "probability": 0.2008712738752365
+                },
+                {
+                    "word": " matters",
+                    "start": 19.9,
+                    "end": 20.36,
+                    "probability": 0.99578458070755
+                },
+                {
+                    "word": " to",
+                    "start": 20.36,
+                    "end": 20.74,
+                    "probability": 0.9982231259346008
+                },
+                {
+                    "word": " me",
+                    "start": 20.74,
+                    "end": 20.98,
+                    "probability": 0.9995304346084595
+                },
+                {
+                    "word": " the",
+                    "start": 20.98,
+                    "end": 21.34,
+                    "probability": 0.9614993929862976
+                },
+                {
+                    "word": " creator",
+                    "start": 21.34,
+                    "end": 21.78,
+                    "probability": 0.6929104924201965
+                },
+                {
+                    "word": " as",
+                    "start": 21.78,
+                    "end": 22.02,
+                    "probability": 0.9908556938171387
+                },
+                {
+                    "word": " I",
+                    "start": 22.02,
+                    "end": 22.32,
+                    "probability": 0.9968709349632263
+                },
+                {
+                    "word": " am",
+                    "start": 22.32,
+                    "end": 22.92,
+                    "probability": 0.9986720085144043
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "seek": 0,
+            "start": 22.92,
+            "end": 29.7,
+            "text": " Spending my finite life building out this world and making it come alive trying to make it come alive",
+            "tokens": [
+                51514,
+                43902,
+                616,
+                27454,
+                1204,
+                2615,
+                503,
+                428,
+                995,
+                290,
+                1642,
+                340,
+                1282,
+                6776,
+                2111,
+                284,
+                787,
+                340,
+                1282,
+                6776,
+                51840
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.21648168563842773,
+            "compression_ratio": 1.665158371040724,
+            "no_speech_prob": 0.007758215069770813,
+            "words": [
+                {
+                    "word": " Spending",
+                    "start": 22.92,
+                    "end": 23.44,
+                    "probability": 0.6194149255752563
+                },
+                {
+                    "word": " my",
+                    "start": 23.44,
+                    "end": 23.68,
+                    "probability": 0.9986240863800049
+                },
+                {
+                    "word": " finite",
+                    "start": 23.68,
+                    "end": 24.12,
+                    "probability": 0.9913334250450134
+                },
+                {
+                    "word": " life",
+                    "start": 24.12,
+                    "end": 24.48,
+                    "probability": 0.9990127086639404
+                },
+                {
+                    "word": " building",
+                    "start": 24.48,
+                    "end": 24.92,
+                    "probability": 0.994616687297821
+                },
+                {
+                    "word": " out",
+                    "start": 24.92,
+                    "end": 25.2,
+                    "probability": 0.9980342984199524
+                },
+                {
+                    "word": " this",
+                    "start": 25.2,
+                    "end": 25.42,
+                    "probability": 0.9955872297286987
+                },
+                {
+                    "word": " world",
+                    "start": 25.42,
+                    "end": 25.74,
+                    "probability": 0.9990935325622559
+                },
+                {
+                    "word": " and",
+                    "start": 25.74,
+                    "end": 26.02,
+                    "probability": 0.9949563145637512
+                },
+                {
+                    "word": " making",
+                    "start": 26.02,
+                    "end": 26.8,
+                    "probability": 0.7044073343276978
+                },
+                {
+                    "word": " it",
+                    "start": 26.8,
+                    "end": 27.0,
+                    "probability": 0.9911501407623291
+                },
+                {
+                    "word": " come",
+                    "start": 27.0,
+                    "end": 27.2,
+                    "probability": 0.9520348906517029
+                },
+                {
+                    "word": " alive",
+                    "start": 27.2,
+                    "end": 27.44,
+                    "probability": 0.9939765930175781
+                },
+                {
+                    "word": " trying",
+                    "start": 27.44,
+                    "end": 27.96,
+                    "probability": 0.9608829617500305
+                },
+                {
+                    "word": " to",
+                    "start": 27.96,
+                    "end": 28.8,
+                    "probability": 0.9790742993354797
+                },
+                {
+                    "word": " make",
+                    "start": 28.8,
+                    "end": 28.98,
+                    "probability": 0.9959679841995239
+                },
+                {
+                    "word": " it",
+                    "start": 28.98,
+                    "end": 29.12,
+                    "probability": 0.9992939233779907
+                },
+                {
+                    "word": " come",
+                    "start": 29.12,
+                    "end": 29.32,
+                    "probability": 0.9969809651374817
+                },
+                {
+                    "word": " alive",
+                    "start": 29.32,
+                    "end": 29.7,
+                    "probability": 0.9989470839500427
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "seek": 3000,
+            "start": 31.0,
+            "end": 31.68,
+            "text": " I exist",
+            "tokens": [
+                50413,
+                314,
+                2152,
+                50463
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.4997645378112793,
+            "compression_ratio": 1.208955223880597,
+            "no_speech_prob": 0.004816778935492039,
+            "words": [
+                {
+                    "word": " I",
+                    "start": 30.840000000000003,
+                    "end": 31.26,
+                    "probability": 0.9202888011932373
+                },
+                {
+                    "word": " exist",
+                    "start": 31.26,
+                    "end": 31.68,
+                    "probability": 0.9841439723968506
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "seek": 3000,
+            "start": 32.5,
+            "end": 33.32,
+            "text": " I exist",
+            "tokens": [
+                50488,
+                314,
+                2152,
+                50538
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.4997645378112793,
+            "compression_ratio": 1.208955223880597,
+            "no_speech_prob": 0.004816778935492039,
+            "words": [
+                {
+                    "word": " I",
+                    "start": 32.36,
+                    "end": 32.78,
+                    "probability": 0.2592543661594391
+                },
+                {
+                    "word": " exist",
+                    "start": 32.78,
+                    "end": 33.32,
+                    "probability": 0.9862420558929443
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "seek": 3000,
+            "start": 33.32,
+            "end": 34.0,
+            "text": " I",
+            "tokens": [
+                50538,
+                314,
+                50588
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.4997645378112793,
+            "compression_ratio": 1.208955223880597,
+            "no_speech_prob": 0.004816778935492039,
+            "words": [
+                {
+                    "word": " I",
+                    "start": 33.32,
+                    "end": 34.0,
+                    "probability": 0.8764405846595764
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "seek": 3000,
+            "start": 35.0,
+            "end": 35.52,
+            "text": " exist",
+            "tokens": [
+                50613,
+                2152,
+                50663
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.4997645378112793,
+            "compression_ratio": 1.208955223880597,
+            "no_speech_prob": 0.004816778935492039,
+            "words": [
+                {
+                    "word": " exist",
+                    "start": 35.0,
+                    "end": 35.52,
+                    "probability": 0.7835381031036377
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "seek": 3000,
+            "start": 35.52,
+            "end": 40.64,
+            "text": " I am a person and I am deciding to spawn this next portal",
+            "tokens": [
+                50663,
+                314,
+                716,
+                257,
+                1048,
+                290,
+                314,
+                716,
+                14615,
+                284,
+                10922,
+                428,
+                1306,
+                17898,
+                50913
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.4997645378112793,
+            "compression_ratio": 1.208955223880597,
+            "no_speech_prob": 0.004816778935492039,
+            "words": [
+                {
+                    "word": " I",
+                    "start": 35.52,
+                    "end": 36.32,
+                    "probability": 0.8937377333641052
+                },
+                {
+                    "word": " am",
+                    "start": 36.32,
+                    "end": 36.46,
+                    "probability": 0.9319168925285339
+                },
+                {
+                    "word": " a",
+                    "start": 36.46,
+                    "end": 36.7,
+                    "probability": 0.9828689098358154
+                },
+                {
+                    "word": " person",
+                    "start": 36.7,
+                    "end": 37.0,
+                    "probability": 0.9976734519004822
+                },
+                {
+                    "word": " and",
+                    "start": 37.0,
+                    "end": 37.78,
+                    "probability": 0.7179943919181824
+                },
+                {
+                    "word": " I",
+                    "start": 37.78,
+                    "end": 38.02,
+                    "probability": 0.9557790756225586
+                },
+                {
+                    "word": " am",
+                    "start": 38.02,
+                    "end": 38.14,
+                    "probability": 0.970538854598999
+                },
+                {
+                    "word": " deciding",
+                    "start": 38.14,
+                    "end": 38.52,
+                    "probability": 0.9945580959320068
+                },
+                {
+                    "word": " to",
+                    "start": 38.52,
+                    "end": 38.76,
+                    "probability": 0.9957270622253418
+                },
+                {
+                    "word": " spawn",
+                    "start": 38.76,
+                    "end": 39.16,
+                    "probability": 0.9972869157791138
+                },
+                {
+                    "word": " this",
+                    "start": 39.16,
+                    "end": 39.74,
+                    "probability": 0.9712607264518738
+                },
+                {
+                    "word": " next",
+                    "start": 39.74,
+                    "end": 40.12,
+                    "probability": 0.9922864437103271
+                },
+                {
+                    "word": " portal",
+                    "start": 40.12,
+                    "end": 40.64,
+                    "probability": 0.9771894812583923
+                }
+            ]
+        }
+    ],
+    "language": "en"
+}

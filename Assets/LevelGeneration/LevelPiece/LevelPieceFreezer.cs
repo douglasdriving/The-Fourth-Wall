@@ -34,7 +34,7 @@ namespace LevelPiece
         {
             if (!levelPiecePositioner.isFrozen) return;
             levelPiecePositioner.isFrozen = false;
-            GetComponentInParent<ColorSetter>().SetPieceMaterial();
+            GetComponentInParent<ColorSetter>().SetColored();
             if (deleteGameObjectWhenUnfrozen)
             {
                 Destroy(gameObject);

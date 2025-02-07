@@ -1,0 +1,675 @@
+{
+    "text": " In daily life, are we spending too much time talking and not enough time listening? I mean like, really listening. Paying attention to each and every word that someone says. Taking it all in and letting it sit with us. Are you doing that now, with my words? How can I know that you care? How can you know that what I have to say matters to you? Well, you can't. Unless you listen.",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 5.5,
+            "text": " In daily life, are we spending too much time talking and not enough time listening?",
+            "tokens": [
+                50363,
+                554,
+                4445,
+                1204,
+                11,
+                389,
+                356,
+                4581,
+                1165,
+                881,
+                640,
+                3375,
+                290,
+                407,
+                1576,
+                640,
+                8680,
+                30,
+                50675
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.15686185736405223,
+            "compression_ratio": 1.6538461538461537,
+            "no_speech_prob": 0.014208389446139336,
+            "words": [
+                {
+                    "word": " In",
+                    "start": 0.0,
+                    "end": 0.38,
+                    "probability": 0.8738738894462585
+                },
+                {
+                    "word": " daily",
+                    "start": 0.38,
+                    "end": 0.7,
+                    "probability": 0.9959977865219116
+                },
+                {
+                    "word": " life,",
+                    "start": 0.7,
+                    "end": 1.1,
+                    "probability": 0.9985761642456055
+                },
+                {
+                    "word": " are",
+                    "start": 1.24,
+                    "end": 1.58,
+                    "probability": 0.9936628341674805
+                },
+                {
+                    "word": " we",
+                    "start": 1.58,
+                    "end": 1.78,
+                    "probability": 0.9987847208976746
+                },
+                {
+                    "word": " spending",
+                    "start": 1.78,
+                    "end": 2.14,
+                    "probability": 0.9958631992340088
+                },
+                {
+                    "word": " too",
+                    "start": 2.14,
+                    "end": 2.42,
+                    "probability": 0.9929805397987366
+                },
+                {
+                    "word": " much",
+                    "start": 2.42,
+                    "end": 2.62,
+                    "probability": 0.9997420907020569
+                },
+                {
+                    "word": " time",
+                    "start": 2.62,
+                    "end": 2.96,
+                    "probability": 0.99359130859375
+                },
+                {
+                    "word": " talking",
+                    "start": 2.96,
+                    "end": 3.42,
+                    "probability": 0.994737446308136
+                },
+                {
+                    "word": " and",
+                    "start": 3.42,
+                    "end": 3.84,
+                    "probability": 0.8396360278129578
+                },
+                {
+                    "word": " not",
+                    "start": 3.84,
+                    "end": 4.12,
+                    "probability": 0.9979314804077148
+                },
+                {
+                    "word": " enough",
+                    "start": 4.12,
+                    "end": 4.56,
+                    "probability": 0.998353123664856
+                },
+                {
+                    "word": " time",
+                    "start": 4.56,
+                    "end": 5.02,
+                    "probability": 0.991834282875061
+                },
+                {
+                    "word": " listening?",
+                    "start": 5.02,
+                    "end": 5.5,
+                    "probability": 0.9945856928825378
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 6.48,
+            "end": 8.7,
+            "text": " I mean like, really listening.",
+            "tokens": [
+                50675,
+                314,
+                1612,
+                588,
+                11,
+                1107,
+                8680,
+                13,
+                50831
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.15686185736405223,
+            "compression_ratio": 1.6538461538461537,
+            "no_speech_prob": 0.014208389446139336,
+            "words": [
+                {
+                    "word": " I",
+                    "start": 6.48,
+                    "end": 6.54,
+                    "probability": 0.9871249794960022
+                },
+                {
+                    "word": " mean",
+                    "start": 6.54,
+                    "end": 6.66,
+                    "probability": 0.9993758797645569
+                },
+                {
+                    "word": " like,",
+                    "start": 6.66,
+                    "end": 7.2,
+                    "probability": 0.4950717091560364
+                },
+                {
+                    "word": " really",
+                    "start": 7.64,
+                    "end": 7.9,
+                    "probability": 0.7978116273880005
+                },
+                {
+                    "word": " listening.",
+                    "start": 7.9,
+                    "end": 8.7,
+                    "probability": 0.9903233051300049
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "seek": 0,
+            "start": 9.58,
+            "end": 13.3,
+            "text": " Paying attention to each and every word that someone says.",
+            "tokens": [
+                50831,
+                7119,
+                278,
+                3241,
+                284,
+                1123,
+                290,
+                790,
+                1573,
+                326,
+                2130,
+                1139,
+                13,
+                51055
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.15686185736405223,
+            "compression_ratio": 1.6538461538461537,
+            "no_speech_prob": 0.014208389446139336,
+            "words": [
+                {
+                    "word": " Paying",
+                    "start": 9.58,
+                    "end": 9.82,
+                    "probability": 0.9962206184864044
+                },
+                {
+                    "word": " attention",
+                    "start": 9.82,
+                    "end": 10.14,
+                    "probability": 0.9987302422523499
+                },
+                {
+                    "word": " to",
+                    "start": 10.14,
+                    "end": 10.46,
+                    "probability": 0.9984404444694519
+                },
+                {
+                    "word": " each",
+                    "start": 10.46,
+                    "end": 10.76,
+                    "probability": 0.9983769655227661
+                },
+                {
+                    "word": " and",
+                    "start": 10.76,
+                    "end": 11.02,
+                    "probability": 0.995344340801239
+                },
+                {
+                    "word": " every",
+                    "start": 11.02,
+                    "end": 11.52,
+                    "probability": 0.999077558517456
+                },
+                {
+                    "word": " word",
+                    "start": 11.52,
+                    "end": 11.96,
+                    "probability": 0.9991251826286316
+                },
+                {
+                    "word": " that",
+                    "start": 11.96,
+                    "end": 12.64,
+                    "probability": 0.9768005609512329
+                },
+                {
+                    "word": " someone",
+                    "start": 12.64,
+                    "end": 12.94,
+                    "probability": 0.9975292086601257
+                },
+                {
+                    "word": " says.",
+                    "start": 12.94,
+                    "end": 13.3,
+                    "probability": 0.9955831170082092
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "seek": 0,
+            "start": 14.0,
+            "end": 16.96,
+            "text": " Taking it all in and letting it sit with us.",
+            "tokens": [
+                51055,
+                20879,
+                340,
+                477,
+                287,
+                290,
+                9616,
+                340,
+                1650,
+                351,
+                514,
+                13,
+                51259
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.15686185736405223,
+            "compression_ratio": 1.6538461538461537,
+            "no_speech_prob": 0.014208389446139336,
+            "words": [
+                {
+                    "word": " Taking",
+                    "start": 14.0,
+                    "end": 14.32,
+                    "probability": 0.995854914188385
+                },
+                {
+                    "word": " it",
+                    "start": 14.32,
+                    "end": 14.48,
+                    "probability": 0.9978680610656738
+                },
+                {
+                    "word": " all",
+                    "start": 14.48,
+                    "end": 14.66,
+                    "probability": 0.9984158277511597
+                },
+                {
+                    "word": " in",
+                    "start": 14.66,
+                    "end": 15.04,
+                    "probability": 0.9987612962722778
+                },
+                {
+                    "word": " and",
+                    "start": 15.04,
+                    "end": 15.8,
+                    "probability": 0.7055261135101318
+                },
+                {
+                    "word": " letting",
+                    "start": 15.8,
+                    "end": 16.04,
+                    "probability": 0.993867814540863
+                },
+                {
+                    "word": " it",
+                    "start": 16.04,
+                    "end": 16.26,
+                    "probability": 0.997559666633606
+                },
+                {
+                    "word": " sit",
+                    "start": 16.26,
+                    "end": 16.44,
+                    "probability": 0.9974965453147888
+                },
+                {
+                    "word": " with",
+                    "start": 16.44,
+                    "end": 16.64,
+                    "probability": 0.9987435936927795
+                },
+                {
+                    "word": " us.",
+                    "start": 16.64,
+                    "end": 16.96,
+                    "probability": 0.9990561604499817
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "seek": 0,
+            "start": 17.96,
+            "end": 20.34,
+            "text": " Are you doing that now, with my words?",
+            "tokens": [
+                51259,
+                4231,
+                345,
+                1804,
+                326,
+                783,
+                11,
+                351,
+                616,
+                2456,
+                30,
+                51427
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.15686185736405223,
+            "compression_ratio": 1.6538461538461537,
+            "no_speech_prob": 0.014208389446139336,
+            "words": [
+                {
+                    "word": " Are",
+                    "start": 17.96,
+                    "end": 18.24,
+                    "probability": 0.9951400756835938
+                },
+                {
+                    "word": " you",
+                    "start": 18.24,
+                    "end": 18.44,
+                    "probability": 0.9978448152542114
+                },
+                {
+                    "word": " doing",
+                    "start": 18.44,
+                    "end": 18.7,
+                    "probability": 0.9983581900596619
+                },
+                {
+                    "word": " that",
+                    "start": 18.7,
+                    "end": 18.9,
+                    "probability": 0.9978547692298889
+                },
+                {
+                    "word": " now,",
+                    "start": 18.9,
+                    "end": 19.28,
+                    "probability": 0.9972587823867798
+                },
+                {
+                    "word": " with",
+                    "start": 19.56,
+                    "end": 19.8,
+                    "probability": 0.9982361793518066
+                },
+                {
+                    "word": " my",
+                    "start": 19.8,
+                    "end": 20.0,
+                    "probability": 0.9976812601089478
+                },
+                {
+                    "word": " words?",
+                    "start": 20.0,
+                    "end": 20.34,
+                    "probability": 0.9977864027023315
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "seek": 0,
+            "start": 21.32,
+            "end": 23.74,
+            "text": " How can I know that you care?",
+            "tokens": [
+                51427,
+                1374,
+                460,
+                314,
+                760,
+                326,
+                345,
+                1337,
+                30,
+                51595
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.15686185736405223,
+            "compression_ratio": 1.6538461538461537,
+            "no_speech_prob": 0.014208389446139336,
+            "words": [
+                {
+                    "word": " How",
+                    "start": 21.32,
+                    "end": 21.68,
+                    "probability": 0.9962222576141357
+                },
+                {
+                    "word": " can",
+                    "start": 21.68,
+                    "end": 22.26,
+                    "probability": 0.9962241649627686
+                },
+                {
+                    "word": " I",
+                    "start": 22.26,
+                    "end": 22.44,
+                    "probability": 0.9922337532043457
+                },
+                {
+                    "word": " know",
+                    "start": 22.44,
+                    "end": 22.78,
+                    "probability": 0.9989190101623535
+                },
+                {
+                    "word": " that",
+                    "start": 22.78,
+                    "end": 23.32,
+                    "probability": 0.9823228716850281
+                },
+                {
+                    "word": " you",
+                    "start": 23.32,
+                    "end": 23.46,
+                    "probability": 0.998892605304718
+                },
+                {
+                    "word": " care?",
+                    "start": 23.46,
+                    "end": 23.74,
+                    "probability": 0.9993576407432556
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "seek": 0,
+            "start": 24.64,
+            "end": 28.3,
+            "text": " How can you know that what I have to say matters to you?",
+            "tokens": [
+                51595,
+                1374,
+                460,
+                345,
+                760,
+                326,
+                644,
+                314,
+                423,
+                284,
+                910,
+                6067,
+                284,
+                345,
+                30,
+                51855
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.15686185736405223,
+            "compression_ratio": 1.6538461538461537,
+            "no_speech_prob": 0.014208389446139336,
+            "words": [
+                {
+                    "word": " How",
+                    "start": 24.64,
+                    "end": 24.98,
+                    "probability": 0.997883141040802
+                },
+                {
+                    "word": " can",
+                    "start": 24.98,
+                    "end": 25.24,
+                    "probability": 0.9974492192268372
+                },
+                {
+                    "word": " you",
+                    "start": 25.24,
+                    "end": 25.5,
+                    "probability": 0.9882203340530396
+                },
+                {
+                    "word": " know",
+                    "start": 25.5,
+                    "end": 25.9,
+                    "probability": 0.9984097480773926
+                },
+                {
+                    "word": " that",
+                    "start": 25.9,
+                    "end": 26.38,
+                    "probability": 0.9700502157211304
+                },
+                {
+                    "word": " what",
+                    "start": 26.38,
+                    "end": 26.6,
+                    "probability": 0.995434582233429
+                },
+                {
+                    "word": " I",
+                    "start": 26.6,
+                    "end": 26.82,
+                    "probability": 0.9949786067008972
+                },
+                {
+                    "word": " have",
+                    "start": 26.82,
+                    "end": 27.0,
+                    "probability": 0.9953201413154602
+                },
+                {
+                    "word": " to",
+                    "start": 27.0,
+                    "end": 27.16,
+                    "probability": 0.9981048107147217
+                },
+                {
+                    "word": " say",
+                    "start": 27.16,
+                    "end": 27.32,
+                    "probability": 0.9996097683906555
+                },
+                {
+                    "word": " matters",
+                    "start": 27.32,
+                    "end": 27.62,
+                    "probability": 0.9893175959587097
+                },
+                {
+                    "word": " to",
+                    "start": 27.62,
+                    "end": 28.08,
+                    "probability": 0.9976636171340942
+                },
+                {
+                    "word": " you?",
+                    "start": 28.08,
+                    "end": 28.3,
+                    "probability": 0.9978487491607666
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "seek": 2830,
+            "start": 29.74,
+            "end": 32.34,
+            "text": " Well, you can't. Unless you listen.",
+            "tokens": [
+                50411,
+                3894,
+                11,
+                345,
+                460,
+                470,
+                13,
+                17486,
+                345,
+                6004,
+                13,
+                50575
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.38747226274930513,
+            "compression_ratio": 0.875,
+            "no_speech_prob": 0.00852926541119814,
+            "words": [
+                {
+                    "word": " Well,",
+                    "start": 29.74,
+                    "end": 30.22,
+                    "probability": 0.8447856903076172
+                },
+                {
+                    "word": " you",
+                    "start": 30.64,
+                    "end": 30.72,
+                    "probability": 0.9959329962730408
+                },
+                {
+                    "word": " can't.",
+                    "start": 30.72,
+                    "end": 31.48,
+                    "probability": 0.9938485026359558
+                },
+                {
+                    "word": " Unless",
+                    "start": 31.66,
+                    "end": 31.84,
+                    "probability": 0.9871058464050293
+                },
+                {
+                    "word": " you",
+                    "start": 31.84,
+                    "end": 32.08,
+                    "probability": 0.9962767958641052
+                },
+                {
+                    "word": " listen.",
+                    "start": 32.08,
+                    "end": 32.34,
+                    "probability": 0.9883484244346619
+                }
+            ]
+        }
+    ],
+    "language": "en"
+}
