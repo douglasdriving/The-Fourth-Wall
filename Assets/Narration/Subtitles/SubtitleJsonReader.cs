@@ -10,7 +10,8 @@ namespace Narration
     public class SubtitleJsonReader : MonoBehaviour
     {
 
-        const float timePerLetterInFakeSubtitles = 0.1f;
+        const float baseWordTimeInFakeSubtitles = 0.15f;
+        const float timePerLetterInFakeSubtitles = 0.06f;
 
         public static SubtitleJsonData ReadSubtitleJson(string subtitleJsonString)
         {
@@ -43,7 +44,7 @@ namespace Narration
                 SubtitleWord[] words = segmentText.Split(' ').Select(word => new SubtitleWord { word = word }).ToArray();
                 foreach (SubtitleWord word in words)
                 {
-                    float timeForThisWord = word.word.Length * timePerLetterInFakeSubtitles;
+                    float timeForThisWord = baseWordTimeInFakeSubtitles + word.word.Length * timePerLetterInFakeSubtitles;
                     word.start = totalTime;
                     word.end = totalTime + timeForThisWord;
                     totalTime = word.end;

@@ -30,14 +30,14 @@ namespace LevelGeneration
             talkingHead = FindObjectOfType<TalkingHead>();
         }
 
-        public GameObject AddPieceToWalkway(Vector3 entryPoint, string pieceWord, string lastPieceWord)
+        public GameObject AddPieceToWalkway(Vector3 entryPoint, string pieceWord, string lastPieceWord, bool isEndOFSentence)
         {
-            Vector3 newPiecePivot = GetNextPieceFinalPos(entryPoint, lastPieceWord, pieceWord);
+            Vector3 newPiecePivot = GetNextPieceFinalPos(entryPoint, lastPieceWord, pieceWord, isEndOFSentence);
             GameObject piece = InstatiatePiece(newPiecePivot, Quaternion.identity, pieceWord);
             return piece;
         }
 
-        private Vector3 GetNextPieceFinalPos(Vector3 endTopOfLastPiece, string lastPieceWord, string pieceWord)
+        private Vector3 GetNextPieceFinalPos(Vector3 endTopOfLastPiece, string lastPieceWord, string pieceWord, bool isEndOFSentence)
         {
             Vector3 newPiecePivot = endTopOfLastPiece;
 
@@ -49,7 +49,7 @@ namespace LevelGeneration
             newPiecePivot.x += Random.Range(-maxSideShift, maxSideShift);
 
             //add sentence gap if needed
-            if (isSeparatingSentences && lastPieceWord.EndsWith(".") && !string.IsNullOrEmpty(pieceWord))
+            if (isSeparatingSentences && isEndOFSentence && !string.IsNullOrEmpty(pieceWord))
             {
                 newPiecePivot.z += sentanceGapSize;
             }

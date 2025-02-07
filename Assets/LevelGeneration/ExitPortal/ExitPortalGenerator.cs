@@ -16,7 +16,7 @@ namespace LevelGeneration
         public IEnumerator GenerateExitPortalAfterDelay(float delay)
         {
             yield return new WaitForSeconds(delay);
-            GameObject portalLevelPiece = FindObjectOfType<LevelGenerator>().SpawnNextPiece("");
+            GameObject portalLevelPiece = FindObjectOfType<LevelGenerator>().SpawnNextPiece("", false);
             LevelPiece.Positioner piecePositioner = portalLevelPiece.GetComponent<LevelPiece.Positioner>();
             Vector3 portalPos = piecePositioner.targetPos + Vector3.up * portalHeightAbovePlatform;
             yield return new WaitForSeconds(timeBetweenPieceAndPortalSpawn);

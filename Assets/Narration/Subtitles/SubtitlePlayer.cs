@@ -69,7 +69,7 @@ namespace Narration
             SubtitleSegment segment = currentSubtitle.segments[currentSegmentIndex];
             SubtitleWord word = segment.words[0];
             UpdateNextWordTime();
-            ShowWordInWorld(word.word);
+            ShowWordInWorld(word.word, true);
         }
 
 
@@ -82,9 +82,9 @@ namespace Narration
             ShowWordInWorld(word.word);
         }
 
-        private void ShowWordInWorld(string word)
+        private void ShowWordInWorld(string word, bool isEndOFSentence = false)
         {
-            if (levelGenerator) levelGenerator.SpawnNextPiece(word);
+            if (levelGenerator) levelGenerator.SpawnNextPiece(word, isEndOFSentence);
             else wordText.text = word;
         }
 
