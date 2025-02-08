@@ -739,7 +739,7 @@ MonoBehaviour:
   zoomKey: 324
   zoomFOV: 30
   zoomStepTime: 5
-  playerCanMove: 1
+  canMove: 1
   walkSpeed: 6
   maxVelocityChange: 10
   enableSprint: 0
@@ -758,7 +758,7 @@ MonoBehaviour:
   sprintBarHeightPercent: 0.02
   enableJump: 1
   jumpKey: 32
-  jumpPower: 6
+  jumpPower: 4.5
   lastGround: {fileID: 0}
   enableCrouch: 1
   holdToCrouch: 1

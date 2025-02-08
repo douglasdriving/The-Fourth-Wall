@@ -30,36 +30,11 @@ namespace LevelGeneration
             talkingHead = FindObjectOfType<TalkingHead>();
         }
 
-        public GameObject AddPieceToWalkway(Vector3 entryPoint, string pieceWord, string lastPieceWord, bool isEndOFSentence)
+        public GameObject AddPieceToWalkway(Vector3 entryPoint, string pieceWord, bool isEndOFSentence)
         {
-            Vector3 newPiecePivot = GetNextPieceFinalPos(entryPoint, lastPieceWord, pieceWord, isEndOFSentence);
-            GameObject piece = InstatiatePiece(newPiecePivot, Quaternion.identity, pieceWord);
-            return piece;
-        }
-
-        private Vector3 GetNextPieceFinalPos(Vector3 endTopOfLastPiece, string lastPieceWord, string pieceWord, bool isEndOFSentence)
-        {
-            Vector3 newPiecePivot = endTopOfLastPiece;
-
-            //adjust down to align top
-            float pieceHeight = walkwayPieceFactory.GetPieceHeight();
-            newPiecePivot.y -= pieceHeight / 2;
-
-            //adjust in sides at random
-            newPiecePivot.x += Random.Range(-maxSideShift, maxSideShift);
-
-            //add sentence gap if needed
-            if (isSeparatingSentences && isEndOFSentence && !string.IsNullOrEmpty(pieceWord))
-            {
-                newPiecePivot.z += sentanceGapSize;
-            }
-
-            return newPiecePivot;
-        }
-
-        public GameObject InstatiatePiece(Vector3 targetPos, Quaternion targetRot, string pieceWord)
-        {
-            GameObject piece = null;
+            Vector3 targetPos = GetNextPieceFinalPos(entryPoint, pieceWord, isEndOFSentence);
+            Quaternion targetRot = Quaternion.identity;
+            GameObject piece;
 
             if (talkingHead != null)
             {
@@ -84,6 +59,26 @@ namespace LevelGeneration
             }
 
             return piece;
+        }
+
+        private Vector3 GetNextPieceFinalPos(Vector3 endTopOfLastPiece, string pieceWord, bool isEndOFSentence)
+        {
+            Vector3 newPiecePivot = endTopOfLastPiece;
+
+            //adjust down to align top
+            float pieceHeight = walkwayPieceFactory.GetPieceHeight();
+            newPiecePivot.y -= pieceHeight / 2;
+
+            //adjust in sides at random
+            newPiecePivot.x += Random.Range(-maxSideShift, maxSideShift);
+
+            //add sentence gap if needed
+            if (isSeparatingSentences && isEndOFSentence && !string.IsNullOrEmpty(pieceWord))
+            {
+                newPiecePivot.z += sentanceGapSize;
+            }
+
+            return newPiecePivot;
         }
     }
 }

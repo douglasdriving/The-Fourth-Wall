@@ -15,7 +15,9 @@ namespace LevelGeneration
         {
             GameObject piece = SpawnAboveFinalPos(entryPoint);
             StartAnimation(entryPoint, piece);
-            piece.GetComponent<LevelPiece.ColorSetter>().UpdatePieceMaterialByWord("the");
+            LevelPiece.ColorSetter colorSetter = piece.GetComponent<LevelPiece.ColorSetter>();
+            colorSetter.UpdateColor("the");
+            colorSetter.SetColored();
             return piece;
         }
 

@@ -322,6 +322,52 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+--- !u!1 &575172300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 575172302}
+  - component: {fileID: 575172301}
+  m_Layer: 0
+  m_Name: ColorCreator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &575172301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575172300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7faf147be464b8546a5a77dd08c794f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commonWordColor: {r: 1, g: 0.90588236, b: 0.32452828, a: 0}
+  rareWordColor: {r: 1, g: 0.38658518, b: 0.32549024, a: 0}
+--- !u!4 &575172302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575172300}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.27654564, y: 5.769889, z: -1.6125122}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,8 +667,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d124fb07a4f53f4281d4edb4ef76cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clipToPlay: {fileID: 0}
-  subtitleToPlayOnStart: {fileID: 0}
+  clipToPlay: {fileID: 8300000, guid: 222d7c50d8f2b1742b1dbbaff20486ff, type: 3}
+  subtitleToPlayOnStart: {fileID: 4900000, guid: 8565b250b480a154b8d78c1cc2aa8281, type: 3}
   startDelay: 0.5
   endSceneOnEnd: 0
   placeHolderText: "The core idea of this project, titled \"The Fourth Wall,\" is
@@ -951,3 +997,4 @@ SceneRoots:
   - {fileID: 8203036240713894169}
   - {fileID: 1662675695}
   - {fileID: 767268523}
+  - {fileID: 575172302}

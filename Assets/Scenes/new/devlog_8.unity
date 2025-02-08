@@ -631,6 +631,52 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9610d277bbe0f3c4ca96d22c669dc994, type: 3}
+--- !u!1 &1663830974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1663830976}
+  - component: {fileID: 1663830975}
+  m_Layer: 0
+  m_Name: ColorCreator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1663830975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663830974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7faf147be464b8546a5a77dd08c794f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commonWordColor: {r: 1, g: 0.90588236, b: 0.32452828, a: 0}
+  rareWordColor: {r: 1, g: 0.38658518, b: 0.32549024, a: 0}
+--- !u!4 &1663830976
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663830974}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.27654564, y: 5.769889, z: -1.6125122}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1832332031 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5863614016618780589, guid: 73df769778ae42a43ae53fd9bf5131bb, type: 3}
@@ -682,8 +728,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d124fb07a4f53f4281d4edb4ef76cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clipToPlay: {fileID: 0}
-  subtitleToPlayOnStart: {fileID: 0}
+  clipToPlay: {fileID: 8300000, guid: 378c78b8c106db94ebcc2eb105e73cd9, type: 3}
+  subtitleToPlayOnStart: {fileID: 4900000, guid: 0bcc100f225a4b348ac83ec7450aba74, type: 3}
   startDelay: 0.5
   endSceneOnEnd: 0
   placeHolderText: Now I changed the font.
@@ -1013,3 +1059,4 @@ SceneRoots:
   - {fileID: 1662675695}
   - {fileID: 767268523}
   - {fileID: 1332149070}
+  - {fileID: 1663830976}

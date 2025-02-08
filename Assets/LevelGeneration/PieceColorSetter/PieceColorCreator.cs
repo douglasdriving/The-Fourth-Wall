@@ -9,6 +9,8 @@ namespace LevelPiece
         [SerializeField] Color commonWordColor;
         [SerializeField] Color rareWordColor;
 
+
+
         public Color GetColorForWord(string word)
         {
             float popularityFactor = WordPopularityCounter.GetPopularityForWordNormalized(word);
@@ -20,6 +22,11 @@ namespace LevelPiece
         {
             return commonWordColor;
         }
-    }
 
+        public Color GetAverageColor()
+        {
+            return Color.Lerp(rareWordColor, commonWordColor, 0.5f);
+        }
+
+    }
 }

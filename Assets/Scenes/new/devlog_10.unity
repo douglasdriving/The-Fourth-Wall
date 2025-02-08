@@ -748,8 +748,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d124fb07a4f53f4281d4edb4ef76cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clipToPlay: {fileID: 0}
-  subtitleToPlayOnStart: {fileID: 0}
+  clipToPlay: {fileID: 8300000, guid: 32b88d8c4e4728348b23a7f497b816b9, type: 3}
+  subtitleToPlayOnStart: {fileID: 4900000, guid: 47b49880d7896ad408348bd7d94aacd1, type: 3}
   startDelay: 0.5
   endSceneOnEnd: 0
   placeHolderText: "Ok so, in all honesty, how interesting is it really to listen
