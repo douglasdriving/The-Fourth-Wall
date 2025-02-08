@@ -1,0 +1,585 @@
+{
+    "text": " Okay, so I thought about it and yeah, I don't think that subtitle thing felt very good. It felt too complicated and messy, so I decided to just have the words disappear above the walkway instead. I feel like this way you can still kind of see every word as it appears, but it doesn't add too much like chaos onto the screen. Here comes the silly little portal.",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 6.02,
+            "text": " Okay, so I thought about it and yeah, I don't think that subtitle thing felt very good.",
+            "tokens": [
+                50363,
+                16805,
+                11,
+                523,
+                314,
+                1807,
+                546,
+                340,
+                290,
+                10194,
+                11,
+                314,
+                836,
+                470,
+                892,
+                326,
+                37960,
+                1517,
+                2936,
+                845,
+                922,
+                13,
+                50663
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.20185294518103966,
+            "compression_ratio": 1.6216216216216217,
+            "no_speech_prob": 0.019790418446063995,
+            "words": [
+                {
+                    "word": " Okay,",
+                    "start": 0.0,
+                    "end": 0.58,
+                    "probability": 0.6954505443572998
+                },
+                {
+                    "word": " so",
+                    "start": 0.68,
+                    "end": 0.88,
+                    "probability": 0.9894320964813232
+                },
+                {
+                    "word": " I",
+                    "start": 0.88,
+                    "end": 1.08,
+                    "probability": 0.966052770614624
+                },
+                {
+                    "word": " thought",
+                    "start": 1.08,
+                    "end": 1.32,
+                    "probability": 0.9953306913375854
+                },
+                {
+                    "word": " about",
+                    "start": 1.32,
+                    "end": 1.66,
+                    "probability": 0.9988118410110474
+                },
+                {
+                    "word": " it",
+                    "start": 1.66,
+                    "end": 1.92,
+                    "probability": 0.9969436526298523
+                },
+                {
+                    "word": " and",
+                    "start": 1.92,
+                    "end": 2.2,
+                    "probability": 0.5321477055549622
+                },
+                {
+                    "word": " yeah,",
+                    "start": 2.2,
+                    "end": 2.62,
+                    "probability": 0.9024047255516052
+                },
+                {
+                    "word": " I",
+                    "start": 2.74,
+                    "end": 2.92,
+                    "probability": 0.9975850582122803
+                },
+                {
+                    "word": " don't",
+                    "start": 2.92,
+                    "end": 3.12,
+                    "probability": 0.99882572889328
+                },
+                {
+                    "word": " think",
+                    "start": 3.12,
+                    "end": 3.34,
+                    "probability": 0.9979811310768127
+                },
+                {
+                    "word": " that",
+                    "start": 3.34,
+                    "end": 3.56,
+                    "probability": 0.9959133267402649
+                },
+                {
+                    "word": " subtitle",
+                    "start": 3.56,
+                    "end": 4.08,
+                    "probability": 0.6612013578414917
+                },
+                {
+                    "word": " thing",
+                    "start": 4.08,
+                    "end": 4.52,
+                    "probability": 0.9797185659408569
+                },
+                {
+                    "word": " felt",
+                    "start": 4.52,
+                    "end": 5.04,
+                    "probability": 0.9936409592628479
+                },
+                {
+                    "word": " very",
+                    "start": 5.04,
+                    "end": 5.84,
+                    "probability": 0.9726303219795227
+                },
+                {
+                    "word": " good.",
+                    "start": 5.84,
+                    "end": 6.02,
+                    "probability": 0.999254047870636
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 6.1,
+            "end": 13.04,
+            "text": " It felt too complicated and messy, so I decided to just have the words disappear above the walkway instead.",
+            "tokens": [
+                50663,
+                632,
+                2936,
+                1165,
+                8253,
+                290,
+                24097,
+                11,
+                523,
+                314,
+                3066,
+                284,
+                655,
+                423,
+                262,
+                2456,
+                10921,
+                2029,
+                262,
+                2513,
+                1014,
+                2427,
+                13,
+                51023
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.20185294518103966,
+            "compression_ratio": 1.6216216216216217,
+            "no_speech_prob": 0.019790418446063995,
+            "words": [
+                {
+                    "word": " It",
+                    "start": 6.1,
+                    "end": 6.16,
+                    "probability": 0.9848870635032654
+                },
+                {
+                    "word": " felt",
+                    "start": 6.16,
+                    "end": 6.38,
+                    "probability": 0.9963351488113403
+                },
+                {
+                    "word": " too",
+                    "start": 6.38,
+                    "end": 6.64,
+                    "probability": 0.9934917092323303
+                },
+                {
+                    "word": " complicated",
+                    "start": 6.64,
+                    "end": 7.26,
+                    "probability": 0.9987217783927917
+                },
+                {
+                    "word": " and",
+                    "start": 7.26,
+                    "end": 7.68,
+                    "probability": 0.9946356415748596
+                },
+                {
+                    "word": " messy,",
+                    "start": 7.68,
+                    "end": 8.18,
+                    "probability": 0.9975065588951111
+                },
+                {
+                    "word": " so",
+                    "start": 8.18,
+                    "end": 8.98,
+                    "probability": 0.970740556716919
+                },
+                {
+                    "word": " I",
+                    "start": 8.98,
+                    "end": 9.24,
+                    "probability": 0.9948675632476807
+                },
+                {
+                    "word": " decided",
+                    "start": 9.24,
+                    "end": 9.5,
+                    "probability": 0.9824223518371582
+                },
+                {
+                    "word": " to",
+                    "start": 9.5,
+                    "end": 9.68,
+                    "probability": 0.996904194355011
+                },
+                {
+                    "word": " just",
+                    "start": 9.68,
+                    "end": 9.82,
+                    "probability": 0.9865731000900269
+                },
+                {
+                    "word": " have",
+                    "start": 9.82,
+                    "end": 10.02,
+                    "probability": 0.9990125894546509
+                },
+                {
+                    "word": " the",
+                    "start": 10.02,
+                    "end": 10.2,
+                    "probability": 0.9987722039222717
+                },
+                {
+                    "word": " words",
+                    "start": 10.2,
+                    "end": 10.42,
+                    "probability": 0.9924638271331787
+                },
+                {
+                    "word": " disappear",
+                    "start": 10.42,
+                    "end": 11.06,
+                    "probability": 0.992821991443634
+                },
+                {
+                    "word": " above",
+                    "start": 11.06,
+                    "end": 12.08,
+                    "probability": 0.9702149033546448
+                },
+                {
+                    "word": " the",
+                    "start": 12.08,
+                    "end": 12.34,
+                    "probability": 0.9970543384552002
+                },
+                {
+                    "word": " walkway",
+                    "start": 12.34,
+                    "end": 12.62,
+                    "probability": 0.9927510321140289
+                },
+                {
+                    "word": " instead.",
+                    "start": 12.62,
+                    "end": 13.04,
+                    "probability": 0.9941228032112122
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "seek": 0,
+            "start": 14.88,
+            "end": 18.44,
+            "text": " I feel like this way you can still kind of see every word as it appears,",
+            "tokens": [
+                51105,
+                314,
+                1254,
+                588,
+                428,
+                835,
+                345,
+                460,
+                991,
+                1611,
+                286,
+                766,
+                790,
+                1573,
+                355,
+                340,
+                3568,
+                11,
+                51283
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.20185294518103966,
+            "compression_ratio": 1.6216216216216217,
+            "no_speech_prob": 0.019790418446063995,
+            "words": [
+                {
+                    "word": " I",
+                    "start": 14.88,
+                    "end": 15.1,
+                    "probability": 0.9923012256622314
+                },
+                {
+                    "word": " feel",
+                    "start": 15.1,
+                    "end": 15.4,
+                    "probability": 0.995175838470459
+                },
+                {
+                    "word": " like",
+                    "start": 15.4,
+                    "end": 15.56,
+                    "probability": 0.9952151775360107
+                },
+                {
+                    "word": " this",
+                    "start": 15.56,
+                    "end": 15.72,
+                    "probability": 0.9841513633728027
+                },
+                {
+                    "word": " way",
+                    "start": 15.72,
+                    "end": 15.86,
+                    "probability": 0.9985186457633972
+                },
+                {
+                    "word": " you",
+                    "start": 15.86,
+                    "end": 15.98,
+                    "probability": 0.8928177952766418
+                },
+                {
+                    "word": " can",
+                    "start": 15.98,
+                    "end": 16.12,
+                    "probability": 0.9972551465034485
+                },
+                {
+                    "word": " still",
+                    "start": 16.12,
+                    "end": 16.3,
+                    "probability": 0.9857990741729736
+                },
+                {
+                    "word": " kind",
+                    "start": 16.3,
+                    "end": 16.48,
+                    "probability": 0.9381266236305237
+                },
+                {
+                    "word": " of",
+                    "start": 16.48,
+                    "end": 16.8,
+                    "probability": 0.9986194372177124
+                },
+                {
+                    "word": " see",
+                    "start": 16.8,
+                    "end": 17.12,
+                    "probability": 0.9875824451446533
+                },
+                {
+                    "word": " every",
+                    "start": 17.12,
+                    "end": 17.38,
+                    "probability": 0.9960548877716064
+                },
+                {
+                    "word": " word",
+                    "start": 17.38,
+                    "end": 17.68,
+                    "probability": 0.998604953289032
+                },
+                {
+                    "word": " as",
+                    "start": 17.68,
+                    "end": 18.0,
+                    "probability": 0.975725531578064
+                },
+                {
+                    "word": " it",
+                    "start": 18.0,
+                    "end": 18.12,
+                    "probability": 0.99418044090271
+                },
+                {
+                    "word": " appears,",
+                    "start": 18.12,
+                    "end": 18.44,
+                    "probability": 0.9991052746772766
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "seek": 0,
+            "start": 18.44,
+            "end": 21.58,
+            "text": " but it doesn't add too much like chaos onto the screen.",
+            "tokens": [
+                51283,
+                475,
+                340,
+                1595,
+                470,
+                751,
+                1165,
+                881,
+                588,
+                11918,
+                4291,
+                262,
+                3159,
+                13,
+                51435
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.20185294518103966,
+            "compression_ratio": 1.6216216216216217,
+            "no_speech_prob": 0.019790418446063995,
+            "words": [
+                {
+                    "word": " but",
+                    "start": 18.44,
+                    "end": 18.64,
+                    "probability": 0.9952652454376221
+                },
+                {
+                    "word": " it",
+                    "start": 18.64,
+                    "end": 18.74,
+                    "probability": 0.9991219639778137
+                },
+                {
+                    "word": " doesn't",
+                    "start": 18.74,
+                    "end": 18.98,
+                    "probability": 0.9993840157985687
+                },
+                {
+                    "word": " add",
+                    "start": 18.98,
+                    "end": 19.18,
+                    "probability": 0.9959259033203125
+                },
+                {
+                    "word": " too",
+                    "start": 19.18,
+                    "end": 19.38,
+                    "probability": 0.9076805710792542
+                },
+                {
+                    "word": " much",
+                    "start": 19.38,
+                    "end": 19.72,
+                    "probability": 0.9997053742408752
+                },
+                {
+                    "word": " like",
+                    "start": 19.72,
+                    "end": 20.1,
+                    "probability": 0.5687099099159241
+                },
+                {
+                    "word": " chaos",
+                    "start": 20.1,
+                    "end": 20.54,
+                    "probability": 0.7348119616508484
+                },
+                {
+                    "word": " onto",
+                    "start": 20.54,
+                    "end": 21.0,
+                    "probability": 0.9755261540412903
+                },
+                {
+                    "word": " the",
+                    "start": 21.0,
+                    "end": 21.24,
+                    "probability": 0.9995077848434448
+                },
+                {
+                    "word": " screen.",
+                    "start": 21.24,
+                    "end": 21.58,
+                    "probability": 0.9991165995597839
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "seek": 0,
+            "start": 22.9,
+            "end": 24.84,
+            "text": " Here comes the silly little portal.",
+            "tokens": [
+                51495,
+                3423,
+                2058,
+                262,
+                14397,
+                1310,
+                17898,
+                13,
+                51606
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.20185294518103966,
+            "compression_ratio": 1.6216216216216217,
+            "no_speech_prob": 0.019790418446063995,
+            "words": [
+                {
+                    "word": " Here",
+                    "start": 22.9,
+                    "end": 23.22,
+                    "probability": 0.9922627210617065
+                },
+                {
+                    "word": " comes",
+                    "start": 23.22,
+                    "end": 23.58,
+                    "probability": 0.9916747212409973
+                },
+                {
+                    "word": " the",
+                    "start": 23.58,
+                    "end": 23.9,
+                    "probability": 0.9871499538421631
+                },
+                {
+                    "word": " silly",
+                    "start": 23.9,
+                    "end": 24.14,
+                    "probability": 0.7159280180931091
+                },
+                {
+                    "word": " little",
+                    "start": 24.14,
+                    "end": 24.38,
+                    "probability": 0.9888311624526978
+                },
+                {
+                    "word": " portal.",
+                    "start": 24.38,
+                    "end": 24.84,
+                    "probability": 0.9907103180885315
+                }
+            ]
+        }
+    ],
+    "language": "en"
+}

@@ -1,0 +1,715 @@
+{
+    "text": " What you are looking at, dear player, is the default sky sphere of the Unity game engine. This is where every project begins. And at a first glance you might find it lifeless, unimpressive or maybe even boring. But trust me when I tell you that this place is full of potential. Here I can create anything that my mind imagines. And this time, my dear player, I invite you to join me on the journey of making this place come alive. So let us embark together.",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 5.78,
+            "text": " What you are looking at, dear player, is the default sky sphere of the Unity game engine.",
+            "tokens": [
+                50363,
+                1867,
+                345,
+                389,
+                2045,
+                379,
+                11,
+                13674,
+                2137,
+                11,
+                318,
+                262,
+                4277,
+                6766,
+                16558,
+                286,
+                262,
+                18714,
+                983,
+                3113,
+                13,
+                50651
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.11511241065131293,
+            "compression_ratio": 1.5565217391304347,
+            "no_speech_prob": 0.010763720609247684,
+            "words": [
+                {
+                    "word": " What",
+                    "start": 0.0,
+                    "end": 0.32,
+                    "probability": 0.7429889440536499
+                },
+                {
+                    "word": " you",
+                    "start": 0.32,
+                    "end": 0.46,
+                    "probability": 0.9939728379249573
+                },
+                {
+                    "word": " are",
+                    "start": 0.46,
+                    "end": 0.58,
+                    "probability": 0.963546872138977
+                },
+                {
+                    "word": " looking",
+                    "start": 0.58,
+                    "end": 0.8,
+                    "probability": 0.9903128147125244
+                },
+                {
+                    "word": " at,",
+                    "start": 0.8,
+                    "end": 1.48,
+                    "probability": 0.9941097497940063
+                },
+                {
+                    "word": " dear",
+                    "start": 1.66,
+                    "end": 1.78,
+                    "probability": 0.8675037026405334
+                },
+                {
+                    "word": " player,",
+                    "start": 1.78,
+                    "end": 2.14,
+                    "probability": 0.9581583142280579
+                },
+                {
+                    "word": " is",
+                    "start": 2.24,
+                    "end": 2.7,
+                    "probability": 0.9838125705718994
+                },
+                {
+                    "word": " the",
+                    "start": 2.7,
+                    "end": 2.9,
+                    "probability": 0.9948518872261047
+                },
+                {
+                    "word": " default",
+                    "start": 2.9,
+                    "end": 3.28,
+                    "probability": 0.9578344821929932
+                },
+                {
+                    "word": " sky",
+                    "start": 3.28,
+                    "end": 3.62,
+                    "probability": 0.3752477467060089
+                },
+                {
+                    "word": " sphere",
+                    "start": 3.62,
+                    "end": 3.94,
+                    "probability": 0.953727126121521
+                },
+                {
+                    "word": " of",
+                    "start": 3.94,
+                    "end": 4.4,
+                    "probability": 0.9885708689689636
+                },
+                {
+                    "word": " the",
+                    "start": 4.4,
+                    "end": 4.62,
+                    "probability": 0.9769986271858215
+                },
+                {
+                    "word": " Unity",
+                    "start": 4.62,
+                    "end": 5.02,
+                    "probability": 0.8889549374580383
+                },
+                {
+                    "word": " game",
+                    "start": 5.02,
+                    "end": 5.44,
+                    "probability": 0.8446004390716553
+                },
+                {
+                    "word": " engine.",
+                    "start": 5.44,
+                    "end": 5.78,
+                    "probability": 0.9753091931343079
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 6.9,
+            "end": 12.5,
+            "text": " This is where every project begins. And at a first glance you might find it lifeless,",
+            "tokens": [
+                50715,
+                770,
+                318,
+                810,
+                790,
+                1628,
+                6140,
+                13,
+                843,
+                379,
+                257,
+                717,
+                16086,
+                345,
+                1244,
+                1064,
+                340,
+                46443,
+                11,
+                50987
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.11511241065131293,
+            "compression_ratio": 1.5565217391304347,
+            "no_speech_prob": 0.010763720609247684,
+            "words": [
+                {
+                    "word": " This",
+                    "start": 6.9,
+                    "end": 7.34,
+                    "probability": 0.9824037551879883
+                },
+                {
+                    "word": " is",
+                    "start": 7.34,
+                    "end": 7.5,
+                    "probability": 0.995826780796051
+                },
+                {
+                    "word": " where",
+                    "start": 7.5,
+                    "end": 7.72,
+                    "probability": 0.997012734413147
+                },
+                {
+                    "word": " every",
+                    "start": 7.72,
+                    "end": 8.14,
+                    "probability": 0.9886513948440552
+                },
+                {
+                    "word": " project",
+                    "start": 8.14,
+                    "end": 8.8,
+                    "probability": 0.9891724586486816
+                },
+                {
+                    "word": " begins.",
+                    "start": 8.8,
+                    "end": 9.44,
+                    "probability": 0.9974396228790283
+                },
+                {
+                    "word": " And",
+                    "start": 10.1,
+                    "end": 10.3,
+                    "probability": 0.8496269583702087
+                },
+                {
+                    "word": " at",
+                    "start": 10.3,
+                    "end": 10.42,
+                    "probability": 0.9609794616699219
+                },
+                {
+                    "word": " a",
+                    "start": 10.42,
+                    "end": 10.54,
+                    "probability": 0.6169934868812561
+                },
+                {
+                    "word": " first",
+                    "start": 10.54,
+                    "end": 10.78,
+                    "probability": 0.9956658482551575
+                },
+                {
+                    "word": " glance",
+                    "start": 10.78,
+                    "end": 11.06,
+                    "probability": 0.9995439648628235
+                },
+                {
+                    "word": " you",
+                    "start": 11.06,
+                    "end": 11.3,
+                    "probability": 0.5748838782310486
+                },
+                {
+                    "word": " might",
+                    "start": 11.3,
+                    "end": 11.52,
+                    "probability": 0.9871386885643005
+                },
+                {
+                    "word": " find",
+                    "start": 11.52,
+                    "end": 11.84,
+                    "probability": 0.9961808919906616
+                },
+                {
+                    "word": " it",
+                    "start": 11.84,
+                    "end": 12.04,
+                    "probability": 0.9926959276199341
+                },
+                {
+                    "word": " lifeless,",
+                    "start": 12.04,
+                    "end": 12.5,
+                    "probability": 0.9946182370185852
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "seek": 0,
+            "start": 13.22,
+            "end": 18.48,
+            "text": " unimpressive or maybe even boring. But trust me when I tell you that this place is",
+            "tokens": [
+                51015,
+                555,
+                11011,
+                3314,
+                393,
+                3863,
+                772,
+                14262,
+                13,
+                887,
+                3774,
+                502,
+                618,
+                314,
+                1560,
+                345,
+                326,
+                428,
+                1295,
+                318,
+                51263
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.11511241065131293,
+            "compression_ratio": 1.5565217391304347,
+            "no_speech_prob": 0.010763720609247684,
+            "words": [
+                {
+                    "word": " unimpressive",
+                    "start": 13.22,
+                    "end": 13.76,
+                    "probability": 0.9929414391517639
+                },
+                {
+                    "word": " or",
+                    "start": 13.76,
+                    "end": 14.02,
+                    "probability": 0.5999594330787659
+                },
+                {
+                    "word": " maybe",
+                    "start": 14.02,
+                    "end": 14.5,
+                    "probability": 0.9527431130409241
+                },
+                {
+                    "word": " even",
+                    "start": 14.5,
+                    "end": 14.8,
+                    "probability": 0.9952076077461243
+                },
+                {
+                    "word": " boring.",
+                    "start": 14.8,
+                    "end": 15.22,
+                    "probability": 0.9952356219291687
+                },
+                {
+                    "word": " But",
+                    "start": 15.86,
+                    "end": 16.08,
+                    "probability": 0.9796800017356873
+                },
+                {
+                    "word": " trust",
+                    "start": 16.08,
+                    "end": 16.34,
+                    "probability": 0.9113784432411194
+                },
+                {
+                    "word": " me",
+                    "start": 16.34,
+                    "end": 16.54,
+                    "probability": 0.9944095015525818
+                },
+                {
+                    "word": " when",
+                    "start": 16.54,
+                    "end": 16.68,
+                    "probability": 0.9866451621055603
+                },
+                {
+                    "word": " I",
+                    "start": 16.68,
+                    "end": 16.82,
+                    "probability": 0.9741423726081848
+                },
+                {
+                    "word": " tell",
+                    "start": 16.82,
+                    "end": 16.98,
+                    "probability": 0.9973737001419067
+                },
+                {
+                    "word": " you",
+                    "start": 16.98,
+                    "end": 17.12,
+                    "probability": 0.9951077699661255
+                },
+                {
+                    "word": " that",
+                    "start": 17.12,
+                    "end": 17.3,
+                    "probability": 0.949268102645874
+                },
+                {
+                    "word": " this",
+                    "start": 17.3,
+                    "end": 17.48,
+                    "probability": 0.9892255663871765
+                },
+                {
+                    "word": " place",
+                    "start": 17.48,
+                    "end": 17.78,
+                    "probability": 0.9903905391693115
+                },
+                {
+                    "word": " is",
+                    "start": 17.78,
+                    "end": 18.48,
+                    "probability": 0.9954979419708252
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "seek": 0,
+            "start": 18.48,
+            "end": 26.44,
+            "text": " full of potential. Here I can create anything that my mind imagines. And this time, my dear player,",
+            "tokens": [
+                51295,
+                1336,
+                286,
+                2785,
+                13,
+                3423,
+                314,
+                460,
+                2251,
+                1997,
+                326,
+                616,
+                2000,
+                3590,
+                1127,
+                13,
+                843,
+                428,
+                640,
+                11,
+                616,
+                13674,
+                2137,
+                11,
+                51687
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.11511241065131293,
+            "compression_ratio": 1.5565217391304347,
+            "no_speech_prob": 0.010763720609247684,
+            "words": [
+                {
+                    "word": " full",
+                    "start": 18.48,
+                    "end": 18.9,
+                    "probability": 0.9692710638046265
+                },
+                {
+                    "word": " of",
+                    "start": 18.9,
+                    "end": 19.1,
+                    "probability": 0.9985437393188477
+                },
+                {
+                    "word": " potential.",
+                    "start": 19.1,
+                    "end": 19.52,
+                    "probability": 0.9980156421661377
+                },
+                {
+                    "word": " Here",
+                    "start": 20.16,
+                    "end": 20.54,
+                    "probability": 0.9905725121498108
+                },
+                {
+                    "word": " I",
+                    "start": 20.54,
+                    "end": 21.24,
+                    "probability": 0.4820234179496765
+                },
+                {
+                    "word": " can",
+                    "start": 21.24,
+                    "end": 21.5,
+                    "probability": 0.9950488209724426
+                },
+                {
+                    "word": " create",
+                    "start": 21.5,
+                    "end": 21.98,
+                    "probability": 0.9986237287521362
+                },
+                {
+                    "word": " anything",
+                    "start": 21.98,
+                    "end": 22.72,
+                    "probability": 0.9576827883720398
+                },
+                {
+                    "word": " that",
+                    "start": 22.72,
+                    "end": 23.18,
+                    "probability": 0.9588101506233215
+                },
+                {
+                    "word": " my",
+                    "start": 23.18,
+                    "end": 23.36,
+                    "probability": 0.9970894455909729
+                },
+                {
+                    "word": " mind",
+                    "start": 23.36,
+                    "end": 23.68,
+                    "probability": 0.9985049962997437
+                },
+                {
+                    "word": " imagines.",
+                    "start": 23.68,
+                    "end": 24.26,
+                    "probability": 0.9938637614250183
+                },
+                {
+                    "word": " And",
+                    "start": 24.36,
+                    "end": 24.52,
+                    "probability": 0.9792454242706299
+                },
+                {
+                    "word": " this",
+                    "start": 24.52,
+                    "end": 24.78,
+                    "probability": 0.9881967902183533
+                },
+                {
+                    "word": " time,",
+                    "start": 24.78,
+                    "end": 25.26,
+                    "probability": 0.999200165271759
+                },
+                {
+                    "word": " my",
+                    "start": 25.92,
+                    "end": 25.98,
+                    "probability": 0.9800745248794556
+                },
+                {
+                    "word": " dear",
+                    "start": 25.98,
+                    "end": 26.12,
+                    "probability": 0.9981170892715454
+                },
+                {
+                    "word": " player,",
+                    "start": 26.12,
+                    "end": 26.44,
+                    "probability": 0.9862198829650879
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "seek": 2644,
+            "start": 26.44,
+            "end": 33.84,
+            "text": " I invite you to join me on the journey of making this place come alive. So let us embark together.",
+            "tokens": [
+                50363,
+                314,
+                14037,
+                345,
+                284,
+                4654,
+                502,
+                319,
+                262,
+                7002,
+                286,
+                1642,
+                428,
+                1295,
+                1282,
+                6776,
+                13,
+                1406,
+                1309,
+                514,
+                21030,
+                1978,
+                13,
+                50743
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.1725738525390625,
+            "compression_ratio": 1.1264367816091954,
+            "no_speech_prob": 0.017775485292077065,
+            "words": [
+                {
+                    "word": " I",
+                    "start": 26.44,
+                    "end": 26.74,
+                    "probability": 0.8757991790771484
+                },
+                {
+                    "word": " invite",
+                    "start": 26.74,
+                    "end": 27.02,
+                    "probability": 0.996769905090332
+                },
+                {
+                    "word": " you",
+                    "start": 27.02,
+                    "end": 27.24,
+                    "probability": 0.9981780052185059
+                },
+                {
+                    "word": " to",
+                    "start": 27.24,
+                    "end": 27.44,
+                    "probability": 0.9967038035392761
+                },
+                {
+                    "word": " join",
+                    "start": 27.44,
+                    "end": 27.66,
+                    "probability": 0.9984796643257141
+                },
+                {
+                    "word": " me",
+                    "start": 27.66,
+                    "end": 27.96,
+                    "probability": 0.9986650943756104
+                },
+                {
+                    "word": " on",
+                    "start": 27.96,
+                    "end": 28.42,
+                    "probability": 0.9748514294624329
+                },
+                {
+                    "word": " the",
+                    "start": 28.42,
+                    "end": 28.6,
+                    "probability": 0.9964806437492371
+                },
+                {
+                    "word": " journey",
+                    "start": 28.6,
+                    "end": 28.88,
+                    "probability": 0.9975792765617371
+                },
+                {
+                    "word": " of",
+                    "start": 28.88,
+                    "end": 29.18,
+                    "probability": 0.9929056167602539
+                },
+                {
+                    "word": " making",
+                    "start": 29.18,
+                    "end": 29.5,
+                    "probability": 0.9936258792877197
+                },
+                {
+                    "word": " this",
+                    "start": 29.5,
+                    "end": 29.76,
+                    "probability": 0.9956623911857605
+                },
+                {
+                    "word": " place",
+                    "start": 29.76,
+                    "end": 30.26,
+                    "probability": 0.9941267967224121
+                },
+                {
+                    "word": " come",
+                    "start": 30.26,
+                    "end": 30.82,
+                    "probability": 0.9907512068748474
+                },
+                {
+                    "word": " alive.",
+                    "start": 30.82,
+                    "end": 31.2,
+                    "probability": 0.9992954730987549
+                },
+                {
+                    "word": " So",
+                    "start": 32.02,
+                    "end": 32.08,
+                    "probability": 0.9283643364906311
+                },
+                {
+                    "word": " let",
+                    "start": 32.08,
+                    "end": 32.28,
+                    "probability": 0.8634589910507202
+                },
+                {
+                    "word": " us",
+                    "start": 32.28,
+                    "end": 32.6,
+                    "probability": 0.9814260005950928
+                },
+                {
+                    "word": " embark",
+                    "start": 32.6,
+                    "end": 33.2,
+                    "probability": 0.9853870868682861
+                },
+                {
+                    "word": " together.",
+                    "start": 33.2,
+                    "end": 33.84,
+                    "probability": 0.978070080280304
+                }
+            ]
+        }
+    ],
+    "language": "en"
+}

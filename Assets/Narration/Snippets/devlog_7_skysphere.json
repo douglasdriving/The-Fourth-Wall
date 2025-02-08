@@ -1,0 +1,466 @@
+{
+    "text": " I just want to code and implement game ideas all day, but at this stage even I have to admit that this world is fucking ugly. It is absolutely no personality and this little color change here is my pity attempt at making this place a little bit more nice. Is it working?",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 7.9,
+            "text": " I just want to code and implement game ideas all day, but at this stage even I have to admit that this world is",
+            "tokens": [
+                50363,
+                314,
+                655,
+                765,
+                284,
+                2438,
+                290,
+                3494,
+                983,
+                4213,
+                477,
+                1110,
+                11,
+                475,
+                379,
+                428,
+                3800,
+                772,
+                314,
+                423,
+                284,
+                9159,
+                326,
+                428,
+                995,
+                318,
+                50735
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.18403213164385626,
+            "compression_ratio": 1.542857142857143,
+            "no_speech_prob": 0.003126909490674734,
+            "words": [
+                {
+                    "word": " I",
+                    "start": 0.0,
+                    "end": 0.32,
+                    "probability": 0.8070878982543945
+                },
+                {
+                    "word": " just",
+                    "start": 0.32,
+                    "end": 0.46,
+                    "probability": 0.9885087609291077
+                },
+                {
+                    "word": " want",
+                    "start": 0.46,
+                    "end": 0.62,
+                    "probability": 0.7163125276565552
+                },
+                {
+                    "word": " to",
+                    "start": 0.62,
+                    "end": 0.88,
+                    "probability": 0.9948675632476807
+                },
+                {
+                    "word": " code",
+                    "start": 0.88,
+                    "end": 1.26,
+                    "probability": 0.993166983127594
+                },
+                {
+                    "word": " and",
+                    "start": 1.26,
+                    "end": 1.66,
+                    "probability": 0.9829977750778198
+                },
+                {
+                    "word": " implement",
+                    "start": 1.66,
+                    "end": 2.12,
+                    "probability": 0.9910263419151306
+                },
+                {
+                    "word": " game",
+                    "start": 2.12,
+                    "end": 2.48,
+                    "probability": 0.8605350255966187
+                },
+                {
+                    "word": " ideas",
+                    "start": 2.48,
+                    "end": 2.86,
+                    "probability": 0.9853112697601318
+                },
+                {
+                    "word": " all",
+                    "start": 2.86,
+                    "end": 3.28,
+                    "probability": 0.9844194054603577
+                },
+                {
+                    "word": " day,",
+                    "start": 3.28,
+                    "end": 3.5,
+                    "probability": 0.9955677390098572
+                },
+                {
+                    "word": " but",
+                    "start": 3.52,
+                    "end": 3.66,
+                    "probability": 0.990799069404602
+                },
+                {
+                    "word": " at",
+                    "start": 3.66,
+                    "end": 3.86,
+                    "probability": 0.9944762587547302
+                },
+                {
+                    "word": " this",
+                    "start": 3.86,
+                    "end": 4.06,
+                    "probability": 0.9988633394241333
+                },
+                {
+                    "word": " stage",
+                    "start": 4.06,
+                    "end": 4.52,
+                    "probability": 0.997169554233551
+                },
+                {
+                    "word": " even",
+                    "start": 4.52,
+                    "end": 4.98,
+                    "probability": 0.6891918182373047
+                },
+                {
+                    "word": " I",
+                    "start": 4.98,
+                    "end": 5.42,
+                    "probability": 0.9876697659492493
+                },
+                {
+                    "word": " have",
+                    "start": 5.42,
+                    "end": 5.9,
+                    "probability": 0.9886173605918884
+                },
+                {
+                    "word": " to",
+                    "start": 5.9,
+                    "end": 6.1,
+                    "probability": 0.9989895224571228
+                },
+                {
+                    "word": " admit",
+                    "start": 6.1,
+                    "end": 6.32,
+                    "probability": 0.9995317459106445
+                },
+                {
+                    "word": " that",
+                    "start": 6.32,
+                    "end": 6.58,
+                    "probability": 0.9708591103553772
+                },
+                {
+                    "word": " this",
+                    "start": 6.58,
+                    "end": 6.84,
+                    "probability": 0.9922294020652771
+                },
+                {
+                    "word": " world",
+                    "start": 6.84,
+                    "end": 7.22,
+                    "probability": 0.9980738162994385
+                },
+                {
+                    "word": " is",
+                    "start": 7.22,
+                    "end": 7.9,
+                    "probability": 0.9916399717330933
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 7.9,
+            "end": 11.46,
+            "text": " fucking ugly. It is absolutely no personality and",
+            "tokens": [
+                50772,
+                9372,
+                13400,
+                13,
+                632,
+                318,
+                5543,
+                645,
+                8806,
+                290,
+                50936
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.18403213164385626,
+            "compression_ratio": 1.542857142857143,
+            "no_speech_prob": 0.003126909490674734,
+            "words": [
+                {
+                    "word": " fucking",
+                    "start": 7.9,
+                    "end": 8.64,
+                    "probability": 0.6615701913833618
+                },
+                {
+                    "word": " ugly.",
+                    "start": 8.64,
+                    "end": 9.14,
+                    "probability": 0.9932981133460999
+                },
+                {
+                    "word": " It",
+                    "start": 9.62,
+                    "end": 9.72,
+                    "probability": 0.9817667603492737
+                },
+                {
+                    "word": " is",
+                    "start": 9.72,
+                    "end": 9.84,
+                    "probability": 0.9242187738418579
+                },
+                {
+                    "word": " absolutely",
+                    "start": 9.84,
+                    "end": 10.3,
+                    "probability": 0.9983927607536316
+                },
+                {
+                    "word": " no",
+                    "start": 10.3,
+                    "end": 10.54,
+                    "probability": 0.9956419467926025
+                },
+                {
+                    "word": " personality",
+                    "start": 10.54,
+                    "end": 11.22,
+                    "probability": 0.9858108758926392
+                },
+                {
+                    "word": " and",
+                    "start": 11.22,
+                    "end": 11.54,
+                    "probability": 0.4738296568393707
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "seek": 0,
+            "start": 12.3,
+            "end": 14.72,
+            "text": " this little color change here is my",
+            "tokens": [
+                50968,
+                428,
+                1310,
+                3124,
+                1487,
+                994,
+                318,
+                616,
+                51084
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.18403213164385626,
+            "compression_ratio": 1.542857142857143,
+            "no_speech_prob": 0.003126909490674734,
+            "words": [
+                {
+                    "word": " this",
+                    "start": 12.3,
+                    "end": 12.66,
+                    "probability": 0.9161650538444519
+                },
+                {
+                    "word": " little",
+                    "start": 12.66,
+                    "end": 12.9,
+                    "probability": 0.9964608550071716
+                },
+                {
+                    "word": " color",
+                    "start": 12.9,
+                    "end": 13.3,
+                    "probability": 0.8918822407722473
+                },
+                {
+                    "word": " change",
+                    "start": 13.3,
+                    "end": 13.72,
+                    "probability": 0.9852887988090515
+                },
+                {
+                    "word": " here",
+                    "start": 13.72,
+                    "end": 14.04,
+                    "probability": 0.9813836216926575
+                },
+                {
+                    "word": " is",
+                    "start": 14.04,
+                    "end": 14.24,
+                    "probability": 0.9848909974098206
+                },
+                {
+                    "word": " my",
+                    "start": 14.24,
+                    "end": 14.72,
+                    "probability": 0.9986042380332947
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "seek": 0,
+            "start": 14.72,
+            "end": 18.52,
+            "text": " pity attempt at making this place a little bit more nice.",
+            "tokens": [
+                51113,
+                26246,
+                2230,
+                379,
+                1642,
+                428,
+                1295,
+                257,
+                1310,
+                1643,
+                517,
+                3621,
+                13,
+                51284
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.18403213164385626,
+            "compression_ratio": 1.542857142857143,
+            "no_speech_prob": 0.003126909490674734,
+            "words": [
+                {
+                    "word": " pity",
+                    "start": 14.72,
+                    "end": 15.54,
+                    "probability": 0.7078307271003723
+                },
+                {
+                    "word": " attempt",
+                    "start": 15.54,
+                    "end": 16.0,
+                    "probability": 0.9945001602172852
+                },
+                {
+                    "word": " at",
+                    "start": 16.0,
+                    "end": 16.18,
+                    "probability": 0.9843137264251709
+                },
+                {
+                    "word": " making",
+                    "start": 16.18,
+                    "end": 16.38,
+                    "probability": 0.9986023306846619
+                },
+                {
+                    "word": " this",
+                    "start": 16.38,
+                    "end": 16.6,
+                    "probability": 0.9971287846565247
+                },
+                {
+                    "word": " place",
+                    "start": 16.6,
+                    "end": 16.78,
+                    "probability": 0.9930464625358582
+                },
+                {
+                    "word": " a",
+                    "start": 16.78,
+                    "end": 17.06,
+                    "probability": 0.9961555600166321
+                },
+                {
+                    "word": " little",
+                    "start": 17.06,
+                    "end": 17.24,
+                    "probability": 0.9947612881660461
+                },
+                {
+                    "word": " bit",
+                    "start": 17.24,
+                    "end": 17.42,
+                    "probability": 0.9948528409004211
+                },
+                {
+                    "word": " more",
+                    "start": 17.42,
+                    "end": 17.8,
+                    "probability": 0.9972611665725708
+                },
+                {
+                    "word": " nice.",
+                    "start": 17.8,
+                    "end": 18.52,
+                    "probability": 0.7910467982292175
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "seek": 0,
+            "start": 19.74,
+            "end": 20.28,
+            "text": " Is it working?",
+            "tokens": [
+                51332,
+                1148,
+                340,
+                1762,
+                30,
+                51432
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.18403213164385626,
+            "compression_ratio": 1.542857142857143,
+            "no_speech_prob": 0.003126909490674734,
+            "words": [
+                {
+                    "word": " Is",
+                    "start": 19.74,
+                    "end": 19.96,
+                    "probability": 0.9790986776351929
+                },
+                {
+                    "word": " it",
+                    "start": 19.96,
+                    "end": 20.06,
+                    "probability": 0.9971555471420288
+                },
+                {
+                    "word": " working?",
+                    "start": 20.06,
+                    "end": 20.28,
+                    "probability": 0.9993274211883545
+                }
+            ]
+        }
+    ],
+    "language": "en"
+}

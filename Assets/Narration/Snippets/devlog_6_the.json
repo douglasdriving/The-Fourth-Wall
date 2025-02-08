@@ -1,0 +1,420 @@
+{
+    "text": " Another dopeity dope idea, D blocks. The word D specifies one object among several. It is the specific object that I am talking about, that I am talking about. Not just A object, the object. And the AND rails are still here. Ciao!",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 3.26,
+            "text": " Another dopeity dope idea, D blocks.",
+            "tokens": [
+                50363,
+                6023,
+                45654,
+                414,
+                45654,
+                2126,
+                11,
+                360,
+                7021,
+                13,
+                50523
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.3587188151345324,
+            "compression_ratio": 1.5231788079470199,
+            "no_speech_prob": 0.002381671452894807,
+            "words": [
+                {
+                    "word": " Another",
+                    "start": 0.0,
+                    "end": 0.62,
+                    "probability": 0.7973765730857849
+                },
+                {
+                    "word": " dopeity",
+                    "start": 0.62,
+                    "end": 1.3,
+                    "probability": 0.5424842685461044
+                },
+                {
+                    "word": " dope",
+                    "start": 1.3,
+                    "end": 1.56,
+                    "probability": 0.6137328147888184
+                },
+                {
+                    "word": " idea,",
+                    "start": 1.56,
+                    "end": 2.1,
+                    "probability": 0.9936959147453308
+                },
+                {
+                    "word": " D",
+                    "start": 2.86,
+                    "end": 2.92,
+                    "probability": 0.4492095410823822
+                },
+                {
+                    "word": " blocks.",
+                    "start": 2.92,
+                    "end": 3.26,
+                    "probability": 0.42013677954673767
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 4.48,
+            "end": 5.46,
+            "text": " The word D",
+            "tokens": [
+                50567,
+                383,
+                1573,
+                360,
+                50659
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.3587188151345324,
+            "compression_ratio": 1.5231788079470199,
+            "no_speech_prob": 0.002381671452894807,
+            "words": [
+                {
+                    "word": " The",
+                    "start": 4.48,
+                    "end": 4.64,
+                    "probability": 0.9804471731185913
+                },
+                {
+                    "word": " word",
+                    "start": 4.64,
+                    "end": 4.94,
+                    "probability": 0.9969557523727417
+                },
+                {
+                    "word": " D",
+                    "start": 4.94,
+                    "end": 5.46,
+                    "probability": 0.3418130874633789
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "seek": 0,
+            "start": 5.46,
+            "end": 13.08,
+            "text": " specifies one object among several. It is the specific object that I am talking about, that I am talking about.",
+            "tokens": [
+                50659,
+                26052,
+                530,
+                2134,
+                1871,
+                1811,
+                13,
+                632,
+                318,
+                262,
+                2176,
+                2134,
+                326,
+                314,
+                716,
+                3375,
+                546,
+                11,
+                326,
+                314,
+                716,
+                3375,
+                546,
+                13,
+                51002
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.3587188151345324,
+            "compression_ratio": 1.5231788079470199,
+            "no_speech_prob": 0.002381671452894807,
+            "words": [
+                {
+                    "word": " specifies",
+                    "start": 5.46,
+                    "end": 6.4,
+                    "probability": 0.7870671153068542
+                },
+                {
+                    "word": " one",
+                    "start": 6.4,
+                    "end": 6.94,
+                    "probability": 0.9822074770927429
+                },
+                {
+                    "word": " object",
+                    "start": 6.94,
+                    "end": 7.28,
+                    "probability": 0.991228461265564
+                },
+                {
+                    "word": " among",
+                    "start": 7.28,
+                    "end": 7.52,
+                    "probability": 0.9498139023780823
+                },
+                {
+                    "word": " several.",
+                    "start": 7.52,
+                    "end": 8.02,
+                    "probability": 0.9940124154090881
+                },
+                {
+                    "word": " It",
+                    "start": 8.66,
+                    "end": 8.72,
+                    "probability": 0.9761715531349182
+                },
+                {
+                    "word": " is",
+                    "start": 8.72,
+                    "end": 9.14,
+                    "probability": 0.9892879724502563
+                },
+                {
+                    "word": " the",
+                    "start": 9.14,
+                    "end": 9.54,
+                    "probability": 0.5580298900604248
+                },
+                {
+                    "word": " specific",
+                    "start": 9.54,
+                    "end": 10.38,
+                    "probability": 0.9886753559112549
+                },
+                {
+                    "word": " object",
+                    "start": 10.38,
+                    "end": 10.82,
+                    "probability": 0.9902405738830566
+                },
+                {
+                    "word": " that",
+                    "start": 10.82,
+                    "end": 11.1,
+                    "probability": 0.9658311009407043
+                },
+                {
+                    "word": " I",
+                    "start": 11.1,
+                    "end": 11.18,
+                    "probability": 0.9388426542282104
+                },
+                {
+                    "word": " am",
+                    "start": 11.18,
+                    "end": 11.32,
+                    "probability": 0.6468777060508728
+                },
+                {
+                    "word": " talking",
+                    "start": 11.32,
+                    "end": 11.6,
+                    "probability": 0.9968888163566589
+                },
+                {
+                    "word": " about,",
+                    "start": 11.6,
+                    "end": 11.94,
+                    "probability": 0.9976539015769958
+                },
+                {
+                    "word": " that",
+                    "start": 12.1,
+                    "end": 12.14,
+                    "probability": 0.856585681438446
+                },
+                {
+                    "word": " I",
+                    "start": 12.14,
+                    "end": 12.26,
+                    "probability": 0.9790096282958984
+                },
+                {
+                    "word": " am",
+                    "start": 12.26,
+                    "end": 12.42,
+                    "probability": 0.802763044834137
+                },
+                {
+                    "word": " talking",
+                    "start": 12.42,
+                    "end": 12.66,
+                    "probability": 0.9969162940979004
+                },
+                {
+                    "word": " about.",
+                    "start": 12.66,
+                    "end": 13.08,
+                    "probability": 0.9989703893661499
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "seek": 0,
+            "start": 13.66,
+            "end": 16.04,
+            "text": " Not just A object, the object.",
+            "tokens": [
+                51032,
+                1892,
+                655,
+                317,
+                2134,
+                11,
+                262,
+                2134,
+                13,
+                51175
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.3587188151345324,
+            "compression_ratio": 1.5231788079470199,
+            "no_speech_prob": 0.002381671452894807,
+            "words": [
+                {
+                    "word": " Not",
+                    "start": 13.66,
+                    "end": 13.9,
+                    "probability": 0.9891557097434998
+                },
+                {
+                    "word": " just",
+                    "start": 13.9,
+                    "end": 14.24,
+                    "probability": 0.9968493580818176
+                },
+                {
+                    "word": " A",
+                    "start": 14.24,
+                    "end": 14.6,
+                    "probability": 0.436499685049057
+                },
+                {
+                    "word": " object,",
+                    "start": 14.6,
+                    "end": 14.92,
+                    "probability": 0.910757839679718
+                },
+                {
+                    "word": " the",
+                    "start": 15.5,
+                    "end": 15.64,
+                    "probability": 0.8001430034637451
+                },
+                {
+                    "word": " object.",
+                    "start": 15.64,
+                    "end": 16.04,
+                    "probability": 0.992300271987915
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "seek": 0,
+            "start": 16.98,
+            "end": 19.18,
+            "text": " And the AND rails are still here.",
+            "tokens": [
+                51206,
+                843,
+                262,
+                5357,
+                27587,
+                389,
+                991,
+                994,
+                13,
+                51306
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.3587188151345324,
+            "compression_ratio": 1.5231788079470199,
+            "no_speech_prob": 0.002381671452894807,
+            "words": [
+                {
+                    "word": " And",
+                    "start": 16.98,
+                    "end": 17.22,
+                    "probability": 0.9662965536117554
+                },
+                {
+                    "word": " the",
+                    "start": 17.22,
+                    "end": 17.48,
+                    "probability": 0.9791638255119324
+                },
+                {
+                    "word": " AND",
+                    "start": 17.48,
+                    "end": 17.8,
+                    "probability": 0.5586890578269958
+                },
+                {
+                    "word": " rails",
+                    "start": 17.8,
+                    "end": 18.04,
+                    "probability": 0.8730151653289795
+                },
+                {
+                    "word": " are",
+                    "start": 18.04,
+                    "end": 18.42,
+                    "probability": 0.9956344962120056
+                },
+                {
+                    "word": " still",
+                    "start": 18.42,
+                    "end": 18.62,
+                    "probability": 0.998702883720398
+                },
+                {
+                    "word": " here.",
+                    "start": 18.62,
+                    "end": 19.18,
+                    "probability": 0.9957535266876221
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "seek": 0,
+            "start": 19.94,
+            "end": 20.24,
+            "text": " Ciao!",
+            "tokens": [
+                51344,
+                327,
+                13481,
+                0,
+                51444
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.3587188151345324,
+            "compression_ratio": 1.5231788079470199,
+            "no_speech_prob": 0.002381671452894807,
+            "words": [
+                {
+                    "word": " Ciao!",
+                    "start": 19.94,
+                    "end": 20.24,
+                    "probability": 0.9326562285423279
+                }
+            ]
+        }
+    ],
+    "language": "en"
+}
