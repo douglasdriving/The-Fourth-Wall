@@ -58,7 +58,7 @@ namespace LevelPiece
             else SetColored();
         }
 
-        public void UpdateColor(string word)
+        void UpdateColor(string word)
         {
             if (rules && rules.colorPieces)
             {
