@@ -157,7 +157,7 @@
             "seek": 0,
             "start": 7.02,
             "end": 13.44,
-            "text": " Intensely at a blank piece of paper trying to brainstorm interesting innovative ideas for the game",
+            "text": " intensely at a blank piece of paper trying to brainstorm interesting innovative ideas for the game.",
             "tokens": [
                 50729,
                 2558,
@@ -186,7 +186,7 @@
             "no_speech_prob": 0.004896777216345072,
             "words": [
                 {
-                    "word": " Intensely",
+                    "word": " intensely",
                     "start": 7.02,
                     "end": 8.3,
                     "probability": 0.7406510810057322
@@ -276,7 +276,7 @@
                     "probability": 0.9992095232009888
                 },
                 {
-                    "word": " game",
+                    "word": " game.",
                     "start": 13.28,
                     "end": 13.639999999999999,
                     "probability": 0.9992656111717224
@@ -288,7 +288,7 @@
             "seek": 0,
             "start": 14.48,
             "end": 16.6,
-            "text": " language has meaning",
+            "text": " Language has meaning.",
             "tokens": [
                 51099,
                 3303,
@@ -302,7 +302,7 @@
             "no_speech_prob": 0.004896777216345072,
             "words": [
                 {
-                    "word": " language",
+                    "word": " Language",
                     "start": 14.48,
                     "end": 15.2,
                     "probability": 0.26952916383743286
@@ -314,7 +314,7 @@
                     "probability": 0.9818592667579651
                 },
                 {
-                    "word": " meaning",
+                    "word": " meaning.",
                     "start": 15.86,
                     "end": 16.6,
                     "probability": 0.993306577205658
@@ -456,7 +456,7 @@
             "seek": 0,
             "start": 23.56,
             "end": 28.7,
-            "text": " To a game mechanic a rail that connects two parts of the walkway",
+            "text": " to a game mechanic. A rail that connects two parts of the walkway,",
             "tokens": [
                 51544,
                 1675,
@@ -481,7 +481,7 @@
             "no_speech_prob": 0.004896777216345072,
             "words": [
                 {
-                    "word": " To",
+                    "word": " to",
                     "start": 23.56,
                     "end": 24.12,
                     "probability": 0.33860886096954346
@@ -499,13 +499,13 @@
                     "probability": 0.9906468391418457
                 },
                 {
-                    "word": " mechanic",
+                    "word": " mechanic.",
                     "start": 24.5,
                     "end": 25.0,
                     "probability": 0.9974396228790283
                 },
                 {
-                    "word": " a",
+                    "word": " A",
                     "start": 25.0,
                     "end": 25.88,
                     "probability": 0.7623676061630249
@@ -553,7 +553,7 @@
                     "probability": 0.99957674741745
                 },
                 {
-                    "word": " walkway",
+                    "word": " walkway,",
                     "start": 28.24,
                     "end": 28.7,
                     "probability": 0.9851695001125336
@@ -565,7 +565,7 @@
             "seek": 2870,
             "start": 28.7,
             "end": 36.5,
-            "text": " Similarly to how the word and connects two clauses in a sentence and that is what I did and now",
+            "text": " similarly to how the word and connects two clauses in a sentence, and that is what I did and now",
             "tokens": [
                 50375,
                 15298,
@@ -596,7 +596,7 @@
             "no_speech_prob": 0.00025465714861638844,
             "words": [
                 {
-                    "word": " Similarly",
+                    "word": " similarly",
                     "start": 28.7,
                     "end": 29.4,
                     "probability": 0.46513286232948303
@@ -662,7 +662,7 @@
                     "probability": 0.9965446591377258
                 },
                 {
-                    "word": " sentence",
+                    "word": " sentence,",
                     "start": 33.18,
                     "end": 33.56,
                     "probability": 0.9974381923675537
@@ -698,7 +698,7 @@
                     "probability": 0.9921908974647522
                 },
                 {
-                    "word": " did",
+                    "word": " did,",
                     "start": 35.18,
                     "end": 35.44,
                     "probability": 0.9984304308891296
@@ -722,7 +722,7 @@
             "seek": 2870,
             "start": 36.5,
             "end": 44.74,
-            "text": " It's in the game and now you're playing it and now I'm just worse using the word and over and over and over",
+            "text": " it's in the game, and now you're playing it, and now I'm just using the word and over and over and over",
             "tokens": [
                 50741,
                 632,
@@ -759,7 +759,7 @@
             "no_speech_prob": 0.00025465714861638844,
             "words": [
                 {
-                    "word": " It's",
+                    "word": " it's",
                     "start": 36.5,
                     "end": 36.92,
                     "probability": 0.5133361797779799
@@ -777,7 +777,7 @@
                     "probability": 0.9993308782577515
                 },
                 {
-                    "word": " game",
+                    "word": " game,",
                     "start": 37.2,
                     "end": 37.46,
                     "probability": 0.9992801547050476
@@ -807,7 +807,7 @@
                     "probability": 0.9992393255233765
                 },
                 {
-                    "word": " it",
+                    "word": " it,",
                     "start": 39.3,
                     "end": 39.66,
                     "probability": 0.9912450909614563
@@ -837,12 +837,6 @@
                     "probability": 0.8877962231636047
                 },
                 {
-                    "word": " worse",
-                    "start": 41.08,
-                    "end": 41.4,
-                    "probability": 0.35994040966033936
-                },
-                {
                     "word": " using",
                     "start": 41.4,
                     "end": 41.84,
@@ -867,7 +861,7 @@
                     "probability": 0.9422105550765991
                 },
                 {
-                    "word": " over",
+                    "word": " over,",
                     "start": 42.68,
                     "end": 43.12,
                     "probability": 0.7978862524032593
@@ -879,7 +873,7 @@
                     "probability": 0.9797070026397705
                 },
                 {
-                    "word": " over",
+                    "word": " over,",
                     "start": 43.52,
                     "end": 43.92,
                     "probability": 0.9973885416984558
@@ -903,7 +897,7 @@
             "seek": 2870,
             "start": 44.74,
             "end": 48.94,
-            "text": " Again to hammer in the point and I hope it makes sense to you",
+            "text": " again to hammer in the point, and I hope it makes sense to you.",
             "tokens": [
                 51159,
                 6521,
@@ -928,7 +922,7 @@
             "no_speech_prob": 0.00025465714861638844,
             "words": [
                 {
-                    "word": " Again",
+                    "word": " again",
                     "start": 44.74,
                     "end": 45.16,
                     "probability": 0.1237771287560463
@@ -958,7 +952,7 @@
                     "probability": 0.9982851147651672
                 },
                 {
-                    "word": " point",
+                    "word": " point,",
                     "start": 46.68,
                     "end": 46.94,
                     "probability": 0.7681410312652588
@@ -1006,7 +1000,7 @@
                     "probability": 0.9988381266593933
                 },
                 {
-                    "word": " you",
+                    "word": " you.",
                     "start": 48.72,
                     "end": 48.94,
                     "probability": 0.9995453953742981

@@ -385,7 +385,7 @@
             "seek": 0,
             "start": 16.88,
             "end": 22.04,
-            "text": " Stand around and watch what is happening. You need to actually keep moving forward as I speak",
+            "text": " Stand around and watch what is happening. You need to actually keep moving forward as I speak.",
             "tokens": [
                 51221,
                 5751,
@@ -510,7 +510,7 @@
                     "probability": 0.9988505840301514
                 },
                 {
-                    "word": " speak",
+                    "word": " speak.",
                     "start": 21.52,
                     "end": 22.04,
                     "probability": 0.9961429238319397
@@ -630,7 +630,7 @@
             "seek": 2706,
             "start": 27.06,
             "end": 32.36,
-            "text": " Like a little bit more to do or to think about as a player when you're playing the game",
+            "text": " like a little bit more to do or to think about as a player when you're playing the game.",
             "tokens": [
                 50379,
                 4525,
@@ -661,7 +661,7 @@
             "no_speech_prob": 0.0003754945064429194,
             "words": [
                 {
-                    "word": " Like",
+                    "word": " like",
                     "start": 27.06,
                     "end": 27.88,
                     "probability": 0.12160824239253998
@@ -769,7 +769,7 @@
                     "probability": 0.9962881803512573
                 },
                 {
-                    "word": " game",
+                    "word": " game.",
                     "start": 32.22,
                     "end": 32.44,
                     "probability": 0.9995450377464294
@@ -781,7 +781,7 @@
             "seek": 2706,
             "start": 33.660000000000004,
             "end": 35.56,
-            "text": " Yeah, hope you're having fun out there",
+            "text": " Yeah, hope you're having fun out there!",
             "tokens": [
                 50687,
                 9425,
@@ -837,7 +837,7 @@
                     "probability": 0.9995680451393127
                 },
                 {
-                    "word": " there",
+                    "word": " there!",
                     "start": 35.32,
                     "end": 35.56,
                     "probability": 0.9988366961479187

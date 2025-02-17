@@ -6,7 +6,7 @@
             "seek": 0,
             "start": 0.0,
             "end": 3.26,
-            "text": " Another dopeity dope idea, D blocks.",
+            "text": " Another dopeity dope idea, the blocks!",
             "tokens": [
                 50363,
                 6023,
@@ -50,13 +50,13 @@
                     "probability": 0.9936959147453308
                 },
                 {
-                    "word": " D",
+                    "word": " the",
                     "start": 2.86,
                     "end": 2.92,
                     "probability": 0.4492095410823822
                 },
                 {
-                    "word": " blocks.",
+                    "word": " blocks!",
                     "start": 2.92,
                     "end": 3.26,
                     "probability": 0.42013677954673767
@@ -68,7 +68,7 @@
             "seek": 0,
             "start": 4.48,
             "end": 5.46,
-            "text": " The word D",
+            "text": " The word the",
             "tokens": [
                 50567,
                 383,
@@ -94,7 +94,7 @@
                     "probability": 0.9969557523727417
                 },
                 {
-                    "word": " D",
+                    "word": " the",
                     "start": 4.94,
                     "end": 5.46,
                     "probability": 0.3418130874633789
@@ -266,7 +266,7 @@
             "seek": 0,
             "start": 13.66,
             "end": 16.04,
-            "text": " Not just A object, the object.",
+            "text": " Not just 'a' object, the object.",
             "tokens": [
                 51032,
                 1892,
@@ -297,7 +297,7 @@
                     "probability": 0.9968493580818176
                 },
                 {
-                    "word": " A",
+                    "word": " 'a'",
                     "start": 14.24,
                     "end": 14.6,
                     "probability": 0.436499685049057
@@ -327,7 +327,7 @@
             "seek": 0,
             "start": 16.98,
             "end": 19.18,
-            "text": " And the AND rails are still here.",
+            "text": " And the and -rails are still here.",
             "tokens": [
                 51206,
                 843,
@@ -358,13 +358,13 @@
                     "probability": 0.9791638255119324
                 },
                 {
-                    "word": " AND",
+                    "word": " and'",
                     "start": 17.48,
                     "end": 17.8,
                     "probability": 0.5586890578269958
                 },
                 {
-                    "word": " rails",
+                    "word": " -rails",
                     "start": 17.8,
                     "end": 18.04,
                     "probability": 0.8730151653289795

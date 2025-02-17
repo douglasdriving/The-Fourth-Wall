@@ -6,7 +6,7 @@
             "seek": 0,
             "start": 0.0,
             "end": 5.78,
-            "text": " What you are looking at, dear player, is the default sky sphere of the Unity game engine.",
+            "text": " What you are looking at, dear player, is the default skysphere of the Unity game engine.",
             "tokens": [
                 50363,
                 1867,
@@ -97,16 +97,10 @@
                     "probability": 0.9578344821929932
                 },
                 {
-                    "word": " sky",
+                    "word": " skysphere",
                     "start": 3.28,
-                    "end": 3.62,
-                    "probability": 0.3752477467060089
-                },
-                {
-                    "word": " sphere",
-                    "start": 3.62,
                     "end": 3.94,
-                    "probability": 0.953727126121521
+                    "probability": 0.3752477467060089
                 },
                 {
                     "word": " of",

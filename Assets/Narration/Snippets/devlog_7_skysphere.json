@@ -192,7 +192,7 @@
             "seek": 0,
             "start": 7.9,
             "end": 11.46,
-            "text": " fucking ugly. It is absolutely no personality and",
+            "text": " fucking ugly. It has absolutely no personality and",
             "tokens": [
                 50772,
                 9372,
@@ -230,7 +230,7 @@
                     "probability": 0.9817667603492737
                 },
                 {
-                    "word": " is",
+                    "word": " has",
                     "start": 9.72,
                     "end": 9.84,
                     "probability": 0.9242187738418579
@@ -248,7 +248,7 @@
                     "probability": 0.9956419467926025
                 },
                 {
-                    "word": " personality",
+                    "word": " personality,",
                     "start": 10.54,
                     "end": 11.22,
                     "probability": 0.9858108758926392

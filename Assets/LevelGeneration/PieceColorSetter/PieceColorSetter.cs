@@ -17,9 +17,9 @@ namespace LevelPiece
             pieceColorCreator = FindObjectOfType<PieceColorCreator>();
             meshesToColor = GetComponentsInChildren<MeshRenderer>();
             rules = FindObjectOfType<SceneRules>();
-            UpdateToAverageColor();
             if (rules && rules.colorPieces)
             {
+                UpdateToAverageColor();
                 if (rules.freezePiecesOnSpawn)
                 {
                     SetFrozenMaterial();
@@ -73,10 +73,6 @@ namespace LevelPiece
                 coloredMaterial = new Material(baseMaterial);
                 coloredMaterial.color = materialColor;
             }
-            else
-            {
-                Debug.LogWarning("PieceColorSetter: SceneRules not found or colorPieces is false. Will not color");
-            }
         }
 
         public void SetFrozenMaterial()
@@ -86,7 +82,10 @@ namespace LevelPiece
 
         public void SetColored()
         {
-            ApplyMaterial(coloredMaterial);
+            if (rules && rules.colorPieces)
+            {
+                ApplyMaterial(coloredMaterial);
+            }
         }
 
         public void SetBaseMaterial()

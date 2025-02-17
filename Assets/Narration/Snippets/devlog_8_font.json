@@ -6,7 +6,7 @@
             "seek": 0,
             "start": 0.0,
             "end": 2.98,
-            "text": " Okay, so now I change the font.",
+            "text": " Okay, so now I changed the font.",
             "tokens": [
                 50363,
                 16805,
@@ -50,7 +50,7 @@
                     "probability": 0.9826437830924988
                 },
                 {
-                    "word": " change",
+                    "word": " changed",
                     "start": 2.42,
                     "end": 2.66,
                     "probability": 0.6395422220230103
