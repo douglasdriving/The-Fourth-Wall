@@ -730,9 +730,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fae21c5c13e5a044c816ef05c0dbbd79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textToCheck: {fileID: 7581956394668307381}
   baseMaterial: {fileID: 2100000, guid: 9785987b5a406634da0c31d388254185, type: 2}
   frozenMaterial: {fileID: 2100000, guid: 355f6f7850fe5f445a09f9183786217c, type: 2}
+  positioner: {fileID: -2184872688145861670}
 --- !u!1 &5136269057192344317
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,17 +1295,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
---- !u!114 &7581956394668307381 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2098844638431199316, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}
-  m_PrefabInstance: {fileID: 8365468466925827041}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &7697300127198253963 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2218674348487663722, guid: 9c4f1036d2f365f459e9a13918a9251d, type: 3}

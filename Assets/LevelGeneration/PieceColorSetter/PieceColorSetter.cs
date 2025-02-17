@@ -8,6 +8,7 @@ namespace LevelPiece
         MeshRenderer[] meshesToColor;
         [SerializeField] Material baseMaterial;
         [SerializeField] Material frozenMaterial;
+        [SerializeField] Positioner positioner;
         Material coloredMaterial;
         PieceColorCreator pieceColorCreator;
         SceneRules rules;
@@ -48,6 +49,13 @@ namespace LevelPiece
             {
                 meshToColor.material = material;
             }
+        }
+
+        public void OnWordSet(string word)
+        {
+            UpdateColor(word);
+            if (positioner.isFrozen) SetFrozenMaterial();
+            else SetColored();
         }
 
         public void UpdateColor(string word)
