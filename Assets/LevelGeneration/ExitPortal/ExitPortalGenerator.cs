@@ -9,19 +9,35 @@ namespace LevelGeneration
     /// </summary>
     public class ExitPortalGenerator : MonoBehaviour
     {
-        [SerializeField] GameObject exitPortalPrefab;
-        [SerializeField] float portalHeightAbovePlatform = 1.5f;
+        [SerializeField] GameObject portalPrefab;
+        [SerializeField] GameObject quizPortalPrefab;
+        [SerializeField] float portalHeightAbovePlatform = 1f;
         [SerializeField] float timeBetweenPieceAndPortalSpawn = 0.8f;
 
         public IEnumerator GenerateExitPortalAfterDelay(float delay)
         {
             yield return new WaitForSeconds(delay);
             GameObject portalLevelPiece = FindObjectOfType<LevelGenerator>().SpawnNextPiece("", false);
+            yield return new WaitForSeconds(timeBetweenPieceAndPortalSpawn);
+            SpawnPortal(portalLevelPiece);
+        }
+
+        private void SpawnPortal(GameObject portalLevelPiece)
+        {
             LevelPiece.Positioner piecePositioner = portalLevelPiece.GetComponent<LevelPiece.Positioner>();
             Vector3 portalPos = piecePositioner.targetPos + Vector3.up * portalHeightAbovePlatform;
-            yield return new WaitForSeconds(timeBetweenPieceAndPortalSpawn);
-            GameObject portal = Instantiate(exitPortalPrefab, portalPos, piecePositioner.targetRot);
-            SetQuizIfExists(portal);
+            Quaternion targetRot = piecePositioner.targetRot;
+
+            SceneRules rules = FindObjectOfType<SceneRules>();
+            if (rules && rules.endQuiz)
+            {
+                GameObject portal = Instantiate(quizPortalPrefab, portalPos, targetRot);
+                SetQuizIfExists(portal);
+            }
+            else
+            {
+                Instantiate(portalPrefab, portalPos, targetRot);
+            }
         }
 
         private void SetQuizIfExists(GameObject portal)

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6369491074704825201}
   - component: {fileID: 8118289208220695993}
   - component: {fileID: 5432473818868263164}
+  - component: {fileID: 5136570225177799811}
   m_Layer: 0
   m_Name: LevelGenerator
   m_TagString: Untagged
@@ -86,6 +87,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkwayPiecePrefab: {fileID: 6737570752163496808, guid: fad8276afac0bcf4f9ec4921e4a11d90, type: 3}
   levelPieceMolds: {fileID: 0}
+  spawnHeight: 1.5
+  spawnSpreadMultiplier: 0.3
 --- !u!114 &6369491074704825201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,8 +101,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a44d0074d66d7e74ab5cec6b56175013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exitPortalPrefab: {fileID: 4335569441670879784, guid: a94d6cfa1021f69488d97c5bb3922e7f, type: 3}
+  portalPrefab: {fileID: 4335569441670879784, guid: a94d6cfa1021f69488d97c5bb3922e7f, type: 3}
+  quizPortalPrefab: {fileID: 4335569441670879784, guid: ede3a4815b17a414fbeac24ece619543, type: 3}
   portalHeightAbovePlatform: 2.88
+  timeBetweenPieceAndPortalSpawn: 0.8
 --- !u!114 &8118289208220695993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,6 +132,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePiecePrefab: {fileID: 4795037251955250072, guid: 2f5bf6a0547761b4fa1b9737e2e51006, type: 3}
+--- !u!114 &5136570225177799811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114052340901206385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ddccff96ff2f954d92a0b00b5780378, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  question: 
+  answers: []
+  correctAnswerIndex: 0
 --- !u!1 &6146862377241442123
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,6 +218,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3816724244464975986}
     m_Modifications:
+    - target: {fileID: -2316359044262191197, guid: fad8276afac0bcf4f9ec4921e4a11d90, type: 3}
+      propertyPath: textToSet
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6737570752163496808, guid: fad8276afac0bcf4f9ec4921e4a11d90, type: 3}
       propertyPath: m_Name
       value: WalkwayPiece
