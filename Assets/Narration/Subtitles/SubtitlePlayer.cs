@@ -12,6 +12,7 @@ namespace Narration
     {
         [SerializeField] LevelGenerator levelGenerator;
         [SerializeField] TextMeshProUGUI wordText;
+        [SerializeField] bool isGeneratingLevel = true;
         const float lingerTime = 1f;
         SubtitleJsonData currentSubtitle;
         int currentWordIndex = 0;
@@ -21,7 +22,7 @@ namespace Narration
 
         void Awake()
         {
-            if (levelGenerator) wordText.gameObject.SetActive(false);
+            if (isGeneratingLevel) wordText.gameObject.SetActive(false);
             else wordText.gameObject.SetActive(true);
         }
 
@@ -32,6 +33,12 @@ namespace Narration
             currentSegmentIndex = 0;
             timeForNextSubtitleStep = currentSubtitle.segments[0].words[0].start;
             isLingering = false;
+        }
+
+        public void EnableLevelGeneration()
+        {
+            isGeneratingLevel = true;
+            wordText.gameObject.SetActive(false);
         }
 
         void Update()
@@ -86,7 +93,7 @@ namespace Narration
         {
             SubtitleWord previousWord = GetPreviousWord();
             bool startsNewSentence = previousWord != null && EndsSentence(previousWord);
-            if (levelGenerator) levelGenerator.SpawnNextPiece(word, startsNewSentence);
+            if (isGeneratingLevel) levelGenerator.SpawnNextPiece(word, startsNewSentence);
             else wordText.text = word;
         }
 

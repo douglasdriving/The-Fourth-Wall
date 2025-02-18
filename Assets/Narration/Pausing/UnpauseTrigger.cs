@@ -21,7 +21,7 @@ namespace Narration
         {
             if (!isActive) return;
             if (!other.CompareTag("Player")) return;
-            NarrationManager.Unpause();
+            FindObjectOfType<NarrationManager>().Resume();
             DeactivateSelfAndLinkedUnpauseTriggers();
         }
 
