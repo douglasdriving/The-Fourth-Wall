@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: ce1bcaf9058cb4a43b07219d161c909b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - worldTextPrefab: {fileID: 8086683794745082849, guid: 3d3448b468983cb40b03f92867865657, type: 3}
+  - objectToSpawnOn: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

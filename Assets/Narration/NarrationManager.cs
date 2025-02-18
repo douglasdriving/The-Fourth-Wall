@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using LevelGeneration;
 using UnityEngine;
+using UnityEngine.Video;
 
 namespace Narration
 {
@@ -27,15 +28,21 @@ namespace Narration
         static float totalDuration = 0;
         static List<float> pausesScheduled = new();
 
-        [SerializeField] AudioClip clipToPlay;
-        [SerializeField] TextAsset subtitleToPlayOnStart;
+        [SerializeField] AudioClip audioClip;
+        [SerializeField] VideoClip videoClip;
+        [SerializeField] TextAsset subtitle;
         [SerializeField] float startDelay = 1.5f;
         [SerializeField] bool endSceneOnEnd = false;
         [SerializeField] string placeHolderText = "This is the placeholder devlog text. It should be replaced with a proper description of the class.";
+        [SerializeField] VideoPlayer videoPlayer;
 
         void Awake()
         {
             subtitlePlayer = FindObjectOfType<SubtitlePlayer>();
+            if (videoClip != null && audioClip != null)
+            {
+                Debug.LogWarning("both audio and video provided. will only play video.");
+            }
         }
 
         void Start()
@@ -46,27 +53,36 @@ namespace Narration
         void PlayNarration()
         {
 
-            SubtitleJsonData subtitle;
+            SubtitleJsonData subtitleData;
 
-            if (subtitleToPlayOnStart == null)
+            if (subtitle == null)
             {
                 Debug.LogWarning("No subtitle file found for narration clip. Will run placeholder script.");
-                subtitle = SubtitleJsonReader.MakeSubtitleFromText(placeHolderText);
-                totalDuration = subtitle.GetTotalDuration();
+                subtitleData = SubtitleJsonReader.MakeSubtitleFromText(placeHolderText);
+                totalDuration = subtitleData.GetTotalDuration();
             }
             else
             {
-                VoiceOverPlayer.PlayClip(clipToPlay);
-                subtitle = SubtitleJsonReader.ReadSubtitleJson(subtitleToPlayOnStart.text);
-                totalDuration = clipToPlay.length;
+                if (videoClip)
+                {
+                    videoPlayer.clip = videoClip;
+                    videoPlayer.Play();
+                    totalDuration = (float)videoClip.length;
+                }
+                else
+                {
+                    VoiceOverPlayer.PlayClip(audioClip);
+                    totalDuration = audioClip.length;
+                }
+                subtitleData = SubtitleJsonReader.ReadSubtitleJson(subtitle.text);
             }
 
             if (subtitlePlayer == null) Debug.LogWarning("SubtitlePlayer not found in scene, will not start subtitles");
-            else subtitlePlayer.StartSubtitles(subtitle);
+            else subtitlePlayer.StartSubtitles(subtitleData);
 
             playState = PlayState.PLAY;
             timePlayed = 0;
-            SetPausesFromSubtitle(subtitle);
+            SetPausesFromSubtitle(subtitleData);
             SchedulePortalSpawn(totalDuration);
             if (endSceneOnEnd) StartCoroutine(EndSceneAfterDelay(totalDuration));
 
@@ -87,10 +103,10 @@ namespace Narration
             else Debug.LogWarning("ExitPortalGenerator not found in scene. Will not attempt to spawn exit portal.");
         }
 
-        private static void SetPausesFromSubtitle(SubtitleJsonData subtitle)
+        private static void SetPausesFromSubtitle(SubtitleJsonData subtitleData)
         {
             pausesScheduled.Clear();
-            foreach (SubtitleWord word in subtitle.GetWords())
+            foreach (SubtitleWord word in subtitleData.GetWords())
             {
                 if (word.pause)
                 {
@@ -117,22 +133,25 @@ namespace Narration
             }
         }
 
-        private static void Pause()
+        private void Pause()
         {
             playState = PlayState.PAUSE;
             VoiceOverPlayer.Pause();
+            videoPlayer.Pause();
             UnpauseTriggerActivator.ActivateUnpauseTriggerOnLastPieces(numberOfUnpausePiecesOnPause);
         }
 
-        public static void Unpause()
+        public void Resume()
         {
             playState = PlayState.PLAY;
-            VoiceOverPlayer.Play();
+            if (videoClip) videoPlayer.Play();
+            else VoiceOverPlayer.Play();
         }
 
-        public static void StopAndReset()
+        public void StopAndReset()
         {
-            VoiceOverPlayer.Stop();
+            if (videoClip) videoPlayer.Stop();
+            else VoiceOverPlayer.Stop();
             if (subtitlePlayer != null) subtitlePlayer.StopSubtitle();
             playState = PlayState.STOP;
             timePlayed = 0;

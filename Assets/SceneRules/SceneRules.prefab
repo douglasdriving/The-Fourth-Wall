@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2165227233985809643}
   - component: {fileID: 4943771266182235940}
+  - component: {fileID: 182013222825949167}
   m_Layer: 0
   m_Name: SceneRules
   m_TagString: Untagged
@@ -46,4 +47,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   freezePiecesOnSpawn: 0
   pieceSpawnSpread: 0
-  setPieceColors: 0
+  colorPieces: 0
+  endQuiz: 0
+--- !u!114 &182013222825949167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5260448062687219015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d92fdd8da28e3df4a9933afae2f28030, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
