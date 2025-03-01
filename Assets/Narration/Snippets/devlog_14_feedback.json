@@ -1907,7 +1907,7 @@
             "seek": 10098,
             "start": 107.24,
             "end": 113.1,
-            "text": " But first, after all the real value of using this place happens when you interact with",
+            "text": " Because after all the real value of this place happens when you interact with",
             "tokens": [
                 50675,
                 887,
@@ -1935,16 +1935,10 @@
             "no_speech_prob": 0.6566503643989563,
             "words": [
                 {
-                    "word": " But",
+                    "word": " Because",
                     "start": 107.24,
                     "end": 107.3,
                     "probability": 0.614414632320404
-                },
-                {
-                    "word": " first,",
-                    "start": 107.3,
-                    "end": 107.58,
-                    "probability": 0.9568796753883362
                 },
                 {
                     "word": " after",
@@ -1981,12 +1975,6 @@
                     "start": 109.68,
                     "end": 109.92,
                     "probability": 0.9970329999923706
-                },
-                {
-                    "word": " using",
-                    "start": 109.92,
-                    "end": 110.2,
-                    "probability": 0.9965158700942993
                 },
                 {
                     "word": " this",
