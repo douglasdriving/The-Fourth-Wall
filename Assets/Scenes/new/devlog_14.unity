@@ -213,7 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   worldTextPrefab: {fileID: 8086683794745082849, guid: 88f475485ec69004082c14078fc0c509, type: 3}
-  spawnAtSecond: 31.63
+  spawnAtSecond: 46.5
   objectToSpawnOn: {fileID: 1614437557}
   offset: {x: 1.5, y: 2, z: 0}
   text: silly doll traversing the space with my head on it
@@ -233,13 +233,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   worldTextPrefab: {fileID: 8086683794745082849, guid: 88f475485ec69004082c14078fc0c509, type: 3}
-  spawnAtSecond: 27.38
+  spawnAtSecond: 40.48
   objectToSpawnOn: {fileID: 1614437557}
   offset: {x: 3, y: -2, z: -2}
   text: voice to level generator
   scalePerDistance: 0.06
   followObject: 1
-  destroyAfterSeconds: 4
+  destroyAfterSeconds: 6
 --- !u!1001 &122221426
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -774,7 +774,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -5861524622178689696, guid: be70666865af3d745afcc89cba35b580, type: 3}
       propertyPath: hideVideoUntil
-      value: 4
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: -5861524622178689696, guid: be70666865af3d745afcc89cba35b580, type: 3}
       propertyPath: startVideoAfterSeconds
@@ -1065,9 +1065,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 0}
-  videoClip: {fileID: 32900000, guid: 0ab8cd6bad0e20f4fa00f0c1f44c3503, type: 3}
-  subtitle: {fileID: 4900000, guid: bbc13c568f3149240881d86a837a3186, type: 3}
-  startDelay: 0.5
+  videoClip: {fileID: 32900000, guid: 6551a285fefa6fb49b84bf9024e1af10, type: 3}
+  subtitle: {fileID: 4900000, guid: 38f24ff1ddd7bd541a86c0180cec3a76, type: 3}
+  startDelay: 0
   endSceneOnEnd: 0
   placeHolderText: placeholder text blah blah blah!
   videoPlayer: {fileID: 1614437558}
@@ -1277,7 +1277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5136570225177799811, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: question
-      value: 'Reversed captcha: What are you reading?'
+      value: who creates this experience?
       objectReference: {fileID: 0}
     - target: {fileID: 5136570225177799811, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: answers.Array.size
@@ -1289,15 +1289,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5136570225177799811, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: answers.Array.data[0]
-      value: An AI-written text
+      value: me
       objectReference: {fileID: 0}
     - target: {fileID: 5136570225177799811, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: answers.Array.data[1]
-      value: Random text
+      value: you
       objectReference: {fileID: 0}
     - target: {fileID: 5136570225177799811, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: answers.Array.data[2]
-      value: A human-written text
+      value: us
       objectReference: {fileID: 0}
     - target: {fileID: 5291893488134512238, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: m_IsActive
