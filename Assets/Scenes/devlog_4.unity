@@ -667,9 +667,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d124fb07a4f53f4281d4edb4ef76cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: b8eebf90fbd26ba4d89c083fcae797da, type: 3}
+  audioClip: {fileID: 8300000, guid: 5a65a462281fdd845b9bd4243c1db983, type: 3}
   videoClip: {fileID: 0}
-  subtitle: {fileID: 4900000, guid: ac8912dade5610f4eb6d8b3b8fb61b83, type: 3}
+  subtitle: {fileID: 4900000, guid: 2866223474dd5344ba2b729e92a686fa, type: 3}
   startDelay: 0.5
   endSceneOnEnd: 0
   placeHolderText: "Ok so I thought about it and yea that subtitle thing just felt
