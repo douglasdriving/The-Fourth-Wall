@@ -667,20 +667,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d124fb07a4f53f4281d4edb4ef76cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 8afbd90c0575c1b4ca5ff252d9f12658, type: 3}
+  audioClip: {fileID: 8300000, guid: aa853a649b4cade4690a89f790a313c5, type: 3}
   videoClip: {fileID: 0}
-  subtitle: {fileID: 4900000, guid: a660907c93ef7844da688f3db8cff670, type: 3}
+  subtitle: {fileID: 4900000, guid: a0988cb4f5e6a6f4f88ddd7995939352, type: 3}
   startDelay: 0.5
   endSceneOnEnd: 0
-  placeHolderText: "\u201CWhat else can I do with the text\u201D. I thought to myself
-    one day, while sitting at my desk staring intensily at a blank piece of paper
-    trying brainstorm interesting, innovative ideas for the game.  Language has meaning.
-    Game mechanics could represent that meaning.  So my first idea: connect the word
-    \u201Cand\u201D to a game mechanic. A rail that connects two parts of the walkway,
-    similarly to how the word \u201Cand\u201D connects two clauses in a sentence. 
-    And that is what I did. And now it\u2019s in the game. And now you are playing
-    it. And now I am just using the word \u201Cand\u201D over and over and over again
-    to hammer in the point.  And I hope this makes sense to you."
+  placeHolderText: this level introduces and rails
   videoPlayer: {fileID: 0}
 --- !u!4 &1957703236
 Transform:
