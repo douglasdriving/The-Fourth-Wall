@@ -667,9 +667,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d124fb07a4f53f4281d4edb4ef76cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 8a6d838278081c14daa69ecfa3ac6d8a, type: 3}
+  audioClip: {fileID: 8300000, guid: 020266ec563101346baa6c7df91b0cd9, type: 3}
   videoClip: {fileID: 0}
-  subtitle: {fileID: 4900000, guid: a2a6557fd48ba984fb9c8e4a574bef3e, type: 3}
+  subtitle: {fileID: 4900000, guid: e546805308aea6843b86566e96313c7b, type: 3}
   startDelay: 0.5
   endSceneOnEnd: 0
   placeHolderText: "Okay, hello again!  I have added some more gameplay elements

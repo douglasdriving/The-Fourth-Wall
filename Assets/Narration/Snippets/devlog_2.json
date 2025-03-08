@@ -1,0 +1,717 @@
+{
+    "text": " Hello again, I have added some more gameplay elements now. So between each sentence there's a gap that you need to jump over by pressing the spacebar. Also the walkway now disappears behind you after a while, so you can't just stand around and watch what's happening. You need to actually keep moving forward to not fall off. The game is still not very impressive, but these elements will give you just a little bit more to think about as a player. See you soon.",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 4.22,
+            "text": " Hello again, I have added some more gameplay elements now.",
+            "tokens": [
+                50363,
+                18435,
+                757,
+                11,
+                314,
+                423,
+                2087,
+                617,
+                517,
+                11327,
+                4847,
+                783,
+                13,
+                50573
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.20854061464720133,
+            "compression_ratio": 1.4976958525345623,
+            "no_speech_prob": 0.006837734021246433,
+            "words": [
+                {
+                    "word": " Hello",
+                    "start": 0.0,
+                    "end": 0.28,
+                    "probability": 0.5605055093765259
+                },
+                {
+                    "word": " again,",
+                    "start": 0.28,
+                    "end": 0.58,
+                    "probability": 0.8939255475997925
+                },
+                {
+                    "word": " I",
+                    "start": 0.86,
+                    "end": 1.12,
+                    "probability": 0.9443331956863403
+                },
+                {
+                    "word": " have",
+                    "start": 1.12,
+                    "end": 1.32,
+                    "probability": 0.8406729698181152
+                },
+                {
+                    "word": " added",
+                    "start": 1.32,
+                    "end": 1.56,
+                    "probability": 0.9870655536651611
+                },
+                {
+                    "word": " some",
+                    "start": 1.56,
+                    "end": 1.84,
+                    "probability": 0.9252623319625854
+                },
+                {
+                    "word": " more",
+                    "start": 1.84,
+                    "end": 2.2,
+                    "probability": 0.8706556558609009
+                },
+                {
+                    "word": " gameplay",
+                    "start": 2.2,
+                    "end": 2.94,
+                    "probability": 0.9811438322067261
+                },
+                {
+                    "word": " elements",
+                    "start": 2.94,
+                    "end": 3.62,
+                    "probability": 0.9869412779808044
+                },
+                {
+                    "word": " now.",
+                    "start": 3.62,
+                    "end": 4.22,
+                    "probability": 0.928180456161499
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 4.46,
+            "end": 9.78,
+            "text": " So between each sentence there's a gap that you need to jump over by pressing the spacebar.",
+            "tokens": [
+                50573,
+                1406,
+                1022,
+                1123,
+                6827,
+                612,
+                338,
+                257,
+                7625,
+                326,
+                345,
+                761,
+                284,
+                4391,
+                625,
+                416,
+                12273,
+                262,
+                2272,
+                5657,
+                13,
+                50903
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.20854061464720133,
+            "compression_ratio": 1.4976958525345623,
+            "no_speech_prob": 0.006837734021246433,
+            "words": [
+                {
+                    "word": " So",
+                    "start": 4.46,
+                    "end": 4.46,
+                    "probability": 0.612505316734314
+                },
+                {
+                    "word": " between",
+                    "start": 4.46,
+                    "end": 5.0,
+                    "probability": 0.8159314393997192
+                },
+                {
+                    "word": " each",
+                    "start": 5.0,
+                    "end": 5.6,
+                    "probability": 0.9932366013526917
+                },
+                {
+                    "word": " sentence",
+                    "start": 5.6,
+                    "end": 6.12,
+                    "probability": 0.981879711151123
+                },
+                {
+                    "word": " there's",
+                    "start": 6.12,
+                    "end": 6.64,
+                    "probability": 0.7232328355312347
+                },
+                {
+                    "word": " a",
+                    "start": 6.64,
+                    "end": 6.94,
+                    "probability": 0.995512068271637
+                },
+                {
+                    "word": " gap",
+                    "start": 6.94,
+                    "end": 7.4,
+                    "probability": 0.9883099794387817
+                },
+                {
+                    "word": " that",
+                    "start": 7.4,
+                    "end": 7.84,
+                    "probability": 0.948635995388031
+                },
+                {
+                    "word": " you",
+                    "start": 7.84,
+                    "end": 8.0,
+                    "probability": 0.9977084398269653
+                },
+                {
+                    "word": " need",
+                    "start": 8.0,
+                    "end": 8.12,
+                    "probability": 0.9953573346138
+                },
+                {
+                    "word": " to",
+                    "start": 8.12,
+                    "end": 8.3,
+                    "probability": 0.9987843632698059
+                },
+                {
+                    "word": " jump",
+                    "start": 8.3,
+                    "end": 8.46,
+                    "probability": 0.9981182813644409
+                },
+                {
+                    "word": " over",
+                    "start": 8.46,
+                    "end": 8.7,
+                    "probability": 0.9968507885932922
+                },
+                {
+                    "word": " by",
+                    "start": 8.7,
+                    "end": 8.88,
+                    "probability": 0.9726601243019104
+                },
+                {
+                    "word": " pressing",
+                    "start": 8.88,
+                    "end": 9.18,
+                    "probability": 0.9961115717887878
+                },
+                {
+                    "word": " the",
+                    "start": 9.18,
+                    "end": 9.36,
+                    "probability": 0.9595650434494019
+                },
+                {
+                    "word": " spacebar.",
+                    "start": 9.36,
+                    "end": 9.78,
+                    "probability": 0.7447872459888458
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "seek": 0,
+            "start": 10.84,
+            "end": 19.1,
+            "text": " Also the walkway now disappears behind you after a while, so you can't just stand around and watch what's happening.",
+            "tokens": [
+                50903,
+                4418,
+                262,
+                2513,
+                1014,
+                783,
+                27934,
+                2157,
+                345,
+                706,
+                257,
+                981,
+                11,
+                523,
+                345,
+                460,
+                470,
+                655,
+                1302,
+                1088,
+                290,
+                2342,
+                644,
+                338,
+                5836,
+                13,
+                51318
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.20854061464720133,
+            "compression_ratio": 1.4976958525345623,
+            "no_speech_prob": 0.006837734021246433,
+            "words": [
+                {
+                    "word": " Also",
+                    "start": 10.84,
+                    "end": 11.16,
+                    "probability": 0.9740657806396484
+                },
+                {
+                    "word": " the",
+                    "start": 11.16,
+                    "end": 11.52,
+                    "probability": 0.6920311450958252
+                },
+                {
+                    "word": " walkway",
+                    "start": 11.52,
+                    "end": 12.02,
+                    "probability": 0.9737932682037354
+                },
+                {
+                    "word": " now",
+                    "start": 12.02,
+                    "end": 12.56,
+                    "probability": 0.9818621277809143
+                },
+                {
+                    "word": " disappears",
+                    "start": 12.56,
+                    "end": 13.26,
+                    "probability": 0.9806718230247498
+                },
+                {
+                    "word": " behind",
+                    "start": 13.26,
+                    "end": 13.88,
+                    "probability": 0.9900047183036804
+                },
+                {
+                    "word": " you",
+                    "start": 13.88,
+                    "end": 14.16,
+                    "probability": 0.998272180557251
+                },
+                {
+                    "word": " after",
+                    "start": 14.16,
+                    "end": 14.5,
+                    "probability": 0.9659833312034607
+                },
+                {
+                    "word": " a",
+                    "start": 14.5,
+                    "end": 14.7,
+                    "probability": 0.9832279682159424
+                },
+                {
+                    "word": " while,",
+                    "start": 14.7,
+                    "end": 14.9,
+                    "probability": 0.9988715052604675
+                },
+                {
+                    "word": " so",
+                    "start": 15.08,
+                    "end": 15.3,
+                    "probability": 0.9734968543052673
+                },
+                {
+                    "word": " you",
+                    "start": 15.3,
+                    "end": 15.94,
+                    "probability": 0.9725795984268188
+                },
+                {
+                    "word": " can't",
+                    "start": 15.94,
+                    "end": 16.18,
+                    "probability": 0.9926785826683044
+                },
+                {
+                    "word": " just",
+                    "start": 16.18,
+                    "end": 16.44,
+                    "probability": 0.9960566759109497
+                },
+                {
+                    "word": " stand",
+                    "start": 16.44,
+                    "end": 17.3,
+                    "probability": 0.9468103647232056
+                },
+                {
+                    "word": " around",
+                    "start": 17.3,
+                    "end": 17.66,
+                    "probability": 0.9975607395172119
+                },
+                {
+                    "word": " and",
+                    "start": 17.66,
+                    "end": 17.88,
+                    "probability": 0.9914591312408447
+                },
+                {
+                    "word": " watch",
+                    "start": 17.88,
+                    "end": 18.34,
+                    "probability": 0.5104289054870605
+                },
+                {
+                    "word": " what's",
+                    "start": 18.34,
+                    "end": 18.82,
+                    "probability": 0.9807518124580383
+                },
+                {
+                    "word": " happening.",
+                    "start": 18.82,
+                    "end": 19.1,
+                    "probability": 0.9977225661277771
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "seek": 0,
+            "start": 19.14,
+            "end": 22.24,
+            "text": " You need to actually keep moving forward to not fall off.",
+            "tokens": [
+                51318,
+                921,
+                761,
+                284,
+                1682,
+                1394,
+                3867,
+                2651,
+                284,
+                407,
+                2121,
+                572,
+                13,
+                51518
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.20854061464720133,
+            "compression_ratio": 1.4976958525345623,
+            "no_speech_prob": 0.006837734021246433,
+            "words": [
+                {
+                    "word": " You",
+                    "start": 19.14,
+                    "end": 19.28,
+                    "probability": 0.9898208379745483
+                },
+                {
+                    "word": " need",
+                    "start": 19.28,
+                    "end": 19.42,
+                    "probability": 0.9641672372817993
+                },
+                {
+                    "word": " to",
+                    "start": 19.42,
+                    "end": 19.56,
+                    "probability": 0.997684121131897
+                },
+                {
+                    "word": " actually",
+                    "start": 19.56,
+                    "end": 19.88,
+                    "probability": 0.9098212122917175
+                },
+                {
+                    "word": " keep",
+                    "start": 19.88,
+                    "end": 20.14,
+                    "probability": 0.9940301179885864
+                },
+                {
+                    "word": " moving",
+                    "start": 20.14,
+                    "end": 20.48,
+                    "probability": 0.9980868101119995
+                },
+                {
+                    "word": " forward",
+                    "start": 20.48,
+                    "end": 20.82,
+                    "probability": 0.9928938746452332
+                },
+                {
+                    "word": " to",
+                    "start": 20.82,
+                    "end": 21.02,
+                    "probability": 0.8583882451057434
+                },
+                {
+                    "word": " not",
+                    "start": 21.02,
+                    "end": 21.3,
+                    "probability": 0.996353030204773
+                },
+                {
+                    "word": " fall",
+                    "start": 21.3,
+                    "end": 21.9,
+                    "probability": 0.9952747821807861
+                },
+                {
+                    "word": " off.",
+                    "start": 21.9,
+                    "end": 22.24,
+                    "probability": 0.9789378046989441
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "seek": 2224,
+            "start": 22.76,
+            "end": 30.22,
+            "text": " The game is still not very impressive, but these elements will give you just a little bit more to think about as a player.",
+            "tokens": [
+                50388,
+                383,
+                983,
+                318,
+                991,
+                407,
+                845,
+                8036,
+                11,
+                475,
+                777,
+                4847,
+                481,
+                1577,
+                345,
+                655,
+                257,
+                1310,
+                1643,
+                517,
+                284,
+                892,
+                546,
+                355,
+                257,
+                2137,
+                13,
+                50763
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.22728380475725446,
+            "compression_ratio": 1.2830188679245282,
+            "no_speech_prob": 0.11366912722587585,
+            "words": [
+                {
+                    "word": " The",
+                    "start": 22.76,
+                    "end": 23.26,
+                    "probability": 0.8647268414497375
+                },
+                {
+                    "word": " game",
+                    "start": 23.26,
+                    "end": 23.56,
+                    "probability": 0.9887136816978455
+                },
+                {
+                    "word": " is",
+                    "start": 23.56,
+                    "end": 24.28,
+                    "probability": 0.9520689249038696
+                },
+                {
+                    "word": " still",
+                    "start": 24.28,
+                    "end": 24.62,
+                    "probability": 0.958162784576416
+                },
+                {
+                    "word": " not",
+                    "start": 24.62,
+                    "end": 24.96,
+                    "probability": 0.9911352396011353
+                },
+                {
+                    "word": " very",
+                    "start": 24.96,
+                    "end": 25.3,
+                    "probability": 0.9671028852462769
+                },
+                {
+                    "word": " impressive,",
+                    "start": 25.3,
+                    "end": 25.72,
+                    "probability": 0.9965272545814514
+                },
+                {
+                    "word": " but",
+                    "start": 25.94,
+                    "end": 26.0,
+                    "probability": 0.9917255640029907
+                },
+                {
+                    "word": " these",
+                    "start": 26.0,
+                    "end": 26.24,
+                    "probability": 0.9737139344215393
+                },
+                {
+                    "word": " elements",
+                    "start": 26.24,
+                    "end": 26.54,
+                    "probability": 0.9725037217140198
+                },
+                {
+                    "word": " will",
+                    "start": 26.54,
+                    "end": 26.78,
+                    "probability": 0.9790062308311462
+                },
+                {
+                    "word": " give",
+                    "start": 26.78,
+                    "end": 27.0,
+                    "probability": 0.9848019480705261
+                },
+                {
+                    "word": " you",
+                    "start": 27.0,
+                    "end": 27.36,
+                    "probability": 0.9910248517990112
+                },
+                {
+                    "word": " just",
+                    "start": 27.36,
+                    "end": 27.72,
+                    "probability": 0.8155774474143982
+                },
+                {
+                    "word": " a",
+                    "start": 27.72,
+                    "end": 27.9,
+                    "probability": 0.9956216216087341
+                },
+                {
+                    "word": " little",
+                    "start": 27.9,
+                    "end": 28.04,
+                    "probability": 0.9351993203163147
+                },
+                {
+                    "word": " bit",
+                    "start": 28.04,
+                    "end": 28.22,
+                    "probability": 0.9448408484458923
+                },
+                {
+                    "word": " more",
+                    "start": 28.22,
+                    "end": 28.44,
+                    "probability": 0.9948297142982483
+                },
+                {
+                    "word": " to",
+                    "start": 28.44,
+                    "end": 28.92,
+                    "probability": 0.9886252880096436
+                },
+                {
+                    "word": " think",
+                    "start": 28.92,
+                    "end": 29.2,
+                    "probability": 0.9956902861595154
+                },
+                {
+                    "word": " about",
+                    "start": 29.2,
+                    "end": 29.46,
+                    "probability": 0.9937962293624878
+                },
+                {
+                    "word": " as",
+                    "start": 29.46,
+                    "end": 29.86,
+                    "probability": 0.9698776006698608
+                },
+                {
+                    "word": " a",
+                    "start": 29.86,
+                    "end": 30.0,
+                    "probability": 0.9927483201026917
+                },
+                {
+                    "word": " player.",
+                    "start": 30.0,
+                    "end": 30.22,
+                    "probability": 0.9926919341087341
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "seek": 2224,
+            "start": 31.22,
+            "end": 31.52,
+            "text": " See you soon.",
+            "tokens": [
+                50763,
+                4091,
+                345,
+                2582,
+                13,
+                50863
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.22728380475725446,
+            "compression_ratio": 1.2830188679245282,
+            "no_speech_prob": 0.11366912722587585,
+            "words": [
+                {
+                    "word": " See",
+                    "start": 31.22,
+                    "end": 31.32,
+                    "probability": 0.9878022074699402
+                },
+                {
+                    "word": " you",
+                    "start": 31.32,
+                    "end": 31.4,
+                    "probability": 0.9845679998397827
+                },
+                {
+                    "word": " soon.",
+                    "start": 31.4,
+                    "end": 31.52,
+                    "probability": 0.9978721141815186
+                }
+            ]
+        }
+    ],
+    "language": "en"
+}
