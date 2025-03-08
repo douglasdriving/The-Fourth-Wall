@@ -667,9 +667,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d124fb07a4f53f4281d4edb4ef76cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 934fee62d76cc564d951e90738b07558, type: 3}
+  audioClip: {fileID: 8300000, guid: 465c382deb816814590207db2bd12fc7, type: 3}
   videoClip: {fileID: 0}
-  subtitle: {fileID: 4900000, guid: b58d0d9547b2da64286da12debd52ed8, type: 3}
+  subtitle: {fileID: 4900000, guid: 775d558d2b0b03045aa9d65b400c69bb, type: 3}
   startDelay: 0.5
   endSceneOnEnd: 0
   placeHolderText: "Ok so, I thought it would be fun to try and display the text
