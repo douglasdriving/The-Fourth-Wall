@@ -667,9 +667,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d124fb07a4f53f4281d4edb4ef76cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 222d7c50d8f2b1742b1dbbaff20486ff, type: 3}
+  audioClip: {fileID: 8300000, guid: 6620d54b053ff0d4dbba6d1260529712, type: 3}
   videoClip: {fileID: 0}
-  subtitle: {fileID: 4900000, guid: 8565b250b480a154b8d78c1cc2aa8281, type: 3}
+  subtitle: {fileID: 4900000, guid: c323111272dc88749ac1ce6075d78155, type: 3}
   startDelay: 0.5
   endSceneOnEnd: 0
   placeHolderText: "The core idea of this project, titled \"The Fourth Wall,\" is
