@@ -684,9 +684,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d124fb07a4f53f4281d4edb4ef76cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 3a0b378aae8cb5f46bae1f6fe0f9cf5e, type: 3}
+  audioClip: {fileID: 8300000, guid: 64c704e687ee0b34bb86e352c78560b0, type: 3}
   videoClip: {fileID: 0}
-  subtitle: {fileID: 4900000, guid: 03c3fd9e6df5a6e4098cda929d5e6ca4, type: 3}
+  subtitle: {fileID: 4900000, guid: cc6e2949ea59fc241a327d7ae94663d5, type: 3}
   startDelay: 1.5
   endSceneOnEnd: 1
   placeHolderText: This is the placeholder devlog text. It should be replaced with
