@@ -1,0 +1,783 @@
+{
+    "text": " Okay, so finally I added some color to the walkway blocks And I wanted to take some inspiration from My own life, so I decided to have them fade On a scale from yellow to red like the autumn leaves of the city I live in as I worked on them And where exactly each block is on that fade scale is determined by how common the word is in my script So common words are more towards the yellow end of the spectrum and rare words are more towards the red end of the spectrum",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 5.12,
+            "text": " Okay, so finally I added some color to the walkway blocks",
+            "tokens": [
+                50363,
+                16805,
+                11,
+                523,
+                3443,
+                314,
+                2087,
+                617,
+                3124,
+                284,
+                262,
+                2513,
+                1014,
+                7021,
+                50615
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.07102009345745218,
+            "compression_ratio": 1.6411483253588517,
+            "no_speech_prob": 0.0014366541290655732,
+            "words": [
+                {
+                    "word": " Okay,",
+                    "start": 0.0,
+                    "end": 0.3,
+                    "probability": 0.6569803953170776
+                },
+                {
+                    "word": " so",
+                    "start": 0.3,
+                    "end": 0.56,
+                    "probability": 0.9929733276367188
+                },
+                {
+                    "word": " finally",
+                    "start": 0.56,
+                    "end": 1.04,
+                    "probability": 0.9940716624259949
+                },
+                {
+                    "word": " I",
+                    "start": 1.04,
+                    "end": 1.44,
+                    "probability": 0.9594246745109558
+                },
+                {
+                    "word": " added",
+                    "start": 1.44,
+                    "end": 1.88,
+                    "probability": 0.9982184767723083
+                },
+                {
+                    "word": " some",
+                    "start": 1.88,
+                    "end": 2.58,
+                    "probability": 0.988827109336853
+                },
+                {
+                    "word": " color",
+                    "start": 2.58,
+                    "end": 3.12,
+                    "probability": 0.9057188034057617
+                },
+                {
+                    "word": " to",
+                    "start": 3.12,
+                    "end": 3.68,
+                    "probability": 0.9948227405548096
+                },
+                {
+                    "word": " the",
+                    "start": 3.68,
+                    "end": 4.18,
+                    "probability": 0.9992617964744568
+                },
+                {
+                    "word": " walkway",
+                    "start": 4.18,
+                    "end": 4.66,
+                    "probability": 0.984675407409668
+                },
+                {
+                    "word": " blocks",
+                    "start": 4.66,
+                    "end": 5.12,
+                    "probability": 0.9980827569961548
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 5.84,
+            "end": 8.18,
+            "text": " And I wanted to take some inspiration from",
+            "tokens": [
+                50655,
+                843,
+                314,
+                2227,
+                284,
+                1011,
+                617,
+                12141,
+                422,
+                50763
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.07102009345745218,
+            "compression_ratio": 1.6411483253588517,
+            "no_speech_prob": 0.0014366541290655732,
+            "words": [
+                {
+                    "word": " And",
+                    "start": 5.71,
+                    "end": 6.04,
+                    "probability": 0.4298369586467743
+                },
+                {
+                    "word": " I",
+                    "start": 6.04,
+                    "end": 6.2,
+                    "probability": 0.9980469942092896
+                },
+                {
+                    "word": " wanted",
+                    "start": 6.2,
+                    "end": 6.38,
+                    "probability": 0.9996504783630371
+                },
+                {
+                    "word": " to",
+                    "start": 6.38,
+                    "end": 6.56,
+                    "probability": 0.999921441078186
+                },
+                {
+                    "word": " take",
+                    "start": 6.56,
+                    "end": 6.78,
+                    "probability": 0.9996799230575562
+                },
+                {
+                    "word": " some",
+                    "start": 6.78,
+                    "end": 7.06,
+                    "probability": 0.999498724937439
+                },
+                {
+                    "word": " inspiration",
+                    "start": 7.06,
+                    "end": 7.6,
+                    "probability": 0.9996321201324463
+                },
+                {
+                    "word": " from",
+                    "start": 7.6,
+                    "end": 8.18,
+                    "probability": 0.9919667840003967
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "seek": 0,
+            "start": 8.72,
+            "end": 11.08,
+            "text": " My own life, so I decided to have them fade",
+            "tokens": [
+                50799,
+                2011,
+                898,
+                1204,
+                11,
+                523,
+                314,
+                3066,
+                284,
+                423,
+                606,
+                22100,
+                50915
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.07102009345745218,
+            "compression_ratio": 1.6411483253588517,
+            "no_speech_prob": 0.0014366541290655732,
+            "words": [
+                {
+                    "word": " My",
+                    "start": 8.67,
+                    "end": 9.0,
+                    "probability": 0.6249833703041077
+                },
+                {
+                    "word": " own",
+                    "start": 9.0,
+                    "end": 9.26,
+                    "probability": 0.9998072981834412
+                },
+                {
+                    "word": " life,",
+                    "start": 9.26,
+                    "end": 9.58,
+                    "probability": 0.9992341995239258
+                },
+                {
+                    "word": " so",
+                    "start": 9.58,
+                    "end": 9.8,
+                    "probability": 0.9994624257087708
+                },
+                {
+                    "word": " I",
+                    "start": 9.8,
+                    "end": 9.84,
+                    "probability": 0.9995378255844116
+                },
+                {
+                    "word": " decided",
+                    "start": 9.84,
+                    "end": 10.16,
+                    "probability": 0.9999107122421265
+                },
+                {
+                    "word": " to",
+                    "start": 10.16,
+                    "end": 10.34,
+                    "probability": 0.9999271631240845
+                },
+                {
+                    "word": " have",
+                    "start": 10.34,
+                    "end": 10.5,
+                    "probability": 0.9998145699501038
+                },
+                {
+                    "word": " them",
+                    "start": 10.5,
+                    "end": 10.68,
+                    "probability": 0.9998502731323242
+                },
+                {
+                    "word": " fade",
+                    "start": 10.68,
+                    "end": 11.08,
+                    "probability": 0.9993082284927368
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "seek": 0,
+            "start": 11.68,
+            "end": 18.04,
+            "text": " On a scale from yellow to red like the autumn leaves of the city I live in as I worked on them",
+            "tokens": [
+                50947,
+                1550,
+                257,
+                5046,
+                422,
+                7872,
+                284,
+                2266,
+                588,
+                262,
+                23608,
+                5667,
+                286,
+                262,
+                1748,
+                314,
+                2107,
+                287,
+                355,
+                314,
+                3111,
+                319,
+                606,
+                51255
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.07102009345745218,
+            "compression_ratio": 1.6411483253588517,
+            "no_speech_prob": 0.0014366541290655732,
+            "words": [
+                {
+                    "word": " On",
+                    "start": 11.55,
+                    "end": 11.88,
+                    "probability": 0.6584076881408691
+                },
+                {
+                    "word": " a",
+                    "start": 11.88,
+                    "end": 12.06,
+                    "probability": 0.9998688697814941
+                },
+                {
+                    "word": " scale",
+                    "start": 12.06,
+                    "end": 12.26,
+                    "probability": 0.9999386072158813
+                },
+                {
+                    "word": " from",
+                    "start": 12.26,
+                    "end": 12.5,
+                    "probability": 0.999527096748352
+                },
+                {
+                    "word": " yellow",
+                    "start": 12.5,
+                    "end": 12.96,
+                    "probability": 0.9997329115867615
+                },
+                {
+                    "word": " to",
+                    "start": 12.96,
+                    "end": 13.4,
+                    "probability": 0.9992214441299438
+                },
+                {
+                    "word": " red",
+                    "start": 13.4,
+                    "end": 13.82,
+                    "probability": 0.9982287287712097
+                },
+                {
+                    "word": " like",
+                    "start": 13.82,
+                    "end": 14.18,
+                    "probability": 0.9849242568016052
+                },
+                {
+                    "word": " the",
+                    "start": 14.18,
+                    "end": 14.48,
+                    "probability": 0.9997264742851257
+                },
+                {
+                    "word": " autumn",
+                    "start": 14.48,
+                    "end": 14.76,
+                    "probability": 0.9987509250640869
+                },
+                {
+                    "word": " leaves",
+                    "start": 14.76,
+                    "end": 15.12,
+                    "probability": 0.9984570741653442
+                },
+                {
+                    "word": " of",
+                    "start": 15.12,
+                    "end": 15.76,
+                    "probability": 0.9893693923950195
+                },
+                {
+                    "word": " the",
+                    "start": 15.76,
+                    "end": 16.06,
+                    "probability": 0.9998130202293396
+                },
+                {
+                    "word": " city",
+                    "start": 16.06,
+                    "end": 16.36,
+                    "probability": 0.9994021654129028
+                },
+                {
+                    "word": " I",
+                    "start": 16.36,
+                    "end": 16.56,
+                    "probability": 0.3589887320995331
+                },
+                {
+                    "word": " live",
+                    "start": 16.56,
+                    "end": 16.74,
+                    "probability": 0.998970627784729
+                },
+                {
+                    "word": " in",
+                    "start": 16.74,
+                    "end": 16.88,
+                    "probability": 0.9994770884513855
+                },
+                {
+                    "word": " as",
+                    "start": 16.88,
+                    "end": 17.04,
+                    "probability": 0.9968134760856628
+                },
+                {
+                    "word": " I",
+                    "start": 17.04,
+                    "end": 17.24,
+                    "probability": 0.9985901713371277
+                },
+                {
+                    "word": " worked",
+                    "start": 17.24,
+                    "end": 17.5,
+                    "probability": 0.9989044666290283
+                },
+                {
+                    "word": " on",
+                    "start": 17.5,
+                    "end": 17.7,
+                    "probability": 0.9996548891067505
+                },
+                {
+                    "word": " them",
+                    "start": 17.7,
+                    "end": 18.04,
+                    "probability": 0.9996676445007324
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "seek": 0,
+            "start": 18.82,
+            "end": 27.38,
+            "text": " And where exactly each block is on that fade scale is determined by how common the word is in my script",
+            "tokens": [
+                51315,
+                843,
+                810,
+                3446,
+                1123,
+                2512,
+                318,
+                319,
+                326,
+                22100,
+                5046,
+                318,
+                5295,
+                416,
+                703,
+                2219,
+                262,
+                1573,
+                318,
+                287,
+                616,
+                4226,
+                51731
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.07102009345745218,
+            "compression_ratio": 1.6411483253588517,
+            "no_speech_prob": 0.0014366541290655732,
+            "words": [
+                {
+                    "word": " And",
+                    "start": 18.82,
+                    "end": 19.48,
+                    "probability": 0.6122655272483826
+                },
+                {
+                    "word": " where",
+                    "start": 19.48,
+                    "end": 20.08,
+                    "probability": 0.99869304895401
+                },
+                {
+                    "word": " exactly",
+                    "start": 20.08,
+                    "end": 20.56,
+                    "probability": 0.9998231530189514
+                },
+                {
+                    "word": " each",
+                    "start": 20.56,
+                    "end": 20.86,
+                    "probability": 0.9989731311798096
+                },
+                {
+                    "word": " block",
+                    "start": 20.86,
+                    "end": 21.12,
+                    "probability": 0.9997647404670715
+                },
+                {
+                    "word": " is",
+                    "start": 21.12,
+                    "end": 21.42,
+                    "probability": 0.9991505146026611
+                },
+                {
+                    "word": " on",
+                    "start": 21.42,
+                    "end": 21.8,
+                    "probability": 0.9977859258651733
+                },
+                {
+                    "word": " that",
+                    "start": 21.8,
+                    "end": 22.08,
+                    "probability": 0.9942148327827454
+                },
+                {
+                    "word": " fade",
+                    "start": 22.08,
+                    "end": 22.4,
+                    "probability": 0.9923498034477234
+                },
+                {
+                    "word": " scale",
+                    "start": 22.4,
+                    "end": 22.86,
+                    "probability": 0.9949691891670227
+                },
+                {
+                    "word": " is",
+                    "start": 22.86,
+                    "end": 23.2,
+                    "probability": 0.9947569370269775
+                },
+                {
+                    "word": " determined",
+                    "start": 23.2,
+                    "end": 23.68,
+                    "probability": 0.9982624650001526
+                },
+                {
+                    "word": " by",
+                    "start": 23.68,
+                    "end": 23.94,
+                    "probability": 0.9916397929191589
+                },
+                {
+                    "word": " how",
+                    "start": 23.94,
+                    "end": 24.22,
+                    "probability": 0.996502161026001
+                },
+                {
+                    "word": " common",
+                    "start": 24.22,
+                    "end": 24.74,
+                    "probability": 0.9960337281227112
+                },
+                {
+                    "word": " the",
+                    "start": 24.74,
+                    "end": 25.34,
+                    "probability": 0.7886301279067993
+                },
+                {
+                    "word": " word",
+                    "start": 25.34,
+                    "end": 25.88,
+                    "probability": 0.9828758835792542
+                },
+                {
+                    "word": " is",
+                    "start": 25.88,
+                    "end": 26.3,
+                    "probability": 0.9945998191833496
+                },
+                {
+                    "word": " in",
+                    "start": 26.3,
+                    "end": 26.7,
+                    "probability": 0.9339414834976196
+                },
+                {
+                    "word": " my",
+                    "start": 26.7,
+                    "end": 27.04,
+                    "probability": 0.9793493151664734
+                },
+                {
+                    "word": " script",
+                    "start": 27.04,
+                    "end": 27.38,
+                    "probability": 0.9879122376441956
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "seek": 2738,
+            "start": 27.38,
+            "end": 34.94,
+            "text": " So common words are more towards the yellow end of the spectrum and rare words are more towards the red end of the spectrum",
+            "tokens": [
+                50363,
+                1406,
+                2219,
+                2456,
+                389,
+                517,
+                3371,
+                262,
+                7872,
+                886,
+                286,
+                262,
+                10958,
+                290,
+                4071,
+                2456,
+                389,
+                517,
+                3371,
+                262,
+                2266,
+                886,
+                286,
+                262,
+                10958,
+                50740
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.06710480319129096,
+            "compression_ratio": 1.618421052631579,
+            "no_speech_prob": 0.21060387790203094,
+            "words": [
+                {
+                    "word": " So",
+                    "start": 27.38,
+                    "end": 27.74,
+                    "probability": 0.6900177001953125
+                },
+                {
+                    "word": " common",
+                    "start": 27.74,
+                    "end": 28.52,
+                    "probability": 0.7486839294433594
+                },
+                {
+                    "word": " words",
+                    "start": 28.52,
+                    "end": 28.92,
+                    "probability": 0.9973176121711731
+                },
+                {
+                    "word": " are",
+                    "start": 28.92,
+                    "end": 29.16,
+                    "probability": 0.9934619665145874
+                },
+                {
+                    "word": " more",
+                    "start": 29.16,
+                    "end": 29.34,
+                    "probability": 0.9965673685073853
+                },
+                {
+                    "word": " towards",
+                    "start": 29.34,
+                    "end": 29.72,
+                    "probability": 0.9769890904426575
+                },
+                {
+                    "word": " the",
+                    "start": 29.72,
+                    "end": 30.0,
+                    "probability": 0.9973053932189941
+                },
+                {
+                    "word": " yellow",
+                    "start": 30.0,
+                    "end": 30.36,
+                    "probability": 0.9809204339981079
+                },
+                {
+                    "word": " end",
+                    "start": 30.36,
+                    "end": 30.6,
+                    "probability": 0.9967380166053772
+                },
+                {
+                    "word": " of",
+                    "start": 30.6,
+                    "end": 30.72,
+                    "probability": 0.9990770816802979
+                },
+                {
+                    "word": " the",
+                    "start": 30.72,
+                    "end": 30.82,
+                    "probability": 0.9986107349395752
+                },
+                {
+                    "word": " spectrum",
+                    "start": 30.82,
+                    "end": 31.18,
+                    "probability": 0.9994317889213562
+                },
+                {
+                    "word": " and",
+                    "start": 31.18,
+                    "end": 31.42,
+                    "probability": 0.7175073027610779
+                },
+                {
+                    "word": " rare",
+                    "start": 31.42,
+                    "end": 31.7,
+                    "probability": 0.9972357153892517
+                },
+                {
+                    "word": " words",
+                    "start": 31.7,
+                    "end": 32.08,
+                    "probability": 0.9930344820022583
+                },
+                {
+                    "word": " are",
+                    "start": 32.08,
+                    "end": 32.3,
+                    "probability": 0.9935492873191833
+                },
+                {
+                    "word": " more",
+                    "start": 32.3,
+                    "end": 32.52,
+                    "probability": 0.9402803778648376
+                },
+                {
+                    "word": " towards",
+                    "start": 32.52,
+                    "end": 33.0,
+                    "probability": 0.9940040707588196
+                },
+                {
+                    "word": " the",
+                    "start": 33.0,
+                    "end": 33.26,
+                    "probability": 0.9980383515357971
+                },
+                {
+                    "word": " red",
+                    "start": 33.26,
+                    "end": 33.66,
+                    "probability": 0.994841992855072
+                },
+                {
+                    "word": " end",
+                    "start": 33.66,
+                    "end": 34.32,
+                    "probability": 0.9969532489776611
+                },
+                {
+                    "word": " of",
+                    "start": 34.32,
+                    "end": 34.46,
+                    "probability": 0.9990150928497314
+                },
+                {
+                    "word": " the",
+                    "start": 34.46,
+                    "end": 34.58,
+                    "probability": 0.999367892742157
+                },
+                {
+                    "word": " spectrum",
+                    "start": 34.58,
+                    "end": 34.94,
+                    "probability": 0.9996198415756226
+                }
+            ]
+        }
+    ],
+    "language": "en"
+}

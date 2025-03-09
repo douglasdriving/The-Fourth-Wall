@@ -842,9 +842,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d124fb07a4f53f4281d4edb4ef76cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: df29742eddc13b2458ab72ceed6bf8b1, type: 3}
+  audioClip: {fileID: 8300000, guid: 198bd4cbfe58fde47a26a9d55cf21d3c, type: 3}
   videoClip: {fileID: 0}
-  subtitle: {fileID: 4900000, guid: ebcaed65d1f4a82479c9d72c9036a24f, type: 3}
+  subtitle: {fileID: 4900000, guid: fd5e342d3dac83e46b8eaac5c546fb8e, type: 3}
   startDelay: 0.5
   endSceneOnEnd: 0
   placeHolderText: And now the color of the blocks.  They are fading between yellow
