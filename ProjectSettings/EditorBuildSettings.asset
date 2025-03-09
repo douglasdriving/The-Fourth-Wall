@@ -35,7 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/devlog_9.unity
     guid: 2c34dd587dbe2e2468da6ece24d64301
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/new/devlog_10.unity
     guid: 5462a244fdb9c784faacc84140babd8d
   - enabled: 1
@@ -50,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/devlog_14.unity
     guid: 6a65925ddf5ab1542898a374ec7571d0
+  - enabled: 1
+    path: Assets/Scenes/demo_end.unity
+    guid: ed68564795c938842a06ff37396d4738
   m_configObjects: {}
