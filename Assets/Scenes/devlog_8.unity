@@ -728,9 +728,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d124fb07a4f53f4281d4edb4ef76cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 378c78b8c106db94ebcc2eb105e73cd9, type: 3}
+  audioClip: {fileID: 8300000, guid: 04aeb3a5ef395834985943b37b1bb3aa, type: 3}
   videoClip: {fileID: 0}
-  subtitle: {fileID: 4900000, guid: 0bcc100f225a4b348ac83ec7450aba74, type: 3}
+  subtitle: {fileID: 4900000, guid: 45f7d77ea8b0b1a419ed832dae77c232, type: 3}
   startDelay: 0.5
   endSceneOnEnd: 0
   placeHolderText: Now I changed the font.

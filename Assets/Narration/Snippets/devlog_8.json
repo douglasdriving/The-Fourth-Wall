@@ -1,0 +1,183 @@
+{
+    "text": " And here I changed to some funky font that I found online. I'm not very good at working with visuals.",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 5.16,
+            "text": " And here I changed to some funky font that I found online.",
+            "tokens": [
+                50363,
+                843,
+                994,
+                314,
+                3421,
+                284,
+                617,
+                42958,
+                10369,
+                326,
+                314,
+                1043,
+                2691,
+                13,
+                50723
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.25887296880994526,
+            "compression_ratio": 1.1222222222222222,
+            "no_speech_prob": 0.0013765360927209258,
+            "words": [
+                {
+                    "word": " And",
+                    "start": 0.0,
+                    "end": 0.72,
+                    "probability": 0.7550920844078064
+                },
+                {
+                    "word": " here",
+                    "start": 0.72,
+                    "end": 1.2,
+                    "probability": 0.9836663007736206
+                },
+                {
+                    "word": " I",
+                    "start": 1.2,
+                    "end": 1.62,
+                    "probability": 0.7860313653945923
+                },
+                {
+                    "word": " changed",
+                    "start": 1.62,
+                    "end": 2.14,
+                    "probability": 0.7434405088424683
+                },
+                {
+                    "word": " to",
+                    "start": 2.14,
+                    "end": 2.4,
+                    "probability": 0.9677994847297668
+                },
+                {
+                    "word": " some",
+                    "start": 2.4,
+                    "end": 2.8,
+                    "probability": 0.9972207546234131
+                },
+                {
+                    "word": " funky",
+                    "start": 2.8,
+                    "end": 3.58,
+                    "probability": 0.988149106502533
+                },
+                {
+                    "word": " font",
+                    "start": 3.58,
+                    "end": 3.98,
+                    "probability": 0.9888495802879333
+                },
+                {
+                    "word": " that",
+                    "start": 3.98,
+                    "end": 4.26,
+                    "probability": 0.984411895275116
+                },
+                {
+                    "word": " I",
+                    "start": 4.26,
+                    "end": 4.42,
+                    "probability": 0.9951426982879639
+                },
+                {
+                    "word": " found",
+                    "start": 4.42,
+                    "end": 4.76,
+                    "probability": 0.9909014701843262
+                },
+                {
+                    "word": " online.",
+                    "start": 4.76,
+                    "end": 5.16,
+                    "probability": 0.8987435698509216
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 6.76,
+            "end": 9.46,
+            "text": " I'm not very good at working with visuals.",
+            "tokens": [
+                50723,
+                314,
+                1101,
+                407,
+                845,
+                922,
+                379,
+                1762,
+                351,
+                27329,
+                13,
+                50871
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.25887296880994526,
+            "compression_ratio": 1.1222222222222222,
+            "no_speech_prob": 0.0013765360927209258,
+            "words": [
+                {
+                    "word": " I'm",
+                    "start": 6.76,
+                    "end": 7.56,
+                    "probability": 0.9910410046577454
+                },
+                {
+                    "word": " not",
+                    "start": 7.56,
+                    "end": 7.72,
+                    "probability": 0.9993096590042114
+                },
+                {
+                    "word": " very",
+                    "start": 7.72,
+                    "end": 8.34,
+                    "probability": 0.9932894110679626
+                },
+                {
+                    "word": " good",
+                    "start": 8.34,
+                    "end": 8.5,
+                    "probability": 0.9995797276496887
+                },
+                {
+                    "word": " at",
+                    "start": 8.5,
+                    "end": 8.64,
+                    "probability": 0.9954233765602112
+                },
+                {
+                    "word": " working",
+                    "start": 8.64,
+                    "end": 8.92,
+                    "probability": 0.9986768364906311
+                },
+                {
+                    "word": " with",
+                    "start": 8.92,
+                    "end": 9.14,
+                    "probability": 0.998954176902771
+                },
+                {
+                    "word": " visuals.",
+                    "start": 9.14,
+                    "end": 9.46,
+                    "probability": 0.9978758096694946
+                }
+            ]
+        }
+    ],
+    "language": "en"
+}
