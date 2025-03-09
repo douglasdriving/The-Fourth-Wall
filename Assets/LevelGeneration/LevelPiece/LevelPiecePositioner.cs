@@ -150,6 +150,8 @@ namespace LevelPiece
                 yield return MoveFromMouthToAir(time: 0.5f, scaleInMouth: 0.2f);
                 freezer.Freeze();
                 SetCollidersEnabled(true);
+                // Force an immediate raycast check
+                ObjectScannerRay.ForceCheck();
                 while (isFrozen) yield return null;
                 SetCollidersEnabled(false);
                 yield return TransformOverTime(targetPos, targetRot, targetPieceScale, time: 0.5f);
@@ -224,4 +226,3 @@ namespace LevelPiece
         }
     }
 }
-
