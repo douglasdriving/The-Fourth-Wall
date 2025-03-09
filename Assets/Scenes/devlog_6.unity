@@ -667,9 +667,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d124fb07a4f53f4281d4edb4ef76cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: fe1479003fcc90444be0181cb6e7b5fa, type: 3}
+  audioClip: {fileID: 8300000, guid: 970899aa06042de498854da2b94fc5ef, type: 3}
   videoClip: {fileID: 0}
-  subtitle: {fileID: 4900000, guid: a9c2772d7815d3248b56882e8681ba7e, type: 3}
+  subtitle: {fileID: 4900000, guid: cdfc55f750f7ae6408a2f0bce4344022, type: 3}
   startDelay: 0.5
   endSceneOnEnd: 0
   placeHolderText: "Another dope idea!  THE-blocks!  The word \u201Cthe\u201D specifies

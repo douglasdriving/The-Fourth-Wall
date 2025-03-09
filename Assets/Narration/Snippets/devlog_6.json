@@ -1,0 +1,543 @@
+{
+    "text": " So that was AND blocks. And now I will introduce another similar mechanic. THE blocks. So the word THE specifies one thing among several things. It is the specific thing that I'm talking about. Not just a thing, but the thing. So now we have a few kind of linguistic concepts baked into the mechanics here.",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 2.38,
+            "text": " So that was AND blocks.",
+            "tokens": [
+                50363,
+                1406,
+                326,
+                373,
+                5357,
+                7021,
+                13,
+                50503
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.22131663996998857,
+            "compression_ratio": 1.5376884422110553,
+            "no_speech_prob": 0.0019678929820656776,
+            "words": [
+                {
+                    "word": " So",
+                    "start": 0.0,
+                    "end": 0.28,
+                    "probability": 0.8193051218986511
+                },
+                {
+                    "word": " that",
+                    "start": 0.28,
+                    "end": 0.68,
+                    "probability": 0.8145900964736938
+                },
+                {
+                    "word": " was",
+                    "start": 0.68,
+                    "end": 1.22,
+                    "probability": 0.9974372386932373
+                },
+                {
+                    "word": " AND",
+                    "start": 1.22,
+                    "end": 1.92,
+                    "probability": 0.22201691567897797
+                },
+                {
+                    "word": " blocks.",
+                    "start": 1.92,
+                    "end": 2.38,
+                    "probability": 0.7233484983444214
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 2.84,
+            "end": 6.98,
+            "text": " And now I will introduce another similar mechanic.",
+            "tokens": [
+                50503,
+                843,
+                783,
+                314,
+                481,
+                10400,
+                1194,
+                2092,
+                21600,
+                13,
+                50765
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.22131663996998857,
+            "compression_ratio": 1.5376884422110553,
+            "no_speech_prob": 0.0019678929820656776,
+            "words": [
+                {
+                    "word": " And",
+                    "start": 2.84,
+                    "end": 3.02,
+                    "probability": 0.8392508029937744
+                },
+                {
+                    "word": " now",
+                    "start": 3.02,
+                    "end": 3.42,
+                    "probability": 0.9959061145782471
+                },
+                {
+                    "word": " I",
+                    "start": 3.42,
+                    "end": 3.84,
+                    "probability": 0.9079129099845886
+                },
+                {
+                    "word": " will",
+                    "start": 3.84,
+                    "end": 4.16,
+                    "probability": 0.9862181544303894
+                },
+                {
+                    "word": " introduce",
+                    "start": 4.16,
+                    "end": 4.66,
+                    "probability": 0.9926375150680542
+                },
+                {
+                    "word": " another",
+                    "start": 4.66,
+                    "end": 5.28,
+                    "probability": 0.9901080131530762
+                },
+                {
+                    "word": " similar",
+                    "start": 5.28,
+                    "end": 6.34,
+                    "probability": 0.9274508357048035
+                },
+                {
+                    "word": " mechanic.",
+                    "start": 6.34,
+                    "end": 6.98,
+                    "probability": 0.9935477375984192
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "seek": 0,
+            "start": 8.0,
+            "end": 8.58,
+            "text": " THE blocks.",
+            "tokens": [
+                50765,
+                3336,
+                7021,
+                13,
+                50847
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.22131663996998857,
+            "compression_ratio": 1.5376884422110553,
+            "no_speech_prob": 0.0019678929820656776,
+            "words": [
+                {
+                    "word": " THE",
+                    "start": 8.0,
+                    "end": 8.26,
+                    "probability": 0.49176061153411865
+                },
+                {
+                    "word": " blocks.",
+                    "start": 8.26,
+                    "end": 8.58,
+                    "probability": 0.9344990253448486
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "seek": 0,
+            "start": 9.78,
+            "end": 14.88,
+            "text": " So the word THE specifies one thing among several things.",
+            "tokens": [
+                50847,
+                1406,
+                262,
+                1573,
+                3336,
+                26052,
+                530,
+                1517,
+                1871,
+                1811,
+                1243,
+                13,
+                51133
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.22131663996998857,
+            "compression_ratio": 1.5376884422110553,
+            "no_speech_prob": 0.0019678929820656776,
+            "words": [
+                {
+                    "word": " So",
+                    "start": 9.78,
+                    "end": 9.96,
+                    "probability": 0.8843390941619873
+                },
+                {
+                    "word": " the",
+                    "start": 9.96,
+                    "end": 10.54,
+                    "probability": 0.8293506503105164
+                },
+                {
+                    "word": " word",
+                    "start": 10.54,
+                    "end": 10.76,
+                    "probability": 0.9957724213600159
+                },
+                {
+                    "word": " THE",
+                    "start": 10.76,
+                    "end": 11.24,
+                    "probability": 0.3221290409564972
+                },
+                {
+                    "word": " specifies",
+                    "start": 11.24,
+                    "end": 12.02,
+                    "probability": 0.9760767817497253
+                },
+                {
+                    "word": " one",
+                    "start": 12.02,
+                    "end": 12.68,
+                    "probability": 0.9789428114891052
+                },
+                {
+                    "word": " thing",
+                    "start": 12.68,
+                    "end": 13.06,
+                    "probability": 0.9964865446090698
+                },
+                {
+                    "word": " among",
+                    "start": 13.06,
+                    "end": 13.56,
+                    "probability": 0.9667938351631165
+                },
+                {
+                    "word": " several",
+                    "start": 13.56,
+                    "end": 14.24,
+                    "probability": 0.9920499920845032
+                },
+                {
+                    "word": " things.",
+                    "start": 14.24,
+                    "end": 14.88,
+                    "probability": 0.9920936226844788
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "seek": 0,
+            "start": 15.18,
+            "end": 18.58,
+            "text": " It is the specific thing that I'm talking about.",
+            "tokens": [
+                51133,
+                632,
+                318,
+                262,
+                2176,
+                1517,
+                326,
+                314,
+                1101,
+                3375,
+                546,
+                13,
+                51317
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.22131663996998857,
+            "compression_ratio": 1.5376884422110553,
+            "no_speech_prob": 0.0019678929820656776,
+            "words": [
+                {
+                    "word": " It",
+                    "start": 15.18,
+                    "end": 15.5,
+                    "probability": 0.9787423610687256
+                },
+                {
+                    "word": " is",
+                    "start": 15.5,
+                    "end": 15.82,
+                    "probability": 0.9887937903404236
+                },
+                {
+                    "word": " the",
+                    "start": 15.82,
+                    "end": 16.46,
+                    "probability": 0.3563685715198517
+                },
+                {
+                    "word": " specific",
+                    "start": 16.46,
+                    "end": 17.08,
+                    "probability": 0.9850183129310608
+                },
+                {
+                    "word": " thing",
+                    "start": 17.08,
+                    "end": 17.42,
+                    "probability": 0.9975422620773315
+                },
+                {
+                    "word": " that",
+                    "start": 17.42,
+                    "end": 17.72,
+                    "probability": 0.9654682278633118
+                },
+                {
+                    "word": " I'm",
+                    "start": 17.72,
+                    "end": 17.92,
+                    "probability": 0.7492986917495728
+                },
+                {
+                    "word": " talking",
+                    "start": 17.92,
+                    "end": 18.18,
+                    "probability": 0.9977355003356934
+                },
+                {
+                    "word": " about.",
+                    "start": 18.18,
+                    "end": 18.58,
+                    "probability": 0.9987057447433472
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "seek": 0,
+            "start": 18.98,
+            "end": 21.78,
+            "text": " Not just a thing, but the thing.",
+            "tokens": [
+                51317,
+                1892,
+                655,
+                257,
+                1517,
+                11,
+                475,
+                262,
+                1517,
+                13,
+                51503
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.22131663996998857,
+            "compression_ratio": 1.5376884422110553,
+            "no_speech_prob": 0.0019678929820656776,
+            "words": [
+                {
+                    "word": " Not",
+                    "start": 18.98,
+                    "end": 19.2,
+                    "probability": 0.9901753067970276
+                },
+                {
+                    "word": " just",
+                    "start": 19.2,
+                    "end": 19.52,
+                    "probability": 0.9973697662353516
+                },
+                {
+                    "word": " a",
+                    "start": 19.52,
+                    "end": 19.86,
+                    "probability": 0.4935605227947235
+                },
+                {
+                    "word": " thing,",
+                    "start": 19.86,
+                    "end": 20.2,
+                    "probability": 0.9860251545906067
+                },
+                {
+                    "word": " but",
+                    "start": 20.34,
+                    "end": 20.54,
+                    "probability": 0.9957610964775085
+                },
+                {
+                    "word": " the",
+                    "start": 20.54,
+                    "end": 21.28,
+                    "probability": 0.4125608801841736
+                },
+                {
+                    "word": " thing.",
+                    "start": 21.28,
+                    "end": 21.78,
+                    "probability": 0.9470146894454956
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "seek": 0,
+            "start": 22.78,
+            "end": 27.04,
+            "text": " So now we have a few kind of linguistic concepts",
+            "tokens": [
+                51503,
+                1406,
+                783,
+                356,
+                423,
+                257,
+                1178,
+                1611,
+                286,
+                29929,
+                10838,
+                51723
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.22131663996998857,
+            "compression_ratio": 1.5376884422110553,
+            "no_speech_prob": 0.0019678929820656776,
+            "words": [
+                {
+                    "word": " So",
+                    "start": 22.78,
+                    "end": 22.98,
+                    "probability": 0.9375098943710327
+                },
+                {
+                    "word": " now",
+                    "start": 22.98,
+                    "end": 23.36,
+                    "probability": 0.9852075576782227
+                },
+                {
+                    "word": " we",
+                    "start": 23.36,
+                    "end": 23.76,
+                    "probability": 0.9677495360374451
+                },
+                {
+                    "word": " have",
+                    "start": 23.76,
+                    "end": 24.26,
+                    "probability": 0.9983886480331421
+                },
+                {
+                    "word": " a",
+                    "start": 24.26,
+                    "end": 24.52,
+                    "probability": 0.9964214563369751
+                },
+                {
+                    "word": " few",
+                    "start": 24.52,
+                    "end": 24.68,
+                    "probability": 0.9987486600875854
+                },
+                {
+                    "word": " kind",
+                    "start": 24.68,
+                    "end": 24.92,
+                    "probability": 0.8161095976829529
+                },
+                {
+                    "word": " of",
+                    "start": 24.92,
+                    "end": 25.42,
+                    "probability": 0.9982597231864929
+                },
+                {
+                    "word": " linguistic",
+                    "start": 25.42,
+                    "end": 26.16,
+                    "probability": 0.9878225922584534
+                },
+                {
+                    "word": " concepts",
+                    "start": 26.16,
+                    "end": 27.04,
+                    "probability": 0.9954230189323425
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "seek": 0,
+            "start": 27.04,
+            "end": 28.5,
+            "text": " baked into the mechanics here.",
+            "tokens": [
+                51723,
+                22979,
+                656,
+                262,
+                12933,
+                994,
+                13,
+                51787
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.22131663996998857,
+            "compression_ratio": 1.5376884422110553,
+            "no_speech_prob": 0.0019678929820656776,
+            "words": [
+                {
+                    "word": " baked",
+                    "start": 27.04,
+                    "end": 27.4,
+                    "probability": 0.8284468650817871
+                },
+                {
+                    "word": " into",
+                    "start": 27.4,
+                    "end": 27.66,
+                    "probability": 0.9934794902801514
+                },
+                {
+                    "word": " the",
+                    "start": 27.66,
+                    "end": 27.84,
+                    "probability": 0.9957287907600403
+                },
+                {
+                    "word": " mechanics",
+                    "start": 27.84,
+                    "end": 28.12,
+                    "probability": 0.9973950386047363
+                },
+                {
+                    "word": " here.",
+                    "start": 28.12,
+                    "end": 28.5,
+                    "probability": 0.9887630939483643
+                }
+            ]
+        }
+    ],
+    "language": "en"
+}
