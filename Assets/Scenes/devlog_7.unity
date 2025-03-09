@@ -683,9 +683,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d124fb07a4f53f4281d4edb4ef76cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 2b9c5467c8123dd48bb14fa0968bd002, type: 3}
+  audioClip: {fileID: 8300000, guid: 4db887e28320905448a37bfaaa5dec2e, type: 3}
   videoClip: {fileID: 0}
-  subtitle: {fileID: 4900000, guid: c00fcbafa378dff4ca34cf049f590823, type: 3}
+  subtitle: {fileID: 4900000, guid: 16e5ab6719f91e94da16ad133951b6e4, type: 3}
   startDelay: 0.5
   endSceneOnEnd: 0
   placeHolderText: I just wanna code and implement game design ideas, but at this
