@@ -878,9 +878,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d124fb07a4f53f4281d4edb4ef76cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 32b88d8c4e4728348b23a7f497b816b9, type: 3}
+  audioClip: {fileID: 8300000, guid: 758d47a4a172f834bb8e637e121ccc6f, type: 3}
   videoClip: {fileID: 0}
-  subtitle: {fileID: 4900000, guid: 47b49880d7896ad408348bd7d94aacd1, type: 3}
+  subtitle: {fileID: 4900000, guid: 48e5c06cba49fa946b6f51bfd45af397, type: 3}
   startDelay: 0.5
   endSceneOnEnd: 0
   placeHolderText: And now the color of the blocks.  They are fading between yellow
@@ -1085,7 +1085,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5136570225177799811, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: question
-      value: What does the developer really want to talk about?
+      value: The developer asked you to
       objectReference: {fileID: 0}
     - target: {fileID: 5136570225177799811, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: answers.Array.size
@@ -1097,15 +1097,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5136570225177799811, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: answers.Array.data[0]
-      value: The game
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 5136570225177799811, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: answers.Array.data[1]
-      value: World issues
+      value: Listen
       objectReference: {fileID: 0}
     - target: {fileID: 5136570225177799811, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: answers.Array.data[2]
-      value: Himself
+      value: Think
       objectReference: {fileID: 0}
     - target: {fileID: 6079647386308319646, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: m_LocalPosition.x
