@@ -71,10 +71,6 @@ namespace LevelPiece
             {
                 StartRide();
             }
-            else if (isRiding && Input.GetKeyUp(KeyCode.E))
-            {
-                StopRiding();
-            }
             else if (isRiding)
             {
                 UpdateRide();
@@ -128,4 +124,3 @@ namespace LevelPiece
         }
     }
 }
-
