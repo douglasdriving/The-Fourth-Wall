@@ -949,9 +949,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d124fb07a4f53f4281d4edb4ef76cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 8b1df2739f20b114d9a67a682884502d, type: 3}
+  audioClip: {fileID: 8300000, guid: 9a35bc8fc05d935458574295cbe40048, type: 3}
   videoClip: {fileID: 0}
-  subtitle: {fileID: 4900000, guid: 6783aab86532eb043822528f319c47ce, type: 3}
+  subtitle: {fileID: 4900000, guid: ccc5801c85689194a9c341f76118ec68, type: 3}
   startDelay: 0.5
   endSceneOnEnd: 0
   placeHolderText: And now the color of the blocks.  They are fading between yellow
@@ -1156,7 +1156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5136570225177799811, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: question
-      value: 'Reversed captcha: What are you reading?'
+      value: The developer is...
       objectReference: {fileID: 0}
     - target: {fileID: 5136570225177799811, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: answers.Array.size
@@ -1168,15 +1168,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5136570225177799811, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: answers.Array.data[0]
-      value: An AI-written text
+      value: An AI
       objectReference: {fileID: 0}
     - target: {fileID: 5136570225177799811, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: answers.Array.data[1]
-      value: Random text
+      value: A giraffe
       objectReference: {fileID: 0}
     - target: {fileID: 5136570225177799811, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: answers.Array.data[2]
-      value: A human-written text
+      value: A human being
       objectReference: {fileID: 0}
     - target: {fileID: 6079647386308319646, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: m_LocalPosition.x
