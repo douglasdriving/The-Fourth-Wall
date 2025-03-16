@@ -878,9 +878,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d124fb07a4f53f4281d4edb4ef76cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 93144788bb18e1c48bd39e7f36f1b3b4, type: 3}
+  audioClip: {fileID: 8300000, guid: 204db2423de9e4249b1a74f8b62fd5c9, type: 3}
   videoClip: {fileID: 0}
-  subtitle: {fileID: 4900000, guid: a73868e996a7be0429ca30a47b2fc483, type: 3}
+  subtitle: {fileID: 4900000, guid: 5268d3c3a35c74247b22bc5ec5b93637, type: 3}
   startDelay: 0.5
   endSceneOnEnd: 0
   placeHolderText: And now the color of the blocks.  They are fading between yellow
@@ -1085,7 +1085,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5136570225177799811, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: question
-      value: 'Captcha: What are you?'
+      value: Why these mechanics?
       objectReference: {fileID: 0}
     - target: {fileID: 5136570225177799811, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: answers.Array.size
@@ -1093,19 +1093,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5136570225177799811, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: correctAnswerIndex
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5136570225177799811, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: answers.Array.data[0]
-      value: A machine
+      value: Fun
       objectReference: {fileID: 0}
     - target: {fileID: 5136570225177799811, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: answers.Array.data[1]
-      value: A human
+      value: Challenge
       objectReference: {fileID: 0}
     - target: {fileID: 5136570225177799811, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: answers.Array.data[2]
-      value: An AI
+      value: Control
       objectReference: {fileID: 0}
     - target: {fileID: 6079647386308319646, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: m_LocalPosition.x
