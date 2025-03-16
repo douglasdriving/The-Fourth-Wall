@@ -1,0 +1,1006 @@
+{
+    "text": " So I just asked you to listen carefully to each of my words. But how can I really know that you're doing that? The little quiz back there confirmed that yes, you took some level of it in, but people give lots of positive social cues all the time to confirm that they're paying attention. But how can you know that they really are taking things in? Through this game, I'm sending messages out into the void hoping that someone out there will hear them. But you on the other side cannot know if my messages carry any value, and I cannot know if you will do anything valuable with them. So we simply have to trust each other.",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 6.12,
+            "text": " So I just asked you to listen carefully to each of my words.",
+            "tokens": [
+                50363,
+                1406,
+                314,
+                655,
+                1965,
+                345,
+                284,
+                6004,
+                7773,
+                284,
+                1123,
+                286,
+                616,
+                2456,
+                13,
+                50699
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.16244754526350233,
+            "compression_ratio": 1.4870466321243523,
+            "no_speech_prob": 0.003928430378437042,
+            "words": [
+                {
+                    "word": " So",
+                    "start": 0.0,
+                    "end": 0.54,
+                    "probability": 0.8568889498710632
+                },
+                {
+                    "word": " I",
+                    "start": 0.54,
+                    "end": 1.02,
+                    "probability": 0.694722592830658
+                },
+                {
+                    "word": " just",
+                    "start": 1.02,
+                    "end": 1.38,
+                    "probability": 0.9898266792297363
+                },
+                {
+                    "word": " asked",
+                    "start": 1.38,
+                    "end": 1.9,
+                    "probability": 0.9922553300857544
+                },
+                {
+                    "word": " you",
+                    "start": 1.9,
+                    "end": 2.22,
+                    "probability": 0.9967888593673706
+                },
+                {
+                    "word": " to",
+                    "start": 2.22,
+                    "end": 2.84,
+                    "probability": 0.9964016675949097
+                },
+                {
+                    "word": " listen",
+                    "start": 2.84,
+                    "end": 3.4,
+                    "probability": 0.9913597702980042
+                },
+                {
+                    "word": " carefully",
+                    "start": 3.4,
+                    "end": 4.36,
+                    "probability": 0.9941019415855408
+                },
+                {
+                    "word": " to",
+                    "start": 4.36,
+                    "end": 4.94,
+                    "probability": 0.9950064420700073
+                },
+                {
+                    "word": " each",
+                    "start": 4.94,
+                    "end": 5.24,
+                    "probability": 0.997021496295929
+                },
+                {
+                    "word": " of",
+                    "start": 5.24,
+                    "end": 5.5,
+                    "probability": 0.9980581402778625
+                },
+                {
+                    "word": " my",
+                    "start": 5.5,
+                    "end": 5.66,
+                    "probability": 0.9993599057197571
+                },
+                {
+                    "word": " words.",
+                    "start": 5.66,
+                    "end": 6.12,
+                    "probability": 0.998100221157074
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 6.84,
+            "end": 9.86,
+            "text": " But how can I really know that you're doing that?",
+            "tokens": [
+                50699,
+                887,
+                703,
+                460,
+                314,
+                1107,
+                760,
+                326,
+                345,
+                821,
+                1804,
+                326,
+                30,
+                50899
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.16244754526350233,
+            "compression_ratio": 1.4870466321243523,
+            "no_speech_prob": 0.003928430378437042,
+            "words": [
+                {
+                    "word": " But",
+                    "start": 6.84,
+                    "end": 7.04,
+                    "probability": 0.9519398212432861
+                },
+                {
+                    "word": " how",
+                    "start": 7.04,
+                    "end": 7.22,
+                    "probability": 0.9878688454627991
+                },
+                {
+                    "word": " can",
+                    "start": 7.22,
+                    "end": 7.44,
+                    "probability": 0.9947236776351929
+                },
+                {
+                    "word": " I",
+                    "start": 7.44,
+                    "end": 7.58,
+                    "probability": 0.9821162223815918
+                },
+                {
+                    "word": " really",
+                    "start": 7.58,
+                    "end": 7.86,
+                    "probability": 0.9884783625602722
+                },
+                {
+                    "word": " know",
+                    "start": 7.86,
+                    "end": 8.26,
+                    "probability": 0.9987657070159912
+                },
+                {
+                    "word": " that",
+                    "start": 8.26,
+                    "end": 8.64,
+                    "probability": 0.971595287322998
+                },
+                {
+                    "word": " you're",
+                    "start": 8.64,
+                    "end": 9.22,
+                    "probability": 0.9676856100559235
+                },
+                {
+                    "word": " doing",
+                    "start": 9.22,
+                    "end": 9.46,
+                    "probability": 0.9988815188407898
+                },
+                {
+                    "word": " that?",
+                    "start": 9.46,
+                    "end": 9.86,
+                    "probability": 0.9981343150138855
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "seek": 0,
+            "start": 10.78,
+            "end": 16.72,
+            "text": " The little quiz back there confirmed that yes, you took some level of it in,",
+            "tokens": [
+                50899,
+                383,
+                1310,
+                38964,
+                736,
+                612,
+                4999,
+                326,
+                3763,
+                11,
+                345,
+                1718,
+                617,
+                1241,
+                286,
+                340,
+                287,
+                11,
+                51215
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.16244754526350233,
+            "compression_ratio": 1.4870466321243523,
+            "no_speech_prob": 0.003928430378437042,
+            "words": [
+                {
+                    "word": " The",
+                    "start": 10.78,
+                    "end": 11.16,
+                    "probability": 0.977429986000061
+                },
+                {
+                    "word": " little",
+                    "start": 11.16,
+                    "end": 11.56,
+                    "probability": 0.9915326237678528
+                },
+                {
+                    "word": " quiz",
+                    "start": 11.56,
+                    "end": 11.9,
+                    "probability": 0.9836075901985168
+                },
+                {
+                    "word": " back",
+                    "start": 11.9,
+                    "end": 12.2,
+                    "probability": 0.9955652356147766
+                },
+                {
+                    "word": " there",
+                    "start": 12.2,
+                    "end": 12.54,
+                    "probability": 0.9962894916534424
+                },
+                {
+                    "word": " confirmed",
+                    "start": 12.54,
+                    "end": 12.98,
+                    "probability": 0.9764779806137085
+                },
+                {
+                    "word": " that",
+                    "start": 12.98,
+                    "end": 13.26,
+                    "probability": 0.9938220977783203
+                },
+                {
+                    "word": " yes,",
+                    "start": 13.26,
+                    "end": 13.56,
+                    "probability": 0.7173813581466675
+                },
+                {
+                    "word": " you",
+                    "start": 13.76,
+                    "end": 14.06,
+                    "probability": 0.9925215840339661
+                },
+                {
+                    "word": " took",
+                    "start": 14.06,
+                    "end": 14.94,
+                    "probability": 0.9890217781066895
+                },
+                {
+                    "word": " some",
+                    "start": 14.94,
+                    "end": 15.58,
+                    "probability": 0.9840371608734131
+                },
+                {
+                    "word": " level",
+                    "start": 15.58,
+                    "end": 15.94,
+                    "probability": 0.9963034391403198
+                },
+                {
+                    "word": " of",
+                    "start": 15.94,
+                    "end": 16.16,
+                    "probability": 0.9956960678100586
+                },
+                {
+                    "word": " it",
+                    "start": 16.16,
+                    "end": 16.38,
+                    "probability": 0.9732319116592407
+                },
+                {
+                    "word": " in,",
+                    "start": 16.38,
+                    "end": 16.72,
+                    "probability": 0.759083092212677
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "seek": 0,
+            "start": 17.2,
+            "end": 23.68,
+            "text": " but people give lots of positive social cues all the time to confirm that they're paying attention.",
+            "tokens": [
+                51215,
+                475,
+                661,
+                1577,
+                6041,
+                286,
+                3967,
+                1919,
+                25288,
+                477,
+                262,
+                640,
+                284,
+                6216,
+                326,
+                484,
+                821,
+                5989,
+                3241,
+                13,
+                51575
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.16244754526350233,
+            "compression_ratio": 1.4870466321243523,
+            "no_speech_prob": 0.003928430378437042,
+            "words": [
+                {
+                    "word": " but",
+                    "start": 17.2,
+                    "end": 17.38,
+                    "probability": 0.9661526679992676
+                },
+                {
+                    "word": " people",
+                    "start": 17.38,
+                    "end": 18.32,
+                    "probability": 0.951956570148468
+                },
+                {
+                    "word": " give",
+                    "start": 18.32,
+                    "end": 18.86,
+                    "probability": 0.9933184385299683
+                },
+                {
+                    "word": " lots",
+                    "start": 18.86,
+                    "end": 19.62,
+                    "probability": 0.9921007752418518
+                },
+                {
+                    "word": " of",
+                    "start": 19.62,
+                    "end": 19.94,
+                    "probability": 0.9993788003921509
+                },
+                {
+                    "word": " positive",
+                    "start": 19.94,
+                    "end": 20.36,
+                    "probability": 0.991612434387207
+                },
+                {
+                    "word": " social",
+                    "start": 20.36,
+                    "end": 20.82,
+                    "probability": 0.9897835850715637
+                },
+                {
+                    "word": " cues",
+                    "start": 20.82,
+                    "end": 21.14,
+                    "probability": 0.9970338344573975
+                },
+                {
+                    "word": " all",
+                    "start": 21.14,
+                    "end": 21.44,
+                    "probability": 0.9875904321670532
+                },
+                {
+                    "word": " the",
+                    "start": 21.44,
+                    "end": 21.6,
+                    "probability": 0.9979507327079773
+                },
+                {
+                    "word": " time",
+                    "start": 21.6,
+                    "end": 21.9,
+                    "probability": 0.9996122717857361
+                },
+                {
+                    "word": " to",
+                    "start": 21.9,
+                    "end": 22.12,
+                    "probability": 0.979223906993866
+                },
+                {
+                    "word": " confirm",
+                    "start": 22.12,
+                    "end": 22.48,
+                    "probability": 0.9988113641738892
+                },
+                {
+                    "word": " that",
+                    "start": 22.48,
+                    "end": 22.68,
+                    "probability": 0.9764474034309387
+                },
+                {
+                    "word": " they're",
+                    "start": 22.68,
+                    "end": 22.92,
+                    "probability": 0.9785533845424652
+                },
+                {
+                    "word": " paying",
+                    "start": 22.92,
+                    "end": 23.14,
+                    "probability": 0.998038113117218
+                },
+                {
+                    "word": " attention.",
+                    "start": 23.14,
+                    "end": 23.68,
+                    "probability": 0.9996349811553955
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "seek": 2368,
+            "start": 24.24,
+            "end": 28.84,
+            "text": " But how can you know that they really are taking things in?",
+            "tokens": [
+                50391,
+                887,
+                703,
+                460,
+                345,
+                760,
+                326,
+                484,
+                1107,
+                389,
+                2263,
+                1243,
+                287,
+                30,
+                50611
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.17201325628492567,
+            "compression_ratio": 1.6120218579234973,
+            "no_speech_prob": 0.6686603426933289,
+            "words": [
+                {
+                    "word": " But",
+                    "start": 24.139999999999997,
+                    "end": 24.52,
+                    "probability": 0.6819356083869934
+                },
+                {
+                    "word": " how",
+                    "start": 24.52,
+                    "end": 24.66,
+                    "probability": 0.974763035774231
+                },
+                {
+                    "word": " can",
+                    "start": 24.66,
+                    "end": 24.88,
+                    "probability": 0.9927451014518738
+                },
+                {
+                    "word": " you",
+                    "start": 24.88,
+                    "end": 25.0,
+                    "probability": 0.9969921112060547
+                },
+                {
+                    "word": " know",
+                    "start": 25.0,
+                    "end": 25.2,
+                    "probability": 0.9970343112945557
+                },
+                {
+                    "word": " that",
+                    "start": 25.2,
+                    "end": 25.4,
+                    "probability": 0.9582945704460144
+                },
+                {
+                    "word": " they",
+                    "start": 25.4,
+                    "end": 25.58,
+                    "probability": 0.9966017007827759
+                },
+                {
+                    "word": " really",
+                    "start": 25.58,
+                    "end": 26.04,
+                    "probability": 0.9547169208526611
+                },
+                {
+                    "word": " are",
+                    "start": 26.04,
+                    "end": 26.98,
+                    "probability": 0.9860085844993591
+                },
+                {
+                    "word": " taking",
+                    "start": 26.98,
+                    "end": 27.82,
+                    "probability": 0.9259536862373352
+                },
+                {
+                    "word": " things",
+                    "start": 27.82,
+                    "end": 28.36,
+                    "probability": 0.9961363673210144
+                },
+                {
+                    "word": " in?",
+                    "start": 28.36,
+                    "end": 28.84,
+                    "probability": 0.9978607296943665
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "seek": 2368,
+            "start": 30.02,
+            "end": 38.2,
+            "text": " Through this game, I'm sending messages out into the void hoping that someone out there will hear them.",
+            "tokens": [
+                50679,
+                9561,
+                428,
+                983,
+                11,
+                314,
+                1101,
+                7216,
+                6218,
+                503,
+                656,
+                262,
+                7951,
+                7725,
+                326,
+                2130,
+                503,
+                612,
+                481,
+                3285,
+                606,
+                13,
+                51075
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.17201325628492567,
+            "compression_ratio": 1.6120218579234973,
+            "no_speech_prob": 0.6686603426933289,
+            "words": [
+                {
+                    "word": " Through",
+                    "start": 30.02,
+                    "end": 30.3,
+                    "probability": 0.9544649124145508
+                },
+                {
+                    "word": " this",
+                    "start": 30.3,
+                    "end": 30.58,
+                    "probability": 0.9979652166366577
+                },
+                {
+                    "word": " game,",
+                    "start": 30.58,
+                    "end": 30.96,
+                    "probability": 0.9986086487770081
+                },
+                {
+                    "word": " I'm",
+                    "start": 31.18,
+                    "end": 31.72,
+                    "probability": 0.9781127870082855
+                },
+                {
+                    "word": " sending",
+                    "start": 31.72,
+                    "end": 32.1,
+                    "probability": 0.9992403984069824
+                },
+                {
+                    "word": " messages",
+                    "start": 32.1,
+                    "end": 32.64,
+                    "probability": 0.9932090640068054
+                },
+                {
+                    "word": " out",
+                    "start": 32.64,
+                    "end": 33.3,
+                    "probability": 0.9959535598754883
+                },
+                {
+                    "word": " into",
+                    "start": 33.3,
+                    "end": 34.02,
+                    "probability": 0.9727897047996521
+                },
+                {
+                    "word": " the",
+                    "start": 34.02,
+                    "end": 34.4,
+                    "probability": 0.9923608899116516
+                },
+                {
+                    "word": " void",
+                    "start": 34.4,
+                    "end": 34.62,
+                    "probability": 0.9595736265182495
+                },
+                {
+                    "word": " hoping",
+                    "start": 34.62,
+                    "end": 35.2,
+                    "probability": 0.8042229413986206
+                },
+                {
+                    "word": " that",
+                    "start": 35.2,
+                    "end": 35.98,
+                    "probability": 0.9746537804603577
+                },
+                {
+                    "word": " someone",
+                    "start": 35.98,
+                    "end": 36.38,
+                    "probability": 0.9938926696777344
+                },
+                {
+                    "word": " out",
+                    "start": 36.38,
+                    "end": 36.64,
+                    "probability": 0.997169554233551
+                },
+                {
+                    "word": " there",
+                    "start": 36.64,
+                    "end": 37.0,
+                    "probability": 0.998529314994812
+                },
+                {
+                    "word": " will",
+                    "start": 37.0,
+                    "end": 37.44,
+                    "probability": 0.9956692457199097
+                },
+                {
+                    "word": " hear",
+                    "start": 37.44,
+                    "end": 37.72,
+                    "probability": 0.99845290184021
+                },
+                {
+                    "word": " them.",
+                    "start": 37.72,
+                    "end": 38.2,
+                    "probability": 0.9990757703781128
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "seek": 2368,
+            "start": 38.56,
+            "end": 44.66,
+            "text": " But you on the other side cannot know if my messages carry any value,",
+            "tokens": [
+                51111,
+                887,
+                345,
+                319,
+                262,
+                584,
+                1735,
+                2314,
+                760,
+                611,
+                616,
+                6218,
+                3283,
+                597,
+                1988,
+                11,
+                51411
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.17201325628492567,
+            "compression_ratio": 1.6120218579234973,
+            "no_speech_prob": 0.6686603426933289,
+            "words": [
+                {
+                    "word": " But",
+                    "start": 38.56,
+                    "end": 39.02,
+                    "probability": 0.9735051393508911
+                },
+                {
+                    "word": " you",
+                    "start": 39.02,
+                    "end": 39.84,
+                    "probability": 0.8403705954551697
+                },
+                {
+                    "word": " on",
+                    "start": 39.84,
+                    "end": 40.42,
+                    "probability": 0.46422797441482544
+                },
+                {
+                    "word": " the",
+                    "start": 40.42,
+                    "end": 40.54,
+                    "probability": 0.9991055130958557
+                },
+                {
+                    "word": " other",
+                    "start": 40.54,
+                    "end": 40.7,
+                    "probability": 0.9989616870880127
+                },
+                {
+                    "word": " side",
+                    "start": 40.7,
+                    "end": 40.98,
+                    "probability": 0.9957171082496643
+                },
+                {
+                    "word": " cannot",
+                    "start": 40.98,
+                    "end": 41.24,
+                    "probability": 0.9659551978111267
+                },
+                {
+                    "word": " know",
+                    "start": 41.24,
+                    "end": 41.6,
+                    "probability": 0.997974693775177
+                },
+                {
+                    "word": " if",
+                    "start": 41.6,
+                    "end": 41.84,
+                    "probability": 0.9962881803512573
+                },
+                {
+                    "word": " my",
+                    "start": 41.84,
+                    "end": 42.06,
+                    "probability": 0.9975225329399109
+                },
+                {
+                    "word": " messages",
+                    "start": 42.06,
+                    "end": 42.44,
+                    "probability": 0.99285489320755
+                },
+                {
+                    "word": " carry",
+                    "start": 42.44,
+                    "end": 43.22,
+                    "probability": 0.9932477474212646
+                },
+                {
+                    "word": " any",
+                    "start": 43.22,
+                    "end": 44.18,
+                    "probability": 0.9825252294540405
+                },
+                {
+                    "word": " value,",
+                    "start": 44.18,
+                    "end": 44.66,
+                    "probability": 0.9978366494178772
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "seek": 2368,
+            "start": 44.88,
+            "end": 50.02,
+            "text": " and I cannot know if you will do anything valuable with them.",
+            "tokens": [
+                51439,
+                290,
+                314,
+                2314,
+                760,
+                611,
+                345,
+                481,
+                466,
+                1997,
+                8119,
+                351,
+                606,
+                13,
+                51671
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.17201325628492567,
+            "compression_ratio": 1.6120218579234973,
+            "no_speech_prob": 0.6686603426933289,
+            "words": [
+                {
+                    "word": " and",
+                    "start": 44.88,
+                    "end": 45.5,
+                    "probability": 0.9361953735351562
+                },
+                {
+                    "word": " I",
+                    "start": 45.5,
+                    "end": 45.88,
+                    "probability": 0.9932650327682495
+                },
+                {
+                    "word": " cannot",
+                    "start": 45.88,
+                    "end": 46.3,
+                    "probability": 0.9931772947311401
+                },
+                {
+                    "word": " know",
+                    "start": 46.3,
+                    "end": 46.82,
+                    "probability": 0.9978365302085876
+                },
+                {
+                    "word": " if",
+                    "start": 46.82,
+                    "end": 47.24,
+                    "probability": 0.9975025057792664
+                },
+                {
+                    "word": " you",
+                    "start": 47.24,
+                    "end": 47.78,
+                    "probability": 0.9903748631477356
+                },
+                {
+                    "word": " will",
+                    "start": 47.78,
+                    "end": 48.14,
+                    "probability": 0.9961001873016357
+                },
+                {
+                    "word": " do",
+                    "start": 48.14,
+                    "end": 48.42,
+                    "probability": 0.9985609650611877
+                },
+                {
+                    "word": " anything",
+                    "start": 48.42,
+                    "end": 48.88,
+                    "probability": 0.9982638955116272
+                },
+                {
+                    "word": " valuable",
+                    "start": 48.88,
+                    "end": 49.36,
+                    "probability": 0.9959139227867126
+                },
+                {
+                    "word": " with",
+                    "start": 49.36,
+                    "end": 49.68,
+                    "probability": 0.9987221360206604
+                },
+                {
+                    "word": " them.",
+                    "start": 49.68,
+                    "end": 50.02,
+                    "probability": 0.9993904829025269
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "seek": 5002,
+            "start": 50.78,
+            "end": 53.28,
+            "text": " So we simply have to trust each other.",
+            "tokens": [
+                50411,
+                1406,
+                356,
+                2391,
+                423,
+                284,
+                3774,
+                1123,
+                584,
+                13,
+                50543
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2707279721895854,
+            "compression_ratio": 0.8260869565217391,
+            "no_speech_prob": 0.01283236499875784,
+            "words": [
+                {
+                    "word": " So",
+                    "start": 50.78,
+                    "end": 51.3,
+                    "probability": 0.6947665810585022
+                },
+                {
+                    "word": " we",
+                    "start": 51.3,
+                    "end": 51.46,
+                    "probability": 0.8958085775375366
+                },
+                {
+                    "word": " simply",
+                    "start": 51.46,
+                    "end": 51.82,
+                    "probability": 0.9831508994102478
+                },
+                {
+                    "word": " have",
+                    "start": 51.82,
+                    "end": 52.12,
+                    "probability": 0.9964564442634583
+                },
+                {
+                    "word": " to",
+                    "start": 52.12,
+                    "end": 52.58,
+                    "probability": 0.9935306906700134
+                },
+                {
+                    "word": " trust",
+                    "start": 52.58,
+                    "end": 52.78,
+                    "probability": 0.9814630746841431
+                },
+                {
+                    "word": " each",
+                    "start": 52.78,
+                    "end": 53.02,
+                    "probability": 0.9984970092773438
+                },
+                {
+                    "word": " other.",
+                    "start": 53.02,
+                    "end": 53.28,
+                    "probability": 0.9651508927345276
+                }
+            ]
+        }
+    ],
+    "language": "en"
+}
