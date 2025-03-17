@@ -12,8 +12,6 @@ namespace LevelPiece
     [RequireComponent(typeof(ColorSetter))]
     public class Positioner : MonoBehaviour
     {
-        [SerializeField] float moveSpeed = 18f; //speed of the movement
-
         //animation times
         [SerializeField] float hoverTime = 0.5f;
 

@@ -31,7 +31,6 @@ namespace Narration
         [SerializeField] AudioClip audioClip;
         [SerializeField] VideoClip videoClip;
         [SerializeField] TextAsset subtitle;
-        [SerializeField] float startDelay = 1.5f;
         [SerializeField] bool endSceneOnEnd = false;
         [SerializeField] string placeHolderText = "This is the placeholder devlog text. It should be replaced with a proper description of the class.";
         [SerializeField] VideoPlayer videoPlayer;
@@ -47,7 +46,12 @@ namespace Narration
 
         void Start()
         {
-            Invoke("PlayNarration", startDelay);
+            // Narration will now be started by SceneTransitioner
+        }
+
+        public void StartNarration()
+        {
+            PlayNarration();
         }
 
         void PlayNarration()
