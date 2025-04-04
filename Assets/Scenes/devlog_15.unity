@@ -175,6 +175,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1730727783}
     m_Modifications:
+    - target: {fileID: 433905962306727257, guid: 73df769778ae42a43ae53fd9bf5131bb, type: 3}
+      propertyPath: deathAction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4633715614206913382, guid: 73df769778ae42a43ae53fd9bf5131bb, type: 3}
       propertyPath: m_ClearFlags
       value: 2
@@ -837,6 +841,10 @@ PrefabInstance:
     - target: {fileID: 71825157512572940, guid: 9610d277bbe0f3c4ca96d22c669dc994, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 530099706374247730, guid: 9610d277bbe0f3c4ca96d22c669dc994, type: 3}
+      propertyPath: introText
+      value: devlog 15
       objectReference: {fileID: 0}
     - target: {fileID: 530099706374247730, guid: 9610d277bbe0f3c4ca96d22c669dc994, type: 3}
       propertyPath: narrationManager

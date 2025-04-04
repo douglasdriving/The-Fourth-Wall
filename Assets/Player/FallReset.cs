@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,9 +9,19 @@ namespace Player
     /// </summary>
     public class FallReset : MonoBehaviour
     {
+
+        enum DeathAction
+        {
+            ResetLevel,
+            RespawnOnLastPiece
+        }
+
+
         [SerializeField] float fallTimeForReset = 3;
+        [SerializeField] DeathAction deathAction = DeathAction.ResetLevel;
         Rigidbody rb;
         float timeSpentFalling = 0;
+        Transform lastLevelPieceTouched;
 
         private void Awake()
         {
@@ -32,14 +43,36 @@ namespace Player
 
             if (timeSpentFalling > fallTimeForReset)
             {
-                ReloadScene();
+                PlayerDeath();
                 timeSpentFalling = 0;
             }
         }
 
-        void ReloadScene()
+        void PlayerDeath()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            if (deathAction == DeathAction.ResetLevel)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+            else if (deathAction == DeathAction.RespawnOnLastPiece)
+            {
+                TeleportToLastPiece();
+            }
+        }
+
+        void TeleportToLastPiece()
+        {
+            transform.position = lastLevelPieceTouched.transform.position + Vector3.up;
+            transform.rotation = lastLevelPieceTouched.transform.rotation;
+        }
+
+        void OnCollisionEnter(Collision collision)
+        {
+            if (collision.transform.CompareTag("Platform"))
+            {
+                lastLevelPieceTouched = collision.transform;
+                Debug.Log("found walkway!");
+            }
         }
     }
 
