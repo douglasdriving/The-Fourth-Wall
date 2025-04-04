@@ -1243,7 +1243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7021466173556650257, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: isDissapearing
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7021466173556650257, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: isSeparatingSentences
