@@ -131,7 +131,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6882909526695664172}
   - component: {fileID: 2373896282468493911}
-  - component: {fileID: 5233320397544077580}
   m_Layer: 0
   m_Name: WalkDetector
   m_TagString: RespawnPoint
@@ -175,19 +174,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5233320397544077580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1876559722440093188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b8dc16c6c997374999c056fbf5e6437, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isActive: 0
 --- !u!1 &5115234615109336178
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,7 +287,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89cc11c93b9b0484ea03c19cf2f417ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 15
   hoverTime: 0.6
   walkOffPoint: {fileID: 312883837681284213}
   targetPieceScale: {x: 2, y: 1, z: 1.2}

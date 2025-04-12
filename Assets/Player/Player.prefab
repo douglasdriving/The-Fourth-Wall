@@ -243,6 +243,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9ee02f5ce18d2f42b17e53dd49fcc41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  sphereRadius: 0.01
 --- !u!1 &4281172418304296911
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,6 +606,7 @@ GameObject:
   - component: {fileID: 6895896563891165379}
   - component: {fileID: 433905962306727257}
   - component: {fileID: 7150247590100336395}
+  - component: {fileID: 6297549853950673286}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -795,6 +800,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallTimeForReset: 2
+  deathAction: 0
 --- !u!114 &7150247590100336395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -825,6 +831,19 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 4633715614206913382}
+--- !u!114 &6297549853950673286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8531470548768403456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15910b7633181374d812a07240997e76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelGenerator: {fileID: 0}
 --- !u!1001 &90409931144480231
 PrefabInstance:
   m_ObjectHideFlags: 0

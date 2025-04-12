@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using LevelGeneration;
+using Player;
 using UnityEngine;
 using UnityEngine.Video;
 
@@ -19,8 +20,7 @@ namespace Narration
             PAUSE
         }
 
-        const int numberOfUnpausePiecesOnPause = 8;
-        const float pauseDelay = 0.12f;
+        const float pauseDelay = 0.1f;
 
         static SubtitlePlayer subtitlePlayer;
         public static PlayState playState = PlayState.STOP;
@@ -34,27 +34,22 @@ namespace Narration
         [SerializeField] bool endSceneOnEnd = false;
         [SerializeField] string placeHolderText = "This is the placeholder devlog text. It should be replaced with a proper description of the class.";
         [SerializeField] VideoPlayer videoPlayer;
+        WalkwayDistanceChecker playerWalkwayDistanceChecker;
+        ExitPortalGenerator exitPortalGenerator;
 
         void Awake()
         {
             subtitlePlayer = FindObjectOfType<SubtitlePlayer>();
+            playerWalkwayDistanceChecker = FindObjectOfType<WalkwayDistanceChecker>();
+            exitPortalGenerator = FindObjectOfType<ExitPortalGenerator>();
+
             if (videoClip != null && audioClip != null)
             {
                 Debug.LogWarning("both audio and video provided. will only play video.");
             }
         }
 
-        void Start()
-        {
-            // Narration will now be started by SceneTransitioner
-        }
-
-        public void StartNarration()
-        {
-            PlayNarration();
-        }
-
-        void PlayNarration()
+        public void PlayNarration()
         {
 
             SubtitleJsonData subtitleData;
@@ -86,63 +81,108 @@ namespace Narration
 
             playState = PlayState.PLAY;
             timePlayed = 0;
-            SetPausesFromSubtitle(subtitleData);
+
+            SceneRules rules = FindObjectOfType<SceneRules>();
+            if (rules != null && rules.pauseBetweenSentences)
+            {
+                SchedulePausesAfterEachSentence(subtitleData);
+            }
+
             SchedulePortalSpawn(totalDuration);
             if (endSceneOnEnd) StartCoroutine(EndSceneAfterDelay(totalDuration));
 
         }
 
-        IEnumerator EndSceneAfterDelay(float delay)
-        {
-            yield return new WaitForSeconds(delay);
-            SceneTransitioner sceneTransitioner = FindObjectOfType<SceneTransitioner>();
-            if (sceneTransitioner != null) sceneTransitioner.EndScene();
-            else Debug.LogWarning("SceneTransitioner not found in scene. Will not attempt to end scene.");
-        }
-
-        private void SchedulePortalSpawn(float timeBeforeSpawn) //should this really happen in this class?
-        {
-            ExitPortalGenerator exitPortalGenerator = FindObjectOfType<ExitPortalGenerator>();
-            if (exitPortalGenerator != null) StartCoroutine(exitPortalGenerator.GenerateExitPortalAfterDelay(timeBeforeSpawn));
-            else Debug.LogWarning("ExitPortalGenerator not found in scene. Will not attempt to spawn exit portal.");
-        }
-
-        private static void SetPausesFromSubtitle(SubtitleJsonData subtitleData)
+        private static void SchedulePausesAfterEachSentence(SubtitleJsonData subtitleData)
         {
             pausesScheduled.Clear();
-            foreach (SubtitleWord word in subtitleData.GetWords())
+            if (subtitleData != null)
             {
-                if (word.pause)
+                foreach (SubtitleSegment segment in subtitleData.segments)
                 {
-                    pausesScheduled.Add(word.end + pauseDelay);
+                    foreach (SubtitleWord word in segment.words)
+                    {
+                        string wordText = word.word;
+                        bool endsSentence = wordText.EndsWith(".") || wordText.EndsWith("!") || wordText.EndsWith("?");
+                        if (endsSentence)
+                        {
+                            float pauseTime = word.end + pauseDelay;
+                            pausesScheduled.Add(pauseTime);
+                        }
+                    }
                 }
             }
         }
 
-        void Update()
+        IEnumerator EndSceneAfterDelay(float delay)
         {
-            if (playState != PlayState.PLAY) return;
+            float elapsed = 0f;
 
-            timePlayed += Time.deltaTime;
-
-            if (pausesScheduled.Count > 0 && timePlayed > pausesScheduled[0])
+            while (elapsed < delay)
             {
-                Pause();
-                pausesScheduled.RemoveAt(0);
+                if (playState == PlayState.PLAY)
+                {
+                    elapsed += Time.deltaTime;
+                }
+                yield return null; // Wait for the next frame
             }
 
-            if (timePlayed > totalDuration)
+            SceneTransitioner sceneTransitioner = FindObjectOfType<SceneTransitioner>();
+            if (sceneTransitioner != null)
+                sceneTransitioner.EndScene();
+            else
+                Debug.LogWarning("SceneTransitioner not found in scene. Will not attempt to end scene.");
+        }
+
+        private void SchedulePortalSpawn(float timeBeforeSpawn)
+        {
+            if (exitPortalGenerator != null) exitPortalGenerator.StartSpawnCountdown(timeBeforeSpawn);
+            else Debug.LogWarning("ExitPortalGenerator not found in scene. Will not attempt to spawn exit portal.");
+        }
+
+        void Update()
+        {
+            if (playState == PlayState.PLAY)
             {
-                StopAndReset();
+
+                //maybe the best thing would just be to update everything from here
+                //so we dont need to track pauses from any other class.
+                //then they dont need to run their own update loop
+
+                timePlayed += Time.deltaTime;
+
+                if (pausesScheduled.Count > 0 && timePlayed > pausesScheduled[0])
+                {
+                    Pause();
+                    pausesScheduled.RemoveAt(0);
+                }
+
+                if (timePlayed > totalDuration)
+                {
+                    StopAndReset();
+                }
+            }
+            else if (playState == PlayState.PAUSE)
+            {
+                ResumeIfPlayerIsCloseToEnd();
+            }
+        }
+
+        private void ResumeIfPlayerIsCloseToEnd()
+        {
+            float distanceToWalkoffPoint = playerWalkwayDistanceChecker.GetDistanceToWalkwayEnd();
+            if (distanceToWalkoffPoint < 10)
+            {
+                Resume();
             }
         }
 
         private void Pause()
         {
             playState = PlayState.PAUSE;
-            VoiceOverPlayer.Pause();
-            videoPlayer.Pause();
-            UnpauseTriggerActivator.ActivateUnpauseTriggerOnLastPieces(numberOfUnpausePiecesOnPause);
+            if (videoClip) videoPlayer.Pause();
+            else VoiceOverPlayer.Pause();
+            exitPortalGenerator.PauseSpawnCountdown();
         }
 
         public void Resume()
@@ -150,6 +190,7 @@ namespace Narration
             playState = PlayState.PLAY;
             if (videoClip) videoPlayer.Play();
             else VoiceOverPlayer.Play();
+            exitPortalGenerator.ResumeSpawnCountdown();
         }
 
         public void StopAndReset()

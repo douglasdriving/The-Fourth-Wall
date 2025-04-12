@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using QuizPortal;
 using UnityEngine;
@@ -14,9 +15,52 @@ namespace LevelGeneration
         [SerializeField] float portalHeightAbovePlatform = 1f;
         [SerializeField] float timeBetweenPieceAndPortalSpawn = 0.8f;
 
-        public IEnumerator GenerateExitPortalAfterDelay(float delay)
+        float timeLeftBeforeSpawn;
+
+        enum State
         {
-            yield return new WaitForSeconds(delay);
+            NOT_STARTED,
+            COUNTING_DOWN,
+            PAUSED,
+            DONE
+
+        }
+
+        State state = State.NOT_STARTED;
+
+        public void StartSpawnCountdown(float timeToSpawnPortalAt)
+        {
+            timeLeftBeforeSpawn = timeToSpawnPortalAt;
+            state = State.COUNTING_DOWN;
+        }
+
+        public void PauseSpawnCountdown()
+        {
+            state = State.PAUSED;
+        }
+
+        public void ResumeSpawnCountdown()
+        {
+            state = State.COUNTING_DOWN;
+        }
+
+        void Update()
+        {
+            if (state == State.NOT_STARTED) return;
+            if (state == State.PAUSED) return;
+            if (state == State.DONE) return;
+
+            timeLeftBeforeSpawn -= Time.deltaTime;
+
+            if (timeLeftBeforeSpawn <= 0f)
+            {
+                StartCoroutine(StartPortalSpawn());
+                state = State.DONE;
+            }
+        }
+
+        IEnumerator StartPortalSpawn()
+        {
             GameObject portalLevelPiece = FindObjectOfType<LevelGenerator>().SpawnNextPiece("", false);
             yield return new WaitForSeconds(timeBetweenPieceAndPortalSpawn);
             SpawnPortal(portalLevelPiece);

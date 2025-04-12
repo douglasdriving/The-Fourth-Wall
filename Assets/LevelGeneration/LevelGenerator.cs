@@ -58,7 +58,7 @@ namespace LevelGeneration
       return levelPiece;
     }
 
-    private Vector3 GetLastPieceFinalWalkoffPoint()
+    public Vector3 GetLastPieceFinalWalkoffPoint()
     {
       GameObject lastPiece = levelPiecesSpawned.Last();
       Vector3 lastPieceEndPoint = lastPiece.GetComponent<LevelPiece.Positioner>().GetFinalWalkOffPoint();

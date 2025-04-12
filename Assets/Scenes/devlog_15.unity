@@ -1339,6 +1339,10 @@ PrefabInstance:
       propertyPath: freezePiecesOnSpawn
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4943771266182235940, guid: c08470bc577cf57439013e143128a3fa, type: 3}
+      propertyPath: pauseBetweenSentences
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5260448062687219015, guid: c08470bc577cf57439013e143128a3fa, type: 3}
       propertyPath: m_Name
       value: SceneRules

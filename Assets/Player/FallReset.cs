@@ -71,7 +71,6 @@ namespace Player
             if (collision.transform.CompareTag("Platform"))
             {
                 lastLevelPieceTouched = collision.transform;
-                Debug.Log("found walkway!");
             }
         }
     }

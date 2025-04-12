@@ -95,7 +95,7 @@ public class SceneTransitioner : MonoBehaviour
 
         if (narrationManager != null)
         {
-            narrationManager.StartNarration();
+            narrationManager.PlayNarration();
         }
     }
 

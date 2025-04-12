@@ -8,4 +8,5 @@ public class SceneRules : MonoBehaviour
     public bool pieceSpawnSpread = false;
     public bool colorPieces = false;
     public bool endQuiz = false;
+    public bool pauseBetweenSentences = false;
 }
