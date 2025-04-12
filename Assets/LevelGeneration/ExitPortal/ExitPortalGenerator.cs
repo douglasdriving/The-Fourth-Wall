@@ -12,6 +12,8 @@ namespace LevelGeneration
     {
         [SerializeField] GameObject portalPrefab;
         [SerializeField] GameObject quizPortalPrefab;
+        [SerializeField] GameObject votingPathPrefab;
+
         [SerializeField] float portalHeightAbovePlatform = 1f;
         [SerializeField] float timeBetweenPieceAndPortalSpawn = 0.8f;
 
@@ -73,10 +75,23 @@ namespace LevelGeneration
             Quaternion targetRot = piecePositioner.targetRot;
 
             SceneRules rules = FindObjectOfType<SceneRules>();
-            if (rules && rules.endQuiz)
+            if (rules)
             {
-                GameObject portal = Instantiate(quizPortalPrefab, portalPos, targetRot);
-                SetQuizIfExists(portal);
+                if (rules.portalType == SceneRules.PortalType.QUIZ)
+                {
+                    GameObject portal = Instantiate(quizPortalPrefab, portalPos, targetRot);
+                    SetQuizIfExists(portal);
+                }
+                else if (rules.portalType == SceneRules.PortalType.VOTING_PATHS)
+                {
+                    Vector3 spawnPos = piecePositioner.GetFinalWalkOffPoint();
+                    GameObject votingPaths = Instantiate(votingPathPrefab, spawnPos, targetRot);
+                    // set the question??? or maybe the narrator should just say it? feels like that would make SO MUCH more sense. but maybe it should also be written
+                }
+                else
+                {
+                    Instantiate(portalPrefab, portalPos, targetRot);
+                }
             }
             else
             {
@@ -84,7 +99,7 @@ namespace LevelGeneration
             }
         }
 
-        private void SetQuizIfExists(GameObject portal)
+        private void SetQuizIfExists(GameObject portal) //TODO: move to the portal class
         {
             EndQuizSetter endQuizSetter = GetComponent<EndQuizSetter>();
             PortalQuizSetter portalQuizSetter = portal.GetComponent<PortalQuizSetter>();

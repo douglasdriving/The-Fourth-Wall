@@ -167,15 +167,9 @@ namespace Narration
 
         private void ResumeIfPlayerIsCloseToEnd()
         {
-            if (pauseMenu != null && pauseMenu.CheckIsPaused())
-            {
-                return; // if the pause menu is open, we dont want to resume the narration
-            }
-            float distanceToWalkoffPoint = playerWalkwayDistanceChecker.GetDistanceToWalkwayEnd();
-            if (distanceToWalkoffPoint < 10)
-            {
-                Resume();
-            }
+            if (pauseMenu != null && pauseMenu.CheckIsPaused()) return; // if the pause menu is open, we dont want to resume the narration
+            if (!playerWalkwayDistanceChecker.IsPlayerCloseToEdge()) return;
+            Resume();
         }
 
         public void Pause()

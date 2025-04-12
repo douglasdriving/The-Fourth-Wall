@@ -1,11 +1,20 @@
 //sets the color of the piece based on the number of letter is it.
+using System;
 using UnityEngine;
 
 namespace LevelPiece
 {
     public class ColorSetter : MonoBehaviour
     {
+
+        public enum Mode
+        {
+            MOVING_LEVEL_PIECE,
+            AVERAGE_COLOR,
+        }
+
         MeshRenderer[] meshesToColor;
+        [SerializeField] Mode mode = Mode.MOVING_LEVEL_PIECE;
         [SerializeField] Material baseMaterial;
         [SerializeField] Material frozenMaterial;
         [SerializeField] Positioner positioner;
@@ -15,10 +24,17 @@ namespace LevelPiece
 
         void Awake()
         {
+
             pieceColorCreator = FindObjectOfType<PieceColorCreator>();
             meshesToColor = GetComponentsInChildren<MeshRenderer>();
             rules = FindObjectOfType<SceneRules>();
-            if (rules && rules.colorPieces)
+
+            if (rules == null || rules.colorPieces == false)
+            {
+                return;
+            }
+
+            if (mode == Mode.MOVING_LEVEL_PIECE)
             {
                 UpdateToAverageColor();
                 if (rules.freezePiecesOnSpawn)
@@ -29,6 +45,11 @@ namespace LevelPiece
                 {
                     SetColored();
                 }
+            }
+            else if (mode == Mode.AVERAGE_COLOR)
+            {
+                UpdateToAverageColor();
+                SetColored();
             }
         }
 
@@ -42,7 +63,6 @@ namespace LevelPiece
         {
             if (meshesToColor == null || meshesToColor.Length == 0)
             {
-                Debug.LogWarning("PieceColorSetter: No MeshRenderer components found on GameObject or children");
                 return;
             }
             foreach (MeshRenderer meshToColor in meshesToColor)

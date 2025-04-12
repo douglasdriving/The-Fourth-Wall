@@ -13,4 +13,13 @@ public class EndQuizSetter : MonoBehaviour
     {
         portal.GetComponent<PortalQuizSetter>().SetQuestion(question, answers, correctAnswerIndex);
     }
+
+    public string GetQuestion()
+    {
+        return question;
+    }
+    public string[] GetAnswers()
+    {
+        return answers;
+    }
 }
