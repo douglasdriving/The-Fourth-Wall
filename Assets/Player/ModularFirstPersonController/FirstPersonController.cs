@@ -532,6 +532,22 @@ public class FirstPersonController : MonoBehaviour
             joint.localPosition = new Vector3(Mathf.Lerp(joint.localPosition.x, jointOriginalPos.x, Time.deltaTime * bobSpeed), Mathf.Lerp(joint.localPosition.y, jointOriginalPos.y, Time.deltaTime * bobSpeed), Mathf.Lerp(joint.localPosition.z, jointOriginalPos.z, Time.deltaTime * bobSpeed));
         }
     }
+
+    public void SetPlayerFrozen(bool isFrozen)
+    {
+        if (isFrozen)
+        {
+            rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+            canMove = false;
+            cameraCanMove = false;
+        }
+        else
+        {
+            rb.constraints = RigidbodyConstraints.None;
+            canMove = true;
+            cameraCanMove = true;
+        }
+    }
 }
 
 

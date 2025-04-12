@@ -129,4 +129,20 @@ public class SceneTransitioner : MonoBehaviour
             Debug.LogWarning("No next scene in build settings.");
         }
     }
+
+    public void RestartScene()
+    {
+        FindObjectOfType<PauseMenu>().SetGamePaused(false);
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex);
+    }
+
+    public void ExitGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
+    }
 }

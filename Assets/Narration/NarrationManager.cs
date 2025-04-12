@@ -36,12 +36,14 @@ namespace Narration
         [SerializeField] VideoPlayer videoPlayer;
         WalkwayDistanceChecker playerWalkwayDistanceChecker;
         ExitPortalGenerator exitPortalGenerator;
+        PauseMenu pauseMenu;
 
         void Awake()
         {
             subtitlePlayer = FindObjectOfType<SubtitlePlayer>();
             playerWalkwayDistanceChecker = FindObjectOfType<WalkwayDistanceChecker>();
             exitPortalGenerator = FindObjectOfType<ExitPortalGenerator>();
+            pauseMenu = FindObjectOfType<PauseMenu>();
 
             if (videoClip != null && audioClip != null)
             {
@@ -144,11 +146,6 @@ namespace Narration
         {
             if (playState == PlayState.PLAY)
             {
-
-                //maybe the best thing would just be to update everything from here
-                //so we dont need to track pauses from any other class.
-                //then they dont need to run their own update loop
-
                 timePlayed += Time.deltaTime;
 
                 if (pausesScheduled.Count > 0 && timePlayed > pausesScheduled[0])
@@ -170,6 +167,10 @@ namespace Narration
 
         private void ResumeIfPlayerIsCloseToEnd()
         {
+            if (pauseMenu != null && pauseMenu.CheckIsPaused())
+            {
+                return; // if the pause menu is open, we dont want to resume the narration
+            }
             float distanceToWalkoffPoint = playerWalkwayDistanceChecker.GetDistanceToWalkwayEnd();
             if (distanceToWalkoffPoint < 10)
             {
@@ -177,7 +178,7 @@ namespace Narration
             }
         }
 
-        private void Pause()
+        public void Pause()
         {
             playState = PlayState.PAUSE;
             if (videoClip) videoPlayer.Pause();
