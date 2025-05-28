@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2165227233985809643}
+  - component: {fileID: 3560523251116754072}
   - component: {fileID: 4943771266182235940}
   - component: {fileID: 182013222825949167}
   m_Layer: 0
@@ -33,6 +34,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3560523251116754072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5260448062687219015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f64227b2b0f8d449b6b258bda5c03f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: -1
 --- !u!114 &4943771266182235940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48,7 +62,8 @@ MonoBehaviour:
   freezePiecesOnSpawn: 0
   pieceSpawnSpread: 0
   colorPieces: 0
-  endQuiz: 0
+  portalType: 0
+  pauseBetweenSentences: 0
 --- !u!114 &182013222825949167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,3 +76,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d92fdd8da28e3df4a9933afae2f28030, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startGeneratingLevelAtSecond: -1
+  startPlayerMovementAtSecond: -1

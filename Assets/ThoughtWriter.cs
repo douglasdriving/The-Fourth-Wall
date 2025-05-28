@@ -46,6 +46,7 @@ public class ThoughtWriter : MonoBehaviour
             Debug.Log("Thought submitted: " + thought);
             thoughtInputField.gameObject.SetActive(false);
             isWritingThoughts = false;
+            SubmitThought(thought);
         }
         else
         {
@@ -62,6 +63,17 @@ public class ThoughtWriter : MonoBehaviour
         yield return new WaitForSeconds(delay);
         thoughtInputField.ActivateInputField();
         isWritingThoughts = true;
+    }
+
+    private void SubmitThought(string thought)
+    {
+        SceneInfo sceneInfo = FindObjectOfType<SceneInfo>();
+        if (sceneInfo == null || sceneInfo.sceneId == -1)
+        {
+            Debug.LogError("SceneInfo not found or sceneId is not set. Cannot submit thought.");
+            return;
+        }
+        StartCoroutine(SupabaseConnect.AddThought(thought, sceneInfo.sceneId));
     }
 }
 

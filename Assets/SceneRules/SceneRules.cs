@@ -17,6 +17,6 @@ public class SceneRules : MonoBehaviour
         VOTING_PATHS,
         THOUGHT_LEVITATOR,
     }
-    public EndSpawnObject portalType = EndSpawnObject.PORTAL;
+    public EndSpawnObject endSpawnObject = EndSpawnObject.PORTAL;
     public bool pauseBetweenSentences = false;
 }

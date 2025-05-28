@@ -81,7 +81,7 @@ namespace LevelGeneration
             SceneRules rules = FindObjectOfType<SceneRules>();
             if (rules)
             {
-                switch (rules.portalType)
+                switch (rules.endSpawnObject)
                 {
                     case SceneRules.EndSpawnObject.PORTAL:
                         Instantiate(portalPrefab, pointAbovePlatform, targetRot);
