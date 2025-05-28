@@ -275,6 +275,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8869523680512323596, guid: 73df769778ae42a43ae53fd9bf5131bb, type: 3}
+      propertyPath: m_text
+      value: "[start writing your thuoughts]\u200B\u200B"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -982,7 +986,7 @@ MonoBehaviour:
   videoClip: {fileID: 0}
   subtitle: {fileID: 0}
   endSceneOnEnd: 0
-  placeHolderText: This is the test text for level 15. I hope you enjoy it.
+  placeHolderText: This is test text for level 15. I hope you enjoy it.
   videoPlayer: {fileID: 0}
 --- !u!4 &1957703236
 Transform:

@@ -44,6 +44,7 @@ public class ThoughtLevitator : MonoBehaviour
             {
                 StartLevitation();
                 SetInvisible();
+                other.GetComponent<ThoughtWriter>()?.EnableThoughtWriting();
             }
         }
     }
