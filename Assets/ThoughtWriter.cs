@@ -73,7 +73,20 @@ public class ThoughtWriter : MonoBehaviour
             Debug.LogError("SceneInfo not found or sceneId is not set. Cannot submit thought.");
             return;
         }
-        StartCoroutine(SupabaseConnect.AddThought(thought, sceneInfo.sceneId));
+        StartCoroutine(SupabaseConnect.AddThought(thought, sceneInfo.sceneId, OnSubmitComplete));
+    }
+
+    private void OnSubmitComplete()
+    {
+        SceneTransitioner sceneTransitioner = FindObjectOfType<SceneTransitioner>();
+        if (sceneTransitioner != null)
+        {
+            sceneTransitioner.EndScene();
+        }
+        else
+        {
+            Debug.LogError("SceneTransitioner not found in the scene. Cannot end scene after thought submission.");
+        }
     }
 }
 

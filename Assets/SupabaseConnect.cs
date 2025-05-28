@@ -41,7 +41,7 @@ public class SupabaseConnect : MonoBehaviour
         }
     }
 
-    public static IEnumerator AddThought(string thoughtText, int levelId)
+    public static IEnumerator AddThought(string thoughtText, int levelId, System.Action callback = null)
     {
         Debug.Log($"Adding thought: {thoughtText} for level ID: {levelId}");
 
@@ -95,6 +95,8 @@ public class SupabaseConnect : MonoBehaviour
             {
                 Debug.LogError($"Error parsing response: {e.Message}");
             }
+
+            callback?.Invoke(); // Invoke the callback if provided
         }
     }
 
