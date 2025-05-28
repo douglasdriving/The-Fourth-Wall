@@ -7,6 +7,7 @@ MonoImporter:
   - portalPrefab: {fileID: 4335569441670879784, guid: a94d6cfa1021f69488d97c5bb3922e7f, type: 3}
   - quizPortalPrefab: {fileID: 4335569441670879784, guid: ede3a4815b17a414fbeac24ece619543, type: 3}
   - votingPathPrefab: {fileID: 2019700480468914788, guid: 10a613c4af5d9ca4dae31d4d7f21643f, type: 3}
+  - thoughtLevitatorPrefab: {fileID: 3825949567099144956, guid: 2a92b35093da99b4fa0d7bfaae31ebec, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

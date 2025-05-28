@@ -10,12 +10,13 @@ public class SceneRules : MonoBehaviour
     public bool pieceSpawnSpread = false;
     public bool colorPieces = false;
 
-    public enum PortalType
+    public enum EndSpawnObject
     {
-        NORMAL,
-        QUIZ,
+        PORTAL,
+        PORTAL_QUIZ,
         VOTING_PATHS,
+        THOUGHT_LEVITATOR,
     }
-    public PortalType portalType = PortalType.NORMAL;
+    public EndSpawnObject portalType = EndSpawnObject.PORTAL;
     public bool pauseBetweenSentences = false;
 }

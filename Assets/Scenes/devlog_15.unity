@@ -906,50 +906,6 @@ Transform:
   - {fileID: 511306194}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1768557659
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1768557661}
-  - component: {fileID: 1768557660}
-  m_Layer: 0
-  m_Name: supabasetester
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1768557660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1768557659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 690f1130f59150c42acd6331b0a08938, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1768557661
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1768557659}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.6777372, y: 5.670581, z: -7.3235917}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1830351975 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 71825157512572940, guid: 9610d277bbe0f3c4ca96d22c669dc994, type: 3}
@@ -1022,13 +978,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d124fb07a4f53f4281d4edb4ef76cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 9a35bc8fc05d935458574295cbe40048, type: 3}
+  audioClip: {fileID: 0}
   videoClip: {fileID: 0}
-  subtitle: {fileID: 4900000, guid: ccc5801c85689194a9c341f76118ec68, type: 3}
+  subtitle: {fileID: 0}
   endSceneOnEnd: 0
-  placeHolderText: And now the color of the blocks.  They are fading between yellow
-    and red, like the autumn leaves in the city I live in.  Just wanted to share
-    that thing about my life with you.
+  placeHolderText: This is the test text for level 15. I hope you enjoy it.
   videoPlayer: {fileID: 0}
 --- !u!4 &1957703236
 Transform:
@@ -1299,6 +1253,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2019700480468914788, guid: 10a613c4af5d9ca4dae31d4d7f21643f, type: 3}
     - target: {fileID: 6369491074704825201, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+      propertyPath: thoughtLevitatorPrefab
+      value: 
+      objectReference: {fileID: 3825949567099144956, guid: 2a92b35093da99b4fa0d7bfaae31ebec, type: 3}
+    - target: {fileID: 6369491074704825201, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: portalHeightAbovePlatform
       value: 2.3
       objectReference: {fileID: 0}
@@ -1467,7 +1425,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4943771266182235940, guid: c08470bc577cf57439013e143128a3fa, type: 3}
       propertyPath: portalType
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4943771266182235940, guid: c08470bc577cf57439013e143128a3fa, type: 3}
       propertyPath: colorPieces
@@ -1505,4 +1463,3 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 417246812}
   - {fileID: 1730727783}
-  - {fileID: 1768557661}

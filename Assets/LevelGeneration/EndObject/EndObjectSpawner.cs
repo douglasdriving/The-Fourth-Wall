@@ -8,14 +8,18 @@ namespace LevelGeneration
     /// <summary>
     /// generates an exit portal at the end of the level after a delay
     /// </summary>
-    public class ExitPortalGenerator : MonoBehaviour
+    public class EndObjectSpawner : MonoBehaviour //CHANGE THE NAME OF THIS CLASS TO EXITOBJECTGENERATOR OR SOMETHING LIKE THAT
     {
+        [Header("Prefabs")]
+        [Tooltip("The prefab to spawn at the end of the level.")]
         [SerializeField] GameObject portalPrefab;
         [SerializeField] GameObject quizPortalPrefab;
         [SerializeField] GameObject votingPathPrefab;
+        [SerializeField] GameObject thoughtLevitatorPrefab;
 
-        [SerializeField] float portalHeightAbovePlatform = 1f;
-        [SerializeField] float timeBetweenPieceAndPortalSpawn = 0.8f;
+        [Header("Settings")]
+        [SerializeField] float pointHeightAbovePlatform = 1f;
+        [SerializeField] float spawnDelay = 0.8f;
 
         float timeLeftBeforeSpawn;
 
@@ -64,38 +68,43 @@ namespace LevelGeneration
         IEnumerator StartPortalSpawn()
         {
             GameObject portalLevelPiece = FindObjectOfType<LevelGenerator>().SpawnNextPiece("", false);
-            yield return new WaitForSeconds(timeBetweenPieceAndPortalSpawn);
+            yield return new WaitForSeconds(spawnDelay);
             SpawnPortal(portalLevelPiece);
         }
 
         private void SpawnPortal(GameObject portalLevelPiece)
         {
             LevelPiece.Positioner piecePositioner = portalLevelPiece.GetComponent<LevelPiece.Positioner>();
-            Vector3 portalPos = piecePositioner.targetPos + Vector3.up * portalHeightAbovePlatform;
+            Vector3 pointAbovePlatform = piecePositioner.targetPos + Vector3.up * pointHeightAbovePlatform;
             Quaternion targetRot = piecePositioner.targetRot;
 
             SceneRules rules = FindObjectOfType<SceneRules>();
             if (rules)
             {
-                if (rules.portalType == SceneRules.PortalType.QUIZ)
+                switch (rules.portalType)
                 {
-                    GameObject portal = Instantiate(quizPortalPrefab, portalPos, targetRot);
-                    SetQuizIfExists(portal);
-                }
-                else if (rules.portalType == SceneRules.PortalType.VOTING_PATHS)
-                {
-                    Vector3 spawnPos = piecePositioner.GetFinalWalkOffPoint();
-                    GameObject votingPaths = Instantiate(votingPathPrefab, spawnPos, targetRot);
-                    // set the question??? or maybe the narrator should just say it? feels like that would make SO MUCH more sense. but maybe it should also be written
-                }
-                else
-                {
-                    Instantiate(portalPrefab, portalPos, targetRot);
+                    case SceneRules.EndSpawnObject.PORTAL:
+                        Instantiate(portalPrefab, pointAbovePlatform, targetRot);
+                        break;
+                    case SceneRules.EndSpawnObject.PORTAL_QUIZ:
+                        GameObject portal = Instantiate(quizPortalPrefab, pointAbovePlatform, targetRot);
+                        SetQuizIfExists(portal);
+                        break;
+                    case SceneRules.EndSpawnObject.VOTING_PATHS:
+                        Vector3 spawnPos = piecePositioner.GetFinalWalkOffPoint();
+                        GameObject votingPaths = Instantiate(votingPathPrefab, spawnPos, targetRot);
+                        // set the question??? or maybe the narrator should just say it? feels like that would make SO MUCH more sense. but maybe it should also be written
+                        break;
+                    case SceneRules.EndSpawnObject.THOUGHT_LEVITATOR:
+                        pointAbovePlatform += Vector3.forward * 0.5f;
+                        pointAbovePlatform += Vector3.down * 0.5f;
+                        Instantiate(thoughtLevitatorPrefab, pointAbovePlatform, targetRot);
+                        break;
                 }
             }
             else
             {
-                Instantiate(portalPrefab, portalPos, targetRot);
+                Instantiate(portalPrefab, pointAbovePlatform, targetRot);
             }
         }
 

@@ -59,5 +59,14 @@
     "dotnet.defaultSolution": "The Fourth Wall.sln",
     "omnisharp.dotNetCliPaths": [
         "C:\\Program Files\\dotnet"
-    ]
+    ],
+    "omnisharp.useModernNet": true,
+    "omnisharp.enableRoslynAnalyzers": true,
+    "omnisharp.enableAsyncCompletion": true,
+    "csharp.semanticHighlighting.enabled": true,
+    "editor.semanticHighlighting.enabled": true,
+    "[csharp]": {
+        "editor.defaultFormatter": "ms-dotnettools.csharp"
+    },
+    "dotnet.completion.showCompletionItemsFromUnimportedNamespaces": true
 }

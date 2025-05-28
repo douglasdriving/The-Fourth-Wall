@@ -35,14 +35,14 @@ namespace Narration
         [SerializeField] string placeHolderText = "This is the placeholder devlog text. It should be replaced with a proper description of the class.";
         [SerializeField] VideoPlayer videoPlayer;
         WalkwayDistanceChecker playerWalkwayDistanceChecker;
-        ExitPortalGenerator exitPortalGenerator;
+        EndObjectSpawner exitPortalGenerator;
         PauseMenu pauseMenu;
 
         void Awake()
         {
             subtitlePlayer = FindObjectOfType<SubtitlePlayer>();
             playerWalkwayDistanceChecker = FindObjectOfType<WalkwayDistanceChecker>();
-            exitPortalGenerator = FindObjectOfType<ExitPortalGenerator>();
+            exitPortalGenerator = FindObjectOfType<EndObjectSpawner>();
             pauseMenu = FindObjectOfType<PauseMenu>();
 
             if (videoClip != null && audioClip != null)
