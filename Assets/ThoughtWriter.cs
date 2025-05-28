@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class ThoughtWriter : MonoBehaviour
 {
+    [SerializeField] GameObject thoughtCanvas;
     [SerializeField] TMP_InputField thoughtInputField;
     bool isWritingThoughts = false;
     public void EnableThoughtWriting()
     {
-        thoughtInputField.gameObject.SetActive(true);
+        thoughtCanvas.SetActive(true);
         isWritingThoughts = true;
         thoughtInputField.ActivateInputField();
         thoughtInputField.text = "";
@@ -19,12 +20,12 @@ public class ThoughtWriter : MonoBehaviour
     {
         if (isWritingThoughts)
         {
-            EnforeFieldFocus();
+            EnforceFieldFocus();
             SubmitIfCtrlEnterPressed();
         }
     }
 
-    private void EnforeFieldFocus()
+    private void EnforceFieldFocus()
     {
         if (!thoughtInputField.isFocused)
         {
@@ -43,8 +44,7 @@ public class ThoughtWriter : MonoBehaviour
         string thought = thoughtInputField.text.Trim();
         if (!string.IsNullOrEmpty(thought))
         {
-            Debug.Log("Thought submitted: " + thought);
-            thoughtInputField.gameObject.SetActive(false);
+            thoughtCanvas.SetActive(false);
             isWritingThoughts = false;
             SubmitThought(thought);
         }
