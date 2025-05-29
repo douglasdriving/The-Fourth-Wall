@@ -87,13 +87,13 @@ public class SceneTransitioner : MonoBehaviour
         }
     }
 
-    public void EndScene(bool fadeOut = true)
+    public void EndScene(bool fadeOut = true, string sceneNameOverride = "")
     {
-        if (fadeOut) StartCoroutine(FadeToNextScene());
-        else LoadNextScene();
+        if (fadeOut) StartCoroutine(FadeToNextScene(sceneNameOverride));
+        else LoadNextScene(sceneNameOverride);
     }
 
-    public IEnumerator FadeToNextScene()
+    public IEnumerator FadeToNextScene(string sceneNameOverride = "")
     {
         fadeImage.gameObject.SetActive(true);
         for (float i = 0; i <= fadeTime; i += Time.deltaTime)
@@ -101,11 +101,18 @@ public class SceneTransitioner : MonoBehaviour
             fadeImage.color = new Color(0, 0, 0, i);
             yield return null;
         }
-        LoadNextScene();
+        LoadNextScene(sceneNameOverride);
     }
 
-    private void LoadNextScene()
+    private void LoadNextScene(string sceneNameOverride = "")
     {
+
+        if (sceneNameOverride != "")
+        {
+            SceneManager.LoadScene(sceneNameOverride);
+            return;
+        }
+
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int nextSceneIndex = currentSceneIndex + 1;
         if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)

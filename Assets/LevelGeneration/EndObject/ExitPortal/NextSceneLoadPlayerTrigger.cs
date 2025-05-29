@@ -8,11 +8,20 @@ namespace LevelGeneration
     /// </summary>
     public class NextSceneLoadPlayerTrigger : MonoBehaviour
     {
+        [SerializeField] string sceneNameOverride = "";
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Player"))
             {
-                FindObjectOfType<SceneTransitioner>().EndScene(true);
+                if (sceneNameOverride != "")
+                {
+                    FindObjectOfType<SceneTransitioner>().EndScene(true, sceneNameOverride);
+                }
+                else
+                {
+                    FindObjectOfType<SceneTransitioner>().EndScene(true);
+                }
+
             }
         }
     }

@@ -1522,6 +1522,7 @@ GameObject:
   - component: {fileID: 7150247590100336395}
   - component: {fileID: 6297549853950673286}
   - component: {fileID: 8491194503519391372}
+  - component: {fileID: 4018006422851643295}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1773,6 +1774,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thoughtCanvas: {fileID: 6112276620113154744}
   thoughtInputField: {fileID: 4408258388697448872}
+--- !u!114 &4018006422851643295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8531470548768403456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d2538621c3c318479d2429a092f343f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &90409931144480231
 PrefabInstance:
   m_ObjectHideFlags: 0
