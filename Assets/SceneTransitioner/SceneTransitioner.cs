@@ -20,13 +20,13 @@ public class SceneTransitioner : MonoBehaviour
     {
         if (fadeInOnStart)
         {
-            if (!string.IsNullOrEmpty(introText) && textPrinter != null)
+            if (introText != null && introText != "" && textPrinter != null)
             {
                 StartCoroutine(ShowIntroAndFade());
             }
             else
             {
-                StartCoroutine(FadeIn());
+                StartCoroutine(FadeInAndStartNarraiton());
             }
         }
         else
@@ -53,10 +53,7 @@ public class SceneTransitioner : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         // Now start the fade
-        yield return StartCoroutine(FadeIn());
-
-        // Start narration after fade completes
-        StartNarrationIfPresent();
+        yield return StartCoroutine(FadeInAndStartNarraiton());
         textPrinter.ClearText();
     }
 
@@ -65,7 +62,7 @@ public class SceneTransitioner : MonoBehaviour
         textPrintingComplete = true;
     }
 
-    public IEnumerator FadeIn()
+    public IEnumerator FadeInAndStartNarraiton()
     {
         fadeImage.gameObject.SetActive(true);
         for (float i = fadeTime; i >= 0; i -= Time.deltaTime)
@@ -74,16 +71,7 @@ public class SceneTransitioner : MonoBehaviour
             yield return null;
         }
         fadeImage.gameObject.SetActive(false);
-
-        // If this was called directly (not through ShowIntroAndFade), start narration
-        if (!string.IsNullOrEmpty(introText) && textPrinter != null)
-        {
-            // Don't start narration here as it will be started by ShowIntroAndFade
-        }
-        else
-        {
-            StartNarrationIfPresent();
-        }
+        StartNarrationIfPresent();
     }
 
     private void StartNarrationIfPresent()
@@ -142,7 +130,7 @@ public class SceneTransitioner : MonoBehaviour
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
-            Application.Quit();
+        Application.Quit();
 #endif
     }
 }

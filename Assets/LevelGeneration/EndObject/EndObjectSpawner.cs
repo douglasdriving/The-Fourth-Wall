@@ -97,7 +97,7 @@ namespace LevelGeneration
                         break;
                     case SceneRules.EndSpawnObject.THOUGHT_LEVITATOR:
                         pointAbovePlatform += Vector3.forward * 0.5f;
-                        pointAbovePlatform += Vector3.down * 0.5f;
+                        pointAbovePlatform += Vector3.down * 1.5f;
                         Instantiate(thoughtLevitatorPrefab, pointAbovePlatform, targetRot);
                         break;
                 }

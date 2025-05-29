@@ -329,14 +329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 3066889078751361399}
   fadeInOnStart: 1
-  introText: 'devlog 15
-
-    - added a text printer at scene start
-
-    - went to
-    the bathroom
-
-    - hello world'
+  introText: 
   fadeTime: 1
   textPrinter: {fileID: 8700544164596210927}
   narrationManager: {fileID: 0}
@@ -372,7 +365,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d25c74888e37b35459d6dd723d75b8d6, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.078
   m_Pitch: 1
   Loop: 0

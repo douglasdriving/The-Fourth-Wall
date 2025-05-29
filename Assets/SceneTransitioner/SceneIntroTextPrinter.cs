@@ -35,9 +35,16 @@ public class SceneIntroTextPrinter : MonoBehaviour
 
     public void PrintText(string text)
     {
+        Debug.Log($"Printing text: {text}");
         if (printRoutine != null)
         {
             StopCoroutine(printRoutine);
+        }
+        if (text == null || text.Length == 0)
+        {
+            introTextMeshPro.text = "";
+            Debug.LogWarning("Attempted to print empty text.");
+            return;
         }
         fullText = text;
         isTyping = true;

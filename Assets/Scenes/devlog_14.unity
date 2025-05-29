@@ -1067,7 +1067,6 @@ MonoBehaviour:
   audioClip: {fileID: 0}
   videoClip: {fileID: 32900000, guid: 6551a285fefa6fb49b84bf9024e1af10, type: 3}
   subtitle: {fileID: 4900000, guid: 38f24ff1ddd7bd541a86c0180cec3a76, type: 3}
-  startDelay: 0
   endSceneOnEnd: 0
   placeHolderText: placeholder text blah blah blah!
   videoPlayer: {fileID: 1614437558}
@@ -1460,6 +1459,10 @@ PrefabInstance:
     - target: {fileID: 4943771266182235940, guid: c08470bc577cf57439013e143128a3fa, type: 3}
       propertyPath: playerCanMove
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4943771266182235940, guid: c08470bc577cf57439013e143128a3fa, type: 3}
+      propertyPath: endSpawnObject
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4943771266182235940, guid: c08470bc577cf57439013e143128a3fa, type: 3}
       propertyPath: setPieceColors

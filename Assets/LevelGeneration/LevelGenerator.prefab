@@ -103,8 +103,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   portalPrefab: {fileID: 4335569441670879784, guid: a94d6cfa1021f69488d97c5bb3922e7f, type: 3}
   quizPortalPrefab: {fileID: 4335569441670879784, guid: ede3a4815b17a414fbeac24ece619543, type: 3}
-  portalHeightAbovePlatform: 2.88
-  timeBetweenPieceAndPortalSpawn: 0.8
+  votingPathPrefab: {fileID: 2019700480468914788, guid: 10a613c4af5d9ca4dae31d4d7f21643f, type: 3}
+  thoughtLevitatorPrefab: {fileID: 4335569441670879784, guid: ede3a4815b17a414fbeac24ece619543, type: 3}
+  pointHeightAbovePlatform: 2.2
+  spawnDelay: 0.8
 --- !u!114 &8118289208220695993
 MonoBehaviour:
   m_ObjectHideFlags: 0
