@@ -15,54 +15,54 @@ EditorBuildSettings:
     path: Assets/Scenes/instructions.unity
     guid: 1a0b2b396df54254e9f6bc6d53dfdb11
   - enabled: 1
-    path: Assets/Scenes/devlog_0.unity
+    path: Assets/Scenes/devlogs/devlog_0.unity
     guid: 9bd2b8d23ef4bfa46aefd3ba7a0cd020
   - enabled: 1
-    path: Assets/Scenes/devlog_1.unity
+    path: Assets/Scenes/devlogs/devlog_1.unity
     guid: ff2bfa7d0cf566a4685be2ddef8bccee
   - enabled: 1
-    path: Assets/Scenes/devlog_2.unity
+    path: Assets/Scenes/devlogs/devlog_2.unity
     guid: 23ef69a57aa83dd43ad54aa70273226b
   - enabled: 1
-    path: Assets/Scenes/devlog_3.unity
+    path: Assets/Scenes/devlogs/devlog_3.unity
     guid: d441e3017c999b04eb5a505850507081
   - enabled: 1
-    path: Assets/Scenes/devlog_4.unity
+    path: Assets/Scenes/devlogs/devlog_4.unity
     guid: 20486ef889e3fa14ea89d76c8e6176f1
   - enabled: 1
-    path: Assets/Scenes/devlog_5.unity
+    path: Assets/Scenes/devlogs/devlog_5.unity
     guid: 55e9b999fd759ac408a4ec3c1d33577b
   - enabled: 1
-    path: Assets/Scenes/devlog_6.unity
+    path: Assets/Scenes/devlogs/devlog_6.unity
     guid: f83c949a24831d74a886f2e4ab16dd5a
   - enabled: 1
-    path: Assets/Scenes/devlog_7.unity
+    path: Assets/Scenes/devlogs/devlog_7.unity
     guid: 44b997584efd1da4589ef486de55c9bb
   - enabled: 1
-    path: Assets/Scenes/devlog_8.unity
+    path: Assets/Scenes/devlogs/devlog_8.unity
     guid: 6765ba6eb7c00e141be3c62a504d3de7
   - enabled: 1
-    path: Assets/Scenes/devlog_9.unity
+    path: Assets/Scenes/devlogs/devlog_9.unity
     guid: 2c34dd587dbe2e2468da6ece24d64301
   - enabled: 1
-    path: Assets/Scenes/devlog_10.unity
+    path: Assets/Scenes/devlogs/devlog_10.unity
     guid: 7a07dc7282b824b4eb4f3ed05f1254e2
   - enabled: 1
-    path: Assets/Scenes/devlog_11.unity
+    path: Assets/Scenes/devlogs/devlog_11.unity
     guid: ecd22af98458d134da39bc1630c5710e
   - enabled: 1
-    path: Assets/Scenes/devlog_12.unity
+    path: Assets/Scenes/devlogs/devlog_12.unity
     guid: 40165ce259fd9e8479aec4e1f607087e
   - enabled: 1
-    path: Assets/Scenes/devlog_13.unity
+    path: Assets/Scenes/devlogs/devlog_13.unity
     guid: 726630d4b53260c45b1a45bb0b9f5419
   - enabled: 1
-    path: Assets/Scenes/devlog_14.unity
+    path: Assets/Scenes/devlogs/devlog_14.unity
     guid: 6a65925ddf5ab1542898a374ec7571d0
   - enabled: 0
     path: Assets/Scenes/demo_end.unity
     guid: ed68564795c938842a06ff37396d4738
   - enabled: 1
-    path: Assets/Scenes/devlog_15.unity
+    path: Assets/Scenes/devlogs/devlog_15.unity
     guid: 959ab8b815d6ab7478283a52f2d23e5c
   m_configObjects: {}
