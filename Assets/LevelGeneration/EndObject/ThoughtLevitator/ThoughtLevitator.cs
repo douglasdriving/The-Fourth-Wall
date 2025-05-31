@@ -44,7 +44,15 @@ public class ThoughtLevitator : MonoBehaviour
             {
                 StartLevitation();
                 SetInvisible();
-                other.GetComponent<ThoughtWriter>()?.EnableThoughtWriting();
+                ThoughtWriter thoughtWriter = FindObjectOfType<ThoughtWriter>();
+                if (thoughtWriter != null)
+                {
+                    thoughtWriter.EnableThoughtWriting();
+                }
+                else
+                {
+                    Debug.LogError("ThoughtLevitator: No ThoughtWriter found in the scene.");
+                }
             }
         }
     }
