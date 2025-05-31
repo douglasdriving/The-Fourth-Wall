@@ -59,10 +59,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/devlogs/devlog_14.unity
     guid: 6a65925ddf5ab1542898a374ec7571d0
-  - enabled: 0
-    path: Assets/Scenes/demo_end.unity
-    guid: ed68564795c938842a06ff37396d4738
   - enabled: 1
     path: Assets/Scenes/devlogs/devlog_15.unity
     guid: 959ab8b815d6ab7478283a52f2d23e5c
+  - enabled: 1
+    path: Assets/Scenes/demo_end.unity
+    guid: ed68564795c938842a06ff37396d4738
   m_configObjects: {}

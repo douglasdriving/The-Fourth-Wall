@@ -158,7 +158,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -40, y: -40}
+  m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &461199700
 MonoBehaviour:
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: open weblink
+  m_text: exit game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ee1981dece31be94b9a202aaa9ce7fdb, type: 2}
   m_sharedMaterial: {fileID: 4428800186374089408, guid: ee1981dece31be94b9a202aaa9ce7fdb, type: 2}
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 41.6
+  m_fontSize: 38.85
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -478,7 +478,6 @@ GameObject:
   - component: {fileID: 561232281}
   - component: {fileID: 561232280}
   - component: {fileID: 561232279}
-  - component: {fileID: 561232278}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -501,24 +500,11 @@ RectTransform:
   - {fileID: 461199699}
   m_Father: {fileID: 1716593738}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.3}
-  m_AnchoredPosition: {x: 0, y: 30}
-  m_SizeDelta: {x: -200, y: -60}
+  m_AnchorMin: {x: 0.2, y: 0.05}
+  m_AnchorMax: {x: 0.8, y: 0.2}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0}
---- !u!114 &561232278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 561232276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e97167e75a818049a9bdd8d9c1e9520, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  url: https://docs.google.com/forms/d/e/1FAIpQLScl4QULCD9cHjDbNIXJ0eR6iZPFdORo_hGxBV-oj7BTvXClTQ/viewform?usp=dialog
 --- !u!114 &561232279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -563,9 +549,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 561232278}
-        m_TargetAssemblyTypeName: UrlOpener, Assembly-CSharp
-        m_MethodName: OpenLink
+      - m_Target: {fileID: 852136567}
+        m_TargetAssemblyTypeName: SceneTransitioner, Assembly-CSharp
+        m_MethodName: ExitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -778,6 +764,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9610d277bbe0f3c4ca96d22c669dc994, type: 3}
+--- !u!114 &852136567 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 530099706374247730, guid: 9610d277bbe0f3c4ca96d22c669dc994, type: 3}
+  m_PrefabInstance: {fileID: 852136566}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e1157047d39a7f4b972e568ff93ac4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1044388625
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,7 +908,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: thank you for playing
+  m_text: thank you for playing!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ee1981dece31be94b9a202aaa9ce7fdb, type: 2}
   m_sharedMaterial: {fileID: 4428800186374089408, guid: ee1981dece31be94b9a202aaa9ce7fdb, type: 2}
@@ -938,7 +935,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 94.4
+  m_fontSize: 78.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1215,9 +1212,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: this is the end of this demo, and I am amazed that you made it this far.
-    if you wanna help me develop this idea further, please click the button below
-    to open a browser link where you can give me your thoughts.
+  m_text: this is all that I have made so far, but the project is still alive! follow
+    it on itch for further updates.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ee1981dece31be94b9a202aaa9ce7fdb, type: 2}
   m_sharedMaterial: {fileID: 4428800186374089408, guid: ee1981dece31be94b9a202aaa9ce7fdb, type: 2}
@@ -1244,12 +1240,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 43.9
+  m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 200
+  m_fontSizeMax: 36
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
