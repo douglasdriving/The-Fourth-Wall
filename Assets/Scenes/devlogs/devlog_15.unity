@@ -740,6 +740,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1730727783}
     m_Modifications:
+    - target: {fileID: -5861524622178689696, guid: be70666865af3d745afcc89cba35b580, type: 3}
+      propertyPath: hideVideoUntil
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3027783881995848747, guid: be70666865af3d745afcc89cba35b580, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.3964286
@@ -800,6 +804,11 @@ PrefabInstance:
 --- !u!4 &1614437557 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3027783881995848747, guid: be70666865af3d745afcc89cba35b580, type: 3}
+  m_PrefabInstance: {fileID: 1614437556}
+  m_PrefabAsset: {fileID: 0}
+--- !u!328 &1614437558 stripped
+VideoPlayer:
+  m_CorrespondingSourceObject: {fileID: 9154875353873960628, guid: be70666865af3d745afcc89cba35b580, type: 3}
   m_PrefabInstance: {fileID: 1614437556}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &1634035481 stripped
@@ -1028,11 +1037,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 0}
-  videoClip: {fileID: 0}
-  subtitle: {fileID: 0}
+  videoClip: {fileID: 32900000, guid: f566ebbf55f764e4fa151af69ba2900a, type: 3}
+  subtitle: {fileID: 4900000, guid: 43e14c15f1969f64ab04b075a8c33b29, type: 3}
   endSceneOnEnd: 0
   placeHolderText: This is test text for level 15. I hope you enjoy it.
-  videoPlayer: {fileID: 0}
+  videoPlayer: {fileID: 1614437558}
 --- !u!4 &1957703236
 Transform:
   m_ObjectHideFlags: 0
