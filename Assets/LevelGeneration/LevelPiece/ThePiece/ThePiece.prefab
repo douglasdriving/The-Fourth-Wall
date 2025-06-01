@@ -404,7 +404,6 @@ GameObject:
   - component: {fileID: 3789786236138110153}
   - component: {fileID: 1367734984911156769}
   - component: {fileID: -2184872688145861670}
-  - component: {fileID: 1690062704210467225}
   - component: {fileID: 5190290674770209596}
   m_Layer: 0
   m_Name: ThePiece
@@ -457,25 +456,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89cc11c93b9b0484ea03c19cf2f417ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 15
   hoverTime: 0.5
   walkOffPoint: {fileID: 6336413241837900478}
   targetPieceScale: {x: 1, y: 1, z: 1}
   isFrozen: 0
---- !u!114 &1690062704210467225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4795037251955250072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9ae8c4e8ebcd4a4b82aff3685b3a48c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyTimer: 8
-  startDestroyTimerWhenPositioned: 1
 --- !u!114 &5190290674770209596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -488,6 +472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fae21c5c13e5a044c816ef05c0dbbd79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mode: 0
   baseMaterial: {fileID: 2100000, guid: 9785987b5a406634da0c31d388254185, type: 2}
   frozenMaterial: {fileID: 2100000, guid: 355f6f7850fe5f445a09f9183786217c, type: 2}
   positioner: {fileID: -2184872688145861670}
