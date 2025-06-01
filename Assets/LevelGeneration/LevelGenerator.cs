@@ -18,6 +18,7 @@ namespace LevelGeneration
     ThePieceSpawner thePieceSpawner;
     [SerializeField] bool isSpawningAndRails = false;
     [SerializeField] bool isSpawningThePieces = false;
+    [SerializeField] bool isDissapearing = false;
     TalkingHead talkingHead;
 
     void Awake()
@@ -48,6 +49,7 @@ namespace LevelGeneration
         levelPiece = walkwayGenerator.AddPieceToWalkway(lastPieceFinalWalkoffPoint, word, startNewSentence);
       }
 
+      levelPiece.GetComponent<LevelPiece.DestroyTimer>().startDestroyTimerWhenPositioned = isDissapearing;
       levelPiecesSpawned.Add(levelPiece);
 
       if (talkingHead != null)

@@ -670,7 +670,6 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: 5a65a462281fdd845b9bd4243c1db983, type: 3}
   videoClip: {fileID: 0}
   subtitle: {fileID: 4900000, guid: 2866223474dd5344ba2b729e92a686fa, type: 3}
-  startDelay: 0.5
   endSceneOnEnd: 0
   placeHolderText: "Ok so I thought about it and yea that subtitle thing just felt
     too complicated and messy so I decided to have the words just appear above the
@@ -917,6 +916,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7021466173556650257, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: isSeparatingSentences
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7534025309003727685, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+      propertyPath: isDissapearing
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

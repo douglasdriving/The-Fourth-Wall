@@ -670,7 +670,6 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: aa853a649b4cade4690a89f790a313c5, type: 3}
   videoClip: {fileID: 0}
   subtitle: {fileID: 4900000, guid: a0988cb4f5e6a6f4f88ddd7995939352, type: 3}
-  startDelay: 0.5
   endSceneOnEnd: 0
   placeHolderText: this level introduces and rails
   videoPlayer: {fileID: 0}
@@ -913,6 +912,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7021466173556650257, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: isSeparatingSentences
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7534025309003727685, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+      propertyPath: isDissapearing
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7534025309003727685, guid: 5e618ef96ba06324baa61da891779c39, type: 3}

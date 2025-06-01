@@ -670,7 +670,6 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: 465c382deb816814590207db2bd12fc7, type: 3}
   videoClip: {fileID: 0}
   subtitle: {fileID: 4900000, guid: 775d558d2b0b03045aa9d65b400c69bb, type: 3}
-  startDelay: 0.5
   endSceneOnEnd: 0
   placeHolderText: "Ok so, I thought it would be fun to try and display the text
     as a kind of subtitle bar as in a video since, well, a subtitle is pretty much
@@ -918,6 +917,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7021466173556650257, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: isSeparatingSentences
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7534025309003727685, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+      propertyPath: isDissapearing
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

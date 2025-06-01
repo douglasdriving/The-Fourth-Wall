@@ -845,7 +845,6 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: 198bd4cbfe58fde47a26a9d55cf21d3c, type: 3}
   videoClip: {fileID: 0}
   subtitle: {fileID: 4900000, guid: fd5e342d3dac83e46b8eaac5c546fb8e, type: 3}
-  startDelay: 0.5
   endSceneOnEnd: 0
   placeHolderText: And now the color of the blocks.  They are fading between yellow
     and red, like the autumn leaves in the city I live in.  Just wanted to share
@@ -1101,6 +1100,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7021466173556650257, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: isSeparatingSentences
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7534025309003727685, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+      propertyPath: isDissapearing
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7534025309003727685, guid: 5e618ef96ba06324baa61da891779c39, type: 3}

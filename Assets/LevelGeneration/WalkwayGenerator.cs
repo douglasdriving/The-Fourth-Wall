@@ -21,7 +21,6 @@ namespace LevelGeneration
         }
         [SerializeField] AnimationType animationType = AnimationType.NONE;
         public bool isSeparatingSentences = false;
-        public bool isDissapearing = false;
         TalkingHead talkingHead;
 
         private void Awake()
@@ -51,11 +50,6 @@ namespace LevelGeneration
             else
             {
                 piece = walkwayPieceFactory.SpawnAtFinalPosition(targetPos, targetRot, pieceWord);
-            }
-
-            if (isDissapearing)
-            {
-                piece.GetComponent<LevelPiece.DestroyTimer>().startDestroyTimerWhenPositioned = true;
             }
 
             return piece;

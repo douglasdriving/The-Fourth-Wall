@@ -686,7 +686,6 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: 4db887e28320905448a37bfaaa5dec2e, type: 3}
   videoClip: {fileID: 0}
   subtitle: {fileID: 4900000, guid: 16e5ab6719f91e94da16ad133951b6e4, type: 3}
-  startDelay: 0.5
   endSceneOnEnd: 0
   placeHolderText: I just wanna code and implement game design ideas, but at this
     stage I just have to admit that this world is fucking ugly.  It has absolutely
@@ -932,6 +931,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7021466173556650257, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: isSeparatingSentences
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7534025309003727685, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+      propertyPath: isDissapearing
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7534025309003727685, guid: 5e618ef96ba06324baa61da891779c39, type: 3}

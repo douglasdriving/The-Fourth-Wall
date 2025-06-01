@@ -670,7 +670,6 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: 020266ec563101346baa6c7df91b0cd9, type: 3}
   videoClip: {fileID: 0}
   subtitle: {fileID: 4900000, guid: e546805308aea6843b86566e96313c7b, type: 3}
-  startDelay: 0.5
   endSceneOnEnd: 0
   placeHolderText: "Okay, hello again!  I have added some more gameplay elements
     here.  So between each sentence, there's now a gap that you will need to jump
@@ -915,6 +914,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7021466173556650257, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: isSeparatingSentences
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7534025309003727685, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+      propertyPath: isDissapearing
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

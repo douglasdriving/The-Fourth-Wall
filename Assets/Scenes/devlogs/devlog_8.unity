@@ -731,7 +731,6 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: 04aeb3a5ef395834985943b37b1bb3aa, type: 3}
   videoClip: {fileID: 0}
   subtitle: {fileID: 4900000, guid: 45f7d77ea8b0b1a419ed832dae77c232, type: 3}
-  startDelay: 0.5
   endSceneOnEnd: 0
   placeHolderText: Now I changed the font.
   videoPlayer: {fileID: 0}
@@ -974,6 +973,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7021466173556650257, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: isSeparatingSentences
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7534025309003727685, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+      propertyPath: isDissapearing
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7534025309003727685, guid: 5e618ef96ba06324baa61da891779c39, type: 3}

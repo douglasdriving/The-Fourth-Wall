@@ -670,7 +670,6 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: 970899aa06042de498854da2b94fc5ef, type: 3}
   videoClip: {fileID: 0}
   subtitle: {fileID: 4900000, guid: cdfc55f750f7ae6408a2f0bce4344022, type: 3}
-  startDelay: 0.5
   endSceneOnEnd: 0
   placeHolderText: "Another dope idea!  THE-blocks!  The word \u201Cthe\u201D specifies
     one object among several. It is THE specific object that I am talking about that
@@ -916,6 +915,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7021466173556650257, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: isSeparatingSentences
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7534025309003727685, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
+      propertyPath: isDissapearing
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7534025309003727685, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
