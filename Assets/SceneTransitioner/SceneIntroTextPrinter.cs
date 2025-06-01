@@ -35,7 +35,6 @@ public class SceneIntroTextPrinter : MonoBehaviour
 
     public void PrintText(string text)
     {
-        Debug.Log($"Printing text: {text}");
         if (printRoutine != null)
         {
             StopCoroutine(printRoutine);
