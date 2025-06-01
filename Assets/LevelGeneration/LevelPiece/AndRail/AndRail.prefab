@@ -556,6 +556,7 @@ GameObject:
   - component: {fileID: 334025651283383395}
   - component: {fileID: -5826184488815503153}
   - component: {fileID: 5236212528172282426}
+  - component: {fileID: -6533219467522658587}
   - component: {fileID: 203711859345706265}
   m_Layer: 0
   m_Name: AndRail
@@ -645,10 +646,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89cc11c93b9b0484ea03c19cf2f417ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 18
   hoverTime: 0.5
   walkOffPoint: {fileID: 6838226477262789892}
   targetPieceScale: {x: 1, y: 1, z: 1}
   isFrozen: 0
+--- !u!114 &-6533219467522658587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6634007023895207853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9ae8c4e8ebcd4a4b82aff3685b3a48c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimer: 8
+  startDestroyTimerWhenPositioned: 1
 --- !u!114 &203711859345706265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -661,7 +677,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fae21c5c13e5a044c816ef05c0dbbd79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 0
   baseMaterial: {fileID: 2100000, guid: 9785987b5a406634da0c31d388254185, type: 2}
   frozenMaterial: {fileID: 2100000, guid: 355f6f7850fe5f445a09f9183786217c, type: 2}
   positioner: {fileID: 5236212528172282426}
