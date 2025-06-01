@@ -2713,11 +2713,11 @@ PrefabInstance:
       objectReference: {fileID: 1084486351}
     - target: {fileID: 6444595218649194529, guid: 02dce72ab5f37644eac4a888bccf58dd, type: 3}
       propertyPath: m_text
-      value: The right door will take you to an you to the absolute beginning of
-        this game. There, you will play old, unpolished, crappy, and unreasonably
-        punishing levels that I created when starting this project. It's tedious
-        and annoying to play, and you will most certainly regret making that choice.
-        I don't want you to pick it.
+      value: The right door will take you to the absolute beginning of this game.
+        There, you will play old, unpolished, crappy, and unreasonably punishing
+        levels that I created when starting this project. It's tedious and annoying
+        to play, and you will most certainly regret making that choice. I don't want
+        you to pick it.
       objectReference: {fileID: 0}
     - target: {fileID: 6444595218649194529, guid: 02dce72ab5f37644eac4a888bccf58dd, type: 3}
       propertyPath: m_fontSize

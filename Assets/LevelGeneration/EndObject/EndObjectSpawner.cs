@@ -21,7 +21,7 @@ namespace LevelGeneration
         [SerializeField] float pointHeightAbovePlatform = 1f;
         [SerializeField] float spawnDelay = 0.8f;
 
-        float timeLeftBeforeSpawn;
+        float timeLeftBeforeSpawn = 100f; // arbitrary large number to start with
 
         enum State
         {
@@ -60,21 +60,21 @@ namespace LevelGeneration
 
             if (timeLeftBeforeSpawn <= 0f)
             {
-                StartCoroutine(StartPortalSpawn());
+                StartCoroutine(SpawnAfterDelay());
                 state = State.DONE;
             }
         }
 
-        IEnumerator StartPortalSpawn()
+        IEnumerator SpawnAfterDelay()
         {
             GameObject portalLevelPiece = FindObjectOfType<LevelGenerator>().SpawnNextPiece("", false);
             yield return new WaitForSeconds(spawnDelay);
-            SpawnPortal(portalLevelPiece);
+            Spawn(portalLevelPiece);
         }
 
-        private void SpawnPortal(GameObject portalLevelPiece)
+        private void Spawn(GameObject levelPieceToSpawnOn)
         {
-            LevelPiece.Positioner piecePositioner = portalLevelPiece.GetComponent<LevelPiece.Positioner>();
+            LevelPiece.Positioner piecePositioner = levelPieceToSpawnOn.GetComponent<LevelPiece.Positioner>();
             Vector3 pointAbovePlatform = piecePositioner.targetPos + Vector3.up * pointHeightAbovePlatform;
             Quaternion targetRot = piecePositioner.targetRot;
 
