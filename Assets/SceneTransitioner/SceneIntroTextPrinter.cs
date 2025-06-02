@@ -9,6 +9,7 @@ public class SceneIntroTextPrinter : MonoBehaviour
     [Header("Text Settings")]
     [SerializeField] TextMeshProUGUI introTextMeshPro;
     [SerializeField] float charactersPerSecond = 10f;
+    [SerializeField] float holdTimeAtEnd = 1.5f;
     [SerializeField] float timingVariation = 0.1f;
 
     [Header("Audio Settings")]
@@ -84,6 +85,8 @@ public class SceneIntroTextPrinter : MonoBehaviour
             float delay = baseDelay * (1f + UnityEngine.Random.Range(-timingVariation, timingVariation));
             yield return new WaitForSeconds(delay);
         }
+
+        yield return new WaitForSeconds(holdTimeAtEnd);
 
         // Reset audio parameters
         if (audioSource != null)

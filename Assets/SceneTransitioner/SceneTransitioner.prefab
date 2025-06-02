@@ -359,8 +359,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   introTextMeshPro: {fileID: 7040752761608961178}
-  charactersPerSecond: 16
-  timingVariation: 0.15
+  charactersPerSecond: 15
+  holdTimeAtEnd: 2
+  timingVariation: 0.1
   audioSource: {fileID: 1396160222566396925}
   minPitchVariation: 0.95
   maxPitchVariation: 1.05

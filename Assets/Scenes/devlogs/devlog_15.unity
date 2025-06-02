@@ -1872,13 +1872,17 @@ PrefabInstance:
       propertyPath: narrationManager
       value: 
       objectReference: {fileID: 1957703235}
+    - target: {fileID: 1396160222566396925, guid: 9610d277bbe0f3c4ca96d22c669dc994, type: 3}
+      propertyPath: m_Volume
+      value: 0.059
+      objectReference: {fileID: 0}
     - target: {fileID: 6441147980721965977, guid: 9610d277bbe0f3c4ca96d22c669dc994, type: 3}
       propertyPath: m_Name
       value: SceneTransitioner
       objectReference: {fileID: 0}
     - target: {fileID: 8700544164596210927, guid: 9610d277bbe0f3c4ca96d22c669dc994, type: 3}
       propertyPath: charactersPerSecond
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
