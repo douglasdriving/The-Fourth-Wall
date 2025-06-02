@@ -112,7 +112,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -40, y: -40}
+  m_SizeDelta: {x: -80, y: -80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &767828901393821638
 CanvasRenderer:
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -377,9 +377,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d25c74888e37b35459d6dd723d75b8d6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b0ce1bb80696e3c4d99f7b6b357284f2, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.078
+  m_Volume: 0.033
   m_Pitch: 1
   Loop: 0
   Mute: 0
