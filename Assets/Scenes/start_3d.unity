@@ -2121,13 +2121,11 @@ PrefabInstance:
       objectReference: {fileID: 1084486351}
     - target: {fileID: 6444595218649194529, guid: 02dce72ab5f37644eac4a888bccf58dd, type: 3}
       propertyPath: m_text
-      value: The left door, however, will skip the first 14 levels of the game, and
-        bring you right to the point where some feedback had been collected, and
-        the systems had been improved to be playable.
+      value: The left door brings you straight to where it starts getting good.
       objectReference: {fileID: 0}
     - target: {fileID: 6444595218649194529, guid: 02dce72ab5f37644eac4a888bccf58dd, type: 3}
       propertyPath: m_fontSize
-      value: 43.2
+      value: 70.65
       objectReference: {fileID: 0}
     - target: {fileID: 6444595218649194529, guid: 02dce72ab5f37644eac4a888bccf58dd, type: 3}
       propertyPath: m_enableAutoSizing
@@ -2256,12 +2254,11 @@ PrefabInstance:
       objectReference: {fileID: 1084486351}
     - target: {fileID: 6444595218649194529, guid: 02dce72ab5f37644eac4a888bccf58dd, type: 3}
       propertyPath: m_text
-      value: Okay so, now you will get 2 options. Up ahead, there will be a left
-        door, and a right door, and you can only go through one of them
+      value: Ahead are 2 doors
       objectReference: {fileID: 0}
     - target: {fileID: 6444595218649194529, guid: 02dce72ab5f37644eac4a888bccf58dd, type: 3}
       propertyPath: m_fontSize
-      value: 37.15
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 6444595218649194529, guid: 02dce72ab5f37644eac4a888bccf58dd, type: 3}
       propertyPath: m_enableAutoSizing
@@ -2580,11 +2577,11 @@ PrefabInstance:
       objectReference: {fileID: 1084486351}
     - target: {fileID: 6444595218649194529, guid: 02dce72ab5f37644eac4a888bccf58dd, type: 3}
       propertyPath: m_text
-      value: As we all know, Stanley went through the door on the left.
+      value: Stanley decided to go through the door on the left.
       objectReference: {fileID: 0}
     - target: {fileID: 6444595218649194529, guid: 02dce72ab5f37644eac4a888bccf58dd, type: 3}
       propertyPath: m_fontSize
-      value: 70.65
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 6444595218649194529, guid: 02dce72ab5f37644eac4a888bccf58dd, type: 3}
       propertyPath: m_enableAutoSizing
@@ -2713,15 +2710,12 @@ PrefabInstance:
       objectReference: {fileID: 1084486351}
     - target: {fileID: 6444595218649194529, guid: 02dce72ab5f37644eac4a888bccf58dd, type: 3}
       propertyPath: m_text
-      value: The right door will take you to the absolute beginning of this game.
-        There, you will play old, unpolished, crappy, and unreasonably punishing
-        levels that I created when starting this project. It's tedious and annoying
-        to play, and you will most certainly regret making that choice. I don't want
-        you to pick it.
+      value: The right door leads to the absolute beginning. It contains old, crappy,
+        and unreasonably punishing levels. You will regret choosing the right door.
       objectReference: {fileID: 0}
     - target: {fileID: 6444595218649194529, guid: 02dce72ab5f37644eac4a888bccf58dd, type: 3}
       propertyPath: m_fontSize
-      value: 30.2
+      value: 45.35
       objectReference: {fileID: 0}
     - target: {fileID: 6444595218649194529, guid: 02dce72ab5f37644eac4a888bccf58dd, type: 3}
       propertyPath: m_enableAutoSizing
@@ -2850,20 +2844,19 @@ PrefabInstance:
       objectReference: {fileID: 1084486351}
     - target: {fileID: 6444595218649194529, guid: 02dce72ab5f37644eac4a888bccf58dd, type: 3}
       propertyPath: m_text
-      value: 'As in so many games, you can move  around this  one with the WASD keys.
+      value: 'Move around with WASD.
 
 
-        I
-        am sure you might have already tried that, so I feel like I''m stating obvious
-        stuff here.
+        I am sure you might have already tried
+        that, so I feel like I''m stating the obvious.
 
 
-        Then again, maybe you don''t play so many games, and
-        maybe it was helpful that I wrote it here. Who knows.'
+        Then again, maybe
+        you don''t play so many games, and maybe it was helpful that I wrote it here.'
       objectReference: {fileID: 0}
     - target: {fileID: 6444595218649194529, guid: 02dce72ab5f37644eac4a888bccf58dd, type: 3}
       propertyPath: m_fontSize
-      value: 18.25
+      value: 27.25
       objectReference: {fileID: 0}
     - target: {fileID: 6444595218649194529, guid: 02dce72ab5f37644eac4a888bccf58dd, type: 3}
       propertyPath: m_enableAutoSizing
