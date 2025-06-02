@@ -1852,21 +1852,21 @@ PrefabInstance:
       propertyPath: introText
       value: 'devlog 15
 
+        2025-06-02
+
         dedicated to Oscar
 
 
-        - added this intro
-        text print
+        -
+        added this intro text print
 
-        - lowered the difficulty by removing dissapearing pieces,
-        moving ther respawn point to where you fell off, and made the narration pause
-        between each sentence until you catch up
+        - lowered the difficulty
 
-        - added a pause meny (press
-        esc to try it)
+        -
+        added a pause meny (press esc to try it)
 
-        - added a thought writing levitator at the end of
-        the level.'
+        - added a thought writing
+        levitator at the end of the level.'
       objectReference: {fileID: 0}
     - target: {fileID: 530099706374247730, guid: 9610d277bbe0f3c4ca96d22c669dc994, type: 3}
       propertyPath: narrationManager
