@@ -47,7 +47,9 @@ namespace LevelPiece
         {
             if (other.CompareTag("Player"))
             {
-                SetRideStartEnabled(true);
+                Debug.Log("Player entered ride start area");
+                ridePromptCanvas.SetActive(true);
+                playerIsInRideStartArea = true;
             }
         }
 
@@ -55,37 +57,39 @@ namespace LevelPiece
         {
             if (other.CompareTag("Player"))
             {
-                SetRideStartEnabled(false);
+                ridePromptCanvas.SetActive(false);
+                playerIsInRideStartArea = false;
             }
-        }
-
-        void SetRideStartEnabled(bool shouldBeEnabled)
-        {
-            playerIsInRideStartArea = shouldBeEnabled;
-            ridePromptCanvas.SetActive(shouldBeEnabled);
         }
 
         void Update()
         {
-            if (playerIsInRideStartArea && Input.GetKeyDown(KeyCode.E))
-            {
-                StartRide();
-            }
-            else if (isRiding)
+
+            if (isRiding)
             {
                 UpdateRide();
             }
+
+            if (!isRiding && playerIsInRideStartArea && Input.GetKeyDown(KeyCode.E))
+            {
+                StartRide();
+            }
+
         }
 
-        private void StopRiding()
+        private void StartRide()
         {
-            isRiding = false;
-            SetPlayerControllEnabled(true);
+            ridePromptCanvas.SetActive(false);
+            SetPlayerControllEnabled(false);
+            isRiding = true;
+            player.position = playerStartPos;
         }
 
         private void UpdateRide()
         {
-            MovePlayerForwardAlongRail();
+            Vector3 rideDir = (playerEndPos - playerStartPos).normalized;
+            playerRb.MovePosition(playerRb.position + rideDir * rideSpeed * Time.deltaTime);
+
             bool hasReachedEnd = player.position.z >= walkoffPoint.position.z;
             if (hasReachedEnd)
             {
@@ -96,23 +100,10 @@ namespace LevelPiece
         private void EndRide()
         {
             player.position = playerEndPos + Vector3.forward * distanceFromEndPlayerWillBeDroppedAt;
+            playerIsInRideStartArea = false;
+            ridePromptCanvas.SetActive(false);
             SetPlayerControllEnabled(true);
             isRiding = false;
-            Destroy(this);
-        }
-
-        private void MovePlayerForwardAlongRail()
-        {
-            Vector3 rideDir = (playerEndPos - playerStartPos).normalized;
-            player.position += rideDir * rideSpeed * Time.deltaTime;
-        }
-
-        private void StartRide()
-        {
-            ridePromptCanvas.SetActive(false);
-            SetPlayerControllEnabled(false);
-            isRiding = true;
-            player.position = playerStartPos;
         }
 
         void SetPlayerControllEnabled(bool enabled)
