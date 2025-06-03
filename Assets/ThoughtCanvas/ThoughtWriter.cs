@@ -7,13 +7,28 @@ public class ThoughtWriter : MonoBehaviour
 {
     [SerializeField] GameObject thoughtCanvas;
     [SerializeField] TMP_InputField thoughtInputField;
+    [SerializeField] GameObject submitHelpText;
+    [SerializeField] float timeBeforeSubmitIsAllowed = 10f;
     bool isWritingThoughts = false;
+    bool isSubmitAllowed = false;
     public void EnableThoughtWriting()
     {
         thoughtCanvas.SetActive(true);
         isWritingThoughts = true;
         thoughtInputField.ActivateInputField();
         thoughtInputField.text = "";
+        StartCoroutine(WaitForSubmitPermission());
+    }
+
+    IEnumerator WaitForSubmitPermission()
+    {
+        submitHelpText.SetActive(false);
+        isSubmitAllowed = false;
+
+        yield return new WaitForSeconds(timeBeforeSubmitIsAllowed);
+
+        isSubmitAllowed = true;
+        submitHelpText.SetActive(true);
     }
 
     private void Update()
@@ -35,6 +50,8 @@ public class ThoughtWriter : MonoBehaviour
 
     private void SubmitIfCtrlEnterPressed()
     {
+        if (!isSubmitAllowed) return;
+
         bool enterPressed = Input.GetKeyDown(KeyCode.Return);
         if (!enterPressed) return;
 
