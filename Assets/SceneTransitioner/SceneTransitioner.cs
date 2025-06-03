@@ -13,6 +13,7 @@ public class SceneTransitioner : MonoBehaviour
     [SerializeField] float fadeTime = 1;
     [SerializeField] SceneIntroTextPrinter textPrinter;
     [SerializeField] NarrationManager narrationManager;
+    [SerializeField] string fallBackNextSceneNameOverride = "";
 
     private bool textPrintingComplete = false;
 
@@ -110,6 +111,12 @@ public class SceneTransitioner : MonoBehaviour
         if (sceneNameOverride != "")
         {
             SceneManager.LoadScene(sceneNameOverride);
+            return;
+        }
+
+        if (fallBackNextSceneNameOverride != "")
+        {
+            SceneManager.LoadScene(fallBackNextSceneNameOverride);
             return;
         }
 
