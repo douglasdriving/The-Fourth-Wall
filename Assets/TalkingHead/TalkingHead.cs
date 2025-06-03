@@ -15,6 +15,7 @@ public class TalkingHead : MonoBehaviour
 
     void Start()
     {
+        videoCanvas.SetActive(false);
         if (hideVideoUntil >= 0)
         {
             StartCoroutine(StartVideoAfterSeconds(hideVideoUntil));
