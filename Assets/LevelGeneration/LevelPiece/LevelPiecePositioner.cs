@@ -146,9 +146,17 @@ namespace LevelPiece
                 SetCollidersEnabled(false);
                 colorSetter.SetBaseMaterial();
                 yield return MoveFromMouthToAir(time: 0.5f, scaleInMouth: 0.2f);
-                freezer.Freeze();
+                if (FindAnyObjectByType<SceneRules>()?.freezePiecesOnSpawn == true)
+                {
+                    freezer.Freeze();
+                    isFrozen = true;
+                }
+                else
+                {
+                    isFrozen = false;
+                    colorSetter.SetColored();
+                }
                 SetCollidersEnabled(true);
-                // Force an immediate raycast check
                 ObjectScannerRay.ForceCheck();
                 while (isFrozen) yield return null;
                 SetCollidersEnabled(false);

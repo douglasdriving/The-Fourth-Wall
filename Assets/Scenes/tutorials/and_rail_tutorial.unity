@@ -1052,23 +1052,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 530099706374247730, guid: 9610d277bbe0f3c4ca96d22c669dc994, type: 3}
       propertyPath: introText
-      value: 'devlog 15
-
-        2025-06-02
-
-        dedicated to Oscar
-
-
-        -
-        added this intro text print
-
-        - lowered the difficulty
-
-        -
-        added a pause meny (press esc to try it)
-
-        - added a thought writing
-        levitator at the end of the level.'
+      value: Word mechanics, sentence gaps, and rails.
       objectReference: {fileID: 0}
     - target: {fileID: 530099706374247730, guid: 9610d277bbe0f3c4ca96d22c669dc994, type: 3}
       propertyPath: narrationManager
@@ -1213,10 +1197,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 0}
-  videoClip: {fileID: 32900000, guid: f566ebbf55f764e4fa151af69ba2900a, type: 3}
-  subtitle: {fileID: 4900000, guid: 43e14c15f1969f64ab04b075a8c33b29, type: 3}
+  videoClip: {fileID: 0}
+  subtitle: {fileID: 0}
   endSceneOnEnd: 0
-  placeHolderText: This is test text for level 15. I hope you enjoy it.
+  placeHolderText: This is the tutorial level for and rails.
   videoPlayer: {fileID: 1614437558}
 --- !u!4 &1957703236
 Transform:
@@ -1528,7 +1512,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7534025309003727685, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
       propertyPath: isSpawningThePieces
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5416315537511449253, guid: 5e618ef96ba06324baa61da891779c39, type: 3}
@@ -1659,7 +1643,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3560523251116754072, guid: c08470bc577cf57439013e143128a3fa, type: 3}
       propertyPath: sceneId
-      value: 15
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4943771266182235940, guid: c08470bc577cf57439013e143128a3fa, type: 3}
       propertyPath: endQuiz
@@ -1675,7 +1659,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4943771266182235940, guid: c08470bc577cf57439013e143128a3fa, type: 3}
       propertyPath: endSpawnObject
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4943771266182235940, guid: c08470bc577cf57439013e143128a3fa, type: 3}
       propertyPath: setPieceColors
@@ -1683,11 +1667,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4943771266182235940, guid: c08470bc577cf57439013e143128a3fa, type: 3}
       propertyPath: pieceSpawnSpread
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4943771266182235940, guid: c08470bc577cf57439013e143128a3fa, type: 3}
       propertyPath: freezePiecesOnSpawn
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4943771266182235940, guid: c08470bc577cf57439013e143128a3fa, type: 3}
       propertyPath: pauseBetweenSentences

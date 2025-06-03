@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/start_3d.unity
     guid: 9091d270ad944be4d8abe9249f705761
+  - enabled: 1
+    path: Assets/Scenes/tutorials/and_rail_tutorial.unity
+    guid: 52514acd28f6cdf419b8ef9148b63bfa
   - enabled: 0
     path: Assets/Scenes/title.unity
     guid: a88cf279ca8f87640b5d610e9f1bd523
