@@ -1,0 +1,400 @@
+{
+    "text": " At other times when I speak, I might feel an urge to specify one noun among others. Also this you will have to follow. A fork will appear with only one path standing out. Only that one you can traverse. This is the block. Pick the right path.",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 6.76,
+            "text": " At other times when I speak, I might feel an urge to specify one noun among others.",
+            "tokens": [
+                50363,
+                1629,
+                584,
+                1661,
+                618,
+                314,
+                2740,
+                11,
+                314,
+                1244,
+                1254,
+                281,
+                14960,
+                284,
+                11986,
+                530,
+                23227,
+                1871,
+                1854,
+                13,
+                50691
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.1389318589241274,
+            "compression_ratio": 1.4578313253012047,
+            "no_speech_prob": 0.0007213772041723132,
+            "words": [
+                {
+                    "word": " At",
+                    "start": 0.0,
+                    "end": 0.28,
+                    "probability": 0.941209614276886
+                },
+                {
+                    "word": " other",
+                    "start": 0.28,
+                    "end": 0.54,
+                    "probability": 0.997832715511322
+                },
+                {
+                    "word": " times",
+                    "start": 0.54,
+                    "end": 1.02,
+                    "probability": 0.998916745185852
+                },
+                {
+                    "word": " when",
+                    "start": 1.02,
+                    "end": 1.54,
+                    "probability": 0.5412920117378235
+                },
+                {
+                    "word": " I",
+                    "start": 1.54,
+                    "end": 1.7,
+                    "probability": 0.9743562340736389
+                },
+                {
+                    "word": " speak,",
+                    "start": 1.7,
+                    "end": 2.06,
+                    "probability": 0.9971396923065186
+                },
+                {
+                    "word": " I",
+                    "start": 2.54,
+                    "end": 2.64,
+                    "probability": 0.996981680393219
+                },
+                {
+                    "word": " might",
+                    "start": 2.64,
+                    "end": 3.02,
+                    "probability": 0.9937083721160889
+                },
+                {
+                    "word": " feel",
+                    "start": 3.02,
+                    "end": 3.46,
+                    "probability": 0.9946827292442322
+                },
+                {
+                    "word": " an",
+                    "start": 3.46,
+                    "end": 3.68,
+                    "probability": 0.9914094805717468
+                },
+                {
+                    "word": " urge",
+                    "start": 3.68,
+                    "end": 3.96,
+                    "probability": 0.9992415904998779
+                },
+                {
+                    "word": " to",
+                    "start": 3.96,
+                    "end": 4.24,
+                    "probability": 0.982745349407196
+                },
+                {
+                    "word": " specify",
+                    "start": 4.24,
+                    "end": 4.78,
+                    "probability": 0.9943222999572754
+                },
+                {
+                    "word": " one",
+                    "start": 4.78,
+                    "end": 5.2,
+                    "probability": 0.9934539794921875
+                },
+                {
+                    "word": " noun",
+                    "start": 5.2,
+                    "end": 5.58,
+                    "probability": 0.9968968629837036
+                },
+                {
+                    "word": " among",
+                    "start": 5.58,
+                    "end": 6.04,
+                    "probability": 0.9821747541427612
+                },
+                {
+                    "word": " others.",
+                    "start": 6.04,
+                    "end": 6.76,
+                    "probability": 0.9927207827568054
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 7.58,
+            "end": 16.26,
+            "text": " Also this you will have to follow. A fork will appear with only one path standing out.",
+            "tokens": [
+                50735,
+                4418,
+                428,
+                345,
+                481,
+                423,
+                284,
+                1061,
+                13,
+                317,
+                15563,
+                481,
+                1656,
+                351,
+                691,
+                530,
+                3108,
+                5055,
+                503,
+                13,
+                51167
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.1389318589241274,
+            "compression_ratio": 1.4578313253012047,
+            "no_speech_prob": 0.0007213772041723132,
+            "words": [
+                {
+                    "word": " Also",
+                    "start": 7.58,
+                    "end": 7.94,
+                    "probability": 0.964558482170105
+                },
+                {
+                    "word": " this",
+                    "start": 7.94,
+                    "end": 8.38,
+                    "probability": 0.9106530547142029
+                },
+                {
+                    "word": " you",
+                    "start": 8.38,
+                    "end": 9.16,
+                    "probability": 0.8296847939491272
+                },
+                {
+                    "word": " will",
+                    "start": 9.16,
+                    "end": 9.4,
+                    "probability": 0.9351011514663696
+                },
+                {
+                    "word": " have",
+                    "start": 9.4,
+                    "end": 9.72,
+                    "probability": 0.9964693784713745
+                },
+                {
+                    "word": " to",
+                    "start": 9.72,
+                    "end": 10.36,
+                    "probability": 0.9934491515159607
+                },
+                {
+                    "word": " follow.",
+                    "start": 10.36,
+                    "end": 10.7,
+                    "probability": 0.9994951486587524
+                },
+                {
+                    "word": " A",
+                    "start": 11.68,
+                    "end": 11.8,
+                    "probability": 0.9426629543304443
+                },
+                {
+                    "word": " fork",
+                    "start": 11.8,
+                    "end": 12.34,
+                    "probability": 0.9910807013511658
+                },
+                {
+                    "word": " will",
+                    "start": 12.34,
+                    "end": 12.94,
+                    "probability": 0.9952972531318665
+                },
+                {
+                    "word": " appear",
+                    "start": 12.94,
+                    "end": 13.38,
+                    "probability": 0.9982485771179199
+                },
+                {
+                    "word": " with",
+                    "start": 13.38,
+                    "end": 14.12,
+                    "probability": 0.6116631627082825
+                },
+                {
+                    "word": " only",
+                    "start": 14.12,
+                    "end": 14.5,
+                    "probability": 0.9957484602928162
+                },
+                {
+                    "word": " one",
+                    "start": 14.5,
+                    "end": 14.96,
+                    "probability": 0.9937164187431335
+                },
+                {
+                    "word": " path",
+                    "start": 14.96,
+                    "end": 15.28,
+                    "probability": 0.9973191618919373
+                },
+                {
+                    "word": " standing",
+                    "start": 15.28,
+                    "end": 15.82,
+                    "probability": 0.9906460046768188
+                },
+                {
+                    "word": " out.",
+                    "start": 15.82,
+                    "end": 16.26,
+                    "probability": 0.9984618425369263
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "seek": 0,
+            "start": 17.18,
+            "end": 25.68,
+            "text": " Only that one you can traverse. This is the block. Pick the right path.",
+            "tokens": [
+                51219,
+                5514,
+                326,
+                530,
+                345,
+                460,
+                38138,
+                13,
+                770,
+                318,
+                262,
+                2512,
+                13,
+                12346,
+                262,
+                826,
+                3108,
+                13,
+                51643
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.1389318589241274,
+            "compression_ratio": 1.4578313253012047,
+            "no_speech_prob": 0.0007213772041723132,
+            "words": [
+                {
+                    "word": " Only",
+                    "start": 17.18,
+                    "end": 17.52,
+                    "probability": 0.9930959343910217
+                },
+                {
+                    "word": " that",
+                    "start": 17.52,
+                    "end": 17.82,
+                    "probability": 0.996376097202301
+                },
+                {
+                    "word": " one",
+                    "start": 17.82,
+                    "end": 18.24,
+                    "probability": 0.9975699782371521
+                },
+                {
+                    "word": " you",
+                    "start": 18.24,
+                    "end": 18.8,
+                    "probability": 0.9595974683761597
+                },
+                {
+                    "word": " can",
+                    "start": 18.8,
+                    "end": 19.08,
+                    "probability": 0.9990004897117615
+                },
+                {
+                    "word": " traverse.",
+                    "start": 19.08,
+                    "end": 19.54,
+                    "probability": 0.997256338596344
+                },
+                {
+                    "word": " This",
+                    "start": 20.82,
+                    "end": 21.22,
+                    "probability": 0.9842855334281921
+                },
+                {
+                    "word": " is",
+                    "start": 21.22,
+                    "end": 21.96,
+                    "probability": 0.9891722202301025
+                },
+                {
+                    "word": " the",
+                    "start": 21.96,
+                    "end": 22.22,
+                    "probability": 0.6176053285598755
+                },
+                {
+                    "word": " block.",
+                    "start": 22.22,
+                    "end": 22.64,
+                    "probability": 0.9489644169807434
+                },
+                {
+                    "word": " Pick",
+                    "start": 23.88,
+                    "end": 24.1,
+                    "probability": 0.9823209047317505
+                },
+                {
+                    "word": " the",
+                    "start": 24.1,
+                    "end": 24.62,
+                    "probability": 0.9973168969154358
+                },
+                {
+                    "word": " right",
+                    "start": 24.62,
+                    "end": 24.96,
+                    "probability": 0.9948288798332214
+                },
+                {
+                    "word": " path.",
+                    "start": 24.96,
+                    "end": 25.68,
+                    "probability": 0.9980975985527039
+                }
+            ]
+        }
+    ],
+    "language": "en"
+}

@@ -1200,9 +1200,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d124fb07a4f53f4281d4edb4ef76cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 9ad6d7adb2fd8fc49955d02b3d9ec84c, type: 3}
   videoClip: {fileID: 0}
-  subtitle: {fileID: 0}
+  subtitle: {fileID: 4900000, guid: 8eef05e39d117864db4a28ba6af3618e, type: 3}
   endSceneOnEnd: 0
   placeHolderText: This is the tutorial level for the blocks.
   videoPlayer: {fileID: 1614437558}
