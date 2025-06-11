@@ -18,10 +18,10 @@ EditorBuildSettings:
     path: Assets/Scenes/tutorials/unfreeze_tutorial.unity
     guid: 9b2f6fe3a9e67364bb11deb3a95fae26
   - enabled: 0
-    path: Assets/Scenes/title.unity
+    path: Assets/Scenes/old/title.unity
     guid: a88cf279ca8f87640b5d610e9f1bd523
   - enabled: 0
-    path: Assets/Scenes/instructions.unity
+    path: Assets/Scenes/old/instructions.unity
     guid: 1a0b2b396df54254e9f6bc6d53dfdb11
   - enabled: 1
     path: Assets/Scenes/devlogs/devlog_0.unity
