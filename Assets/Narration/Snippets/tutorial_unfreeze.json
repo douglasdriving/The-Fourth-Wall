@@ -1,0 +1,198 @@
+{
+    "text": " Look at each word. Only then shall they activate. Because this game is also about paying attention. Attention to words that appear.",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 4.7,
+            "text": " Look at each word. Only then shall they activate.",
+            "tokens": [
+                50363,
+                6803,
+                379,
+                1123,
+                1573,
+                13,
+                5514,
+                788,
+                2236,
+                484,
+                15155,
+                13,
+                50599
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.19672759886710875,
+            "compression_ratio": 1.2242990654205608,
+            "no_speech_prob": 0.002396209165453911,
+            "words": [
+                {
+                    "word": " Look",
+                    "start": 0.0,
+                    "end": 0.32,
+                    "probability": 0.6237978935241699
+                },
+                {
+                    "word": " at",
+                    "start": 0.32,
+                    "end": 0.52,
+                    "probability": 0.9968665242195129
+                },
+                {
+                    "word": " each",
+                    "start": 0.52,
+                    "end": 0.76,
+                    "probability": 0.9984763264656067
+                },
+                {
+                    "word": " word.",
+                    "start": 0.76,
+                    "end": 1.3,
+                    "probability": 0.9976781010627747
+                },
+                {
+                    "word": " Only",
+                    "start": 2.38,
+                    "end": 2.62,
+                    "probability": 0.9757120013237
+                },
+                {
+                    "word": " then",
+                    "start": 2.62,
+                    "end": 3.04,
+                    "probability": 0.977553129196167
+                },
+                {
+                    "word": " shall",
+                    "start": 3.04,
+                    "end": 3.66,
+                    "probability": 0.9298214912414551
+                },
+                {
+                    "word": " they",
+                    "start": 3.66,
+                    "end": 4.08,
+                    "probability": 0.9980145692825317
+                },
+                {
+                    "word": " activate.",
+                    "start": 4.08,
+                    "end": 4.7,
+                    "probability": 0.9967893958091736
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 5.92,
+            "end": 13.1,
+            "text": " Because this game is also about paying attention. Attention to words that appear.",
+            "tokens": [
+                50651,
+                4362,
+                428,
+                983,
+                318,
+                635,
+                546,
+                5989,
+                3241,
+                13,
+                47406,
+                284,
+                2456,
+                326,
+                1656,
+                13,
+                51023
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.19672759886710875,
+            "compression_ratio": 1.2242990654205608,
+            "no_speech_prob": 0.002396209165453911,
+            "words": [
+                {
+                    "word": " Because",
+                    "start": 5.92,
+                    "end": 6.2,
+                    "probability": 0.9873064756393433
+                },
+                {
+                    "word": " this",
+                    "start": 6.2,
+                    "end": 6.56,
+                    "probability": 0.9908592104911804
+                },
+                {
+                    "word": " game",
+                    "start": 6.56,
+                    "end": 6.88,
+                    "probability": 0.9974514842033386
+                },
+                {
+                    "word": " is",
+                    "start": 6.88,
+                    "end": 7.1,
+                    "probability": 0.9954550266265869
+                },
+                {
+                    "word": " also",
+                    "start": 7.1,
+                    "end": 7.54,
+                    "probability": 0.9775266647338867
+                },
+                {
+                    "word": " about",
+                    "start": 7.54,
+                    "end": 8.14,
+                    "probability": 0.995866060256958
+                },
+                {
+                    "word": " paying",
+                    "start": 8.14,
+                    "end": 8.82,
+                    "probability": 0.9880857467651367
+                },
+                {
+                    "word": " attention.",
+                    "start": 8.82,
+                    "end": 9.6,
+                    "probability": 0.9991006851196289
+                },
+                {
+                    "word": " Attention",
+                    "start": 10.6,
+                    "end": 11.16,
+                    "probability": 0.9783090949058533
+                },
+                {
+                    "word": " to",
+                    "start": 11.16,
+                    "end": 11.54,
+                    "probability": 0.9949285984039307
+                },
+                {
+                    "word": " words",
+                    "start": 11.54,
+                    "end": 12.1,
+                    "probability": 0.9635676741600037
+                },
+                {
+                    "word": " that",
+                    "start": 12.1,
+                    "end": 12.74,
+                    "probability": 0.9758676290512085
+                },
+                {
+                    "word": " appear.",
+                    "start": 12.74,
+                    "end": 13.1,
+                    "probability": 0.9965173006057739
+                }
+            ]
+        }
+    ],
+    "language": "en"
+}
