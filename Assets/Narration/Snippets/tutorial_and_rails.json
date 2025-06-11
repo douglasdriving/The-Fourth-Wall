@@ -1,0 +1,679 @@
+{
+    "text": " This is a game about me, my voice, my spoken words. A new sentence is represented with a gap you have to jump over. A rail connecting two clauses in a sentence will appear that you have to press E on to traverse whenever I use the word and. This game is about me, my words, and the things that they mean. But it is also a game about you, your attention, and your response to what I tell you.",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 5.0,
+            "text": " This is a game about me, my voice, my spoken words.",
+            "tokens": [
+                50363,
+                770,
+                318,
+                257,
+                983,
+                546,
+                502,
+                11,
+                616,
+                3809,
+                11,
+                616,
+                9635,
+                2456,
+                13,
+                50607
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.13617124557495117,
+            "compression_ratio": 1.4452054794520548,
+            "no_speech_prob": 0.0019223324488848448,
+            "words": [
+                {
+                    "word": " This",
+                    "start": 0.0,
+                    "end": 0.3,
+                    "probability": 0.9034362435340881
+                },
+                {
+                    "word": " is",
+                    "start": 0.3,
+                    "end": 0.48,
+                    "probability": 0.9349508285522461
+                },
+                {
+                    "word": " a",
+                    "start": 0.48,
+                    "end": 0.72,
+                    "probability": 0.9816420078277588
+                },
+                {
+                    "word": " game",
+                    "start": 0.72,
+                    "end": 0.94,
+                    "probability": 0.9969083666801453
+                },
+                {
+                    "word": " about",
+                    "start": 0.94,
+                    "end": 1.66,
+                    "probability": 0.9785898327827454
+                },
+                {
+                    "word": " me,",
+                    "start": 1.66,
+                    "end": 2.1,
+                    "probability": 0.9643464684486389
+                },
+                {
+                    "word": " my",
+                    "start": 2.72,
+                    "end": 2.88,
+                    "probability": 0.9939182996749878
+                },
+                {
+                    "word": " voice,",
+                    "start": 2.88,
+                    "end": 3.32,
+                    "probability": 0.9991495609283447
+                },
+                {
+                    "word": " my",
+                    "start": 3.82,
+                    "end": 3.98,
+                    "probability": 0.9738271236419678
+                },
+                {
+                    "word": " spoken",
+                    "start": 3.98,
+                    "end": 4.42,
+                    "probability": 0.9984741806983948
+                },
+                {
+                    "word": " words.",
+                    "start": 4.42,
+                    "end": 5.0,
+                    "probability": 0.9962432384490967
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 6.44,
+            "end": 11.44,
+            "text": " A new sentence is represented with a gap you have to jump over.",
+            "tokens": [
+                50679,
+                317,
+                649,
+                6827,
+                318,
+                7997,
+                351,
+                257,
+                7625,
+                345,
+                423,
+                284,
+                4391,
+                625,
+                13,
+                50923
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.13617124557495117,
+            "compression_ratio": 1.4452054794520548,
+            "no_speech_prob": 0.0019223324488848448,
+            "words": [
+                {
+                    "word": " A",
+                    "start": 6.44,
+                    "end": 6.62,
+                    "probability": 0.9862467050552368
+                },
+                {
+                    "word": " new",
+                    "start": 6.62,
+                    "end": 6.96,
+                    "probability": 0.9964694976806641
+                },
+                {
+                    "word": " sentence",
+                    "start": 6.96,
+                    "end": 7.52,
+                    "probability": 0.9935398697853088
+                },
+                {
+                    "word": " is",
+                    "start": 7.52,
+                    "end": 8.04,
+                    "probability": 0.9953961968421936
+                },
+                {
+                    "word": " represented",
+                    "start": 8.04,
+                    "end": 8.62,
+                    "probability": 0.9823830127716064
+                },
+                {
+                    "word": " with",
+                    "start": 8.62,
+                    "end": 9.16,
+                    "probability": 0.9883013367652893
+                },
+                {
+                    "word": " a",
+                    "start": 9.16,
+                    "end": 9.4,
+                    "probability": 0.983415961265564
+                },
+                {
+                    "word": " gap",
+                    "start": 9.4,
+                    "end": 9.7,
+                    "probability": 0.9932098984718323
+                },
+                {
+                    "word": " you",
+                    "start": 9.7,
+                    "end": 10.2,
+                    "probability": 0.9605926871299744
+                },
+                {
+                    "word": " have",
+                    "start": 10.2,
+                    "end": 10.38,
+                    "probability": 0.9945182204246521
+                },
+                {
+                    "word": " to",
+                    "start": 10.38,
+                    "end": 10.6,
+                    "probability": 0.9985615611076355
+                },
+                {
+                    "word": " jump",
+                    "start": 10.6,
+                    "end": 10.84,
+                    "probability": 0.9978446960449219
+                },
+                {
+                    "word": " over.",
+                    "start": 10.84,
+                    "end": 11.44,
+                    "probability": 0.9980753660202026
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "seek": 0,
+            "start": 13.04,
+            "end": 21.42,
+            "text": " A rail connecting two clauses in a sentence will appear that you have to press E on to traverse",
+            "tokens": [
+                51007,
+                317,
+                6787,
+                14320,
+                734,
+                31485,
+                287,
+                257,
+                6827,
+                481,
+                1656,
+                326,
+                345,
+                423,
+                284,
+                1803,
+                412,
+                319,
+                284,
+                38138,
+                51431
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.13617124557495117,
+            "compression_ratio": 1.4452054794520548,
+            "no_speech_prob": 0.0019223324488848448,
+            "words": [
+                {
+                    "word": " A",
+                    "start": 13.04,
+                    "end": 13.18,
+                    "probability": 0.9871519804000854
+                },
+                {
+                    "word": " rail",
+                    "start": 13.18,
+                    "end": 13.72,
+                    "probability": 0.9870898127555847
+                },
+                {
+                    "word": " connecting",
+                    "start": 13.72,
+                    "end": 14.62,
+                    "probability": 0.9656270742416382
+                },
+                {
+                    "word": " two",
+                    "start": 14.62,
+                    "end": 15.1,
+                    "probability": 0.9508345127105713
+                },
+                {
+                    "word": " clauses",
+                    "start": 15.1,
+                    "end": 15.58,
+                    "probability": 0.9884993433952332
+                },
+                {
+                    "word": " in",
+                    "start": 15.58,
+                    "end": 16.02,
+                    "probability": 0.9876893758773804
+                },
+                {
+                    "word": " a",
+                    "start": 16.02,
+                    "end": 16.22,
+                    "probability": 0.9940075874328613
+                },
+                {
+                    "word": " sentence",
+                    "start": 16.22,
+                    "end": 16.62,
+                    "probability": 0.9989651441574097
+                },
+                {
+                    "word": " will",
+                    "start": 16.62,
+                    "end": 16.98,
+                    "probability": 0.9822050929069519
+                },
+                {
+                    "word": " appear",
+                    "start": 16.98,
+                    "end": 17.5,
+                    "probability": 0.9986955523490906
+                },
+                {
+                    "word": " that",
+                    "start": 17.5,
+                    "end": 18.2,
+                    "probability": 0.9063976407051086
+                },
+                {
+                    "word": " you",
+                    "start": 18.2,
+                    "end": 18.44,
+                    "probability": 0.9985972046852112
+                },
+                {
+                    "word": " have",
+                    "start": 18.44,
+                    "end": 18.78,
+                    "probability": 0.9929162263870239
+                },
+                {
+                    "word": " to",
+                    "start": 18.78,
+                    "end": 19.1,
+                    "probability": 0.9951258301734924
+                },
+                {
+                    "word": " press",
+                    "start": 19.1,
+                    "end": 19.34,
+                    "probability": 0.9962937235832214
+                },
+                {
+                    "word": " E",
+                    "start": 19.34,
+                    "end": 19.76,
+                    "probability": 0.30683568120002747
+                },
+                {
+                    "word": " on",
+                    "start": 19.76,
+                    "end": 20.18,
+                    "probability": 0.9837214350700378
+                },
+                {
+                    "word": " to",
+                    "start": 20.18,
+                    "end": 20.86,
+                    "probability": 0.9182864427566528
+                },
+                {
+                    "word": " traverse",
+                    "start": 20.86,
+                    "end": 21.42,
+                    "probability": 0.9962564706802368
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "seek": 2142,
+            "start": 21.98,
+            "end": 24.84,
+            "text": " whenever I use the word and.",
+            "tokens": [
+                50391,
+                8797,
+                314,
+                779,
+                262,
+                1573,
+                5357,
+                13,
+                50527
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.162106850567986,
+            "compression_ratio": 1.376923076923077,
+            "no_speech_prob": 0.08978939801454544,
+            "words": [
+                {
+                    "word": " whenever",
+                    "start": 21.98,
+                    "end": 22.38,
+                    "probability": 0.8095461130142212
+                },
+                {
+                    "word": " I",
+                    "start": 22.38,
+                    "end": 22.74,
+                    "probability": 0.9830663204193115
+                },
+                {
+                    "word": " use",
+                    "start": 22.74,
+                    "end": 23.14,
+                    "probability": 0.9832906723022461
+                },
+                {
+                    "word": " the",
+                    "start": 23.14,
+                    "end": 23.4,
+                    "probability": 0.998759388923645
+                },
+                {
+                    "word": " word",
+                    "start": 23.4,
+                    "end": 23.86,
+                    "probability": 0.9974421262741089
+                },
+                {
+                    "word": " and.",
+                    "start": 23.86,
+                    "end": 24.84,
+                    "probability": 0.11096277832984924
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "seek": 2142,
+            "start": 26.18,
+            "end": 31.82,
+            "text": " This game is about me, my words, and the things that they mean.",
+            "tokens": [
+                50611,
+                770,
+                983,
+                318,
+                546,
+                502,
+                11,
+                616,
+                2456,
+                11,
+                290,
+                262,
+                1243,
+                326,
+                484,
+                1612,
+                13,
+                50875
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.162106850567986,
+            "compression_ratio": 1.376923076923077,
+            "no_speech_prob": 0.08978939801454544,
+            "words": [
+                {
+                    "word": " This",
+                    "start": 26.18,
+                    "end": 26.72,
+                    "probability": 0.9470732808113098
+                },
+                {
+                    "word": " game",
+                    "start": 26.72,
+                    "end": 27.1,
+                    "probability": 0.9972033500671387
+                },
+                {
+                    "word": " is",
+                    "start": 27.1,
+                    "end": 27.56,
+                    "probability": 0.9953540563583374
+                },
+                {
+                    "word": " about",
+                    "start": 27.56,
+                    "end": 27.84,
+                    "probability": 0.999079704284668
+                },
+                {
+                    "word": " me,",
+                    "start": 27.84,
+                    "end": 28.32,
+                    "probability": 0.9788109064102173
+                },
+                {
+                    "word": " my",
+                    "start": 28.9,
+                    "end": 29.0,
+                    "probability": 0.9972739815711975
+                },
+                {
+                    "word": " words,",
+                    "start": 29.0,
+                    "end": 29.5,
+                    "probability": 0.9987990856170654
+                },
+                {
+                    "word": " and",
+                    "start": 29.94,
+                    "end": 30.2,
+                    "probability": 0.9971134662628174
+                },
+                {
+                    "word": " the",
+                    "start": 30.2,
+                    "end": 30.32,
+                    "probability": 0.9952719807624817
+                },
+                {
+                    "word": " things",
+                    "start": 30.32,
+                    "end": 30.7,
+                    "probability": 0.9984452128410339
+                },
+                {
+                    "word": " that",
+                    "start": 30.7,
+                    "end": 31.16,
+                    "probability": 0.9822688102722168
+                },
+                {
+                    "word": " they",
+                    "start": 31.16,
+                    "end": 31.42,
+                    "probability": 0.9981607794761658
+                },
+                {
+                    "word": " mean.",
+                    "start": 31.42,
+                    "end": 31.82,
+                    "probability": 0.9973065853118896
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "seek": 2142,
+            "start": 32.44,
+            "end": 38.94,
+            "text": " But it is also a game about you, your attention, and your response to what I tell you.",
+            "tokens": [
+                50911,
+                887,
+                340,
+                318,
+                635,
+                257,
+                983,
+                546,
+                345,
+                11,
+                534,
+                3241,
+                11,
+                290,
+                534,
+                2882,
+                284,
+                644,
+                314,
+                1560,
+                345,
+                13,
+                51251
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.162106850567986,
+            "compression_ratio": 1.376923076923077,
+            "no_speech_prob": 0.08978939801454544,
+            "words": [
+                {
+                    "word": " But",
+                    "start": 32.44,
+                    "end": 32.68,
+                    "probability": 0.9757565259933472
+                },
+                {
+                    "word": " it",
+                    "start": 32.68,
+                    "end": 32.78,
+                    "probability": 0.978783369064331
+                },
+                {
+                    "word": " is",
+                    "start": 32.78,
+                    "end": 32.98,
+                    "probability": 0.9834997653961182
+                },
+                {
+                    "word": " also",
+                    "start": 32.98,
+                    "end": 33.38,
+                    "probability": 0.9982051849365234
+                },
+                {
+                    "word": " a",
+                    "start": 33.38,
+                    "end": 34.0,
+                    "probability": 0.9726205468177795
+                },
+                {
+                    "word": " game",
+                    "start": 34.0,
+                    "end": 34.18,
+                    "probability": 0.9995275735855103
+                },
+                {
+                    "word": " about",
+                    "start": 34.18,
+                    "end": 34.52,
+                    "probability": 0.9991160035133362
+                },
+                {
+                    "word": " you,",
+                    "start": 34.52,
+                    "end": 34.94,
+                    "probability": 0.9546898007392883
+                },
+                {
+                    "word": " your",
+                    "start": 35.68,
+                    "end": 35.86,
+                    "probability": 0.9933372735977173
+                },
+                {
+                    "word": " attention,",
+                    "start": 35.86,
+                    "end": 36.4,
+                    "probability": 0.9988143444061279
+                },
+                {
+                    "word": " and",
+                    "start": 36.9,
+                    "end": 37.02,
+                    "probability": 0.9979851245880127
+                },
+                {
+                    "word": " your",
+                    "start": 37.02,
+                    "end": 37.22,
+                    "probability": 0.9964634776115417
+                },
+                {
+                    "word": " response",
+                    "start": 37.22,
+                    "end": 37.64,
+                    "probability": 0.9981074333190918
+                },
+                {
+                    "word": " to",
+                    "start": 37.64,
+                    "end": 38.08,
+                    "probability": 0.99405837059021
+                },
+                {
+                    "word": " what",
+                    "start": 38.08,
+                    "end": 38.2,
+                    "probability": 0.9993025064468384
+                },
+                {
+                    "word": " I",
+                    "start": 38.2,
+                    "end": 38.44,
+                    "probability": 0.9892553091049194
+                },
+                {
+                    "word": " tell",
+                    "start": 38.44,
+                    "end": 38.66,
+                    "probability": 0.9992015957832336
+                },
+                {
+                    "word": " you.",
+                    "start": 38.66,
+                    "end": 38.94,
+                    "probability": 0.9994385838508606
+                }
+            ]
+        }
+    ],
+    "language": "en"
+}
